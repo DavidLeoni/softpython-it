@@ -1,0 +1,60 @@
+
+_build/
+
+##### OS RELATED
+*~
+\#*#
+*.DS_Store
+*.class
+.com.apple.timemachine.supported
+.import-temp/
+
+
+##### INTELLIJ
+
+*.iml
+.idea
+
+
+##### NETBEANS
+
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+
+##### ECLIPSE 
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+/src/main/resources/rebel.xml
+# External tool builders
+.externalToolBuilders/
+ 
+# Locally stored "Eclipse launch configurations"
+*.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
+
+
+##### PYTHON
+*.pyc
+__pycache__
