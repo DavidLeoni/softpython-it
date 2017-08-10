@@ -96,7 +96,16 @@ def run_sphinx(manuals, formats):
             my_env['PYTHONPATH'] = new_python_path
 
             try:
-
+                print("Cleaning " + str(relout) + "  ")
+                
+                if "_build/" in relout:
+                    res = subprocess.check_output("rm -rf " + relout,
+                                                   shell=True,
+                                                   env=my_env
+                                                  )
+                else:
+                    raise Exception("ERROR: FAILED SECURITY CHECK BEFORE CLEANING DIRECTORY: " + str(relout))
+                    
                 cmd = ("sphinx-build -b " + format + " " + ("." if assembly else ".") + " " + relout
                       + " " + tinfo['args'] + " -t " + system
                       + (" -t assembly " if assembly else ""))

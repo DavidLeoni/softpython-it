@@ -102,7 +102,7 @@ try:
     from subprocess import check_output
     release = check_output(['git', 'describe', '--tags', '--always'])
     release = release.decode().strip()
-    if not release[0].isdigit():
+    if not '.' in release[0]:
         release = '0.1.0'
         print("Couldn't find git tag, defaulting to: " + release)
     else:    
