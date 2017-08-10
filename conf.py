@@ -9,11 +9,6 @@ import glob
 import os
 import inspect
 
-if not "tags" in globals():
-    tags = None
-
-def detect_assembly(system):
-    return False
 
 def warn(msg):
     print("")
@@ -23,7 +18,7 @@ def warn(msg):
 def super_doc_dir():
     return os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
-FORMATS = ["html", "epub", "pdf"]
+FORMATS = ["html", "epub", "latex"]
 
 SYSTEMS = {
     "default" : {
@@ -37,16 +32,9 @@ MANUALS = {
     "student": {
         "name" : "Corso Soft Python",
         "audience" : "studenti",
-        "args" : "-t student",
+        "args" : "",
         "output" : "student",
-        "exclude_patterns" : ['instructor/*']
-    },
-    "instructors": {
-        "name" : "Soft Python - Manuale dell'istruttore",
-        "audience": "insegnanti",
-        "args" : "-t instructor",
-        "output" : "instructor",
-        "exclude_patterns" : ['student/*']
+        "exclude_patterns" : []
     }
 }
 
@@ -67,8 +55,8 @@ extensions = [
 #    'sphinx.ext.mathjax',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
-    'rst2pdf.pdfbuilder'
+    'sphinx.ext.ifconfig'
+    #, 'rst2pdf.pdfbuilder'
 ]
 
 # Exclude build directory and Jupyter backup files:
@@ -114,24 +102,12 @@ pygments_style = 'sphinx'
 master_doc = 'index'
 
 
-if tags in globals():
-    # Determine manual
-    if tags.has('student'):
-        manual = 'student'
-    elif tags.has('instructor'):
-        manual = 'instructor'
-    else:
-        if not tags.has('student'):
-            warn("Missing manual type, using 'student' as default")
-            tags.add('student')
-        manual = 'student'
-else:
-    manual = 'student'
+manual = 'student'
+system = 'default'
     
-system='default'
 project = MANUALS[manual]['name']
 # The filename without the extension
-filename = manual + '-manual'
+filename = 'corso-softpython'
 # filename = project.lower().replace(" ", "-") # if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
 
 author = 'David Leoni, Alessio Zamboni'
@@ -191,25 +167,25 @@ html_static_path = ['static']
 htmlhelp_basename = project + 'doc'
 
 
-# -- Options for LaTeX output ---------------------------------------------
+# -- Options for LaTeX output ---------------------------------------------# -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
+#latex_elements = {
+#    'papersize': 'a4paper',
+#    'preamble': r"""
+#\usepackage[sc,osf]{mathpazo}
+#\linespread{1.05}  % see http://www.tug.dk/FontCatalogue/urwpalladio/
+#\renewcommand{\sfdefault}{pplj}  % Palatino instead of sans serif
+#\IfFileExists{zlmtt.sty}{
+#    \usepackage[light,scaled=1.05]{zlmtt}  % light typewriter font from lmodern
+#}{
+#    \renewcommand{\ttdefault}{lmtt}  % typewriter font from lmodern
+#}
+#""",
+#}
 
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
 
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
+latex_show_urls = 'footnote'
 
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
@@ -346,42 +322,15 @@ pdf_use_numbered_links = False
 pdf_fit_background_mode = 'scale'
 
 
-# -- Options for LaTeX output ---------------------------------------------
-
-latex_elements = {
-    'papersize': 'a4paper',
-    'preamble': r"""
-\usepackage[sc,osf]{mathpazo}
-\linespread{1.05}  % see http://www.tug.dk/FontCatalogue/urwpalladio/
-\renewcommand{\sfdefault}{pplj}  % Palatino instead of sans serif
-\IfFileExists{zlmtt.sty}{
-    \usepackage[light,scaled=1.05]{zlmtt}  % light typewriter font from lmodern
-}{
-    \renewcommand{\ttdefault}{lmtt}  % typewriter font from lmodern
-}
-""",
-}
-
-
-
-
-#latex_documents = [
-#    (master_doc, 'nbsphinx.tex', project, author, 'howto'),
-#]
-
-latex_show_urls = 'footnote'
 
 
 def setup(app):    
-        if tags != None:
-            app.add_config_value('student', tags.has('student'), 'env')
-            app.add_config_value('instructor', tags.has('instructor'), 'env')
+
         app.add_config_value('recommonmark_config', {
             'auto_toc_tree_section': 'Contents'
             #,'enable_eval_rst':True
         }, True)
         app.add_transform(AutoStructify)
-
 
 
 
