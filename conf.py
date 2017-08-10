@@ -9,6 +9,8 @@ import glob
 import os
 import inspect
 
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
 
 def warn(msg):
     print("")
@@ -71,8 +73,11 @@ html_sourcelink_suffix = ''
 
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
-nbsphinx_execute = 'always'
-
+if on_rtd: 
+    nbsphinx_execute = 'never'   
+else:
+    nbsphinx_execute = 'always'
+    
 # Use this kernel instead of the one stored in the notebook metadata:
 #nbsphinx_kernel_name = 'python3'
 
