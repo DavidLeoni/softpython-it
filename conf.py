@@ -4,10 +4,52 @@
 import recommonmark
 from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
-from build_common import *
 import datetime
 import glob
 import os
+import inspect
+
+if not "tags" in globals():
+    tags = None
+
+def detect_assembly(system):
+    return False
+
+def warn(msg):
+    print("")
+    print("   WARNING: " + str(msg))
+    print("")
+
+def super_doc_dir():
+    return os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+
+FORMATS = ["html", "epub", "pdf"]
+
+SYSTEMS = {
+    "default" : {
+        "name" : "Default system",
+        "outdir":"_build/",
+        "exclude_patterns": ["**_build"]
+    }
+}
+
+MANUALS = {
+    "student": {
+        "name" : "Corso Soft Python",
+        "audience" : "studenti",
+        "args" : "-t student",
+        "output" : "student",
+        "exclude_patterns" : ['instructor/*']
+    },
+    "instructors": {
+        "name" : "Soft Python - Manuale dell'istruttore",
+        "audience": "insegnanti",
+        "args" : "-t instructor",
+        "output" : "instructor",
+        "exclude_patterns" : ['student/*']
+    }
+}
+
 
 def get_version(release):
     """ Given x.y.z-something, return x.y  """
@@ -41,7 +83,7 @@ html_sourcelink_suffix = ''
 
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
-#nbsphinx_execute = 'never'
+nbsphinx_execute = 'always'
 
 # Use this kernel instead of the one stored in the notebook metadata:
 #nbsphinx_kernel_name = 'python3'
@@ -72,18 +114,20 @@ pygments_style = 'sphinx'
 master_doc = 'index'
 
 
-
-# Determine manual
-if tags.has('student'):
-    manual = 'student'
-elif tags.has('instructor'):
-    manual = 'instructor'
+if tags in globals():
+    # Determine manual
+    if tags.has('student'):
+        manual = 'student'
+    elif tags.has('instructor'):
+        manual = 'instructor'
+    else:
+        if not tags.has('student'):
+            warn("Missing manual type, using 'student' as default")
+            tags.add('student')
+        manual = 'student'
 else:
-    if not tags.has('student'):
-        warn("Missing manual type, using 'student' as default")
-        tags.add('student')
     manual = 'student'
-
+    
 system='default'
 project = MANUALS[manual]['name']
 # The filename without the extension
@@ -328,12 +372,10 @@ latex_elements = {
 latex_show_urls = 'footnote'
 
 
-def setup(app):
-        app.add_config_value('kos', tags.has('kos'), 'env')
-        app.add_config_value('sweb', tags.has('sweb'), 'env')
-        app.add_config_value('user', tags.has('user'), 'env')
-        app.add_config_value('dev', tags.has('dev'), 'env')
-        app.add_config_value('internals', tags.has('internals'), 'env')
+def setup(app):    
+        if tags != None:
+            app.add_config_value('student', tags.has('student'), 'env')
+            app.add_config_value('instructor', tags.has('instructor'), 'env')
         app.add_config_value('recommonmark_config', {
             'auto_toc_tree_section': 'Contents'
             #,'enable_eval_rst':True

@@ -12,6 +12,7 @@ import os
 import sys
 import inspect
 import re
+from conf import *
 from build_common import *
 
 
