@@ -1,5 +1,5 @@
 
-TODO PUT COURSE NAME
+Jupman Manual
 ================================================
 
 (AA 2017/18)
@@ -26,12 +26,6 @@ TODO PUT COURSE NAME
     :glob:
 
     intro.ipynb
-    data-formats.ipynb
-    data-visualization.ipynb
-    search.ipynb
-    data-integration.ipynb
-    data-extraction.ipynb
-    data-analytics.ipynb
-    interactive-apps.ipynb
-    database.ipynb
-    prove.ipynb
+    jupman-tests.ipynb
+    exams.ipynb
+    jupman-test-exam.upynb

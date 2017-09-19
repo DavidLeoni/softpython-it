@@ -34,7 +34,7 @@ SYSTEMS = {
 
 MANUALS = {
     "student": {
-        "name" : "TODO PUT MANUAL NAME",  #i.e. "Scientific Programming"
+        "name" : "Jupman",  # TODO put name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
         "output" : "",
@@ -118,8 +118,8 @@ project = MANUALS[manual]['name']
 filename = project.lower().replace(" ", "-")
 # note if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
 
-author = 'TODO PUT YOUR NAME'
-copyright = '# TODO PUT YEAR, ' + author  
+author = 'David Leoni' # TODO PUT YOUR NAME
+copyright = '# 2017, ' + author  # TODO PUT THE YEAR  
 
 
 linkcheck_ignore = [r'http://localhost:\d+/']

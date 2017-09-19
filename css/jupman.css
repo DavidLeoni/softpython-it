@@ -1,5 +1,5 @@
 
-    #algolab-nav {
+    #jupman-nav {
         position: fixed;
         top: 10px; 
         left: 5px; 
@@ -11,7 +11,7 @@
 
     /* style="background: rgba(255, 255, 255, 0);" class="unstyled" */
   
-    #algolab-toc {
+    #jupman-toc {
         position: fixed;
         top: 100px; 
         left: -55px; 
@@ -32,26 +32,26 @@
     }
     
     
-    .algolab-nav-item {
+    .jupman-nav-item {
         font-weight:bold;
         font-size:120%  
     }
     
-    .algolab-chapter-link {
+    .jupman-chapter-link {
         font-size:150%;
         margin-right:15px;        
     }
     
-    .algolab-chapter-link a {
+    .jupman-chapter-link a {
         text-decoration: none;
     }    
     
-    .algolab-title {
+    .jupman-title {
         font-size:250%; 
         font-weight:bold        
     }    
         
-    .algolab-warn {    
+    .jupman-warn {    
         background-color: #fcf2f2;        
         border-left: 5px solid #dfb5b4;
         padding: 1.5em;
@@ -59,7 +59,7 @@
         margin-bottom:10px;
     }
 
-    .algolab-question {    
+    .jupman-question {    
         background-color: rgb(251, 231, 250);
         border-left: 5px solid rgb(189, 151, 184);
         padding: 1.5em;
@@ -68,7 +68,7 @@
     }
         
     
-    .algolab-important {
+    .jupman-important {
         background-color: rgba(255, 238, 0, 0.31);
         border-left: 5px solid rgba(205, 208, 0, 1.0);
         color: #000;        
@@ -78,26 +78,26 @@
     }
     
     
-    #algolab-toc ul {                                                                                                                                                                           
+    #jupman-toc ul {                                                                                                                                                                           
         list-style-type: none;                                                                                                                                                                 
         margin-left: 5px;
     }
     
-    #algolab-toc li {        
+    #jupman-toc li {        
          padding-left: 3px;
     }    
     
-    #algolab-toc .h1 {
+    #jupman-toc .h1 {
         font-size:110%; 
         
     }
     
-    #algolab-toc .h2 {
+    #jupman-toc .h2 {
         font-size:100%; 
         padding-left:15px;
     }
 
-    #algolab-toc .h3 {
+    #jupman-toc .h3 {
         font-size:100%; 
         padding-left:25px;
     }
@@ -110,6 +110,6 @@
     }
     
 
-    #algolab-toc .toc-active {
+    #jupman-toc .toc-active {
         background: rgba(168, 254, 255, 0.32);
     }

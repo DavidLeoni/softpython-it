@@ -62,25 +62,32 @@ First of all, run Jupyter from the root of the directory
     jupyter notebook
 ```
 
-* Python code common to all worksheets is in [jub.py](jub.py)
-* Javascript code common to all worksheets is in [js/jublib.js](js/jub.js)
-* CSS common to all worksheets is in [css/jublib.css](css/jub.css)
+* Python code common to all worksheets is in [jub.py](jupman.py)
+* Javascript code common to all worksheets is in [js/jupman.js](js/jupman.js)
+* CSS common to all worksheets is in [css/jupman.css](css/jupman.css)
 
 Each worksheet must start with this Python code:
 
 ```python
-import jublib
-jub.init()
+import jupman
+jupman.init()
 ```
 
 Running it will create the sidebar even when editing in Jupyter. If you want to refresh the sidebar, just run again the cell.
-Usually, cells with algolab stuff should be hidden in the built manual.
+
+#### Hiding cells
+
+To hide cells (like for example the `import jupman` code), click `View->Cell toolbar -> Edit metadata`
+and add `"nbsphinx": "hidden"` to the JSON (see also original [NBSphinx docs](
+https://nbsphinx.readthedocs.io/en/0.2.14/hidden-cells.html#Hidden-Cells
+)).
+
+Before porting to NBSphinx some cell hiding for Jupman stuff was automated using Javascript, maybe we will reintroduce it in the future.
 
 ### Source code for exercises
 
 To avoid import problems ([see related issue](https://github.com/DavidLeoni/softpython/issues/3)), 
 currently it is best to put all python files in the root of the project.
-
 
 #### Launch unit tests
 

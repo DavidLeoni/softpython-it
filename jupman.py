@@ -7,7 +7,9 @@ import unittest
 import inspect
 import os
 import networkx as nx
+import conf
 from IPython.core.display import HTML
+
 
 # taken from here: http://stackoverflow.com/a/961057
 def get_class(meth):
@@ -45,11 +47,13 @@ def show_run(classOrMethod):
     run(classOrMethod)
         
 def init():
-    css = open("./css/algolab.css", "r").read()
+    """ To be called at the beginning of Jupyter sheets
+    """
+    css = open("./css/jupman.css", "r").read()
 
     tocjs = open("./js/toc.js", "r").read()
 
-    js = open("./js/algolab.js", "r").read()
+    js = open("./js/jupman.js", "r").read()
 
     ret = "<style>\n" 
     ret += css
@@ -68,6 +72,18 @@ def init():
     ret += "\n</script>\n"
 
     return  HTML(ret)
+
+def init_exam(exam_date):
+    """ To be called at the beginning of Jupyter exam sheets
+        exam_date = exam date string in the format 'yyyy-mm-dd'
+    """
+    import sys
+    sys.path.append('private/exams/' + exam_date + '/solutions')
+    sys.path.append('private/exams/' + exam_date + '/' + conf.filename + '-' + exam_date+'-FIRSTNAME-LASTNAME-ID')
+    sys.path.append('exams/' + exam_date + '/solutions')
+    sys.path.append('exams/' + exam_date + '/exercises')
+    return init()
+
 
 def assertNotNone(ret, function_name):
     return function_name + " specs say nothing about returning objects! Instead you are returning " + str(ret)

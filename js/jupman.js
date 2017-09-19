@@ -1,30 +1,35 @@
 
+/*
+ * JUPYTER MANAGER JavaScript https://github.com/DavidLeoni/jupman 
+ * 
+ */
+
 function showthis(url) {
     window.open(url, "pres", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=400,width=500,height=500");
     return(false);
 }
 
-var algolab = {
+var jupman = {
     
     isReduced : function(){
         return $(window).width() < 924;
     },
     hoverToc : function(){
-        return $('#algolab-toc:hover').length != 0;
+        return $('#jupman-toc:hover').length != 0;
     },
     resize : function(){
-        if (algolab.isReduced()){
-            $("#algolab-toc").hide();
+        if (jupman.isReduced()){
+            $("#jupman-toc").hide();
         } else {
-            $("#algolab-toc").show();
-            $("#algolab-toc").css("background","rgba(255, 255, 255, 0)");
+            $("#jupman-toc").show();
+            $("#jupman-toc").css("background","rgba(255, 255, 255, 0)");
             
             tocParams = {
                 
                 'selectors': 'h1,h2,h3', //elements to use as headings
                 'container': 'body', //element to find all selectors in
                 'smoothScrolling': true, //enable or disable smooth scrolling on click
-                 //doesn't work  'prefix': 'algolab-toc', //prefix for anchor tags and class names
+                 //doesn't work  'prefix': 'jupman-toc', //prefix for anchor tags and class names
                 //'onHighlight': function(el) {}, //called when a new section is highlighted 
                 'highlightOnScroll': true, //add class to heading that is currently in focus
                 'highlightOffset': 100, //offset to trigger the next headline
@@ -39,7 +44,7 @@ var algolab = {
                 }                
             }
             
-            $('#algolab-toc').toc(tocParams);
+            $('#jupman-toc').toc(tocParams);
         }
     },
     /**
@@ -74,26 +79,26 @@ var algolab = {
     
     init : function(){
 
-       var toc = $("<div>").attr("id", "algolab-toc");              
+       var toc = $("<div>").attr("id", "jupman-toc");              
        var indexLink = $("<a>")
-                        .addClass("algolab-nav-item")
+                        .addClass("jupman-nav-item")
                         .attr("href","index.html#Chapters")
-                        .text("Algolab");
+                        .text("jupman");
        
        
        
-       var candidateTitleText = $(".algolab-title").text();              
+       var candidateTitleText = $(".jupman-title").text();              
                                   
                     
        
        var nav = $("<div>")
-                     .attr("id", "algolab-nav")
+                     .attr("id", "jupman-nav")
                     .append(indexLink);       
        
        if (candidateTitleText.length !== 0){
 
            var title = $("<span>")
-                    .addClass("algolab-nav-item")
+                    .addClass("jupman-nav-item")
                     .css("padding-left","8px")
                     .text(candidateTitleText);
             nav.append("<br>")
@@ -101,61 +106,62 @@ var algolab = {
                 .append(title);                                
         }
                      
-       
-       algolab.hideCell("%%HTML");
-       algolab.hideCell("import algolab");   
+       // TODO THIS HIDE STUFF DOES NOT WORK ANYMORE AFTER PORTING TO NBSPHINX 
+       // INSTEAD, YOU SHOULD EDIT 
+       jupman.hideCell("%%HTML");
+       jupman.hideCell("import jupman");   
        
         // TODO this is a bit too hacky   
-       algolab.hideCell(/from exercise(.+)_solution import \*/)
+       jupman.hideCell(/from exercise(.+)_solution import \*/)
        
-       algolab.hideCell("algolab.init()"); 
-       algolab.hideCell("algolab.show_run(");
-       algolab.hideCell("nxpd.draw(");
-       algolab.hideCellAll("algolab.run("); 
+       jupman.hideCell("jupman.init()"); 
+       jupman.hideCell("jupman.show_run(");
+       jupman.hideCell("nxpd.draw(");
+       jupman.hideCellAll("jupman.run("); 
               
-       if ($("#algolab-toc").length === 0){
+       if ($("#jupman-toc").length === 0){
            $("body").append(toc);       
        } else {
-           $("#algolab-toc").replaceWith(toc);
+           $("#jupman-toc").replaceWith(toc);
        }
        
-       if ($("#algolab-nav").length === 0){
+       if ($("#jupman-nav").length === 0){
            $("body").append(nav);       
        } else {
-           $("#algolab-nav").replaceWith(nav);
+           $("#jupman-nav").replaceWith(nav);
        }              
        
-       algolab.resize();
+       jupman.resize();
     }
 }
 
 $( window ).resize(function() {
-    algolab.resize();
+    jupman.resize();
 });
 
 
 $("body").on("mousemove",function(event) {
-    if (algolab.isReduced()){
+    if (jupman.isReduced()){
         if (event.pageX < 50) {            
-             $("#algolab-toc").show(); 
-            $("#algolab-toc").css("background","rgba(255, 255, 255, 1.0)");
+             $("#jupman-toc").show(); 
+            $("#jupman-toc").css("background","rgba(255, 255, 255, 1.0)");
         } else {
             
-            if (algolab.hoverToc()) {                    
+            if (jupman.hoverToc()) {                    
             } else {
-                $("#algolab-toc").hide();                        
+                $("#jupman-toc").hide();                        
             }
                      
-/*            if ($("#algolab-toc").is(":visible")){
-                if (algolab.hoverToc()) {                    
+/*            if ($("#jupman-toc").is(":visible")){
+                if (jupman.hoverToc()) {                    
                 } else {
-                    $("#algolab-toc").hide();                        
+                    $("#jupman-toc").hide();                        
                 }
             } else {
-                if (algolab.hoverToc())
+                if (jupman.hoverToc())
                   show
               } else {
-                $("#algolab-toc").hide();                        
+                $("#jupman-toc").hide();                        
                }                 
             }
   */     
@@ -163,4 +169,4 @@ $("body").on("mousemove",function(event) {
     }
 });
 
-$(document).ready(algolab.init);
+$(document).ready(jupman.init);

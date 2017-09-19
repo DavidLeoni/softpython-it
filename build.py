@@ -14,7 +14,6 @@ import inspect
 import re
 from conf import *
 
-
 def help():
 
     print("")
@@ -35,6 +34,13 @@ def help():
     print("")
     print("        python build.py  -f html,epub,latex")
     print("")
+
+# for python2:
+sphinxcmd = "sphinx-build"
+
+# use this for python3:
+#sphinxcmd = "./sphinx3-build"
+
 
 def detect_system():
     print("")
@@ -100,7 +106,7 @@ def run_sphinx(manuals, formats):
             relout = outdir(manual, format)
             print("Building " + tinfo['name'] + " "  + format +  " in " + relout)
 
-            # ./sphinx-build -b  html doc _build/student/html 
+            # sphinx-build -b  html doc _build/student/html 
 
 
 
@@ -115,7 +121,7 @@ def run_sphinx(manuals, formats):
                 else:
                     raise Exception("ERROR: FAILED SECURITY CHECK BEFORE CLEANING DIRECTORY: " + str(relout))
                     
-                cmd = ("./sphinx-build -b " + format + " . " + relout + " " + tinfo['args'] )
+                cmd = (sphinxcmd + " -b " + format + " . " + relout + " " + tinfo['args'] )
                 res = run(cmd)
                 
                 
