@@ -13,17 +13,14 @@ import inspect
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
+# TODO change as needed
 
-def warn(msg):
-    print("")
-    print("   WARNING: " + str(msg))
-    print("")
-
-def super_doc_dir():
-    return os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+course = "Python Course" 
+degree = "Master in Python"
+author = 'Mr Python Guru' # TODO PUT YOUR NAME
+copyright = '# 2017, ' + author  # TODO PUT THE YEAR  
 
 FORMATS = ["html", "epub", "latex"]
-
 SYSTEMS = {
     "default" : {
         "name" : "Default system",
@@ -31,16 +28,45 @@ SYSTEMS = {
         "exclude_patterns": ["**_build"]
     }
 }
-
 MANUALS = {
     "student": {
-        "name" : "Jupman",  # TODO put name, like "Scientific Programming"
+        "name" : "Jupman",  # TODO put manual name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
         "output" : "",
         "exclude_patterns" : []
     }
 }
+manual = 'student'
+system = 'default'
+
+project = MANUALS[manual]['name']
+# The filename without the extension
+# filename = 'jupman'
+filename = project.lower().replace(" ", "-")
+# note if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
+
+def parse_date(ld):
+    try:
+        return datetime.datetime.strptime( str(ld), "%Y-%m-%d")
+    except:
+        info("\n\nERROR! NEED FORMAT 'yyyy-mm-dd', GOT INSTEAD: '" + str(ld) + "'\n\n")
+        raise
+
+    
+def parse_date_str(ld):
+    """
+        NOTE: returns a string 
+    """
+    return str(parse_date(ld)).replace(' 00:00:00','')
+    
+def warn(msg):
+    print("")
+    print("   WARNING: " + str(msg))
+    print("")
+
+def super_doc_dir():
+    return os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 
 def get_version(release):
@@ -109,18 +135,6 @@ pygments_style = 'sphinx'
 master_doc = 'index'
 
 
-manual = 'student'
-system = 'default'
-    
-project = MANUALS[manual]['name']
-# The filename without the extension
-# filename = 'jupman'
-filename = project.lower().replace(" ", "-")
-# note if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
-
-author = 'David Leoni' # TODO PUT YOUR NAME
-copyright = '# 2017, ' + author  # TODO PUT THE YEAR  
-
 
 linkcheck_ignore = [r'http://localhost:\d+/']
 
@@ -132,12 +146,12 @@ try:
     release = release.decode().strip()
     if not '.' in release[0]:
         release = '0.1.0'
-        print("Couldn't find git tag, defaulting to: " + release)
-    else:    
-        print("Detected release from git: " + str(release))
+        #print("Couldn't find git tag, defaulting to: " + release)
+    #else:    
+    #   print("Detected release from git: " + str(release))
 except Exception:
     release = '0.1.0'
-    print("Couldn't find git version, defaulting to: " + release)
+    #print("Couldn't find git version, defaulting to: " + release)
 
 version  = get_version(release)
 # -- Options for HTML output ----------------------------------------------

@@ -10,28 +10,9 @@ import sys
 import os
 import shutil
 import datetime
+import glob
+import re
 from arghandler import *
-
-
-def _JM_(key, exam_date):
-    if key == None:
-        raise Exception("Found key equal to None !")
-    if len(key) == 0:
-        raise Exception("Found empty key !")
-    if key == 'exam.date':
-        return exam_date
-    if key.startswith('conf.'):
-        return getattr(conf, key.substr(len('conf.')))
-    raise Exception("Unrecognized key: '" + key + "'")
-
-def expand_JM(source, target, exam_date):
-    sourcef = open(source, "r")
-    s = f.read()
-    s = s.replace('_JM_(exam.date)', exam_date )
-    for k in conf.__dict__:
-        s = s.replace('_JM_(conf.' + k + ')', conf.__dict__[k])
-    destf = open(target, 'w')
-    destf.write(s)
 
 def fatal(msg, ex=None):
     if ex == None:
@@ -44,48 +25,67 @@ def fatal(msg, ex=None):
 def info(msg):
     print("  " + str(msg))
 
+def warn(msg):
+    print("\n\n   WARNING: " + str(msg))
+
+
+def expand_JM(source, target, exam_date):
+    d = conf.parse_date(exam_date)
+    sourcef = open(source, "r")
+    s = sourcef.read()
+    s = s.replace('_JM_(exam.date)', exam_date )
+    s = s.replace('_JM_(exam.date_human)', d.strftime('%A %d, %B %Y') )
+    for k in conf.__dict__:
+        s = s.replace('_JM_(conf.' + k + ')', str(conf.__dict__[k]))
+    p = re.compile('_JM_\([a-zA-Z][\w\.]*\)')
+    if p.search(s):
+        warn("FOUND _JM_ macros which couldn't be expanded!")
+        print("               file: " + source)
+        print("\n                 ".join(p.findall(s)))
+        print("")
+    destf = open(target, 'w')    
+    destf.write(s)
+
+
 cur_dir_names = os.listdir('.')    
 
 if 'exam.py' not in cur_dir_names:
     fatal('You must execute exam.py from within the directory it is contained!')
 
-def parse_date(ld):
-    try:
-        return str(datetime.datetime.strptime( str(ld), "%Y-%m-%d")).replace(' 00:00:00','')
-    except:
-        info("\n\nERROR! NEED FORMAT 'yyyy-mm-dd', GOT INSTEAD: '" + str(ld) + "'\n\n")
-        exit(1)
-
 def arg_date(parser, args):
     parser.add_argument('date', help="date in format 'yyyy-mm-dd'" )
-    return parse_date(vars(parser.parse_args(args))['date'])    
+    return conf.parse_date_str(vars(parser.parse_args(args))['date'])    
     
-
 @subcmd(help="Initializes a new exam")
 def init(parser,context,args):
+        
     ld = arg_date(parser, args)
     eld = "private/exams/" + ld
-    pubeld = "exams/" + ld 
+    pubeld = "past-exams/" + ld 
     exam_ipynb = 'exam-' + ld + '.ipynb'
 
     if os.path.exists(eld):
-        fatal("PRIVATE EXAM " + eld + " ALREADY EXISTS !")
+        fatal("PRIVATE EXAM ALREADY EXISTS: " + eld)
 
     if os.path.exists(pubeld):
-        fatal("PUBLIC EXAM " + pubeld + " ALREADY EXISTS !")
+        fatal("PUBLIC EXAM ALREADY EXISTS: " + pubeld)
 
     if os.path.exists(exam_ipynb):
-        fatal("PUBLIC EXAM " + exam_ipynb + " ALREADY EXISTS !")
+        fatal("PUBLIC EXAM ALREADY EXISTS: " +  exam_ipynb)
 
     shutil.copytree("templates/exam", eld)
-    expand_JM('templates/exam-yyyy-mm-dd.ipynb', exam_ipynb)
+    expand_JM('templates/exam-yyyy-mm-dd.ipynb', exam_ipynb, ld)
 
     os.rename(eld + "/" + "jupman-yyyy-mm-dd-grades.ods", eld + "/" + conf.filename + "-" + ld + "-grades.ods")
-    os.rename(eld + "/" + "jupman-yyyy-mm-dd", eld + "/" + conf.filename  + "-" + ld)
+    firstname_dir = eld + "/" + conf.filename  + "-" + ld
+    os.rename(eld + "/" + "jupman-yyyy-mm-dd", firstname_dir)
 
-    shutil.copytree("templates/exam", pubeld)  
-    os.rename(pubeld + "/" + "yyyy-mm-dd", pubeld + "/" + ld)
+    info("Following material is now ready to edit: ")
+    print("")
+    info('   Python exercises and tests : ' + firstname_dir)
+    info('   Python solutions           : ' + eld + "/solutions" )
 
+    info('   Exam notebook              : ' +  exam_ipynb)
 
 @subcmd(help='Zips a builded exam, making it ready for deploy on the exam server')
 def package(parser,context,args):
@@ -105,24 +105,22 @@ def package(parser,context,args):
     if len(dir_names) == 0:
         fatal("SITE DIRECTORY AT " + built_site_dir + " WAS NOT BUILT !")
 
-    server_algolab = eld + "/server/" + conf.filename
-    if os.path.exists(server_algolab):
-        if server_algolab.endswith("server/" + conf.filename):
-            info("Cleaning " + server_algolab + " ...")
-            shutil.rmtree(server_algolab)        
-        else:
-            fatal("Failed security check before deleting target " + str(server_algolab)) 
+    server_jupman = eld + "/server/" + conf.filename
+
+    if os.path.exists(server_jupman):
+        info("Cleaning " + server_jupman + " ...")
+        delete_tree(server_jupman, "server/" + conf.filename)
 
     info("Copying built website ...")        
-    shutil.copytree(built_site_dir, server_algolab)            
+    shutil.copytree(built_site_dir, server_jupman)            
     target_student_zip = eld +"/server/" + conf.filename + "-" + ld
     info("Creating student exercises zip:  " + target_student_zip + ".zip" )        
-    shutil.make_archive(target_student_zip, 'zip', ld + "/" + conf.filename + "-" + ld)
+    shutil.make_archive(target_student_zip, 'zip', eld + "/" + conf.filename + "-" + ld)
     target_server_zip = eld +"/" + conf.filename + "-" + ld + "-server"    # without '.zip'
     info("Creating server zip: " + target_server_zip + ".zip")            
-    shutil.make_archive(target_server_zip, 'zip', "exams/" + ld + "/server")
+    shutil.make_archive(target_server_zip, 'zip', eld + "/server")
     print("")    
-    info("You can now browse the website at:  " + os.path.abspath(eld + "/server/algolab/index.html"))
+    info("You can now browse the website at:  " + os.path.abspath(eld + "/server/" + conf.filename + "/html/index.html"))
     print("")
 
 @subcmd(help='Set up grading for the provided exam')
@@ -151,8 +149,11 @@ def grade(parser,context,args):
             
         shutil.copytree(eld + "/shipped/" + dn , target + "/shipped")        
         shutil.copytree(eld + "/shipped/" + dn , target + "/corrected")
-
-
+    print("")
+    info("You can now try files and correct them in " + target + "/corrected")
+    info("Original ones are in " + target + "/shipped")
+    print("")
+    
 @subcmd('zip-grades', help='Creates a separate zip for each student containing his graded sheet and code')
 def zip_grades(parser,context,args):
     ld = arg_date(parser, args)
@@ -167,42 +168,122 @@ def zip_grades(parser,context,args):
     for dn in dir_names:
         target = eld + "/graded/" + dn
         shutil.make_archive(target, 'zip', target)
+    print("")
+    info("You can now find zips to send to students in " + eld + "/graded")
+    print("")
 
-@subcmd('publish-exam', help='To be used after an exam is finishedAfter an exam, copies the exam from private/exam/ to exam/')
-def publish_exam(parser,context,args):
+@subcmd('publish', help='Copies exam python files from private/exam/ to exam/ (both exercises and solutions), and zips them')
+def publish(parser,context,args):
     ld = arg_date(parser, args)
     source = "private/exams/" + ld + "/"
     source_exercises = source  + conf.filename + "-"+ld 
     source_solutions = source +  "solutions" 
 
-    if not os.path.exists(source):
+    if not os.path.isdir(source):
         fatal("SOURCE PRIVATE EXAM FOLDER " + source + " DOES NOT EXISTS !")
-    if os.path.exists(source_exercises):
+    if not os.path.isdir(source_exercises):
         fatal("SOURCE PRIVATE EXAM FOLDER " + source_exercises + " DOES NOT EXISTS !")
-    if os.path.exists(source_solutions):
+    if not os.path.isdir(source_solutions):
         fatal("SOURCE PRIVATE EXAM FOLDER " + source_solutions + " DOES NOT EXISTS !")
 
-    dest = "exams/" + ld + "/"
+    dest = "past-exams/" + ld + "/"
+    dest_zip = "past-exams/" + ld  
     dest_exercises = dest + "exercises"
     dest_solutions = dest + "solutions"
 
     if os.path.exists(dest):
         fatal("TARGET PUBLIC EXAM FOLDER " + dest + " ALREADY EXISTS !")
+    if os.path.exists(dest_zip):
+        fatal("TARGET PUBLIC EXAM ZIP " + dest_zip + ".zip ALREADY EXISTS !")    
     if os.path.exists(dest_exercises):
         fatal("TARGET PUBLIC EXAM FOLDER " + dest_exercises + " ALREADY EXISTS !")
     if os.path.exists(dest_solutions):
         fatal("TARGET PUBLIC EXAM FOLDER " + dest_solutions + " ALREADY EXISTS !")
 
-    info("Copying exercises to " + str(dest_exercises) + "  ...")
-    for file in glob.glob(source_exercises + "/*"):
-        print("Copying " + str(file))
-        shutil.copy(file, dest_exercises)
-    info("Copying solutions to " + str(dest_solutions) + "  ...")
-    for file in glob.glob(source_solutions + "/*"):
-        print("Copying " + str(file))
-        shutil.copy(file, dest_solutions)
-    info("DONE.")
+    info("Copying exercises to " + str(dest_exercises))
+    shutil.copytree(source_exercises, dest_exercises)
+    info("Copying solutions to " + str(dest_solutions))
+    shutil.copytree(source_solutions, dest_solutions)
+    info("Creating zip " + dest_zip + '.zip')
+    shutil.make_archive(dest_zip, 'zip', dest)
 
+    print("")
+    info("Exam python files copied. You can now push the code to GitHub.")
+    print("")
+
+def check_paths(path, path_check):
+    if not isinstance(path, basestring):
+        raise Exception("Path to delete must be a string! Found instead: " + str(type(path)))
+    if len(path.strip()) == 0:
+        raise Exception("Provided an empty path !")
+    if not isinstance(path_check, basestring):
+        raise Exception("Path check to delete must be a string! Found instead: " + str(type(path_check)))
+    if len(path_check.strip()) == 0:
+        raise Exception("Provided an empty path check!")
+
+
+def delete_file(path, path_check):
+    """ Deletes a file, checking you are deleting what you really want
+
+        path: the path to delete as a string
+        path_check: the end of the path to delete, as a string
+    """
+    check_paths(path, path_check)
+
+    if path.endswith(path_check):
+        os.remove(path)
+    else:
+        fatal("FAILED SAFETY CHECK FOR DELETING DIRECTORY " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
+
+def delete_tree(path, path_check):
+    """ Deletes a directory, checking you are deleting what you really want
+
+        path: the path to delete as a string
+        path_check: the end of the path to delete, as a string
+    """
+    check_paths(path, path_check)
+
+    if path.endswith(path_check):
+        shutil.rmtree(path)
+    else:
+        fatal("FAILED SAFETY CHECK FOR DELETING DIRECTORY " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
+
+@subcmd(help="Deletes an existing exam")
+def delete(parser,context,args):
+        
+    ld = arg_date(parser, args)
+    eld = "private/exams/" + ld
+    pubeld = "past-exams/" + ld 
+    exam_ipynb = 'exam-' + ld + '.ipynb'
+
+    deleted = []
+
+    ans = ''
+    while ans != 'Y' and ans != 'n':  
+        print ("DO YOU *REALLY* WANT TO DELETE EXAM " + ld + " (NOTE: CANNOT BE UNDONE) [Y/n]? "),
+        ans = raw_input()
+
+    if ans != 'Y':
+        print("")
+        info("User cancelled, no data was deleted.")
+        return
+
+    print("")
+    if os.path.exists(eld):
+        info("Deleting " + eld + " ...")
+        delete_tree(eld, "private/exams/" + ld)
+        deleted.append(eld)
+    if os.path.exists(pubeld):
+        info("Deleting " + pubeld + " ...")
+        delete_tree(pubeld, "exams/" + ld)
+        deleted.append(pubeld)
+    if os.path.exists(exam_ipynb):
+        info("Deleting " + exam_ipynb + " ...")
+        delete_file(exam_ipynb, 'exam-' +ld + '.ipynb')        
+        deleted.append(exam_ipynb)
+
+    if len(deleted) == 0:
+        fatal("COULDN'T FIND ANY EXAM FILE TO DELETE FOR DATE: " + ld)
 
 handler = ArgumentHandler(description='Manages ' + conf.filename + ' exams.',
                          use_subcommand_help=True)

@@ -75,13 +75,15 @@ def init():
 
 def init_exam(exam_date):
     """ To be called at the beginning of Jupyter exam sheets
-        exam_date = exam date string in the format 'yyyy-mm-dd'
+        
+        exam_date : exam date string in the format 'yyyy-mm-dd'
     """
+    conf.parse_date(exam_date)
     import sys
     sys.path.append('private/exams/' + exam_date + '/solutions')
-    sys.path.append('private/exams/' + exam_date + '/' + conf.filename + '-' + exam_date+'-FIRSTNAME-LASTNAME-ID')
-    sys.path.append('exams/' + exam_date + '/solutions')
-    sys.path.append('exams/' + exam_date + '/exercises')
+    sys.path.append('private/exams/' + exam_date + '/' + conf.filename + '-' + exam_date+'/FIRSTNAME-LASTNAME-ID')
+    sys.path.append('past-exams/' + exam_date + '/solutions')
+    sys.path.append('past-exams/' + exam_date + '/exercises')
     return init()
 
 
