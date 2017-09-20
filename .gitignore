@@ -10,6 +10,12 @@ private/*
 !templates/exam/server/jupman-yyyy-mm-dd/FIRSTNAME-LASTNAME-ID/README.md
 
 
+##### PYTHON
+*.pyc
+__pycache__
+nbsphinx.egg-info/
+.ipynb_checkpoints/
+
 ##### OS RELATED
 *~
 \#*#
@@ -63,7 +69,3 @@ local.properties
 # PDT-specific
 .buildpath
 
-
-##### PYTHON
-*.pyc
-__pycache__
