@@ -2,8 +2,12 @@
 _build/
 private/*
 !private/README.md
-templates/exam/server/*
+/templates/exam/server/*
 !templates/exam/server/README.md
+
+# NOTE this does not work, I used git add -f to get it into git because 
+# we really need the directory to be created!
+!templates/exam/server/jupman-yyyy-mm-dd/FIRSTNAME-LASTNAME-ID/README.md
 
 
 ##### OS RELATED

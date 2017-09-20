@@ -13,19 +13,29 @@ import inspect
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
-# TODO change as needed
+###################   TODO EDIT AS NEEDED !!  ####################
 
 course = "Python Course" 
-degree = "Master in Python"
-author = 'Mr Python Guru' # TODO PUT YOUR NAME
-copyright = '# 2017, ' + author  # TODO PUT THE YEAR  
+degree = "Pythonology Master"
+author = 'Mr Python Guru' 
+copyright = '# 2017, ' + author                              
+
+#####    'filename' IS *VERY* IMPORTANT !!!!
+#####     IT IS PREPENDED IN MANY GENERATED FILES
+#####     AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
+#####     (like i.e. jupman.readthedocs.org)
+
+filename = 'jupman'   # The filename without the extension
+
+#################################################################
+
 
 FORMATS = ["html", "epub", "latex"]
 SYSTEMS = {
     "default" : {
         "name" : "Default system",
         "outdir":"_build/",
-        "exclude_patterns": ["**_build"]
+        "exclude_patterns": ["**_build", "**templates/exam/server", "**private"]
     }
 }
 MANUALS = {
@@ -41,9 +51,8 @@ manual = 'student'
 system = 'default'
 
 project = MANUALS[manual]['name']
-# The filename without the extension
-# filename = 'jupman'
-filename = project.lower().replace(" ", "-")
+
+
 # note if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
 
 def parse_date(ld):
@@ -82,7 +91,7 @@ def get_version(release):
 # Select nbsphinx and, if needed, add a math extension (mathjax or pngmath):
 extensions = [
     'nbsphinx',
-#    'sphinx.ext.mathjax',
+    'sphinx.ext.mathjax',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig'
