@@ -4,11 +4,11 @@
 
 ########  Just some bookkeeping for the script, ignore it.
 set -e
-if [ -d "private/2000-12-31" ]; then
+if [ -d "private/2000-12-31" ] || [ -d "past-exams/2000-12-31" ] ; then
     echo
     echo "  ERROR: example exam '2000-12-31' already exists ! You can safely delete it with "
     echo
-    echo "      python exam.py delete 2000-12-31"
+    echo "      python3 exam.py delete 2000-12-31"
     echo
     exit 1
 fi
