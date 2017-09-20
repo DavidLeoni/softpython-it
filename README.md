@@ -24,10 +24,10 @@ Use ReadTheDocs panels to link the project to your Github repository.
 ## Getting Started
 1. Edit as needed `conf.py`, which is the configuration file for Sphinx. In particular, you *MUST** edit the sections marked with `TODO`
 2. Try to launch a build
-```bash
-python3 build.py
-```
-For more info, see [related section](#building-the-manual)
+    ```bash
+    python3 build.py
+    ```
+    For more info, see [related section](#building-the-manual)
 3. If everything works fine on your computer, push changes back to Github
 4. Go back to ReadTheDocs and try to run a build. Hopefully your project will become available on something like _my-project.readthedocs.org_
 5. If you want to grade exams, see [Exams](#exams) section.
