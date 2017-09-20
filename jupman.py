@@ -49,11 +49,11 @@ def show_run(classOrMethod):
 def init(root=''):
     """ To be called at the beginning of Jupyter sheets
     """
-    css = open(root + "css/jupman.css", "r").read()
+    css = open(root + "overlay/_static/css/jupman.css", "r").read()
 
-    tocjs = open(root + "js/toc.js", "r").read()
+    tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
 
-    js = open(root + "js/jupman.js", "r").read()
+    js = open(root + "overlay/_static/js/jupman.js", "r").read()
 
     ret = "<style>\n" 
     ret += css

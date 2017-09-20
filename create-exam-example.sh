@@ -15,9 +15,17 @@ fi
 
 python exam.py init 2000-12-31
 python exam.py package 2000-12-31
+
+# simulating some shipped exams...
+mkdir -p private/2000-12-31/shipped/john-doe-112233
+cp templates/exam/exercises/* private/2000-12-31/shipped/john-doe-112233
+mkdir -p private/2000-12-31/shipped/jane-doe-445566
+cp templates/exam/exercises/* private/2000-12-31/shipped/jane-doe-445566
+# done with the simulation, time to grade
+
 python exam.py grade 2000-12-31
 python exam.py zip-grades 2000-12-31
-python exam.py copy-exam 2000-12-31
+python exam.py publish 2000-12-31
 echo 
 echo "You could now run manually the following git instructions to publish the exam:"
 echo "git add ."

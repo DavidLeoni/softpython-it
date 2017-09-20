@@ -3,8 +3,6 @@
 # David Leoni Sept 2017
 # This script allows initialization and management of exams.
 
-print(  "\n###############  JUPMAN EXAMS   #################\n")
-
 import conf
 import sys
 import os
@@ -22,7 +20,7 @@ def fatal(msg, ex=None):
     info("\n\n    ERROR! " + str(msg) + exMsg + "\n\n")
     exit(1)
     
-def info(msg):
+def info(msg=""):
     print("  " + str(msg))
 
 def warn(msg):
@@ -63,9 +61,7 @@ def init(parser,context,args):
     eld = "private/" + ld
     pubeld = "past-exams/" + ld 
     exam_ipynb = 'private/' + ld + '/exam-' + ld + '.ipynb'
-    student_files_source = eld + '/server/jupman-yyyy-mm-dd'
-    student_files_target = eld + '/server/' + conf.filename + "-" + ld 
-
+    
     if os.path.exists(eld):
         fatal("PRIVATE EXAM ALREADY EXISTS: " + eld)
 
@@ -80,8 +76,6 @@ def init(parser,context,args):
 
     os.rename(eld + "/" + "jupman-yyyy-mm-dd-grades.ods", eld + "/" + conf.filename + "-" + ld + "-grades.ods")
     
-    os.rename(student_files_source, student_files_target)
-
     info("Following material is now ready to edit: ")
     print("")
     info('   Python exercises and tests : ' + eld + "/exercises")
@@ -93,12 +87,21 @@ def init(parser,context,args):
 def package(parser,context,args):
     ld = arg_date(parser, args)
     eld = "private/" + ld
-    student_files = eld + "/server/" + conf.filename + "-" + ld + "/FIRSTNAME-LASTNAME-ID"
-    
+    source_student = eld + "/exercises"
+    target_student = eld + "/server/" + conf.filename + "-" + ld + "/FIRSTNAME-LASTNAME-ID"
+    target_student_zip = eld +"/server/" + conf.filename + "-" + ld
+
     built_site_dir = "_build/"
 
     if not os.path.exists(built_site_dir):
         fatal(built_site_dir + " WAS NOT BUILT !")
+
+    if not os.path.exists(source_student):
+        fatal("MISSING SOURCE STUDENT EXERCISES: " + source_student)
+
+    if os.path.exists(target_student):
+        fatal("TARGET STUDENT EXERCISES DIRECTORY ALREADY EXISTS: " + target_student)
+
 
     try:
         dir_names = os.listdir(built_site_dir)    
@@ -115,10 +118,12 @@ def package(parser,context,args):
         delete_tree(server_jupman, "server/" + conf.filename)
 
     info("Copying built website ...")        
-    shutil.copytree(built_site_dir, server_jupman)            
-    target_student_zip = eld +"/server/" + conf.filename + "-" + ld
+    shutil.copytree(built_site_dir, server_jupman)
+    
+    info("Copying exercises to " + str(target_student))
+    shutil.copytree(source_student, target_student)            
     info("Creating student exercises zip:  " + target_student_zip + ".zip" )        
-    shutil.make_archive(target_student_zip, 'zip', student_files)
+    shutil.make_archive(target_student_zip, 'zip', target_student_zip)
     target_server_zip = eld +"/" + conf.filename + "-" + ld + "-server"    # without '.zip'
     info("Creating server zip: " + target_server_zip + ".zip")            
     shutil.make_archive(target_server_zip, 'zip', eld + "/server")
@@ -130,39 +135,44 @@ def package(parser,context,args):
 def grade(parser,context,args):
     ld = arg_date(parser, args)
     eld = "private/" + ld
+    shipped = eld + "/shipped"
+    graded = eld + "/graded"
+
+    if not os.path.exists(shipped):
+        fatal("Couldn't find directory: " + shipped)
 
     try:
-        dir_names = os.listdir(ld + "/shipped")
-    
+        dir_names = os.walk(shipped).next()[1]
     except Exception, e:        
         info("\n\n    ERROR! " + repr(e) + "\n\n")
         exit(1)
     if len(dir_names) == 0:
-        fatal("NOTHING TO GRADE!")
+        fatal("NOTHING TO GRADE IN " + shipped)
         
     for dn in dir_names:
-        target = eld + "/graded/" + dn
+        target = graded + "/" + dn
         
         if (os.path.exists(target + "/shipped")):
-            info ("\n\n   ERROR! DIRECTORY ALREADY EXISTS: " + target + "/shipped\n\n")
-            exit(1)
-        if (os.path.exists(target + "/corrected")):
-            info ("\n\n   ERROR! DIRECTORY ALREADY EXISTS: " + target + "/corrected\n\n")
-            exit(1)
+            fatal("DIRECTORY ALREADY EXISTS: " + target + "/shipped\n\n")
             
+        if (os.path.exists(target + "/corrected")):
+            fatal("DIRECTORY ALREADY EXISTS: " + target + "/corrected\n\n")
+
+        info("Copying Python files to execute and eventually correct in " + target + "/corrected")
         shutil.copytree(eld + "/shipped/" + dn , target + "/shipped")        
+        info("Copying original shipped files (don't touch them!) in " + target + "/shipped")
         shutil.copytree(eld + "/shipped/" + dn , target + "/corrected")
-    print("")
-    info("You can now try files and correct them in " + target + "/corrected")
-    info("Original ones are in " + target + "/shipped")
-    print("")
     
+
 @subcmd('zip-grades', help='Creates a separate zip for each student containing his graded sheet and code')
 def zip_grades(parser,context,args):
     ld = arg_date(parser, args)
     eld = "private/" + ld
+    shipped = eld + "/shipped"
+    graded =  eld + "/graded"
     try:
-        dir_names = os.listdir(eld + "/shipped")
+        
+        dir_names = os.walk(shipped).next()[1]
     except Exception, e:        
         info("\n\n    ERROR! " + repr(e) + "\n\n")
         exit(1)
@@ -214,9 +224,17 @@ def publish(parser,context,args):
     info("Creating zip " + dest_zip + '.zip')
     shutil.make_archive(dest_zip, 'zip', dest)
 
-    print("")
-    info("Exam python files copied. You can now push the code to GitHub.")
-    print("")
+    info()
+    info("Exam python files copied.")
+    info()
+    info("You can now manually run the following git instructions to publish the exam,")
+    info("ReadTheDocs will automatically build the website.")
+    info()
+    info("  git status  # just to check everything is ok")
+    info("  git add .")
+    info("  git commit -m 'published " + ld + " exam'")
+    info("  git push")
+    info()
 
 def check_paths(path, path_check):
     if not isinstance(path, basestring):

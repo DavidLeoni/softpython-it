@@ -12,6 +12,10 @@ import os
 import sys
 import inspect
 import re
+import glob
+import fileinput
+import string
+
 from conf import *
 
 def help():
@@ -41,7 +45,9 @@ sphinxcmd = "sphinx-build"
 # use this for python3:
 #sphinxcmd = "./sphinx3-build"
 
-
+def info(msg):
+    print "  " + msg
+    
 def detect_system():
     print("")
     print("Trying to detect system ...")
@@ -108,8 +114,6 @@ def run_sphinx(manuals, formats):
 
             # sphinx-build -b  html doc _build/student/html 
 
-
-
             try:
                 print("Cleaning " + str(relout) + "  ")
                 
@@ -157,6 +161,15 @@ def run_sphinx(manuals, formats):
 
                         f.seek(0)
                         f.write(data)
+                    
+                    info("Fixing html paths for offline browsing ....")
+
+                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/', '_static/js/')
+                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/', '_static/js/')
+                    replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', '_static/js/MathJax.js')
+
+                    #replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/MathJax.js')
+
                 elif format == 'latex':                  
                     run('pdflatex *.tex', cwd=relout )
                 
@@ -192,6 +205,26 @@ def wrongarg(msg):
     #print("    ERROR! " + msg)
     #print("")
     exit("\n\n    ERROR! " + msg + "\n\n\n    For more info run:   build.py help\n\n");
+
+
+
+def replace_html(stext, rtext):
+    """ Replaces strings in html files (useful for correcting links to cdn libs)
+        stext: string to find
+        rtext: string to replace with
+    """
+
+    path = "_build/html/*.html"
+
+    info("finding: " + stext + " replacing with: " + rtext + " in: " + path)
+
+    files = glob.glob(path)
+    for line in fileinput.input(files,inplace=1):
+        lineno = 0
+        lineno = string.find(line, stext)
+        if lineno >0:
+            line =line.replace(stext, rtext)
+        sys.stdout.write(line)
 
 #  MAIN
 
