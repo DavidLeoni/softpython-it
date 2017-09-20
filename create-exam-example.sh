@@ -24,9 +24,9 @@ python exam.py package 2000-12-31
 echo
 echo "------- Simulating some shipped exams..."
 mkdir -p private/2000-12-31/shipped/john-doe-112233
-cp templates/exam/exercises/* private/2000-12-31/shipped/john-doe-112233
+cp templates/exam/exercises/ private/2000-12-31/shipped/john-doe-112233
 mkdir -p private/2000-12-31/shipped/jane-doe-445566
-cp templates/exam/exercises/* private/2000-12-31/shipped/jane-doe-445566
+cp templates/exam/exercises/ private/2000-12-31/shipped/jane-doe-445566
 echo "------- Done with shipped exams simulation, time to grade ..."
 echo
 

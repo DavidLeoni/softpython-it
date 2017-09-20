@@ -181,10 +181,10 @@ Here is the output:
   DONE.
 
 ------- Simulating some shipped exams...
-mkdir -p private/2000-12-31/shipped/john-doe-112233
-cp templates/exam/exercises/exercise1.py templates/exam/exercises/exercise1.pyc templates/exam/exercises/exercise1_test.py templates/exam/exercises/exercise1_test.pyc templates/exam/exercises/README.md private/2000-12-31/shipped/john-doe-112233
-mkdir -p private/2000-12-31/shipped/jane-doe-445566
-cp templates/exam/exercises/exercise1.py templates/exam/exercises/exercise1.pyc templates/exam/exercises/exercise1_test.py templates/exam/exercises/exercise1_test.pyc templates/exam/exercises/README.md private/2000-12-31/shipped/jane-doe-445566
+> mkdir -p private/2000-12-31/shipped/john-doe-112233
+> cp templates/exam/exercises/ private/2000-12-31/shipped/john-doe-112233
+> mkdir -p private/2000-12-31/shipped/jane-doe-445566
+> cp templates/exam/exercises/ private/2000-12-31/shipped/jane-doe-445566
 ------- Done with shipped exams simulation, time to grade ...
 
 > python exam.py grade 2000-12-31
