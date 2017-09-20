@@ -3,10 +3,9 @@
 # Example to show all the steps to create and publish an exam
 
 set -e
-
-if [ -d "private/exams/2000-12-31" ]; then
+if [ -d "private/2000-12-31" ]; then
     echo
-    echo "  ERROR: test exam '2000-12-31' already exists ! You can delete it with "
+    echo "  ERROR: example exam '2000-12-31' already exists ! You can safely delete it with "
     echo
     echo "      ./exam.py delete 2000-12-31"
     echo
@@ -26,10 +25,9 @@ cp templates/exam/exercises/* private/2000-12-31/shipped/jane-doe-445566
 python exam.py grade 2000-12-31
 python exam.py zip-grades 2000-12-31
 python exam.py publish 2000-12-31
-echo 
-echo "You could now run manually the following git instructions to publish the exam:"
-echo "git add ."
-echo "git commit -m 'published exam'"
-echo "git push"
+
+echo
+echo '  Finished example exam run !!'
+echo
 
 
