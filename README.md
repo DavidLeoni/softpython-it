@@ -13,7 +13,8 @@ Jupman uses [NbSphinx](http://nbsphinx.readthedocs.io/) and [ReadTheDocs](https:
 **IMPORTANT: choose a name which is NOT already on [ReadTheDocs](http://readthedocs.org)**
 2. Create a [ReadTheDocs account](http://readthedocs.org) **using the same name as in Github**
 so the address in readthedocs will be something like _my-project.readthedocs.org_.
-Use ReadTheDocs panels to link the project to your Github repository.
+    * Use ReadTheDocs panels to link the project to your Github repository.
+    * In _Admin-> _Advanced settings panel_, set _Python interpreter_ to _CPython 3.x_ 
 3. On your computer, clone the `my-project` from Github 
 4. Install Python 3.5+
 5. [Install Jupyter](http://jupyter.org/install.html)
