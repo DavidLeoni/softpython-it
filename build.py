@@ -168,8 +168,7 @@ def run_sphinx(manuals, formats):
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/', '_static/js/')
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/', '_static/js/')
                     replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', '_static/js/MathJax.js')
-
-                    #replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/MathJax.js')
+                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
 
                 elif format == 'latex':                  
                     run('pdflatex *.tex', cwd=relout )

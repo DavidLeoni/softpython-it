@@ -25,7 +25,7 @@ Jupman Manual
     :maxdepth: 2
     :glob:
 
-    README.md
+    usage.md
     jupman-tests.ipynb
     intro.ipynb
     past-exams.ipynb
