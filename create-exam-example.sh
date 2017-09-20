@@ -2,25 +2,33 @@
 
 # Example to show all the steps to create and publish an exam
 
+########  Just some bookkeeping for the script, ignore it.
 set -e
 if [ -d "private/2000-12-31" ]; then
     echo
     echo "  ERROR: example exam '2000-12-31' already exists ! You can safely delete it with "
     echo
-    echo "      ./exam.py delete 2000-12-31"
+    echo "      python exam.py delete 2000-12-31"
     echo
     exit 1
 fi
+# Makes the bash script to print out every command before it is executed except echo
+trap '[[ $BASH_COMMAND != echo* ]] && echo $BASH_COMMAND' DEBUG
+
+###### end bookkeeping  #####################################
+
 
 python exam.py init 2000-12-31
 python exam.py package 2000-12-31
 
-# simulating some shipped exams...
+echo
+echo "------- Simulating some shipped exams..."
 mkdir -p private/2000-12-31/shipped/john-doe-112233
 cp templates/exam/exercises/* private/2000-12-31/shipped/john-doe-112233
 mkdir -p private/2000-12-31/shipped/jane-doe-445566
 cp templates/exam/exercises/* private/2000-12-31/shipped/jane-doe-445566
-# done with the simulation, time to grade
+echo "------- Done with shipped exams simulation, time to grade ..."
+echo
 
 python exam.py grade 2000-12-31
 python exam.py zip-grades 2000-12-31

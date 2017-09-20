@@ -12,7 +12,7 @@ Jupyter Python worksheets build system. Uses NbSphinx and ReadTheDocs
 2. Create a [ReadTheDocs account](http://readthedocs.org) **using the same name as in Github**
 so the address in readthedocs will be something like _my-project.readthedocs.org_.
 Use ReadTheDocs panels to link the project to your Github repository.
-3. Clone the `my-project` on your computer
+3. On your computer, clone the `my-project` from Github 
 4. Install Python 2.7
 5. [Install Jupyter](http://jupyter.org/install.html)
 6. Install Python modules,from the root of the project, run:
@@ -23,6 +23,7 @@ Use ReadTheDocs panels to link the project to your Github repository.
 8. Try to [launch a build](#building-the-manual)
 9. If everything works fine on your computer, push changes back to Github
 10. Go back to ReadTheDocs and try to run a build. Hopefully your project will become available on something like _my-project.readthedocs.org_
+11. If you want to grade exams, see [Exams](#exams) section.
 
 ## Building the manual
 
@@ -149,10 +150,79 @@ NOTE: as of today (Sept 2017) software may contain bugs, but at least we check f
 (like trying to overwrite exeisting exams). 
 
 In the file [create-exam-example.sh](create-exam-example.sh) there is a typical run of the 
-script, which creates the example exam for date `2000-12-31`. Here is the output:
+script, which creates the example exam for date `2000-12-31`. Notice it might ask
+you to delete the existing 2000-12-31 exam, if it does just follow the instructions.
+Here is the output:
 
 
 ```bash
+
+~/Da/prj/jupman/prj(master)$ ./create-exam-example.sh
+
+> python exam.py init 2000-12-31
+  Following material is now ready to edit: 
+
+     Python exercises and tests : private/2000-12-31/exercises
+     Python solutions           : private/2000-12-31/solutions
+     Exam notebook              : private/2000-12-31private/2000-12-31/exam-2000-12-31.ipynb
+
+  DONE.
+
+> python exam.py package 2000-12-31
+  Cleaning private/2000-12-31/server/jupman ...
+  Copying built website ...
+  Copying exercises to private/2000-12-31/server/jupman-2000-12-31/FIRSTNAME-LASTNAME-ID
+  Creating student exercises zip:  private/2000-12-31/server/jupman-2000-12-31.zip
+  Creating server zip: private/2000-12-31/jupman-2000-12-31-server.zip
+
+  You can now browse the website at:  /home/da/Da/prj/jupman/prj/private/2000-12-31/server/jupman/html/index.html
+
+
+  DONE.
+
+------- Simulating some shipped exams...
+mkdir -p private/2000-12-31/shipped/john-doe-112233
+cp templates/exam/exercises/exercise1.py templates/exam/exercises/exercise1.pyc templates/exam/exercises/exercise1_test.py templates/exam/exercises/exercise1_test.pyc templates/exam/exercises/README.md private/2000-12-31/shipped/john-doe-112233
+mkdir -p private/2000-12-31/shipped/jane-doe-445566
+cp templates/exam/exercises/exercise1.py templates/exam/exercises/exercise1.pyc templates/exam/exercises/exercise1_test.py templates/exam/exercises/exercise1_test.pyc templates/exam/exercises/README.md private/2000-12-31/shipped/jane-doe-445566
+------- Done with shipped exams simulation, time to grade ...
+
+> python exam.py grade 2000-12-31
+  Copying Python files to execute and eventually correct in private/2000-12-31/graded/john-doe-112233/corrected
+  Copying original shipped files (don't touch them!) in private/2000-12-31/graded/john-doe-112233/shipped
+  Copying Python files to execute and eventually correct in private/2000-12-31/graded/jane-doe-445566/corrected
+  Copying original shipped files (don't touch them!) in private/2000-12-31/graded/jane-doe-445566/shipped
+
+  DONE.
+
+> python exam.py zip-grades 2000-12-31
+
+  You can now find zips to send to students in private/2000-12-31/graded
+
+
+  DONE.
+
+> python exam.py publish 2000-12-31
+  Copying exercises to past-exams/2000-12-31/exercises
+  Copying solutions to past-exams/2000-12-31/solutions
+  Copying notebook to past-exams/2000-12-31/exam-2000-12-31.ipynb
+  Creating zip past-exams/2000-12-31.zip
+  
+  Exam python files copied.
+  
+  You can now manually run the following git instructions to publish the exam,
+  ReadTheDocs will automatically build the website.
+  
+    git status  # just to check everything is ok
+    git add .
+    git commit -m 'published 2000-12-31 exam'
+    git push
+  
+
+  DONE.
+
+
+  Finished example exam run !!
 
 ```
 
