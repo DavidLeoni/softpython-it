@@ -180,7 +180,7 @@ Here is the output:
 
      Python exercises and tests : private/2000-12-31/exercises
      Python solutions           : private/2000-12-31/solutions
-     Exam notebook              : private/2000-12-31private/2000-12-31/exam-2000-12-31.ipynb
+     Exam notebook              : private/2000-12-31/exam-2000-12-31.ipynb
 
   DONE.
 

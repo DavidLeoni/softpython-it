@@ -60,7 +60,7 @@ def init(parser,context,args):
     ld = arg_date(parser, args)
     eld = "private/" + ld
     pubeld = "past-exams/" + ld 
-    exam_ipynb = 'private/' + ld + '/exam-' + ld + '.ipynb'
+    exam_ipynb = eld + '/exam-' + ld + '.ipynb'
     
     if os.path.exists(eld):
         fatal("PRIVATE EXAM ALREADY EXISTS: " + eld)
@@ -81,7 +81,7 @@ def init(parser,context,args):
     info('   Python exercises and tests : ' + eld + "/exercises")
     info('   Python solutions           : ' + eld + "/solutions" )
 
-    info('   Exam notebook              : ' + eld + exam_ipynb)
+    info('   Exam notebook              : ' + exam_ipynb)
 
 @subcmd(help='Zips a builded exam, making it ready for deploy on the exam server')
 def package(parser,context,args):
