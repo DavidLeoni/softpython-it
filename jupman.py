@@ -46,14 +46,14 @@ def show_run(classOrMethod):
     """    
     run(classOrMethod)
         
-def init():
+def init(root=''):
     """ To be called at the beginning of Jupyter sheets
     """
-    css = open("./css/jupman.css", "r").read()
+    css = open(root + "css/jupman.css", "r").read()
 
-    tocjs = open("./js/toc.js", "r").read()
+    tocjs = open(root + "js/toc.js", "r").read()
 
-    js = open("./js/jupman.js", "r").read()
+    js = open(root + "js/jupman.js", "r").read()
 
     ret = "<style>\n" 
     ret += css
@@ -78,13 +78,12 @@ def init_exam(exam_date):
         
         exam_date : exam date string in the format 'yyyy-mm-dd'
     """
-    conf.parse_date(exam_date)
+    if exam_date != '_JM_(exam.date)':
+        conf.parse_date(exam_date) # little hack so the template can work somewhat properly
     import sys
-    sys.path.append('private/exams/' + exam_date + '/solutions')
-    sys.path.append('private/exams/' + exam_date + '/' + conf.filename + '-' + exam_date+'/FIRSTNAME-LASTNAME-ID')
-    sys.path.append('past-exams/' + exam_date + '/solutions')
-    sys.path.append('past-exams/' + exam_date + '/exercises')
-    return init()
+    sys.path.append('solutions/')
+    sys.path.append('exercises/')
+    return init('../../')
 
 
 def assertNotNone(ret, function_name):

@@ -2,7 +2,6 @@
 _build/
 private/*
 !private/README.md
-!private/exams/README.md
 templates/exam/server/*
 !templates/exam/server/README.md
 

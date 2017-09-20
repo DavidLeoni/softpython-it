@@ -135,13 +135,6 @@ def run_sphinx(manuals, formats):
 
                         if "latex" in formats or "pdf" in formats or "epub" in formats:
                             data = data.replace('${download}', 'Download ')
-                            print('Creating symlinks for PDFs and EPUBs ...')
-                            if 'pdf' in formats:
-                                os.symlink( '../pdf', relout + '/pdf')
-                            elif 'latex' in formats:
-                                os.symlink( '../pdf', relout + '/latex')
-                            if 'epub' in formats:
-                                os.symlink( '../epub', relout + '/epub')
                         else:
                             data = data.replace('${download}', '')
 

@@ -3,7 +3,7 @@
 # David Leoni Sept 2017
 # This script allows initialization and management of exams.
 
-print(  "\n###############  JUPMAN EXAM MANAGER   #################\n")
+print(  "\n###############  JUPMAN EXAMS   #################\n")
 
 import conf
 import sys
@@ -60,9 +60,11 @@ def arg_date(parser, args):
 def init(parser,context,args):
         
     ld = arg_date(parser, args)
-    eld = "private/exams/" + ld
+    eld = "private/" + ld
     pubeld = "past-exams/" + ld 
-    exam_ipynb = 'exam-' + ld + '.ipynb'
+    exam_ipynb = 'private/' + ld + '/exam-' + ld + '.ipynb'
+    student_files_source = eld + '/server/jupman-yyyy-mm-dd'
+    student_files_target = eld + '/server/' + conf.filename + "-" + ld 
 
     if os.path.exists(eld):
         fatal("PRIVATE EXAM ALREADY EXISTS: " + eld)
@@ -74,23 +76,24 @@ def init(parser,context,args):
         fatal("PUBLIC EXAM ALREADY EXISTS: " +  exam_ipynb)
 
     shutil.copytree("templates/exam", eld)
-    expand_JM('templates/exam-yyyy-mm-dd.ipynb', exam_ipynb, ld)
+    expand_JM('templates/exam/exam-yyyy-mm-dd.ipynb', exam_ipynb, ld)
 
     os.rename(eld + "/" + "jupman-yyyy-mm-dd-grades.ods", eld + "/" + conf.filename + "-" + ld + "-grades.ods")
-    firstname_dir = eld + "/" + conf.filename  + "-" + ld
-    os.rename(eld + "/" + "jupman-yyyy-mm-dd", firstname_dir)
+    
+    os.rename(student_files_source, student_files_target)
 
     info("Following material is now ready to edit: ")
     print("")
-    info('   Python exercises and tests : ' + firstname_dir)
+    info('   Python exercises and tests : ' + eld + "/exercises")
     info('   Python solutions           : ' + eld + "/solutions" )
 
-    info('   Exam notebook              : ' +  exam_ipynb)
+    info('   Exam notebook              : ' + eld + exam_ipynb)
 
 @subcmd(help='Zips a builded exam, making it ready for deploy on the exam server')
 def package(parser,context,args):
     ld = arg_date(parser, args)
-    eld = "private/exams/" + ld
+    eld = "private/" + ld
+    student_files = eld + "/server/" + conf.filename + "-" + ld + "/FIRSTNAME-LASTNAME-ID"
     
     built_site_dir = "_build/"
 
@@ -115,7 +118,7 @@ def package(parser,context,args):
     shutil.copytree(built_site_dir, server_jupman)            
     target_student_zip = eld +"/server/" + conf.filename + "-" + ld
     info("Creating student exercises zip:  " + target_student_zip + ".zip" )        
-    shutil.make_archive(target_student_zip, 'zip', eld + "/" + conf.filename + "-" + ld)
+    shutil.make_archive(target_student_zip, 'zip', student_files)
     target_server_zip = eld +"/" + conf.filename + "-" + ld + "-server"    # without '.zip'
     info("Creating server zip: " + target_server_zip + ".zip")            
     shutil.make_archive(target_server_zip, 'zip', eld + "/server")
@@ -126,7 +129,7 @@ def package(parser,context,args):
 @subcmd(help='Set up grading for the provided exam')
 def grade(parser,context,args):
     ld = arg_date(parser, args)
-    eld = "private/exams/" + ld
+    eld = "private/" + ld
 
     try:
         dir_names = os.listdir(ld + "/shipped")
@@ -157,7 +160,7 @@ def grade(parser,context,args):
 @subcmd('zip-grades', help='Creates a separate zip for each student containing his graded sheet and code')
 def zip_grades(parser,context,args):
     ld = arg_date(parser, args)
-    eld = "private/exams/" + ld
+    eld = "private/" + ld
     try:
         dir_names = os.listdir(eld + "/shipped")
     except Exception, e:        
@@ -172,12 +175,13 @@ def zip_grades(parser,context,args):
     info("You can now find zips to send to students in " + eld + "/graded")
     print("")
 
-@subcmd('publish', help='Copies exam python files from private/exam/ to exam/ (both exercises and solutions), and zips them')
+@subcmd('publish', help='Copies exam python files from private/ to exam/ (both exercises and solutions), and zips them')
 def publish(parser,context,args):
     ld = arg_date(parser, args)
-    source = "private/exams/" + ld + "/"
-    source_exercises = source  + conf.filename + "-"+ld 
-    source_solutions = source +  "solutions" 
+    source = "private/" + ld + "/"
+    source_exercises = source  + 'exercises' 
+    source_solutions = source +  'solutions' 
+    source_ipynb = source + 'exam-' + ld + '.ipynb'
 
     if not os.path.isdir(source):
         fatal("SOURCE PRIVATE EXAM FOLDER " + source + " DOES NOT EXISTS !")
@@ -190,6 +194,7 @@ def publish(parser,context,args):
     dest_zip = "past-exams/" + ld  
     dest_exercises = dest + "exercises"
     dest_solutions = dest + "solutions"
+    dest_ipynb = dest + 'exam-' + ld + '.ipynb' 
 
     if os.path.exists(dest):
         fatal("TARGET PUBLIC EXAM FOLDER " + dest + " ALREADY EXISTS !")
@@ -204,6 +209,8 @@ def publish(parser,context,args):
     shutil.copytree(source_exercises, dest_exercises)
     info("Copying solutions to " + str(dest_solutions))
     shutil.copytree(source_solutions, dest_solutions)
+    info('Copying notebook to ' + str(dest_ipynb))
+    shutil.copy(source_ipynb, dest_ipynb)
     info("Creating zip " + dest_zip + '.zip')
     shutil.make_archive(dest_zip, 'zip', dest)
 
@@ -248,13 +255,13 @@ def delete_tree(path, path_check):
     else:
         fatal("FAILED SAFETY CHECK FOR DELETING DIRECTORY " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
 
-@subcmd(help="Deletes an existing exam")
-def delete(parser,context,args):
+@subcmd('delete', help="Deletes an existing exam")
+def delete_exam(parser,context,args):
         
     ld = arg_date(parser, args)
-    eld = "private/exams/" + ld
+    eld = "private/" + ld
     pubeld = "past-exams/" + ld 
-    exam_ipynb = 'exam-' + ld + '.ipynb'
+    pubeldzip = pubeld + ".zip" 
 
     deleted = []
 
@@ -271,16 +278,16 @@ def delete(parser,context,args):
     print("")
     if os.path.exists(eld):
         info("Deleting " + eld + " ...")
-        delete_tree(eld, "private/exams/" + ld)
+        delete_tree(eld, "private/" + ld)
         deleted.append(eld)
     if os.path.exists(pubeld):
         info("Deleting " + pubeld + " ...")
-        delete_tree(pubeld, "exams/" + ld)
+        delete_tree(pubeld, "past-exams/" + ld)
         deleted.append(pubeld)
-    if os.path.exists(exam_ipynb):
-        info("Deleting " + exam_ipynb + " ...")
-        delete_file(exam_ipynb, 'exam-' +ld + '.ipynb')        
-        deleted.append(exam_ipynb)
+    if os.path.exists(pubeldzip):
+        info("Deleting " + pubeldzip + " ...")
+        delete_file(pubeldzip, "past-exams/" + ld + ".zip")
+        deleted.append(pubeldzip)
 
     if len(deleted) == 0:
         fatal("COULDN'T FIND ANY EXAM FILE TO DELETE FOR DATE: " + ld)

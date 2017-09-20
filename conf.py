@@ -50,7 +50,7 @@ def parse_date(ld):
     try:
         return datetime.datetime.strptime( str(ld), "%Y-%m-%d")
     except:
-        info("\n\nERROR! NEED FORMAT 'yyyy-mm-dd', GOT INSTEAD: '" + str(ld) + "'\n\n")
+        print("\n\nERROR! NEED FORMAT 'yyyy-mm-dd', GOT INSTEAD: '" + str(ld) + "'\n\n")
         raise
 
     

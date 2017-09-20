@@ -28,5 +28,5 @@ Jupman Manual
     intro.ipynb
     jupman-tests.ipynb
     past-exams.ipynb
-    exam-*.ipynb
+    past-exams/**/exam-*.ipynb
     jupman-test-exam.upynb
