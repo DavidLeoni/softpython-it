@@ -2,4 +2,3 @@ In this directory is collected all the material that will be copied on the exam 
 
 NOTE: Content of this directory is git ignored, except for:
 - this README file
-- jupman-yyyy-mm-dd directory

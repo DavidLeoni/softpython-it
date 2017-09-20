@@ -17,7 +17,7 @@ class DoSomethingTest(unittest.TestCase):
     
     def test_empty(self):
 	
-	d = MyClass()
+        d = MyClass()
         d.do_something()
         self.assertEqual(1,1) # second is the expected one
 
@@ -25,8 +25,8 @@ class DoSomethingElseTest(unittest.TestCase):
     
     def test_empty(self):
 
-	d = MyClass()
+        d = MyClass()
         d.do_something_else()
-	self.assertEqual(1,1) # second is the expected one
+        self.assertEqual(1,1) # second is the expected one
 
 

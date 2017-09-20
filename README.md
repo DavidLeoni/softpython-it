@@ -1,11 +1,13 @@
 
 # Jupman
 
-Jupyter Python 3 worksheets build system. Uses NbSphinx and ReadTheDocs
+Jupyter Python 3 worksheets build system and exam manager. See Jupman manual at http://jupman.readthedocs.io
 
-## Installation instructions
+Jupman uses [NbSphinx](http://nbsphinx.readthedocs.io/) and [ReadTheDocs](https://readthedocs.org). 
 
-(Instructions are for Ubuntu, on Windows they may differ)
+## Installation
+
+(Instructions are for Ubuntu, on Windows may differ)
 
 1. On Github, fork [jupman project](https://github.com/DavidLeoni/jupman) to create yours, for example `my-project`.
 **IMPORTANT: choose a name which is NOT already on [ReadTheDocs](http://readthedocs.org)**

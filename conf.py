@@ -116,7 +116,7 @@ else:
     nbsphinx_execute = 'always'
     
 # Use this kernel instead of the one stored in the notebook metadata:
-#nbsphinx_kernel_name = 'python3'
+nbsphinx_kernel_name = 'python3'
 
 # List of arguments to be passed to the kernel that executes the notebooks:
 #nbsphinx_execute_arguments = ['--InlineBackend.figure_formats={"png", "pdf"}']
@@ -128,7 +128,7 @@ else:
 #nbsphinx_timeout = 60
 
 # Default Pygments lexer for syntax highlighting in code cells:
-#nbsphinx_codecell_lexer = 'ipython3'
+nbsphinx_codecell_lexer = 'ipython3'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
