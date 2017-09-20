@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # David Leoni Sept 2017
 # This script allows initialization and management of exams.
@@ -105,7 +105,7 @@ def package(parser,context,args):
 
     try:
         dir_names = os.listdir(built_site_dir)    
-    except Exception, e:        
+    except Exception as e:        
         fatal("ERROR WITH DIR " + built_site_dir, ex=e)
 
     if len(dir_names) == 0:
@@ -142,8 +142,8 @@ def grade(parser,context,args):
         fatal("Couldn't find directory: " + shipped)
 
     try:
-        dir_names = os.walk(shipped).next()[1]
-    except Exception, e:        
+        dir_names = next(os.walk(shipped))[1]
+    except Exception as e:        
         info("\n\n    ERROR! " + repr(e) + "\n\n")
         exit(1)
     if len(dir_names) == 0:
@@ -172,8 +172,8 @@ def zip_grades(parser,context,args):
     graded =  eld + "/graded"
     try:
         
-        dir_names = os.walk(shipped).next()[1]
-    except Exception, e:        
+        dir_names = next(os.walk(shipped))[1]
+    except Exception as e:        
         info("\n\n    ERROR! " + repr(e) + "\n\n")
         exit(1)
     if len(dir_names) == 0:
@@ -237,11 +237,11 @@ def publish(parser,context,args):
     info()
 
 def check_paths(path, path_check):
-    if not isinstance(path, basestring):
+    if not isinstance(path, str):
         raise Exception("Path to delete must be a string! Found instead: " + str(type(path)))
     if len(path.strip()) == 0:
         raise Exception("Provided an empty path !")
-    if not isinstance(path_check, basestring):
+    if not isinstance(path_check, str):
         raise Exception("Path check to delete must be a string! Found instead: " + str(type(path_check)))
     if len(path_check.strip()) == 0:
         raise Exception("Provided an empty path check!")
@@ -286,7 +286,7 @@ def delete_exam(parser,context,args):
     ans = ''
     while ans != 'Y' and ans != 'n':  
         print ("DO YOU *REALLY* WANT TO DELETE EXAM " + ld + " (NOTE: CANNOT BE UNDONE) [Y/n]? "),
-        ans = raw_input()
+        ans = input()
 
     if ans != 'Y':
         print("")

@@ -1,7 +1,7 @@
 
 # Jupman
 
-Jupyter Python worksheets build system. Uses NbSphinx and ReadTheDocs
+Jupyter Python 3 worksheets build system. Uses NbSphinx and ReadTheDocs
 
 ## Installation instructions
 
@@ -13,11 +13,11 @@ Jupyter Python worksheets build system. Uses NbSphinx and ReadTheDocs
 so the address in readthedocs will be something like _my-project.readthedocs.org_.
 Use ReadTheDocs panels to link the project to your Github repository.
 3. On your computer, clone the `my-project` from Github 
-4. Install Python 2.7
+4. Install Python 3.5+
 5. [Install Jupyter](http://jupyter.org/install.html)
 6. Install Python modules,from the root of the project, run:
     ```bash
-    sudo python -m pip install -r requirements.txt
+    sudo python3 -m pip install -r requirements.txt
     ```
 7. Edit as needed `conf.py`, which is the configuration file for Sphinx. In particular, you *MUST** edit the sections marked with `TODO`
 8. Try to [launch a build](#building-the-manual)
@@ -30,7 +30,7 @@ Use ReadTheDocs panels to link the project to your Github repository.
 To build the website, go to console and from the root of the directory run:
 
 ```bash
-python build.py
+python3 build.py
 ```
 
 Site will be created in `_build/` folder.
@@ -41,14 +41,14 @@ Site will be created in `_build/` folder.
 For help: 
 
 ```bash
-python build.py -h
+python3 build.py -h
 ```
 
 For quick build that only produces html:
 
 
 ```bash
-python build.py -q
+python3 build.py -q
 ```
 
 
@@ -135,13 +135,13 @@ System is flexible enough so you can privately work on next exams in `private/` 
 To see the help:
 
 ```bash
-python exam.py -h
+python3 exam.py -h
 ```
 
 To see help for a particular subcommand, like i.e. `init`, type the subcommand followed by `-h` :
 
 ```bash
-python exam.py init -h
+python3 exam.py init -h
 ```
 
 Running commands should be quite self-explanatory.
@@ -159,7 +159,7 @@ Here is the output:
 
 ~/Da/prj/jupman/prj(master)$ ./create-exam-example.sh
 
-> python exam.py init 2000-12-31
+> python3 exam.py init 2000-12-31
   Following material is now ready to edit: 
 
      Python exercises and tests : private/2000-12-31/exercises
@@ -168,7 +168,7 @@ Here is the output:
 
   DONE.
 
-> python exam.py package 2000-12-31
+> python3 exam.py package 2000-12-31
   Cleaning private/2000-12-31/server/jupman ...
   Copying built website ...
   Copying exercises to private/2000-12-31/server/jupman-2000-12-31/FIRSTNAME-LASTNAME-ID
@@ -187,7 +187,7 @@ Here is the output:
 > cp templates/exam/exercises/ private/2000-12-31/shipped/jane-doe-445566
 ------- Done with shipped exams simulation, time to grade ...
 
-> python exam.py grade 2000-12-31
+> python3 exam.py grade 2000-12-31
   Copying Python files to execute and eventually correct in private/2000-12-31/graded/john-doe-112233/corrected
   Copying original shipped files (don't touch them!) in private/2000-12-31/graded/john-doe-112233/shipped
   Copying Python files to execute and eventually correct in private/2000-12-31/graded/jane-doe-445566/corrected
@@ -195,14 +195,14 @@ Here is the output:
 
   DONE.
 
-> python exam.py zip-grades 2000-12-31
+> python3 exam.py zip-grades 2000-12-31
 
   You can now find zips to send to students in private/2000-12-31/graded
 
 
   DONE.
 
-> python exam.py publish 2000-12-31
+> python3 exam.py publish 2000-12-31
   Copying exercises to past-exams/2000-12-31/exercises
   Copying solutions to past-exams/2000-12-31/solutions
   Copying notebook to past-exams/2000-12-31/exam-2000-12-31.ipynb

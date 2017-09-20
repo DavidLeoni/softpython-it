@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # Builds documentation for Jupiter notebooks courses: https://github.com/DavidLeoni/jupman
@@ -39,14 +39,15 @@ def help():
     print("        python build.py  -f html,epub,latex")
     print("")
 
-# for python2:
-sphinxcmd = "sphinx-build"
 
-# use this for python3:
-#sphinxcmd = "./sphinx3-build"
+sphinxcmd = "./sphinx3-build"
+
+# use this for python2:
+# sphinxcmd = "sphinx-build"
+
 
 def info(msg):
-    print "  " + msg
+    print("  " + msg)
     
 def detect_system():
     print("")
@@ -221,7 +222,7 @@ def replace_html(stext, rtext):
     files = glob.glob(path)
     for line in fileinput.input(files,inplace=1):
         lineno = 0
-        lineno = string.find(line, stext)
+        lineno = line.find(stext)
         if lineno >0:
             line =line.replace(stext, rtext)
         sys.stdout.write(line)

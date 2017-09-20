@@ -18,21 +18,21 @@ trap '[[ $BASH_COMMAND != echo* ]] && echo $BASH_COMMAND' DEBUG
 ###### end bookkeeping  #####################################
 
 
-python exam.py init 2000-12-31
-python exam.py package 2000-12-31
+python3 exam.py init 2000-12-31
+python3 exam.py package 2000-12-31
 
 echo
 echo "------- Simulating some shipped exams..."
 mkdir -p private/2000-12-31/shipped/john-doe-112233
-cp templates/exam/exercises/ private/2000-12-31/shipped/john-doe-112233
+cp templates/exam/exercises/* private/2000-12-31/shipped/john-doe-112233
 mkdir -p private/2000-12-31/shipped/jane-doe-445566
-cp templates/exam/exercises/ private/2000-12-31/shipped/jane-doe-445566
+cp templates/exam/exercises/* private/2000-12-31/shipped/jane-doe-445566
 echo "------- Done with shipped exams simulation, time to grade ..."
 echo
 
-python exam.py grade 2000-12-31
-python exam.py zip-grades 2000-12-31
-python exam.py publish 2000-12-31
+python3 exam.py grade 2000-12-31
+python3 exam.py zip-grades 2000-12-31
+python3 exam.py publish 2000-12-31
 
 echo
 echo '  Finished example exam run !!'

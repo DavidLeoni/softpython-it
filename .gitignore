@@ -14,7 +14,7 @@ private/*
 *.pyc
 __pycache__
 nbsphinx.egg-info/
-.ipynb_checkpoints/
+.ipynb_checkpoints
 
 ##### OS RELATED
 *~
