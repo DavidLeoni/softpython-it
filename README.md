@@ -21,11 +21,24 @@ Use ReadTheDocs panels to link the project to your Github repository.
     ```bash
     sudo python3 -m pip install -r requirements.txt
     ```
-7. Edit as needed `conf.py`, which is the configuration file for Sphinx. In particular, you *MUST** edit the sections marked with `TODO`
-8. Try to [launch a build](#building-the-manual)
-9. If everything works fine on your computer, push changes back to Github
-10. Go back to ReadTheDocs and try to run a build. Hopefully your project will become available on something like _my-project.readthedocs.org_
-11. If you want to grade exams, see [Exams](#exams) section.
+## Getting Started
+1. Edit as needed `conf.py`, which is the configuration file for Sphinx. In particular, you *MUST** edit the sections marked with `TODO`
+2. Try to launch a build
+```bash
+python3 build.py
+```
+For more info, see [related section](#building-the-manual)
+3. If everything works fine on your computer, push changes back to Github
+4. Go back to ReadTheDocs and try to run a build. Hopefully your project will become available on something like _my-project.readthedocs.org_
+5. If you want to grade exams, see [Exams](#exams) section.
+
+You should now be ready to create your notebooks by launching from the project root:
+
+```bash
+ jupyter notebook
+```
+
+If you wish the notebooks to appear in the generated manual, you have to add them in the `index.rst` file.
 
 ## Building the manual
 
@@ -66,7 +79,7 @@ Here we give an overview of how to edit worksheets. More info can be found in [J
 
 ### Running jupyter
 
-First of all, run Jupyter from the root of the directory
+First of all, run Jupyter from the root of the directory:
 
 
 ```bash
@@ -85,6 +98,7 @@ jupman.init()
 ```
 
 Running it will create the sidebar even when editing in Jupyter. If you want to refresh the sidebar, just run again the cell.
+
 
 ### Hiding cells
 
