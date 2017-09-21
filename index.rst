@@ -28,4 +28,8 @@ Jupman Manual
     usage.md
     jupman-tests.ipynb
     intro.ipynb
-    past-exams.ipynb
+    past-exams/**/exam-*
+
+
+    
+    
