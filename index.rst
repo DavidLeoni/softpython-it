@@ -6,7 +6,7 @@ Corso SoftPython
 
 .. warning:: 
 
-    DRAFT IN PROGRESS 
+    BOZZA IN PROGRESS 
 
 
 .. only:: html
@@ -26,6 +26,7 @@ Corso SoftPython
     :maxdepth: 2
     :glob:
 
+    about.ipynb
     intro.ipynb
     data-formats.ipynb
     data-visualization.ipynb
