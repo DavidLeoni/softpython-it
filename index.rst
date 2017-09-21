@@ -1,5 +1,5 @@
 
-Jupman Manual
+Corso SoftPython
 ================================================
 
 (AA 2017/18)
@@ -18,7 +18,8 @@ Jupman Manual
                   <a href="http://readthedocs.org/projects/softpython/downloads/epub/latest/" target="_blank"> EPUB </a>
                   <a href="http://readthedocs.org/projects/softpython/downloads/htmlzip/latest/" target="_blank"> HTML </a>
         <br/>
-        TODO: put link to software         
+        <br/>
+        <!--TODO: put link to software -->
 
 
 .. toctree::
@@ -34,7 +35,5 @@ Jupman Manual
     data-analytics.ipynb
     interactive-apps.ipynb
     database.ipynb
-    prove.ipynb
-
     
     
