@@ -15,9 +15,9 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 ###################   TODO EDIT AS NEEDED !!  ####################
 
-course = "Python Course" 
-degree = "Pythonology Master"
-author = 'Mr Python Guru' 
+course = "SoftPython" 
+degree = "DISI, Università degli Studi di Trento"
+author = 'David Leoni e Alessio Zamboni' 
 copyright = '# 2017, ' + author                              
 
 #####    'filename' IS *VERY* IMPORTANT !!!!
@@ -40,7 +40,7 @@ SYSTEMS = {
 }
 MANUALS = {
     "student": {
-        "name" : "Jupman",  # TODO put manual name, like "Scientific Programming"
+        "name" : "SoftPython",  # TODO put manual name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
         "output" : "",
@@ -173,7 +173,6 @@ html_title = project + ' version ' + release
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
-
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True

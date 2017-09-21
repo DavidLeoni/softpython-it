@@ -14,9 +14,9 @@ Jupman Manual
     .. raw:: html
         
 
-        Download: <a href="http://readthedocs.org/projects/jupman/downloads/pdf/latest/" target="_blank">PDF</a>
-                  <a href="http://readthedocs.org/projects/jupman/downloads/epub/latest/" target="_blank"> EPUB </a>
-                  <a href="http://readthedocs.org/projects/jupman/downloads/htmlzip/latest/" target="_blank"> HTML </a>
+        Download: <a href="http://readthedocs.org/projects/softpython/downloads/pdf/latest/" target="_blank">PDF</a>
+                  <a href="http://readthedocs.org/projects/softpython/downloads/epub/latest/" target="_blank"> EPUB </a>
+                  <a href="http://readthedocs.org/projects/softpython/downloads/htmlzip/latest/" target="_blank"> HTML </a>
         <br/>
         TODO: put link to software         
 
@@ -25,11 +25,16 @@ Jupman Manual
     :maxdepth: 2
     :glob:
 
-    usage.md
-    jupman-tests.ipynb
     intro.ipynb
-    past-exams/**/exam-*
-
+    data-formats.ipynb
+    data-visualization.ipynb
+    search.ipynb
+    data-integration.ipynb
+    data-extraction.ipynb
+    data-analytics.ipynb
+    interactive-apps.ipynb
+    database.ipynb
+    prove.ipynb
 
     
     

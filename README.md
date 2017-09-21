@@ -1,6 +1,10 @@
 
-# Jupman
+# Corso SoftPython
 
-Jupyter Python 3 worksheets build system and exam manager, see manual at http://jupman.readthedocs.io
+Worksheets Jupyter Python 3 per il corso di programmazione Soft Python @DISI - Università degli Studi di Trento.
 
-Jupman uses [NbSphinx](http://nbsphinx.readthedocs.io/) and [ReadTheDocs](https://readthedocs.org). 
+**Studenti: qua su Github ci sono solo i file sorgenti, il sito ufficiale del corso è su http://softpython.readthedocs.io**
+
+Docenti: per sapere come effettuare build e editing del manuale, vedere la guida di [Jupman](http://jupman.readthedocs.io), da cui SoftPython è derivato.
+
+
