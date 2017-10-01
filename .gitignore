@@ -5,6 +5,12 @@ private/*
 /templates/exam/server/*
 !templates/exam/server/README.md
 
+# Example exam
+
+past-exams/2000-12-31/
+past-exams/2000-12-31.zip
+
+
 ##### PYTHON
 *.pyc
 __pycache__
