@@ -126,7 +126,7 @@ def run_sphinx(manuals, formats):
                 else:
                     raise Exception("ERROR: FAILED SECURITY CHECK BEFORE CLEANING DIRECTORY: " + str(relout))
                     
-                cmd = (sphinxcmd + " -b " + format + " . " + relout + " " + tinfo['args'] )
+                cmd = (sphinxcmd + " -j 4 -b " + format + " . " + relout + " " + tinfo['args'] )
                 res = run(cmd)
                 
                 
