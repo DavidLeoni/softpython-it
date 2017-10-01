@@ -49,27 +49,31 @@ def show_run(classOrMethod):
 def init(root=''):
     """ To be called at the beginning of Jupyter sheets
     """
-    css = open(root + "overlay/_static/css/jupman.css", "r").read()
-
-    tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
-
-    js = open(root + "overlay/_static/js/jupman.js", "r").read()
-
-    ret = "<style>\n" 
-    ret += css
-    ret += "\n </style>\n"
-    
-    ret +="\n"
-    
-    ret += "<script>\n"
     on_rtd = os.environ.get('READTHEDOCS') == 'True'
-    if not on_rtd:
+    
+    if on_rtd:
+        # on RTD we don't inject anything, files are set in sphinx conf.py
+        print("")
+    else:
+        # Hacky stuff, because Jupyter only allows to set a per user custom js, we want per project js
+        
+        css = open(root + "overlay/_static/css/jupman.css", "r").read()
+        tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
+        js = open(root + "overlay/_static/js/jupman.js", "r").read()
+
+        ret = "<style>\n" 
+        ret += css
+        ret += "\n </style>\n"
+
+        ret +="\n"
+
+        ret += "<script>\n"
+        ret += "var JUPMAN_IN_JUPYTER = true;"  
         ret += "\n"
         ret += tocjs
-        ret += "\n"
-    
-    ret += js
-    ret += "\n</script>\n"
+        ret += "\n"    
+        ret += js
+        ret += "\n</script>\n"
 
     return  HTML(ret)
 

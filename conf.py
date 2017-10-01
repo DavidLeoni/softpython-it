@@ -367,6 +367,8 @@ def setup(app):
             'enable_eval_rst':True
         }, True)
         app.add_transform(AutoStructify)
+        app.add_javascript('js/jupman.js')
+        app.add_stylesheet('css/jupman.css')
 
 
 
