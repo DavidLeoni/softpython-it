@@ -4,6 +4,15 @@
  * 
  */
 
+function toggleVisibility(what){
+        var e = document.getElementById(what);
+        if(e.style.display == 'block')
+          e.style.display = 'none';
+        else
+          e.style.display = 'block';
+    };
+    
+
 function showthis(url) {
     window.open(url, "pres", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=400,width=500,height=500");
     return(false);
@@ -77,15 +86,54 @@ var jupman = {
             }).parents('div .cell ').hide();        
     },
     
-    init : function(){
+    toggleVisibility: function(what){
+        var e = document.getElementById(what);
+        if(e.style.display == 'block')
+          e.style.display = 'none';
+        else
+          e.style.display = 'block';
+    },
+    
+    /**
+     *  Code common to both jupman in jupyter and ReadTheDocs
+    */
+    initCommon : function(){
+        
+        $(".jupman-solution-header").remove();
+        span = $('<div>');
+        span.addClass('jupman-solution-header');
+        span.text('Show/hide solution');
+        
+        span.insertBefore(".jupman-solution");
+        
+        
+        $(".jupman-solution").hide();
+        $(".jupman-solution-header").show();
 
+        $('.jupman-solution-header')
+            .off('click')
+            .click(function(){
+                
+                var uls = $(this).nextAll(".jupman-solution");             
+                var sibling = uls.eq(0);
+                          
+                sibling.slideToggle();        
+                ev.preventDefault();
+                ev.stopPropagation();
+        });
+
+    },
+
+    /**
+     *   Jupyter only instructions - doesn't run on ReadTheDocs
+     */
+    initJupyter : function(){
+        
        var toc = $("<div>").attr("id", "jupman-toc");              
        var indexLink = $("<a>")
                         .addClass("jupman-nav-item")
                         .attr("href","index.html#Chapters")
                         .text("jupman");
-       
-       
        
        var candidateTitleText = $(".jupman-title").text();              
                                   
@@ -105,9 +153,12 @@ var jupman = {
                 .append("<br>")
                 .append(title);                                
         }
-                     
+          
+        
+        
        // TODO THIS HIDE STUFF DOES NOT WORK ANYMORE AFTER PORTING TO NBSPHINX 
-       // INSTEAD, YOU SHOULD EDIT 
+       // WE SHOULD USE 
+       // 
        jupman.hideCell("%%HTML");
        jupman.hideCell("import jupman");   
        
@@ -130,43 +181,69 @@ var jupman = {
        } else {
            $("#jupman-nav").replaceWith(nav);
        }              
+
        
+        $( window ).resize(function() {
+            jupman.resize();
+        });
+
+
+        $("body").on("mousemove",function(event) {
+            if (jupman.isReduced()){
+                if (event.pageX < 50) {            
+                     $("#jupman-toc").show(); 
+                    $("#jupman-toc").css("background","rgba(255, 255, 255, 1.0)");
+                } else {
+
+                    if (jupman.hoverToc()) {                    
+                    } else {
+                        $("#jupman-toc").hide();                        
+                    }
+
+        /*            if ($("#jupman-toc").is(":visible")){
+                        if (jupman.hoverToc()) {                    
+                        } else {
+                            $("#jupman-toc").hide();                        
+                        }
+                    } else {
+                        if (jupman.hoverToc())
+                          show
+                      } else {
+                        $("#jupman-toc").hide();                        
+                       }                 
+                    }
+          */     
+                }
+            }
+        });
+ 
+        
        jupman.resize();
+       console.log("Finished initializing jupman.js in Jupyter Notebook.")
+    },
+    
+    /**
+    * RTD only instructions
+    */
+    initReadTheDocs : function(){  
+        
+        console.log("Finished initializing jupman.js in ReadTheDocs")        
+    },
+    
+    /**
+     * Initializes jupman.js
+     */
+    init : function(){
+
+       jupman.initCommon();
+        
+       if (typeof JUPMAN_IN_JUPYTER === "undefined" || !JUPMAN_IN_JUPYTER ){            
+           jupman.initReadTheDocs();
+       } else {
+           jupman.initJupyter();
+       }
+        
     }
 }
-
-$( window ).resize(function() {
-    jupman.resize();
-});
-
-
-$("body").on("mousemove",function(event) {
-    if (jupman.isReduced()){
-        if (event.pageX < 50) {            
-             $("#jupman-toc").show(); 
-            $("#jupman-toc").css("background","rgba(255, 255, 255, 1.0)");
-        } else {
-            
-            if (jupman.hoverToc()) {                    
-            } else {
-                $("#jupman-toc").hide();                        
-            }
-                     
-/*            if ($("#jupman-toc").is(":visible")){
-                if (jupman.hoverToc()) {                    
-                } else {
-                    $("#jupman-toc").hide();                        
-                }
-            } else {
-                if (jupman.hoverToc())
-                  show
-              } else {
-                $("#jupman-toc").hide();                        
-               }                 
-            }
-  */     
-        }
-    }
-});
 
 $(document).ready(jupman.init);

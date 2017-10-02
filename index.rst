@@ -4,10 +4,6 @@ Corso SoftPython
 
 (AA 2017/18)
 
-.. warning:: 
-
-    BOZZA IN PROGRESS 
-
 
 .. only:: html
 

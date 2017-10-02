@@ -113,3 +113,14 @@
     #jupman-toc .toc-active {
         background: rgba(168, 254, 255, 0.32);
     }
+
+    .jupman-solution {       
+        padding:1px;
+    }
+
+    .jupman-solution-header {
+        display:none;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
