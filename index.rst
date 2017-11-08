@@ -32,5 +32,6 @@ Corso SoftPython
     data-analytics.ipynb
     interactive-apps.ipynb
     database.ipynb
+    exam-project.ipynb
     
     
