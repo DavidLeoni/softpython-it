@@ -98,7 +98,7 @@ def run(cmd, cwd=None):
                                    env=my_env,
                                    cwd=cwd
                                   )
-    print(res)
+    print(res.decode('UTF-8'))
     return res
     
 def run_sphinx(manuals, formats):
