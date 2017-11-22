@@ -26,7 +26,7 @@ Corso SoftPython
     intro.ipynb
     data-formats.ipynb
     data-visualization.ipynb
-    search.ipynb
+    search2.ipynb
     data-integration.ipynb
     data-extraction.ipynb
     data-analytics.ipynb
