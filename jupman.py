@@ -1,6 +1,6 @@
 
 # This is the library to be included in Jupyter notebooks.
-# David Leoni Sept 2017 
+# David Leoni Nov 2017 
 
 import sys
 import unittest
@@ -11,38 +11,50 @@ import conf
 from IPython.core.display import HTML
 
 
-# taken from here: http://stackoverflow.com/a/961057
 def get_class(meth):
-    for cls in inspect.getmro(meth.im_class):
-        if meth.__name__ in cls.__dict__: 
+    """
+        Taken from here: https://stackoverflow.com/a/25959545
+    """
+
+    if inspect.ismethod(meth):
+        for cls in inspect.getmro(meth.__self__.__class__):
+            if cls.__dict__.get(meth.__name__) is meth:
+                 return cls
+        meth = meth.__func__  # fallback to __qualname__ parsing
+    if inspect.isfunction(meth):
+        cls = getattr(inspect.getmodule(meth),
+                      meth.__qualname__.split('.<locals>', 1)[0].rsplit('.', 1)[0])
+        if isinstance(cls, type):
             return cls
-    return None
+    return getattr(meth, '__objclass__', None)  # handle special descriptor objects
 
-
-def run(classOrMethod):    
-    """ Runs test class or method. Doesn't show code nor output in html.
+def run(classOrMethodOrModule):    
+    """ Runs test class or method or Module. Doesn't show code nor output in html.
     
         todo look at test order here: http://stackoverflow.com/a/18499093        
     """ 
     
-    if  inspect.isclass(classOrMethod) and issubclass(classOrMethod, unittest.TestCase):        
-        testcase = classOrMethod
+    if  inspect.isclass(classOrMethodOrModule) and issubclass(classOrMethodOrModule, unittest.TestCase):        
+        testcase = classOrMethodOrModule
         suite = unittest.TestLoader().loadTestsFromTestCase(testcase)
-        unittest.TextTestRunner(verbosity=1,stream=sys.stderr).run( suite )
-    elif inspect.ismethod(classOrMethod):
-        meth = classOrMethod
+    elif inspect.isfunction(classOrMethodOrModule):
+        meth = classOrMethodOrModule
         suite = unittest.TestSuite()
         testcase = get_class(meth)
         suite.addTest(testcase(meth.__name__))
-        unittest.TextTestRunner(verbosity=1,stream=sys.stderr).run( suite )
+    elif inspect.ismodule(classOrMethodOrModule):
+        module = classOrMethodOrModule
+        suite = unittest.TestLoader().loadTestsFromModule(module)
     else:
-        raise Exception("Accepted parameters are a TestCase class or a TestCase method. Found instead: " + str(classOrMethod))
+        raise Exception("Accepted parameters are either a TestCase class, a TestCase method or a test module. Found instead: " + str(classOrMethodOrModule))
 
+    unittest.TextTestRunner(verbosity=1,stream=sys.stderr).run( suite )
 
 def show_run(classOrMethod):    
     """ Runs test class or method. Code is not shown, but output is
-    
+
         @since 0.19
+        @deprecated Just use run()
     """    
     run(classOrMethod)
         
