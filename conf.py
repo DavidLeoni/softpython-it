@@ -158,10 +158,7 @@ html_sourcelink_suffix = ''
 
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
-if on_rtd: 
-    nbsphinx_execute = 'never'   
-else:
-    nbsphinx_execute = 'always'
+nbsphinx_execute = 'never'   
     
 # Use this kernel instead of the one stored in the notebook metadata:
 nbsphinx_kernel_name = 'python3'
