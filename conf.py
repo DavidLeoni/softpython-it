@@ -10,6 +10,9 @@ import datetime
 import glob
 import os
 import inspect
+import zipfile
+import sys
+
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
@@ -84,6 +87,51 @@ def get_version(release):
     sl = release.split(".")
     return sl[0] + '.' + sl[1]
 
+def zip_folder(folder, zip_path):
+    
+    ignored = ['.__pycache__', '.ipynb_checkpoints', '.pyc']
+    
+    def ignored_file(filename):
+        for i in ignored:
+            if filename.find(i)!=-1:
+                return True
+    
+    folder = folder
+    parent_folder = folder[len(os.path.dirname(folder.strip('/')))+1:-1]
+    #print("parent_folder = " + parent_folder)
+    #print("folder = " + folder)
+    archive = zipfile.ZipFile(zip_path, "w")
+    for dirname, dirs, files in os.walk(folder):
+        #print("dirname=" + dirname)
+        dirNamePrefix = dirname + "/*"
+        #print("dirNamePrefix=" + dirNamePrefix)
+        filenames = glob.glob(dirNamePrefix)
+        #print("filenames=" + str(filenames))
+        for filename in filenames:
+            if os.path.isfile(filename) and not ignored_file(filename) :
+                #print('Zipping: %s' % filename)                    
+                name = parent_folder + '/' + filename[len(folder):]
+                archive.write(filename, name, zipfile.ZIP_DEFLATED)
+
+    archive.close()
+        
+    print("Wrote " + zip_path)
+            
+def zip_exercises():
+    
+    exercises =  glob.glob("exercises/*/")
+    if len(exercises) > 0:
+        outdir = 'overlay/_static/'
+        print("Found stuff in exercises/ , zipping them to " + outdir)
+        for d in exercises:
+            dir_name= d[len('exercises/'):].strip('/')
+            # print("dir_name = " + dir_name)
+            zip_name = dir_name + '-exercises.zip'
+            zip_path = outdir + zip_name
+            zip_folder(d, zip_path)
+        print("Done zipping exercises.") 
+
+#zip_exercises()        
 
 # Use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
@@ -110,10 +158,7 @@ html_sourcelink_suffix = ''
 
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
-if on_rtd: 
-    nbsphinx_execute = 'never'   
-else:
-    nbsphinx_execute = 'always'
+nbsphinx_execute = 'never'   
     
 # Use this kernel instead of the one stored in the notebook metadata:
 nbsphinx_kernel_name = 'python3'
@@ -184,7 +229,6 @@ todo_include_todos = True
 #
 # html_theme_options = {}
 
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if not on_rtd:
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
@@ -368,7 +412,7 @@ def setup(app):
         app.add_transform(AutoStructify)
         app.add_javascript('js/jupman.js')
         app.add_stylesheet('css/jupman.css')
-
+        zip_exercises()
 
 
 exclude_patterns.extend(MANUALS[manual]['exclude_patterns'])

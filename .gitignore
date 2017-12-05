@@ -4,6 +4,8 @@ private/*
 !private/README.md
 /templates/exam/server/*
 !templates/exam/server/README.md
+/overlay/_static/*-exercises.zip
+
 
 # Example exam
 
