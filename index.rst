@@ -30,7 +30,7 @@ Corso SoftPython
     data-integration.ipynb
     data-extraction.ipynb
     analytics.ipynb
-    interactive-apps.ipynb
+    interactive.ipynb
     database.ipynb
     exam-project.ipynb
     
