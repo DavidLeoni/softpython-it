@@ -34,5 +34,5 @@ Corso SoftPython
     database.ipynb
     exam-project.ipynb
     jm-templates/exam/project/NAME-SURNAME-ID/markdown.ipynb
-    
+    jm-templates/exam/project/NAME-SURNAME-ID/requirements.txt
     

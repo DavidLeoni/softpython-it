@@ -96,7 +96,8 @@ def zip_folder(folder, zip_path):
             if filename.find(i)!=-1:
                 return True
     
-    folder = folder
+    if not os.path.isdir(folder):
+        raise ValueError('Folder to zip does not exist: %s' % folder)
     parent_folder = folder[len(os.path.dirname(folder.strip('/')))+1:]
     #print("parent_folder = " + parent_folder)
     #print("folder = " + folder)
@@ -131,7 +132,6 @@ def zip_exercises():
             zip_folder(d, zip_path)
         print("Done zipping exercises.") 
 
-#zip_exercises()        
 
 # Use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
@@ -413,7 +413,7 @@ def setup(app):
         app.add_javascript('js/jupman.js')
         app.add_stylesheet('css/jupman.css')
         zip_exercises()
-        zip_folder('templates/exam/project/NAME-SURNAME-ID', 'overlay/_static/project-template.zip')
+        zip_folder('jm-templates/exam/project/NAME-SURNAME-ID', 'overlay/_static/project-template.zip')
 
 
 exclude_patterns.extend(MANUALS[manual]['exclude_patterns'])
