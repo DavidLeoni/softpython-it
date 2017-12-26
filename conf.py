@@ -38,7 +38,7 @@ SYSTEMS = {
     "default" : {
         "name" : "Default system",
         "outdir":"_build/",
-        "exclude_patterns": ["_build/*", "templates/exam/server/*", "private/*",  '**.ipynb_checkpoints']
+        "exclude_patterns": ["_build/*", "jm-templates/exam/server/*", "private/*",  '**.ipynb_checkpoints']
     }
 }
 MANUALS = {
@@ -419,7 +419,9 @@ def setup(app):
 exclude_patterns.extend(MANUALS[manual]['exclude_patterns'])
 exclude_patterns.extend(SYSTEMS[system]['exclude_patterns'])
 
-templates_path = ['templates']
+#DAVID: NOTE: THESE ARE *ONLY* FOR HTML TEMPLATES, WHICH IS DIFFERENT FROM jm-templates
+# see https://github.com/DavidLeoni/jupman/issues/10
+templates_path = ['_templates']
 
 source_parsers = {
     '.md': CommonMarkParser,
