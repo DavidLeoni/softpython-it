@@ -71,8 +71,8 @@ def init(parser,context,args):
     if os.path.exists(exam_ipynb):
         fatal("PUBLIC EXAM ALREADY EXISTS: " +  exam_ipynb)
 
-    shutil.copytree("templates/exam", eld)
-    expand_JM('templates/exam/exam-yyyy-mm-dd.ipynb', exam_ipynb, ld)
+    shutil.copytree("jm-templates/exam", eld)
+    expand_JM('jm-templates/exam/exam-yyyy-mm-dd.ipynb', exam_ipynb, ld)
 
     os.rename(eld + "/" + "jupman-yyyy-mm-dd-grades.ods", eld + "/" + conf.filename + "-" + ld + "-grades.ods")
     
