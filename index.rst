@@ -33,5 +33,6 @@ Corso SoftPython
     interactive.ipynb
     database.ipynb
     exam-project.ipynb
+    jm-templates/exam/project/NAME-SURNAME-ID/markdown.ipynb
     
     

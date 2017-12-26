@@ -5,6 +5,7 @@ private/*
 /templates/exam/server/*
 !templates/exam/server/README.md
 /overlay/_static/*-exercises.zip
+/overlay/_static/project-template.zip
 
 
 # Example exam

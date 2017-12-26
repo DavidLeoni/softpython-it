@@ -20,7 +20,7 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 course = "SoftPython" 
 degree = "DISI, Università degli Studi di Trento"
-author = 'David Leoni e Alessio Zamboni' 
+author = 'David Leoni, Marco Caresia, Alessio Zamboni' 
 copyright = '# 2017, ' + author                              
 
 #####    'filename' IS *VERY* IMPORTANT !!!!
@@ -28,7 +28,7 @@ copyright = '# 2017, ' + author
 #####     AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
 #####     (like i.e. jupman.readthedocs.org)
 
-filename = 'jupman'   # The filename without the extension
+filename = 'softpython'   # The filename without the extension
 
 #################################################################
 
@@ -97,7 +97,7 @@ def zip_folder(folder, zip_path):
                 return True
     
     folder = folder
-    parent_folder = folder[len(os.path.dirname(folder.strip('/')))+1:-1]
+    parent_folder = folder[len(os.path.dirname(folder.strip('/')))+1:]
     #print("parent_folder = " + parent_folder)
     #print("folder = " + folder)
     archive = zipfile.ZipFile(zip_path, "w")
@@ -413,6 +413,7 @@ def setup(app):
         app.add_javascript('js/jupman.js')
         app.add_stylesheet('css/jupman.css')
         zip_exercises()
+        zip_folder('templates/exam/project/NAME-SURNAME-ID', 'overlay/_static/project-template.zip')
 
 
 exclude_patterns.extend(MANUALS[manual]['exclude_patterns'])
@@ -425,3 +426,4 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
+
