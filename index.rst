@@ -23,6 +23,7 @@ Corso SoftPython
     :glob:
 
     about.ipynb
+    installation.ipynb
     intro.ipynb
     data-formats.ipynb
     data-visualization.ipynb
