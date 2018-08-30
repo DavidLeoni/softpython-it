@@ -7,15 +7,15 @@
     home.ipynb
 
     installation.ipynb
-    Introduction <exercises/intro/intro-solution.ipynb>
-    Data formats <exercises/data-formats/data-formats-solution.ipynb>
-    Data visualization <exercises/data-visualization-solution.ipynb>
-    Search <exercises/search/regex-solution.ipynb>
-    Data integration <exercises/data-integration-solution.ipynb>
-    Estrazioni <exercises/data-extraction-solution.ipynb>
-    Analitiche <exercises/analytics-solution.ipynb>
-    Applicazioni interattive <exercises/interactive-solution.ipynb>
-    Databases <exercises/database-solution.ipynb>
+    Introduzione <exercises/intro/intro-solution.ipynb>
+    Formati dati <exercises/formats/formats-solution.ipynb>
+    Visualizzazione <exercises/visualization/visualization-solution.ipynb>
+    Ricerca <exercises/search/regex-solution.ipynb>
+    Integrazione <exercises/integration/integration-solution.ipynb>
+    Estrazione <exercises/extraction/extraction-solution.ipynb>
+    Analitiche <exercises/analytics/analytics-solution.ipynb>
+    Applicazioni interattive <exercises/interactive/interactive-solution.ipynb>
+    Database <exercises/database/database-solution.ipynb>
     exam-project.ipynb>
     project-ideas.ipynb
     jm-templates/exam/project/NAME-SURNAME-ID/markdown.ipynb

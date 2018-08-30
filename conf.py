@@ -45,6 +45,8 @@ IPYNB_EXERCISE = "esercizi"
 #NOTE: the following string is not just a translation, it's also a command that removes the cell it is contained in 
 #      when building the exercises. If the user inserts extra spaces the phrase will be recognized anyway
 WRITE_SOLUTION_HERE = "# scrivi qui"
+
+SOLUTION = "# SOLUZIONE"
 MARKDOWN_ANSWER = "**RISPOSTA**:"
 #################################################################
 
@@ -353,6 +355,7 @@ def solution_to_exercise_text(solution_text):
     formatted_text = re.sub(RAISE_PATTERN, RAISE_STRING, solution_text)                    
     formatted_text = re.sub(STRIP_PATTERN, '', formatted_text)
     formatted_text = re.sub(WRITE_SOLUTION_HERE_PATTERN, r'\1\n\n', formatted_text)
+    
     return formatted_text            
 
 def generate_exercise(source_filename, source_abs_filename, dirpath, structure):
@@ -403,9 +406,12 @@ def generate_exercise(source_filename, source_abs_filename, dirpath, structure):
                         # look for tags
                         for cell in nb_ex.cells:
                             if cell.cell_type == "code":
-                                cell.source = solution_to_exercise_text(cell.source)                                
+                                if cell.source.strip().startswith(SOLUTION):
+                                    cell.source = " " 
+                                else:
+                                    cell.source = solution_to_exercise_text(cell.source)
                             if cell.cell_type == "markdown":
-                                if cell.source.startswith(MARKDOWN_ANSWER):                                    
+                                if cell.source.strip().startswith(MARKDOWN_ANSWER):                                    
                                     cell.source = " "  # space, otherwise it shows 'Type markdown or latex'
                                 
                         nbformat.write(nb_ex, exercise_dest_f)
