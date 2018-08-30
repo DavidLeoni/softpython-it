@@ -20,6 +20,13 @@ function showthis(url) {
 
 var jupman = {
     
+    /** 
+        Checks if toc was injected in the script. 
+    */
+    hasToc : function(){
+        return $('#jupman-toc').toc;
+    },
+    
     isReduced : function(){
         return $(window).width() < 924;
     },
@@ -29,6 +36,7 @@ var jupman = {
     resize : function(){
         if (jupman.isReduced()){
             $("#jupman-toc").hide();
+                
         } else {
             $("#jupman-toc").show();
             $("#jupman-toc").css("background","rgba(255, 255, 255, 0)");
@@ -53,7 +61,9 @@ var jupman = {
                 }                
             }
             
-            $('#jupman-toc').toc(tocParams);
+            if (jupman.hasToc()){
+                $('#jupman-toc').toc(tocParams);
+            }
         }
     },
     /**
@@ -80,9 +90,17 @@ var jupman = {
         
         @since 0.19
     */
-    hideCellAll : function(prefix){        
+    hideCellAll : function(prefixOrRegex){        
         $('.border-box-sizing .code_cell pre').filter(function() { 
-                return $(this).text().indexOf(prefix) === 0; 
+                var t = $(this).text();
+                if (typeof prefixOrRegex == "string"){
+                    return t.indexOf(prefixOrRegex) === 0;
+                } else if ( prefixOrRegex instanceof RegExp){
+                    return t.match(prefixOrRegex);
+                } else {
+                    console.error("Invalid argument:", prefixOrRegex);
+                    throw new Error("Invalid argument!");
+                }
             }).parents('div .cell ').hide();        
     },
     
@@ -130,50 +148,34 @@ var jupman = {
     initJupyter : function(){
         
        var toc = $("<div>").attr("id", "jupman-toc");              
-       var indexLink = $("<a>")
-                        .addClass("jupman-nav-item")
-                        .attr("href","index.html#Chapters")
-                        .text("jupman");
-       
-       var candidateTitleText = $(".jupman-title").text();              
-                                  
-                    
-       
+                                                             
        var nav = $("<div>")
                      .attr("id", "jupman-nav")
-                    .append(indexLink);       
-       
-       if (candidateTitleText.length !== 0){
-
-           var title = $("<span>")
-                    .addClass("jupman-nav-item")
-                    .css("padding-left","8px")
-                    .text(candidateTitleText);
-            nav.append("<br>")
-                .append("<br>")
-                .append(title);                                
-        }
-          
+                    
         
         
-       // TODO THIS HIDE STUFF DOES NOT WORK ANYMORE AFTER PORTING TO NBSPHINX 
-       // WE SHOULD USE 
-       // 
+       // ****************************     WARNING      ********************************
+       //         THIS HIDE STUFF DOES NOT WORK IN SPHINX, ONLY WORKS WHEN YOU MANUALLY EXPORT TO HTML 
+       // ******************************************************************************
        jupman.hideCell("%%HTML");
-       jupman.hideCell("import jupman");   
+       jupman.hideCell("import jupman");
        
         // TODO this is a bit too hacky   
        jupman.hideCell(/from exercise(.+)_solution import \*/)
        
-       jupman.hideCell("jupman.init()"); 
-       jupman.hideCell("jupman.show_run(");
+       jupman.hideCellAll(/.*jupman_init.*/); 
+       jupman.hideCell("jupman_show_run(");
        jupman.hideCell("nxpd.draw(");
-       jupman.hideCellAll("jupman.run("); 
-              
-       if ($("#jupman-toc").length === 0){
-           $("body").append(toc);       
+       jupman.hideCellAll("jupman_run("); 
+       
+       if (jupman.hasToc()){
+           if ($("#jupman-toc").length === 0){
+               $("body").append(toc);       
+           } else {
+               $("#jupman-toc").replaceWith(toc);
+           }
        } else {
-           $("#jupman-toc").replaceWith(toc);
+           $("#jupman-toc").hide();
        }
        
        if ($("#jupman-nav").length === 0){
@@ -192,9 +194,8 @@ var jupman = {
             if (jupman.isReduced()){
                 if (event.pageX < 50) {            
                      $("#jupman-toc").show(); 
-                    $("#jupman-toc").css("background","rgba(255, 255, 255, 1.0)");
+                     $("#jupman-toc").css("background","rgba(255, 255, 255, 1.0)");
                 } else {
-
                     if (jupman.hoverToc()) {                    
                     } else {
                         $("#jupman-toc").hide();                        

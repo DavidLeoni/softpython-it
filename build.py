@@ -25,7 +25,7 @@ def help():
     print("")
     print("  From the root of your project, run :")
     print("")
-    print("      python build.py")
+    print("      python3 build.py")
     print("")
     print("")
     print("    OPTIONS")
@@ -36,7 +36,7 @@ def help():
     print("")
     print("    EXAMPLE USAGE:")
     print("")
-    print("        python build.py  -f html,epub,latex")
+    print("        python3s build.py  -f html,epub,latex")
     print("")
 
 
@@ -46,8 +46,6 @@ sphinxcmd = "./sphinx3-build"
 # sphinxcmd = "sphinx-build"
 
 
-def info(msg):
-    print("  " + msg)
     
 def detect_system():
     print("")
@@ -135,27 +133,27 @@ def run_sphinx(manuals, formats):
 
                     print("Fixing links to PDFs and EPUBs ... ") # Because of this crap: http://stackoverflow.com/a/23855541
 
-                    with open(relout + '/index.html', "r+") as f:
+                    with open(relout + '/home.html', "r+") as f:
                         data = f.read()
 
-                        if "latex" in formats or "pdf" in formats or "epub" in formats:
-                            data = data.replace('${download}', 'Download ')
-                        else:
-                            data = data.replace('${download}', '')
-
+                        
+                        data = data.replace('_JM_{download}', 'Download ')
+                        
+#<a href="http://readthedocs.org/projects/jupman/downloads/pdf/latest/" target="_blank">PDF</a>
                         print(formats)
-                        #TODO review for latex !
+                        data = data.replace('_JM_{html}', '&ensp;<a target="_blank" href="/downloads/htmlzip/latest/">HTML</a>')
+
                         if 'pdf' in formats:
-                            data = data.replace('${pdf}', '&ensp;<a target="_blank" href="pdf/' + manual + '-manual.pdf">PDF</a>')
+                            data = data.replace('_JM_{pdf}', '&ensp;<a target="_blank" href="/downloads/pdf/latest/">PDF</a>')
                         elif 'latex' in formats:
                             print("TODO LATEX !")
                         else:
-                            data = data.replace('${pdf}', '')
+                            data = data.replace('_JM_{pdf}', '')
 
                         if 'epub' in formats:
-                            data = data.replace('${epub}', '&ensp;<a target="_blank" href="epub/' + manual + '-manual.epub">EPUB</a>')
+                            data = data.replace('_JM_{epub}', '&ensp;<a target="_blank" href="/downloads/epub/latest/">EPUB</a>')
                         else:
-                          data = data.replace('${epub}', '')
+                            data = data.replace('_JM_{epub}', '')
 
 
                         print("Putting code documentation links ...")
@@ -171,6 +169,8 @@ def run_sphinx(manuals, formats):
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
 
                 elif format == 'latex':                  
+                    run('pdflatex *.tex', cwd=relout )
+                    # running twice otherwise we get no TOC
                     run('pdflatex *.tex', cwd=relout )
                 
                 print_generated_banner(manual, format)                                                

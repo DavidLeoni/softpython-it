@@ -1,14 +1,65 @@
 
-# This is the library to be included in Jupyter notebooks.
-# David Leoni Nov 2017 
+# David Leoni Aug 2018
+
+
+# Library to be included in Jupyter notebooks with commands like (note the '-i')
+#
+#    %run -i ../../jupman
+#
+# followed by
+#
+#    jupman_init()
+#
+# For reasons behind, see  discussion here: https://github.com/DavidLeoni/jupman/issues/12
 
 import sys
 import unittest
 import inspect
 import os
-import networkx as nx
 import conf
-from IPython.core.display import HTML
+import argparse
+
+
+        
+def init(root='', toc=False):
+    """ Injects notebooks with js and css from overlay/_static
+    
+        To be called at the beginning of notebooks, only if you *really* need it.
+        Please do read https://jupman.readthedocs.io/en/latest/usage.html#Running-Jupyter
+    
+        root:  string with the relative path to the root of the project
+               for exercises and exams, it would be '../../'               
+    """
+    from IPython.core.display import HTML
+    on_rtd = os.environ.get('READTHEDOCS') == 'True'
+    
+    if on_rtd:
+        # on RTD we don't inject anything, files are set in sphinx conf.py
+        print("")
+    else:
+        # Hacky stuff, because Jupyter only allows to set a per user custom js, we want per project js
+        
+        css = open(root + "overlay/_static/css/jupman.css", "r").read()
+        tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
+        js = open(root + "overlay/_static/js/jupman.js", "r").read()
+
+        ret = "<style>\n" 
+        ret += css
+        ret += "\n </style>\n"
+
+        ret +="\n"
+
+        ret += "<script>\n"
+        ret += "var JUPMAN_IN_JUPYTER = true;"  
+        ret += "\n"
+        if toc:
+            ret += tocjs
+            ret += "\n"    
+        ret += js
+        ret += "\n</script>\n"
+
+    return HTML(ret)        
+        
 
 
 def get_class(meth):
@@ -30,10 +81,10 @@ def get_class(meth):
 
 def run(classOrMethodOrModule):    
     """ Runs test class or method or Module. Doesn't show code nor output in html.
-    
+
         todo look at test order here: http://stackoverflow.com/a/18499093        
     """ 
-    
+
     if  inspect.isclass(classOrMethodOrModule) and issubclass(classOrMethodOrModule, unittest.TestCase):        
         testcase = classOrMethodOrModule
         suite = unittest.TestLoader().loadTestsFromTestCase(testcase)
@@ -57,50 +108,57 @@ def show_run(classOrMethod):
         @deprecated Just use run()
     """    
     run(classOrMethod)
-        
-def init(root=''):
-    """ To be called at the beginning of Jupyter sheets
+
+
+def pytut():
+    """ Embeds a Python tutor in the output of the current cell, with code *current* cell stripped from the call to 
+        pytut() itself. 
+
+        - The GUI will be shown on the built Sphinx website.
+        - Requires internet connection. Without, it will show standard browser message telling there is no connectivity        
     """
-    on_rtd = os.environ.get('READTHEDOCS') == 'True'
-    
-    if on_rtd:
-        # on RTD we don't inject anything, files are set in sphinx conf.py
-        print("")
+    #Hacky way to get variables from stack, but if we use %run -i we don't need it.
+    import inspect
+    notebook_globals = inspect.stack()[1][0].f_globals
+    code = notebook_globals["In"][-1]
+
+    i = code.find('jupman.pytut()')
+   
+    if i == -1:
+        i = code.find('pytut()')
+        call_text = 'pytut()'
     else:
-        # Hacky stuff, because Jupyter only allows to set a per user custom js, we want per project js
+        call_text = 'jupman.pytut()'
         
-        css = open(root + "overlay/_static/css/jupman.css", "r").read()
-        tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
-        js = open(root + "overlay/_static/js/jupman.js", "r").read()
+    if i != -1:  # check 
+        extra = code[i + len(call_text):]
+        if len(extra.strip()) > 0:
+            print("ERROR: the call to jupman.pytut() must be the last in the cell, found instead this code afterwards: \n%s" % extra)
+            return
 
-        ret = "<style>\n" 
-        ret += css
-        ret += "\n </style>\n"
+    new_code =  code.replace('jupman.pytut()', '').replace('pytut()', '')
 
-        ret +="\n"
+    if len(new_code.strip()) == 0:
+        print("""Nothing to show ! You have to put the code in the same cell as pytut(), right before its call. For example: 
 
-        ret += "<script>\n"
-        ret += "var JUPMAN_IN_JUPYTER = true;"  
-        ret += "\n"
-        ret += tocjs
-        ret += "\n"    
-        ret += js
-        ret += "\n</script>\n"
+                      x = 5
+                      y = x + 3
+                      jupman.pytut()
+               """)
+        return
+    else:            
+        import urllib
+        from IPython.display import IFrame
 
-    return  HTML(ret)
+        params = {'code':new_code,
+                  'cumulative': 'false',
+                  'py':3,
+                  'curInstr':0} 
 
-def init_exam(exam_date):
-    """ To be called at the beginning of Jupyter exam sheets
-        
-        exam_date : exam date string in the format 'yyyy-mm-dd'
-    """
-    if exam_date != '_JM_(exam.date)':
-        conf.parse_date(exam_date) # little hack so the template can work somewhat properly
-    import sys
-    sys.path.append('solutions/')
-    sys.path.append('exercises/')
-    return init('../../')
+        # BEWARE YOU NEED HTTP _S_ !    
+        src = "https://pythontutor.com/iframe-embed.html#" + urllib.parse.urlencode(params)
+        base = 200
+        return IFrame(src, 900,max(base,(new_code.count('\n')*25) + base))
 
 
-def assertNotNone(ret, function_name):
-    return function_name + " specs say nothing about returning objects! Instead you are returning " + str(ret)
+    
