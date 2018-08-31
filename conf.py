@@ -24,7 +24,7 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 course = "SoftPython" 
 degree = "DISI @ Università di Trento"
 author = 'David Leoni, Alessio Zamboni, Marco Caresia' 
-copyright = '# TODO FIRST YEAR - %s, %s' % (datetime.datetime.now().year, author)
+copyright = '# 2017 - %s, %s' % (datetime.datetime.now().year, author)
 
 #####    'filename' IS *VERY* IMPORTANT !!!!
 #####     IT IS PREPENDED IN MANY GENERATED FILES

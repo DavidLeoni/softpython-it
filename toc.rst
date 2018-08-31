@@ -16,10 +16,10 @@
     Analitiche <exercises/analytics/analytics-solution.ipynb>
     Applicazioni interattive <exercises/interactive/interactive-solution.ipynb>
     Database <exercises/database/database-solution.ipynb>
-    exam-project.ipynb>
+    project-howto.ipynb
     project-ideas.ipynb
-    jm-templates/exam/project/NAME-SURNAME-ID/markdown.ipynb
-    jm-templates/exam/project/NAME-SURNAME-ID/requirements.txt
+    jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
+    jm-templates/project-NAME-SURNAME-ID/requirements.txt
 
 
 
