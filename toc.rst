@@ -7,7 +7,8 @@
     home.ipynb
 
     installation.ipynb
-    Introduzione <exercises/intro/intro-solution.ipynb>
+    Introduzione al corso <intro.ipynb>
+    Introduzione a Python <exercises/intro/intro-solution.ipynb>
     Formati dati <exercises/formats/formats-solution.ipynb>
     Visualizzazione <exercises/visualization/visualization-solution.ipynb>
     Ricerca <exercises/search/regex-solution.ipynb>

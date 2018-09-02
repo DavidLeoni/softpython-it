@@ -115,7 +115,7 @@ def pytut():
         pytut() itself. 
 
         - The GUI will be shown on the built Sphinx website.
-        - Requires internet connection. Without, it will show standard browser message telling there is no connectivity        
+        - Requires internet connection. Without, it will show standard browser message telling there is no connectivity  
     """
     #Hacky way to get variables from stack, but if we use %run -i we don't need it.
     import inspect
@@ -152,7 +152,8 @@ def pytut():
 
         params = {'code':new_code,
                   'cumulative': 'false',
-                  'py':3,
+                  'py':'3', # NOTE: if you put `py3anaconda` in Jupyter you get 
+                            #       Error: https execution of non-Python code is not currently supported. [#nonPythonHttps]
                   'curInstr':0} 
 
         # BEWARE YOU NEED HTTP _S_ !    
@@ -161,4 +162,4 @@ def pytut():
         return IFrame(src, 900,max(base,(new_code.count('\n')*25) + base))
 
 
-    
+     
