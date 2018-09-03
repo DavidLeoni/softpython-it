@@ -5,6 +5,8 @@ private/*
 /jm-templates/exam/server/*
 !jm-templates/exam/server/README.md
 /overlay/_static/*-exercises.zip
+/overlay/_static/*-challenge.zip
+
 /overlay/_static/project-template.zip
 
 
