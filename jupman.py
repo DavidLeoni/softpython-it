@@ -16,7 +16,6 @@ import sys
 import unittest
 import inspect
 import os
-import conf
 import argparse
 
 
