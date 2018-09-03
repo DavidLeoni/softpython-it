@@ -66,7 +66,7 @@ SYSTEMS = {
 }
 MANUALS = {
     "student": {
-        "name" : "Jupman",  # TODO put manual name, like "Scientific Programming"
+        "name" : course,  # TODO put manual name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
         "output" : "",
