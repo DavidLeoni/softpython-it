@@ -872,6 +872,7 @@ def setup(app):
         app.add_stylesheet('css/jupman.css')
         zip_folders('exercises', suffix='-exercises')
         zip_folders('exams', prefix=filename + '-', suffix='-exam')
+        zip_folders('challenges', prefix=filename + '-', suffix='-challenge')
         zip_paths(['jm-templates/project-NAME-SURNAME-ID'], 
                     'overlay/_static/project-template',
                     patterns=[(r"^(jm-templates)/project-(.*)", "/\\2")])

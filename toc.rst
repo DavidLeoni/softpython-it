@@ -5,7 +5,7 @@
     :glob:
 
     home.ipynb
-
+    challenges.ipynb
     installation.ipynb
     Introduzione al corso <intro.ipynb>
     Introduzione a Python <exercises/intro/intro-solution.ipynb>
