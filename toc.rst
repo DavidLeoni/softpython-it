@@ -18,6 +18,7 @@
     Applicazioni interattive <exercises/interactive/interactive-solution.ipynb>
     Database <exercises/database/database-solution.ipynb>
     Information retrieval <exercises/information-retrieval/information-retrieval-solution.ipynb>
+    Web development <exercises/web/web-solution.ipynb>
     
     project-howto.ipynb
     project-ideas.ipynb
