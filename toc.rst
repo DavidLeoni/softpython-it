@@ -17,6 +17,8 @@
     Analitiche <exercises/analytics/analytics-solution.ipynb>
     Applicazioni interattive <exercises/interactive/interactive-solution.ipynb>
     Database <exercises/database/database-solution.ipynb>
+    Information retrieval <exercises/information-retrieval/information-retrieval-solution.ipynb>
+    
     project-howto.ipynb
     project-ideas.ipynb
     jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
