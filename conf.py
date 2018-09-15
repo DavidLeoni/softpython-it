@@ -666,7 +666,7 @@ language = None
 
 # -- Options for HTML output ----------------------------------------------
 
-html_title = project + ' version ' + release
+html_title = project 
 
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
