@@ -894,3 +894,10 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
+
+info('Copying google search console file...')
+import shutil
+if not os.path.isdir('_build/html'):
+    os.makedirs('_build/html')
+    shutil.copyfile('google3dea3b29336ca0e5.html', '_build/html/google3dea3b29336ca0e5.html')
+
