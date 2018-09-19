@@ -192,22 +192,27 @@ master_doc = 'index'
 
 linkcheck_ignore = [r'http://localhost:\d+/']
 
+
 # -- Get version information from Git -------------------------------------
 
 try:
     from subprocess import check_output
     release = check_output(['git', 'describe', '--tags', '--always'])
     release = release.decode().strip()
-    if not '.' in release[0]:
+    if not '.' in release:
         release = '0.1.0'
-        #print("Couldn't find git tag, defaulting to: " + release)
-    #else:    
-    #   print("Detected release from git: " + str(release))
+        print("Couldn't find git tag, defaulting to: " + release)
+    else:    
+        print("Detected release from git: " + str(release))
 except Exception:
     release = '0.1.0'
-    #print("Couldn't find git version, defaulting to: " + release)
+    print("Couldn't find git version, defaulting to: " + release)
 
 version  = get_version(release)
+print("Setting version to %s" % version)
+
+
+
 # -- Options for HTML output ----------------------------------------------
 
 html_title = project + ' version ' + release
