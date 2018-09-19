@@ -5,10 +5,10 @@
     :glob:
     :hidden:
 
-    home.ipynb
-    challenges.ipynb
-    installation.ipynb
-    Introduzione al corso <intro.ipynb>
+    Home <home.ipynb>
+    News: Challenges<challenges.ipynb>
+    intro.ipynb
+    installation.ipynb    
     Introduzione a Python <exercises/intro/intro-solution.ipynb>
     Formati dati <exercises/formats/formats-solution.ipynb>
     Visualizzazione <exercises/visualization/visualization-solution.ipynb>
