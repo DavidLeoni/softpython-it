@@ -24,7 +24,6 @@
     project-howto.ipynb
     project-ideas.ipynb
     jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
-    jm-templates/project-NAME-SURNAME-ID/requirements.txt
 
 
 
