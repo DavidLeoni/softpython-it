@@ -601,6 +601,7 @@ highlight_language = 'none'
 # Don't add .txt suffix to source files (available for Sphinx >= 1.5):
 html_sourcelink_suffix = ''
 
+html_show_sourcelink = False
 
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)

@@ -15,6 +15,8 @@ import re
 import glob
 import fileinput
 import string
+from pathlib import Path
+
 
 from conf import *
 
@@ -166,7 +168,7 @@ def run_sphinx(manuals, formats):
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/', '_static/js/')
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/', '_static/js/')
                     replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', '_static/js/MathJax.js')
-                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
+                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
 
                 elif format == 'latex':                  
                     run('pdflatex *.tex', cwd=relout )
@@ -214,17 +216,26 @@ def replace_html(stext, rtext):
         rtext: string to replace with
     """
 
-    path = "_build/html/*.html"
+    path = "_build/html/**/*.html"
 
     info("finding: " + stext + " replacing with: " + rtext + " in: " + path)
 
-    files = glob.glob(path)
-    for line in fileinput.input(files,inplace=1):
-        lineno = 0
-        lineno = line.find(stext)
-        if lineno >0:
-            line =line.replace(stext, rtext)
-        sys.stdout.write(line)
+    files = glob.glob(path, recursive=True)  # recursive since python 3.5 https://stackoverflow.com/a/2186565
+    
+    for fname in files:
+        debug(fname)
+        
+        # debug([p.name for p in Path(relfname).parents])
+        # for some reason it adds an empty string:    DEBUG=['exam-solutions', 'jm-templates', '']        
+        
+        for line in fileinput.input(fname,inplace=1):
+            lineno = 0
+            lineno = line.find(stext)
+            if lineno >0:
+                relfname = os.path.relpath(fname, start='_build/html')  # works from current dir                
+                prefix =  '../' * (len(Path(relfname).parents) - 1)
+                line =line.replace(stext, prefix + rtext)
+            sys.stdout.write(line)
 
 #  MAIN
 
