@@ -1,8 +1,12 @@
+
+
 {% block breadcrumbs %}
-      <li><b>ATTENZIONE !!!</b></li>
+      <li> <h2 style="background-color:red; color:yellow">ATTENZIONE: QUESTA VERSIONE E' PER L'AA 2017/18 <br/>
+    <a style=" text-decoration: underline;" href="https://softpython.readthedocs.io/it/latest">VAI ALLA VERSIONE AGGIORNATA</a></li>
+ </h2></li>
       <li><a href="{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
         {% for doc in parents %}
           <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
         {% endfor %}
       <li>{{ title }}</li>
-    {% endblock %}
+{% endblock %}
