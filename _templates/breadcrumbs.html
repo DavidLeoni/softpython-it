@@ -1,5 +1,5 @@
 {% block breadcrumbs %}
-      <b>ATTENZIONE !!!</b>
+      <li><b>ATTENZIONE !!!</b></li>
       <li><a href="{{ pathto(master_doc) }}">{{ _('Docs') }}</a> &raquo;</li>
         {% for doc in parents %}
           <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;</li>
