@@ -28,5 +28,5 @@
 
 
 
-Indce dei contenuti
+Indice
 ----------------------
