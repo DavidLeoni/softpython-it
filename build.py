@@ -135,7 +135,7 @@ def run_sphinx(manuals, formats):
 
                     print("Fixing links to PDFs and EPUBs ... ") # Because of this crap: http://stackoverflow.com/a/23855541
 
-                    with open(relout + '/home.html', "r+") as f:
+                    with open(relout + '/index.html', "r+") as f:
                         data = f.read()
 
                         

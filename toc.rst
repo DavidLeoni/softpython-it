@@ -3,9 +3,8 @@
 .. toctree::
     :maxdepth: 2
     :glob:
-    :hidden:
 
-    Home <home.ipynb>
+    Home <index.ipynb>
     News: Challenges<challenges.ipynb>
     intro.ipynb
     installation.ipynb    
@@ -28,5 +27,5 @@
 
 
 
-.
+Indice
 ----------------------
