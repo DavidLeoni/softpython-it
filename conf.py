@@ -708,9 +708,9 @@ htmlhelp_basename = project + 'doc'
 # see https://github.com/DavidLeoni/jupman/issues/10
 templates_path = ['_templates']
 
-
+#MOTE: on the left you must *not* put the extension !
 html_additional_pages = {
-    'google3dea3b29336ca0e5.html': 'google3dea3b29336ca0e5.html',
+    'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
 }
 
 
