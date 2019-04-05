@@ -16,7 +16,6 @@ import types
 import shutil
 from enum import Enum
 
-
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 ###################   TODO EDIT AS NEEDED !!  ####################
@@ -52,7 +51,6 @@ MARKDOWN_ANSWER = "**RISPOSTA**:"
 
 #pattern as in ipynb json file - note markdown has no output in ipynb
 IPYNB_TITLE_PATTERN = re.compile(r"(\s*#.*)(" + IPYNB_SOLUTION + r")")
-
 
 zip_ignored = ['__pycache__', '.ipynb_checkpoints', '.pyc']
 
