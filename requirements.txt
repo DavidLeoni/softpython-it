@@ -2,12 +2,11 @@ sphinx==1.7.6
 tornado==4.5.3
 ipykernel==4.6.1
 nbsphinx==0.3.4
-networkx==2.0
 arghandler==1.2.0
 recommonmark==0.4.0
 sphinx_rtd_theme==0.2.5b1
 
-
+networkx==2.0
 matplotlib==1.5.1
 numpy==1.11.0
 requests==2.18.4
@@ -17,7 +16,6 @@ pandas==0.23.4
 numexpr==2.4.6
 geopandas==0.4
 ipywidgets==7.3.0
-
 
 
 
