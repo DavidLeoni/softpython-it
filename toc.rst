@@ -8,7 +8,8 @@
     News: Challenges<challenges.ipynb>
     intro.ipynb
     installation.ipynb    
-    Introduzione a Python <exercises/intro/intro-solution.ipynb>
+    
+    Introduzione a Python <exercises/intro/intro-solution.ipynb>    
     Formati dati <exercises/formats/formats-solution.ipynb>
     Visualizzazione <exercises/visualization/visualization-solution.ipynb>
     Ricerca <exercises/search/regex-solution.ipynb>
@@ -24,8 +25,27 @@
     project-ideas.ipynb
     jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
     commandments.ipynb
+    
+|space|
+==========
+
+.. |space| unicode:: U+0020 .. space
 
 
+
+Esercizi integrativi
+=======================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    Gestione errori e testing <exercises/errors-and-testing/errors-and-testing-solution.ipynb>       
+    Funzioni <exercises/functions/functions-solution.ipynb>    
+    Stringhe <exercises/strings/strings-solution.ipynb>
+    Liste <exercises/lists/lists-solution.ipynb>
+    Dizionari <exercises/dictionaries/dictionaries-solution.ipynb>
+    Matrici <exercises/matrices/matrices-solution.ipynb>    
 
 
 Indice
