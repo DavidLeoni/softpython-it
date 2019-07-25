@@ -171,9 +171,7 @@ def run_sphinx(manuals, formats):
                     replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
 
                 elif format == 'latex':                  
-                    run('pdflatex *.tex', cwd=relout )
-                    # running twice otherwise we get no TOC
-                    run('pdflatex *.tex', cwd=relout )
+                    run('latexmk -r latexmkrc -pdf -f -dvi- -ps- -jobname=' + filename + ' -interaction=nonstopmode', cwd=relout)
                 
                 print_generated_banner(manual, format)                                                
                 print("          "  + get_path(manual, format)  + "\n\n");
