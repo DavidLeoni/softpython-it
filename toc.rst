@@ -5,7 +5,7 @@
     :glob:
 
     Home <index.ipynb>
-    News: Challenges<challenges.ipynb>
+    News: Challenges<challenges/2019-challenges.ipynb>
     intro.ipynb
     installation.ipynb    
     
@@ -45,7 +45,8 @@ Esercizi integrativi
     Stringhe <exercises/strings/strings-solution.ipynb>
     Liste <exercises/lists/lists-solution.ipynb>
     Dizionari <exercises/dictionaries/dictionaries-solution.ipynb>
-    Matrici <exercises/matrices/matrices-solution.ipynb>    
+    Matrici - liste di liste<exercises/matrices-list-of-lists/list-of-lists-solution.ipynb>    
+    Matrici - Numpy<exercises/matrices-numpy/numpy-solution.ipynb>
 
 
 Indice
