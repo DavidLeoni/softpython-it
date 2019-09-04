@@ -25,6 +25,7 @@
     project-ideas.ipynb
     jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
     commandments.ipynb
+    thanks.ipynb
     
 |space|
 ==========
@@ -45,8 +46,8 @@ Esercizi integrativi
     Stringhe <exercises/strings/strings-solution.ipynb>
     Liste <exercises/lists/lists-solution.ipynb>
     Dizionari <exercises/dictionaries/dictionaries-solution.ipynb>
-    Matrici - liste di liste<exercises/matrices-list-of-lists/list-of-lists-solution.ipynb>    
-    Matrici - Numpy<exercises/matrices-numpy/numpy-solution.ipynb>
+    Matrici liste di liste <exercises/matrices-list-of-lists/list-of-lists-solution.ipynb>    
+    Matrici Numpy <exercises/matrices-numpy/numpy-solution.ipynb>
 
 
 Indice
