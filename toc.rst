@@ -20,6 +20,7 @@
     Database <exercises/database/database-solution.ipynb>
     Information retrieval <exercises/information-retrieval/information-retrieval-solution.ipynb>
     Web development <exercises/web/web-solution.ipynb>
+    Computer vision <exercises/computer-vision/computer-vision-solution.ipynb>
     
     project-howto.ipynb
     project-ideas.ipynb
