@@ -1,11 +1,8 @@
-
-
 .. toctree::
     :maxdepth: 2
     :glob:
 
     Home <index.ipynb>
-    News: Challenges<challenges/2019-challenges.ipynb>
     intro.ipynb
     installation.ipynb    
     
@@ -22,17 +19,17 @@
     Web development <exercises/web/web-solution.ipynb>
     Computer vision <exercises/computer-vision/computer-vision-solution.ipynb>
     
-    project-howto.ipynb
+    challenges.ipynb    
     project-ideas.ipynb
+    project-howto.ipynb
     jm-templates/project-NAME-SURNAME-ID/markdown.ipynb
-    commandments.ipynb
+    
     thanks.ipynb
     
 |space|
 ==========
 
 .. |space| unicode:: U+0020 .. space
-
 
 
 Esercizi integrativi
@@ -46,10 +43,11 @@ Esercizi integrativi
     Funzioni <exercises/functions/functions-solution.ipynb>    
     Stringhe <exercises/strings/strings-solution.ipynb>
     Liste <exercises/lists/lists-solution.ipynb>
+    Tuple <exercises/tuples/tuples-solution.ipynb>    
     Dizionari <exercises/dictionaries/dictionaries-solution.ipynb>
-    Matrici liste di liste <exercises/matrices-list-of-lists/list-of-lists-solution.ipynb>    
-    Matrici Numpy <exercises/matrices-numpy/numpy-solution.ipynb>
-
+    Matrici liste di liste <exercises/matrices-lists/matrices-lists-solution.ipynb>    
+    Matrici Numpy <exercises/matrices-numpy/matrices-numpy-solution.ipynb>
+    commandments.ipynb
 
 Indice
 ----------------------
