@@ -19,7 +19,7 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 jm = jmt.Jupman()
 
-jm.subtitle = "TODO CHANGE jm.subtitle A template manager for Jupyter course websites."""
+jm.subtitle = "Guida introduttiva alla pulizia e analisi dati con Python 3"
 jm.course = "SoftPython" 
 jm.degree = "DISI @ Università di Trento"
 author = 'David Leoni, Alessio Zamboni, Marco Caresia' 
@@ -183,7 +183,7 @@ language = None
 html_title = project # + ' version ' + release
 # canonical url for documentation
 # since sphinx 1.8
-html_baseurl = 'https://jupman.readthedocs.io'
+html_baseurl = 'https://softpython.readthedocs.io'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
