@@ -41,11 +41,11 @@ def help():
     print("")
     print("    EXAMPLE USAGE:")
     print("")
-    print("        python3s build.py  -f html,epub,latex")
+    print("        python3 build.py  -f html,epub,latex")
     print("")
 
 
-sphinxcmd = "./sphinx3-build"
+sphinxcmd = "sphinx-build"
 
 # use this for python2:
 # sphinxcmd = "sphinx-build"
