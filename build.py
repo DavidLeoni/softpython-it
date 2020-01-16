@@ -5,7 +5,6 @@
 
 # For more info, see help() function
 
-# 0.1  Sept 2017  David Leoni
 
 import subprocess
 import os
@@ -17,8 +16,12 @@ import fileinput
 import string
 from pathlib import Path
 
+import conf
 
-from conf import *
+from conf import jm
+
+from jupman_tools import info, warn, fatal
+import jupman_tools as jt
 
 def help():
 
@@ -34,7 +37,7 @@ def help():
     print("")
     print("        --quick   -q     Quick build that just generates student manual, only in html format")
     print("")
-    print("        --formats  -f    " + ' | '.join(FORMATS) + "       separate with comma to build more than one")
+    print("        --formats  -f    " + ' | '.join(jm.formats) + "       separate with comma to build more than one")
     print("")
     print("    EXAMPLE USAGE:")
     print("")
@@ -48,44 +51,33 @@ sphinxcmd = "./sphinx3-build"
 # sphinxcmd = "sphinx-build"
 
 
-    
-def detect_system():
-    print("")
-    print("Trying to detect system ...")
-    import os.path
 
-    print("Defaulting to 'default'")
-    system = "default"
-    print("")
-    return system
-
-def print_generated_banner(manual, format):
-    tinfo = MANUALS[manual]
-    print("\n\n    Generated " + tinfo['name'] + " " +  format + "!"
-                                + "\n\n\n       This manual is intended for " + tinfo['audience'])
+def print_generated_banner(manual, fmt):
+    tinfo = jm.manuals[manual]
+    print("\n\n    Generated %s %s !\n\n\n       This manual is intended for %s audience" % (manual, fmt, tinfo['name'])) 
     print("\n\n       You can now find it at\n\n")
 
-def get_path(manual, format):
-    tinfo = MANUALS[manual]
-    if format == "html":
-        return "file://" + os.path.abspath(SYSTEMS[system]['outdir'] + tinfo['output']  + "/html/index.html")
+def get_path(manual, fmt):
+    tinfo = jm.manuals[jm.manual]
+    if fmt == "html":
+        return "file://" + os.path.abspath(jm.build + tinfo['output']  + "/html/index.html")
     else:
-        return "file://" + os.path.abspath(SYSTEMS[system]['outdir'] + tinfo['output']  + "/" + format + "/")
+        return "file://" + os.path.abspath(jm.build + tinfo['output']  + "/" + fmt + "/")
 
 
-def outdir(manual, format):
+def outdir(manual, fmt):
     """ Returns the output directory given a manual and format
     """
-    return SYSTEMS[system]['outdir'] + MANUALS[manual]['output']  + "/" + format
+    return os.path.join(jm.build, jm.manuals[jm.manual]['output'], fmt)
 
 
 
 new_python_path = None
 
 if 'PYTHONPATH' in os.environ:
-    new_python_path = os.environ['PYTHONPATH'] + os.pathsep + super_doc_dir()
+    new_python_path = os.path.join(os.environ['PYTHONPATH'],  jt.super_doc_dir())
 else:
-    new_python_path = super_doc_dir()
+    new_python_path = jt.super_doc_dir()
 my_env = os.environ.copy()
 my_env['PYTHONPATH'] = new_python_path
 
@@ -105,40 +97,35 @@ def run_sphinx(manuals, formats):
     built = {}
     failed = {}
 
+    jupman_out = os.path.join(jm.build, 'jupman')
+    if os.path.isdir(jupman_out):
+        jt.delete_tree(jupman_out, '_build')
+    
     for manual in manuals: 
-        for format in formats:
+        for fmt in formats:
 
-            tinfo = MANUALS[manual]
+            relout = outdir(manual, fmt)
+            if os.path.isdir(relout):
+                jt.delete_tree(relout, '_build')
 
-            relout = outdir(manual, format)
-            print("Building " + tinfo['name'] + " "  + format +  " in " + relout)
+            tinfo = jm.manuals[manual]
+
+            print("Building %s %s in %s" % (tinfo['name'], fmt, relout))
 
             # sphinx-build -b  html doc _build/student/html 
 
             try:
-                print("Cleaning " + str(relout) + "  ")
-                
-                if "_build/" in relout:
-                    res = subprocess.check_output("rm -rf " + relout,
-                                                   shell=True,
-                                                   env=my_env
-                                                  )
-                else:
-                    raise Exception("ERROR: FAILED SECURITY CHECK BEFORE CLEANING DIRECTORY: " + str(relout))
-                    
-                cmd = (sphinxcmd + " -j 4 -b " + format + " . " + relout + " " + tinfo['args'] )
+                cmd = (sphinxcmd + " -j 4 -b " + fmt + " . " + relout + " " + tinfo['args'] )
                 res = run(cmd)
-                
-                
+                    
 
-                if format == 'html':
+                if fmt == 'html':
 
                     print("Fixing links to PDFs and EPUBs ... ") # Because of this crap: http://stackoverflow.com/a/23855541
 
                     with open(relout + '/index.html', "r+") as f:
                         data = f.read()
 
-                        
                         data = data.replace('_JM_{download}', 'Download ')
                         
 #<a href="http://readthedocs.org/projects/jupman/downloads/pdf/latest/" target="_blank">PDF</a>
@@ -165,65 +152,65 @@ def run_sphinx(manuals, formats):
                     
                     info("Fixing html paths for offline browsing ....")
 
-                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/', '_static/js/')
-                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/', '_static/js/')
-                    replace_html('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', '_static/js/MathJax.js')
-                    replace_html('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
+                    replace_html(relout, 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/', '_static/js/')
+                    replace_html(relout, 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/', '_static/js/')
+                    replace_html(relout, 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML', '_static/js/MathJax.js')
+                    replace_html(relout, 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML',  '_static/js/MathJax.js')
 
-                elif format == 'latex':                  
-                    run('latexmk -r latexmkrc -pdf -f -dvi- -ps- -jobname=' + filename + ' -interaction=nonstopmode', cwd=relout)
+                elif fmt == 'latex':                  
+                    run('latexmk -r latexmkrc -pdf -f -dvi- -ps- -jobname=' + jm.filename + ' -interaction=nonstopmode', cwd=relout)
                 
-                print_generated_banner(manual, format)                                                
-                print("          "  + get_path(manual, format)  + "\n\n");
+                print_generated_banner(manual, fmt)            
+
+                print("          "  + get_path(manual, fmt)  + "\n\n");
         
-                built[(manual, format)] = {}
+                built[(manual, fmt)] = {}
 
             except  subprocess.CalledProcessError as err:
-                failed[(manual, format)] = {'err': err}
-                print("ERROR: FAILED BUILDING " + manual + " " + format + ", SKIPPING IT !!")
+                failed[(manual, fmt)] = {'err': err}
+                print("ERROR: FAILED BUILDING %s %s  SKIPPING IT !!" % (manual, fmt))
                 print(err.output)
     
 
     if len(built) > 0:
         print("\n\n  GENERATED MANUALS: \n\n")
         maxpad = 0
-        for (manual, format) in sorted(built.keys()):
-            maxpad = max(maxpad, len("      " + manual + " " + format + ":   "))
-        for (manual, format) in sorted(built.keys()):
-            print(("      " + manual + " " + format + ":   ").rjust(maxpad) + get_path(manual, format))
+        for (manual, fmt) in sorted(built.keys()):
+            maxpad = max(maxpad, len("     %s %s  :   " % (manual, fmt)))
+        for (manual, fmt) in sorted(built.keys()):
+            print(("      %s %s :   " % (manual, fmt)).rjust(maxpad) + get_path(manual, fmt))
         print("")
         print("")
     if len(failed) > 0:
         print("\n\n   THERE WERE ERRORS WHILE BUILDING:\n\n")
-        for (manual, format) in failed.keys():
-            print("       " + manual + " " + format + ":   ")
-            print("             " + str(failed[(manual, format)]['err']) + "   \n\n" )
+        for (manual, fmt) in failed.keys():
+            print("       %s %s :   " % (manual, fmt))
+            print("             " + str(failed[(manual, fmt)]['err']) + "   \n\n" )
         exit(1)
     
 
 def wrongarg(msg):
     #print("    ERROR! " + msg)
     #print("")
-    exit("\n\n    ERROR! " + msg + "\n\n\n    For more info run:   build.py help\n\n");
+    exit("\n\n    ERROR! " + msg + "\n\n\n    For more info run:   build.py help\n\n")
 
 
 
-def replace_html(stext, rtext):
+def replace_html(relout, stext, rtext):
     """ Replaces strings in html files (useful for correcting links to cdn libs)
-        stext: string to find
-        rtext: string to replace with
+        stext:  string to find
+        rtext:  string to replace with
+        relout: i.e. _build/html
     """
 
-    path = "_build/html/**/*.html"
+    path =  "%s/**/*.html" % relout
 
-    info("finding: " + stext + " replacing with: " + rtext + " in: " + path)
+    info("finding %s: replacing with:  %s in: %s " % (stext, rtext, path))
 
     files = glob.glob(path, recursive=True)  # recursive since python 3.5 https://stackoverflow.com/a/2186565
     
-    info("Found %s files." % len(files))
-    
     for fname in files:
-        
+        #debug(fname)
         
         # debug([p.name for p in Path(relfname).parents])
         # for some reason it adds an empty string:    DEBUG=['exam-solutions', 'jm-templates', '']        
@@ -232,14 +219,15 @@ def replace_html(stext, rtext):
             lineno = 0
             lineno = line.find(stext)
             if lineno >0:
-                relfname = os.path.relpath(fname, start='_build/html')  # works from current dir                
+                relfname = os.path.relpath(fname, start=relout)  # works from current dir                
                 prefix =  '../' * (len(Path(relfname).parents) - 1)
                 line =line.replace(stext, prefix + rtext)
             sys.stdout.write(line)
 
+
 #  MAIN
 
-manuals=MANUALS.keys()
+manuals=jm.manuals.keys()
 formats = ['latex', 'epub', 'html'] #html must be at the end because we need to copy pdfs !
 draft = False
 
@@ -253,9 +241,9 @@ while i < len(sys.argv):
         if i + 1 == len(sys.argv):
             wrongarg("Missing parameter !")        
         formats = sys.argv[i+1].split(",")
-        for format in formats:
-            if not format in FORMATS:
-                wrongarg("Expected format to be one of " + str(FORMATS) + " , found instead '" + format + "'");
+        for fmt in formats:
+            if not fmt in jm.formats:
+                wrongarg("Expected format to be one of %s found instead '%s' "  %(jm.formats, fmt))
         i += 2
     elif sys.argv[i] == '-q' or sys.argv[i] == '--quick':
         draft = True
@@ -263,11 +251,8 @@ while i < len(sys.argv):
         formats=['html']
         i += 1
     else:
-        wrongarg("Unrecognized parameter '" + sys.argv[i] + "'")
+        wrongarg("Unrecognized parameter '%s'" % sys.argv[i])
         i += 1
-
-if system == None:
-    system = detect_system()
 
 run_sphinx(manuals, formats)
 

@@ -1,16 +1,8 @@
 
-# David Leoni Aug 2018
+# Library to be included in Jupyter notebooks 
 
-
-# Library to be included in Jupyter notebooks with commands like (note the '-i')
-#
-#    %run -i ../../jupman
-#
-# followed by
-#
-#    jupman_init()
-#
-# For reasons behind, see  discussion here: https://github.com/DavidLeoni/jupman/issues/12
+__author__ = "David Leoni"
+__status__ = "Development"
 
 import sys
 import unittest
@@ -18,51 +10,56 @@ import inspect
 import os
 import argparse
 
-
         
-def init(root='', toc=False):
-    """ Injects notebooks with js and css from overlay/_static
+def init(toc=False):
+    """ Injects notebooks with js and css from _static
     
         To be called at the beginning of notebooks, only if you *really* need it.
         Please do read https://jupman.readthedocs.io/en/latest/usage.html#Running-Jupyter
-    
-        root:  string with the relative path to the root of the project
-               for exercises and exams, it would be '../../'               
+                   
+        NOTE: on error doesn't raise exception and just prints error message
+               
     """
-    from IPython.core.display import HTML
-    on_rtd = os.environ.get('READTHEDOCS') == 'True'
-    
-    if on_rtd:
-        # on RTD we don't inject anything, files are set in sphinx conf.py
-        print("")
-    else:
-        # Hacky stuff, because Jupyter only allows to set a per user custom js, we want per project js
-        
-        css = open(root + "overlay/_static/css/jupman.css", "r").read()
-        tocjs = open(root + "overlay/_static/js/toc.js", "r").read()
-        js = open(root + "overlay/_static/js/jupman.js", "r").read()
+                        
+    # Hacky stuff, because Jupyter only allows to set a per user custom js, we want per project js
+    try:
+        from IPython.core.display import HTML
+        on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
-        ret = "<style>\n" 
-        ret += css
-        ret += "\n </style>\n"
+        if on_rtd:
+            # on RTD we don't inject anything, files are set in sphinx conf.py
+            print("")
+        else:
+            
+            root = os.path.dirname(os.path.abspath(__file__))                          
+            _static = os.path.join(root, '_static')                
+            
+            css = open("%s/css/jupman.css" % _static, "r").read()
+            tocjs = open("%s/js/toc.js" % _static, "r").read()
+            js = open("%s/js/jupman.js" % _static, "r").read()
 
-        ret +="\n"
+            ret = "<style>\n" 
+            ret += css
+            ret += "\n </style>\n"
 
-        ret += "<script>\n"
-        ret += "var JUPMAN_IN_JUPYTER = true;"  
-        ret += "\n"
-        if toc:
-            ret += tocjs
-            ret += "\n"    
-        ret += js
-        ret += "\n</script>\n"
+            ret +="\n"
 
-    return HTML(ret)        
-        
+            ret += "<script>\n"
+            ret += "var JUPMAN_IN_JUPYTER = true;"  
+            ret += "\n"
+            if toc:
+                ret += tocjs
+                ret += "\n"    
+            ret += js
+            ret += "\n</script>\n"
+            return HTML(ret)
+    except Exception as ex:
+        print(ex)
 
 
 def get_class(meth):
-    """
+    """ Return the class of method meth
+        
         Taken from here: https://stackoverflow.com/a/25959545
     """
 
@@ -76,7 +73,10 @@ def get_class(meth):
                       meth.__qualname__.split('.<locals>', 1)[0].rsplit('.', 1)[0])
         if isinstance(cls, type):
             return cls
-    return getattr(meth, '__objclass__', None)  # handle special descriptor objects
+    ret = getattr(meth, '__objclass__', None)  # handle special descriptor objects
+    if ret == None:
+        raise ValueError("Couldn't find the class of method %s" % meth)
+    return ret
 
 def run(classOrMethodOrModule):    
     """ Runs test class or method or Module. Doesn't show code nor output in html.
@@ -110,11 +110,12 @@ def show_run(classOrMethod):
 
 
 def pytut():
-    """ Embeds a Python tutor in the output of the current cell, with code *current* cell stripped from the call to 
-        pytut() itself. 
+    """ Embeds a Python tutor in the output of the current cell, with code *current*    
+        cell stripped from the call to pytut() itself. 
 
         - The GUI will be shown on the built Sphinx website.
-        - Requires internet connection. Without, it will show standard browser message telling there is no connectivity  
+        - Requires internet connection. Without, it will show standard browser message 
+          telling there is no connectivity        
     """
     #Hacky way to get variables from stack, but if we use %run -i we don't need it.
     import inspect
@@ -151,8 +152,7 @@ def pytut():
 
         params = {'code':new_code,
                   'cumulative': 'false',
-                  'py':'3', # NOTE: if you put `py3anaconda` in Jupyter you get 
-                            #       Error: https execution of non-Python code is not currently supported. [#nonPythonHttps]
+                  'py':3,
                   'curInstr':0} 
 
         # BEWARE YOU NEED HTTP _S_ !    
@@ -161,4 +161,4 @@ def pytut():
         return IFrame(src, 900,max(base,(new_code.count('\n')*25) + base))
 
 
-     
+    

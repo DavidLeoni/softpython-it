@@ -7,575 +7,96 @@ from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
 import datetime
 import glob
-import os
-import inspect
-import zipfile
-import sys
 import re
-import types
-import shutil
-from enum import Enum
+import os
+import sys
+sys.path.append('.') # for rtd 
+import jupman_tools as jmt
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 ###################   TODO EDIT AS NEEDED !!  ####################
 
-course = "SoftPython" 
-degree = "DISI @ Università di Trento"
+jm = jmt.Jupman()
+
+jm.subtitle = "TODO CHANGE jm.subtitle A template manager for Jupyter course websites."""
+jm.course = "SoftPython" 
+jm.degree = "DISI @ Università di Trento"
 author = 'David Leoni, Alessio Zamboni, Marco Caresia' 
 copyright = '# CC-BY 2017 - %s, %s' % (datetime.datetime.now().year, author)
 
-#####    'filename' IS *VERY* IMPORTANT !!!!
+#####    'jm_filename' IS *VERY* IMPORTANT !!!!
 #####     IT IS PREPENDED IN MANY GENERATED FILES
 #####     AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
 #####     (like i.e. jupman.readthedocs.org)
 
-filename = 'softpython'   # The filename without the extension
+jm.filename = 'softpython'   # The filename without the extension
 
-# common files for exercise and exams as paths. Paths are intended relative to the project root. Globs are allowed.
-# note 'overlay/_static/css','overlay/_static/js' are automatically injected when you call jupman.init()
-exercise_common_files = ['jupman.py', 'img/cc-by.png' ]
+# common files for exercise and exams as paths. Paths are intended relative to the project root. Globs like /**/* are allowed.
 
+jm.chapter_files = ['jupman.py', 'img/cc-by.png', 
+                         
+                    '_static/js/jupman.js',  # these files are injected when you call jupman.init()
+                    '_static/css/jupman.css', 
+                    '_static/js/toc.js']
+
+jm.chapter_patterns =  ['*/']
+jm.chapter_exclude_patterns =  ['[^_]*/','^exams/', '^project/', '^challenges/']
 
 # words used in ipynb files - you might want to translate these in your language. Use plural.
-IPYNB_SOLUTION = "soluzioni"
-IPYNB_EXERCISE = "esercizi"
+jm.ipynb_solutions = "SOLUZIONI"
+jm.ipynb_exercises = "ESERCIZI"
 
-#NOTE: the following string is not just a translation, it's also a command that removes the cell it is contained in 
-#      when building the exercises. If the user inserts extra spaces the phrase will be recognized anyway
-WRITE_SOLUTION_HERE = "# scrivi qui"
+#NOTE: the following string is not just a translation, it's also a command that   when building the exercises
+#      removes the content after it in the Python cell it is contained in
+#      If the user inserts extra spaces the phrase will be recognized anyway
+jm.write_solution_here = jmt.ignore_spaces("# scrivi qui", must_begin=False)
 
-SOLUTION = "# SOLUZIONE"
-MARKDOWN_ANSWER = "**RISPOSTA**:"
+#NOTE: the following string is not just a translation, it's also a command that  when building the exercises  completely removes the content of the python cell it is contained in (solution comment included). If the user inserts extra spaces the phrase will be recognized anyway
+
+jm.solution = jmt.ignore_spaces("# SOLUZIONE")
+
+#NOTE: the following string is not just a translation, it's also a command that 
+#   when building the exercises removes the content after it in the markdown cell
+#   it is contained in
+
+jm.markdown_answer = jmt.ignore_spaces('**RISPOSTA**:')
 #################################################################
 
-#pattern as in ipynb json file - note markdown has no output in ipynb
-IPYNB_TITLE_PATTERN = re.compile(r"(\s*#.*)(" + IPYNB_SOLUTION + r")")
+jm.zip_ignored = ['__pycache__', '**.ipynb_checkpoints', '.pyc', '.cache', '.pytest_cache', '.vscode']
 
-zip_ignored = ['__pycache__', '.ipynb_checkpoints', '.pyc']
+jm.formats = ["html", "epub", "latex"]
 
-FORMATS = ["html", "epub", "latex"]
-SYSTEMS = {
-    "default" : {
-        "name" : "Default system",
-        "outdir":"_build/",
-        "exclude_patterns": ["_build/*", "jm-templates/exam/server/*", "private/*",  '**.ipynb_checkpoints']
-    }
-}
-MANUALS = {
+
+jm.build = "_build"
+
+
+jm.manuals = {
     "student": {
-        "name" : course,  # TODO put manual name, like "Scientific Programming"
+        "name" : "SoftPython",  # TODO put manual name, like "Scientific Programming"
         "audience" : "studenti",
         "args" : "",
-        "output" : "",
-        "exclude_patterns" : []
+        "output" : ""
     }
 }
-manual = 'student'
-system = 'default'
-
-project = MANUALS[manual]['name']
+jm.manual = 'student'
 
 
+project = jm.manuals[jm.manual]['name']
 
-JUPMAN_RAISE = "jupman-raise"
-JUPMAN_STRIP = "jupman-strip"
+
+
+jm.raise_exc = "jupman-raise"
+jm.strip = "jupman-strip"
 
 
 #WARNING: this string can end end up in a .ipynb json, so it must be a valid JSON string  !
 #         Be careful with the double quotes and \n  !!
-RAISE_STRING = "raise Exception('TODO IMPLEMENT ME !')"
+jm.raise_exc_code = "raise Exception('TODO IMPLEMENT ME !')"
 
 
-jupman_tags = [JUPMAN_RAISE, JUPMAN_STRIP]
-
-
-def jupman_tag_start(tag):
-    return '#' + tag
-
-def jupman_tag_end(tag):
-    return '#/' + tag
-
-
-
-RAISE_PATTERN = re.compile(jupman_tag_start(JUPMAN_RAISE) + '.*?' + jupman_tag_end(JUPMAN_RAISE), flags=re.DOTALL)
-
-STRIP_PATTERN = re.compile(jupman_tag_start(JUPMAN_STRIP) + '.*?' + jupman_tag_end(JUPMAN_STRIP), flags=re.DOTALL)
-
-def make_write_solution_here_pattern():
-    removed_spaces = " ".join(WRITE_SOLUTION_HERE.split()).replace(' ', '\s+')
-    return re.compile("(" + removed_spaces + ")(.*)", flags=re.DOTALL )
-
-WRITE_SOLUTION_HERE_PATTERN = make_write_solution_here_pattern()
-SOLUTION_PATTERN = re.compile(SOLUTION)
-
-def fatal(msg, ex=None):
-    """ Prints error and exits (halts program execution immediatly)
-    """
-    if ex == None:
-        exMsg = ""
-    else:
-        exMsg = " \n  " + repr(ex)
-    info("\n\n    FATAL ERROR! %s%s\n\n" % (msg,exMsg))
-    exit(1)
-
-def error(msg, ex=None):
-    """ Prints error and reraises exception (printing is useful as sphinx puts exception errors in a separate log)
-    """
-    if ex == None:
-        exMsg = ""
-        the_ex = Exception(msg)
-    else:
-        exMsg = " \n  " + repr(ex)
-        the_ex = ex 
-    info("\n\n    FATAL ERROR! %s%s\n\n" % (msg,exMsg))
-    raise the_ex
+jm.tags = [jm.raise_exc, jm.strip]
     
-def info(msg=""):
-    print("  %s" % msg)
-
-def warn(msg):
-    print("\n\n   WARNING: %s" % msg)
-
-
-def debug(msg=""):
-    print("  DEBUG=%s" % msg) 
-    
-# note if I include the project name I can't reference it from index.rst for very silly reasons, see  http://stackoverflow.com/a/23855541
-
-#debug("WRITE_SOLUTION_HERE_PATTERN = %s" % WRITE_SOLUTION_HERE_PATTERN)
-
-def parse_date(ld):
-    try:
-        return datetime.datetime.strptime( str(ld), "%Y-%m-%d")
-    except:
-        raise Exception("NEED FORMAT 'yyyy-mm-dd', GOT INSTEAD: '" + str(ld))
-
-    
-def parse_date_str(ld):
-    """
-        NOTE: returns a string 
-    """
-    return str(parse_date(ld)).replace(' 00:00:00','')
-    
-
-def get_exam_student_folder(ld):
-    parse_date(ld)
-    return filename + '-' + ld + '-FIRSTNAME-LASTNAME-ID'    
-
-    
-def super_doc_dir():
-    return os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-
-
-def get_version(release):
-    """ Given x.y.z-something, return x.y  """
-
-    sl = release.split(".")
-    return sl[0] + '.' + sl[1]
-
-def zip_ignored_file(fname):
-    
-    for i in zip_ignored:
-        if fname.find(i) != -1:
-            return True
-
-
-SUPPORTED_DISTRIB_EXT = ['py', 'ipynb']
-    
-
-class FileKinds(Enum):
-    SOLUTION = 1
-    EXERCISE = 2
-    TEST = 3
-    OTHER = 4
-
-    @staticmethod
-    def sep(ext):
-        if ext == 'py':
-            return '_'
-        else:
-            return '-'
-    
-    @staticmethod
-    def is_supported_ext(fname):
-        for ext in SUPPORTED_DISTRIB_EXT:
-            if fname.endswith('.' + ext):
-                return True
-        return False
-    
-    @staticmethod
-    def detect(fname):
-        l = fname.split(".")
-        if len(l) > 0:
-            ext = l[-1]
-        else:
-            ext = ''
-        if fname.endswith(FileKinds.sep(ext) + "solution" + '.' + ext):
-            return FileKinds.SOLUTION            
-        elif fname.endswith(FileKinds.sep(ext) + "exercise" + '.' + ext):
-            return FileKinds.EXERCISE 
-        elif fname.endswith("_test.py") :
-            return FileKinds.TEST        
-        else:
-            return FileKinds.OTHER
-
-    @staticmethod
-    def check_ext(fname):
-        if not FileKinds.is_supported_ext(fname):
-            raise Exception("%s extension is not supported. Valid values are: %s" % (fname, SUPPORTED_DISTRIB_EXT))
-        
-    @staticmethod        
-    def exercise(radix, ext):      
-        FileKinds.check_ext(ext)
-        return radix + FileKinds.sep(ext) + 'exercise.' + ext
-
-    @staticmethod
-    def exercise_from_solution(fname):
-        FileKinds.check_ext(fname)
-        ext = fname.split(".")[-1]
-               
-        return fname.replace(FileKinds.sep(ext) + "solution." + ext, FileKinds.sep(ext) + "exercise." + ext)
-        
-    @staticmethod
-    def solution(radix, ext):
-        FileKinds.check_ext(ext)
-        return radix + FileKinds.sep(ext) + 'solution.' + ext
-
-    @staticmethod
-    def test(radix):
-        return radix + '_test.py'
-
-    
-    
-
-def check_paths(path, path_check):
-    if not isinstance(path, str):
-        raise Exception("Path to delete must be a string! Found instead: " + str(type(path)))
-    if len(path.strip()) == 0:
-        raise Exception("Provided an empty path !")
-    if not isinstance(path_check, str):
-        raise Exception("Path check to delete must be a string! Found instead: " + str(type(path_check)))
-    if len(path_check.strip()) == 0:
-        raise Exception("Provided an empty path check!")
-
-
-def delete_file(path, path_check):
-    """ Deletes a file, checking you are deleting what you really want
-
-        path: the path to delete as a string
-        path_check: the end of the path to delete, as a string
-    """
-    check_paths(path, path_check)
-
-    if path.endswith(path_check):
-        os.remove(path)
-    else:
-        fatal("FAILED SAFETY CHECK FOR DELETING DIRECTORY " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
-
-def delete_tree(path, path_check):
-    """ Deletes a directory, checking you are deleting what you really want
-
-        path: the path to delete as a string
-        path_check: the end of the path to delete, as a string
-    """
-    check_paths(path, path_check)
-
-    if not os.path.isdir(path):
-        raise Exception("Provided path is not a directory: %s" % path)
-
-    if path.endswith(path_check):
-        shutil.rmtree(path)
-    else:
-        fatal("FAILED SAFETY CHECK FOR DELETING DIRECTORY " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
-
-def delete_file(path, path_check):
-    """ Deletes a file, checking you are deleting what you really want
-
-        path: the path to delete as a string
-        path_check: the end of the path to delete, as a string
-    """
-    check_paths(path, path_check)
-
-    if not os.path.isfile(path):
-        raise Exception("Provided path is not a file: %s" % path)
-    
-    
-    if path.endswith(path_check):
-        os.remove(path)
-    else:
-        fatal("FAILED SAFETY CHECK FOR DELETING FILE " + path + " ! \n REASON: PATH DOES NOT END IN " + path_check)
-
-    
-def validate_tags(text, fname):
-    tag_starts = {}
-    tag_ends = {}
-
-    for tag in jupman_tags:
-        tag_starts[tag] = text.count(jupman_tag_start(tag))                                           
-        tag_ends[tag] = text.count(jupman_tag_end(tag))
-
-    for tag in tag_starts:
-        if tag not in tag_ends or tag_starts[tag] != tag_ends[tag] :
-            raise Exception("Missing final tag %s in %s" % (jupman_tag_end(tag), fname) )
-
-    for tag in tag_ends:
-        if tag not in tag_starts or tag_starts[tag] != tag_ends[tag] :
-            raise Exception("Missing initial tag %s in %s" % (jupman_tag_start(tag), fname) )
-    
-    write_solution_here_count = len(WRITE_SOLUTION_HERE_PATTERN.findall(text))
-    solution_count = len(SOLUTION_PATTERN.findall(text))
-
-    return sum(tag_starts.values()) + write_solution_here_count + solution_count > 0
-
-
-def copy_sols(source_filename, source_abs_filename, dest_filename):
-    if FileKinds.is_supported_ext(source_filename):
-        info("Stripping jupman tags from %s " % source_filename)
-        with open(source_abs_filename) as sol_source_f:
-            text = sol_source_f.read()
-            stripped_text = text
-            for tag in jupman_tags:
-
-                stripped_text = stripped_text \
-                                .replace(jupman_tag_start(tag), '') \
-                                .replace(jupman_tag_end(tag), '')
-
-            with open(dest_filename, 'w') as solution_dest_f:
-                solution_dest_f.write(stripped_text)
-
-    else: # solution format not supported                           
-        info("Writing " + source_filename)
-        shutil.copy(source_abs_filename, dest_filename)
-          
-def solution_to_exercise_text(solution_text):
-                        
-    formatted_text = re.sub(RAISE_PATTERN, RAISE_STRING, solution_text)                    
-    formatted_text = re.sub(STRIP_PATTERN, '', formatted_text)
-    formatted_text = re.sub(WRITE_SOLUTION_HERE_PATTERN, r'\1\n\n', formatted_text)
-    
-    return formatted_text            
-
-def generate_exercise(source_filename, source_abs_filename, dirpath, structure):
-    exercise_fname = FileKinds.exercise_from_solution(source_filename)
-    exercise_abs_filename = dirpath + '/' + exercise_fname
-    exercise_dest_filename = structure + '/' + exercise_fname
-
-
-    if FileKinds.is_supported_ext(source_filename):
-
-        with open(source_abs_filename) as sol_source_f:
-            solution_text = sol_source_f.read()                                
-
-            found_tag = validate_tags(solution_text, source_abs_filename)                                                                                
-
-            if found_tag:
-
-                if os.path.isfile(exercise_abs_filename) :
-                    raise Exception("Found jupman tags in solution file but an exercise file exists already !\n  solution: %s\n  exercise: %s" % (source_abs_filename, exercise_abs_filename))
-
-                info('Found jupman tags in solution file, going to derive from solution exercise file %s' % exercise_fname )                                    
-
-                                                        
-                with open(exercise_dest_filename, 'w') as exercise_dest_f:
-                    
-                    
-                    if source_abs_filename.endswith('.ipynb'):
-                        
-                        import nbformat
-                        # note: for weird reasons nbformat does not like the sol_source_f 
-                        nb_ex = nbformat.read(source_abs_filename, nbformat.NO_CONVERT)
-                                                                        
-
-                        # look for title
-                        found_title = False                        
-                        for cell in nb_ex.cells:
-                            if cell.cell_type == "markdown":
-                                if IPYNB_TITLE_PATTERN.search(cell.source):
-                                    found_title = True
-                                    cell.source = re.sub(IPYNB_TITLE_PATTERN, 
-                                                   r"\1" + IPYNB_EXERCISE, cell.source) 
-                                    break
-                        
-                        if not found_title:
-                            error("Couldn't find title in file: \n   %s\nThere should be a markdown cell beginning with text (note string '%s' is mandatory)\n# bla bla %s" % (source_abs_filename, IPYNB_SOLUTION, IPYNB_SOLUTION))
-    
-    
-                        # look for tags
-                        for cell in nb_ex.cells:
-                            if cell.cell_type == "code":
-                                if cell.source.strip().startswith(SOLUTION):
-                                    cell.source = " " 
-                                else:
-                                    cell.source = solution_to_exercise_text(cell.source)
-                            if cell.cell_type == "markdown":
-                                if cell.source.strip().startswith(MARKDOWN_ANSWER):                                    
-                                    cell.source = " "  # space, otherwise it shows 'Type markdown or latex'
-                                
-                        nbformat.write(nb_ex, exercise_dest_f)
-                    
-                    else:
-                        
-                        exercise_text = solution_to_exercise_text(solution_text)
-                        #debug("FORMATTED TEXT=\n%s" % exercise_text)
-                        exercise_dest_f.write(exercise_text)                    
-                                                                
-            else:
-                if not os.path.isfile(exercise_abs_filename) :
-                    error("There is no exercise file and couldn't find any jupman tag in solution file for generating exercise !"
-                          +"\n  solution: %s\n  exercise: %s" % (source_abs_filename, exercise_abs_filename))
-                    
-def copy_code(source_dir, dest_dir, copy_test=True, copy_solutions=False):
-    
-    
-    info("  Copying exercises %s \n      from  %s \n      to    %s" % ('and solutions' if copy_solutions else '', source_dir, dest_dir))
-    # creating folders
-    for dirpath, dirnames, filenames in os.walk(source_dir):
-        structure = dest_dir + dirpath[len(source_dir):]
-        #print("structure = " + structure)
-        #print("  FOUND DIR " + dirpath) 
-        
-        if not zip_ignored_file(structure):
-            if not os.path.isdir(structure) :
-                print("Creating dir %s" % structure)
-                os.makedirs(structure)
-
-            for source_filename in filenames:
-                                
-                if not zip_ignored_file(source_filename):
-                    
-                    source_abs_filename = dirpath + '/' + source_filename
-                    dest_filename = structure + '/' + source_filename                    
-
-                    #print("source_abs_filename = " + source_abs_filename)
-                    #print("dest_filename = " + dest_filename)
-
-                    fileKind = FileKinds.detect(source_filename)
-                    
-                    if fileKind == FileKinds.SOLUTION:                  
-                        
-                        if copy_solutions:                                           
-                            copy_sols(source_filename, source_abs_filename, dest_filename)
-                        
-                        if FileKinds.is_supported_ext(source_filename):
-                            generate_exercise(source_filename, source_abs_filename, dirpath, structure)    
-                                        
-                            
-                    elif fileKind == FileKinds.TEST:
-                        with open(source_abs_filename, encoding='utf-8') as source_f:
-                            data=source_f.read().replace('_solution ', ' ')
-                            info('Writing patched test %s' % source_filename) 
-                            with open(dest_filename, 'w', encoding='utf-8') as dest_f:
-                                writer = dest_f.write(data)                         
-                    else:  # EXERCISE and OTHER
-                        print("  Writing " + source_filename)
-                        shutil.copy(source_abs_filename, dest_filename)
-
-
-def zip_paths(rel_paths, zip_path, patterns=[]):
-    """ zips provided rel_folder to file zip_path (WITHOUT .zip) !
-        rel_folder MUST be relative to project root
-        
-        This function was needed as default python zipping machinery created weird zips 
-        people couldn't open in Windows
-        
-        patterns can be:
-         - a list of tuples source regexes to dest 
-         - a function that takes a string and returns a string
-        
-    """
-    
-    
-    if zip_path.endswith('.zip'):
-        raise Exception("zip_path must not end with .zip ! Found instead: " + zip_path)
-
-    for rel_path in rel_paths:
-        abs_path = super_doc_dir() + '/' + rel_path
-
-        if not(os.path.exists(abs_path)):
-            raise Exception("Expected an existing file or folder relative to project root ! Found instead: " + rel_path)
-
-      
-    def write_file(fname):
-        
-        
-        if not zip_ignored_file(fname) :
-            #info('Zipping: %s' % fname)            
-            
-            
-            if isinstance(patterns, (list,)):
-                if len(patterns) > 0:
-                    to_name = fname
-                    for pattern, to in patterns:    
-                        try:
-                            to_name = re.sub(pattern, to, to_name)
-                        except Exception as ex:
-                            error("Couldn't substitute pattern \n  %s\nto\n  %s\nin string\n  %s\n\n" % (pattern, to, to_name) , ex)
-                else:
-                    to_name = '/' + fname
-                    
-            elif isinstance(patterns, types.FunctionType):
-                to_name = patterns(fname)
-            else:
-                error('Unknown patterns type %s' % type(patterns))
-
-            #info('to_name = %s' % to_name)                    
-                
-            archive.write(fname, to_name, zipfile.ZIP_DEFLATED)
-
-    archive = zipfile.ZipFile(zip_path + '.zip', "w")
-    
-    for rel_path in rel_paths:
-
-        if os.path.isdir(rel_path):            
-            for dirname, dirs, files in os.walk(rel_path):
-                #info("dirname=" + dirname)
-                dirNamePrefix = dirname + "/*"
-                #info("dirNamePrefix=" + dirNamePrefix)
-                filenames = glob.glob(dirNamePrefix)
-                #info("filenames=" + str(filenames))
-                for fname in filenames:
-                    if os.path.isfile(fname):
-                        write_file(fname)
-        elif os.path.isfile(rel_path):
-            info('Writing %s' % rel_path)
-            write_file(rel_path)
-        else:
-            raise Exception("Don't know how to handle " + rel_path)
-    archive.close()
-        
-    info("Wrote " + zip_path)
-            
-def zip_folders(folder, prefix='', suffix=''):
-    global exercise_common_files
-    source_folders =  glob.glob(folder + "/*/")
-    
-    if folder.startswith('..'):
-        fatal("BAD FOLDER TO ZIP ! IT STARTS WITH '..'")
-    if len(folder.strip()) == 0:
-        fatal("BAD FOLDER TO ZIP ! BLANK STRING")
-
-    build_jupman = '_build/jupman/'
-    build_folder = build_jupman + folder
-    if os.path.exists(build_folder):
-        info('Cleaning %s' % build_folder)
-        delete_tree(build_folder, '_build/jupman/' + folder)
-    
-    copy_code(folder, build_folder, copy_test=True, copy_solutions=True)
-    
-    build_folders =   glob.glob(build_folder + "/*/")
-    
-    if len(source_folders) > 0:
-        outdir = 'overlay/_static/'
-        info("Found stuff in %s , zipping them to %s" % (folder, outdir))
-        for d in build_folders:
-            dir_name= d[len(build_folder + '/'):].strip('/')
-            #info("dir_name = " + dir_name)
-            zip_name = prefix + dir_name + suffix
-            zip_path = outdir + zip_name
-            zip_paths(exercise_common_files + [d], zip_path, patterns= [("^(%s)" % build_jupman,"")])
-        info("Done zipping " + folder ) 
-
 
 # Use sphinx-quickstart to create your own conf.py file!
 # After that, you have to edit a few things.  See below.
@@ -591,16 +112,21 @@ extensions = [
 ]
 
 # Exclude build directory and Jupyter backup files:
-exclude_patterns = ['_build', '**.ipynb_checkpoints', '/README.md', '/readme.md']
+exclude_patterns = [jm.build,
+                    jm.generated, 
+                    "_templates/exam-server",
+                     "_private",
+                     "_test",                     
+                     'README.md', 
+                     'readme.md']
+
+exclude_patterns.extend(jm.zip_ignored)
 
 # Default language for syntax highlighting in reST and Markdown cells
 highlight_language = 'none'
 
 # Don't add .txt suffix to source files (available for Sphinx >= 1.5):
 html_sourcelink_suffix = ''
-
-html_show_sourcelink = False
-
 
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
 nbsphinx_execute = 'never'   
@@ -639,21 +165,8 @@ linkcheck_ignore = [r'http://localhost:\d+/']
 
 # -- Get version information from Git -------------------------------------
 
-try:
-    from subprocess import check_output
-    release = check_output(['git', 'describe', '--tags', '--always'])
-    release = release.decode().strip()
-    if not '.' in release:
-        release = '0.1.0'
-        info("Couldn't find git tag, defaulting to: " + release)
-    else:    
-        info("Detected release from git: " + str(release))
-except Exception:
-    release = '0.1.0'
-    info("Couldn't find git version, defaulting to: " + release)
-
-version  = get_version(release)
-info("Setting version to %s" % version)
+release = jmt.detect_release()
+version  = jmt.get_version(release)
 
 
 # The language for content autogenerated by Sphinx. Refer to documentation
@@ -666,8 +179,10 @@ language = None
 
 # -- Options for HTML output ----------------------------------------------
 
-html_title = project 
-
+html_title = project # + ' version ' + release
+# canonical url for documentation
+# since sphinx 1.8
+html_baseurl = 'https://jupman.readthedocs.io'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -686,14 +201,12 @@ if not on_rtd:
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]    
 
-    
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# DAVID: THE html_static_path SETTING WITH '_static' IS CRAP, IT JUST MARGES INSIDE _STATIC ALL THE FILES IGNORING THE SUBDIRECTORIES ! THE 'html_extra_path' IS MUCH BETTER.
 
-html_static_path = [] 
-html_extra_path = ['overlay'] 
+html_static_path = ['_static/'] 
+#html_extra_path = [] 
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -702,32 +215,45 @@ html_extra_path = ['overlay']
 htmlhelp_basename = project + 'doc'
 
 
-#DAVID: NOTE: THESE ARE *ONLY* FOR HTML TEMPLATES, WHICH IS DIFFERENT FROM jm-templates
+#JUPMAN: NOTE: THESE ARE *ONLY* FOR HTML TEMPLATES, WHICH IS DIFFERENT FROM jm-templates
 # see https://github.com/DavidLeoni/jupman/issues/10
 templates_path = ['_templates']
 
-#MOTE: on the left you must *not* put the extension !
-html_additional_pages = {
-    'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
+#JUPMAN: you can use html_additional_pages for directly copying html files from _templates to the project root
+
+# For example, it could be useful for copying Google Search Console files. 
+# Just put the google file in the _templates directory, 
+# and add the following code. Note that afterwards you would still need to 
+# go to readthethedocs and in Redirects section add an absolute redirect 
+# like /google3dea3b29336ca0e5.html -> /it/latest/google3dea3b29336ca0e5.html 
+
+# NOTE: don't put the extension on the left  !
+
+#html_additional_pages = {
+#    'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
+#}
+
+
+
+latex_engine='xelatex'
+
+# allow utf8 characters
+latex_elements = {
+    'preamble' : r'''
+\usepackage{newunicodechar}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{graphicx}
+
+\makeatletter
+% Actually APLlog is a a thin star against white circle, could't find anything better
+\newunicodechar{✪}{\APLlog}    
+\newunicodechar{✓}{\checkmark}    
+
+    ''',
+    'maketitle': jm.latex_maketitle(html_baseurl),
 }
 
-
-
-# -- Options for LaTeX output ---------------------------------------------# -- Options for LaTeX output ---------------------------------------------
-
-#latex_elements = {
-#    'papersize': 'a4paper',
-#    'preamble': r"""
-#\usepackage[sc,osf]{mathpazo}
-#\linespread{1.05}  % see http://www.tug.dk/FontCatalogue/urwpalladio/
-#\renewcommand{\sfdefault}{pplj}  % Palatino instead of sans serif
-#\IfFileExists{zlmtt.sty}{
-#    \usepackage[light,scaled=1.05]{zlmtt}  % light typewriter font from lmodern
-#}{
-#    \renewcommand{\ttdefault}{lmtt}  % typewriter font from lmodern
-#}
-#""",
-#}
 
 
 latex_show_urls = 'footnote'
@@ -737,7 +263,7 @@ latex_show_urls = 'footnote'
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, filename + '.tex', project,
+    (master_doc, jm.filename + '.tex', project,
      author, 'manual'),
 ]
 
@@ -747,7 +273,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, filename, project,
+    (master_doc, jm.filename, project,
      [author], 1)
 ]
 
@@ -758,7 +284,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, filename, project,
+    (master_doc, jm.filename, project,
      author, project, '',
      'Miscellaneous'),
 ]
@@ -768,7 +294,7 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_basename = filename
+epub_basename = jm.filename
 epub_title = project
 epub_author = author
 epub_publisher = author
@@ -809,7 +335,7 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 
 pdf_documents = [
-   ('index', filename, project, author.replace(",","\\"))
+   ('index', jm.filename, project, author.replace(",","\\"))
 ]
 # A comma-separated list of custom stylesheets. Example:
 pdf_stylesheets = ['sphinx','kerning','a4']
@@ -869,30 +395,36 @@ pdf_fit_background_mode = 'scale'
 
 def setup(app):    
 
-        app.add_config_value('recommonmark_config', {
-            'auto_toc_tree_section': 'Contents',
-            'enable_eval_rst':True
-        }, True)
+        app.add_config_value(   'recommonmark_config', {
+                                    'auto_toc_tree_section': 'Contents',
+                                    'enable_eval_rst':True
+                                }, True)
         app.add_transform(AutoStructify)
-        app.add_javascript('js/jupman.js')
-        app.add_stylesheet('css/jupman.css')
-        zip_folders('exercises', suffix='-exercises')
-        zip_folders('exams', prefix=filename + '-', suffix='-exam')
-        zip_folders('challenges', prefix=filename + '-', suffix='-challenge')
-        zip_paths(['jm-templates/project-NAME-SURNAME-ID'], 
-                    'overlay/_static/project-template',
-                    patterns=[(r"^(jm-templates)/project-(.*)", "/\\2")])
+        app.add_javascript('_static/js/jupman.js')
+        app.add_stylesheet('_static/css/jupman.css')
+        for folder in jm.get_exercise_folders():
+            jm.zip_folder(folder)
+        jm.zip_folders('exams/*/solutions', 
+                        lambda x:  '%s-%s-exam' % (jm.filename, x.split('/')[-2]))
+        jm.zip_folders('challenges/*/', renamer = lambda x: '%s-challenge' % x.split('/')[1])
+        jm.zip_paths(['project'], '_static/generated/project-template')
 
+        def sub(x):
+            if x == 'requirements.txt':
+                return 'NAME-SURNAME-ID/requirements.txt'
+            elif x.startswith('project/'):
+                return 'NAME-SURNAME-ID/%s' % x[len('project/'):]
+            else:
+                return x
 
-exclude_patterns.extend(MANUALS[manual]['exclude_patterns'])
-exclude_patterns.extend(SYSTEMS[system]['exclude_patterns'])
+        jm.zip_paths(['project', 'requirements.txt'], 
+                     '_static/generated/project-template',
+                     patterns = sub)
 
-
+        
 
 source_parsers = {
     '.md': CommonMarkParser,
 }
 
 source_suffix = ['.rst', '.md']
-
-
