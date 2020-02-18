@@ -231,9 +231,9 @@ templates_path = ['_templates']
 
 # NOTE: don't put the extension on the left  !
 
-#html_additional_pages = {
-#    'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
-#}
+html_additional_pages = {
+    'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
+}
 
 
 
