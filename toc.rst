@@ -3,51 +3,75 @@
     :glob:
 
     Home <index.ipynb>
-    intro.ipynb
+    overview.ipynb
+    thanks.ipynb
     installation.ipynb    
     
-    Introduzione a Python <intro/intro-sol.ipynb>    
-    Formati dati <formats/formats-sol.ipynb>
-    Visualizzazione <visualization/visualization-sol.ipynb>
-    Ricerca <search/regex-sol.ipynb>
-    Integrazione <integration/integration-sol.ipynb>
-    Estrazione <extraction/extraction-sol.ipynb>
-    Analitiche <analytics/analytics-sol.ipynb>
-    Applicazioni interattive <interactive/interactive-sol.ipynb>
-    Database <database/database-sol.ipynb>
-    Information retrieval <information-retrieval/information-retrieval-sol.ipynb>
-    Web development <web/web-sol.ipynb>
-    Computer vision <computer-vision/computer-vision-sol.ipynb>
-    
-    challenges.ipynb    
-    project-ideas.ipynb
-    project-howto.ipynb
-    project/markdown.ipynb
-    
-    thanks.ipynb
-    
-|space|
-==========
-
-.. |space| unicode:: U+0020 .. space
-
-
-Esercizi integrativi
+Fondamenti
 =======================
 
 .. toctree::
     :maxdepth: 2
     :glob:
 
-    Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
-    Funzioni <functions/functions-sol.ipynb>    
+    Introduzione rapida <intro/quick-intro-sol.ipynb>    
+    Basi <basics/basics-sol.ipynb>
     Stringhe <strings/strings-sol.ipynb>
     Liste <lists/lists-sol.ipynb>
     Tuple <tuples/tuples-sol.ipynb>    
     Dizionari <dictionaries/dictionaries-sol.ipynb>
+    Funzioni <functions/functions-sol.ipynb>        
+    Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
     Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    
     Matrici Numpy <matrices-numpy/matrices-numpy-sol.ipynb>
     commandments.ipynb
+        
+
+Analisi dati
+=======================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+
+    Formati dati <formats/formats-sol.ipynb>
+    Visualizzazione <visualization/visualization-sol.ipynb>
+    Ricerca <search/regex-sol.ipynb>
+    Integrazione <integration/integration-sol.ipynb>
+    Estrazione <extraction/extraction-sol.ipynb>
+    Pandas <pandas/pandas-sol.ipynb>
+    Information retrieval <information-retrieval/information-retrieval-sol.ipynb>    
+    Computer vision <computer-vision/computer-vision-sol.ipynb>
+    
+Applicazioni
+========================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    Interfacce utente <gui/gui-sol.ipynb>    
+    Database <database/database-sol.ipynb>
+    Web development <web/web-sol.ipynb>
+    
+Progetti
+======================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    project-howto.ipynb
+    project/markdown.ipynb
+    challenges.ipynb    
+    project-ideas.ipynb    
+    
+|space|
+==========
+
+.. |space| unicode:: U+0020 .. space
+
 
 Indice
 ==========
