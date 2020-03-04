@@ -14,7 +14,7 @@ Fondamenti
     :maxdepth: 2
     :glob:
 
-    Introduzione rapida <intro/quick-intro-sol.ipynb>    
+    Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
     Basi <basics/basics-sol.ipynb>
     Stringhe <strings/strings-sol.ipynb>
     Liste <lists/lists-sol.ipynb>
