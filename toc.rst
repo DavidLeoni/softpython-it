@@ -4,7 +4,6 @@
 
     Home <index.ipynb>
     overview.ipynb
-    thanks.ipynb
     installation.ipynb    
     
 Fondamenti
