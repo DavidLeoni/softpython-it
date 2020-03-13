@@ -124,3 +124,11 @@
         text-decoration: underline;
         cursor: pointer;
     }
+
+
+    /* Fixing menu clicks for https://github.com/DavidLeoni/jupman/issues/38    */    
+
+    li.toctree-l1 > a > .toctree-expand {
+        color: white !important;
+    }
+

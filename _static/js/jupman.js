@@ -228,7 +228,36 @@ var jupman = {
     */
     initReadTheDocs : function(){  
         
-        console.log("Finished initializing jupman.js in ReadTheDocs")        
+        console.log("initializing jupman.js in ReadTheDocs ...")
+        
+        console.log("Fixing menu clicks for https://github.com/DavidLeoni/jupman/issues/38")
+
+        // function copied as is from
+        // https://github.com/readthedocs/sphinx_rtd_theme/blob/master/src/theme.js#L190
+        var toggleCurrent = function (elem) {
+            var parent_li = elem.closest('li');
+            parent_li.siblings('li.current').removeClass('current');
+            parent_li.siblings().find('li.current').removeClass('current');
+            parent_li.find('> ul li.current').removeClass('current');
+            parent_li.toggleClass('current');
+        }        
+
+        // DIRTY: THIS IS A POTENTIAL BUG: IF 'index' is not the last one it won't be selected !
+        //        Made so because index may be translated in other languages   
+        
+        var link = $('a.reference.internal[href^="toc.html"]').not(":last")
+        
+        var span = $('a.reference.internal[href^="toc.html"] > span');
+        span.off('click')
+
+        link.on('click', function (ev) {
+            ev.preventDefault();
+            toggleCurrent($(this));
+            ev.stopPropagation();
+            return false;
+        });
+
+        console.log("Finished initializing jupman.js in ReadTheDocs")     
     },
     
     /**

@@ -194,14 +194,18 @@ todo_include_todos = True
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    # fix for https://github.com/DavidLeoni/jupman/issues/38
+    'collapse_navigation': False,
+}
 
+# NOTE: in order to have complete collapsible menu, 
+#       IT IS *FUNDAMENTAL* FOR html_theme to be defined
+#       see https://github.com/DavidLeoni/jupman/issues/38
+html_theme = 'sphinx_rtd_theme'    
 if not on_rtd:
-
-
     import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]    
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]  
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -209,6 +213,14 @@ if not on_rtd:
 
 html_static_path = ['_static/'] 
 #html_extra_path = [] 
+
+html_js_files = [
+    'js/jupman.js',
+]
+
+html_css_files = [
+    'css/jupman.css',
+]
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -402,8 +414,6 @@ def setup(app):
                                     'enable_eval_rst':True
                                 }, True)
         app.add_transform(AutoStructify)
-        app.add_javascript('_static/js/jupman.js')
-        app.add_stylesheet('_static/css/jupman.css')
         for folder in jm.get_exercise_folders():
             jm.zip_folder(folder)
         jm.zip_folders('exams/*/solutions', 
