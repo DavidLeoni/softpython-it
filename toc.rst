@@ -66,8 +66,8 @@ D - Progetti
     :glob:
 
     project-howto.ipynb
-    project/markdown.ipynb
-    Progetto - Template <project/project.ipynb>
+    Template progetto <project/project.ipynb>
+    project/markdown.ipynb    
     project-ideas.ipynb    
     challenges.ipynb    
     
