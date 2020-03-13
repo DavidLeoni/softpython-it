@@ -6,7 +6,7 @@
     overview.ipynb
     installation.ipynb    
     
-Fondamenti
+A - Fondamenti
 =======================
 
 .. toctree::
@@ -15,8 +15,10 @@ Fondamenti
 
     Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
     Basi <basics/basics-sol.ipynb>
-    Stringhe <strings/strings-sol.ipynb>
-    Liste <lists/lists-sol.ipynb>
+    Stringhe 1 <strings/strings1-sol.ipynb>
+    Stringhe 2 <strings/strings2-sol.ipynb>
+    Liste 1<lists/lists1-sol.ipynb>
+    Liste 2<lists/lists2-sol.ipynb>
     Tuple <tuples/tuples-sol.ipynb>    
     Dizionari <dictionaries/dictionaries-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
@@ -26,7 +28,7 @@ Fondamenti
     commandments.ipynb
         
 
-Analisi dati
+B - Analisi dati
 =======================
 
 .. toctree::
@@ -43,7 +45,7 @@ Analisi dati
     Information retrieval <information-retrieval/information-retrieval-sol.ipynb>    
     Computer vision <computer-vision/computer-vision-sol.ipynb>
     
-Applicazioni
+C - Applicazioni
 ========================
 
 .. toctree::
@@ -51,10 +53,12 @@ Applicazioni
     :glob:
 
     Interfacce utente <gui/gui-sol.ipynb>    
+    Interfacce utente - Mappe <gui/gui-maps-sol.ipynb>    
+    Interfacce utente - Esempio webapp <gui/my-webapp.ipynb>    
     Database <database/database-sol.ipynb>
     Web development <web/web-sol.ipynb>
     
-Progetti
+D - Progetti
 ======================
 
 .. toctree::
@@ -63,8 +67,9 @@ Progetti
 
     project-howto.ipynb
     project/markdown.ipynb
-    challenges.ipynb    
+    Progetto - Template <project/project.ipynb>
     project-ideas.ipynb    
+    challenges.ipynb    
     
 |space|
 ==========
