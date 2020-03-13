@@ -242,20 +242,30 @@ var jupman = {
             parent_li.toggleClass('current');
         }        
 
-        // DIRTY: THIS IS A POTENTIAL BUG: IF 'index' is not the last one it won't be selected !
-        //        Made so because index may be translated in other languages   
         
-        var link = $('a.reference.internal[href^="toc.html"]').not(":last")
-        
-        var span = $('a.reference.internal[href^="toc.html"] > span');
-        span.off('click')
+        var fix = function(prefix){
 
-        link.on('click', function (ev) {
-            ev.preventDefault();
-            toggleCurrent($(this));
-            ev.stopPropagation();
-            return false;
-        });
+            s = 'a.reference.internal[href^="' + prefix + 'toc.html"]'
+
+            // DIRTY: THIS IS A POTENTIAL BUG: IF 'index' is not the last one it won't be selected !
+           //  Made so because index may be translated in other languages   
+
+            var link = $(s).not(":last")
+            var span = $(s + ' > span');
+            span.off('click')
+
+            link.on('click', function (ev) {
+                ev.preventDefault();
+                toggleCurrent($(this));
+                ev.stopPropagation();
+                return false;
+            });
+        }
+
+        fix('')
+        fix('../')
+        fix('../../')    // probably useless but just in case ...
+        fix('../../../') // probably useless but just in case ... 
 
         console.log("Finished initializing jupman.js in ReadTheDocs")     
     },
