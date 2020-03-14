@@ -214,12 +214,14 @@ if not on_rtd:
 html_static_path = ['_static/'] 
 #html_extra_path = [] 
 
+
 html_js_files = [
-    'js/jupman.js',
+    'js/jupman.js',  # shared among jupyter and ReadTheDocs
 ]
 
 html_css_files = [
-    'css/jupman.css',
+    'css/jupman.css',      # shared among jupyter and ReadTheDocs
+    'css/jupman-rtd.css',  # only for ReadTheDocs
 ]
 
 

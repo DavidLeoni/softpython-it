@@ -1,0 +1,24 @@
+
+
+/* Fixing menu clicks for https://github.com/DavidLeoni/jupman/issues/38    */    
+
+li.toctree-l1 > a > .toctree-expand {
+    color: white !important;
+}
+
+
+
+/* What follows is optional eye-candy */
+.wy-nav-content {
+    background: #f9f8f3;
+ }
+
+
+ .wy-side-nav-search, .wy-nav-top {
+   background-color: #3a968f;
+ }
+
+
+ .wy-nav-side {
+   background-color: #343d2d 
+ }

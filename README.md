@@ -5,7 +5,7 @@ Esercizi Python 3 in formato Jupyter notebook
 
 **Studenti: qua su Github ci sono solo i file sorgenti, il sito ufficiale del libro è su http://softpython.readthedocs.io**
 
-**Docenti**:  Tutte le pagine del sito sono fogli Jupyter convertiti in pagine web tramite [NBSphinx](https://nbsphinx.readthedocs.io), usando il template [Jupman](https://github.com/DavidLeoni/jupman). Per sapere come effettuare build e modifiche al manuale, vedere la guida di [Jupman](http://jupman.readthedocs.io)
+**Docenti**:  Tutte le pagine del sito sono fogli Jupyter convertiti in pagine web tramite [NBSphinx](https://nbsphinx.readthedocs.io), usando il template [Jupman](https://github.com/DavidLeoni/jupman). Per sapere come effettuare build e modifiche al manuale, vedere [la guida di Jupman](https://jupman.readthedocs.io/en/latest/usage.html)
 
 
 ## Licenza
