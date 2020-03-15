@@ -7,7 +7,7 @@ import shutil
 import inspect
 import types
 import glob
-import datetime    
+import datetime   
 
 def fatal(msg, ex=None):
     """ Prints error and exits (halts program execution immediatly)
@@ -218,6 +218,9 @@ def check_paths(path, path_check):
 
 def uproot(path):
     """ Returns a relative path from input path to root.
+        
+        NOTE: IT IS SUPPOSED TO BE RUN FROM A PYTHON FILE RESIDING *AT ROOT LEVEL*
+
         Example:
         >>> uproot('_static/img/cc-by.png')
         >>>  '../../'
@@ -376,11 +379,13 @@ class Jupman:
             AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
             (like i.e. jupman.readthedocs.org) """
 
-        self.chapter_common_files = ['jupman.py', 'my_lib.py', '_static/img/cc-by.png', 
+        self.chapter_files = ['jupman.py', 'my_lib.py', '_static/img/cc-by.png', 
                                 
                             '_static/js/jupman.js',  # these files are injected when you call jupman.init()
                             '_static/css/jupman.css', 
-                            '_static/js/toc.js']
+                            '_static/js/toc.js',
+                            
+                            '_static/js/pytutor-embed.bundle.min.js.zip' ]
         """ Common files for exercise and exams as paths. Paths are intended relative to the project root. Globs like /**/* are allowed."""
 
         self.chapters =  ['*/']
@@ -734,7 +739,7 @@ class Jupman:
 
         deglobbed_common_files = []
         deglobbed_common_files_patterns = []
-        for common_path in self.chapter_common_files:                
+        for common_path in self.chapter_files:                
             cur_deglobbed = glob.glob(common_path, recursive=True)       
             deglobbed_common_files.extend(cur_deglobbed)
             deglobbed_common_files_patterns.extend(

@@ -38,7 +38,9 @@ jm.chapter_files = ['jupman.py', 'img/cc-by.png',
                          
                     '_static/js/jupman.js',  # these files are injected when you call jupman.init()
                     '_static/css/jupman.css', 
-                    '_static/js/toc.js']
+                    '_static/js/toc.js',
+                    
+                    '_static/js/pytutor-embed.bundle.min.js.zip',]
 
 jm.chapter_patterns =  ['*/']
 jm.chapter_exclude_patterns =  ['[^_]*/','^exams/', '^project/', '^challenges/']

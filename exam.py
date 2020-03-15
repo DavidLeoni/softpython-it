@@ -179,7 +179,7 @@ def package(parser,context,args):
             return '/%s/%s' % (jm.get_exam_student_folder(ld), fname)
             
     
-    jm.zip_paths([target_student] + jm.chapter_common_files,
+    jm.zip_paths([target_student] + jm.chapter_files,
                   target_student_zip,  
                   mysub)
     #shutil.make_archive(target_student_zip, 'zip', target_student_zip)

@@ -22,3 +22,10 @@ li.toctree-l1 > a > .toctree-expand {
  .wy-nav-side {
    background-color: #343d2d 
  }
+
+
+/* Fixes Python tutor overflow  https://github.com/DavidLeoni/jupman/issues/25
+*/
+div.nbinput.container div.input_area, div.nboutput.container div.output_area  {
+    overflow:visible !important
+}

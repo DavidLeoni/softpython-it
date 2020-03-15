@@ -1,0 +1,29 @@
+{
+    "code": "x=3",
+    "trace": [
+        {
+            "line": 1,
+            "ordered_globals": [],
+            "func_name": "<module>",
+            "stdout": "",
+            "stack_to_render": [],
+            "globals": {},
+            "event": "step_line",
+            "heap": {}
+        },
+        {
+            "line": 1,
+            "ordered_globals": [
+                "x"
+            ],
+            "func_name": "<module>",
+            "stdout": "",
+            "stack_to_render": [],
+            "globals": {
+                "x": 3
+            },
+            "event": "return",
+            "heap": {}
+        }
+    ]
+}
