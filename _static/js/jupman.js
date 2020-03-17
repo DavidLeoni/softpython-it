@@ -267,6 +267,16 @@ var jupman = {
         fix('../../')    // probably useless but just in case ...
         fix('../../../') // probably useless but just in case ... 
 
+        console.log("Fixing Python Tutor overflow ...");
+
+        // need it in js as there are no css parent selectors.
+        // NOTE: these selectors are different from Jupyter ones !!!
+        var pytuts = $('.pytutorVisualizer')        
+        pytuts.closest('div.output_area.rendered_html.docutils.container')
+              .css('overflow', 'visible')
+
+
+
         console.log("Finished initializing jupman.js in ReadTheDocs")     
     },
     

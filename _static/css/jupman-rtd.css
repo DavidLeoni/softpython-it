@@ -23,9 +23,15 @@ li.toctree-l1 > a > .toctree-expand {
    background-color: #343d2d 
  }
 
-
-/* Fixes Python tutor overflow  https://github.com/DavidLeoni/jupman/issues/25
-*/
-div.nbinput.container div.input_area, div.nboutput.container div.output_area  {
+/* Fixes for https://github.com/DavidLeoni/jupman/issues/17 */
+ 
+/* Fixes code overflow */
+div.input_area  {
     overflow:visible !important
+}
+
+/* Fixes too much output  */
+div.output_area.docutils.container:not(.rendered_html){ 
+    
+    max-height:600px !important;
 }

@@ -2668,10 +2668,12 @@ def pytut():
                     .vizLayoutTd {
                         background-color: #fff !important;
                     }
-                    
-                    div.output_subarea.output_html.rendered_html.output_result {
-                        overflow-x:visible !important
+
+                    /* 'Edit this code' link, hiding because replaces browser tab !!!*/
+                    #editCodeLinkDiv {
+                        display:none;  
                     }
+                    
                     </style>   
     """
     inject +=   """                        
@@ -2681,10 +2683,7 @@ def pytut():
                     var trace = JSON.parse(document.getElementById('%s').innerHTML);
                     // NOTE: id without #
                     addVisualizerToPage(trace, '%s',{'embeddedMode' : false})  
-                    
-                    // reset all overflow
-                    $('div.output_html.rendered_html').css('overflow-x', 'auto')  
-                    
+                                        
                     // set overflow for pytuts
                     var pytuts = $('.pytutorVisualizer')
                     pytuts.closest('div.output_html.rendered_html.output_result')
