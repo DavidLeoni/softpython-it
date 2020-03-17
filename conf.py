@@ -38,7 +38,7 @@ SYSTEMS = {
     "default" : {
         "name" : "Default system",
         "outdir":"_build/",
-        "exclude_patterns": ["_build/*", "jm-templates/exam/server/*", "private/*",  '**.ipynb_checkpoints']
+        "exclude_patterns": ["_build/*", "jm-templates/exam/server/*", "private/*",  '**.ipynb_checkpoints', 'exercises/interactive/esempi-bqplot']
     }
 }
 MANUALS = {
