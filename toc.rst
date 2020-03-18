@@ -15,9 +15,10 @@ A - Fondamenti
 
     Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
     Basi <basics/basics-sol.ipynb>
-    Stringhe 1 <strings/strings1-sol.ipynb>
-    Stringhe 2 <strings/strings2-sol.ipynb>
-    Stringhe 3 <strings/strings3-sol.ipynb>
+    Stringhe 1: introduzione <strings/strings1-sol.ipynb>
+    Stringhe 2: operatori <strings/strings2-sol.ipynb>
+    Stringhe 3: metodi <strings/strings3-sol.ipynb>
+    Stringhe 4: altri esercizi <strings/strings3-sol.ipynb>
     Liste 1<lists/lists1-sol.ipynb>
     Liste 2<lists/lists2-sol.ipynb>
     Tuple <tuples/tuples-sol.ipynb>    
