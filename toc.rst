@@ -19,8 +19,10 @@ A - Fondamenti
     Stringhe 2: operatori <strings/strings2-sol.ipynb>
     Stringhe 3: metodi <strings/strings3-sol.ipynb>
     Stringhe 4: altri esercizi <strings/strings4-sol.ipynb>
-    Liste 1<lists/lists1-sol.ipynb>
-    Liste 2<lists/lists2-sol.ipynb>
+    Liste 1: introduzione <lists/lists1-sol.ipynb>
+    Liste 2: operatori <lists/lists2-sol.ipynb>
+    Liste 3: metodi <lists/lists3-sol.ipynb>
+    Liste 4: altri esercizi <lists/lists4-sol.ipynb>    
     Tuple <tuples/tuples-sol.ipynb>    
     Dizionari <dictionaries/dictionaries-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
