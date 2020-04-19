@@ -24,6 +24,7 @@ A - Fondamenti
     Liste 3: metodi <lists/lists3-sol.ipynb>
     Liste 4: altri esercizi <lists/lists4-sol.ipynb>    
     Tuple <tuples/tuples-sol.ipynb>    
+    Insiemi <sets/sets-sol.ipynb>    
     Dizionari <dictionaries/dictionaries-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
     Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
