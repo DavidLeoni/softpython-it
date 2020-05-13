@@ -22,10 +22,14 @@ A - Fondamenti
     Liste 1: introduzione <lists/lists1-sol.ipynb>
     Liste 2: operatori <lists/lists2-sol.ipynb>
     Liste 3: metodi <lists/lists3-sol.ipynb>
-    Liste 4: altri esercizi <lists/lists4-sol.ipynb>    
+    Liste 4: iterazione e funzioni <lists/lists4-sol.ipynb>    
     Tuple <tuples/tuples-sol.ipynb>    
     Insiemi <sets/sets-sol.ipynb>    
-    Dizionari <dictionaries/dictionaries-sol.ipynb>
+    Dizionari 1: creazione <dictionaries/dictionaries1-sol.ipynb>
+    Dizionari 2: operatori <dictionaries/dictionaries2-sol.ipynb>
+    Dizionari 3: metodi <dictionaries/dictionaries3-sol.ipynb>
+    Dizionari 4: iterazione e funzioni <dictionaries/dictionaries4-sol.ipynb>
+    Dizionari 5: strutture composte <dictionaries/dictionaries5-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
     Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
     Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    

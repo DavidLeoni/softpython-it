@@ -2671,7 +2671,7 @@ def pytut():
             background-color: #fff !important;
         }
 
-        #pyStdout {
+        #pyStdout {            
             min-height:25px;
         }
 
