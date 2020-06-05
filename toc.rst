@@ -30,6 +30,10 @@ A - Fondamenti
     Dizionari 3: metodi <dictionaries/dictionaries3-sol.ipynb>
     Dizionari 4: iterazione e funzioni <dictionaries/dictionaries4-sol.ipynb>
     Dizionari 5: strutture composte <dictionaries/dictionaries5-sol.ipynb>
+    Controllo di flusso 1: if <control-flow/flow1-if-sol.ipynb>
+    Controllo di flusso 2: for <control-flow/flow2-for-sol.ipynb>
+    Controllo di flusso 3: while <control-flow/flow3-while-sol.ipynb>
+    Sequenze e comprehensions<sequences/sequences-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
     Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
     Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    
