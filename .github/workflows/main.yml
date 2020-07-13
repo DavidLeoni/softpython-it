@@ -1,0 +1,63 @@
+on: [push]
+
+jobs:
+  build_docs_job:
+    if: (github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/dev')
+    runs-on: ubuntu-latest
+    name: Build docs    
+    steps:   
+    - name: Install deps
+      run: |
+        sudo apt-get install tree
+    - name: sets environment 
+      run: |        
+        echo "::set-env name=GIT_TAG::${GITHUB_REF##*/}"
+        echo "::set-env name=VERSION::${GITHUB_REF##*/}"
+        echo "::set-env name=LANGUAGE::en"        
+    - name: apply docs version renaming
+      if: env.GIT_TAG == 'master'
+      run: echo "::set-env name=VERSION::latest"
+    - name: sets WEB_PATH
+      run: echo "::set-env name=WEB_PATH::"
+    - name: Run Sphinx in RTD docker      
+      uses: DavidLeoni/readthedocs-to-actions@1.0
+      with:
+        RTD_PRJ_NAME: softpython-it
+        GIT_URL: https://github.com/${{ github.repository }}.git
+        GIT_TAG: ${{ env.GIT_TAG }}
+        VERSION: ${{ env.VERSION }}
+        REQUIREMENTS: requirements-build.txt
+        LANGUAGE: ${{ env.LANGUAGE }}
+        RTD_HTML_SINGLE: false
+        RTD_HTML_EXT: false      
+        GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
+    - name: Show workspace output
+      run: |        
+        tree -aC $GITHUB_WORKSPACE
+    - name: Commit documentation changes
+      run: |
+        git clone https://github.com/${{ github.repository }}.git --depth 1 --branch it.softpython.org --single-branch it.softpython.org
+        
+        mkdir -p it.softpython.org/${{ env.WEB_PATH }}
+        cp -r $GITHUB_WORKSPACE/html/* it.softpython.org/${{ env.WEB_PATH }}
+        cp -r $GITHUB_WORKSPACE/epub/*.epub it.softpython.org/${{ env.WEB_PATH }}
+        cp -r $GITHUB_WORKSPACE/latex/*.pdf it.softpython.org/${{ env.WEB_PATH }}
+        # note: html zip is already provided by Github
+        cd it.softpython.org        
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .      
+        touch .nojekyll
+        git add .nojekyll  # explicit, otherwise is ignored
+        git commit -m "Update documentation" -a || true
+        # The above command will fail if no changes were present, so we ignore
+        # the return code.
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: it.softpython.org
+        directory: it.softpython.org
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: update server
+      run: |
+        curl --silent --digest --user ${{ secrets.DAVAPI_CREDENTIALS}} ${{ secrets.DAVAPI_URL }}    

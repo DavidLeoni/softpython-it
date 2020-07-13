@@ -80,3 +80,5 @@ local.properties
 # PDT-specific
 .buildpath
 
+##### KATE
+.kate-swp

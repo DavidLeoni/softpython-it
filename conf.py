@@ -30,7 +30,7 @@ copyright = '# CC-BY 2017 - %s, %s' % (datetime.datetime.now().year, author)
 #####     AND IT SHOULD ALSO BE THE SAME NAME ON READTHEDOCS 
 #####     (like i.e. jupman.readthedocs.org)
 
-jm.filename = 'softpython'   # The filename without the extension
+jm.filename = 'softpython-it'   # The filename without the extension
 
 # common files for exercise and exams as paths. Paths are intended relative to the project root. Globs like /**/* are allowed.
 
@@ -186,7 +186,7 @@ language = None
 html_title = project # + ' version ' + release
 # canonical url for documentation
 # since sphinx 1.8
-html_baseurl = 'https://softpython.readthedocs.io'
+html_baseurl = 'https://it.softpython.org'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -252,6 +252,8 @@ html_additional_pages = {
     'google3dea3b29336ca0e5': 'google3dea3b29336ca0e5.html',
 }
 
+#'sphinxcontrib.googleanalytics'
+googleanalytics_id = os.environ.get('GOOGLE_ANALYTICS')
 
 
 latex_engine='xelatex'
@@ -413,30 +415,38 @@ pdf_use_numbered_links = False
 pdf_fit_background_mode = 'scale'
 
 def setup(app):    
+    
+    if 'googleanalytics_id' in globals() and globals()['googleanalytics_id']:
+        print("Found googleanalytics_id")
+        import googleanalytics
+        googleanalytics.setup(app)
+    else:
+        print('No valid googleanalytics_id was found, skipping it')
+    
 
-        app.add_config_value(   'recommonmark_config', {
-                                    'auto_toc_tree_section': 'Contents',
-                                    'enable_eval_rst':True
-                                }, True)
-        app.add_transform(AutoStructify)
-        for folder in jm.get_exercise_folders():
-            jm.zip_folder(folder)
-        jm.zip_folders('exams/*/solutions', 
-                        lambda x:  '%s-%s-exam' % (jm.filename, x.split('/')[-2]))
-        jm.zip_folders('challenges/*/', renamer = lambda x: '%s-challenge' % x.split('/')[1])
-        jm.zip_paths(['project'], '_static/generated/project-template')
+    app.add_config_value(   'recommonmark_config', {
+                                'auto_toc_tree_section': 'Contents',
+                                'enable_eval_rst':True
+                            }, True)
+    app.add_transform(AutoStructify)
+    for folder in jm.get_exercise_folders():
+        jm.zip_folder(folder)
+    jm.zip_folders('exams/*/solutions', 
+                    lambda x:  '%s-%s-exam' % (jm.filename, x.split('/')[-2]))
+    jm.zip_folders('challenges/*/', renamer = lambda x: '%s-challenge' % x.split('/')[1])
+    jm.zip_paths(['project'], '_static/generated/project-template')
 
-        def sub(x):
-            if x == 'requirements.txt':
-                return 'NAME-SURNAME-ID/requirements.txt'
-            elif x.startswith('project/'):
-                return 'NAME-SURNAME-ID/%s' % x[len('project/'):]
-            else:
-                return x
+    def sub(x):
+        if x == 'requirements.txt':
+            return 'NAME-SURNAME-ID/requirements.txt'
+        elif x.startswith('project/'):
+            return 'NAME-SURNAME-ID/%s' % x[len('project/'):]
+        else:
+            return x
 
-        jm.zip_paths(['project', 'requirements.txt'], 
-                     '_static/generated/project-template',
-                     patterns = sub)
+    jm.zip_paths(['project', 'requirements.txt'], 
+                    '_static/generated/project-template',
+                    patterns = sub)
 
         
 
