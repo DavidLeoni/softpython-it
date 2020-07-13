@@ -35,3 +35,8 @@ div.output_area.docutils.container:not(.rendered_html){
     
     max-height:600px !important;
 }
+
+#jupman-langs {
+    float : right;
+    padding-right : 8px;
+}

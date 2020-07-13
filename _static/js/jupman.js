@@ -113,7 +113,7 @@ var jupman = {
     },
     
     /**
-     *  Code common to both jupman in jupyter and ReadTheDocs
+     *  Code common to both jupman in jupyter and Website
     */
     initCommon : function(){
         
@@ -143,7 +143,7 @@ var jupman = {
     },
 
     /**
-     *   Jupyter only instructions - doesn't run on ReadTheDocs
+     *   Jupyter only instructions - doesn't run on website
      */
     initJupyter : function(){
         
@@ -224,11 +224,11 @@ var jupman = {
     },
     
     /**
-    * RTD only instructions
+    * Website only instructions
     */
-    initReadTheDocs : function(){  
+    initWebsite : function(){  
         
-        console.log("initializing jupman.js in ReadTheDocs ...")
+        console.log("initializing jupman.js in Website ...")
         
         console.log("Fixing menu clicks for https://github.com/DavidLeoni/jupman/issues/38")
 
@@ -274,10 +274,58 @@ var jupman = {
         var pytuts = $('.pytutorVisualizer')        
         pytuts.closest('div.output_area.rendered_html.docutils.container')
               .css('overflow', 'visible')
+        
+        jupman.initWebsiteLangs();
 
-
-
-        console.log("Finished initializing jupman.js in ReadTheDocs")     
+        console.log("Finished initializing jupman.js in website")
+    },
+    
+    /** Displays flags on SoftPython website
+     * 
+     */
+    initWebsiteLangs : function(){
+        if (!window.JUPMAN_LANG){
+            console.log("No JUPMAN_LANG defined, skipping initWebsiteLangs");
+            return;
+        }
+        var page = window.location.pathname;
+        if (window.location.protocol =='file:'){
+            var prefix_pos = page.indexOf('_build/html/');
+            if (prefix_pos != -1){
+                page = page.slice(prefix_pos + '_build/html/'.length);
+            }
+        } 
+        xhr.open("GET", "https://en.softpython.org/cgi-bin/lang.php?page="+page, true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    var trans = JSON.parse(xhr.responseText);
+                    var the_div = document.getElementById("jupman-langs");
+                    the_div.textContent = '';
+                    for (var lang in trans) {
+                        if (lang != JUPMAN_LANG){                        
+                            var link_node = document.createElement("A");
+                            link_node.setAttribute('href',trans[lang]);
+                            link_node.setAttribute('title','Switch language to ' + lang.toUpperCase());
+                            var img_node = document.createElement('IMG');
+                            img_node.setAttribute('src','_static/img/flags/flat/32/'+lang+'.png');
+                            img_node.setAttribute('alt',lang.toUpperCase());
+                            link_node.appendChild(img_node);
+                            the_div.appendChild(link_node);
+                        }
+                    }
+                } else {
+                    console.error(xhr.statusText);
+                    console.log(xhr.responseText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+            console.log(xhr.responseText);
+        };
+        xhr.send(null);           
     },
     
     /**
@@ -288,7 +336,7 @@ var jupman = {
        jupman.initCommon();
         
        if (typeof JUPMAN_IN_JUPYTER === "undefined" || !JUPMAN_IN_JUPYTER ){            
-           jupman.initReadTheDocs();
+           jupman.initWebsite();
        } else {
            jupman.initJupyter();
        }
