@@ -29,7 +29,7 @@ def init(toc=False):
     """ Injects notebooks with js and css from _static
     
         To be called at the beginning of notebooks, only if you *really* need it.
-        Please do read https://jupman.readthedocs.io/en/latest/usage.html#Running-Jupyter
+        Please do read https://jupman.softpython.org/en/latest/usage.html#Running-Jupyter
                    
         NOTE: on error doesn't raise exception and just prints error message
                
