@@ -1897,13 +1897,13 @@ ad uno già cercato.</p>
 <div class="section" id="Costruiamo-il-nostro-motore-di-ricerca">
 <h2>Costruiamo il nostro motore di ricerca<a class="headerlink" href="#Costruiamo-il-nostro-motore-di-ricerca" title="Permalink to this headline">¶</a></h2>
 <p>Consideriamo in particolare il problema che risolvoloi motori di ricerca come Google.</p>
-<p>Supponiamo di avere tante pagine web (tutto il web !): per ogni pagina abbiamo l’indirizzo della pagina (come <a class="reference external" href="http://softpython.readthedocs.org">http://softpython.readthedocs.org</a> ) e il testo che contiene in formato HTML, per esempio:</p>
+<p>Supponiamo di avere tante pagine web (tutto il web !): per ogni pagina abbiamo l’indirizzo della pagina (come <a class="reference external" href="http://it.softpython.org">http://it.softpython.org</a> ) e il testo che contiene in formato HTML, per esempio:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Presentazione<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Se hai guardato il tutorial sull’<a class="reference external" href="https://softpython.readthedocs.io/it/latest/extraction/extraction-sol.html">estrazione dati</a> dovresti già avere un’idea di cosa è l’HTML. Se non l’hai fatto niente paura: puoi tranquillamente ignorare le strane sequenze racchiuse tra minore e maggiore come <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>, tieni solo presente che si chiamano <em>tag HTML</em>. Parlando in genere, le useremo come esempio del fatto che quando si cerca dentro del testo si possono trovare cose strane o indesiderate, e un
-sistema di ricerca fatto bene deve essere pronto alle sorprese.</p>
+<p>Se hai guardato il tutorial sull’<a class="reference external" href="https://it.softpython.org/extraction/extraction-sol.html">estrazione dati</a> dovresti già avere un’idea di cosa è l’HTML. Se non l’hai fatto niente paura: puoi tranquillamente ignorare le strane sequenze racchiuse tra minore e maggiore come <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>, tieni solo presente che si chiamano <em>tag HTML</em>. Parlando in genere, le useremo come esempio del fatto che quando si cerca dentro del testo si possono trovare cose strane o indesiderate, e un sistema di ricerca
+fatto bene deve essere pronto alle sorprese.</p>
 <p>L’utente vuole trovare tutte le pagine contenti un certo testo, per esempio sul sito di SoftPython potrebbe voler cercare dove ci sono spiegazioni su <code class="docutils literal notranslate"><span class="pre">grafici</span> <span class="pre">con</span> <span class="pre">matplotlib</span></code></p>
 <ul class="simple">
 <li><p>INPUT: stringa di ricerca (per es: <code class="docutils literal notranslate"><span class="pre">grafici</span> <span class="pre">con</span> <span class="pre">matplotlib</span></code></p></li>
@@ -1928,7 +1928,7 @@ sistema di ricerca fatto bene deve essere pronto alle sorprese.</p>
 <h4>Rappresentare una pagina<a class="headerlink" href="#Rappresentare-una-pagina" title="Permalink to this headline">¶</a></h4>
 <p>Cominciamo a rappresentare le pagine web. Per farlo, possiamo usare unsemplice dizionario con le chiavi <code class="docutils literal notranslate"><span class="pre">url</span></code> (l’indirizzo web) e <code class="docutils literal notranslate"><span class="pre">contenuto</span></code> per il testo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://softpython.readthedocs.org&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://it.softpython.org&#39;</span><span class="p">,</span>
     <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;</span>
 <span class="p">}</span>
 </pre></div>
@@ -1936,8 +1936,7 @@ sistema di ricerca fatto bene deve essere pronto alle sorprese.</p>
 </div>
 <div class="section" id="Un-database-per-le-pagine">
 <h4>Un database per le pagine<a class="headerlink" href="#Un-database-per-le-pagine" title="Permalink to this headline">¶</a></h4>
-<p>Il web ha tante pagine, quindi vorremo mettere la collezione di pagine in contenitore. Ai fini dell’esempio proviamo ad usare una lista. La popoleremo con due pagine, quella <a class="reference external" href="https://softpython.readthedocs.io">principale</a> e la pagina chiamata <a class="reference external" href="https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html">Visualizzazione</a>. Infine assegnamo la lista alla variabile <code class="docutils literal notranslate"><span class="pre">pagine</span></code> (ricordiamo che il testo che mettiamo è semplificato rispetto a quello effettivo che trovate sul
-sito)</p>
+<p>Il web ha tante pagine, quindi vorremo mettere la collezione di pagine in contenitore. Ai fini dell’esempio proviamo ad usare una lista. La popoleremo con due pagine, quella <a class="reference external" href="https://it.softpython.org">principale</a> e la pagina chiamata <a class="reference external" href="https://it.softpython.org/visualization/visualization-sol.html">Visualizzazione</a>. Infine assegnamo la lista alla variabile <code class="docutils literal notranslate"><span class="pre">pagine</span></code> (ricordiamo che il testo che mettiamo è semplificato rispetto a quello effettivo che trovate sul sito)</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -1945,11 +1944,11 @@ sito)</p>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">pagine</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://softpython.readthedocs.org&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://it.softpython.org&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://it.softpython.org/visualization/visualization-sol.html&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;</span>
             <span class="p">}</span>
         <span class="p">]</span>
@@ -1993,7 +1992,7 @@ sito)</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+[{&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2181,9 +2180,9 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;http://softpython.readthedocs.org&#39;,
+[{&#39;url&#39;: &#39;http://it.softpython.org&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;},
- {&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+ {&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2202,9 +2201,9 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;http://softpython.readthedocs.org&#39;,
+[{&#39;url&#39;: &#39;http://it.softpython.org&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;},
- {&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+ {&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2241,11 +2240,11 @@ True
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">pagine</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://softpython.readthedocs.org&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://it.softpython.org&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio diprogrammazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://it.softpython.org/visualization/visualization-sol.html&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;</span>
             <span class="p">}</span>
         <span class="p">]</span>
@@ -2268,9 +2267,9 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;http://softpython.readthedocs.org&#39;,
+[{&#39;url&#39;: &#39;http://it.softpython.org&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio diprogrammazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;},
- {&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+ {&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2347,7 +2346,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+[{&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2655,7 +2654,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+[{&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2674,7 +2673,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+[{&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>
@@ -2693,7 +2692,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;url&#39;: &#39;https://softpython.readthedocs.io/it/latest/visualization/visualization-sol.html&#39;,
+[{&#39;url&#39;: &#39;https://it.softpython.org/visualization/visualization-sol.html&#39;,
   &#39;contenuto&#39;: &#39;&lt;h2&gt;Visualizzazione&lt;/h2&gt; &lt;p&gt;Excel ci permette di creare molti tipi di visualizzazione ma a volte è limitato, perciò useremo Python facendo grafici in Matplotlib. Matplotlib è una libreria eccezionale che consente di creare qualunque visualizzazione desideriamo. Procediamo dunque a importare matplotlib in Python:&lt;/p&gt;&#39;}]
 </pre></div></div>
 </div>

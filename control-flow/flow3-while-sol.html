@@ -2297,7 +2297,7 @@ Ho contato fino a 1
 <ul class="simple">
 <li><p>se la lista è vuota, la media si suppone essere <code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></li>
 <li><p><strong>NON</strong> usare la funzione <code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
-<li><p>NON creare variabili che si chiamano <code class="docutils literal notranslate"><span class="pre">sum</span></code> (violerebbe il <a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#V-COMANDAMENTO">V Comandamento</a>: non ridifinerai mai funzioni di sistema)</p></li>
+<li><p>NON creare variabili che si chiamano <code class="docutils literal notranslate"><span class="pre">sum</span></code> (violerebbe il <a class="reference external" href="https://it.softpython.org/commandments.html#V-COMANDAMENTO">V Comandamento</a>: non ridifinerai mai funzioni di sistema)</p></li>
 </ul>
 <p>Esempio - data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
@@ -3393,7 +3393,7 @@ Carson ha trovato il tesoro a Tombstone !
 <h2>Modificare sequenze<a class="headerlink" href="#Modificare-sequenze" title="Permalink to this headline">¶</a></h2>
 <p>Nel foglio sui cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> abbiamo visto un importante avvertimento, che ripetiamo qua:</p>
 <div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza che stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
+<p class="admonition-title fa fa-exclamation-circle"><a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza che stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 <p>Abbandonarti in simil tentazioni <strong>produrrebbe comportamenti del tutto imprevedibili</strong> (conosci forse l’espressione volgare <em>tirare il tappeto da sotto i piedi</em>?)</p>
 <p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa un ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code> o effettua prima una copia della sequenza originale.</p>
 </div>
@@ -3401,7 +3401,7 @@ Carson ha trovato il tesoro a Tombstone !
 <div class="section" id="Stack---Pescare-da-mazzo-di-carte">
 <h3>Stack - Pescare da mazzo di carte<a class="headerlink" href="#Stack---Pescare-da-mazzo-di-carte" title="Permalink to this headline">¶</a></h3>
 <p>Supponiamo di avere un mazzo di carte che rappresentiamo come lista di stringhe e vogliamo pescare tutte le carte, leggendole una per una</p>
-<p>Possiamo scrivere un <code class="docutils literal notranslate"><span class="pre">while</span></code> che fintanto che il mazzo contiene carte, continua a togliere la carte in cima con il <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists3-sol.html#Metodo-pop">metodo pop</a> e ne stampa il nome. Ricordati che <code class="docutils literal notranslate"><span class="pre">pop</span></code> MODIFICA la lista rimuovendo l’ultimo elemento E restituisce l’elemento come risultato della chiamata, che possiamo quindi salvare in una variabile che in questo caso chiameremo <code class="docutils literal notranslate"><span class="pre">carta</span></code>:</p>
+<p>Possiamo scrivere un <code class="docutils literal notranslate"><span class="pre">while</span></code> che fintanto che il mazzo contiene carte, continua a togliere la carte in cima con il <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-pop">metodo pop</a> e ne stampa il nome. Ricordati che <code class="docutils literal notranslate"><span class="pre">pop</span></code> MODIFICA la lista rimuovendo l’ultimo elemento E restituisce l’elemento come risultato della chiamata, che possiamo quindi salvare in una variabile che in questo caso chiameremo <code class="docutils literal notranslate"><span class="pre">carta</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
@@ -3986,7 +3986,7 @@ BANG! a sinistra:  cassa
 <li><p>se l’ultimo elemento è pari, toglie gli ultimi due elementi</p></li>
 <li><p><strong>NOTA 1</strong>: vogliamo proprio MODIFICARE la lista originale, NON vogliamo creare una nuova lista (quindi non vi saranno righe che iniziano con <code class="docutils literal notranslate"><span class="pre">la</span> <span class="pre">=</span></code></p></li>
 <li><p><strong>NOTA 2</strong>: quando vogliamo far sia crescere che decrescere la sequenza che stiamo considerando in un ciclo, dobbiamo convincerci per bene che prima o poi la condizione di terminazione si verifichi, è facile sbagliarsi e finire con un ciclo infinito !</p></li>
-<li><p><strong>SUGGERIMENTO</strong>: per far decrescere la lista, puoi usare il <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists3-sol.html#Metodo-pop">metodo pop</a></p></li>
+<li><p><strong>SUGGERIMENTO</strong>: per far decrescere la lista, puoi usare il <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-pop">metodo pop</a></p></li>
 </ul>
 <p>Esempio - data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>

@@ -2017,7 +2017,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="iterabili---range">
 <h2>iterabili - range<a class="headerlink" href="#iterabili---range" title="Permalink to this headline">¶</a></h2>
 <p>Abbiamo provato ad iterare su una lista, che è una sequenza completamente materializzata in memoria su cui scorriamo con l’oggetto iteratore. Esistono anche sequenze particolari che <em>non</em> sono materializzate in memoria, come per esempio <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-<p>Precedentemente abbiamo usato <code class="docutils literal notranslate"><span class="pre">range</span></code> <a class="reference external" href="https://softpython.readthedocs.io/it/latest/control-flow/flow2-for-sol.html#Contare-con-range">nei cicli for</a> for ottenere una sequenza di numeri, ma esattamente, che cosa fa la funzione <code class="docutils literal notranslate"><span class="pre">range</span></code>? Proviamo a chiamarla da sola:</p>
+<p>Precedentemente abbiamo usato <code class="docutils literal notranslate"><span class="pre">range</span></code> <a class="reference external" href="https://it.softpython.org/control-flow/flow2-for-sol.html#Contare-con-range">nei cicli for</a> for ottenere una sequenza di numeri, ma esattamente, che cosa fa la funzione <code class="docutils literal notranslate"><span class="pre">range</span></code>? Proviamo a chiamarla da sola:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -2185,8 +2185,8 @@ range(0, 4)
 </div>
 <div class="section" id="Materializzare-una-sequenza">
 <h2>Materializzare una sequenza<a class="headerlink" href="#Materializzare-una-sequenza" title="Permalink to this headline">¶</a></h2>
-<p>Abbiamo detto che un oggetto <code class="docutils literal notranslate"><span class="pre">range</span></code> non materializza fisicamente in memoria tutti i numeri contemporaneamente. Solo ottenendo l’iteratore, li materializziamo uno per uno. E volessimo una lista con tutti i numeri ? Nel foglio <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists1-sol.html#Convertire-sequenze-in-liste">sulle liste</a> abbiamo visto che passando alla funzione <code class="docutils literal notranslate"><span class="pre">list</span></code> una sequenza, viene creata una nuova lista che contiene tutti gli elementi della sequenza. Abbiamo parlato
-genericamente di <em>sequenza</em>, ma il termine più corretto sarebbe stato <em>iterabile</em>.</p>
+<p>Abbiamo detto che un oggetto <code class="docutils literal notranslate"><span class="pre">range</span></code> non materializza fisicamente in memoria tutti i numeri contemporaneamente. Solo ottenendo l’iteratore, li materializziamo uno per uno. E volessimo una lista con tutti i numeri ? Nel foglio <a class="reference external" href="https://it.softpython.org/lists/lists1-sol.html#Convertire-sequenze-in-liste">sulle liste</a> abbiamo visto che passando alla funzione <code class="docutils literal notranslate"><span class="pre">list</span></code> una sequenza, viene creata una nuova lista che contiene tutti gli elementi della sequenza. Abbiamo parlato genericamente di
+<em>sequenza</em>, ma il termine più corretto sarebbe stato <em>iterabile</em>.</p>
 <p>Se passiamo a <code class="docutils literal notranslate"><span class="pre">list</span></code> un qualunque oggetto <em>iterabile</em> allora verrà costruita la lista - come abbiamo visto <code class="docutils literal notranslate"><span class="pre">range</span></code> è iterabile quindi proviamo:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
@@ -2503,7 +2503,7 @@ genericamente di <em>sequenza</em>, ma il termine più corretto sarebbe stato <e
 </pre></div></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: la funzione <code class="docutils literal notranslate"><span class="pre">reversed</span></code> è diversa dal <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists3-sol.html#Metodo-reverse">metodo reverse</a></p>
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: la funzione <code class="docutils literal notranslate"><span class="pre">reversed</span></code> è diversa dal <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-reverse">metodo reverse</a></p>
 <p>Nota la <strong>d</strong> finale! Se provassiamo a chiamarla come un metodo otterremmo un errore:</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">la</span><span class="o">.</span><span class="n">reversed</span><span class="p">()</span>
@@ -2967,7 +2967,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </pre></div></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">sorted</span></code> è una <strong>funzione</strong> diversa dal <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists3-sol.html#Metodo-sort">metodo sort</a> !</p>
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">sorted</span></code> è una <strong>funzione</strong> diversa dal <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-sort">metodo sort</a> !</p>
 <p>Nota la <strong>ed</strong> finale! Se provassiamo a chiamarla come un metodo otterremmo un errore:</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">la</span><span class="o">.</span><span class="n">sorted</span><span class="p">()</span>

@@ -2074,7 +2074,7 @@ Finito!
 </pre></div></div>
 </div>
 <p>Bisogna però fare attenzione ad una cosa:</p>
-<div class="alert alert-warning"><p><a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
+<div class="alert alert-warning"><p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
 <p>Se hai definito la variabile prima, non la reintrodurrai in un <code class="docutils literal notranslate"><span class="pre">for</span></code>, perchè ciò portebbe gran confusione.</p>
 <p>Per esempio:</p>
 <div class="nbinput docutils container">
@@ -3583,7 +3583,7 @@ gruppo 3 : Eevee e Dragonite e Volcarona e Sylveon
 <p><strong>DOMANDA</strong>: Vedi forse un problema?</p>
 <p><strong>RISPOSTA</strong>: se <em>mentre</em> scorriamo la lista, continuiamo al contempo ad aggiungere pezzi, c’è il rischio concreto che non termineremo mai di esaminare la lista ! Leggi bene quanto segue:</p>
 <div class="admonition note">
-<p><a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza su cui stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza su cui stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 </div>
 <p>Abbandonarti in simil tentazioni <strong>produrrebbe comportamenti del tutto imprevedibili</strong> (conosci forse l’espressione <em>tirare il tappeto da sotto i piedi</em>?)</p>
 <p><strong>E rimuovere?</strong> Abbiamo visto che aggiungere è pericoloso, ma lo è anche togliere. Supponi di dover eliminare tutti gli elementi di una lista, potresti essere tentato di scrivere qualcosa del genere:</p>
@@ -3619,7 +3619,7 @@ gruppo 3 : Eevee e Dragonite e Volcarona e Sylveon
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">O_o'</span></code> Il risultato assurdo è legato all’implementazione interna di Python, la mia versione di Python dà questo risultato, la tua potrebbe darne uno completamente diverso. <strong>Quindi attenzione</strong> !</p>
-<p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa <a class="reference external" href="https://softpython.readthedocs.io/it/latest/control-flow/flow3-while-sol.html">un ciclo while</a> o effettua prima una copia della sequenza originale.</p>
+<p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa <a class="reference external" href="https://it.softpython.org/control-flow/flow3-while-sol.html">un ciclo while</a> o effettua prima una copia della sequenza originale.</p>
 <div class="section" id="Da-fare---duplica">
 <h3>Da fare - duplica<a class="headerlink" href="#Da-fare---duplica" title="Permalink to this headline">¶</a></h3>
 <p>✪ Prova a scrivere del codice che MODIFICA una lista <code class="docutils literal notranslate"><span class="pre">la</span></code> duplicandone gli elementi.</p>
@@ -3756,11 +3756,11 @@ gruppo 3 : Eevee e Dragonite e Volcarona e Sylveon
 <p>Si può risolvere il problema in due modi:</p>
 <ul class="simple">
 <li><p>Modo 1 (semplice e consigliabile): crea una lista <code class="docutils literal notranslate"><span class="pre">nuova_cesta</span></code> e infine la assegna alla variabile <code class="docutils literal notranslate"><span class="pre">cesta</span></code></p></li>
-<li><p>Modo 2 (difficile, lento, sconsigliabile ma istruttivo): MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">cesta</span></code> originale, usando il <a class="reference external" href="https://softpython.readthedocs.io/it/latest/lists/lists3-sol.html#Metodo-pop">metodo pop</a> e senza mai riassegnare <code class="docutils literal notranslate"><span class="pre">cesta</span></code>, quindi niente righe che iniziano con <code class="docutils literal notranslate"><span class="pre">cesta</span> <span class="pre">=</span></code></p></li>
+<li><p>Modo 2 (difficile, lento, sconsigliabile ma istruttivo): MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">cesta</span></code> originale, usando il <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-pop">metodo pop</a> e senza mai riassegnare <code class="docutils literal notranslate"><span class="pre">cesta</span></code>, quindi niente righe che iniziano con <code class="docutils literal notranslate"><span class="pre">cesta</span> <span class="pre">=</span></code></p></li>
 </ul>
 <p>Prova a risolvere l’esercizio in entrambi i modi.</p>
 <div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Per entrambi i modi, ricordati il sacro</strong> <a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a></p>
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Per entrambi i modi, ricordati il sacro</strong> <a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a></p>
 <p><strong>Non aggiungerai o toglierai mai elementi da una sequenza che stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 </div>
 <div class="nbinput docutils container">
@@ -3841,7 +3841,7 @@ piatto: [&#39;fragola&#39;, &#39;ciliegia&#39;, &#39;mela&#39;, &#39;mela&#39;]
 <p>Dato un insieme, possiamo esaminare la sequenza di elementi con un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: l’ordine di iterazione negli insiemi <strong>non</strong> è prevedibile !</p>
-<p>Per capire meglio il perchè, puoi rivedere <a class="reference external" href="https://softpython.readthedocs.io/it/latest/sets/sets-sol.html#Creare-un-insieme">la guida sugli insiemi</a></p>
+<p>Per capire meglio il perchè, puoi rivedere <a class="reference external" href="https://it.softpython.org/sets/sets-sol.html#Creare-un-insieme">la guida sugli insiemi</a></p>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
@@ -4142,7 +4142,7 @@ Trovata chiave krapfen
 <p><strong>RISPOSTA</strong>: I due codici sopra riportati sono equivalenti, con una importante differenza: il codice A verrà eseguito in un tempo proporziale alla dimensione di <code class="docutils literal notranslate"><span class="pre">diz</span></code> (perchè deve scorrere tutto il dizionario), invece il codice B verrà sempre eseguito in un tempo costante breve che <em>non</em> dipende dalla dimensione di <code class="docutils literal notranslate"><span class="pre">diz</span></code>. Sia il comando <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">diz</span></code> che l’espressione <code class="docutils literal notranslate"><span class="pre">diz[k]</span></code> che recupera il valore corrispondente alla chiave <code class="docutils literal notranslate"><span class="pre">k</span></code> sono estremamente veloci.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: assicurati di capire bene questo punto!</strong></p>
-<p>In tanti scrivono codice come nella parte A perdendo di fatto la principale utilità dei dizionari che è l’accesso veloce. Finchè i dati sono pochi è facile non accorgersene, ma quando abbiamo megabyte di coppie chiave / valore il tempo perso in cicli inutili si fa sentire! Per ulteriori chiarimenti puoi leggere (o rivedere) la <a class="reference external" href="https://softpython.readthedocs.io/it/latest/dictionaries/dictionaries2-sol.html#Disordine-veloce">sezione Disordine veloce</a> nel foglio sui dizionari.</p>
+<p>In tanti scrivono codice come nella parte A perdendo di fatto la principale utilità dei dizionari che è l’accesso veloce. Finchè i dati sono pochi è facile non accorgersene, ma quando abbiamo megabyte di coppie chiave / valore il tempo perso in cicli inutili si fa sentire! Per ulteriori chiarimenti puoi leggere (o rivedere) la <a class="reference external" href="https://it.softpython.org/dictionaries/dictionaries2-sol.html#Disordine-veloce">sezione Disordine veloce</a> nel foglio sui dizionari.</p>
 </div>
 </div>
 <div class="section" id="Da-fare---colore-di-cuori">
@@ -4694,7 +4694,7 @@ In autostrada l&#39;inquinamento è eccessivo
 <p><strong>RISPOSTA</strong>: se <em>mentre</em> scorriamo il dizionario, continuiamo al contempo ad aggiungere pezzi, c’è il rischio concreto che non termineremo mai di esaminare le chiavi !</p>
 <p>Perciò leggi bene quanto segue:</p>
 <div class="admonition note">
-<p><a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza su cui stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza su cui stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 </div>
 <p>In questo caso, se proviamo ad eseguire il codice, otterremo un errore esplicito:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
@@ -4744,7 +4744,7 @@ In autostrada l&#39;inquinamento è eccessivo
 <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">dictionary</span> <span class="n">changed</span> <span class="n">size</span> <span class="n">during</span> <span class="n">iteration</span>
 </pre></div>
 </div>
-<p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa <a class="reference external" href="https://softpython.readthedocs.io/it/latest/control-flow/flow3-while-sol.html">un ciclo while</a> o effettua prima una copia della sequenza originale.</p>
+<p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa <a class="reference external" href="https://it.softpython.org/control-flow/flow3-while-sol.html">un ciclo while</a> o effettua prima una copia della sequenza originale.</p>
 </div>
 <div class="section" id="Da-fare---zazb">
 <h3>Da fare - zazb<a class="headerlink" href="#Da-fare---zazb" title="Permalink to this headline">¶</a></h3>
@@ -4819,7 +4819,7 @@ In autostrada l&#39;inquinamento è eccessivo
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> annidati<a class="headerlink" href="#for-annidati" title="Permalink to this headline">¶</a></h2>
 <p>Quanto già detto in precedenza sul nome delle variabile vale ancor di più per i <code class="docutils literal notranslate"><span class="pre">for</span></code> annidati:</p>
 <div class="admonition note">
-<p><a class="reference external" href="https://softpython.readthedocs.io/it/latest/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a> <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a> <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
 </div>
 <p>Se hai definito una variabile in un <code class="docutils literal notranslate"><span class="pre">for</span></code> esterno, non la reintrodurrai in un <code class="docutils literal notranslate"><span class="pre">for</span></code> interno, perchè ciò portebbe gran confusione. Per esempio qua <code class="docutils literal notranslate"><span class="pre">s</span></code> è introdotta sia in quello esterno che in quello interno:</p>
 <div class="nbinput docutils container">

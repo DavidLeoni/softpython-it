@@ -2366,16 +2366,19 @@ shaiy!
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm21e28a1a-a99b-4159-b8fd-bfa31e206964" type="application/json" >
-    {"code": " \nx = \"ciao\"\ny = x\nx = y[0] + y[1] + 'b' + y[3]", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "ciao"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"x": "cibo", "y": "ciao"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+<script id="json-jm8f00c5dc-61e6-4c6d-9761-4f0a1889e33b" type="application/json" >
+    {"trace": [{"line": 2, "heap": {}, "event": "step_line", "stdout": "", "stack_to_render": [], "func_name": "<module>", "globals": {}, "ordered_globals": []}, {"line": 3, "heap": {}, "event": "step_line", "stdout": "", "stack_to_render": [], "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"]}, {"line": 4, "heap": {}, "event": "step_line", "stdout": "", "stack_to_render": [], "func_name": "<module>", "globals": {"y": "ciao", "x": "ciao"}, "ordered_globals": ["x", "y"]}, {"line": 4, "heap": {}, "event": "return", "stdout": "", "stack_to_render": [], "func_name": "<module>", "globals": {"y": "ciao", "x": "cibo"}, "ordered_globals": ["x", "y"]}], "code": " \nx = \"ciao\"\ny = x\nx = y[0] + y[1] + 'b' + y[3]"}
 </script>
-<div id="jm21e28a1a-a99b-4159-b8fd-bfa31e206964" class="pytutorVisualizer"> </div>
+<div id="jm8f00c5dc-61e6-4c6d-9761-4f0a1889e33b" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -2386,12 +2389,12 @@ shaiy!
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm21e28a1a-a99b-4159-b8fd-bfa31e206964').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm8f00c5dc-61e6-4c6d-9761-4f0a1889e33b').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm21e28a1a-a99b-4159-b8fd-bfa31e206964',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm8f00c5dc-61e6-4c6d-9761-4f0a1889e33b',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
