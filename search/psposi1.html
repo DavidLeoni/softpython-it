@@ -1,0 +1,1763 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-125857337-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; SoftPython</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/javascript" src="../_static/js/jupman.js"></script>
+        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/jupman-rtd.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../toc-page.html" class="icon icon-home"> SoftPython
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#A-chi-è-rivolto">A chi è rivolto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#Requisiti">Requisiti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#Contenuti">Contenuti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#A---Fondamenti">A - Fondamenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#B---Analisi-dati">B - Analisi dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#C---Applicazioni">C - Applicazioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#D---Progetti">D - Progetti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#Autori">Autori</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#Licenza">Licenza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#Ringraziamenti">Ringraziamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Come orientarsi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Capitoli">Capitoli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Perchè-Python?">Perchè Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Materiale-del-corso">Materiale del corso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#SoftPython:-Fondamenti">SoftPython: Fondamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Approccio-e-obiettivi">Approccio e obiettivi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Non-funziona,-che-faccio-?">Non funziona, che faccio ?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#Come-porre-domande">Come porre domande</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Condivisione-online">Condivisione online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Installazione">Installazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#Cominciamo-!">Cominciamo !</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installazione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#Installazione-Python">Installazione Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Installazione-Windows">Installazione Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Installazione-Mac">Installazione Mac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Installazione-Linux">Installazione Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#Installare-pacchetti">Installare pacchetti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#Notebook-Jupyter">Notebook Jupyter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Eseguire-il-notebook-Jupyter">Eseguire il notebook Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Salvare-i-fogli-Jupyter">Salvare i fogli Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Spegnere-il-server-di-Jupyter">Spegnere il server di Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Navigare-i-notebook">Navigare i notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Installare-il-notebook-Jupyter---tutti-i-sistemi-operativi">Installare il notebook Jupyter - tutti i sistemi operativi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#Fare-progetti-Python-con-gli-ambienti-virtuali">Fare progetti Python con gli ambienti virtuali</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Creare-ambienti-virtuali">Creare ambienti virtuali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Attivare-un-ambiente-virtuale">Attivare un ambiente virtuale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#Eseguire-gli-ambienti-da-dentro-Jupyter">Eseguire gli ambienti da dentro Jupyter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#Se-hai-Anaconda">Se hai Anaconda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#Se-non-hai-Anaconda">Se non hai Anaconda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html">A - Fondamenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quick-intro/quick-intro-sol.html">Introduzione rapida</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Proviamo-Jupyter">Proviamo Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Principali-tipi-di-dati-Python">Principali tipi di dati Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Numeri-interi-e-con-virgola">Numeri interi e con virgola</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Booleani---bool">Booleani - bool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#and">and</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#or">or</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#not">not</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Liste---list">Liste - list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Ordinamento-liste">Ordinamento liste</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Dizionari---dict">Dizionari - dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Visualizzare-l'esecuzione-con-Python-Tutor">Visualizzare l’esecuzione con Python Tutor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Debuggare-codice-in-Jupyter">Debuggare codice in Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Iterazione">Iterazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#for-in-range">for in range</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Funzioni">Funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Funzioni-lambda">Funzioni lambda</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Trasformazioni-sulle-liste">Trasformazioni sulle liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Trasfomazioni-con-il-for">Trasfomazioni con il for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Trasformazioni-con-le-list-comprehension">Trasformazioni con le <em>list comprehension</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Trasformazioni-con-le-map">Trasformazioni con le map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Matrici">Matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Funzione-zip">Funzione zip</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Gestione-errori-e-testing">Gestione errori e testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Come-eseguire-il-codice">Come eseguire il codice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Eseguire-codice-in-Jupyter">Eseguire codice in Jupyter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Python-è-un-linguaggio-d'alto-livello">Python è un linguaggio d’alto livello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Performance">Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#L'interprete-Python">L’interprete Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Listare-i-file-e-cartelle">Listare i file e cartelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Editor-per-codice-sorgente">Editor per codice sorgente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../basics/basics-sol.html">Basi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#L'interprete-Python">L’interprete Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Apriamo-la-console-di-sistema">Apriamo la console di sistema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Listare-i-file-e-cartelle">Listare i file e cartelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Lanciamo-l'interprete-Python">Lanciamo l’interprete Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Uscire-dall'interprete">Uscire dall’interprete</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Moduli">Moduli</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Editor-di-testo-semplice">Editor di testo semplice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#IDE">IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Jupyter">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Visualizzare-l'esecuzione-con-Python-Tutor">Visualizzare l’esecuzione con Python Tutor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Debuggare-codice-in-Jupyter">Debuggare codice in Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Architettura-di-Python">Architettura di Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Python-è-un-linguaggio-d'alto-livello">Python è un linguaggio d’alto livello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Performance">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Oggetti">Oggetti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Variabili">Variabili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Riusare-una-variabile">Riusare una variabile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Cambiare-il-tipo-durante-l'esecuzione">Cambiare il tipo durante l’esecuzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Comandi-multipli-su-una-stessa-linea">Comandi multipli su una stessa linea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Inizializzazioni-multiple">Inizializzazioni multiple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Nomi-di-variabile">Nomi di variabile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Da-fare:-nomi-di-variabile">Da fare: nomi di variabile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Tipi-numerici">Tipi numerici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Interi">Interi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Booleani">Booleani</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Operatori-booleani">Operatori booleani</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-costanti">Booleani - Esercizio con costanti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-variabili">Booleani - Esercizio con variabili</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Conversione">Booleani - Conversione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio---cos'è-un-booleano?">Booleani - Esercizio - cos’è un booleano?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Ordine-di-valutazione">Booleani - Ordine di valutazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---errori-nella-valutazione">Booleani - errori nella valutazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Operatori-numerici">Operatori numerici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Operatori-numerici---ciclare">Operatori numerici - ciclare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Numeri-reali">Numeri reali</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Numeri-reali---esercizio---equazione-quadratica">Numeri reali - esercizio - equazione quadratica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../strings/strings1-sol.html">Stringhe 1: introduzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Creare-stringhe">Creare stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Stampare---le-celle">Stampare - le celle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#La-stringa-vuota">La stringa vuota</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Stampare-più-stringhe">Stampare più stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Lunghezza-di-una-stringa">Lunghezza di una stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Stampare---sequenze-di-escape">Stampare - sequenze di escape</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Esempio---ritorno-a-capo">Esempio - ritorno a capo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Da-fare---stampa-lunghezza">Da fare - stampa lunghezza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings1-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../strings/strings2-sol.html">Stringhe 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Leggere-caratteri">Leggere caratteri</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---intercalare">Da fare - intercalare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Indici-negativi">Indici negativi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Sostituire-caratteri">Sostituire caratteri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Slice">Slice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---garalampog">Da fare - garalampog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---ifEweEfav-lkSD-lkWe">Da fare - ifEweEfav lkSD lkWe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Slice---limiti">Slice - limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Slice---omissione-limiti">Slice - omissione limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---isteroister">Da fare - isteroister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Slice---limiti-negativi">Slice - limiti negativi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---javarnanda">Da fare - javarnanda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Slice---modifica">Slice - modifica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---la-corsa">Da fare - la corsa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---contenute-1">Da fare - contenute 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---contenute-2">Da fare - contenute 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Altri-operatori">Altri operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Da-fare---tanti-ciao">Da fare - tanti ciao</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../strings/strings3-sol.html">Stringhe 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Elenco-metodi">Elenco metodi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Esempio">Esempio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---cammina">Da fare - cammina</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-lower">Metodo lower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-capitalize">Metodo capitalize</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---Vostra-Eccellenza">Da fare - Vostra Eccellenza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-strip">Metodo strip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---hatespace">Da fare - hatespace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---sostituisci">Da fare - sostituisci</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---per-Giove">Da fare - per Giove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Da-fare---uppermezzo">Da fare - uppermezzo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../strings/strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#lung">lung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#contin">contin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#invertilet">invertilet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#nspazio">nspazio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#inifin">inifin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#scambia">scambia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../strings/strings4-sol.html#Esercizi-con-eccezioni-e-test">Esercizi con eccezioni e test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#halet">halet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#conta">conta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#contiene_minuscola">contiene_minuscola</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#dialetto">dialetto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#contavoc">contavoc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings4-sol.html#palindroma">palindroma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/lists1-sol.html">Liste 1: introduzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists1-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists1-sol.html#Creare-liste">Creare liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Lista-vuota">Lista vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---creare-liste-1">Da fare - creare liste 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---creare-liste-2">Da fare - creare liste 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---creare-liste-3">Da fare - creare liste 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---creare-liste-4">Da fare - creare liste 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists1-sol.html#Convertire-sequenze-in-liste">Convertire sequenze in liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---gulp">Da fare - gulp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists1-sol.html#Da-fare---garapp">Da fare - garapp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/lists2-sol.html">Liste 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Lunghezza-di-una-lista">Lunghezza di una lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Leggere-un-elemento">Leggere un elemento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Scrivere-un-elemento">Scrivere un elemento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Mutare-liste-condivise">Mutare liste condivise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Slice">Slice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Slice---limiti">Slice - limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Slice---omissione-limiti">Slice - omissione limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Slice---limiti-negativi">Slice - limiti negativi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Slice---modifica">Slice - modifica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Liste-di-stringhe">Liste di stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---sigle">Da fare - sigle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---giochi">Da fare - giochi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Liste-di-liste">Liste di liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---coppie">Da fare - coppie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---nonunif">Da fare - nonunif</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Operatore-in">Operatore in</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#not-in">not in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---ortaggi">Da fare - ortaggi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Concatenazione-di-liste-con-+">Concatenazione di liste con +</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---concatenazione">Da fare - concatenazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#min-e-max">min e max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#sum">sum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Da-fare---bilancia">Da fare - bilancia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/lists3-sol.html">Liste 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-append">Metodo append</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---accrescere-una-lista-1">Da fare - accrescere una lista 1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-extend">Metodo extend</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Estendere-con-sequenze">Estendere con sequenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare:-accrescere-una-lista-2">Da fare: accrescere una lista 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---zslice">Da fare - zslice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---vedunazeblag">Da fare - vedunazeblag</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#join---costruire-stringhe-da-liste">join - costruire stringhe da liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#da-fare---dub-dab-dib-dob">da fare - dub dab dib dob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---ghirigori">Da fare - ghirigori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---welldone">Da fare - welldone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-insert">Metodo insert</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---insertando">Da fare - insertando</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---barzoletta">Da fare - barzoletta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---insappend">Da fare - insappend</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-remove">Metodo remove</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---nob">Da fare - nob</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-pop">Metodo pop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---popcorn">Da fare - popcorn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---zonzo">Da fare - zonzo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-reverse">Metodo reverse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---come-va?">Da fare - come va?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---cose-preziose">Da fare - cose preziose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---potenze">Da fare - potenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-sort">Metodo sort</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---moltelinee">Da fare - moltelinee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Da-fare---numlist">Da fare - numlist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-index">Metodo index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-count">Metodo count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../lists/lists4-sol.html">Liste 4: iterazione e funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#stamparole">stamparole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#stampari">stampari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#cerca26">cerca26</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#stamprisec">stamprisec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#trepari">trepari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#separa_ip">separa_ip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#media">media</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lists/lists4-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#contiene">contiene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#primi">primi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#primul">primul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#duplica">duplica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#hadup">hadup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#ord3">ord3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#filtrab">filtrab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#collina">collina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#vetta">vetta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#pari">pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#mix">mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists4-sol.html#nostop">nostop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tuples/tuples-sol.html">Tuple</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Creare-tuple">Creare tuple</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Tupla-vuota">Tupla vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Tuple-senza-parentesi">Tuple senza parentesi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Elementi-eterogenei">Elementi eterogenei</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Creare-tuple-da-sequenze">Creare tuple da sequenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Creare-sequenze-da-tuple">Creare sequenze da tuple</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Operatori">Operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#len">len</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Leggere-un-elemento">Leggere un elemento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare:-animali">Da fare: animali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Slice">Slice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Concatenazione">Concatenazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Appartenenza">Appartenenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare---welcome">Da fare - welcome</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Scrivere-un-elemento">Scrivere un elemento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare---errando">Da fare - errando</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare:-abde">Da fare: abde</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare---carismatico">Da fare - carismatico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare---ordinare">Da fare - ordinare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Metodi">Metodi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Metodo-index">Metodo index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Metodo-count">Metodo count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#Da-fare:-frutti">Da fare: frutti</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#appaia">appaia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#giunto">giunto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tuples/tuples-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#doppie">doppie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tuples/tuples-sol.html#nasty">nasty</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sets/sets-sol.html">Insiemi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Creare-un-insieme">Creare un insieme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Convertire-sequenze-in-insiemi">Convertire sequenze in insiemi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Elementi-mutabili-e-hash">Elementi mutabili e hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Insieme-vuoto">Insieme vuoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare:-dedup">Da fare: dedup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Frozenset">Frozenset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Operatori">Operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#len">len</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---distinte">Da fare - distinte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Unione">Unione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare:-tuttotranne-1">Da fare: tuttotranne 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Intersezione">Intersezione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Differenza">Differenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Differenza-simmetrica">Differenza simmetrica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Appartenenza">Appartenenza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Uguaglianza">Uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Metodi-simili-agli-operatori">Metodi simili agli operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#union">union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#update">update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---tuttotranne-2">Da fare - tuttotranne 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Altri-metodi">Altri metodi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#add">add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#remove">remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---bababiba">Da fare - bababiba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#discard">discard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---spazzatura">Da fare - spazzatura</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#issuperset">issuperset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#isdisjoint">isdisjoint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---matrioska">Da fare - matrioska</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#sillabe">sillabe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#distingui">distingui</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sets/sets-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sets/sets-sol.html#Da-fare---intersectron">Da fare - intersectron</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html">Dizionari 1: creazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Creare-un-dizionario">Creare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Le-chiavi">Le chiavi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#I-valori">I valori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-vuoto">Dizionario vuoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Chiavi-e-valori-eterogenei">Chiavi e valori eterogenei</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-da-sequenza-di-coppie">Dizionario da sequenza di coppie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-da-coppie-di-argomenti">Dizionario da coppie di argomenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copiare-un-dizionario">Copiare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copia-superficiale">Copia superficiale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copia-in-profondità">Copia in profondità</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html">Dizionari 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#len">len</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Leggere-di-un-valore">Leggere di un valore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Disordine-veloce">Disordine veloce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---z7">Da fare - z7</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Scrivere-nel-dizionario">Scrivere nel dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Scrivere---aggiunta-chiave/valore">Scrivere - aggiunta chiave/valore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Scrivere---riassociare-chiave">Scrivere - riassociare chiave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---officina">Da fare - officina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Scrivere---cancellare">Scrivere - cancellare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---scrivania">Da fare - scrivania</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---giardino">Da fare - giardino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---traduzioni">Da fare - traduzioni</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Appartenenza-con-in">Appartenenza con <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#not-in">not in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Dizionari-di-sequenze">Dizionari di sequenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---prestiti">Da fare - prestiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Uguaglianza">Uguaglianza</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Uguaglianza-e-ordine">Uguaglianza e ordine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Uguaglianza-e-copie">Uguaglianza e copie</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Da-fare---zoom">Da fare - zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html">Dizionari 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#keys">keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---chiavi-disordinate">Da fare - chiavi disordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---chiavi-ordinate">Da fare - chiavi ordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---chiavistello">Da fare - chiavistello</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#values">values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---uno-a-uno">Da fare - uno a uno</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---borsa">Da fare - borsa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---valori-comuni">Da fare - valori comuni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---piccolo-grande">Da fare - piccolo grande</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#items">items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---unione-senza-update">Da fare - unione senza update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#update">update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---axby">Da fare - axby</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Classi---OrderedDict">Classi - OrderedDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare:-agenda-OrderedDict">Da fare: agenda OrderedDict</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---copia-di-OrderedDict">Da fare - copia di OrderedDict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Classi---Counter">Classi - Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Da-fare---frequenti">Da fare - frequenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html">Dizionari 4: iterazione e funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#stampa_val">stampa_val</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#ha_chiave">ha_chiave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#dim">dim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#mazzol">mazzol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#coppie">coppie</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#istogramma">istogramma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#listifica">listifica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#tcont">tcont</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#valori_unici">valori_unici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#maiuscole">maiuscole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#filtraz">filtraz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#powers">powers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#dilist">dilist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#prefissi">prefissi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#traduci">traduci</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries4-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html">Dizionari 5: strutture composte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#Impiegati">Impiegati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#estrai_impiegati">estrai_impiegati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#estrai_aziende">estrai_aziende</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#età_media">età_media</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#tipi_aziende">tipi_aziende</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#Altri-esercizi">Altri esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#medie">medie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#ha_pref">ha_pref</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries5-sol.html#onomat">onomat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../control-flow/flow1-if-sol.html">Controllo di flusso 1: if</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Il-comando-base-if-else">Il comando base <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#else-è-opzionale"><code class="docutils literal notranslate"><span class="pre">else</span></code> è opzionale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---senza-benza">Da fare - senza benza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Il-comando-if---elif---else">Il comando <em>if - elif - else</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Domande">Domande</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---fragole">Sono equivalenti? - fragole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---max">Sono equivalenti? - max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---min">Sono equivalenti? - min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---grande-piccolo">Sono equivalenti? - grande piccolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---Cippirillo">Sono equivalenti? - Cippirillo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---fattoria">Da fare - fattoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---arcani">Da fare - arcani</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#if-annidati"><code class="docutils literal notranslate"><span class="pre">if</span></code> annidati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---ascisse-e-ordinate-1">Da fare - ascisse e ordinate 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---ascisse-e-ordinate-2">Da fare - ascisse e ordinate 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---autobus">Da fare - autobus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---cronometro">Da fare - cronometro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---dentro-fuori-1">Sono equivalenti? - dentro fuori 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---stelle-pianeti">Sono equivalenti? - stelle pianeti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---verde-rosso">Sono equivalenti? - verde rosso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---cerchi-quadrati">Sono equivalenti? - cerchi quadrati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---dentro-fuori-2">Sono equivalenti? - dentro fuori 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Sono-equivalenti?---Ciabanga">Sono equivalenti? - Ciabanga</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---Il-massimo">Da fare - Il massimo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Operatore-ternario">Operatore ternario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Domande-if-ternari">Domande if ternari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---scarpe">Da fare - scarpe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow1-if-sol.html#Da-fare---trenino">Da fare - trenino</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../control-flow/flow2-for-sol.html">Controllo di flusso 2: for</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterazione-per-elemento">Iterazione per elemento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Nomi-variabili-nei-for">Nomi variabili nei <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterare-in-stringhe">Iterare in stringhe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterare-in-tuple">Iterare in tuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande">Domande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---tappeto-magico">Da fare - tappeto magico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---sommapari">Da fare - sommapari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---birbantello">Da fare - birbantello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---dirigibile">Da fare - dirigibile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---gala">Da fare - gala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---bilancia">Da fare - bilancia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Contare-con-range">Contare con range</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande---range">Domande - range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---stampadoppi">Da fare - stampadoppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---multipli-e-non">Da fare - multipli e non</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---intervallo-ab">Da fare - intervallo ab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterare-per-indici">Iterare per indici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---cucina">Da fare - cucina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---neon">Da fare - neon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---emozioni">Da fare - emozioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---organetto">Da fare - organetto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---sghiribizzo">Da fare - sghiribizzo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---dna">Da fare - dna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---sportello">Da fare - sportello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---fattoria">Da fare - fattoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---pokemon">Da fare - pokemon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Modificare-durante-l'iterazione">Modificare durante l’iterazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---duplica">Da fare - duplica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---martello">Da fare - martello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---Orangutang">Da fare - Orangutang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---cesta">Da fare - cesta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterare-un-insieme">Iterare un insieme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande---insiemi">Domande - insiemi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Iterare-un-dizionario">Iterare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande-iterazione-dizionari">Domande iterazione dizionari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Sono-equivalenti-?-postin">Sono equivalenti ? postin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Sono-equivalenti-?-cortel">Sono equivalenti ? cortel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Sono-equivalenti-?---gel">Sono equivalenti ? - gel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Sono-equivalenti-?---giri">Sono equivalenti ? - giri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Sono-equivalenti?---Trovato">Sono equivalenti? - Trovato</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---colore-di-cuori">Da fare - colore di cuori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---preziosi">Da fare - preziosi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---potenze">Da fare - potenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---fiori">Da fare - fiori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---arte">Da fare - arte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---cartolerie">Da fare - cartolerie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---legumi">Da fare - legumi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---smog">Da fare - smog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---sport">Da fare - sport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Modificare-un-dizionario-durante-l'iterazione">Modificare un dizionario durante l’iterazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---zazb">Da fare - zazb</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#for-annidati"><code class="docutils literal notranslate"><span class="pre">for</span></code> annidati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande---for-annidati">Domande - for annidati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---casting">Da fare - casting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---coprire-il-piano">Da fare - coprire il piano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---triangolare">Da fare - triangolare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---porto">Da fare - porto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---poligoni">Da fare - poligoni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---bon-jour">Da fare - bon jour</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Comandi-break-e-continue">Comandi <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Terminare-con-un-break">Terminare con un <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Proseguire-con-continue">Proseguire con <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Combinare-break-e-continue">Combinare <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Domande---break-e-continue">Domande - break e continue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---continuamente">Da fare - continuamente</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---breaking-bad">Da fare - breaking bad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---punto-di-rottura">Da fare - punto di rottura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow2-for-sol.html#Da-fare---breakdance">Da fare - breakdance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../control-flow/flow3-while-sol.html">Controllo di flusso 3: while</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#while-che-terminano"><code class="docutils literal notranslate"><span class="pre">while</span></code> che terminano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#while-che-non-terminano"><code class="docutils literal notranslate"><span class="pre">while</span></code> che non terminano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Domande">Domande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Esercizi">Esercizi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---stampari">Da fare - stampari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---media">Da fare - media</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Comandi-break-e-continue">Comandi <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Terminare-con-un-break">Terminare con un <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Proseguire-con-continue">Proseguire con <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Domande-su-break-e-continue">Domande su <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---cercacar">Da fare - cercacar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Domande---Sono-equivalenti-?">Domande - Sono equivalenti ?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---BORG">Sono equivalenti? - BORG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---al-3">Sono equivalenti? - al 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---che-caso">Sono equivalenti? - che caso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---al-sei">Sono equivalenti? - al sei</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---countdown-1">Sono equivalenti? - countdown 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---countdown-2">Sono equivalenti? - countdown 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---sortilegio">Sono equivalenti? - sortilegio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---ping-pong">Sono equivalenti? - ping pong</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---zanna">Sono equivalenti? - zanna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---pasticcio">Sono equivalenti? - pasticcio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Esercizi-su-contatori">Esercizi su contatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---don't-break-1">Da fare - don’t break 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---don't-break-2">Da fare - don’t break 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---Dammi-un-break">Da fare - Dammi un break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---cartone">Da fare - cartone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---al-dieci">Da fare - al dieci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---cccc">Da fare - cccc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---convergi">Da fare - convergi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---wow">Da fare - wow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---Wild-West">Da fare - Wild West</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Modificare-sequenze">Modificare sequenze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Stack---Pescare-da-mazzo-di-carte">Stack - Pescare da mazzo di carte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Stack---Pescare-fino-a-condizione">Stack - Pescare fino a condizione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---Don't-break-my-heart">Da fare - Don’t break my heart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Domande---cosa-fanno?">Domande - cosa fanno?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Domande---sono-equivalenti?">Domande - sono equivalenti?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---treno">Sono equivalenti? - treno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Sono-equivalenti?---append-nx">Sono equivalenti? - append nx</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Esercizi-su-stack">Esercizi su stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---break-somma">Da fare - break somma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---libri-di-viaggi">Da fare - libri di viaggi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---BANG-!">Da fare - BANG !</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../control-flow/flow3-while-sol.html#Da-fare---Crescere-o-decrescere-?">Da fare - Crescere o decrescere ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sequences/sequences-sol.html">Sequenze e comprehensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Iterabili---liste">Iterabili - liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#iterabili---range">iterabili - range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Materializzare-una-sequenza">Materializzare una sequenza</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Domande-range">Domande <code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#reversed">reversed</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#iterare-con-next">iterare con <code class="docutils literal notranslate"><span class="pre">next</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---sconcerto">Da fare - sconcerto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Materializzare-un-iteratore">Materializzare un iteratore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#sorted">sorted</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---reversort">Da fare - reversort</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#zip">zip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---scala">Da fare - scala</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#List-comprehensions">List comprehensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#list-comprehension-su-stringhe">list comprehension su stringhe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Domande-list-comprehension">Domande list comprehension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---list-comprehension">Da fare - list comprehension</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---potenza">Da fare - potenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---radice">Da fare - radice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---primi-car">Da fare - primi car</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---porta-pazienza">Da fare - porta pazienza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---maggiore-3">Da fare - maggiore 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---pari">Da fare - pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---capi">Da fare - capi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---trattini">Da fare - trattini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---lollosa">Da fare - lollosa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---cane-gatto">Da fare - cane gatto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---puffi">Da fare - puffi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---metalli-preziosi">Da fare - metalli preziosi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#List-comprehension-filtrate">List comprehension filtrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Domande-list-comprehension-filtrate">Domande list comprehension filtrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---list-comprehension-filtrate">Da fare - list comprehension filtrate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---savana">Da fare - savana</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../sequences/sequences-sol.html#Da-fare---barZa">Da fare - barZa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../functions/functions-sol.html">Funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../functions/functions-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/functions-sol.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/functions-sol.html#Che-fare">Che fare</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#somma">somma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#comparap">comparap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#comparar">comparar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#pari">pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#mag">mag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#is_vocale">is_vocale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#volume_sfera">volume_sfera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#ciri">ciri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#age">age</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../functions/functions-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#mag_tre">mag_tre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#prezzo_finale">prezzo_finale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../functions/functions-sol.html#ora_arrivo">ora_arrivo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html">Gestione errori e testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Situazioni-inaspettate">Situazioni inaspettate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#fai_torta_problematica">fai_torta_problematica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Controllare-con-i-return">Controllare con i return</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Le-eccezioni">Le eccezioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Gestire-le-eccezioni">Gestire le eccezioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Eccezioni-particolari">Eccezioni particolari</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Gli-assert">Gli assert</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Quando-usare-gli-assert?">Quando usare gli assert?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Usare-gli-assert-per-testare">Usare gli assert per testare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../errors-and-testing/errors-and-testing-sol.html#Struttura-esercizi-parte-Fondamenti">Struttura esercizi parte Fondamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html">Matrici liste di liste</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Dimensioni-della-matrice">Dimensioni della matrice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrarre-righe-e-colonne">Estrarre righe e colonne</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Come-estrarre-una-riga">Come estrarre una riga</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-riga-con-for">Estrai riga con for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-riga-con-range">Estrai riga con range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-riga-con-slice">Estrai riga con slice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-riga-con-list-comprehension">Estrai riga con list comprehension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-colonna-con-for">Estrai colonna con for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Estrai-colonna-con-list-comprehension">Estrai colonna con list comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Creare-nuove-matrici">Creare nuove matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#matrice_vuota">matrice_vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#matrice_vuota-nel-modo-elegante">matrice_vuota nel modo elegante</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Copia-in-profondità">Copia in profondità</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Modificare-matrici">Modificare matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#riempic">riempic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#riempix">riempix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#riempiz">riempiz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#attacca_sotto">attacca_sotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#attacca_sopra">attacca_sopra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#attacca_dx">attacca_dx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#soglia">soglia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#scambia_righe">scambia_righe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#scambia_colonne">scambia_colonne</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Altri-esercizi">Altri esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#diag">diag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#anti_diag">anti_diag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#is_utriang">is_utriang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#attacca_sx_mod">attacca_sx_mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#trasposta_1">trasposta_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#transpose_2">transpose_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#flip">flip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#toepliz">toepliz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#moltiplicazione-di-matrici">moltiplicazione di matrici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#check_nqueen">check_nqueen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html">Matrici Numpy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#quadro">quadro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#media_righe">media_righe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#matrot">matrot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#disp">disp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#radalt">radalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#scacchiera">scacchiera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#somma_alterna">somma_alterna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#media_meta">media_meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#matxarr">matxarr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#quadranti">quadranti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-numpy/matrices-numpy-sol.html#Altri-esercizi-numpy">Altri esercizi numpy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../commandments.html">Comandamenti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#I-COMANDAMENTO">I COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#III-COMANDAMENTO">III COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#IV-COMANDAMENTO">IV COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#V-COMANDAMENTO">V COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#VI-COMANDAMENTO">VI COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#VII-COMANDAMENTO">VII COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#VIII-COMANDAMENTO">VIII COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#IX-COMANDAMENTO">IX COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html#b-analisi-dati">B - Analisi dati</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../formats/formats-sol.html">Formati dati</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../formats/formats-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../formats/formats-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../formats/formats-sol.html#1.-File-a-linee">1. File a linee</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#File-a-linee-people-complex:">File a linee people-complex:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Esercizio-file-a-linee-immersione-in-python-toc">Esercizio file a linee immersione-in-python-toc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../formats/formats-sol.html#2.-File-CSV">2. File CSV</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Perchè-scorrere-un-CSV-?">Perchè scorrere un CSV ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#CSV-di-esempio">CSV di esempio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#CSV-Impianti-funiviari">CSV Impianti funiviari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Problema:-caratteri-sbagliati-??">Problema: caratteri sbagliati ??</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Importare-in-Python">Importare in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#Il-mistero-delle-opere-paravalanghe">Il mistero delle opere paravalanghe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../formats/formats-sol.html#3.-File-JSON">3. File JSON</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats-sol.html#JSONL">JSONL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visualization/visualization-sol.html">Visualizzazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#1.-Matplotlib-e-Numpy">1. Matplotlib e Numpy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Installazione">Installazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Primo-esempio">Primo esempio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#2.-Stile-MATLAB-vs.-Object-Oriented">2. Stile MATLAB vs. Object-Oriented</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#3.-Altri-tipi-di-grafici">3. Altri tipi di grafici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Generiamo-una-distribuzione">Generiamo una distribuzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Istogrammi">Istogrammi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Aggiungiamo-la-curva-di-fitting">Aggiungiamo la curva di fitting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Grafici-a-torta-e-altro-ancora...">Grafici a torta e altro ancora…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Conclusione-matplotlib">Conclusione matplotlib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Grafici-SVG">Grafici SVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#importazione-in-Jupyter-come-cella-HTML">importazione in Jupyter come cella HTML</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Google-Calendar">Google Calendar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Video-YouTube">Video YouTube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization-sol.html#Mappa-Umap">Mappa Umap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization-sol.html#Esportare-fogli-Jupyter">Esportare fogli Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="regex-sol.html">Ricerca</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#1-Prendiamoci-i-dati">1 Prendiamoci i dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#2.-Verifichiamo-che-i-dati-siano-corretti">2. Verifichiamo che i dati siano corretti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#3.-Introduzione-alle-regex">3. Introduzione alle regex</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Stringhe-e-sequenze-di-escape">Stringhe e sequenze di escape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#La-nostra-prima-regex">La nostra prima regex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Maiuscole-e-minuscole">Maiuscole e minuscole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Trovare-tutti-i-match">Trovare tutti i match</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Il-metacarattere-punto">Il metacarattere punto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Scriviamoci-una-funzione-di-test">Scriviamoci una funzione di test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Filtriamo-bene-gli-sp">Filtriamo bene gli sp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#4.-Sintassi-delle-Python-RegEx">4. Sintassi delle Python RegEx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Metacaratteri">Metacaratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Ripetizioni">Ripetizioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regex-sol.html#Funzione-pass_n_fail">Funzione <code class="docutils literal notranslate"><span class="pre">pass_n_fail</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#5.-Sequenze">5. Sequenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#6.-Le-funzioni-della-libreria-re">6. Le funzioni della libreria <code class="docutils literal notranslate"><span class="pre">re</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#7.-Sostituzioni-con-re.sub">7. Sostituzioni con <code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#8.-Dividere-le-stringhe">8. Dividere le stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regex-sol.html#9.-Cercare-pattern-nel-testo">9. Cercare pattern nel testo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/integration-sol.html">Integrazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#0-Presentazione-OpenStreetMap-e-UMap">0 Presentazione OpenStreetMap e UMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#0.1-OpenStreetMap">0.1 OpenStreetMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#0.1-UMap">0.1 UMap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#1-Prendiamoci-i-dati">1 Prendiamoci i dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#2.-Leggiamo-il-CSV">2. Leggiamo il CSV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#3.-Geocoding-con-webapi">3. Geocoding con webapi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#3.1-MapQuest-/-OpenStreetMap-Nominatim">3.1 MapQuest / OpenStreetMap Nominatim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#3.2-Webapi-JSON">3.2 Webapi JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#3.3.-Requests-in-Python">3.3. Requests in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/integration-sol.html#3.4-Funzioni-geocode-per-requests">3.4 Funzioni geocode per requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#4.-Scriviamo-un-nuovo-CSV-con-i-campi-lat-e-long">4. Scriviamo un nuovo CSV con i campi lat e long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/integration-sol.html#5.-Importiamo-in-UMap">5. Importiamo in UMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extraction/extraction-sol.html">Estrazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extraction/extraction-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extraction/extraction-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../extraction/extraction-sol.html#1.-Guardiamo-l'html">1. Guardiamo l’html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extraction/extraction-sol.html#2.-Estrazione-con-BeautifulSoup">2. Estrazione con BeautifulSoup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.1-Estraiamo-i-nomi">2.1 Estraiamo i nomi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.2-Estraiamo-le-date">2.2 Estraiamo le date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.3-Estraiamo-i-luoghi">2.3 Estraiamo i luoghi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.3-Sistemiamo-i-luoghi">2.3 Sistemiamo i luoghi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.4-Tipo-dell'evento">2.4 Tipo dell’evento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.5-descrizione">2.5 descrizione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extraction/extraction-sol.html#2.6-Riempiamo-la-variabile-righe">2.6 Riempiamo la variabile <code class="docutils literal notranslate"><span class="pre">righe</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../extraction/extraction-sol.html#3.-Scriviamo-il-CSV">3. Scriviamo il CSV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pandas/pandas-sol.html">Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#1.-Introduzione">1. Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#2.-Analisi-dei-dati-di-Astro-Pi">2. Analisi dei dati di Astro Pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#3.-Indicizzazione,-filtraggio-e-ordinamento">3. Indicizzazione, filtraggio e ordinamento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#4.-Rivediamo-MatPlotLib">4. Rivediamo MatPlotLib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#Grafici-matplotlib-da-strutture-pandas">Grafici matplotlib da strutture pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#5.-Calcolare-nuove-colonne">5. Calcolare nuove colonne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#6.-Filtrare-per-valori-testuali">6. Filtrare per valori testuali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#7.-Esercizi-col-meteo">7. Esercizi col meteo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#8.-Esercizi-Inquinanti-aria">8. Esercizi Inquinanti aria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#9.-GeoPandas">9. GeoPandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#Un-esempio-semplice-con-GeoPandas">Un esempio semplice con GeoPandas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#Leggere-shapefiles-in-GeoPandas">Leggere shapefiles in GeoPandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#Prendiamo-statistiche-da-visualizzare">Prendiamo statistiche da visualizzare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#Esempio-di-integrazione">Esempio di integrazione</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html">Information retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Costruiamo-il-nostro-motore-di-ricerca">Costruiamo il nostro motore di ricerca</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Una-prima-soluzione">Una prima soluzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Una-ricerca-più-efficace">Una ricerca più efficace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Performance">Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ordinamento">Ordinamento</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Prendiamo-le-distanze">Prendiamo le distanze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Un-mondo-di-errori">Un mondo di errori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Varie-forme">Varie forme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Un-mondo-di-distanze">Un mondo di distanze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Quale-spazio">Quale spazio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-a-prova-di-errore">Ricerca a prova di errore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#La-distanza-di-Levenshtein">La distanza di Levenshtein</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-per-distanza-sintattica">Ricerca per distanza sintattica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../computer-vision/computer-vision-sol.html">Computer vision</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#Installazione">Installazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../computer-vision/computer-vision-sol.html#1.-Anonimizzazione-facce">1. Anonimizzazione facce</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html#c-applicazioni">C - Applicazioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gui/gui-sol.html">Interfacce utente</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Perchè-fare-interfacce-grafiche-?">Perchè fare interfacce grafiche ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Scelte-di-stile">Scelte di stile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Scelte-tecniche">Scelte tecniche</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Risposte-per-oggi:">Risposte per oggi:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Installazione-ipywidgets">Installazione ipywidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Facciamo-uno-slider">Facciamo uno slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Model-View-Controller">Model View Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Interact">Interact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Riusare-il-widget-con-interactive">Riusare il widget con interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Eventi">Eventi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Controlliamo-una-label-con-uno-slider">Controlliamo una label con uno slider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Controlliamo-uno-slider-con-un'altro-slider">Controlliamo uno slider con un’altro slider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Eventi-di-widget-a-selezione-multipla">Eventi di widget a selezione multipla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Eventi-click">Eventi click</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Layout-e-stili">Layout e stili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Layout:-HBox">Layout: HBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Layout:-VBox-and-HBox">Layout: VBox and HBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Flexbox">Flexbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Stile">Stile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Grafici-interattivi-con-bqplot">Grafici interattivi con bqplot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Installazione-bqplot">Installazione bqplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#bqplot---il-primo-grafico">bqplot - il primo grafico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#bqplot---variare-parametri">bqplot - variare parametri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#bqplot---layout">bqplot - layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#bqplot---esempi-avanzati">bqplot - esempi avanzati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#HTML">HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Mappe">Mappe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Chatbot">Chatbot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Webapp">Webapp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Esempio-my-webapp">Esempio my-webapp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Eseguiamo-la-webapp-con-voila">Eseguiamo la webapp con voila</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-sol.html#Layout-per-webapp">Layout per webapp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-sol.html#Collegare-i-widget">Collegare i widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/gui-maps-sol.html">Interfacce utente - Mappe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gui/gui-maps-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-maps-sol.html#Prerequisiti">Prerequisiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-maps-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-maps-sol.html#Installazione-ipyleaflet">Installazione ipyleaflet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-maps-sol.html#Proviamo-OpenStreetMap">Proviamo OpenStreetMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gui/gui-maps-sol.html#Mettiamo-un-palloncino">Mettiamo un palloncino</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gui/my-webapp.html">Interfacce utente - Esempio webapp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/database-sol.html">Database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Guardiamo-il-database">Guardiamo il database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Connessione-in-SQLStudio">Connessione in SQLStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Connessione-in-Python">Connessione in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Passare-parametri-alla-query">Passare parametri alla query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Funzione-Esegui-Query">Funzione Esegui Query</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#Struttura-della-tabella">Struttura della tabella</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#DDL">DDL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#Query-ai-metadati">Query ai metadati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#JOIN">JOIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Tabella-Track">Tabella Track</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#GROUP-BY-and-COUNT">GROUP BY and COUNT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#COUNT">COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/database-sol.html#GROUP-BY-E-COUNT">GROUP BY E COUNT</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/database-sol.html#Pandas">Pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../web/web-sol.html">Web development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../web/web-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Struttura-del-sito">Struttura del sito</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Facciamo-partire-il-server">Facciamo partire il server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Proviamo-il-server">Proviamo il server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../web/web-sol.html#Contenuti-dinamici">Contenuti dinamici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../web/web-sol.html#Contenuti-statici">Contenuti statici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../web/web-sol.html#Struttura-del-codice">Struttura del codice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../web/web-sol.html#Come-parsare-il-path-per-estrarre-parametri">Come parsare il path per estrarre parametri</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html#d-progetti">D - Progetti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project-howto.html">Come fare un progetto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project-howto.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-howto.html#Challenge">Challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-howto.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-howto.html#Requisiti-tecnici">Requisiti tecnici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#Dimensione-dati">Dimensione dati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#Testo-Markdown">Testo Markdown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#Codice-Python">Codice Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#File-requirements.txt">File <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#Interfacce-grafiche">Interfacce grafiche</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project-howto.html#Fare-attenzione-a">Fare attenzione a</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project/project.html">Template progetto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Sorgenti-dati">Sorgenti dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Analisi">Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Pulizia">Pulizia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Integrazione">Integrazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Arricchimento">Arricchimento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Ricerca">Ricerca</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Ricerca-base">Ricerca base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Ricerca-avanzata">Ricerca avanzata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Ricerca-semantica">Ricerca semantica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Ranking">Ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Predizione">Predizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Presentazione">Presentazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Slides">Slides</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/project.html#Demo">Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Problematiche-riscontrate">Problematiche riscontrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/project.html#Conclusioni">Conclusioni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project/markdown.html">Markdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Celle-Markdown">Celle Markdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Paragrafi">Paragrafi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Liste">Liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Immagini">Immagini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Variabili-e-nomi-tecnici">Variabili e nomi tecnici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Codice-JSON-/-XML-/-Python">Codice JSON / XML / Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Formule-matematiche">Formule matematiche</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Tabelle">Tabelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project-ideas.html">Idee per progetti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Dataset-da-Kaggle">Dataset da Kaggle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Analisi-dati-socio-economici-GapMinder">Analisi dati socio-economici GapMinder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project-ideas.html#Altre-fonti-dati">Altre fonti dati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Analisi-quotazioni-di-borsa">Analisi quotazioni di borsa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Analisi-quotazioni-criptovalute">Analisi quotazioni criptovalute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Frequenza-parole-articoli-Wikipedia">Frequenza parole articoli Wikipedia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Filosofi-influenti">Filosofi influenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Personaggi-culturalmente-importanti">Personaggi culturalmente importanti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Analisi-attività-parlamento">Analisi attività parlamento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project-ideas.html#Analisi-attività-parlamento:-usare-Wikidata-per-trovare-i-segretari-di-partito">Analisi attività parlamento: usare Wikidata per trovare i segretari di partito</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Interfacce-e-tecnologie-per-la-comunicazione">Interfacce e tecnologie per la comunicazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Analisi-genoma">Analisi genoma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Supply-Chain">Supply Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Tracciamento-di-oggetti-astronomici">Tracciamento di oggetti astronomici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project-ideas.html#Ricerca-sequenze-numeri-interi-database-OEIS">Ricerca sequenze numeri interi database OEIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project-ideas.html#Esempi-API-OEIS">Esempi API OEIS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../challenges.html">Challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../challenges.html#Vai-alle-Challenges-2019">Vai alle Challenges 2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../challenges.html#Vai-alle-Challenges-2018">Vai alle Challenges 2018</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html#space"> </a></li>
+<li class="toctree-l1"><a class="reference internal" href="../toc.html#indice">Indice</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../toc-page.html">SoftPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+    <div id='jupman-langs'></div>
+
+    <!--
+    <script>
+    if (window.location.hostname.includes('softpython.org')){
+        JUPMAN_LANG = window.location.hostname.slice(0,window.location.hostname.indexOf('.'));
+    } else {
+        JUPMAN_LANG = 'en';        
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="../toc-page.html">Docs</a> &raquo;</li>
+    
+    <li>&lt;no title&gt;</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<p>Quel ramo del lago di Como, che volge a mezzogiorno, tra due catene [1] non interrotte di monti, tutto a seni e a golfi, a seconda dello sporgere e del rientrare di quelli, vien, quasi a un tratto, a ristringersi, e a prender corso e figura di fiume, tra un promontorio a destra, e un’ampia costiera dall’altra parte; e il ponte [2], che ivi congiunge le due rive, par che renda ancor più sensibile all’occhio questa trasformazione, e segni il punto in cui il lago cessa, e l’Adda rincomincia, per ripigliar poi nome di lago dove le rive, allontanandosi di nuovo, lascian l’acqua distendersi e rallentarsi in nuovi golfi e in nuovi seni. La costiera, formata dal deposito di tre grossi torrenti [3], scende appoggiata a due monti contigui, l’uno detto di san Martino, l’altro, con voce lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo fanno somigliare a una sega: talché non è chi, al primo vederlo, purché sia di fronte, come per esempio di su le mura di Milano che guardano a settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga e vasta giogaia, dagli altri monti di nome più oscuro e di forma più comune. Per un buon pezzo, la costa sale con un pendìo lento e continuo; poi si rompe in poggi e in valloncelli, in erte e in ispianate, secondo l’ossatura de’ due monti, e il lavoro dell’acque. Il lembo estremo, tagliato dalle foci de’ torrenti, è quasi tutto ghiaia e ciottoloni; il resto, campi e vigne, sparse di terre, di ville, di casali; in qualche parte boschi, che si prolungano su per la montagna. Lecco, la principale di quelle terre, e che dà nome al territorio, giace poco discosto dal ponte, alla riva del lago, anzi viene in parte a trovarsi nel lago stesso, quando questo ingrossa: un gran borgo al giorno d’oggi, e che s’incammina a diventar città. Ai tempi in cui accaddero i fatti che prendiamo a raccontare, quel borgo, già considerabile, era anche un castello, e aveva perciò l’onore [4] d’alloggiare un comandante, e il vantaggio di possedere una stabile guarnigione di soldati spagnoli, che insegnavan la modestia alle fanciulle e alle donne del paese, accarezzavan di tempo in tempo le spalle a qualche marito, a qualche padre; e, sul finir dell’estate, non mancavan mai di spandersi nelle vigne, per diradar l’uve, e alleggerire a’ contadini le fatiche della vendemmia. Dall’una all’altra di quelle terre, dall’alture alla riva, da un poggio all’altro, correvano, e corrono tuttavia, strade e stradette, più o men ripide, o piane; ogni tanto affondate, sepolte tra due muri, donde, alzando lo sguardo, non iscoprite che un pezzo di cielo e qualche vetta di monte; ogni tanto elevate su terrapieni aperti: e da qui la vista spazia per prospetti più o meno estesi, ma ricchi sempre e sempre qualcosa nuovi, secondo che i diversi punti piglian più o meno della vasta scena circostante, e secondo che questa o quella parte campeggia o si scorcia, spunta o sparisce a vicenda. Dove un pezzo, dove un altro, dove una lunga distesa di quel vasto e variato specchio dell’acqua; di qua lago, chiuso all’estremità o piùttosto smarrito in un gruppo, in un andirivieni di montagne, e di mano in mano più allargato tra altri monti che si spiegano, a uno a uno, allo sguardo, e che l’acqua riflette capovolti, co’ paesetti posti sulle rive; di là braccio di fiume, poi lago, poi fiume ancora, che va a perdersi in lucido serpeggiamento pur tra’ monti che l’accompagnano, degradando via via, e perdendosi quasi anch’essi nell’orizzonte. Il luogo stesso da dove contemplate que’ vari spettacoli, vi fa spettacolo da ogni parte: il monte di cui passeggiate le falde, vi svolge, al di sopra, d’intorno, le sue cime e le balze, distinte, rilevate, mutabili quasi a ogni passo, aprendosi e contornandosi in gioghi ciò che v’era sembrato prima un sol giogo, e comparendo in vetta ciò che poco innanzi vi si rappresentava sulla costa: e l’ameno, il domestico di quelle falde tempera gradevolmente il selvaggio, e orna vie più il magnifico dell’altre vedute.
+Per una di queste stradicciole, tornava bel bello dalla passeggiata verso casa, sulla sera del giorno 7 novembre dell’anno 1628, don Abbondio, curato d’una delle terre accennate di sopra: il nome di questa, né il casato del personaggio, non si trovan nel manoscritto, né a questo luogo né altrove. Diceva tranquillamente il suo ufizio, e talvolta, tra un salmo e l’altro, chiudeva il breviario, tenendovi dentro, per segno, l’indice della mano destra, e, messa poi questa nell’altra dietro la schiena, proseguiva il suo cammino, guardando a terra, e buttando con un piede verso il muro i ciottoli che facevano inciampo nel sentiero: poi alzava il viso, e, girati oziosamente gli occhi all’intorno, li fissava alla parte d’un monte, dove la luce del sole già scomparso, scappando per i fessi del monte opposto, si dipingeva qua e là sui massi sporgenti, come a larghe e inuguali pezze di porpora. Aperto poi di nuovo il breviario, e recitato un altro squarcio, giunse a una voltata della stradetta, dov’era solito d’alzar sempre gli occhi dal libro, e di guardarsi dinanzi: e così fece anche quel giorno. Dopo la voltata, la strada correva diritta, forse un sessanta passi, e poi si divideva in due viottole, a foggia d’un ipsilon: quella a destra saliva verso il monte, e menava alla cura: l’altra scendeva nella valle fino a un torrente; e da questa parte il muro non arrivava che all’anche del passeggiero. I muri interni delle due viottole, in vece di riunirsi ad angolo, terminavano in un tabernacolo, sul quale eran dipinte certe figure lunghe, serpeggianti, che finivano in punta, e che, nell’intenzion dell’artista, e agli occhi degli abitanti del vicinato, volevan dir fiamme; e, alternate con le fiamme, cert’altre figure da non potersi descrivere, che volevan dire anime del purgatorio: anime e fiamme a color di mattone, sur un fondo bigiognolo, con qualche scalcinatura qua e là. Il curato, voltata la stradetta, e dirizzando, com’era solito, lo sguardo al tabernacolo, vide una cosa che non s’aspettava, e che non avrebbe voluto vedere. Due uomini stavano, l’uno dirimpetto all’altro, al confluente, per dir così, delle due viottole: un di costoro, a cavalcioni sul muricciolo basso, con una gamba spenzolata al di fuori, e l’altro piede posato sul terreno della strada; il compagno, in piedi, appoggiato al muro, con le braccia incrociate sul petto. L’abito, il portamento, e quello che, dal luogo ov’era giunto il curato, si poteva distinguer dell’aspetto, non lasciavan dubbio intorno alla lor condizione. Avevano entrambi intorno al capo una reticella verde, che cadeva sull’omero sinistro, terminata in una gran nappa, e dalla quale usciva sulla fronte un enorme ciuffo: due lunghi mustacchi arricciati in punta: una cintura lucida di cuoio, e a quella attaccate due pistole: un piccol corno ripieno di polvere, cascante sul petto, come una collana: un manico di coltellaccio che spuntava fuori d’un taschino degli ampi e gonfi calzoni: uno spadone, con una gran guardia traforata a lamine d’ottone, congegnate come in cifra, forbite e lucenti: a prima vista si davano a conoscere per individui della specie de’ bravi.
+Questa specie, ora del tutto perduta, era allora floridissima in Lombardia, e già molto antica. Chi non ne avesse idea, ecco alcuni squarci autentici, che potranno darne una bastante de’ suoi caratteri principali, degli sforzi fatti per ispegnerla, e della sua dura e rigogliosa vitalità.
+Fino dall’otto aprile dell’anno 1583, l’Illustrissimo ed Eccellentissimo signor don Carlo d’Aragon, Principe di Castelvetrano, Duca di Terranuova, Marchese d’Avola, Conte di Burgeto, grande Ammiraglio, e gran Contestabile di Sicilia, Governatore di Milano e Capitan Generale di Sua Maestà Cattolica in Italia, pienamente informato della intollerabile miseria in che è vivuta e vive questa città di Milano, per cagione dei bravi e vagabondi, pubblica un bando contro di essi. Dichiara e diffinisce tutti coloro essere compresi in questo bando, e doversi ritenere bravi e vagabondi… i quali, essendo forestieri o del paese, non hanno esercizio alcuno, od avendolo, non lo fanno… ma, senza salario, o pur con esso, s’appoggiano a qualche cavaliere o gentiluomo, officiale o mercante… per fargli spalle e favore, o veramente, come si può presumere, per tendere insidie ad altri… A tutti costoro ordina che, nel termine di giorni sei, abbiano a sgomberare il paese, intima la galera a’ renitenti [5], e dà a tutti gli ufiziali della giustizia le più stranamente ampie e indefinite facoltà, per l’esecuzione dell’ordine. Ma, nell’anno seguente, il 12 aprile, scorgendo il detto signore, che questa Città è tuttavia piena di detti bravi… tornati a vivere come prima vivevano, non punto mutato il costume loro, né scemato il numero, dà fuori un’altra grida, ancor più vigorosa e notabile, nella quale, tra l’altre ordinazioni, prescrive:
+Che qualsivoglia persona, così di questa Città, come forestiera, che per due testimonj consterà esser tenuto, e comunemente riputato per bravo, et aver tal nome, ancorché non si verifichi aver fatto delitto alcuno… per questa sola riputazione di bravo, senza altri indizj, possa dai detti giudici e da ognuno di loro esser posto alla corda et al tormento, per processo informativo… et ancorché non confessi delitto alcuno, tuttavia sia mandato alla galea, per detto triennio, per la sola opinione e nome di bravo, come di sopra. Tutto ciò, e il di più che si tralascia, perché Sua Eccellenza è risoluta di voler essere obbedita da ognuno.
+All’udir parole d’un tanto signore, così gagliarde e sicure, e accompagnate da tali ordini, viene una gran voglia di credere che, al solo rimbombo di esse, tutti i bravi siano scomparsi per sempre. Ma la testimonianza d’un signore non meno autorevole, né meno dotato di nomi, ci obbliga a credere tutto il contrario. È questi l’Illustrissimo ed Eccellentissimo Signor Juan Fernandez de Velasco, Contestabile di Castiglia, Cameriero maggiore di Sua Maestà, Duca della Città di Frias, Conte di Haro e Castelnovo, Signore della Casa di Velasco, e di quella delli sette Infanti di Lara, Governatore dello Stato di Milano, etc. Il 5 giugno dell’anno 1593, pienamente informato anche lui di quanto danno e rovine sieno… i bravi e vagabondi, e del pessimo effetto che tal sorta di gente, fa contra il ben pubblico, et in delusione della giustizia, intima loro di nuovo che, nel termine di giorni sei, abbiano a sbrattare il paese, ripetendo a un dipresso le prescrizioni e le minacce medesime del suo predecessore. Il 23 maggio poi dell’anno 1598, informato, con non poco dispiacere dell’animo suo, che… ogni dì più in questa Città e Stato va crescendo il numero di questi tali(bravi e vagabondi), né di loro, giorno e notte, altro si sente che ferite appostatamente date, omicidii e ruberie et ogni altra qualità di delitti, ai quali si rendono più facili, confidati essi bravi d’essere aiutati dai capi e fautori loro… prescrive di nuovo gli stessi rimedi, accrescendo la dose, come s’usa nelle malattie ostinate. Ognuno dunque, conchiude poi, onninamente si guardi di contravvenire in parte alcuna alla grida presente, perché, in luogo di provare la clemenza di Sua Eccellenza, proverà il rigore, e l’ira sua… essendo risoluta e determinata che questa sia l’ultima e perentoria monizione.
+Non fu però di questo parere l’Illustrissimo ed Eccellentissimo Signore, il Signor Don Pietro Enriquez de Acevedo, Conte di Fuentes, Capitano, e Governatore dello Stato di Milano; non fu di questo parere, e per buone ragioni. Pienamente informato della miseria in che vive questa Città e Stato per cagione del gran numero di bravi che in esso abbonda… e risoluto di totalmente estirpare seme tanto pernizioso, dà fuori, il 5 decembre 1600, una nuova grida piena anch’essa di severissime comminazioni, con fermo proponimento che, con ogni rigore, e senza speranza di remissione, siano onninamente eseguite.
+Convien credere però che non ci si mettesse con tutta quella buona voglia che sapeva impiegare nell’ordir cabale [6], e nel suscitar nemici al suo gran nemico Enrico IV; giacché, per questa parte, la storia attesta come riuscisse ad armare contro quel re il duca di Savoia, a cui fece perder più d’una città; come riuscisse a far congiurare il duca di Biron, a cui fece perder la testa; ma, per ciò che riguarda quel seme tanto pernizioso de’ bravi, certo è che esso continuava a germogliare, il 22 settembre dell’anno 1612. In quel giorno l’Illustrissimo ed Eccellentissimo Signore, il Signor Don Giovanni de Mendozza, Marchese de la Hynojosa, Gentiluomo etc., Governatore etc., pensò seriamente ad estirparlo. A quest’effetto, spedì a Pandolfo e Marco Tullio Malatesti, stampatori regii camerali [7], la solita grida, corretta ed accresciuta, perché la stampassero ad esterminio de’ bravi. Ma questi vissero ancora per ricevere, il 24 decembre dell’anno 1618, gli stessi e più forti colpi dall’Illustrissimo ed Eccellentissimo Signore, il Signor Don Gomez Suarez de Figueroa, Duca di Feria, etc., Governatore etc. Però, non essendo essi morti neppur di quelli, l’Illustrissimo ed Eccellentissimo Signore, il Signor Gonzalo Fernandez di Cordova, sotto il cui governo accadde la passeggiata di don Abbondio, s’era trovato costretto a ricorreggere e ripubblicare la solita grida contro i bravi, il giorno 5 ottobre del 1627, cioè un anno, un mese e due giorni prima di quel memorabile avvenimento.
+Né fu questa l’ultima pubblicazione; ma noi delle posteriori non crediamo dover far menzione, come di cosa che esce dal periodo della nostra storia. Ne accenneremo soltanto una del 13 febbraio dell’anno 1632, nella quale l’Illustrissimo ed Eccellentissimo Signore, el Duque de Feria, per la seconda volta governatore, ci avvisa che le maggiori sceleraggini procedono da quelli che chiamano bravi. Questo basta ad assicurarci che, nel tempo di cui noi trattiamo, c’era de’ bravi tuttavia [8].
+Che i due descritti di sopra stessero ivi ad aspettar qualcheduno, era cosa troppo evidente; ma quel che più dispiacque a don Abbondio fu il dover accorgersi, per certi atti, che l’aspettato era lui. Perché, al suo apparire, coloro s’eran guardati in viso, alzando la testa, con un movimento dal quale si scorgeva che tutt’e due a un tratto avevan detto: è lui; quello che stava a cavalcioni s’era alzato, tirando la sua gamba sulla strada; l’altro s’era staccato dal muro; e tutt’e due gli s’avviavano incontro. Egli, tenendosi sempre il breviario aperto dinanzi, come se leggesse, spingeva lo sguardo in su, per ispiar le mosse di coloro; e, vedendoseli venir proprio incontro, fu assalito a un tratto da mille pensieri. Domandò subito in fretta a se stesso, se, tra i bravi e lui, ci fosse qualche uscita di strada, a destra o a sinistra; e gli sovvenne subito di no. Fece un rapido esame, se avesse peccato contro qualche potente, contro qualche vendicativo; ma, anche in quel turbamento, il testimonio consolante della coscienza lo rassicurava alquanto: i bravi però s’avvicinavano, guardandolo fisso. Mise l’indice e il medio della mano sinistra nel collare, come per raccomodarlo; e, girando le due dita intorno al collo, volgeva intanto la faccia all’indietro, torcendo insieme la bocca, e guardando con la coda dell’occhio, fin dove poteva, se qualcheduno arrivasse; ma non vide nessuno. Diede un’occhiata, al di sopra del muricciolo, ne’ campi: nessuno; un’altra più modesta sulla strada dinanzi; nessuno, fuorché i bravi. Che fare? tornare indietro, non era a tempo: darla a gambe, era lo stesso che dire, inseguitemi, o peggio. Non potendo schivare il pericolo, vi corse incontro, perché i momenti di quell’incertezza erano allora così penosi per lui, che non desiderava altro che d’abbreviarli. Affrettò il passo, recitò un versetto a voce più alta, compose la faccia a tutta quella quiete e ilarità che poté, fece ogni sforzo per preparare un sorriso; quando si trovò a fronte dei due galantuomini, disse mentalmente: ci siamo; e si fermò su due piedi.</p>
+<ul class="simple">
+<li><p>Signor curato, - disse un di que’ due, piantandogli gli occhi in faccia.</p></li>
+<li><p>Cosa comanda? - rispose subito don Abbondio, alzando i suoi dal libro, che gli restò spalancato nelle mani, come sur un leggìo.</p></li>
+<li><p>Lei ha intenzione, - proseguì l’altro, con l’atto minaccioso e iracondo di chi coglie un suo inferiore sull’intraprendere una ribalderia, - lei ha intenzione di maritar domani Renzo Tramaglino e Lucia Mondella!</p></li>
+<li><p>Cioè… - rispose, con voce tremolante, don Abbondio: - cioè. Lor signori son uomini di mondo, e sanno benissimo come vanno queste faccende. Il povero curato non c’entra: fanno i loro pasticci tra loro, e poi… e poi, vengon da noi, come s’anderebbe a un banco a riscotere; e noi… noi siamo i servitori del comune [9].</p></li>
+<li><p>Or bene, - gli disse il bravo, all’orecchio, ma in tono solenne di comando, - questo matrimonio non s’ha da fare, né domani, né mai.</p></li>
+<li><p>Ma, signori miei, - replicò don Abbondio, con la voce mansueta e gentile di chi vuol persuadere un impaziente, - ma, signori miei, si degnino di mettersi ne’ miei panni. Se la cosa dipendesse da me,… vedon bene che a me non me ne vien nulla in tasca…</p></li>
+<li><p>Orsù, - interruppe il bravo, - se la cosa avesse a decidersi a ciarle, lei ci metterebbe in sacco. Noi non ne sappiamo, né vogliam saperne di più. Uomo avvertito… lei c’intende.</p></li>
+<li><p>Ma lor signori son troppo giusti, troppo ragionevoli…</p></li>
+<li><p>Ma, - interruppe questa volta l’altro compagnone, che non aveva parlato fin allora, - ma il matrimonio non si farà, o… - e qui una buona bestemmia, - o chi lo farà non se ne pentirà, perché non ne avrà tempo, e… - un’altra bestemmia.</p></li>
+<li><p>Zitto, zitto, - riprese il primo oratore: - il signor curato è un uomo che sa il viver del mondo; e noi siam galantuomini, che non vogliam fargli del male, purché abbia giudizio. Signor curato, l’illustrissimo signor don Rodrigo nostro padrone la riverisce caramente.
+Questo nome fu, nella mente di don Abbondio, come, nel forte d’un temporale notturno, un lampo che illumina momentaneamente e in confuso gli oggetti, e accresce il terrore. Fece, come per istinto, un grand’inchino, e disse: - se mi sapessero suggerire…</p></li>
+<li><p>Oh! suggerire a lei che sa di latino! - interruppe ancora il bravo, con un riso tra lo sguaiato e il feroce. - A lei tocca. E sopra tutto, non si lasci uscir parola su questo avviso che le abbiam dato per suo bene; altrimenti… ehm… sarebbe lo stesso che fare quel tal matrimonio. Via, che vuol che si dica in suo nome all’illustrissimo signor don Rodrigo?</p></li>
+<li><p>Il mio rispetto…</p></li>
+<li><p>Si spieghi meglio!
+-… Disposto… disposto sempre all’ubbidienza -. E, proferendo queste parole, non sapeva nemmen lui se faceva una promessa, o un complimento. I bravi le presero, o mostraron di prenderle nel significato più serio.</p></li>
+<li><p>Benissimo, e buona notte, messere, - disse l’un d’essi, in atto di partir col compagno. Don Abbondio, che, pochi momenti prima, avrebbe dato un occhio per iscansarli, allora avrebbe voluto prolungar la conversazione e le trattative. - Signori… - cominciò, chiudendo il libro con le due mani; ma quelli, senza più dargli udienza, presero la strada dond’era lui venuto, e s’allontanarono, cantando una canzonaccia che non voglio trascrivere. Il povero don Abbondio rimase un momento a bocca aperta, come incantato; poi prese quella delle due stradette che conduceva a casa sua, mettendo innanzi a stento una gamba dopo l’altra, che parevano aggranchiate. Come stesse di dentro, s’intenderà meglio, quando avrem detto qualche cosa del suo naturale [10], e de’ tempi in cui gli era toccato di vivere.
+Don Abbondio (il lettore se n’è già avveduto) non era nato con un cuor di leone. Ma, fin da’ primi suoi anni, aveva dovuto comprendere che la peggior condizione, a que’ tempi, era quella d’un animale senza artigli e senza zanne, e che pure non si sentisse inclinazione d’esser divorato. La forza legale non proteggeva in alcun conto l’uomo tranquillo, inoffensivo, e che non avesse altri mezzi di far paura altrui. Non già che mancassero leggi e pene contro le violenze private. Le leggi anzi diluviavano; i delitti erano enumerati, e particolareggiati, con minuta prolissità; le pene, pazzamente esorbitanti e, se non basta, aumentabili, quasi per ogni caso, ad arbitrio del legislatore stesso e di cento esecutori; le procedure, studiate soltanto a liberare il giudice da ogni cosa che potesse essergli d’impedimento a proferire una condanna: gli squarci che abbiam riportati delle gride contro i bravi, ne sono un piccolo, ma fedel saggio. Con tutto ciò, anzi in gran parte a cagion di ciò, quelle gride, ripubblicate e rinforzate di governo in governo, non servivano ad altro che ad attestare ampollosamente l’impotenza de’ loro autori; o, se producevan qualche effetto immediato, era principalmente d’aggiunger molte vessazioni a quelle che i pacifici e i deboli già soffrivano da’ perturbatori, e d’accrescer le violenze e l’astuzia di questi. L’impunità era organizzata, e aveva radici che le gride non toccavano, o non potevano smovere. Tali eran gli asili [11], tali i privilegi d’alcune classi, in parte riconosciuti dalla forza legale, in parte tollerati con astioso silenzio, o impugnati con vane proteste, ma sostenuti in fatto e difesi da quelle classi, con attività d’interesse, e con gelosia di puntiglio. Ora, quest’impunità minacciata e insultata, ma non distrutta dalle gride, doveva naturalmente, a ogni minaccia, e a ogni insulto, adoperar nuovi sforzi e nuove invenzioni, per conservarsi. Così accadeva in effetto; e, all’apparire delle gride dirette a comprimere i violenti, questi cercavano nella loro forza reale i nuovi mezzi più opportuni, per continuare a far ciò che le gride venivano a proibire. Potevan ben esse inceppare [12] a ogni passo, e molestare l’uomo bonario, che fosse senza forza propria e senza protezione; perché, col fine d’aver sotto la mano ogni uomo, per prevenire o per punire ogni delitto, assoggettavano ogni mossa del privato al volere arbitrario d’esecutori d’ogni genere. Ma chi, prima di commettere il delitto, aveva prese le sue misure per ricoverarsi a tempo in un convento, in un palazzo, dove i birri non avrebber mai osato metter piede; chi, senz’altre precauzioni, portava una livrea che impegnasse a difenderlo la vanità e l’interesse d’una famiglia potente, di tutto un ceto, era libero nelle sue operazioni, e poteva ridersi di tutto quel fracasso delle gride. Di quegli stessi ch’eran deputati a farle eseguire, alcuni appartenevano per nascita alla parte privilegiata, alcuni ne dipendevano per clientela; gli uni e gli altri, per educazione, per interesse, per consuetudine, per imitazione, ne avevano abbracciate le massime, e si sarebbero ben guardati dall’offenderle, per amor d’un pezzo di carta attaccato sulle cantonate. Gli uomini poi incaricati dell’esecuzione immediata, quando fossero stati intraprendenti come eroi, ubbidienti come monaci, e pronti a sacrificarsi come martiri, non avrebber però potuto venirne alla fine, inferiori com’eran di numero a quelli che si trattava di sottomettere, e con una gran probabilità d’essere abbandonati da chi, in astratto e, per così dire, in teoria, imponeva loro di operare. Ma, oltre di ciò, costoro eran generalmente de’ più abbietti e ribaldi soggetti del loro tempo; l’incarico loro era tenuto a vile anche da quelli che potevano averne terrore, e il loro titolo un improperio. Era quindi ben naturale che costoro, in vece d’arrischiare, anzi di gettar la vita in un’impresa disperata, vendessero la loro inazione, o anche la loro connivenza ai potenti, e si riservassero a esercitare la loro esecrata autorità e la forza che pure avevano, in quelle occasioni dove non c’era pericolo; nell’opprimer cioè, e nel vessare gli uomini pacifici e senza difesa.
+L’uomo che vuole offendere, o che teme, ogni momento, d’essere offeso, cerca naturalmente alleati e compagni. Quindi era, in que’ tempi, portata al massimo punto la tendenza degl’individui a tenersi collegati in classi, a formarne delle nuove, e a procurare ognuno la maggior potenza di quella a cui apparteneva. Il clero vegliava a sostenere e ad estendere le sue immunità, la nobiltà i suoi privilegi, il militare le sue esenzioni. I mercanti, gli artigiani erano arrolati in maestranze e in confraternite, i giurisperiti formavano una lega, i medici stessi una corporazione. Ognuna di queste piccole oligarchie aveva una sua forza speciale e propria; in ognuna l’individuo trovava il vantaggio d’impiegar per sé, a proporzione della sua autorità e della sua destrezza, le forze riunite di molti. I più onesti si valevan di questo vantaggio a difesa soltanto; gli astuti e i facinorosi ne approfittavano, per condurre a termine ribalderie, alle quali i loro mezzi personali non sarebber bastati, e per assicurarsene l’impunità. Le forze però di queste varie leghe eran molto disuguali; e, nelle campagne principalmente, il nobile dovizioso e violento, con intorno uno stuolo di bravi, e una popolazione di contadini avvezzi, per tradizione famigliare, e interessati o forzati a riguardarsi quasi come sudditi e soldati del padrone, esercitava un potere, a cui difficilmente nessun’altra frazione di lega avrebbe ivi potuto resistere.
+Il nostro Abbondio non nobile, non ricco, coraggioso ancor meno, s’era dunque accorto, prima quasi di toccar gli anni della discrezione, d’essere, in quella società, come un vaso di terra cotta, costretto a viaggiare in compagnia di molti vasi di ferro. Aveva quindi, assai di buon grado, ubbidito ai parenti [13], che lo vollero prete. Per dir la verità, non aveva gran fatto pensato agli obblighi e ai nobili fini del ministero al quale si dedicava: procacciarsi di che vivere con qualche agio, e mettersi in una classe riverita e forte, gli eran sembrate due ragioni più che sufficienti per una tale scelta. Ma una classe qualunque non protegge un individuo, non lo assicura, che fino a un certo segno: nessuna lo dispensa dal farsi un suo sistema particolare. Don Abbondio, assorbito continuamente ne’ pensieri della propria quiete, non si curava di que’ vantaggi, per ottenere i quali facesse bisogno d’adoperarsi molto, o d’arrischiarsi un poco. Il suo sistema consisteva principalmente nello scansar tutti i contrasti, e nel cedere, in quelli che non poteva scansare. Neutralità disarmata in tutte le guerre che scoppiavano intorno a lui, dalle contese, allora frequentissime, tra il clero e le podestà laiche, tra il militare e il civile, tra nobili e nobili, fino alle questioni tra due contadini, nate da una parola, e decise coi pugni, o con le coltellate. Se si trovava assolutamente costretto a prender parte tra due contendenti, stava col più forte, sempre però alla retroguardia, e procurando di far vedere all’altro ch’egli non gli era volontariamente nemico: pareva che gli dicesse: ma perché non avete saputo esser voi il più forte? ch’io mi sarei messo dalla vostra parte. Stando alla larga da’ prepotenti, dissimulando [14] le loro soverchierie passeggiere e capricciose, corrispondendo con sommissioni a quelle che venissero da un’intenzione più seria e più meditata, costringendo, a forza d’inchini e di rispetto gioviale, anche i più burberi e sdegnosi, a fargli un sorriso, quando gl’incontrava per la strada, il pover’uomo era riuscito a passare i sessant’anni, senza gran burrasche.
+Non è però che non avesse anche lui il suo po’ di fiele in corpo; e quel continuo esercitar la pazienza, quel dar così spesso ragione agli altri, que’ tanti bocconi amari inghiottiti in silenzio, glielo avevano esacerbato a segno che, se non avesse, di tanto in tanto, potuto dargli un po’ di sfogo, la sua salute n’avrebbe certamente sofferto. Ma siccome v’eran poi finalmente al mondo, e vicino a lui, persone ch’egli conosceva ben bene per incapaci di far male, così poteva con quelle sfogare qualche volta il mal umore lungamente represso, e cavarsi anche lui la voglia d’essere un po’ fantastico [15], e di gridare a torto. Era poi un rigido censore degli uomini che non si regolavan come lui, quando però la censura potesse esercitarsi senza alcuno, anche lontano, pericolo. Il battuto era almeno un imprudente; l’ammazzato era sempre stato un uomo torbido. A chi, messosi a sostener le sue ragioni contro un potente, rimaneva col capo rotto, don Abbondio sapeva trovar sempre qualche torto; cosa non difficile, perché la ragione e il torto non si dividon mai con un taglio così netto, che ogni parte abbia soltanto dell’una o dell’altro. Sopra tutto poi, declamava contro que’ suoi confratelli che, a loro rischio, prendevan le parti d’un debole oppresso, contro un soverchiatore potente. Questo chiamava un comprarsi gl’impicci a contanti, un voler raddirizzar le gambe ai cani; diceva anche severamente, ch’era un mischiarsi nelle cose profane, a danno della dignità del sacro ministero. E contro questi predicava, sempre però a quattr’occhi, o in un piccolissimo crocchio, con tanto più di veemenza, quanto più essi eran conosciuti per alieni dal risentirsi, in cosa che li toccasse personalmente. Aveva poi una sua sentenza prediletta, con la quale sigillava sempre i discorsi su queste materie: che a un galantuomo, il qual badi a sé, e stia ne’ suoi panni, non accadon mai brutti incontri.
+Pensino ora i miei venticinque lettori che impressione dovesse fare sull’animo del poveretto, quello che s’è raccontato. Lo spavento di que’ visacci e di quelle parolacce, la minaccia d’un signore noto per non minacciare invano, un sistema di quieto vivere, ch’era costato tant’anni di studio e di pazienza, sconcertato in un punto, e un passo dal quale non si poteva veder come uscirne: tutti questi pensieri ronzavano tumultuariamente nel capo basso di don Abbondio. “Se Renzo si potesse mandare in pace con un bel no, via; ma vorrà delle ragioni; e cosa ho da rispondergli, per amor del cielo? E, e, e, anche costui è una testa: un agnello se nessun lo tocca, ma se uno vuol contraddirgli… ih! E poi, e poi, perduto dietro a quella Lucia, innamorato come… Ragazzacci, che, per non saper che fare, s’innamorano, voglion maritarsi, e non pensano ad altro; non si fanno carico de’ travagli in che mettono un povero galantuomo. Oh povero me! vedete se quelle due figuracce dovevan proprio piantarsi sulla mia strada, e prenderla con me! Che c’entro io? Son io che voglio maritarmi? Perché non son andati piuttosto a parlare… Oh vedete un poco: gran destino è il mio, che le cose a proposito mi vengan sempre in mente un momento dopo l’occasione. Se avessi pensato di suggerir loro che andassero a portar la loro imbasciata…” Ma, a questo punto, s’accorse che il pentirsi di non essere stato consigliere e cooperatore dell’iniquità era cosa troppo iniqua; e rivolse tutta la stizza de’ suoi pensieri contro quell’altro che veniva così a togliergli la sua pace. Non conosceva don Rodrigo che di vista e di fama, né aveva mai avuto che far con lui, altro che di toccare il petto col mento, e la terra con la punta del suo cappello, quelle poche volte che l’aveva incontrato per la strada. Gli era occorso di difendere, in più d’un’occasione, la riputazione di quel signore, contro coloro che, a bassa voce, sospirando, e alzando gli occhi al cielo, maledicevano qualche suo fatto: aveva detto cento volte ch’era un rispettabile cavaliere. Ma, in quel momento gli diede in cuor suo tutti que’ titoli che non aveva mai udito applicargli da altri, senza interrompere in fretta con un oibò. Giunto, tra il tumulto di questi pensieri, alla porta di casa sua, ch’era in fondo del paesello, mise in fretta nella toppa la chiave, che già teneva in mano; aprì, entrò, richiuse diligentemente; e, ansioso di trovarsi in una compagnia fidata, chiamò subito: - Perpetua! Perpetua! -, avviandosi pure verso il salotto, dove questa doveva esser certamente ad apparecchiar la tavola per la cena. Era Perpetua, come ognun se n’avvede, la serva di don Abbondio: serva affezionata e fedele, che sapeva ubbidire e comandare, secondo l’occasione, tollerare a tempo il brontolìo e le fantasticaggini del padrone, e fargli a tempo tollerar le proprie, che divenivan di giorno in giorno più frequenti, da che aveva passata l’età sinodale dei quaranta [16], rimanendo celibe, per aver rifiutati tutti i partiti che le si erano offerti, come diceva lei, o per non aver mai trovato un cane che la volesse, come dicevan le sue amiche.</p></li>
+<li><p>Vengo, - rispose, mettendo sul tavolino, al luogo solito, il fiaschetto del vino prediletto di don Abbondio, e si mosse lentamente; ma non aveva ancor toccata la soglia del salotto, ch’egli v’entrò, con un passo così legato, con uno sguardo così adombrato, con un viso così stravolto, che non ci sarebbero nemmen bisognati gli occhi esperti di Perpetua, per iscoprire a prima vista che gli era accaduto qualche cosa di straordinario davvero.</p></li>
+<li><p>Misericordia! cos’ha, signor padrone?</p></li>
+<li><p>Niente, niente, - rispose don Abbondio, lasciandosi andar tutto ansante sul suo seggiolone.</p></li>
+<li><p>Come, niente? La vuol dare ad intendere a me? così brutto com’è? Qualche gran caso è avvenuto.</p></li>
+<li><p>Oh, per amor del cielo! Quando dico niente, o è niente, o è cosa che non posso dire.</p></li>
+<li><p>Che non può dir neppure a me? Chi si prenderà cura della sua salute? Chi le darà un parere?…</p></li>
+<li><p>Ohimè! tacete, e non apparecchiate altro: datemi un bicchiere del mio vino.</p></li>
+<li><p>E lei mi vorrà sostenere che non ha niente! - disse Perpetua, empiendo il bicchiere, e tenendolo poi in mano, come se non volesse darlo che in premio della confidenza che si faceva tanto aspettare.</p></li>
+<li><p>Date qui, date qui, - disse don Abbondio, prendendole il bicchiere, con la mano non ben ferma, e votandolo poi in fretta, come se fosse una medicina.</p></li>
+<li><p>Vuol dunque ch’io sia costretta di domandar qua e là cosa sia accaduto al mio padrone? - disse Perpetua, ritta dinanzi a lui, con le mani arrovesciate sui fianchi, e le gomita appuntate davanti, guardandolo fisso, quasi volesse succhiargli dagli occhi il segreto.</p></li>
+<li><p>Per amor del cielo! non fate pettegolezzi, non fate schiamazzi: ne va… ne va la vita!</p></li>
+<li><p>La vita!</p></li>
+<li><p>La vita.</p></li>
+<li><p>Lei sa bene che, ogni volta che m’ha detto qualche cosa sinceramente, in confidenza, io non ho mai…</p></li>
+<li><p>Brava! come quando…
+Perpetua s’avvide d’aver toccato un tasto falso; onde, cambiando subito il tono, - signor padrone, - disse, con voce commossa e da commovere, - io le sono sempre stata affezionata; e, se ora voglio sapere, è per premura, perché vorrei poterla soccorrere, darle un buon parere, sollevarle l’animo…
+Il fatto sta che don Abbondio aveva forse tanta voglia di scaricarsi del suo doloroso segreto, quanta ne avesse Perpetua di conoscerlo; onde, dopo aver respinti sempre più debolmente i nuovi e più incalzanti assalti di lei, dopo averle fatto più d’una volta giurare che non fiaterebbe, finalmente, con molte sospensioni, con molti ohimè, le raccontò il miserabile caso. Quando si venne al nome terribile del mandante, bisognò che Perpetua proferisse un nuovo e più solenne giuramento; e don Abbondio, pronunziato quel nome, si rovesciò sulla spalliera della seggiola, con un gran sospiro, alzando le mani, in atto insieme di comando e di supplica, e dicendo: - per amor del cielo!</p></li>
+<li><p>Delle sue! - esclamò Perpetua. - Oh che birbone! oh che soverchiatore! oh che uomo senza timor di Dio!</p></li>
+<li><p>Volete tacere? o volete rovinarmi del tutto?</p></li>
+<li><p>Oh! siam qui soli che nessun ci sente. Ma come farà, povero signor padrone?</p></li>
+<li><p>Oh vedete, - disse don Abbondio, con voce stizzosa: - vedete che bei pareri mi sa dar costei! Viene a domandarmi come farò, come farò; quasi fosse lei nell’impiccio, e toccasse a me di levarnela.</p></li>
+<li><p>Ma! io l’avrei bene il mio povero parere da darle; ma poi…</p></li>
+<li><p>Ma poi, sentiamo.</p></li>
+<li><p>Il mio parere sarebbe che, siccome tutti dicono che il nostro arcivescovo [17] è un sant’uomo, e un uomo di polso, e che non ha paura di nessuno, e, quando può fare star a dovere un di questi prepotenti, per sostenere un curato, ci gongola; io direi, e dico che lei gli scrivesse una bella lettera, per informarlo come qualmente…</p></li>
+<li><p>Volete tacere? volete tacere? Son pareri codesti da dare a un pover’uomo? Quando mi fosse toccata una schioppettata nella schiena, Dio liberi! l’arcivescovo me la leverebbe?</p></li>
+<li><p>Eh! le schioppettate non si dànno via come confetti: e guai se questi cani dovessero mordere tutte le volte che abbaiano! E io ho sempre veduto che a chi sa mostrare i denti, e farsi stimare, gli si porta rispetto; e, appunto perché lei non vuol mai dir la sua ragione, siam ridotti a segno che tutti vengono, con licenza, a…</p></li>
+<li><p>Volete tacere?</p></li>
+<li><p>Io taccio subito; ma è però certo che, quando il mondo s’accorge che uno, sempre, in ogni incontro, è pronto a calar le…</p></li>
+<li><p>Volete tacere? È tempo ora di dir codeste baggianate?</p></li>
+<li><p>Basta: ci penserà questa notte; ma intanto non cominci a farsi male da sé, a rovinarsi la salute; mangi un boccone.</p></li>
+<li><p>Ci penserò io, - rispose, brontolando, don Abbondio: - sicuro; io ci penserò, io ci ho da pensare - E s’alzò, continuando: - non voglio prender niente; niente: ho altra voglia: lo so anch’io che tocca a pensarci a me. Ma! la doveva accader per l’appunto a me.</p></li>
+<li><p>Mandi almen giù quest’altro gocciolo, - disse Perpetua, mescendo. - Lei sa che questo le rimette sempre lo stomaco.</p></li>
+<li><p>Eh! ci vuol altro, ci vuol altro, ci vuol altro. Così dicendo prese il lume, e, brontolando sempre: - una piccola bagattella! a un galantuomo par mio! e domani com’andrà? - e altre simili lamentazioni, s’avviò per salire in camera. Giunto su la soglia, si voltò indietro verso Perpetua, mise il dito sulla bocca, disse, con tono lento e solenne : - per amor del cielo! -, e disparve.</p></li>
+</ul>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright # CC-BY 2017 - 2020, David Leoni, Alessio Zamboni, Marco Caresia
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

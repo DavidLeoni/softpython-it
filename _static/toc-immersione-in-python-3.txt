@@ -1,0 +1,348 @@
+
+
+        IMMERSIONE IN PYTHON 3
+
+
+   SOMMARIO
+   
+   Prefazione  1
+   Cosa c'è di nuovo in "Immersione in Python 3"  4
+   Installare Python  7
+   Il vostro primo programma Python  38
+   Tipi di dato nativi  58
+   Descrizioni  97
+   Stringhe  112
+   Espressioni regolari  134
+   Chiusure & generatori  159
+   Classi & iteratori  178
+   Uso avanzato degli iteratori  195
+   Test di unità  220
+   Refactoring  255
+   File  274
+   XML  299
+   Serializzare oggetti Python  325
+   Servizi web HTTP  351
+   Caso di studio: convertire chardet verso Python 3  396
+   Distribuire librerie Python  434
+   Convertire codice verso Python 3 con 2to3  456
+   Nomi dei metodi speciali  487
+   Dove proseguire da qui  507
+
+
+
+   INDICE
+
+    
+   Prefazione  1
+   Cosa c’è di nuovo in “Immersione in Python 3”  4
+      alias “il livello meno”  4
+   Installare Python  7
+      Immersione!  7
+      Quale Python vi serve?  7
+      Installare su Microsoft Windows  8
+      Installare su Mac OS X  16
+      Installare su Ubuntu Linux  26
+      Installare su altre piattaforme  33
+      Usare la Shell Python  33
+      Editor e IDE per Python  37
+   Il vostro primo programma Python  38
+      Immersione!  38
+      Dichiarare funzioni  41
+         Argomenti opzionali e con nome  42
+      Scrivere codice leggibile  44
+         Stringhe di documentazione  44
+      Il percorso di ricerca di import  46
+      Ogni cosa è un oggetto  47
+         Che cos’è un oggetto?  49
+      Indentare il codice  49
+      Eccezioni  51
+         Catturare gli errori di importazione  53
+      Variabili non legate  54
+      Ogni cosa è sensibile alle maiuscole  55
+      Eseguire gli script  56
+      Letture di approfondimento  57
+   Tipi di dato nativi  58
+      Immersione!  58
+      Booleani  59
+      Numeri  61
+         Convertire interi in reali e viceversa  61
+         Operazioni comuni sui numeri  62
+         Frazioni  64
+         Trigonometria  64
+         Numeri in un contesto logico  65
+      Liste  67
+         Creare una lista  67
+         Affettare una lista  68
+         Aggiungere elementi a una lista  69
+         Cercare valori in una lista  72
+         Rimuovere elementi da una lista  73
+         Rimuovere elementi da una lista: giro bonus  74
+         Liste in un contesto logico  76
+      Tuple  76
+         Tuple in un contesto logico  79
+         Assegnare più di un valore alla volta  80
+      Insiemi  81
+         Creare un insieme  81
+         Modificare un insieme  83
+         Rimuovere elementi da un insieme  84
+         Operazioni comuni sugli insiemi  86
+         Insiemi in un contesto logico  89
+      Dizionari  90
+         Creare un dizionario  90
+         Modificare un dizionario  91
+         Dizionari a valori misti  92
+         Dizionari in un contesto logico  94
+      None  94
+         None in un contesto logico  95
+      Letture di approfondimento  96
+   Descrizioni  97
+      Immersione!  97
+      Lavorare con i file e le directory  97
+         La directory di lavoro corrente  98
+         Lavorare con i nomi di file e directory  99
+         Elencare il contenuto delle directory  101
+         Ottenere metadati sui file  103
+         Costruire nomi di percorso assoluti  104
+      Descrizioni di lista  105
+      Descrizioni di dizionario  107
+         Altra roba divertente da fare con le descrizioni di dizionario  109
+      Descrizioni di insieme  110
+      Letture di approfondimento  111
+   Stringhe  112
+      Alcune cose noiose che avete bisogno di sapere prima di potervi immergere  112
+      Unicode  115
+      Immersione!  118
+      Formattare le stringhe  119
+         Nomi di campo composti  121
+         Specifiche di formato  123
+      Altri metodi di uso comune per le stringhe  124
+         Affettare una stringa  127
+      Stringhe vs. byte  128
+      Post Scriptum: codifica di caratteri per il codice sorgente Python  132
+      Letture di approfondimento  132
+   Espressioni regolari  134
+      Immersione!  134
+      Caso di studio: indirizzi delle vie  135
+      Caso di studio: numeri romani  138
+         Controllare le migliaia  139
+         Controllare le centinaia  140
+      Usare la sintassi {n,m}  143
+         Controllare le decine e le unità  144
+      Espressioni regolari verbose  148
+      Caso di studio: riconoscere i numeri di telefono  150
+      Riepilogo  157
+   Chiusure & generatori  159
+      Immersione!  159
+      Ho capito, usiamo le espressioni regolari!  160
+      Una lista di funzioni  164
+      Una lista di pattern  168
+      Un file di pattern  170
+      Generatori  172
+         Un generatore di Fibonacci  174
+         Un generatore di regole per i sostantivi plurali  175
+      Letture di approfondimento  177
+   Classi & iteratori  178
+      Immersione!  178
+      Definire le classi  179
+         Il metodo __init__()  180
+      Istanziare le classi  181
+      Variabili di istanza  182
+      Un iteratore di Fibonacci  184
+      Un iteratore di regole per i sostantivi plurali  186
+      Letture di approfondimento  194
+   Uso avanzato degli iteratori  195
+      Immersione!  195
+      Trovare tutte le occorrenze di un pattern  198
+      Eliminare gli elementi ripetuti da una sequenza  200
+      Fare asserzioni  201
+      Espressioni generatore  202
+      Calcolare le permutazioni… in maniera ritardata!  203
+      Altra roba divertente nel modulo itertools  206
+      Un nuovo tipo di manipolazione di stringhe  211
+      Valutare stringhe arbitrarie come espressioni Python  213
+      Mettere tutto insieme  218
+      Letture di approfondimento  219
+   Test di unità  220
+      Immersione! (Oppure no?)  220
+      Una singola domanda  222
+      “Fermati e prendi fuoco”  230
+      Più fermate, più fuoco  236
+      E ancora una cosa…  240
+      Una piacevole simmetria  244
+      Altri ingressi non validi  250
+   Refactoring  255
+      Immersione!  255
+      Gestire il cambiamento dei requisiti  259
+      Refactoring  266
+      Riepilogo  273
+   File  274
+      Immersione!  274
+      Leggere dai file di testo  274
+         La codifica di carattere solleva la sua ripugnante testa  275
+         Oggetti stream  276
+         Leggere dati da un file di testo  277
+         Chiudere i file  280
+         Chiudere i file automaticamente  281
+         Leggere i dati una riga alla volta  282
+      Scrivere sui file di testo  285
+         La codifica di carattere, ancora una volta  286
+      File binari  287
+      Oggetti stream per sorgenti diverse dai file  289
+         Lavorare con i file compressi  291
+      I canali standard di ingresso, uscita ed errore  293
+         Redirigere il canale standard di uscita  294
+      Letture di approfondimento  298
+   XML  299
+      Immersione!  299
+      Un corso accelerato di XML in 5 minuti  302
+      La struttura di un feed Atom  305
+      Riconoscere XML  308
+         Gli elementi sono liste  309
+         Gli attributi sono dizionari  310
+      Cercare nodi all’interno di un documento XML  311
+      Proseguire con lxml  315
+      Generare XML  318
+      Riconoscere documenti XML contenenti errori di malformazione  321
+      Letture di approfondimento  324
+   Serializzare oggetti Python  325
+      Immersione!  325
+         Una nota rapida sugli esempi di questo capitolo  326
+      Salvare dati in un file pickle  326
+      Caricare dati da un file pickle  328
+      Serializzare senza un file  331
+      I byte e le stringhe sollevano ancora la loro ripugnante testa  332
+      Effettuare il debug dei file pickle  332
+      Serializzare oggetti Python per leggerli con altri linguaggi  336
+      Salvare i dati in un file JSON  337
+      Correlare i tipi di dato Python a JSON  339
+      Serializzare tipi di dato non supportati da JSON  340
+      Caricare dati da un file JSON  345
+      Letture di approfondimento  349
+   Servizi web HTTP  351
+      Immersione!  351
+      Le caratteristiche di HTTP  352
+         La cache  352
+         Il controllo della modifica più recente  354
+         Il controllo degli ETag  356
+         La compressione  358
+         Le redirezioni  358
+      Come non prelevare dati via HTTP  360
+      Cosa viene trasmesso attraverso la rete?  361
+      Una introduzione ad httplib2  366
+         Una breve digressione per spiegare perché httplib2 restituisce byte invece di stringhe  370
+         Come httplib2 gestisce la cache  371
+         Come httplib2 gestisce le intestazioni Last-Modified ed ETag  376
+         Come http2lib gestisce la compressione  379
+         Come httplib2 gestisce le redirezioni  380
+      Oltre HTTP GET  386
+      Oltre HTTP POST  392
+      Letture di approfondimento  394
+   Caso di studio: convertire chardet verso Python 3  396
+      Immersione!  396
+      Che cos’è il riconoscimento automatico delle codifiche di carattere?  397
+         Ma non è impossibile?  397
+         Esiste un algoritmo di questo tipo?  397
+      Una introduzione al modulo chardet  398
+         UTF-n con BOM  399
+         Codifiche con escape  399
+         Codifiche multibyte  399
+         Codifiche a singolo byte  401
+         windows-1252  402
+      Eseguire 2to3  402
+      Una breve digressione sui moduli multifile  407
+      Risolvere quello che 2to3 non può  409
+         False è sintassi non valida  409
+         Nessun modulo chiamato constants  410
+         Il nome 'file' non è definito  412
+         Impossibile usare un pattern di stringa su un oggetto tipo bytes  413
+         Impossibile convertire implicitamente un oggetto 'bytes' in str  416
+         Tipi di operando non supportati per +: 'int' e 'bytes'  420
+         ord() si aspetta una stringa di lunghezza 1, ma trova un int  422
+         Tipi non ordinabili: int() >= str()  425
+         Il nome globale 'reduce' non è definito  429
+      Riepilogo  433
+   Distribuire librerie Python  434
+      Immersione!  434
+      Cose che Distutils non può fare per voi  436
+      La struttura delle directory  437
+      Scrivere il vostro programma di installazione  439
+      Classificare il vostro pacchetto  441
+         Esempi di buoni classificatori  443
+      Specificare file aggiuntivi con un manifesto  444
+      Controllare che il vostro programma di installazione non contenga errori  445
+      Creare una distribuzione dei sorgenti  446
+      Creare un programma di installazione grafico  449
+         Assemblare pacchetti di installazione per altri sistemi operativi  451
+      Aggiungere il vostro software all’Indice dei Pacchetti Python  452
+      I molti possibili futuri della distribuzione di librerie Python  454
+      Letture di approfondimento  455
+   Convertire codice verso Python 3 con 2to3  456
+      Immersione!  456
+      L’istruzione print  456
+      Letterali stringa Unicode  457
+      La funzione globale unicode()  458
+      Il tipo di dato long  458
+      Il confronto di disuguaglianza con <>  459
+      Il metodo has_key() per i dizionari  459
+      Metodi dei dizionari che restituiscono liste  460
+      Moduli che sono stati rinominati o riorganizzati  461
+         http  461
+         urllib  461
+         dbm  463
+         xmlrpc  463
+         Altri moduli  463
+      Importazioni relative all’interno di un pacchetto  464
+      Il metodo next() degli iteratori  466
+      La funzione globale filter()  467
+      La funzione globale map()  467
+      La funzione globale reduce()  468
+      La funzione globale apply()  468
+      La funzione globale intern()  469
+      L’istruzione exec  469
+      L’istruzione execfile  470
+      I letterali repr (i backtick)  470
+      L’istruzione try...except  471
+      L’istruzione raise  472
+      Il metodo throw dei generatori  472
+      La funzione globale xrange()  473
+      Le funzioni globali raw_input() e input()  474
+      Gli attributi func_* delle funzioni  474
+      Il metodo di I/O xreadlines()  475
+      Funzioni lambda che accettano una tupla invece di parametri multipli  476
+      Attributi speciali dei metodi  477
+      Il metodo speciale __nonzero__  477
+      Letterali in base otto  478
+      sys.maxint  478
+      La funzione globale callable()  478
+      La funzione globale zip()  479
+      L’eccezione di tipo StandardError  479
+      Le costanti del modulo types  479
+      La funzione globale isinstance()  480
+      Il tipo di dato basestring  481
+      Il modulo itertools  481
+      sys.exc_type, sys.exc_value, sys.exc_traceback  482
+      Descrizioni di lista sulle tuple  482
+      La funzione os.getcwdu()  482
+      Metaclassi  483
+      Questioni di stile  483
+         Letterali set() (esplicita)  484
+         La funzione globale buffer() (esplicita)  484
+         Gli spazi bianchi attorno alle virgole (esplicita)  485
+         Idiomi comuni (esplicita)  485
+   Nomi dei metodi speciali  487
+      Immersione!  487
+      Le basi  487
+      Classi che si comportano come iteratori  488
+      Attributi calcolati  489
+      Classi che si comportano come funzioni  492
+      Classi che si comportano come insiemi  494
+      Classi che si comportano come dizionari  496
+      Classi che si comportano come numeri  497
+      Classi che possono essere confrontate  501
+      Classi che possono essere serializzate  502
+      Classi che possono essere usate in un blocco with  503
+      Roba veramente esoterica  505
+      Letture di approfondimento  506
+   Dove proseguire da qui  507
+      Cose da leggere  507
+      Dove cercare codice compatibile con Python 3  508

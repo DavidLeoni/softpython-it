@@ -1,0 +1,2304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-125857337-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installazione &mdash; SoftPython</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/javascript" src="_static/js/jupman.js"></script>
+        <script type="text/javascript" src="_static/js/pytutor-embed.bundle.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman-rtd.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduzione rapida a Python" href="quick-intro/quick-intro-sol.html" />
+    <link rel="prev" title="Come orientarsi" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="toc-page.html" class="icon icon-home"> SoftPython
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#News">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#A-chi-è-rivolto">A chi è rivolto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Requisiti">Requisiti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Contenuti">Contenuti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#A---Fondamenti">A - Fondamenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#B---Analisi-dati">B - Analisi dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#C---Applicazioni">C - Applicazioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#D---Progetti">D - Progetti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Autori">Autori</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Licenza">Licenza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Ringraziamenti">Ringraziamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Come orientarsi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Capitoli">Capitoli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Perchè-Python?">Perchè Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Materiale-del-corso">Materiale del corso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#SoftPython:-Fondamenti">SoftPython: Fondamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Approccio-e-obiettivi">Approccio e obiettivi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Non-funziona,-che-faccio-?">Non funziona, che faccio ?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#Come-porre-domande">Come porre domande</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Condivisione-online">Condivisione online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Installazione">Installazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#Cominciamo-!">Cominciamo !</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installazione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Installazione-Python">Installazione Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Installazione-Windows">Installazione Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Installazione-Mac">Installazione Mac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Installazione-Linux">Installazione Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Installare-pacchetti">Installare pacchetti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Notebook-Jupyter">Notebook Jupyter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Eseguire-il-notebook-Jupyter">Eseguire il notebook Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Salvare-i-fogli-Jupyter">Salvare i fogli Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Spegnere-il-server-di-Jupyter">Spegnere il server di Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Navigare-i-notebook">Navigare i notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Installare-il-notebook-Jupyter---tutti-i-sistemi-operativi">Installare il notebook Jupyter - tutti i sistemi operativi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Fare-progetti-Python-con-gli-ambienti-virtuali">Fare progetti Python con gli ambienti virtuali</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Creare-ambienti-virtuali">Creare ambienti virtuali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Attivare-un-ambiente-virtuale">Attivare un ambiente virtuale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Eseguire-gli-ambienti-da-dentro-Jupyter">Eseguire gli ambienti da dentro Jupyter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Se-hai-Anaconda">Se hai Anaconda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Se-non-hai-Anaconda">Se non hai Anaconda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html">A - Fondamenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-intro/quick-intro-sol.html">Introduzione rapida</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Proviamo-Jupyter">Proviamo Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Principali-tipi-di-dati-Python">Principali tipi di dati Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Numeri-interi-e-con-virgola">Numeri interi e con virgola</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Booleani---bool">Booleani - bool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#and">and</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#or">or</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#not">not</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Liste---list">Liste - list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Ordinamento-liste">Ordinamento liste</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Dizionari---dict">Dizionari - dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Visualizzare-l'esecuzione-con-Python-Tutor">Visualizzare l’esecuzione con Python Tutor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Debuggare-codice-in-Jupyter">Debuggare codice in Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Iterazione">Iterazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#for-in-range">for in range</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Funzioni">Funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Funzioni-lambda">Funzioni lambda</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Trasformazioni-sulle-liste">Trasformazioni sulle liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Trasfomazioni-con-il-for">Trasfomazioni con il for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Trasformazioni-con-le-list-comprehension">Trasformazioni con le <em>list comprehension</em></a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Trasformazioni-con-le-map">Trasformazioni con le map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Matrici">Matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Funzione-zip">Funzione zip</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Gestione-errori-e-testing">Gestione errori e testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Come-eseguire-il-codice">Come eseguire il codice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Eseguire-codice-in-Jupyter">Eseguire codice in Jupyter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Python-è-un-linguaggio-d'alto-livello">Python è un linguaggio d’alto livello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Performance">Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#L'interprete-Python">L’interprete Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Listare-i-file-e-cartelle">Listare i file e cartelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="quick-intro/quick-intro-sol.html#Editor-per-codice-sorgente">Editor per codice sorgente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basics/basics-sol.html">Basi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#L'interprete-Python">L’interprete Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Apriamo-la-console-di-sistema">Apriamo la console di sistema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Listare-i-file-e-cartelle">Listare i file e cartelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Lanciamo-l'interprete-Python">Lanciamo l’interprete Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Uscire-dall'interprete">Uscire dall’interprete</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Moduli">Moduli</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Editor-di-testo-semplice">Editor di testo semplice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#IDE">IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Jupyter">Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Visualizzare-l'esecuzione-con-Python-Tutor">Visualizzare l’esecuzione con Python Tutor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Debuggare-codice-in-Jupyter">Debuggare codice in Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Architettura-di-Python">Architettura di Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Python-è-un-linguaggio-d'alto-livello">Python è un linguaggio d’alto livello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Performance">Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Oggetti">Oggetti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Variabili">Variabili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Riusare-una-variabile">Riusare una variabile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Cambiare-il-tipo-durante-l'esecuzione">Cambiare il tipo durante l’esecuzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Comandi-multipli-su-una-stessa-linea">Comandi multipli su una stessa linea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Inizializzazioni-multiple">Inizializzazioni multiple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Nomi-di-variabile">Nomi di variabile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Da-fare:-nomi-di-variabile">Da fare: nomi di variabile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Tipi-numerici">Tipi numerici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Interi">Interi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Booleani">Booleani</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Operatori-booleani">Operatori booleani</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---Esercizio-con-costanti">Booleani - Esercizio con costanti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---Esercizio-con-variabili">Booleani - Esercizio con variabili</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---Conversione">Booleani - Conversione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---Esercizio---cos'è-un-booleano?">Booleani - Esercizio - cos’è un booleano?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---Ordine-di-valutazione">Booleani - Ordine di valutazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Booleani---errori-nella-valutazione">Booleani - errori nella valutazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Operatori-numerici">Operatori numerici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Operatori-numerici---ciclare">Operatori numerici - ciclare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics-sol.html#Numeri-reali">Numeri reali</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="basics/basics-sol.html#Numeri-reali---esercizio---equazione-quadratica">Numeri reali - esercizio - equazione quadratica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings1-sol.html">Stringhe 1: introduzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Creare-stringhe">Creare stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stampare---le-celle">Stampare - le celle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#La-stringa-vuota">La stringa vuota</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stampare-più-stringhe">Stampare più stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Lunghezza-di-una-stringa">Lunghezza di una stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stampare---sequenze-di-escape">Stampare - sequenze di escape</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esempio---ritorno-a-capo">Esempio - ritorno a capo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Da-fare---stampa-lunghezza">Da fare - stampa lunghezza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings2-sol.html">Stringhe 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Leggere-caratteri">Leggere caratteri</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---intercalare">Da fare - intercalare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Indici-negativi">Indici negativi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Sostituire-caratteri">Sostituire caratteri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Slice">Slice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---garalampog">Da fare - garalampog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---ifEweEfav-lkSD-lkWe">Da fare - ifEweEfav lkSD lkWe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Slice---limiti">Slice - limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Slice---omissione-limiti">Slice - omissione limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---isteroister">Da fare - isteroister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Slice---limiti-negativi">Slice - limiti negativi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---javarnanda">Da fare - javarnanda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Slice---modifica">Slice - modifica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---la-corsa">Da fare - la corsa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---contenute-1">Da fare - contenute 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---contenute-2">Da fare - contenute 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Altri-operatori">Altri operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Da-fare---tanti-ciao">Da fare - tanti ciao</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings3-sol.html">Stringhe 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Elenco-metodi">Elenco metodi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Esempio">Esempio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---cammina">Da fare - cammina</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lower">Metodo lower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-capitalize">Metodo capitalize</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---Vostra-Eccellenza">Da fare - Vostra Eccellenza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-strip">Metodo strip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---hatespace">Da fare - hatespace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---sostituisci">Da fare - sostituisci</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---per-Giove">Da fare - per Giove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Da-fare---uppermezzo">Da fare - uppermezzo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#lung">lung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#contin">contin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#invertilet">invertilet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#nspazio">nspazio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#inifin">inifin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#scambia">scambia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-eccezioni-e-test">Esercizi con eccezioni e test</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#halet">halet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#conta">conta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#contiene_minuscola">contiene_minuscola</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#dialetto">dialetto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#contavoc">contavoc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#palindroma">palindroma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lists/lists1-sol.html">Liste 1: introduzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists1-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists1-sol.html#Creare-liste">Creare liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Lista-vuota">Lista vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---creare-liste-1">Da fare - creare liste 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---creare-liste-2">Da fare - creare liste 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---creare-liste-3">Da fare - creare liste 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---creare-liste-4">Da fare - creare liste 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists1-sol.html#Convertire-sequenze-in-liste">Convertire sequenze in liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---gulp">Da fare - gulp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists1-sol.html#Da-fare---garapp">Da fare - garapp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lists/lists2-sol.html">Liste 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Lunghezza-di-una-lista">Lunghezza di una lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Leggere-un-elemento">Leggere un elemento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Scrivere-un-elemento">Scrivere un elemento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Mutare-liste-condivise">Mutare liste condivise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Slice">Slice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Slice---limiti">Slice - limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Slice---omissione-limiti">Slice - omissione limiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Slice---limiti-negativi">Slice - limiti negativi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Slice---modifica">Slice - modifica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Liste-di-stringhe">Liste di stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---sigle">Da fare - sigle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---giochi">Da fare - giochi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Liste-di-liste">Liste di liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---coppie">Da fare - coppie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---nonunif">Da fare - nonunif</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Operatore-in">Operatore in</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#not-in">not in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---ortaggi">Da fare - ortaggi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Concatenazione-di-liste-con-+">Concatenazione di liste con +</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---concatenazione">Da fare - concatenazione</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#min-e-max">min e max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#sum">sum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists2-sol.html#Da-fare---bilancia">Da fare - bilancia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lists/lists3-sol.html">Liste 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-append">Metodo append</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---accrescere-una-lista-1">Da fare - accrescere una lista 1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-extend">Metodo extend</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Estendere-con-sequenze">Estendere con sequenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare:-accrescere-una-lista-2">Da fare: accrescere una lista 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---zslice">Da fare - zslice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---vedunazeblag">Da fare - vedunazeblag</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#join---costruire-stringhe-da-liste">join - costruire stringhe da liste</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#da-fare---dub-dab-dib-dob">da fare - dub dab dib dob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---ghirigori">Da fare - ghirigori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---welldone">Da fare - welldone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-insert">Metodo insert</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---insertando">Da fare - insertando</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---barzoletta">Da fare - barzoletta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---insappend">Da fare - insappend</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-remove">Metodo remove</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---nob">Da fare - nob</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-pop">Metodo pop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---popcorn">Da fare - popcorn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---zonzo">Da fare - zonzo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-reverse">Metodo reverse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---come-va?">Da fare - come va?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---cose-preziose">Da fare - cose preziose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---potenze">Da fare - potenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-sort">Metodo sort</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---moltelinee">Da fare - moltelinee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists3-sol.html#Da-fare---numlist">Da fare - numlist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-index">Metodo index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Metodo-count">Metodo count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lists/lists4-sol.html">Liste 4: iterazione e funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#stamparole">stamparole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#stampari">stampari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#cerca26">cerca26</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#stamprisec">stamprisec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#trepari">trepari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#separa_ip">separa_ip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#media">media</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lists/lists4-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#contiene">contiene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#primi">primi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#primul">primul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#duplica">duplica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#hadup">hadup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#ord3">ord3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#filtrab">filtrab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#collina">collina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#vetta">vetta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#pari">pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#mix">mix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists/lists4-sol.html#nostop">nostop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tuples/tuples-sol.html">Tuple</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Creare-tuple">Creare tuple</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Tupla-vuota">Tupla vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Tuple-senza-parentesi">Tuple senza parentesi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Elementi-eterogenei">Elementi eterogenei</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Creare-tuple-da-sequenze">Creare tuple da sequenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Creare-sequenze-da-tuple">Creare sequenze da tuple</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Operatori">Operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#len">len</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Leggere-un-elemento">Leggere un elemento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare:-animali">Da fare: animali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Slice">Slice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Concatenazione">Concatenazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Appartenenza">Appartenenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare---welcome">Da fare - welcome</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Scrivere-un-elemento">Scrivere un elemento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare---errando">Da fare - errando</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare:-abde">Da fare: abde</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare---carismatico">Da fare - carismatico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare---ordinare">Da fare - ordinare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Metodi">Metodi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Metodo-index">Metodo index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Metodo-count">Metodo count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#Da-fare:-frutti">Da fare: frutti</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#appaia">appaia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#giunto">giunto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuples/tuples-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#doppie">doppie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tuples/tuples-sol.html#nasty">nasty</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sets/sets-sol.html">Insiemi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Creare-un-insieme">Creare un insieme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Convertire-sequenze-in-insiemi">Convertire sequenze in insiemi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Elementi-mutabili-e-hash">Elementi mutabili e hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Insieme-vuoto">Insieme vuoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare:-dedup">Da fare: dedup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Frozenset">Frozenset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Operatori">Operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#len">len</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare---distinte">Da fare - distinte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Unione">Unione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare:-tuttotranne-1">Da fare: tuttotranne 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Intersezione">Intersezione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Differenza">Differenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Differenza-simmetrica">Differenza simmetrica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Appartenenza">Appartenenza</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Uguaglianza">Uguaglianza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Metodi-simili-agli-operatori">Metodi simili agli operatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#union">union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#update">update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare---tuttotranne-2">Da fare - tuttotranne 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Altri-metodi">Altri metodi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#add">add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#remove">remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare---bababiba">Da fare - bababiba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#discard">discard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare---spazzatura">Da fare - spazzatura</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#issuperset">issuperset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#isdisjoint">isdisjoint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Da-fare---matrioska">Da fare - matrioska</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#sillabe">sillabe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#distingui">distingui</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sets/sets-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sets/sets-sol.html#Da-fare---intersectron">Da fare - intersectron</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries/dictionaries1-sol.html">Dizionari 1: creazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Creare-un-dizionario">Creare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Le-chiavi">Le chiavi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#I-valori">I valori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Dizionario-vuoto">Dizionario vuoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Chiavi-e-valori-eterogenei">Chiavi e valori eterogenei</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Dizionario-da-sequenza-di-coppie">Dizionario da sequenza di coppie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Dizionario-da-coppie-di-argomenti">Dizionario da coppie di argomenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Copiare-un-dizionario">Copiare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Copia-superficiale">Copia superficiale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Copia-in-profondità">Copia in profondità</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries1-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries/dictionaries2-sol.html">Dizionari 2: operatori</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#len">len</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Leggere-di-un-valore">Leggere di un valore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Disordine-veloce">Disordine veloce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---z7">Da fare - z7</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Scrivere-nel-dizionario">Scrivere nel dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Scrivere---aggiunta-chiave/valore">Scrivere - aggiunta chiave/valore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Scrivere---riassociare-chiave">Scrivere - riassociare chiave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---officina">Da fare - officina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Scrivere---cancellare">Scrivere - cancellare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---scrivania">Da fare - scrivania</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---giardino">Da fare - giardino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---traduzioni">Da fare - traduzioni</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Appartenenza-con-in">Appartenenza con <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#not-in">not in</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Dizionari-di-sequenze">Dizionari di sequenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---prestiti">Da fare - prestiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Uguaglianza">Uguaglianza</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Uguaglianza-e-ordine">Uguaglianza e ordine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Uguaglianza-e-copie">Uguaglianza e copie</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Da-fare---zoom">Da fare - zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries2-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries/dictionaries3-sol.html">Dizionari 3: metodi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#keys">keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---chiavi-disordinate">Da fare - chiavi disordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---chiavi-ordinate">Da fare - chiavi ordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---chiavistello">Da fare - chiavistello</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#values">values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---uno-a-uno">Da fare - uno a uno</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---borsa">Da fare - borsa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---valori-comuni">Da fare - valori comuni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---piccolo-grande">Da fare - piccolo grande</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#items">items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---unione-senza-update">Da fare - unione senza update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#update">update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---axby">Da fare - axby</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Classi---OrderedDict">Classi - OrderedDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare:-agenda-OrderedDict">Da fare: agenda OrderedDict</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---copia-di-OrderedDict">Da fare - copia di OrderedDict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Classi---Counter">Classi - Counter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Da-fare---frequenti">Da fare - frequenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries3-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries/dictionaries4-sol.html">Dizionari 4: iterazione e funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#stampa_val">stampa_val</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#ha_chiave">ha_chiave</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#dim">dim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#mazzol">mazzol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#coppie">coppie</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#istogramma">istogramma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#listifica">listifica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#tcont">tcont</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#valori_unici">valori_unici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#maiuscole">maiuscole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#filtraz">filtraz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#powers">powers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#dilist">dilist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#prefissi">prefissi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#traduci">traduci</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries4-sol.html#Prosegui">Prosegui</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries/dictionaries5-sol.html">Dizionari 5: strutture composte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#Impiegati">Impiegati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#estrai_impiegati">estrai_impiegati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#estrai_aziende">estrai_aziende</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#età_media">età_media</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#tipi_aziende">tipi_aziende</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#Altri-esercizi">Altri esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#medie">medie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#ha_pref">ha_pref</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dictionaries/dictionaries5-sol.html#onomat">onomat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control-flow/flow1-if-sol.html">Controllo di flusso 1: if</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Il-comando-base-if-else">Il comando base <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#else-è-opzionale"><code class="docutils literal notranslate"><span class="pre">else</span></code> è opzionale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---senza-benza">Da fare - senza benza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Il-comando-if---elif---else">Il comando <em>if - elif - else</em></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Domande">Domande</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---fragole">Sono equivalenti? - fragole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---max">Sono equivalenti? - max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---min">Sono equivalenti? - min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---grande-piccolo">Sono equivalenti? - grande piccolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---Cippirillo">Sono equivalenti? - Cippirillo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---fattoria">Da fare - fattoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---arcani">Da fare - arcani</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#if-annidati"><code class="docutils literal notranslate"><span class="pre">if</span></code> annidati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---ascisse-e-ordinate-1">Da fare - ascisse e ordinate 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---ascisse-e-ordinate-2">Da fare - ascisse e ordinate 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---autobus">Da fare - autobus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---cronometro">Da fare - cronometro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---dentro-fuori-1">Sono equivalenti? - dentro fuori 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---stelle-pianeti">Sono equivalenti? - stelle pianeti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---verde-rosso">Sono equivalenti? - verde rosso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---cerchi-quadrati">Sono equivalenti? - cerchi quadrati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---dentro-fuori-2">Sono equivalenti? - dentro fuori 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---Ciabanga">Sono equivalenti? - Ciabanga</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---Il-massimo">Da fare - Il massimo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Operatore-ternario">Operatore ternario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Domande-if-ternari">Domande if ternari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---scarpe">Da fare - scarpe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---trenino">Da fare - trenino</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control-flow/flow2-for-sol.html">Controllo di flusso 2: for</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterazione-per-elemento">Iterazione per elemento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Nomi-variabili-nei-for">Nomi variabili nei <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterare-in-stringhe">Iterare in stringhe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterare-in-tuple">Iterare in tuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande">Domande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---tappeto-magico">Da fare - tappeto magico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---sommapari">Da fare - sommapari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---birbantello">Da fare - birbantello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---dirigibile">Da fare - dirigibile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---gala">Da fare - gala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---bilancia">Da fare - bilancia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Contare-con-range">Contare con range</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande---range">Domande - range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---stampadoppi">Da fare - stampadoppi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---multipli-e-non">Da fare - multipli e non</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---intervallo-ab">Da fare - intervallo ab</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterare-per-indici">Iterare per indici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---cucina">Da fare - cucina</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---neon">Da fare - neon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---emozioni">Da fare - emozioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---organetto">Da fare - organetto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---sghiribizzo">Da fare - sghiribizzo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---dna">Da fare - dna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---sportello">Da fare - sportello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---fattoria">Da fare - fattoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---pokemon">Da fare - pokemon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Modificare-durante-l'iterazione">Modificare durante l’iterazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---duplica">Da fare - duplica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---martello">Da fare - martello</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---Orangutang">Da fare - Orangutang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---cesta">Da fare - cesta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterare-un-insieme">Iterare un insieme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande---insiemi">Domande - insiemi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Iterare-un-dizionario">Iterare un dizionario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande-iterazione-dizionari">Domande iterazione dizionari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Sono-equivalenti-?-postin">Sono equivalenti ? postin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Sono-equivalenti-?-cortel">Sono equivalenti ? cortel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Sono-equivalenti-?---gel">Sono equivalenti ? - gel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Sono-equivalenti-?---giri">Sono equivalenti ? - giri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Sono-equivalenti?---Trovato">Sono equivalenti? - Trovato</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---colore-di-cuori">Da fare - colore di cuori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---preziosi">Da fare - preziosi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---potenze">Da fare - potenze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---fiori">Da fare - fiori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---arte">Da fare - arte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---cartolerie">Da fare - cartolerie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---legumi">Da fare - legumi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---smog">Da fare - smog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---sport">Da fare - sport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Modificare-un-dizionario-durante-l'iterazione">Modificare un dizionario durante l’iterazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---zazb">Da fare - zazb</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#for-annidati"><code class="docutils literal notranslate"><span class="pre">for</span></code> annidati</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande---for-annidati">Domande - for annidati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---casting">Da fare - casting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---coprire-il-piano">Da fare - coprire il piano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---triangolare">Da fare - triangolare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---porto">Da fare - porto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---poligoni">Da fare - poligoni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---bon-jour">Da fare - bon jour</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow2-for-sol.html#Comandi-break-e-continue">Comandi <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Terminare-con-un-break">Terminare con un <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Proseguire-con-continue">Proseguire con <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Combinare-break-e-continue">Combinare <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Domande---break-e-continue">Domande - break e continue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---continuamente">Da fare - continuamente</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---breaking-bad">Da fare - breaking bad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---punto-di-rottura">Da fare - punto di rottura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow2-for-sol.html#Da-fare---breakdance">Da fare - breakdance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="control-flow/flow3-while-sol.html">Controllo di flusso 3: while</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#while-che-terminano"><code class="docutils literal notranslate"><span class="pre">while</span></code> che terminano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#while-che-non-terminano"><code class="docutils literal notranslate"><span class="pre">while</span></code> che non terminano</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Domande">Domande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Esercizi">Esercizi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---stampari">Da fare - stampari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---media">Da fare - media</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Comandi-break-e-continue">Comandi <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Terminare-con-un-break">Terminare con un <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Proseguire-con-continue">Proseguire con <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Domande-su-break-e-continue">Domande su <code class="docutils literal notranslate"><span class="pre">break</span></code> e <code class="docutils literal notranslate"><span class="pre">continue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---cercacar">Da fare - cercacar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Domande---Sono-equivalenti-?">Domande - Sono equivalenti ?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---BORG">Sono equivalenti? - BORG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---al-3">Sono equivalenti? - al 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---che-caso">Sono equivalenti? - che caso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---al-sei">Sono equivalenti? - al sei</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---countdown-1">Sono equivalenti? - countdown 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---countdown-2">Sono equivalenti? - countdown 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---sortilegio">Sono equivalenti? - sortilegio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---ping-pong">Sono equivalenti? - ping pong</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---zanna">Sono equivalenti? - zanna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---pasticcio">Sono equivalenti? - pasticcio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Esercizi-su-contatori">Esercizi su contatori</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---don't-break-1">Da fare - don’t break 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---don't-break-2">Da fare - don’t break 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---Dammi-un-break">Da fare - Dammi un break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---cartone">Da fare - cartone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---al-dieci">Da fare - al dieci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---cccc">Da fare - cccc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---convergi">Da fare - convergi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---wow">Da fare - wow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---Wild-West">Da fare - Wild West</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Modificare-sequenze">Modificare sequenze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Stack---Pescare-da-mazzo-di-carte">Stack - Pescare da mazzo di carte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Stack---Pescare-fino-a-condizione">Stack - Pescare fino a condizione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---Don't-break-my-heart">Da fare - Don’t break my heart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Domande---cosa-fanno?">Domande - cosa fanno?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Domande---sono-equivalenti?">Domande - sono equivalenti?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---treno">Sono equivalenti? - treno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Sono-equivalenti?---append-nx">Sono equivalenti? - append nx</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow3-while-sol.html#Esercizi-su-stack">Esercizi su stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---break-somma">Da fare - break somma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---libri-di-viaggi">Da fare - libri di viaggi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---BANG-!">Da fare - BANG !</a></li>
+<li class="toctree-l4"><a class="reference internal" href="control-flow/flow3-while-sol.html#Da-fare---Crescere-o-decrescere-?">Da fare - Crescere o decrescere ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sequences/sequences-sol.html">Sequenze e comprehensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Iterabili---liste">Iterabili - liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#iterabili---range">iterabili - range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Materializzare-una-sequenza">Materializzare una sequenza</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Domande-range">Domande <code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#reversed">reversed</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#iterare-con-next">iterare con <code class="docutils literal notranslate"><span class="pre">next</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---sconcerto">Da fare - sconcerto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Materializzare-un-iteratore">Materializzare un iteratore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#sorted">sorted</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---reversort">Da fare - reversort</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#zip">zip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---scala">Da fare - scala</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#List-comprehensions">List comprehensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#list-comprehension-su-stringhe">list comprehension su stringhe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Domande-list-comprehension">Domande list comprehension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---list-comprehension">Da fare - list comprehension</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---potenza">Da fare - potenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---radice">Da fare - radice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---primi-car">Da fare - primi car</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---porta-pazienza">Da fare - porta pazienza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---maggiore-3">Da fare - maggiore 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---pari">Da fare - pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---capi">Da fare - capi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---trattini">Da fare - trattini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---lollosa">Da fare - lollosa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---cane-gatto">Da fare - cane gatto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---puffi">Da fare - puffi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---metalli-preziosi">Da fare - metalli preziosi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#List-comprehension-filtrate">List comprehension filtrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Domande-list-comprehension-filtrate">Domande list comprehension filtrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---list-comprehension-filtrate">Da fare - list comprehension filtrate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---savana">Da fare - savana</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences/sequences-sol.html#Da-fare---barZa">Da fare - barZa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions/functions-sol.html">Funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions/functions-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions/functions-sol.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions/functions-sol.html#Che-fare">Che fare</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#somma">somma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#comparap">comparap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#comparar">comparar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#pari">pari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#mag">mag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#is_vocale">is_vocale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#volume_sfera">volume_sfera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#ciri">ciri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#age">age</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="functions/functions-sol.html#Verifica-comprensione">Verifica comprensione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#mag_tre">mag_tre</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#prezzo_finale">prezzo_finale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="functions/functions-sol.html#ora_arrivo">ora_arrivo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html">Gestione errori e testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Situazioni-inaspettate">Situazioni inaspettate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#fai_torta_problematica">fai_torta_problematica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Controllare-con-i-return">Controllare con i return</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Le-eccezioni">Le eccezioni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Gestire-le-eccezioni">Gestire le eccezioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Eccezioni-particolari">Eccezioni particolari</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Gli-assert">Gli assert</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Quando-usare-gli-assert?">Quando usare gli assert?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Usare-gli-assert-per-testare">Usare gli assert per testare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html#Struttura-esercizi-parte-Fondamenti">Struttura esercizi parte Fondamenti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html">Matrici liste di liste</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Dimensioni-della-matrice">Dimensioni della matrice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrarre-righe-e-colonne">Estrarre righe e colonne</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Come-estrarre-una-riga">Come estrarre una riga</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-riga-con-for">Estrai riga con for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-riga-con-range">Estrai riga con range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-riga-con-slice">Estrai riga con slice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-riga-con-list-comprehension">Estrai riga con list comprehension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-colonna-con-for">Estrai colonna con for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Estrai-colonna-con-list-comprehension">Estrai colonna con list comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Creare-nuove-matrici">Creare nuove matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#matrice_vuota">matrice_vuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#matrice_vuota-nel-modo-elegante">matrice_vuota nel modo elegante</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Copia-in-profondità">Copia in profondità</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Modificare-matrici">Modificare matrici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#riempic">riempic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#riempix">riempix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#riempiz">riempiz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#attacca_sotto">attacca_sotto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#attacca_sopra">attacca_sopra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#attacca_dx">attacca_dx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#soglia">soglia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#scambia_righe">scambia_righe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#scambia_colonne">scambia_colonne</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#Altri-esercizi">Altri esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#diag">diag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#anti_diag">anti_diag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#is_utriang">is_utriang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#attacca_sx_mod">attacca_sx_mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#trasposta_1">trasposta_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#transpose_2">transpose_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#flip">flip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#toepliz">toepliz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#moltiplicazione-di-matrici">moltiplicazione di matrici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-lists/matrices-lists-sol.html#check_nqueen">check_nqueen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html">Matrici Numpy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#quadro">quadro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#media_righe">media_righe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#matrot">matrot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#disp">disp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#radalt">radalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#scacchiera">scacchiera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#somma_alterna">somma_alterna</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#media_meta">media_meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#matxarr">matxarr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#quadranti">quadranti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy-sol.html#Altri-esercizi-numpy">Altri esercizi numpy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commandments.html">Comandamenti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#I-COMANDAMENTO">I COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#III-COMANDAMENTO">III COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#IV-COMANDAMENTO">IV COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#V-COMANDAMENTO">V COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#VI-COMANDAMENTO">VI COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#VII-COMANDAMENTO">VII COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#VIII-COMANDAMENTO">VIII COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#IX-COMANDAMENTO">IX COMANDAMENTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html#b-analisi-dati">B - Analisi dati</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="formats/formats-sol.html">Formati dati</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="formats/formats-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="formats/formats-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="formats/formats-sol.html#1.-File-a-linee">1. File a linee</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#File-a-linee-people-complex:">File a linee people-complex:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Esercizio-file-a-linee-immersione-in-python-toc">Esercizio file a linee immersione-in-python-toc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="formats/formats-sol.html#2.-File-CSV">2. File CSV</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Perchè-scorrere-un-CSV-?">Perchè scorrere un CSV ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#CSV-di-esempio">CSV di esempio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#CSV-Impianti-funiviari">CSV Impianti funiviari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Problema:-caratteri-sbagliati-??">Problema: caratteri sbagliati ??</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Importare-in-Python">Importare in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#Il-mistero-delle-opere-paravalanghe">Il mistero delle opere paravalanghe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="formats/formats-sol.html#3.-File-JSON">3. File JSON</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="formats/formats-sol.html#JSONL">JSONL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="visualization/visualization-sol.html">Visualizzazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#1.-Matplotlib-e-Numpy">1. Matplotlib e Numpy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Installazione">Installazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Primo-esempio">Primo esempio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#2.-Stile-MATLAB-vs.-Object-Oriented">2. Stile MATLAB vs. Object-Oriented</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#3.-Altri-tipi-di-grafici">3. Altri tipi di grafici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Generiamo-una-distribuzione">Generiamo una distribuzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Istogrammi">Istogrammi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Aggiungiamo-la-curva-di-fitting">Aggiungiamo la curva di fitting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Grafici-a-torta-e-altro-ancora...">Grafici a torta e altro ancora…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Conclusione-matplotlib">Conclusione matplotlib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Grafici-SVG">Grafici SVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#importazione-in-Jupyter-come-cella-HTML">importazione in Jupyter come cella HTML</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Google-Calendar">Google Calendar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Video-YouTube">Video YouTube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visualization/visualization-sol.html#Mappa-Umap">Mappa Umap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="visualization/visualization-sol.html#Esportare-fogli-Jupyter">Esportare fogli Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="search/regex-sol.html">Ricerca</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#1-Prendiamoci-i-dati">1 Prendiamoci i dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#2.-Verifichiamo-che-i-dati-siano-corretti">2. Verifichiamo che i dati siano corretti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#3.-Introduzione-alle-regex">3. Introduzione alle regex</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Stringhe-e-sequenze-di-escape">Stringhe e sequenze di escape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#La-nostra-prima-regex">La nostra prima regex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Maiuscole-e-minuscole">Maiuscole e minuscole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Trovare-tutti-i-match">Trovare tutti i match</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Il-metacarattere-punto">Il metacarattere punto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Scriviamoci-una-funzione-di-test">Scriviamoci una funzione di test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Filtriamo-bene-gli-sp">Filtriamo bene gli sp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#4.-Sintassi-delle-Python-RegEx">4. Sintassi delle Python RegEx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Metacaratteri">Metacaratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Ripetizioni">Ripetizioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="search/regex-sol.html#Funzione-pass_n_fail">Funzione <code class="docutils literal notranslate"><span class="pre">pass_n_fail</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#5.-Sequenze">5. Sequenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#6.-Le-funzioni-della-libreria-re">6. Le funzioni della libreria <code class="docutils literal notranslate"><span class="pre">re</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#7.-Sostituzioni-con-re.sub">7. Sostituzioni con <code class="docutils literal notranslate"><span class="pre">re.sub</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#8.-Dividere-le-stringhe">8. Dividere le stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="search/regex-sol.html#9.-Cercare-pattern-nel-testo">9. Cercare pattern nel testo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="integration/integration-sol.html">Integrazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#0-Presentazione-OpenStreetMap-e-UMap">0 Presentazione OpenStreetMap e UMap</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#0.1-OpenStreetMap">0.1 OpenStreetMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#0.1-UMap">0.1 UMap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#1-Prendiamoci-i-dati">1 Prendiamoci i dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#2.-Leggiamo-il-CSV">2. Leggiamo il CSV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#3.-Geocoding-con-webapi">3. Geocoding con webapi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#3.1-MapQuest-/-OpenStreetMap-Nominatim">3.1 MapQuest / OpenStreetMap Nominatim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#3.2-Webapi-JSON">3.2 Webapi JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#3.3.-Requests-in-Python">3.3. Requests in Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="integration/integration-sol.html#3.4-Funzioni-geocode-per-requests">3.4 Funzioni geocode per requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#4.-Scriviamo-un-nuovo-CSV-con-i-campi-lat-e-long">4. Scriviamo un nuovo CSV con i campi lat e long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integration/integration-sol.html#5.-Importiamo-in-UMap">5. Importiamo in UMap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extraction/extraction-sol.html">Estrazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#1.-Guardiamo-l'html">1. Guardiamo l’html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#2.-Estrazione-con-BeautifulSoup">2. Estrazione con BeautifulSoup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.1-Estraiamo-i-nomi">2.1 Estraiamo i nomi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.2-Estraiamo-le-date">2.2 Estraiamo le date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.3-Estraiamo-i-luoghi">2.3 Estraiamo i luoghi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.3-Sistemiamo-i-luoghi">2.3 Sistemiamo i luoghi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.4-Tipo-dell'evento">2.4 Tipo dell’evento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.5-descrizione">2.5 descrizione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="extraction/extraction-sol.html#2.6-Riempiamo-la-variabile-righe">2.6 Riempiamo la variabile <code class="docutils literal notranslate"><span class="pre">righe</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#3.-Scriviamo-il-CSV">3. Scriviamo il CSV</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pandas/pandas-sol.html">Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#1.-Introduzione">1. Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pandas/pandas-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#2.-Analisi-dei-dati-di-Astro-Pi">2. Analisi dei dati di Astro Pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#3.-Indicizzazione,-filtraggio-e-ordinamento">3. Indicizzazione, filtraggio e ordinamento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#4.-Rivediamo-MatPlotLib">4. Rivediamo MatPlotLib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pandas/pandas-sol.html#Grafici-matplotlib-da-strutture-pandas">Grafici matplotlib da strutture pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#5.-Calcolare-nuove-colonne">5. Calcolare nuove colonne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#6.-Filtrare-per-valori-testuali">6. Filtrare per valori testuali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#7.-Esercizi-col-meteo">7. Esercizi col meteo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#8.-Esercizi-Inquinanti-aria">8. Esercizi Inquinanti aria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#9.-GeoPandas">9. GeoPandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#Un-esempio-semplice-con-GeoPandas">Un esempio semplice con GeoPandas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pandas/pandas-sol.html#Leggere-shapefiles-in-GeoPandas">Leggere shapefiles in GeoPandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pandas/pandas-sol.html#Prendiamo-statistiche-da-visualizzare">Prendiamo statistiche da visualizzare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#Esempio-di-integrazione">Esempio di integrazione</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html">Information retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Costruiamo-il-nostro-motore-di-ricerca">Costruiamo il nostro motore di ricerca</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Una-prima-soluzione">Una prima soluzione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Una-ricerca-più-efficace">Una ricerca più efficace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Performance">Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Ordinamento">Ordinamento</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Prendiamo-le-distanze">Prendiamo le distanze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Un-mondo-di-errori">Un mondo di errori</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Varie-forme">Varie forme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Un-mondo-di-distanze">Un mondo di distanze</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Quale-spazio">Quale spazio</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Ricerca-a-prova-di-errore">Ricerca a prova di errore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#La-distanza-di-Levenshtein">La distanza di Levenshtein</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Ricerca-per-distanza-sintattica">Ricerca per distanza sintattica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="computer-vision/computer-vision-sol.html">Computer vision</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="computer-vision/computer-vision-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computer-vision/computer-vision-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="computer-vision/computer-vision-sol.html#Installazione">Installazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="computer-vision/computer-vision-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="computer-vision/computer-vision-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="computer-vision/computer-vision-sol.html#1.-Anonimizzazione-facce">1. Anonimizzazione facce</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html#c-applicazioni">C - Applicazioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gui/gui-sol.html">Interfacce utente</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Che-fare">Che fare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Perchè-fare-interfacce-grafiche-?">Perchè fare interfacce grafiche ?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Scelte-di-stile">Scelte di stile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Scelte-tecniche">Scelte tecniche</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Risposte-per-oggi:">Risposte per oggi:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Installazione-ipywidgets">Installazione ipywidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Facciamo-uno-slider">Facciamo uno slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Model-View-Controller">Model View Controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Interact">Interact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Riusare-il-widget-con-interactive">Riusare il widget con interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Eventi">Eventi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Controlliamo-una-label-con-uno-slider">Controlliamo una label con uno slider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Controlliamo-uno-slider-con-un'altro-slider">Controlliamo uno slider con un’altro slider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Eventi-di-widget-a-selezione-multipla">Eventi di widget a selezione multipla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Eventi-click">Eventi click</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Layout-e-stili">Layout e stili</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Layout:-HBox">Layout: HBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Layout:-VBox-and-HBox">Layout: VBox and HBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Flexbox">Flexbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Stile">Stile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Grafici-interattivi-con-bqplot">Grafici interattivi con bqplot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Installazione-bqplot">Installazione bqplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#bqplot---il-primo-grafico">bqplot - il primo grafico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#bqplot---variare-parametri">bqplot - variare parametri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#bqplot---layout">bqplot - layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#bqplot---esempi-avanzati">bqplot - esempi avanzati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#HTML">HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Mappe">Mappe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Chatbot">Chatbot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Webapp">Webapp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Esempio-my-webapp">Esempio my-webapp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Eseguiamo-la-webapp-con-voila">Eseguiamo la webapp con voila</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-sol.html#Layout-per-webapp">Layout per webapp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-sol.html#Collegare-i-widget">Collegare i widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gui/gui-maps-sol.html">Interfacce utente - Mappe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gui/gui-maps-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-maps-sol.html#Prerequisiti">Prerequisiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-maps-sol.html#Riferimenti">Riferimenti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-maps-sol.html#Installazione-ipyleaflet">Installazione ipyleaflet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-maps-sol.html#Proviamo-OpenStreetMap">Proviamo OpenStreetMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gui/gui-maps-sol.html#Mettiamo-un-palloncino">Mettiamo un palloncino</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gui/my-webapp.html">Interfacce utente - Esempio webapp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database/database-sol.html">Database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Guardiamo-il-database">Guardiamo il database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Connessione-in-SQLStudio">Connessione in SQLStudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Connessione-in-Python">Connessione in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Passare-parametri-alla-query">Passare parametri alla query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Funzione-Esegui-Query">Funzione Esegui Query</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#Struttura-della-tabella">Struttura della tabella</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#DDL">DDL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#Query-ai-metadati">Query ai metadati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#JOIN">JOIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Tabella-Track">Tabella Track</a></li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#GROUP-BY-and-COUNT">GROUP BY and COUNT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#COUNT">COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="database/database-sol.html#GROUP-BY-E-COUNT">GROUP BY E COUNT</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="database/database-sol.html#Pandas">Pandas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web/web-sol.html">Web development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Introduzione">Introduzione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="web/web-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Struttura-del-sito">Struttura del sito</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Facciamo-partire-il-server">Facciamo partire il server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Proviamo-il-server">Proviamo il server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="web/web-sol.html#Contenuti-dinamici">Contenuti dinamici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="web/web-sol.html#Contenuti-statici">Contenuti statici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="web/web-sol.html#Struttura-del-codice">Struttura del codice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="web/web-sol.html#Come-parsare-il-path-per-estrarre-parametri">Come parsare il path per estrarre parametri</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html#d-progetti">D - Progetti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project-howto.html">Come fare un progetto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project-howto.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-howto.html#Challenge">Challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-howto.html#Che-fare">Che fare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-howto.html#Requisiti-tecnici">Requisiti tecnici</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#Dimensione-dati">Dimensione dati</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#Testo-Markdown">Testo Markdown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#Codice-Python">Codice Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#File-requirements.txt">File <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#Interfacce-grafiche">Interfacce grafiche</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project-howto.html#Fare-attenzione-a">Fare attenzione a</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="project/project.html">Template progetto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Sorgenti-dati">Sorgenti dati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Analisi">Analisi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Pulizia">Pulizia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Integrazione">Integrazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Arricchimento">Arricchimento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Ricerca">Ricerca</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Ricerca-base">Ricerca base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Ricerca-avanzata">Ricerca avanzata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Ricerca-semantica">Ricerca semantica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Ranking">Ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Predizione">Predizione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Presentazione">Presentazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Slides">Slides</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project/project.html#Demo">Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Problematiche-riscontrate">Problematiche riscontrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/project.html#Conclusioni">Conclusioni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="project/markdown.html">Markdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Celle-Markdown">Celle Markdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Paragrafi">Paragrafi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Link">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Liste">Liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Immagini">Immagini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Variabili-e-nomi-tecnici">Variabili e nomi tecnici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Codice-JSON-/-XML-/-Python">Codice JSON / XML / Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project/markdown.html#Formule-matematiche">Formule matematiche</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project/markdown.html#Tabelle">Tabelle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="project-ideas.html">Idee per progetti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Introduzione">Introduzione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Dataset-da-Kaggle">Dataset da Kaggle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Analisi-dati-socio-economici-GapMinder">Analisi dati socio-economici GapMinder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project-ideas.html#Altre-fonti-dati">Altre fonti dati</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Analisi-quotazioni-di-borsa">Analisi quotazioni di borsa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Analisi-quotazioni-criptovalute">Analisi quotazioni criptovalute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Frequenza-parole-articoli-Wikipedia">Frequenza parole articoli Wikipedia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Filosofi-influenti">Filosofi influenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Personaggi-culturalmente-importanti">Personaggi culturalmente importanti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Analisi-attività-parlamento">Analisi attività parlamento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project-ideas.html#Analisi-attività-parlamento:-usare-Wikidata-per-trovare-i-segretari-di-partito">Analisi attività parlamento: usare Wikidata per trovare i segretari di partito</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Interfacce-e-tecnologie-per-la-comunicazione">Interfacce e tecnologie per la comunicazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Analisi-genoma">Analisi genoma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Supply-Chain">Supply Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Tracciamento-di-oggetti-astronomici">Tracciamento di oggetti astronomici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project-ideas.html#Ricerca-sequenze-numeri-interi-database-OEIS">Ricerca sequenze numeri interi database OEIS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="project-ideas.html#Esempi-API-OEIS">Esempi API OEIS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="challenges.html">Challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="challenges.html#Vai-alle-Challenges-2019">Vai alle Challenges 2019</a></li>
+<li class="toctree-l3"><a class="reference internal" href="challenges.html#Vai-alle-Challenges-2018">Vai alle Challenges 2018</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html#space"> </a></li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html#indice">Indice</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="toc-page.html">SoftPython</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+    <div id='jupman-langs'></div>
+
+    <!--
+    <script>
+    if (window.location.hostname.includes('softpython.org')){
+        JUPMAN_LANG = window.location.hostname.slice(0,window.location.hostname.indexOf('.'));
+    } else {
+        JUPMAN_LANG = 'en';        
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="toc.html">A - Fondamenti</a> &raquo;</li>
+    
+    <li>Installazione</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Installazione">
+<h1>Installazione<a class="headerlink" href="#Installazione" title="Permalink to this headline">¶</a></h1>
+<p>Vedremo come si installano Python, librerie addizionali di Python, la gestione degli ambienti virtuali e infine il notebook Jupyter.</p>
+<div class="section" id="Installazione-Python">
+<h2>Installazione Python<a class="headerlink" href="#Installazione-Python" title="Permalink to this headline">¶</a></h2>
+<p>Ci sono vari modi per installare Python 3 e le sue librerie: c’è la distribuzione ufficiale di Python ‘liscia’ come anche gestori di pacchetti (es. Anaconda) o ambienti preconfezionati (es. Python(x,y)) che forniscono sia Python più varie librerie extra. Inoltre, una volta completata l’installazione, Python 3 contiene un comando <code class="docutils literal notranslate"><span class="pre">pip</span></code> (a volte per python 3 si chiama <code class="docutils literal notranslate"><span class="pre">pip3</span></code>) che permette di installare in seguito da linea di comando eventuali librerie mancanti.</p>
+<p>Il modo migliore per scegliere cosa installare dipende da quale sistema operativo si ha e cosa ci si intende fare. In questo libro useremo Python 3 e librerie scientifiche, quindi cercheremo di creare un ambiente adatto a supportare questo scenario.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Alternative veloci online</strong></p>
+<p>Se per caso hai difficoltà ad installare e sei ansioso di provare python, puoi programmare direttamente online con <a class="reference external" href="https://trinket.io/features/python3">Python 3 su Trinket</a></p>
+<p>Un’altra risorsa utile è <a class="reference external" href="http://pythontutor.com/visualize.html#py=3">Python Tutor</a>, che permette di eseguire una istruzione alla volta offrendo una utile visualizzazione di cosa accade ‘sotto il cofano’.</p>
+<p>Puoi provare anche la <a class="reference external" href="http://try.jupyter.org">demo online di Jupiter</a>, ma non sempre è disponibile. Se riesci ad accedere, ricordati di selezionare nel menù <em>Kernel-&gt;Change kernel-&gt;Python 3</em></p>
+<p>Qualsiasi sia l’ambiente online che usi, ricordati sempre di controllare che sia Python <strong>3</strong> !</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attenzione: Prima di installare roba a caso scaricata da internet, leggi bene questa guida!</strong></p>
+<p>Abbiamo cercato di renderla abbastanza generica, ma non essendoci stato possibile testare tutti i vari casi potrebbero insorgere dei problemi, se avete qualche dubbio chiedete ai mentor.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attenzione: non sovrapporre distribuzioni di Python alla stessa versione !</strong></p>
+<p>Vista la varietà di metodi di installazione e il fatto che Python si trova già in molti programmi, può darsi che abbiate già Python installato senza saperlo, magari in versione 2, ma a noi serve la 3! Sovrapporre diversi ambienti Python con la stessa versione potrebbe causare problemi, di nuovo se avete qualche dubbio chiedete ai mentor.</p>
+</div>
+<div class="section" id="Installazione-Windows">
+<h3>Installazione Windows<a class="headerlink" href="#Installazione-Windows" title="Permalink to this headline">¶</a></h3>
+<p>Per Windows, ti consigliamo di installare la distribuzione <a class="reference external" href="https://www.anaconda.com/download/#windows">Anaconda per Python 3.6</a> o maggiore, che oltre all’gestore di pacchetti nativo di Python <code class="docutils literal notranslate"><span class="pre">pip</span></code>, fornisce anche il più generico gestore di pacchetti da linea di comando <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+<p>Una volta installato, verifica che funzioni così:</p>
+<ol class="arabic simple">
+<li><p>clicca sull’icona di Windows in basso a sinistra e cerca ‘Anaconda Prompt’. Dovrebbe apparire una console dove inserire comandi, con scritto qualcosa come <code class="docutils literal notranslate"><span class="pre">C:\Users\David&gt;</span></code>. NOTA: per lanciare i comandi di Anaconda, usa solo questa console speciale. Se usie la console di default di Windows (<code class="docutils literal notranslate"><span class="pre">cmd</span></code>), Windows non sarà in grado di trovare Python.</p></li>
+<li><p>Nella console di Anaconda, scrivi</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda list
+</pre></div>
+</div>
+<p>Dovrebbe apparire una lista di pacchetti installati, tipo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># packages in environment at C:\Users\Jane\AppData\Local\Continuum\Anaconda3:
+#
+alabaster                 0.7.7                    py35_0
+anaconda                  4.0.0               np110py35_0
+anaconda-client           1.4.0                    py35_0
+...
+numexpr                   2.5                 np110py35_0
+numpy                     1.10.4                   py35_0
+odo                       0.4.2                    py35_0
+...
+yaml                      0.1.6                         0
+zeromq                    4.1.3                         0
+zlib                      1.2.8                         0
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Prova Python3, scrivendo sempre nella console di Anaconda:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:&gt;  python
+</pre></div>
+</div>
+<p>Dovrebbe apparire qualcosa tipo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Python 3.6.3 (default, Sep 14 2017, 22:51:06)
+MSC v.1900 64 bit (Intel)[GCC 5.4.0 20160609] on win64
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attenzione</strong>: Con Anaconda, devi scrivere <code class="docutils literal notranslate"><span class="pre">python</span></code> invece che <code class="docutils literal notranslate"><span class="pre">python3</span></code>!</p>
+<p>Sei hai installato Anaconda per Python3, userà automaticamente la versione di Python corretta semplicemente scrivendo <code class="docutils literal notranslate"><span class="pre">python</span></code>. Se scrivi <code class="docutils literal notranslate"><span class="pre">python3</span></code> riceverai un’errore di file non trovato !</p>
+</div>
+<div class="admonition warning">
+<p><strong>Attenzione</strong>: Se hai Anaconda, usa sempre <code class="docutils literal notranslate"><span class="pre">conda</span></code> per installare i moduli Python ! Quindi se nelle istruzioni nei prossimi tutorial vedi scritto <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">qualcosa</span></code>, dovrai usare invece <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">qualcosa</span></code></p>
+</div>
+</div>
+<div class="section" id="Installazione-Mac">
+<h3>Installazione Mac<a class="headerlink" href="#Installazione-Mac" title="Permalink to this headline">¶</a></h3>
+<p>Per gestire al meglio le app installate sul Mac indipendentemente da Python, in genere conviene installare un cosiddetto <em>gestore di pacchetti</em>. Ce ne sono vari, e uno tra i più popolari su Mac è <a class="reference external" href="https://brew.sh/">Homebrew</a>. Quindi suggeriamo di installare prima Homebrew e poi tramite esso installare Python 3, più eventualmente in seguito altri componenti che ci interessano. In linea di massima, per l’installazione abbiamo tradotto qua in italiano e semplificato <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos">questa
+guida</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attenzione: controlla se hai già un gestore di pacchetti !</strong></p>
+<p>Se hai già installato un gestore di pacchetti come per esempio <em>Conda</em> (nella distribuzione <em>Anaconda</em>), <em>Rudix</em>, <em>Nix</em>, <em>Pkgsrc</em>, <em>Fink</em> o <em>MacPorts</em>, forse Homebrew non ti serve e ti conviene usare quello che già hai. In questi casi, chiedi ai mentor. Se hai già <em>Conda/Anaconda</em>, può andar bene a patto di avere la versione per Python 3.</p>
+</div>
+<p>— 1 Apri il Terminale</p>
+<p>Il terminale di MacOS è un’applicazione che puoi usare per accedere alla linea di comando. Come qualunque altra applicazione, la puoi trovare andando in <em>Finder</em>, navigando nella cartella <em>Applicazioni</em>, e quindi nella cartella <em>Accessori</em>. Da lì, fai doppio click sul <em>Terminale</em> per aprirlo come ogni altra applicazione. In alternativa, puoi usare <em>Spotlight</em> tenendo premuto i tasti <em>Command</em> e <em>Spazio</em> per trovare il Terminale scrivendone il nome nella barra che appare.</p>
+<p>— 2 Installa Homebrew eseguendo nel terminale questo comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>— 3 Aggiungi <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> al <code class="docutils literal notranslate"><span class="pre">PATH</span></code></p>
+<p>In questo passaggio dal nome inquietante, una volta che l’installazione di Homebrew è completata, ti assicurerai che vengano sempre sempre usate le applicazioni installate con Homebrew, invece che quelle che Mac OS X potrebbe selezionare automaticamente:</p>
+<p>— 3.1 Apri un nuovo Terminale.</p>
+<p>— 3.2 Da dentro il terminale, digita il comando</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -a
+</pre></div>
+</div>
+<p>Verrà visualizzata la lista di tutti i file presenti nella cartella della home. In questi file, verifica se esiste un file con il seguente nome: <code class="docutils literal notranslate"><span class="pre">.profile</span></code> (nota il punto all’inizio):</p>
+<ul>
+<li><p>Se esiste: salta al punto seguente</p></li>
+<li><p>Se non esiste, per crearlo digita il comando seguente:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch  <span class="nv">$HOME</span>/.profile
+</pre></div>
+</div>
+</li>
+</ul>
+<p>— 3.3 Apri con text edit il file <code class="docutils literal notranslate"><span class="pre">.profile</span></code> appena creato dando il comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open -e  <span class="nv">$HOME</span>/.profile
+</pre></div>
+</div>
+<p>— 3.4 In text edit, aggiungi alla fine del file questa riga:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:<span class="nv">$PATH</span>
+</pre></div>
+</div>
+<p>— 3.5 Salva e chiudi sia Text Edit che il Terminale</p>
+<p>— 4 Verifica che Homebrew sia installato correttamente, digitando in un nuovo Terminale:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew doctor
+</pre></div>
+</div>
+<p>Se non ci sono aggiornamenti da fare, il Terminale dovrebbe mostrare:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Your system is ready to brew.
+</pre></div>
+</div>
+<p>Altrimenti, potresti vedere un warning che consiglia di eseguire un altro comando come <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">update</span></code> per assicurarti che l’installazione di Homebrew sia aggiornata.</p>
+<p>— 5. Installa python3 (Ricordati il ‘3’ !):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install python3
+</pre></div>
+</div>
+<p>Assieme a Python 3, Homebrew installerà anche il gestore di pacchetti interno di Python <code class="docutils literal notranslate"><span class="pre">pip3</span></code> che useremo in seguito.</p>
+<p>— 6 Verifica che Python3 sia installato correttamente. Eseguendo questo comando dovrebbe apparire la scritta “/usr/local/bin/python3”:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which python3
+</pre></div>
+</div>
+<p>Dopodichè, prova a lanciare</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3
+</pre></div>
+</div>
+<p>Dovresti vedere qualcosa di simile:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Python <span class="m">3</span>.6.3 <span class="o">(</span>default, Nov <span class="m">17</span> <span class="m">2016</span>, <span class="m">17</span>:05:23<span class="o">)</span>
+<span class="o">[</span>GCC <span class="m">5</span>.4.0 <span class="m">20160609</span><span class="o">]</span> on mac
+Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<p>Per uscire da Python, scrivi <code class="docutils literal notranslate"><span class="pre">exit()</span></code> e invio.</p>
+</div>
+<div class="section" id="Installazione-Linux">
+<h3>Installazione Linux<a class="headerlink" href="#Installazione-Linux" title="Permalink to this headline">¶</a></h3>
+<p>Fortunatamente, tutte le distribuzioni Linux sono già fornite con gestori di pacchetti per installare facilmente le applicazioni.</p>
+<ul>
+<li><p>Se hai Ubuntu:</p>
+<ol class="arabic">
+<li><p>segui la guida di <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/installare-python.html">Immersione in Python 3, capitolo 0 - Installare Python</a> in particolare andando alla sotto sezione <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/installare-python.html#ubuntu">installazione in Ubuntu</a></p></li>
+<li><p>dopo aver completato la guida, installa anche <code class="docutils literal notranslate"><span class="pre">python3-venv</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python3-venv
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Se <em>non</em> hai Ubuntu, <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/installare-python.html#other">guarda questa nota</a> e/o chiedi ai mentor.</p></li>
+</ul>
+<p>Per verificare l’installazione, prova a lanciare da terminale</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3
+</pre></div>
+</div>
+<p>Dovresti vedere qualcosa di simile:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Python <span class="m">3</span>.6.3 <span class="o">(</span>default, Nov <span class="m">17</span> <span class="m">2016</span>, <span class="m">17</span>:05:23<span class="o">)</span>
+<span class="o">[</span>GCC <span class="m">5</span>.4.0 <span class="m">20160609</span><span class="o">]</span> on linux
+Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Installare-pacchetti">
+<h2>Installare pacchetti<a class="headerlink" href="#Installare-pacchetti" title="Permalink to this headline">¶</a></h2>
+<p>Si può estendere Python installando diversi pacchetti gratuiti. Il modo migliore per farlo, varia a seconda del sistema operativo e del gestore di pacchetti installato</p>
+<div class="admonition warning">
+<p><strong>ATTENZIONE</strong>: Andremo ad usare comandi <em>di sistema</em>. Se vedi <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> sulla riga dei comandi, vuol dire che sei dentro l’interprete Python e devi prima uscirne: per farlo, scrivi <code class="docutils literal notranslate"><span class="pre">exit()</span></code> e premi Invio.</p>
+</div>
+<p>In quello che segue, per provare vedere se il tutto funziona, al posto di <code class="docutils literal notranslate"><span class="pre">NOMEPACCHETTO</span></code> puoi scrivere <code class="docutils literal notranslate"><span class="pre">requests</span></code> che è una libreria per il web.</p>
+<p>Se hai Anaconda:</p>
+<ul class="simple">
+<li><p>clicca sull’icona di Windows in basso a sinistra e cerca ‘Anaconda Prompt’. Dovrebbe apparire una console dove inserire comandi, con scritto qualcosa come <code class="docutils literal notranslate"><span class="pre">C:\Users\David&gt;</span></code>. (NOTA: per lanciare i comandi di Anaconda, usa solo questa console speciale. Se usi la console di default di Windows (cmd), Windows non sarà in grado di trovare Python)</p></li>
+<li><p>Nella console scrivi <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">NOMEPACCHETTO</span></code></p></li>
+</ul>
+<p>Se hai Linux/Mac (<code class="docutils literal notranslate"><span class="pre">--user</span></code> installa nella propria home) apri il Terminal e dai questo comando:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">NOMEPACCHETTO</span></code></p></li>
+<li><p><strong>NOTA:</strong> Se ricevi errori che dicono che il comando <code class="docutils literal notranslate"><span class="pre">python3</span></code> non viene trovato, togli il <code class="docutils literal notranslate"><span class="pre">3</span></code> dopo <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>INFO</strong>: volendo esiste anche un comando di sistema <code class="docutils literal notranslate"><span class="pre">pip</span></code> (o <code class="docutils literal notranslate"><span class="pre">pip3</span></code> a seconda del sistema). Lo puoi chiamare direttamente con <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">NOMEPACCHETTO</span></code></p>
+<p>Noi installiamo invece con comandi del tipo <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">NOMEPACCHETTO</span></code> per uniformità e per essere sicuri di installare pacchetti per la versione 3 di Python</p>
+</div>
+</div>
+<div class="section" id="Notebook-Jupyter">
+<h2>Notebook Jupyter<a class="headerlink" href="#Notebook-Jupyter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Eseguire-il-notebook-Jupyter">
+<h3>Eseguire il notebook Jupyter<a class="headerlink" href="#Eseguire-il-notebook-Jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Un editor comodo che si può usare per Python è <a class="reference external" href="http://jupyter.org/">Jupyter</a>:</p>
+<ul class="simple">
+<li><p>Se hai installato Anaconda, dovresti trovarlo già nel menu di sistema e anche nell’Anaconda Navigator.</p></li>
+<li><p>Anche se non hai installato Anaconda, comunque cercalo nel menu di sistema chissamai che per qualche caso fortuito sia già installato</p></li>
+<li><p>Se non lo trovi nel menu di sistema, potresti comunque averlo dalla linea di comando,</p></li>
+</ul>
+<p>Prova se funzionano:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook
+</pre></div>
+</div>
+<p>Oppure, in alternativa</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m notebook
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> NON è un comando Python, bensì un comando <em>di sistema</em>.</p>
+<p>Se vedi <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> sulla riga dei comandi vuol dire che devi prima uscire dall’interprete Python scrivendo <code class="docutils literal notranslate"><span class="pre">exit()</span></code> e premendo Invio!</p>
+</div>
+<div class="admonition warning">
+<p><strong>ATTENZIONE</strong>: Se Jupyter non è installato appariranno dei messaggi di errore, in questo caso non ti spaventare e <a class="reference external" href="#Installare-il-notebook-Jupyter---tutti-i-sistemi-operativi">vai all’installazione</a>.</p>
+</div>
+<p>Un browser dovrebbe aprirsi automaticamente con Jupyter, e nella console dovresti vedere dei messaggi come qua sotto. Nel browser dovresti vedere i file nella cartella da cui hai lanciato Jupyter. Se non parte nessun browser ma vedi un messaggio come qua sotto, allora copia l’indirizzo che vedi in un browser internet, preferibilmente Chrome, Safari o Firefox</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ jupyter notebook
+[I 18:18:14.669 NotebookApp] Serving notebooks from local directory: /home/da/Da/prj/softpython/prj
+[I 18:18:14.669 NotebookApp] 0 active kernels
+[I 18:18:14.669 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=49d4394bac446e291c6ddaf349c9dbffcd2cdc8c848eb888
+[I 18:18:14.669 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:18:14.670 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=49d4394bac446e291c6ddaf349c9dbffcd2cdc8c848eb888
+</pre></div>
+</div>
+<div class="admonition warning">
+<p><strong>ATTENZIONE 1</strong>: in questo caso l’indirizzo è <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/?token=49d4394bac446e291c6ddaf349c9dbffcd2cdc8c848eb888</span></code>, ma il tuo sarà sicuramente diverso!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE 2</strong>: Mentre il server Jupyter è attivo, non puoi mettere comandi nel terminale !</p>
+<p>Nella console vedi l’output del server di Jupyter, che è attivo e in un certo senso ‘ha preso il controllo’ del terminale. Questo significa che se anche scrivi dei comandi dentro il terminale, questi <strong>non</strong> verranno eseguiti!</p>
+</div>
+</div>
+<div class="section" id="Salvare-i-fogli-Jupyter">
+<h3>Salvare i fogli Jupyter<a class="headerlink" href="#Salvare-i-fogli-Jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Puoi salvare il foglio corrente in Jupyter premendo <code class="docutils literal notranslate"><span class="pre">Control-S</span></code> mentre sei nel browser.</p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: NON APRIRE LO STESSO DOCUMENTO IN PIU’ TAB !!</strong></p>
+<p>Fai attenzione a non aprire lo stesso notebook in più tab, modifiche su tab differenti possono sovrascriversi a caso ! Per evitare queste spiacevolissime situazioni, assicurati di avere una sola tab per docmento. Se apri accidentalmente lo stesso notebook in tab differenti, semplicemente chiudi la tab di troppo.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Salvataggi automatici</strong></p>
+<p>Le modifiche ai notebook sono automaticamente salvate dopo qualche minuto.</p>
+</div>
+</div>
+<div class="section" id="Spegnere-il-server-di-Jupyter">
+<h3>Spegnere il server di Jupyter<a class="headerlink" href="#Spegnere-il-server-di-Jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Prima di chiudere il server di Jupyter, ricordati di salvare nel browser i fogli modificati sinora.</p>
+<p>Per chiudere correttamente Jupyter, <em>non</em> chiudere brutalmente il terminale. Piuttosto, nel terminale da dove lo hai lanciato premi <code class="docutils literal notranslate"><span class="pre">Control-c</span></code>, dovrebbe apparirti questa domanda, a cui devi rispondere <code class="docutils literal notranslate"><span class="pre">y</span></code> (se non rispondi entro 5 secondi, poi dovrai ripremere <code class="docutils literal notranslate"><span class="pre">Control-c</span></code> perchè ti venga rifatta la domanda):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Shutdown this notebook server (y/[n])? y
+[C 11:05:03.062 NotebookApp] Shutdown confirmed
+[I 11:05:03.064 NotebookApp] Shutting down kernels
+</pre></div>
+</div>
+</div>
+<div class="section" id="Navigare-i-notebook">
+<h3>Navigare i notebook<a class="headerlink" href="#Navigare-i-notebook" title="Permalink to this headline">¶</a></h3>
+<p>(Opzionale) Per migliorare l’esperienza di navigazione dei fogli Jupyter, potresti voler installare qualche estensione Jupyter, come <code class="docutils literal notranslate"><span class="pre">toc2</span></code> che mostra le intestazioni dei paragrafi nella barra a sinistra. Per installarlo:</p>
+<p>Installa le <a class="reference external" href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">Jupyter contrib extensions</a>:</p>
+<p><strong>1a. Se hai Anaconda:</strong> Apri Anaconda Prompt, e scrivi:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyter_contrib_nbextensions
+</pre></div>
+</div>
+<p><strong>1b. Se non hai Anaconda:</strong> Apri il terminale e scrivi:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install --user jupyter_contrib_nbextensions
+</pre></div>
+</div>
+<p><strong>2. Installalo in Jupyter:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter contrib nbextension install --user
+</pre></div>
+</div>
+<p><strong>3. Abilita le estensioni:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter nbextension <span class="nb">enable</span> toc2/main
+</pre></div>
+</div>
+<p><strong>Una volta installato</strong>: Per vedere le tabelle dei contenuti in un documento dovrai premere un bottone lista all’estremità destra della barra degli strumenti</p>
+<p><img alt="iuiu3234" src="_images/toc2-jupyter.jpg" /></p>
+<p><strong>Se per caso non lo vedi il bottone:</strong></p>
+<ol class="arabic simple">
+<li><p>vai nell’interfaccia principale di Jupyter</p></li>
+<li><p>controlla la tab <code class="docutils literal notranslate"><span class="pre">Nbextensions</span></code></p></li>
+<li><p>Assicurati che <code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">of</span> <span class="pre">Contents(2)</span></code> sia abilitato</p></li>
+<li><p>Poi chiudi Jupyter, riaprilo, e vai su un foglio, dovresti finalmente vedere il bottone</p></li>
+</ol>
+<p><img alt="eer23d" src="_images/toc2-jupyter-enable.png" /></p>
+</div>
+<div class="section" id="Installare-il-notebook-Jupyter---tutti-i-sistemi-operativi">
+<h3>Installare il notebook Jupyter - tutti i sistemi operativi<a class="headerlink" href="#Installare-il-notebook-Jupyter---tutti-i-sistemi-operativi" title="Permalink to this headline">¶</a></h3>
+<p>Se non sei riuscito a <a class="reference external" href="#Eseguire-il-notebook-Jupyter">trovare e/o far partire Jupyter</a>, probabilmente vuol dire che bisogna installarlo !</p>
+<p>Puoi provare ad installare jupyter con <code class="docutils literal notranslate"><span class="pre">pip</span></code> (il gestore di moduli nativo di Python).</p>
+<p>Per installare, esegui questo comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m pip install --user jupyter -U
+</pre></div>
+</div>
+<p>Una volta installato, segui la sezione <a class="reference external" href="#Eseguire-il-notebook-Jupyter">Eseguire il notebook Jupyter</a></p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: NON serve installare Jupyter dentro <a class="reference external" href="#Fare-progetti-Python-con-gli-ambienti-virtuali">ambienti virtuali</a>.</p>
+<p>Jupyter è da considerarsi un’applicazione a livello di sistema, dovrebbe essere indipendente dagli ambienti virtuali. Se sei all’interno di un ambiente virtuale (per es. la linea di comando inizia con una scritta tra parentesi tipo <code class="docutils literal notranslate"><span class="pre">(myprj)</span></code>), esci dall’ambiente scrivendo <code class="docutils literal notranslate"><span class="pre">deactivate</span></code></p>
+</div>
+<div class="admonition note">
+<p><strong>HELP</strong>: Se hai problemi ad installare Jupyter, intanto che aspetti aiuto puoi provare la <a class="reference external" href="https://try.jupyter.org/">versione dimostrativa online</a> (nota che non è sempre disponibile) o <a class="reference external" href="http://colab.research.google.com/">Google Colab</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="Fare-progetti-Python-con-gli-ambienti-virtuali">
+<h2>Fare progetti Python con gli ambienti virtuali<a class="headerlink" href="#Fare-progetti-Python-con-gli-ambienti-virtuali" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: Se sei alle prime armi con Python, puoi saltare questa sezione.</p>
+<p>La dovresti leggere se hai già fatto progetti personali in Python che vuoi evitare di compromettere, oppure quando vuoi fare un progetto da consegnare a qualcuno.</p>
+</div>
+<p>Quando cominciamo un nuovo progetto in Python, di solito ci accorgiamo in fretta che bisogna estendere Python con delle librerie particolari, per esempio per disegnare grafici. Non solo, potremmo anche voler installare dei programmi Python non scritti da noi che a loro volta avranno bisogno delle loro librerie per funzionare.</p>
+<p>Ora, potremmo installare tutte queste librerie extra in un unico calderone per tutto il computer, ma ogni progetto può richiedere le sue specifiche versioni di ogni libreria, e a volte potrebbe non gradire le versioni installate da altri progetti. Peggio ancora, potrebbe aggiornare automaticamente librerie usate da vecchi progetti, rendendo il codice dei vecchi progetti non più eseguibile. Quindi è PRATICAMENTE NECESSARIO separare per bene ogni progetto e le sue librerie da quelle degli altri: a
+tal fine si può creare un cosiddetto <em>virtual environment</em>.</p>
+<div class="section" id="Creare-ambienti-virtuali">
+<h3>Creare ambienti virtuali<a class="headerlink" href="#Creare-ambienti-virtuali" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><strong>Se hai installato Anaconda</strong>, per creare ambienti virtuali ti conviene usare il suo gestore di pacchetti <code class="docutils literal notranslate"><span class="pre">conda</span></code>. Supponendo che vogliamo chiamare il nostro progetto <code class="docutils literal notranslate"><span class="pre">myprj</span></code> (ma potrebbe essere un nome qualunque), da mettere in una cartella dallo stesso nome <code class="docutils literal notranslate"><span class="pre">myprj</span></code>, per creare un ambiente virtuale possiamo dare questo comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n myprj
+</pre></div>
+</div>
+<p>Il comando potrebbe chiederti di scaricare dei pacchetti, dai pure conferma.</p>
+</li>
+<li><p><strong>Se *non* hai installato Anaconda</strong>, per creare ambienti virtuali ti conviene usare il modulo nativo di Python <code class="docutils literal notranslate"><span class="pre">venv</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m venv myprj
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Entrambi i metodi creano la cartella <code class="docutils literal notranslate"><span class="pre">myprj</span></code> e la riempiono con tutti i file Python necessari per avere un progetto completamente isolato dal resto del computer. Ma adesso, come possiamo dire a Python che vogliamo lavorare proprio con quel progetto lì? Dobbiamo <em>attivare</em> l’ambiente come segue.</p>
+</div>
+<div class="section" id="Attivare-un-ambiente-virtuale">
+<h3>Attivare un ambiente virtuale<a class="headerlink" href="#Attivare-un-ambiente-virtuale" title="Permalink to this headline">¶</a></h3>
+<p>Per attivare l’ambiente virtuale, dobbiamo usare comandi diversi a seconda del sistema operativo (ma sempre dal terminale)</p>
+<p><strong>Su Linux &amp; Mac (senza Anaconda)</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> myprj/bin/activate
+</pre></div>
+</div>
+<p><strong>Attivare environment su Windows con Anaconda</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>activate myprj
+</pre></div>
+</div>
+<p>Una volta che l’ambiente è attivato, nel prompt dei comandi dovremmo vedere il nome dell’ambiente (in questo caso <code class="docutils literal notranslate"><span class="pre">myprj</span></code>) in parentesi tonde all’inizio della riga:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(myprj) directory/corrente &gt;
+</pre></div>
+</div>
+<p>Il prefisso ci fa sapere che l’ambiene <code class="docutils literal notranslate"><span class="pre">myprj</span></code> è correntemente attivo, perciò tutti i comandi Python che daremo useranno le impostazioni e le librerie di quell’ambiente.</p>
+<p>Nota: dentro l’ambiente virtuale, si può usare il comando <code class="docutils literal notranslate"><span class="pre">python</span></code> invece di <code class="docutils literal notranslate"><span class="pre">python3</span></code>, e <code class="docutils literal notranslate"><span class="pre">pip</span></code> invece di <code class="docutils literal notranslate"><span class="pre">pip3</span></code>, ma noi consigliamo comunque di essere espliciti e aggiungere sempre 3 così da evitare possibili confusioni.</p>
+<p><strong>Disattivare un ambiente</strong>:</p>
+<p>Scrivere nella console il comando <code class="docutils literal notranslate"><span class="pre">deactivate</span></code>. Una volta disattivato l’ambiente, il nome dell’ambiente <code class="docutils literal notranslate"><span class="pre">(myprj)</span></code> all’inizio del prompt dovrebbe scomparire.</p>
+</div>
+<div class="section" id="Eseguire-gli-ambienti-da-dentro-Jupyter">
+<h3>Eseguire gli ambienti da dentro Jupyter<a class="headerlink" href="#Eseguire-gli-ambienti-da-dentro-Jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Come abbiamo detto in precedenza, Jupyter è un’applicazione a livello di sistema, quindi dovrebbe esserci uno e un solo Jupyter. Ciononostante, durante l’esecuzione di Jupyter, potremmo voler eseguire i nostri comandi Python in un particolare ambiente Python. Per fare ciò, dobbiamo configurare Jupyter perchè usi l’ambiente desiderato. Nella terminologia di Jupyter, le configurazioni si chiamano <em>kernel</em>: esse definiscono i programmi lanciati da Jupyter (siano essi versioni di Python o anche
+altri linguaggi, tipo R). Il kernel corrente per un foglio è visibile in alto a destra. Per avere il kernel che vogliamo, ci sono diversi modi:</p>
+<div class="section" id="Se-hai-Anaconda">
+<h4>Se hai Anaconda<a class="headerlink" href="#Se-hai-Anaconda" title="Permalink to this headline">¶</a></h4>
+<p>Jupyter dovrebbe essere disponibile nel Navigator. Se nel Navigator abiliti un environment (per es per Python 3), quando poi lanci Jupyter e crei un foglio dovresti avere l’ambiente desiderato attivo, o quantomeno poter scegliere un kernel con quell’ambiente.</p>
+</div>
+<div class="section" id="Se-non-hai-Anaconda">
+<h4>Se non hai Anaconda<a class="headerlink" href="#Se-non-hai-Anaconda" title="Permalink to this headline">¶</a></h4>
+<p>In questo caso, la procedura è un po’ più complicata:</p>
+<p>— 1 Dal Terminale, <a class="reference external" href="#Attivare-un-ambiente-virtuale">attiva il tuo ambiente</a></p>
+<p>— 2 Crea un kernel Jupyter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -m ipykernel install --user --name myprj
+</pre></div>
+</div>
+<p>NOTA: qua <code class="docutils literal notranslate"><span class="pre">myprj</span></code> è il nome <em>del kernel Jupyter</em>. Usiamo lo stesso nome dell’ambiente solo per questioni di praticità.</p>
+<p>— 3 Disattiva il tuo ambiente, lanciando</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+<p>A questo punto, ogni volta che lanci Jupyter, se tutto è andato bene nella voce ‘Kernel’ dei notebook dovresti poter selezionare il kernel che hai appena creato (in questo esempio, avrebbe il nome <code class="docutils literal notranslate"><span class="pre">myprj</span></code>)</p>
+<div class="admonition note">
+<p><strong>NOTA</strong>: il passaggio di creazione del kernel va fatto una sola volta per progetto</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>NOTA</strong>: Non serve attivare l’ambiente prima di lanciare Jupyter!</p>
+<p>Durante l’esecuzione di Jupyter semplicemente seleziona il kernel desiderato. Ciononostante, conviene eseguire Jupyter dalla cartella del nostro ambiente virtuale, così vedremo tutti i file del progetto nella home di Jupyter.</p>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quick-intro/quick-intro-sol.html" class="btn btn-neutral float-right" title="Introduzione rapida a Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Come orientarsi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright # CC-BY 2017 - 2020, David Leoni, Alessio Zamboni, Marco Caresia
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
