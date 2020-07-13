@@ -20,7 +20,7 @@ jobs:
     - name: sets WEB_PATH
       run: echo "::set-env name=WEB_PATH::"
     - name: Run Sphinx in RTD docker      
-      uses: DavidLeoni/readthedocs-to-actions@1.0
+      uses: DavidLeoni/readthedocs-to-actions@v1.0
       with:
         RTD_PRJ_NAME: softpython-it
         GIT_URL: https://github.com/${{ github.repository }}.git
