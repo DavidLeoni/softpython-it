@@ -1,19 +1,18 @@
 
 # SoftPython
 
-Esercizi Python 3 in formato Jupyter notebook
+Libro completo su Python 3 per basi pulizia e analisi dati, in formato Jupyter notebook
 
-**Studenti: qua su Github ci sono solo i file sorgenti, il sito ufficiale del libro è su http://it.softpython.org**
+**Studenti: qua su Github ci sono solo i file sorgenti, il sito ufficiale del libro è su** https://it.softpython.org
 
 **Docenti**:  Tutte le pagine del sito sono fogli Jupyter convertiti in pagine web tramite [NBSphinx](https://nbsphinx.readthedocs.io), usando il template [Jupman](https://github.com/DavidLeoni/jupman). Per sapere come effettuare build e modifiche al manuale, vedere [la guida di Jupman](https://jupman.softpython.org/en/latest/usage.html)
 
 
 ## Licenza
 
-Questo sito è stato realizzato con stanziamenti del [Dipartimento di Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it) dell'Università di Trento
+Questo sito è stato realizzato con stanziamenti del [Dipartimento di Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it) dell'Università di Trento, e anche [Sociologia](https://www.sociologia.unitn.it) e [Matematica](https://www.maths.unitn.it/)
 
 ![unitn-843724](_static/img/third-parties/logo-disi-unitn-it.jpeg)
-
 
 ![cc-by-7172829](_static/img/cc-by.png)
 
