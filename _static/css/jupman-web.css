@@ -1,0 +1,44 @@
+
+
+/* Makes visible the '+' boxes in menu
+  https://github.com/DavidLeoni/jupman/issues/38    
+*/    
+
+li.toctree-l1 > a > .toctree-expand {
+    color: white !important;
+}
+
+
+/* Fixes for https://github.com/DavidLeoni/jupman/issues/17 */
+ 
+/* code overflow */
+div.input_area  {
+    overflow:visible !important
+}
+
+/* too much output  */
+div.output_area.docutils.container:not(.rendered_html){ 
+    
+    max-height:600px !important;
+}
+
+#jupman-langs {
+    float : right;
+    padding-right : 8px;
+}
+
+/* Fix for centered images
+   https://github.com/DavidLeoni/jupman/issues/52 
+   */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Related to centered images 
+   https://github.com/DavidLeoni/jupman/issues/52 
+*/
+.jupman-inline-img {
+    display: inline;
+}

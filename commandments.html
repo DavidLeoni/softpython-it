@@ -36,9 +36,9 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script type="text/javascript" src="_static/js/jupman.js"></script>
         <script type="text/javascript" src="_static/js/pytutor-embed.bundle.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
@@ -50,7 +50,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/jupman-rtd.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman-web.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/softpython-theme.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Formati dati" href="formats/formats-sol.html" />
@@ -818,7 +819,7 @@
 <li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Da-fare---cronometro">Da fare - cronometro</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#Domande---Sono-equivalenti?">Domande - Sono equivalenti?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="control-flow/flow1-if-sol.html#id1">Domande - Sono equivalenti?</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---dentro-fuori-1">Sono equivalenti? - dentro fuori 1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---stelle-pianeti">Sono equivalenti? - stelle pianeti</a></li>
 <li class="toctree-l4"><a class="reference internal" href="control-flow/flow1-if-sol.html#Sono-equivalenti?---verde-rosso">Sono equivalenti? - verde rosso</a></li>
@@ -1699,20 +1700,33 @@ div.nboutput.container div.prompt pre {
 /* all prompts */
 div.nbinput.container div.prompt,
 div.nboutput.container div.prompt {
-    min-width: 5ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
     div.nbinput.container div.prompt,
     div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
     div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
@@ -1725,7 +1739,6 @@ div.nboutput.container div.prompt pre {
 /* input/output area */
 div.nbinput.container div.input_area,
 div.nboutput.container div.output_area {
-    padding: 0.4em;
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
@@ -1798,6 +1811,27 @@ div.nboutput.container div.output_area.stderr {
 
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
 
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
@@ -2074,7 +2108,7 @@ div.rendered_html tbody tr:hover {
 
 <span></span><span class="c1"># RITORNA una NUOVA lista ordinata</span>
 <span class="k">def</span> <span class="nf">dolore</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="n">lista</span><span class="o">.</span><span class="n">sorted</span><span class="p">()</span>         <span class="c1"># MALE, stai modificando la lista di input invece di crearne una nuova!</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>         <span class="c1"># MALE, stai modificando la lista di input invece di crearne una nuova!</span>
     <span class="k">return</span> <span class="n">lista</span>
 </pre></div>
 </div>
@@ -2098,7 +2132,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># RITORNA un NUOVO dizionario</span>
 <span class="k">def</span> <span class="nf">tormento</span><span class="p">(</span><span class="n">dizionario</span><span class="p">):</span>
-    <span class="n">dizionario</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;6&#39;</span>  <span class="c1"># MALE, stai modificando il dizionario di input invece di crearne uno nuovo!</span>
+    <span class="n">dizionario</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># MALE, stai modificando il dizionario di input invece di crearne uno nuovo!</span>
     <span class="k">return</span> <span class="n">dizionario</span>
 </pre></div>
 </div>
@@ -2110,7 +2144,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># RITORNA una NUOVA classe</span>
 <span class="k">def</span> <span class="nf">disperazione</span><span class="p">(</span><span class="n">istanza_di_classe</span><span class="p">):</span>
-    <span class="n">istanza_di_classe</span><span class="o">.</span><span class="n">mio_campo</span> <span class="o">=</span> <span class="s1">&#39;6&#39;</span>  <span class="c1"># MALE, stai modificando l&#39;oggetto di input</span>
+    <span class="n">istanza_di_classe</span><span class="o">.</span><span class="n">mio_campo</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># MALE, stai modificando l&#39;oggetto di input</span>
                                        <span class="c1"># invece di crearne uno nuovo!</span>
     <span class="k">return</span> <span class="n">istanza_di_classe</span>
 </pre></div>
@@ -2220,7 +2254,7 @@ TypeError: &#39;list&#39; object is not callable
 </pre></div>
 </div>
 </div>
-<p>Dato che self è una specie di dizionario, potresti essere tentato di scrivere come sopra, ma al mondo esterno questo non porterà alcun effetto.</p>
+<p>Dato che <code class="docutils literal notranslate"><span class="pre">self</span></code> è una specie di dizionario, potresti essere tentato di scrivere come sopra, ma al mondo esterno questo non porterà alcun effetto.</p>
 <p>Per esempio, supponiamo che qualcuno da fuori faccia una chiamata come questa:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
@@ -2248,7 +2282,7 @@ TypeError: &#39;list&#39; object is not callable
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;__main__.MiaClasse at 0x7f37edf50278&gt;
+&lt;__main__.MiaClasse at 0x7f66bc8c6278&gt;
 </pre></div></div>
 </div>
 <p>e non avrà <code class="docutils literal notranslate"><span class="pre">mio_campo</span></code>:</p>
@@ -2270,9 +2304,8 @@ TypeError: &#39;list&#39; object is not callable
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">class</span> <span class="nc">MiaClasse</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">mio_metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;evil&#39;</span><span class="p">]</span> <span class="c1"># self si suppone essere una specie di dizionario passato dall&#39;esterno</span>
-
-        <span class="bp">self</span> <span class="o">=</span> <span class="mi">6</span>        <span class="c1"># self si suppone essere una specie di dizionario passato dall&#39;esterno</span>
+        <span class="bp">self</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;evil&#39;</span><span class="p">]</span>
+        <span class="bp">self</span> <span class="o">=</span> <span class="mi">666</span>
 </pre></div>
 </div>
 </div>
@@ -2283,6 +2316,15 @@ TypeError: &#39;list&#39; object is not callable
 <p><strong>Testerai il codice!</strong></p>
 </div>
 <p>Il codice non testato per definizione <em>non funziona</em>. Per idee su come testare, guarda <a class="reference internal" href="errors-and-testing/errors-and-testing-sol.html"><span class="doc">Gestione degli errori e testing</span></a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="X-COMANDAMENTO">
 <h2>X COMANDAMENTO<a class="headerlink" href="#X-COMANDAMENTO" title="Permalink to this headline">¶</a></h2>

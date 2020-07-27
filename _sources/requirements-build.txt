@@ -2,7 +2,7 @@
 sphinx==2.3.1
 tornado==4.5.3
 ipykernel==4.6.1
-nbsphinx==0.5.0
+nbsphinx==0.7.1
 arghandler==1.2.0
 recommonmark==0.6.0
 sphinx_rtd_theme==0.4.3
