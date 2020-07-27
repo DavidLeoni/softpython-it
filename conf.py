@@ -223,8 +223,9 @@ html_js_files = [
 ]
 
 html_css_files = [
-    'css/jupman.css',      # shared among jupyter and ReadTheDocs
-    'css/jupman-rtd.css',  # only for ReadTheDocs
+    'css/jupman.css',      # shared among jupyter and website
+    'css/jupman-web.css',  # only on website
+    'css/softpython-theme.css',  
 ]
 
 
