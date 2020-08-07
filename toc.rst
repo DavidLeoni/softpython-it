@@ -14,6 +14,7 @@ A - Fondamenti
     :glob:
 
     Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
+    Strumenti e script <tools/tools-sol.ipynb>    
     Basi <basics/basics-sol.ipynb>
     Stringhe 1: introduzione <strings/strings1-sol.ipynb>
     Stringhe 2: operatori <strings/strings2-sol.ipynb>
