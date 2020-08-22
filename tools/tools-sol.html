@@ -277,6 +277,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Booleani">Booleani</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#min">min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Operatori-tra-booleani">Operatori tra booleani</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-costanti">Booleani - Esercizio con costanti</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-variabili">Booleani - Esercizio con variabili</a></li>
@@ -1572,15 +1573,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../project/markdown.html">Markdown</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Celle-Markdown">Celle Markdown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Paragrafi">Paragrafi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Titoli">Titoli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project/markdown.html#Titolo-pagina">Titolo pagina</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Primo-capitolo">Primo capitolo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Primo-paragrafo">Primo paragrafo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Secondo-paragrafo">Secondo paragrafo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Secondo-capitolo">Secondo capitolo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Link">Link</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Liste">Liste</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Immagini">Immagini</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Variabili-e-nomi-tecnici">Variabili e nomi tecnici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Codice-JSON-/-XML-/-Python">Codice JSON / XML / Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Formule-matematiche">Formule matematiche</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Tabelle">Tabelle</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Formule-matematiche">Formule matematiche</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../project-ideas.html">Idee per progetti</a><ul>
@@ -2186,14 +2194,13 @@ C:\Users\David\CART&gt;
 <li><p>seleziona solo <code class="docutils literal notranslate"><span class="pre">x=3</span></code>e premi F9</p></li>
 <li><p>clicca sull’ingranaggio a destra del riquadro della console, e seleziona <em>Restart kernel</em>, poi seleziona solo <code class="docutils literal notranslate"><span class="pre">print(x+y)</span></code> e premi <code class="docutils literal notranslate"><span class="pre">F9</span></code>. Che succede?</p></li>
 </ul>
-<p>Ricordati che se la memoria dell’interprete è stata ripulita con <em>Restart kernel</em> e provi ad eseguire una riga di codice con variabili definite in linee che non sono stati eseguite prima, Python non saprà a che variabili ti stai riferendo e mostrerà un <code class="docutils literal notranslate"><span class="pre">NameError</span></code></p>
+<p>Ricordati che se la memoria dell’interprete è stata ripulita con <em>Restart kernel</em> e poi provi ad eseguire una riga di codice con variabili definite in linee che non sono stati eseguite prima, Python non saprà a che variabili ti stai riferendo e mostrerà un <code class="docutils literal notranslate"><span class="pre">NameError</span></code></p>
 <p><img alt="Spyder ide 3823" src="../_images/spyder-ide.png" /></p>
-<p>When importing modules we do not need to specify the extension <code class="docutils literal notranslate"><span class="pre">.py</span></code> of the file.</p>
 </div>
 </div>
 <div class="section" id="Jupyter">
 <h2>Jupyter<a class="headerlink" href="#Jupyter" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter è un editor che ti permette di i lavorare sui cosiddetti <em>notebook</em> , che sono file che finiscono con l’estensione <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>. Sono documenti divisi in celle dove per ogni cella puoi immettere dei comandi e vederne subito il rispettivo output. Proviamo ad aprire questo.</p>
+<p>Jupyter è un editor che ti permette di lavorare sui cosiddetti <em>notebook</em> , che sono file che finiscono con l’estensione <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>. Sono documenti divisi in celle dove per ogni cella puoi immettere dei comandi e vederne subito il rispettivo output. Proviamo ad aprire questo.</p>
 <ol class="arabic simple">
 <li><p>scompatta lo <a class="reference external" href="../_static/generated/tools.zip">zip degli esercizi</a> in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ol>
@@ -2541,7 +2548,7 @@ perciò ne acquisterò altri 3 al Mercato del Vapore.
 <h3>Debuggare codice in Jupyter<a class="headerlink" href="#Debuggare-codice-in-Jupyter" title="Permalink to this headline">¶</a></h3>
 <p>Python tutor è fantastico, ma quando esegui del codice in Jupyter e non funziona, come si può fare? Per ispezionare l’esecuzione, gli editor di solito mettono a disposizione uno strumento chiamato <em>debugger</em>, che permette di eseguire le istruzioni una per una. Al momento (Agosto 2018), il debugger di Jupyter che si chiama <a class="reference external" href="https://davidhamann.de/2017/04/22/debugging-jupyter-notebooks/">pdb</a> è estramamente limitato . Per superarne le limitazioni, in questo corso ci siamo inventati una
 soluzione di ripiego, che sfrutta Python Tutor.</p>
-<p>Se inserisci del codice Python in una cella, e poi <strong>alla fine della cella</strong> scrivete l’istruzione <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code>, come per magia il codice precedente verrà visualizzato all’interno del foglio Jupyter con il debugger di Python Tutor.</p>
+<p>Se inserisci del codice Python in una cella, e poi <strong>alla fine della cella</strong> scrivi l’istruzione <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code>, come per magia il codice precedente verrà visualizzato all’interno del foglio Jupyter con il debugger di Python Tutor.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">jupman</span></code> è una collezione di funzioni di supporto che ci siamo inventati apposta per questo corso.</p>
 <p>Quando vedi comandi che iniziano con <code class="docutils literal notranslate"><span class="pre">jupman</span></code>, affinchè funzionino devi prima eseguire la cella in cima al documento. Riportiamo tale cella qua per comodità. Se non lo hai già fatto, eseguila adesso.</p>
@@ -2580,10 +2587,10 @@ soluzione di ripiego, che sfrutta Python Tutor.</p>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jma6496e42-36c0-4ad9-a8a5-387e3c04329f" type="application/json" >
-    {"trace": [{"stdout": "", "event": "step_line", "line": 2, "stack_to_render": [], "heap": {}, "ordered_globals": [], "func_name": "<module>", "globals": {}}, {"stdout": "", "event": "step_line", "line": 3, "stack_to_render": [], "heap": {}, "ordered_globals": ["x"], "func_name": "<module>", "globals": {"x": 5}}, {"stdout": "", "event": "step_line", "line": 4, "stack_to_render": [], "heap": {}, "ordered_globals": ["x", "y"], "func_name": "<module>", "globals": {"y": 7, "x": 5}}, {"stdout": "", "event": "return", "line": 4, "stack_to_render": [], "heap": {}, "ordered_globals": ["x", "y", "z"], "func_name": "<module>", "globals": {"y": 7, "z": 12, "x": 5}}], "code": " \nx = 5\ny = 7\nz = x + y"}
+<script id="json-jm0313414d-7dbb-4ac1-b882-cf45c7935ca6" type="application/json" >
+    {"code": " \nx = 5\ny = 7\nz = x + y", "trace": [{"ordered_globals": [], "globals": {}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 2, "func_name": "<module>", "stdout": ""}, {"ordered_globals": ["x"], "globals": {"x": 5}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 3, "func_name": "<module>", "stdout": ""}, {"ordered_globals": ["x", "y"], "globals": {"y": 7, "x": 5}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 4, "func_name": "<module>", "stdout": ""}, {"ordered_globals": ["x", "y", "z"], "globals": {"y": 7, "x": 5, "z": 12}, "heap": {}, "stack_to_render": [], "event": "return", "line": 4, "func_name": "<module>", "stdout": ""}]}
 </script>
-<div id="jma6496e42-36c0-4ad9-a8a5-387e3c04329f" class="pytutorVisualizer"> </div>
+<div id="jm0313414d-7dbb-4ac1-b882-cf45c7935ca6" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2603,12 +2610,12 @@ soluzione di ripiego, che sfrutta Python Tutor.</p>
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jma6496e42-36c0-4ad9-a8a5-387e3c04329f').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm0313414d-7dbb-4ac1-b882-cf45c7935ca6').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jma6496e42-36c0-4ad9-a8a5-387e3c04329f',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm0313414d-7dbb-4ac1-b882-cf45c7935ca6',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2681,10 +2688,10 @@ NameError: name &#39;w&#39; is not defined
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm616a5a10-1407-4a97-9ddf-e1fabe9c5c1c" type="application/json" >
-    {"trace": [{"stdout": "", "event": "step_line", "line": 2, "stack_to_render": [], "heap": {}, "ordered_globals": [], "func_name": "<module>", "globals": {}}, {"stdout": "", "event": "exception", "line": 2, "exception_msg": "NameError: name 'w' is not defined", "stack_to_render": [], "heap": {}, "ordered_globals": [], "func_name": "<module>", "globals": {}}], "code": " \nprint(w)"}
+<script id="json-jm84b99382-58d2-47c3-8608-918ff5984b44" type="application/json" >
+    {"code": " \nprint(w)", "trace": [{"ordered_globals": [], "globals": {}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 2, "func_name": "<module>", "stdout": ""}, {"ordered_globals": [], "globals": {}, "heap": {}, "exception_msg": "NameError: name 'w' is not defined", "stack_to_render": [], "event": "exception", "line": 2, "func_name": "<module>", "stdout": ""}]}
 </script>
-<div id="jm616a5a10-1407-4a97-9ddf-e1fabe9c5c1c" class="pytutorVisualizer"> </div>
+<div id="jm84b99382-58d2-47c3-8608-918ff5984b44" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2704,12 +2711,12 @@ NameError: name &#39;w&#39; is not defined
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm616a5a10-1407-4a97-9ddf-e1fabe9c5c1c').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm84b99382-58d2-47c3-8608-918ff5984b44').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm616a5a10-1407-4a97-9ddf-e1fabe9c5c1c',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm84b99382-58d2-47c3-8608-918ff5984b44',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2753,10 +2760,10 @@ NameError: name &#39;w&#39; is not defined
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm6632cb8c-8db3-41b7-8847-d1701916ccb7" type="application/json" >
-    {"trace": [{"stdout": "", "event": "step_line", "line": 2, "stack_to_render": [], "heap": {}, "ordered_globals": [], "func_name": "<module>", "globals": {}}, {"stdout": "", "event": "step_line", "line": 3, "stack_to_render": [], "heap": {}, "ordered_globals": ["w"], "func_name": "<module>", "globals": {"w": 3}}, {"stdout": "3\n", "event": "return", "line": 3, "stack_to_render": [], "heap": {}, "ordered_globals": ["w"], "func_name": "<module>", "globals": {"w": 3}}], "code": " \nw = 3\nprint(w)"}
+<script id="json-jmdc1d40b9-8462-4c4f-b1ed-d7231b6b2f0b" type="application/json" >
+    {"code": " \nw = 3\nprint(w)", "trace": [{"ordered_globals": [], "globals": {}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 2, "func_name": "<module>", "stdout": ""}, {"ordered_globals": ["w"], "globals": {"w": 3}, "heap": {}, "stack_to_render": [], "event": "step_line", "line": 3, "func_name": "<module>", "stdout": ""}, {"ordered_globals": ["w"], "globals": {"w": 3}, "heap": {}, "stack_to_render": [], "event": "return", "line": 3, "func_name": "<module>", "stdout": "3\n"}]}
 </script>
-<div id="jm6632cb8c-8db3-41b7-8847-d1701916ccb7" class="pytutorVisualizer"> </div>
+<div id="jmdc1d40b9-8462-4c4f-b1ed-d7231b6b2f0b" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2776,12 +2783,12 @@ NameError: name &#39;w&#39; is not defined
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm6632cb8c-8db3-41b7-8847-d1701916ccb7').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmdc1d40b9-8462-4c4f-b1ed-d7231b6b2f0b').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm6632cb8c-8db3-41b7-8847-d1701916ccb7',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmdc1d40b9-8462-4c4f-b1ed-d7231b6b2f0b',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2811,8 +2818,8 @@ NameError: name &#39;w&#39; is not defined
 <div class="section" id="Da-fare---taverna">
 <h3>Da fare - taverna<a class="headerlink" href="#Da-fare---taverna" title="Permalink to this headline">¶</a></h3>
 <p>Date le variabili</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pirati</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">ognuno_vuole</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># boccali di grog</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pirati</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">ognuno_vuole</span> <span class="o">=</span> <span class="mi">5</span>      <span class="c1"># boccali di grog</span>
 <span class="n">barili</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">capienza_barile</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># boccali di grog</span>
 </pre></div>
@@ -2974,7 +2981,7 @@ mult_end:
 </tr>
 </tbody>
 </table>
-<p>Adesso che abbiamo un idea di quello che succede, possiamo forse capire meglio l’affermazione che <em>Python è un linguaggio d’alto livello</em>, cioè sta alto nella tabella qua sopra: quando scriviamo codice Python, non ci interessa per nulla del <em>byte code</em> o del <em>codice macchina</em> che viene generato, ma <strong>possiamo concentrarci sulla logica del programma</strong>. Inoltre, il codice Python che scriviamo è <strong>indipendente dall’architettura dei pc</strong>: se abbiamo un interprete Python installato su un computer, si
+<p>Adesso che abbiamo un idea di quello che succede, possiamo forse capire meglio l’affermazione che <em>Python è un linguaggio d’alto livello</em>, cioè sta alto nella tabella qua sopra: quando scriviamo codice Python, non ci interessa per nulla del <em>bytecode</em> o del <em>codice macchina</em> che viene generato, ma <strong>possiamo concentrarci sulla logica del programma</strong>. Inoltre, il codice Python che scriviamo è <strong>indipendente dall’architettura dei pc</strong>: se abbiamo un interprete Python installato su un computer, si
 prenderà cura lui di convertire il codice d’alto livello nel codice macchina particolare di quella architettura, che include sistema operativo (Windows / Mac Os X / Linux) e processore (x86, ARM, PowerPC, etc).</p>
 </div>
 <div class="section" id="Performance">

@@ -277,6 +277,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Booleani">Booleani</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#min">min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Operatori-tra-booleani">Operatori tra booleani</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-costanti">Booleani - Esercizio con costanti</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics-sol.html#Booleani---Esercizio-con-variabili">Booleani - Esercizio con variabili</a></li>
@@ -1572,15 +1573,22 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Markdown</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Celle-Markdown">Celle Markdown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Paragrafi">Paragrafi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Titoli">Titoli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Titolo-pagina">Titolo pagina</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Primo-capitolo">Primo capitolo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Primo-paragrafo">Primo paragrafo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Secondo-paragrafo">Secondo paragrafo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Secondo-capitolo">Secondo capitolo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Link">Link</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Liste">Liste</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Immagini">Immagini</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Variabili-e-nomi-tecnici">Variabili e nomi tecnici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Codice-JSON-/-XML-/-Python">Codice JSON / XML / Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Formule-matematiche">Formule matematiche</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Tabelle">Tabelle</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#Formule-matematiche">Formule matematiche</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../project-ideas.html">Idee per progetti</a><ul>
@@ -1676,6 +1684,237 @@
             
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -1700,8 +1939,8 @@
 </style>
 <div class="section" id="Markdown">
 <h1>Markdown<a class="headerlink" href="#Markdown" title="Permalink to this headline">¶</a></h1>
-<p>Per formattare il testo, Jupyter mette a disposizione un linguaggio chiamato Markdown. Perchè dovreste imparare Markdown? E’ semplice, molto popolare ed è probabile ritrovarlo in molti posti (blog, sistemi di documentazione tecnica, etc).</p>
-<p>Qua riporto solo informazioni essenziali, per altre potete consultare la <a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">Guida di Jupyter (inglese)</a></p>
+<p>Per formattare il testo, Jupyter mette a disposizione un linguaggio chiamato Markdown. Perchè dovresti imparare Markdown? E’ semplice, molto popolare ed è probabile ritrovarlo in molti posti (blog, sistemi di documentazione tecnica, etc).</p>
+<p>Qua riportiamo solo informazioni essenziali, per altre puoi consultare la <a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">Guida di Jupyter (inglese)</a></p>
 <div class="section" id="Celle-Markdown">
 <h2>Celle Markdown<a class="headerlink" href="#Celle-Markdown" title="Permalink to this headline">¶</a></h2>
 <p>Per dire a Jupyter che una cella è codice Markdown e non Python, dal menu seleziona <code class="docutils literal notranslate"><span class="pre">Cell-&gt;Cell</span> <span class="pre">type-&gt;Markdown</span></code>. Una shortcut veloce è premere <code class="docutils literal notranslate"><span class="pre">Esc</span></code> seguito poi da il tasto <code class="docutils literal notranslate"><span class="pre">m</span></code></p>
@@ -1719,6 +1958,52 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
+<div class="section" id="Titoli">
+<h2>Titoli<a class="headerlink" href="#Titoli" title="Permalink to this headline">¶</a></h2>
+<p>I titoli ( <em>headers</em> ) si scrivono anteponendo dei cancelletti al titolo stesso:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Titolo pagina
+
+E&#39; importante.
+
+## Primo capitolo
+
+Ma perchè?
+
+### Primo paragrafo
+
+Che ne so.
+
+### Secondo paragrafo
+
+E spiegalo !
+
+
+## Secondo capitolo
+
+Taci e scrivi.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Titolo-pagina">
+<h1>Titolo pagina<a class="headerlink" href="#Titolo-pagina" title="Permalink to this headline">¶</a></h1>
+<p>E’ importante.</p>
+<div class="section" id="Primo-capitolo">
+<h2>Primo capitolo<a class="headerlink" href="#Primo-capitolo" title="Permalink to this headline">¶</a></h2>
+<p>Ma perchè?</p>
+<div class="section" id="Primo-paragrafo">
+<h3>Primo paragrafo<a class="headerlink" href="#Primo-paragrafo" title="Permalink to this headline">¶</a></h3>
+<p>Che ne so.</p>
+</div>
+<div class="section" id="Secondo-paragrafo">
+<h3>Secondo paragrafo<a class="headerlink" href="#Secondo-paragrafo" title="Permalink to this headline">¶</a></h3>
+<p>E spiegalo !</p>
+</div>
+</div>
+<div class="section" id="Secondo-capitolo">
+<h2>Secondo capitolo<a class="headerlink" href="#Secondo-capitolo" title="Permalink to this headline">¶</a></h2>
+<p>Taci e scrivi.</p>
+</div>
 <div class="section" id="Link">
 <h2>Link<a class="headerlink" href="#Link" title="Permalink to this headline">¶</a></h2>
 <p>Un link si scrive mettendo il testo visibile dall’utente tra parentesi quadre e l’indirizzo vero e proprio tra parentesi tonde:</p>
@@ -1730,7 +2015,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 </div>
 <div class="section" id="Liste">
 <h2>Liste<a class="headerlink" href="#Liste" title="Permalink to this headline">¶</a></h2>
-<p>Le liste si scrivono mettendo anteponendo ad ogni elemento un asterisco:</p>
+<p>Le liste si scrivono anteponendo ad ogni elemento un asterisco:</p>
 <p>Per esempio, scrivendo questo:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Elemento 1
 * Elemento 2
@@ -1770,28 +2055,47 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 </li>
 <li><p>Elemento 3</p></li>
 </ol>
+<p>Se la lista è lunga e dovete editarla spesso, invece di numeri espliciti conviene mettere sempre <code class="docutils literal notranslate"><span class="pre">1.</span></code> e Markdown automaticamente calcolerà i numeri corretti:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Elemento 1
+1. Elemento 2
+    1. Sotto elemento
+    1. Altro sotto elemento
+1. Elemento 3
+</pre></div>
+</div>
+<p>verrà visualizzato così:</p>
+<ol class="arabic simple">
+<li><p>Elemento 1</p></li>
+<li><p>Elemento 2</p>
+<ol class="arabic simple">
+<li><p>Sotto elemento</p></li>
+<li><p>Altro sotto elemento</p></li>
+</ol>
+</li>
+<li><p>Elemento 3</p></li>
+</ol>
 </div>
 <div class="section" id="Immagini">
 <h2>Immagini<a class="headerlink" href="#Immagini" title="Permalink to this headline">¶</a></h2>
-<p>Purtroppo Jupyter non supporta il copia e incolla di immagini, potete solo inserire dei link alle immagini stesse da mettere nella stessa cartella del notebook oppure in una sottocartella.</p>
-<p>Una volta che la cella viene eseguita, se il percorso al file è corretto apparirà l’immagine. Per indicare il percorso, scrivete punto esclamativo, parentesi quadre aperta-chiusa, e poi tra parentesi tonde il percorso del file, per es se l’immagine <code class="docutils literal notranslate"><span class="pre">notebook_icon.png</span></code> sta nella sotto-cartella <code class="docutils literal notranslate"><span class="pre">img</span></code>, scrivete così:</p>
+<p>Purtroppo Jupyter non supporta il copia e incolla di immagini, puoi solo inserire dei link alle immagini stesse da mettere nella stessa cartella del notebook oppure in una sottocartella.</p>
+<p>Una volta che la cella viene eseguita, se il percorso al file è corretto apparirà l’immagine. Per indicare il percorso, scrivi punto esclamativo, parentesi quadre aperta-chiusa, e poi tra parentesi tonde il percorso del file (possibilmente usando lo slash <code class="docutils literal notranslate"><span class="pre">'/'</span></code>), per es se l’immagine <code class="docutils literal notranslate"><span class="pre">notebook_icon.png</span></code> sta nella sotto-cartella <code class="docutils literal notranslate"><span class="pre">img</span></code>, scrivi così:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![](img/example.png)
 </pre></div>
 </div>
 <p>Eseguendo la cella, apparirà l’immagine:</p>
 <p><img alt="image0" src="../_images/example.png" /></p>
-<p>Nota che potete usare qualunque formato di immagine (<code class="docutils literal notranslate"><span class="pre">jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">svg</span></code>, per gli altri provate a vedere se vengono visualizzati).</p>
+<p>Nota che puoi usare qualunque formato di immagine (<code class="docutils literal notranslate"><span class="pre">jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">svg</span></code>, per gli altri prova a vedere se vengono visualizzati).</p>
 </div>
 <div class="section" id="Variabili-e-nomi-tecnici">
 <h2>Variabili e nomi tecnici<a class="headerlink" href="#Variabili-e-nomi-tecnici" title="Permalink to this headline">¶</a></h2>
-<p>Per visualizzare in evidenza variabili e nomi tecnici, come <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">faiQualcosa</span></code>, <code class="docutils literal notranslate"><span class="pre">percorso-di-file</span></code>, potete includere il nome tra due cosiddetti backtick `</p>
+<p>Per visualizzare in evidenza variabili e nomi tecnici, come <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">faiQualcosa</span></code>, <code class="docutils literal notranslate"><span class="pre">percorso-di-file</span></code>, puoi includere il nome tra due cosiddetti backtick `</p>
 <p><strong>NOTA</strong>: il backtick ` NON è l’apice che usiamo di solito: <code class="docutils literal notranslate"><span class="pre">'</span></code></p>
-<p>Per scrivere questo strano apice rovesciato, guardate qua, se non va fate copia e incolla !</p>
+<p>Per scrivere questo strano apice rovesciato, guarda qua, se non va fai copia e incolla !</p>
 <ul class="simple">
 <li><p>Windows:</p>
 <ul>
-<li><p>se avete il tastierino numerico: tenere premuto <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">Gr</span></code>, scrivere <code class="docutils literal notranslate"><span class="pre">96</span></code> sul tastierino numerico, rilasciare <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">Gr</span></code></p></li>
-<li><p>se non l’avete: provate a premere tasto windows + <code class="docutils literal notranslate"><span class="pre">\</span></code> (in alto a sinistra)</p></li>
+<li><p>se hai il tastierino numerico: tenere premuto <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">Gr</span></code>, scrivere <code class="docutils literal notranslate"><span class="pre">96</span></code> sul tastierino numerico, rilasciare <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">Gr</span></code></p></li>
+<li><p>se non ce l’hai: prova a premere tasto windows + <code class="docutils literal notranslate"><span class="pre">\</span></code> (in alto a sinistra)</p></li>
 </ul>
 </li>
 <li><p>Mac: <code class="docutils literal notranslate"><span class="pre">alt+9</span></code></p></li>
@@ -1800,7 +2104,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 </div>
 <div class="section" id="Codice-JSON-/-XML-/-Python">
 <h2>Codice JSON / XML / Python<a class="headerlink" href="#Codice-JSON-/-XML-/-Python" title="Permalink to this headline">¶</a></h2>
-<p>Se in una cella Markdown volete visualizzare testo posizionato esattamente come lo scrivete, racchiudetelo in un blocco delimitato da file di tre tre backtick ``` :</p>
+<p>Se in una cella Markdown vuoi visualizzare testo posizionato esattamente come lo scrivi, racchiudilo in un blocco delimitato da file di tre tre backtick ``` :</p>
 <p>```</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>testo posizionato come
     voglio
@@ -1839,9 +2143,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 </div>
 <div class="section" id="Formule-matematiche">
 <h2>Formule matematiche<a class="headerlink" href="#Formule-matematiche" title="Permalink to this headline">¶</a></h2>
-<p>E’ possibile scrivere formule in <a class="reference external" href="http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf#chapter.5">Latex</a> (ma non l’abbiamo visto a lezione) mettendole tra segni di dollaro <code class="docutils literal notranslate"><span class="pre">$</span></code>. Per esempio <code class="docutils literal notranslate"><span class="pre">$\sum$</span></code> verrà visualizzato così: <span class="math notranslate nohighlight">\(\sum\)</span></p>
-<div class="section" id="Tabelle">
-<h3>Tabelle<a class="headerlink" href="#Tabelle" title="Permalink to this headline">¶</a></h3>
+<p>E’ possibile scrivere formule in <a class="reference external" href="http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf#chapter.5">Latex</a> (ma non l’abbiamo visto a lezione) mettendole tra segni di dollaro <code class="docutils literal notranslate"><span class="pre">$</span></code>. Per esempio <code class="docutils literal notranslate"><span class="pre">$\sum$</span></code> verrà visualizzato così:</p>
+<p><span class="math notranslate nohighlight">\(\sum\)</span></p>
+<p>Con due dollari ai lati <code class="docutils literal notranslate"><span class="pre">$$\sum$$</span></code> la formula viene centrata:</p>
+<div class="math notranslate nohighlight">
+\[\sum\]</div>
 <p>Scrivere tabelle piccole in Markdown è ancora fattibile:</p>
 <p>Per esempio, scrivere questo:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>io |sono | una tabella
@@ -1874,7 +2180,15 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 </tr>
 </tbody>
 </table>
-<p>ma per tabelle grandi Markdown è terribile. Quindi siete più che giustificati a usare alternative, per esempio allegare fogli Excel (anche se preferisco LibreOffice Calc col formato <code class="docutils literal notranslate"><span class="pre">.ods</span></code>, se proprio amate Excel perlomeno mandatemi un <code class="docutils literal notranslate"><span class="pre">.xls</span></code> e non un <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>). Potete anche prendere screenshot delle tabelle e includerli come immagini.</p>
+<p>ma per tabelle grandi Markdown è terribile. Quindi siete più che giustificati a usare alternative, per esempio allegare fogli Excel. Potete anche prendere screenshot delle tabelle e includerli come immagini.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

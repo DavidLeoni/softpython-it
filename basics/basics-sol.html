@@ -277,6 +277,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Booleani">Booleani</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#min">min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Operatori-tra-booleani">Operatori tra booleani</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Booleani---Esercizio-con-costanti">Booleani - Esercizio con costanti</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Booleani---Esercizio-con-variabili">Booleani - Esercizio con variabili</a></li>
@@ -1572,15 +1573,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../project/markdown.html">Markdown</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Celle-Markdown">Celle Markdown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Paragrafi">Paragrafi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Titoli">Titoli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project/markdown.html#Titolo-pagina">Titolo pagina</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Primo-capitolo">Primo capitolo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Primo-paragrafo">Primo paragrafo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Secondo-paragrafo">Secondo paragrafo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Secondo-capitolo">Secondo capitolo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Link">Link</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Liste">Liste</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Immagini">Immagini</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Variabili-e-nomi-tecnici">Variabili e nomi tecnici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Codice-JSON-/-XML-/-Python">Codice JSON / XML / Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Formule-matematiche">Formule matematiche</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../project/markdown.html#Tabelle">Tabelle</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/markdown.html#Formule-matematiche">Formule matematiche</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../project-ideas.html">Idee per progetti</a><ul>
@@ -2848,6 +2856,15 @@ str
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
 <td><p>Addizione e sottrazione</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">min(a,b,</span> <span class="pre">...)</span></code></p></td>
+<td><p>il minimo tra i numeri passati</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">max(a,b,</span> <span class="pre">...)</span></code></p></td>
+<td><p>il massimo tra i numeri passati</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">abs(a)</span></code></p></td>
+<td><p>il valore assoluto</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -3222,7 +3239,7 @@ bool
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3231,13 +3248,17 @@ bool
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-bool
+int
 </pre></div></div>
+</div>
+<div class="section" id="min">
+<h3>min<a class="headerlink" href="#min" title="Permalink to this headline">¶</a></h3>
+<p>Il minimo tra due numeri può essere calcolato con la funzione<code class="docutils literal notranslate"><span class="pre">min</span></code></p>
 </div>
 <div class="section" id="Operatori-tra-booleani">
 <h3>Operatori tra booleani<a class="headerlink" href="#Operatori-tra-booleani" title="Permalink to this headline">¶</a></h3>
