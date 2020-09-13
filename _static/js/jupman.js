@@ -294,7 +294,8 @@ var jupman = {
             if (prefix_pos != -1){
                 page = page.slice(prefix_pos + '_build/html/'.length);
             }
-        } 
+        }
+        let xhr = new XMLHttpRequest();
         xhr.open("GET", "https://en.softpython.org/cgi-bin/lang.php?page="+page, true);
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {

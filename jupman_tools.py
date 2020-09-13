@@ -388,8 +388,8 @@ class Jupman:
                             '_static/js/pytutor-embed.bundle.min.js.zip' ]
         """ Common files for exercise and exams as paths. Paths are intended relative to the project root. Globs like /**/* are allowed."""
 
-        self.chapters =  ['*/']
-        self.chapters_exclude =  ['[^_]*/','exams/', 'project/']
+        self.chapter_patterns =  ['*/']
+        self.chapter_exclude_patterns =  ['[^_]*/','exams/', 'project/']
 
         self.ipynb_solutions = "SOLUTIONS"
         self.ipynb_exercises = "EXERCISES"
@@ -465,11 +465,11 @@ class Jupman:
 
     def get_exercise_folders(self):
         ret = []
-        for p in self.chapters:
+        for p in self.chapter_patterns:
             for r in glob.glob(p):
                 if r not in ret:
                     ret.append(r)
-        for p in self.chapters_exclude:
+        for p in self.chapter_exclude_patterns:
             for r in glob.glob(p):
                 if r in ret:
                     ret.remove(r)
