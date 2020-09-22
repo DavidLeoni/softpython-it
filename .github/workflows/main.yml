@@ -36,7 +36,7 @@ jobs:
         tree -aC $GITHUB_WORKSPACE
     - name: Commit documentation changes
       run: |
-        git clone https://github.com/${{ github.repository }}.git --depth 1 --branch it.softpython.org --single-branch it.softpython.org
+        git clone --depth 1  --branch it.softpython.org  https://github.com/${{ github.repository }}.git it.softpython.org
         
         mkdir -p it.softpython.org/${{ env.WEB_PATH }}
         cp -r $GITHUB_WORKSPACE/html/* it.softpython.org/${{ env.WEB_PATH }}
