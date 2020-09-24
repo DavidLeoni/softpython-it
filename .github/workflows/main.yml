@@ -41,12 +41,12 @@ jobs:
         mkdir -p it.softpython.org/${{ env.WEB_PATH }}
         cp -r $GITHUB_WORKSPACE/html/* it.softpython.org/${{ env.WEB_PATH }}
         if compgen -G "$GITHUB_WORKSPACE/latex/*.pdf" > /dev/null; then
-             cp -r $GITHUB_WORKSPACE/latex/*.pdf en.softpython.org/${{ env.WEB_PATH }}
+             cp -r $GITHUB_WORKSPACE/latex/*.pdf it.softpython.org/${{ env.WEB_PATH }}
         else
              echo "ERROR: NO PDF FILES WHERE GENERATED!"
         fi
         if compgen -G "$GITHUB_WORKSPACE/epub/*.epub" > /dev/null; then
-             cp -r $GITHUB_WORKSPACE/epub/*.epub en.softpython.org/${{ env.WEB_PATH }}
+             cp -r $GITHUB_WORKSPACE/epub/*.epub it.softpython.org/${{ env.WEB_PATH }}
         else
              echo "ERROR: NO EPUB FILES WHERE GENERATED!"
         fi
