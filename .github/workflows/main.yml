@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   build_docs_job:
-    if: (github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/dev')
+    if: if: (github.repository == 'DavidLeoni/softpython-it') && ((github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/dev') || (github.ref == 'refs/heads/themed'))
     runs-on: ubuntu-latest
     name: Build docs    
     steps:   
@@ -20,7 +20,7 @@ jobs:
     - name: sets WEB_PATH
       run: echo "::set-env name=WEB_PATH::"
     - name: Run Sphinx in RTD docker      
-      uses: DavidLeoni/readthedocs-to-actions@v1.0
+      uses: DavidLeoni/readthedocs-to-actions@v1.1
       with:
         RTD_PRJ_NAME: softpython-it
         GIT_URL: https://github.com/${{ github.repository }}.git
@@ -40,8 +40,16 @@ jobs:
         
         mkdir -p it.softpython.org/${{ env.WEB_PATH }}
         cp -r $GITHUB_WORKSPACE/html/* it.softpython.org/${{ env.WEB_PATH }}
-        cp -r $GITHUB_WORKSPACE/epub/*.epub it.softpython.org/${{ env.WEB_PATH }}
-        cp -r $GITHUB_WORKSPACE/latex/*.pdf it.softpython.org/${{ env.WEB_PATH }}
+        if compgen -G "$GITHUB_WORKSPACE/latex/*.pdf" > /dev/null; then
+             cp -r $GITHUB_WORKSPACE/latex/*.pdf en.softpython.org/${{ env.WEB_PATH }}
+        else
+             echo "ERROR: NO PDF FILES WHERE GENERATED!"
+        fi
+        if compgen -G "$GITHUB_WORKSPACE/epub/*.epub" > /dev/null; then
+             cp -r $GITHUB_WORKSPACE/epub/*.epub en.softpython.org/${{ env.WEB_PATH }}
+        else
+             echo "ERROR: NO EPUB FILES WHERE GENERATED!"
+        fi
         # note: html zip is already provided by Github
         cd it.softpython.org        
         git config --local user.email "action@github.com"
