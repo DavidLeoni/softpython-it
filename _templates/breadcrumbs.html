@@ -4,13 +4,18 @@
 {% block breadcrumbs %}
 
     <div id='jupman-langs'></div>
-
-
+        
     <script>
-    if (window.location.hostname.includes('softpython.org')){
-        JUPMAN_LANG = window.location.hostname.slice(0,window.location.hostname.indexOf('.'));
+    var hn = window.location.hostname;
+    var pn = window.location.pathname;
+
+    if (hn.includes('softpython.org')){
+        JUPMAN_LANG = hn.slice(0,window.location.hostname.indexOf('.'));
+    } else if (pn.includes('/_build/html')){
+        var pos = pn.indexOf('/_build/html');
+        JUPMAN_LANG = pn.slice(pos-2, pos);
     } else {
-        JUPMAN_LANG = 'en';        
+        JUPMAN_LANG = 'en';
     }
     console.log('JUPMAN_LANG=',JUPMAN_LANG);
     </script>

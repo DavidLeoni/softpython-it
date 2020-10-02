@@ -12,7 +12,7 @@ Libro completo su Python 3 per basi pulizia e analisi dati, in formato Jupyter n
 
 Questo sito è stato realizzato con stanziamenti del [Dipartimento di Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it) dell'Università di Trento, e anche [Sociologia](https://www.sociologia.unitn.it) e [Matematica](https://www.maths.unitn.it/)
 
-![unitn-843724](_static/img/third-parties/logo-disi-unitn-it.jpeg)
+![unitn-843724](_static/img/third-parties/disi-unitn-it-logo.jpeg)
 
 ![cc-by-7172829](_static/img/cc-by.png)
 

@@ -289,10 +289,12 @@ var jupman = {
             return;
         }
         var page = window.location.pathname;
+        var imgPrefix = '/'
         if (window.location.protocol =='file:'){
             var prefix_pos = page.indexOf('_build/html/');
             if (prefix_pos != -1){
                 page = page.slice(prefix_pos + '_build/html/'.length);
+                imgPrefix = window.location.pathname.slice(0,prefix_pos);
             }
         }
         let xhr = new XMLHttpRequest();
@@ -310,7 +312,7 @@ var jupman = {
                             link_node.setAttribute('href',trans[lang]);
                             link_node.setAttribute('title','Switch language to ' + lang.toUpperCase());
                             var img_node = document.createElement('IMG');
-                            img_node.setAttribute('src','_static/img/flags/flat/32/'+lang+'.png');
+                            img_node.setAttribute('src',imgPrefix + '_static/img/flags/flat/32/'+lang+'.png');
                             img_node.setAttribute('alt',lang.toUpperCase());
                             link_node.appendChild(img_node);
                             the_div.appendChild(link_node);
