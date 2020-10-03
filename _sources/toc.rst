@@ -4,6 +4,7 @@
 
     Home <index.ipynb>
     overview.ipynb
+    references.ipynb
     installation.ipynb    
     
 A - Fondamenti

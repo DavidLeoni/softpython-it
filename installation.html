@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduzione rapida a Python" href="quick-intro/quick-intro-sol.html" />
-    <link rel="prev" title="Come orientarsi" href="overview.html" /> 
+    <link rel="prev" title="Riferimenti" href="references.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -123,20 +123,26 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Come orientarsi</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Capitoli">Capitoli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Perchè-Python?">Perchè Python?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#Riferimenti">Riferimenti</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="overview.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Approccio-e-obiettivi">Approccio e obiettivi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Non-funziona,-che-faccio-?">Non funziona, che faccio ?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="overview.html#Come-porre-domande">Come porre domande</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#Condivisione-online">Condivisione online</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Installazione-e-strumenti">Installazione e strumenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#Cominciamo-!">Cominciamo !</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Riferimenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Libro-Passo-dopo-passo-impariamo-a-programmare-con-Python">Libro Passo dopo passo impariamo a programmare con Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#W3Resources-website">W3Resources website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Corso-Python-3-di-Nicola-Zoppetti">Corso Python 3 di Nicola Zoppetti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Guida-Introduttiva-a-Python-3-guida-ufficiale">Guida Introduttiva a Python 3 guida ufficiale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Corso-Scientific-Programming-Master-Data-Science---Trento">Corso Scientific Programming Master Data Science - Trento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Geeks-for-Geeks">Geeks for Geeks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Introduction-to-Scientific-Programming-with-Python">Introduction to Scientific Programming with Python</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installazione</a><ul>
@@ -1739,18 +1745,25 @@
 </style>
 <div class="section" id="Installazione">
 <h1>Installazione<a class="headerlink" href="#Installazione" title="Permalink to this headline">¶</a></h1>
-<p>Vedremo come si installano Python, librerie addizionali di Python, la gestione degli ambienti virtuali e infine il notebook Jupyter.</p>
+<p>In questa guida vedremo se e come installare Python, le librerie addizionali, il notebook Jupyter e infine la gestione degli ambienti virtuali.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>A volte non serve nemmeno installare!</strong></p>
+<p>Volendo puoi programmare direttamente online con i seguenti servizi</p>
+<p>NOTA 1: se vuoi provarne uno, ricordati sempre di controllare che sia Python <strong>3</strong> !</p>
+<p>NOTA 2: Come per ogni servizio online, quando è offerto gratuitamente non abusarne. Se cerchi di processare un terabyte di dati al giorno senza pagare una sottoscrizione, rischi che ti neghino il servizio.</p>
+</div>
+<p><a class="reference external" href="https://repl.it/languages/python3">Python 3 su repl.it</a>: permette di editare codice Python anche in modo collaborativo con altri utenti, e supporta anche librerie come Matplotlib.</p>
+<p><a class="reference external" href="http://pythontutor.com/visualize.html#py=3">Python Tutor</a>: permette di eseguire una istruzione alla volta offrendo un’utile visualizzazione di cosa accade ‘sotto il cofano’</p>
+<p><a class="reference external" href="https://colab.research.google.com">Google Colab</a>: permette di editare in modo collaborativo fogli Jupyter e di salvarli sul Google Drive.</p>
+<ul class="simple">
+<li><p>NOTA 1: potrebbe darsi che non riusciate ad accedere coi vostri account universitari (es. <code class="docutils literal notranslate"><span class="pre">&#64;studenti.unitn.it</span></code>). In tal caso, usate account personali <code class="docutils literal notranslate"><span class="pre">&#64;gmail.com</span></code></p></li>
+<li><p>NOTA 2: l’aspetto ‘collaborativo’ del Colab è cambiato nel corso del tempo, <strong>fate bene attenzione a cosa succede quando operate in due sullo stesso documento</strong>. Una volta (2017) le modifiche fatte da uno erano immediatamente viste dagli altri, ultimamente (2019) paiono visibili solo quando si salva - peggio, vanno a sovrascrivere eventuali modifiche fatti da altri.</p></li>
+</ul>
+<p><a class="reference external" href="http://try.jupyter.org">Demo online di Jupyter</a>: a volte funziona non sempre è disponibile. Se riesci ad accedere, ricordati di selezionare nel menù <em>Kernel-&gt;Change kernel-&gt;Python 3</em></p>
 <div class="section" id="Installazione-Python">
 <h2>Installazione Python<a class="headerlink" href="#Installazione-Python" title="Permalink to this headline">¶</a></h2>
 <p>Ci sono vari modi per installare Python 3 e le sue librerie: c’è la distribuzione ufficiale di Python ‘liscia’ come anche gestori di pacchetti (es. Anaconda) o ambienti preconfezionati (es. Python(x,y)) che forniscono sia Python più varie librerie extra. Inoltre, una volta completata l’installazione, Python 3 contiene un comando <code class="docutils literal notranslate"><span class="pre">pip</span></code> (a volte per python 3 si chiama <code class="docutils literal notranslate"><span class="pre">pip3</span></code>) che permette di installare in seguito da linea di comando eventuali librerie mancanti.</p>
 <p>Il modo migliore per scegliere cosa installare dipende da quale sistema operativo si ha e cosa ci si intende fare. In questo libro useremo Python 3 e librerie scientifiche, quindi cercheremo di creare un ambiente adatto a supportare questo scenario.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Alternative veloci online</strong></p>
-<p>Se per caso hai difficoltà ad installare e sei ansioso di provare python, puoi programmare direttamente online con <a class="reference external" href="https://repl.it/languages/python">Python 3 su repl.it</a></p>
-<p>Un’altra risorsa utile è <a class="reference external" href="http://pythontutor.com/visualize.html#py=3">Python Tutor</a>, che permette di eseguire una istruzione alla volta offrendo una utile visualizzazione di cosa accade ‘sotto il cofano’.</p>
-<p>Puoi provare anche la <a class="reference external" href="http://try.jupyter.org">demo online di Jupiter</a>, ma non sempre è disponibile. Se riesci ad accedere, ricordati di selezionare nel menù <em>Kernel-&gt;Change kernel-&gt;Python 3</em></p>
-<p>Qualsiasi sia l’ambiente online che usi, ricordati sempre di controllare che sia Python <strong>3</strong> !</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>Attenzione: Prima di installare roba a caso scaricata da internet, leggi bene questa guida!</strong></p>
 <p>Abbiamo cercato di renderla abbastanza generica, ma non essendoci stato possibile testare tutti i vari casi potrebbero insorgere dei problemi, se avete qualche dubbio chiedete ai mentor.</p>
@@ -2140,7 +2153,7 @@ altri linguaggi, tipo R). Il kernel corrente per un foglio è visibile in alto a
         <a href="quick-intro/quick-intro-sol.html" class="btn btn-neutral float-right" title="Introduzione rapida a Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="overview.html" class="btn btn-neutral float-left" title="Come orientarsi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="references.html" class="btn btn-neutral float-left" title="Riferimenti" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

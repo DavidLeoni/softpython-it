@@ -54,7 +54,7 @@
   <link rel="stylesheet" href="_static/css/softpython-theme.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installazione" href="installation.html" />
+    <link rel="next" title="Riferimenti" href="references.html" />
     <link rel="prev" title="SoftPython" href="index.html" /> 
 </head>
 
@@ -123,20 +123,26 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Come orientarsi</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Capitoli">Capitoli</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Perchè-Python?">Perchè Python?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Riferimenti">Riferimenti</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Immersione-in-Python-3">Immersione in Python 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#Approccio-e-obiettivi">Approccio e obiettivi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Non-funziona,-che-faccio-?">Non funziona, che faccio ?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Come-porre-domande">Come porre domande</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Condivisione-online">Condivisione online</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Installazione-e-strumenti">Installazione e strumenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Cominciamo-!">Cominciamo !</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">Riferimenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Libro-Passo-dopo-passo-impariamo-a-programmare-con-Python">Libro Passo dopo passo impariamo a programmare con Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#W3Resources-website">W3Resources website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Corso-Python-3-di-Nicola-Zoppetti">Corso Python 3 di Nicola Zoppetti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Guida-Introduttiva-a-Python-3-guida-ufficiale">Guida Introduttiva a Python 3 guida ufficiale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Corso-Scientific-Programming-Master-Data-Science---Trento">Corso Scientific Programming Master Data Science - Trento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Geeks-for-Geeks">Geeks for Geeks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html#Introduction-to-Scientific-Programming-with-Python">Introduction to Scientific Programming with Python</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installazione</a><ul>
@@ -1753,11 +1759,7 @@
 <ul class="simple">
 <li><p>teoria programmazione a oggetti</p></li>
 <li><p>algoritmi, complessità computazionale</p></li>
-<li><p>performance</p>
-<ul>
-<li><p>niente terabyte di dati …</p></li>
-</ul>
-</li>
+<li><p>performance (niente terabyte di dati …)</p></li>
 <li><p>debugging avanzato (pdb)</p></li>
 <li><p>il testing è solo accennato</p></li>
 <li><p>machine learning</p></li>
@@ -1767,71 +1769,18 @@
 <div class="section" id="Perchè-Python?">
 <h2>Perchè Python?<a class="headerlink" href="#Perchè-Python?" title="Permalink to this headline">¶</a></h2>
 <p><img alt="python-logo-1823" src="_images/python-logo.png" /></p>
+<p><strong>Semplice</strong> a sufficienza per iniziare</p>
+<p><strong>Versatile</strong>, molto usato per</p>
 <ul class="simple">
-<li><p><strong>Semplice</strong> a sufficienza per iniziare</p></li>
-<li><p><strong>Versatile</strong>, molto usato per</p>
-<ul>
 <li><p>calcolo scientifico</p></li>
 <li><p>applicazioni web</p></li>
 <li><p>scripting</p></li>
 </ul>
-</li>
-<li><p><strong>diffuso</strong> sia nell’industria che nella ricerca</p>
-<ul>
-<li><p>Indice <a class="reference external" href="https://www.tiobe.com/tiobe-index/">Tiobe</a></p></li>
-<li><p><a class="reference external" href="https://madnight.github.io/githut/#/pull_requests/2019/1">popolarità su Github</a></p></li>
-</ul>
-</li>
-<li><p><strong>Licenza</strong> <a class="reference external" href="https://www.python.it/doc/faq/#ci-sono-restrizioni-di-copyright-nell-uso-di-python">open source &amp; business friendly</a></p>
-<ul>
-<li><p>tradotto potete vendere prodotti commerciali basati su Python senza pagare royalties</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="Riferimenti">
-<h2>Riferimenti<a class="headerlink" href="#Riferimenti" title="Permalink to this headline">¶</a></h2>
-<p><strong>Tabellona materiale</strong>: I vari argomenti del corso sono listati nella <a class="reference external" href="https://docs.google.com/spreadsheets/d/1w9WzEVnmPs3de4fHsywMdhcVwuNxy5_ol24AimddbC4/edit#gid=0">Tabellona materiale</a></p>
-<p><strong>Altro materiale</strong>: Citiamo i seguenti due libri, entrambi dall’approccio discorsivo e gratuiti disponibili sia online che in pdf.</p>
-<div class="section" id="Pensare-in-Python-seconda-edizione">
-<h3>Pensare in Python seconda edizione<a class="headerlink" href="#Pensare-in-Python-seconda-edizione" title="Permalink to this headline">¶</a></h3>
-<p>Think Python, di Allen B. Downey</p>
+<p><strong>diffuso</strong> sia nell’industria che nella ricerca - Indice <a class="reference external" href="https://www.tiobe.com/tiobe-index/">Tiobe</a> - <a class="reference external" href="https://madnight.github.io/githut/#/pull_requests/2019/1">popolarità su Github</a></p>
+<p><strong>Licenza</strong> <a class="reference external" href="https://www.python.it/doc/faq/#ci-sono-restrizioni-di-copyright-nell-uso-di-python">open source &amp; business friendly</a></p>
 <ul class="simple">
-<li><p>Molto discorsivo, Passo passo, adatto a principianti</p></li>
-<li><p><a class="reference external" href="https://davidleoni.github.io/ThinkPythonItalian/html/index.html">versione online</a></p></li>
-<li><p><a class="reference external" href="https://davidleoni.github.io/ThinkPythonItalian/thinkpython_italian_html.zip">zip offline</a></p></li>
-<li><p><a class="reference external" href="https://github.com/DavidLeoni/ThinkPythonItalian/raw/master/thinkpython_italian.pdf">PDF</a></p></li>
+<li><p>tradotto: potete vendere prodotti commerciali basati su Python senza pagare royalties</p></li>
 </ul>
-<p>Licenza: <a class="reference external" href="http://creativecommons.org/licenses/by-nc/3.0/deed.it">Creative Commons Attribuzione Non Commerciale 3.0</a>, come riportato nella <a class="reference external" href="http://greenteapress.com/wp/think-python-2e/">pagina della versione originale in inglese</a>. Tradotto: potete farvelo stampare in copisteria, se vi fanno storie su questioni di copyright mostrategli la licenza.</p>
-<ul class="simple">
-<li><p>Liberamente stampabile: sì</p></li>
-<li><p>Libro su carta da comprare in italiano: no</p></li>
-<li><p>Libro su carta da comprare in inglese: sì</p></li>
-</ul>
-</div>
-<div class="section" id="Immersione-in-Python-3">
-<h3>Immersione in Python 3<a class="headerlink" href="#Immersione-in-Python-3" title="Permalink to this headline">¶</a></h3>
-<p>(Dive into Python 3)</p>
-<ul class="simple">
-<li><p>più pratico, contiene tutorial più mirati (es. trattare file XML)</p></li>
-<li><p><a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it">versione online</a></p></li>
-<li><p><a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/d/diveintopython3-it-html-latest.zip">zip offline</a></p></li>
-<li><p><a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/d/diveintopython3-it-pdf-latest.zip">PDF</a> + <a class="reference internal" href="_static/toc-immersione-in-python-3.html"><span class="doc">Tabella dei contenuti generata</span></a></p></li>
-</ul>
-<p>Licenza: <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/deed.it">Creative Commons Attribuzione Condividi allo stesso modo 3.0</a> come riportato in fondo <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/">al sito del libro</a>. Tradotto: potete farvelo stampare in copisteria, se vi fanno storie su questioni di copyright mostrategli la licenza.</p>
-<ul class="simple">
-<li><p>Liberamente stampabile: sì</p></li>
-<li><p>Libro su carta da comprare in italiano: no</p></li>
-<li><p>Libro su carta da comprare in inglese: sì</p></li>
-</ul>
-</div>
-<div class="section" id="Lezioni-di-Nicola-Cassetta">
-<h3>Lezioni di Nicola Cassetta<a class="headerlink" href="#Lezioni-di-Nicola-Cassetta" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Tutoria passo passo, adatti a principianti</p></li>
-<li><p><a class="reference external" href="http://ncassetta.altervista.org/Tutorial_Python/index.html">versione online</a></p></li>
-</ul>
-</div>
 </div>
 <div class="section" id="Approccio-e-obiettivi">
 <h2>Approccio e obiettivi<a class="headerlink" href="#Approccio-e-obiettivi" title="Permalink to this headline">¶</a></h2>
@@ -1839,14 +1788,13 @@
 <ul class="simple">
 <li><p><strong>Difficoltà esercizi</strong>: ✪ , ✪✪</p></li>
 <li><p>Leggi <a class="reference external" href="https://it.softpython.org/index.html#A---Fondamenti">SoftPython - Parte A - Fondamenti</a></p></li>
-<li><p>Altre cose utili le trovi nel libro ‘Pensare in Python e tutorial di Nicola Cassetta</p></li>
 </ul>
 <p><strong>Se già sai programmare bene:</strong></p>
 <ul class="simple">
 <li><p><strong>Difficoltà esercizi</strong>: ✪✪✪, ✪✪✪✪</p></li>
 <li><p>Leggi <a class="reference external" href="https://it.softpython.org/quick-intro/quick-intro-sol.html">Introduzione veloce a Python</a> e poi vai direttamente alla Parte B - Analisi dati</p></li>
-<li><p>altre cose interessanti si trovano nel <strong>libro Immersione in Python</strong></p></li>
 </ul>
+<p><strong>Ulteriori guide:</strong> Alla pagina <a class="reference internal" href="references.html"><span class="doc">Riferimenti</span></a> trovi altro materiale sia introduttivo che più avanzato.</p>
 </div>
 <div class="section" id="Non-funziona,-che-faccio-?">
 <h2>Non funziona, che faccio ?<a class="headerlink" href="#Non-funziona,-che-faccio-?" title="Permalink to this headline">¶</a></h2>
@@ -1891,7 +1839,7 @@ nell’ordine proposto:</p>
 </li>
 </ul>
 </li>
-<li><p>Guarda <a class="reference external" href="https://docs.google.com/spreadsheets/d/1w9WzEVnmPs3de4fHsywMdhcVwuNxy5_ol24AimddbC4/edit#gid=0">Tabellona materiale</a>, per riferimenti a materiale che può coprire l’argomento del problema</p></li>
+<li><p>Guarda la pagina dei <a class="reference internal" href="references.html"><span class="doc">Riferimenti</span></a>, per spunti che possono coprire l’argomento del problema</p></li>
 <li><p>fatti coraggio e fai una domanda su un forum pubblico, come Stack overflow o python-it.org - vedi <a class="reference external" href="#Come-porre-domande">come porre domande</a>.</p></li>
 </ol>
 <div class="section" id="Come-porre-domande">
@@ -1903,16 +1851,6 @@ nell’ordine proposto:</p>
 <p>In sostanza, ti si chiede sempre di esprimere chiaramente le circostanze del problema, mettendo un titolo esplicativo al post / mail e dimostrando di avere speso un po’ di tempo (almeno 10 min) cercando una soluzione per conto tuo. Se hai seguito le regole di cui sopra, e per sfortuna trovi programmatori scorbutici che ti rispondono male, ignorali e lascia che se la prendano con la tastiera. Con i prof del corso SoftPython potete stare tranquilli, pur essendo programmatori sono molto pazienti
 :-)</p>
 </div>
-</div>
-<div class="section" id="Condivisione-online">
-<h2>Condivisione online<a class="headerlink" href="#Condivisione-online" title="Permalink to this headline">¶</a></h2>
-<p>Per eseguire e condividere notebook Jupyter online, si può usare <a class="reference external" href="https://colab.research.google.com">Google Colab</a> che permette di editare in modo collaborativo fogli Jupyter e di salvarli sul Google Drive.</p>
-<ul class="simple">
-<li><p><strong>NOTA 1</strong>: potrebbe darsi che non riusciate ad accedere coi vostri account universitari (es. <code class="docutils literal notranslate"><span class="pre">&#64;studenti.unitn.it</span></code>). In tal caso, usate account personali <code class="docutils literal notranslate"><span class="pre">&#64;gmail.com</span></code></p></li>
-<li><p><strong>NOTA 2</strong>: l’aspetto ‘collaborativo’ del Colab è cambiato nel corso del tempo, <strong>fate bene attenzione a cosa succede quando operate in due sullo stesso documento</strong>. Una volta (2017) le modifiche fatte da uno erano immediatamente viste dagli altri, ultimamente (2019) paiono visibili solo quando si salva - peggio, vanno a sovrascrivere eventuali modifiche fatti da altri.</p></li>
-<li><p><strong>NOTA 3</strong>: dato che è un servizio sperimentale di Google, non è detto che esista ancora fra 3 anni - in caso se verrà chiuso sarete sicuramente avvisati per tempo e comunque i file dovrebbero rimanere salvati sul Google Drive</p></li>
-<li><p><strong>NOTA 4</strong>: come per ogni servizio Jupyter online, quando è offerto gratuitamente non abusatene. Se cercate di processare un terabyte di dati al giorno senza pagare una sottoscrizione, rischiate che vi chiudano il servizio.</p></li>
-</ul>
 </div>
 <div class="section" id="Installazione-e-strumenti">
 <h2>Installazione e strumenti<a class="headerlink" href="#Installazione-e-strumenti" title="Permalink to this headline">¶</a></h2>
@@ -1937,7 +1875,7 @@ nell’ordine proposto:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation.html" class="btn btn-neutral float-right" title="Installazione" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="references.html" class="btn btn-neutral float-right" title="Riferimenti" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="SoftPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
