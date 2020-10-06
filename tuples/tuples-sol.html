@@ -708,7 +708,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-da-sequenza-di-coppie">Dizionario da sequenza di coppie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-da-coppie-di-argomenti">Dizionario da coppie di argomenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Dizionario-da-parametri-con-nome">Dizionario da parametri con nome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copiare-un-dizionario">Copiare un dizionario</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copia-superficiale">Copia superficiale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries1-sol.html#Copia-in-profondità">Copia in profondità</a></li>
@@ -749,7 +749,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Uguaglianza-e-copie">Uguaglianza e copie</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Esercizio---zoom">Esercizio - zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Esercizio---ZOOM-DOOM">Esercizio - ZOOM DOOM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -2414,10 +2414,10 @@ tuple
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmaf34d59d-5a6a-4361-9642-c47072786f7b" type="application/json" >
-    {"code": " \nroba = (4, \"carta\", 5, 2,\"scatole\", 7)\ninsalata = ( (\"cavoli\", 3), (\"pomodori\",9), (\"verze\",4) )\nmisto = ( [\"quando\", \"fuori\", \"piove\"], [\"scrivo\", \"programmi\"], [7,3,9] )", "trace": [{"stdout": "", "func_name": "<module>", "globals": {}, "stack_to_render": [], "event": "step_line", "line": 2, "ordered_globals": [], "heap": {}}, {"stdout": "", "func_name": "<module>", "globals": {"roba": ["REF", 1]}, "stack_to_render": [], "event": "step_line", "line": 3, "ordered_globals": ["roba"], "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7]}}, {"stdout": "", "func_name": "<module>", "globals": {"insalata": ["REF", 2], "roba": ["REF", 1]}, "stack_to_render": [], "event": "step_line", "line": 4, "ordered_globals": ["roba", "insalata"], "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7], "2": ["TUPLE", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["TUPLE", "cavoli", 3], "4": ["TUPLE", "pomodori", 9], "5": ["TUPLE", "verze", 4]}}, {"stdout": "", "func_name": "<module>", "globals": {"misto": ["REF", 6], "insalata": ["REF", 2], "roba": ["REF", 1]}, "stack_to_render": [], "event": "return", "line": 4, "ordered_globals": ["roba", "insalata", "misto"], "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7], "2": ["TUPLE", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["TUPLE", "cavoli", 3], "4": ["TUPLE", "pomodori", 9], "5": ["TUPLE", "verze", 4], "6": ["TUPLE", ["REF", 7], ["REF", 8], ["REF", 9]], "7": ["LIST", "quando", "fuori", "piove"], "8": ["LIST", "scrivo", "programmi"], "9": ["LIST", 7, 3, 9]}}]}
+<script id="json-jm0410a7d5-e46f-4b57-87f8-3f4935bf5505" type="application/json" >
+    {"trace": [{"event": "step_line", "line": 2, "globals": {}, "heap": {}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": []}, {"event": "step_line", "line": 3, "globals": {"roba": ["REF", 1]}, "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["roba"]}, {"event": "step_line", "line": 4, "globals": {"insalata": ["REF", 2], "roba": ["REF", 1]}, "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7], "2": ["TUPLE", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["TUPLE", "cavoli", 3], "4": ["TUPLE", "pomodori", 9], "5": ["TUPLE", "verze", 4]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["roba", "insalata"]}, {"event": "return", "line": 4, "globals": {"roba": ["REF", 1], "misto": ["REF", 6], "insalata": ["REF", 2]}, "heap": {"1": ["TUPLE", 4, "carta", 5, 2, "scatole", 7], "2": ["TUPLE", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["TUPLE", "cavoli", 3], "4": ["TUPLE", "pomodori", 9], "5": ["TUPLE", "verze", 4], "6": ["TUPLE", ["REF", 7], ["REF", 8], ["REF", 9]], "7": ["LIST", "quando", "fuori", "piove"], "8": ["LIST", "scrivo", "programmi"], "9": ["LIST", 7, 3, 9]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["roba", "insalata", "misto"]}], "code": " \nroba = (4, \"carta\", 5, 2,\"scatole\", 7)\ninsalata = ( (\"cavoli\", 3), (\"pomodori\",9), (\"verze\",4) )\nmisto = ( [\"quando\", \"fuori\", \"piove\"], [\"scrivo\", \"programmi\"], [7,3,9] )"}
 </script>
-<div id="jmaf34d59d-5a6a-4361-9642-c47072786f7b" class="pytutorVisualizer"> </div>
+<div id="jm0410a7d5-e46f-4b57-87f8-3f4935bf5505" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2437,12 +2437,12 @@ tuple
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmaf34d59d-5a6a-4361-9642-c47072786f7b').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm0410a7d5-e46f-4b57-87f8-3f4935bf5505').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmaf34d59d-5a6a-4361-9642-c47072786f7b',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm0410a7d5-e46f-4b57-87f8-3f4935bf5505',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3257,10 +3257,10 @@ tuple
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jme13dfd18-3184-401f-8fae-d9830085404d" type="application/json" >
-    {"code": " \nx = (1,2,3)\ny = (4,5,6,7,8)\nt = x + y\nprint(t)\nprint(x)\nprint(y)", "trace": [{"stdout": "", "func_name": "<module>", "globals": {}, "stack_to_render": [], "event": "step_line", "line": 2, "ordered_globals": [], "heap": {}}, {"stdout": "", "func_name": "<module>", "globals": {"x": ["REF", 1]}, "stack_to_render": [], "event": "step_line", "line": 3, "ordered_globals": ["x"], "heap": {"1": ["TUPLE", 1, 2, 3]}}, {"stdout": "", "func_name": "<module>", "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "stack_to_render": [], "event": "step_line", "line": 4, "ordered_globals": ["x", "y"], "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8]}}, {"stdout": "", "func_name": "<module>", "globals": {"t": ["REF", 3], "x": ["REF", 1], "y": ["REF", 2]}, "stack_to_render": [], "event": "step_line", "line": 5, "ordered_globals": ["x", "y", "t"], "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}}, {"stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n", "func_name": "<module>", "globals": {"t": ["REF", 3], "x": ["REF", 1], "y": ["REF", 2]}, "stack_to_render": [], "event": "step_line", "line": 6, "ordered_globals": ["x", "y", "t"], "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}}, {"stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n(1, 2, 3)\n", "func_name": "<module>", "globals": {"t": ["REF", 3], "x": ["REF", 1], "y": ["REF", 2]}, "stack_to_render": [], "event": "step_line", "line": 7, "ordered_globals": ["x", "y", "t"], "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}}, {"stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n(1, 2, 3)\n(4, 5, 6, 7, 8)\n", "func_name": "<module>", "globals": {"t": ["REF", 3], "x": ["REF", 1], "y": ["REF", 2]}, "stack_to_render": [], "event": "return", "line": 7, "ordered_globals": ["x", "y", "t"], "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}}]}
+<script id="json-jm1c95ddc6-725b-4925-8ae4-fea09b3d3578" type="application/json" >
+    {"trace": [{"event": "step_line", "line": 2, "globals": {}, "heap": {}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": []}, {"event": "step_line", "line": 3, "globals": {"x": ["REF", 1]}, "heap": {"1": ["TUPLE", 1, 2, 3]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["x"]}, {"event": "step_line", "line": 4, "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["x", "y"]}, {"event": "step_line", "line": 5, "globals": {"x": ["REF", 1], "t": ["REF", 3], "y": ["REF", 2]}, "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}, "stack_to_render": [], "stdout": "", "func_name": "<module>", "ordered_globals": ["x", "y", "t"]}, {"event": "step_line", "line": 6, "globals": {"x": ["REF", 1], "t": ["REF", 3], "y": ["REF", 2]}, "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}, "stack_to_render": [], "stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n", "func_name": "<module>", "ordered_globals": ["x", "y", "t"]}, {"event": "step_line", "line": 7, "globals": {"x": ["REF", 1], "t": ["REF", 3], "y": ["REF", 2]}, "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}, "stack_to_render": [], "stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n(1, 2, 3)\n", "func_name": "<module>", "ordered_globals": ["x", "y", "t"]}, {"event": "return", "line": 7, "globals": {"x": ["REF", 1], "t": ["REF", 3], "y": ["REF", 2]}, "heap": {"1": ["TUPLE", 1, 2, 3], "2": ["TUPLE", 4, 5, 6, 7, 8], "3": ["TUPLE", 1, 2, 3, 4, 5, 6, 7, 8]}, "stack_to_render": [], "stdout": "(1, 2, 3, 4, 5, 6, 7, 8)\n(1, 2, 3)\n(4, 5, 6, 7, 8)\n", "func_name": "<module>", "ordered_globals": ["x", "y", "t"]}], "code": " \nx = (1,2,3)\ny = (4,5,6,7,8)\nt = x + y\nprint(t)\nprint(x)\nprint(y)"}
 </script>
-<div id="jme13dfd18-3184-401f-8fae-d9830085404d" class="pytutorVisualizer"> </div>
+<div id="jm1c95ddc6-725b-4925-8ae4-fea09b3d3578" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3280,12 +3280,12 @@ tuple
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jme13dfd18-3184-401f-8fae-d9830085404d').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm1c95ddc6-725b-4925-8ae4-fea09b3d3578').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jme13dfd18-3184-401f-8fae-d9830085404d',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm1c95ddc6-725b-4925-8ae4-fea09b3d3578',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3687,9 +3687,9 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <div class="section" id="Scrivere-un-elemento">
 <h2>Scrivere un elemento<a class="headerlink" href="#Scrivere-un-elemento" title="Permalink to this headline">¶</a></h2>
 <p>Le tuple sono <em>immutabili,</em> quindi provare per esempio a scrivere un assegnazione per mettere il numero <code class="docutils literal notranslate"><span class="pre">12</span></code> nella cella all’indice <code class="docutils literal notranslate"><span class="pre">3</span></code> provoca un errore:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#        0  1  2  3  4  5  6</span>
-<span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">34</span><span class="p">)</span>
-<span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#        0 1 2 3 4</span>
+<span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">666</span>
 
 <span class="o">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
@@ -3739,7 +3739,7 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 </pre></div></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: ``append``, ``extend``, ``insert``, ``sort`` NON FUNZIONANO CON LE TUPLE !</strong></p>
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE:</strong> <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">extend</span></code>, <code class="docutils literal notranslate"><span class="pre">insert</span></code>, <code class="docutils literal notranslate"><span class="pre">sort</span></code> <strong>NON FUNZIONANO CON LE TUPLE !</strong></p>
 <p>Tutti i metodi che hai usato per modificare le liste <em>non</em> funzioneranno con le tuple.</p>
 </div>
 <div class="section" id="Esercizio---errando">
@@ -3758,7 +3758,7 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 </div>
 <div class="section" id="Esercizio:-abde">
 <h3>Esercizio: abde<a class="headerlink" href="#Esercizio:-abde" title="Permalink to this headline">¶</a></h3>
-<p>Data una tupla <code class="docutils literal notranslate"><span class="pre">x</span></code>, salva nella variabile <code class="docutils literal notranslate"><span class="pre">y</span></code> un’altra tupla contenente</p>
+<p>Data una tupla <code class="docutils literal notranslate"><span class="pre">x</span></code>, salva nella variabile <code class="docutils literal notranslate"><span class="pre">y</span></code> un’altra tupla contenente:</p>
 <ul class="simple">
 <li><p>all’inizio gli stessi elementi di <code class="docutils literal notranslate"><span class="pre">x</span></code> <em>eccetto</em> l’ultimo</p></li>
 <li><p>alla fine gli elementi <code class="docutils literal notranslate"><span class="pre">'d'</span></code> e <code class="docutils literal notranslate"><span class="pre">'e'</span></code> .</p></li>
@@ -3961,7 +3961,7 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">2.2</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">22</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">2.2</span><span class="p">,</span><span class="o">.</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>

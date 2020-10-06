@@ -708,7 +708,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-sequenza-di-coppie">Dizionario da sequenza di coppie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-coppie-di-argomenti">Dizionario da coppie di argomenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-parametri-con-nome">Dizionario da parametri con nome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Copiare-un-dizionario">Copiare un dizionario</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="dictionaries1-sol.html#Copia-superficiale">Copia superficiale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dictionaries1-sol.html#Copia-in-profondità">Copia in profondità</a></li>
@@ -749,7 +749,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#Uguaglianza-e-copie">Uguaglianza e copie</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#Esercizio---zoom">Esercizio - zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Esercizio---ZOOM-DOOM">Esercizio - ZOOM DOOM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -2011,7 +2011,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-even"><td><p>chiave <code class="docutils literal notranslate"><span class="pre">in</span></code> dict</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
-<td><p>Ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se la chiave obj è presente nel dizionario</p></td>
+<td><p>Ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se chiave è presente nel dizionario</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code>,<code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
@@ -2407,7 +2407,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Esercizio---z7">
 <h3>Esercizio - z7<a class="headerlink" href="#Esercizio---z7" title="Permalink to this headline">¶</a></h3>
-<p>✪ Crea un dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> contenente la chiave <code class="docutils literal notranslate"><span class="pre">'z'</span></code> a cui è associata la somma dei valori delle chiavi <code class="docutils literal notranslate"><span class="pre">'b'</span></code> e <code class="docutils literal notranslate"><span class="pre">'c'</span></code> di <code class="docutils literal notranslate"><span class="pre">diz1</span></code></p>
+<p>✪ Dato un dizionario <code class="docutils literal notranslate"><span class="pre">diz1</span></code> con chiavi <code class="docutils literal notranslate"><span class="pre">'b'</span></code> e <code class="docutils literal notranslate"><span class="pre">'c'</span></code> associate a numeri, crea un dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> che abbia una chiave <code class="docutils literal notranslate"><span class="pre">'z'</span></code> associata alla somma dei valori delle chiavi <code class="docutils literal notranslate"><span class="pre">'b'</span></code> e <code class="docutils literal notranslate"><span class="pre">'c'</span></code> di <code class="docutils literal notranslate"><span class="pre">diz1</span></code></p>
 <ul class="simple">
 <li><p>il tuo codice deve funzionare per <em>qualunque</em> <code class="docutils literal notranslate"><span class="pre">diz1</span></code> con chiavi <code class="docutils literal notranslate"><span class="pre">'b'</span></code> e <code class="docutils literal notranslate"><span class="pre">'c'</span></code></p></li>
 </ul>
@@ -3256,15 +3256,15 @@ False
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">prestiti</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Marco&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;La Divina Commedia&#39;</span><span class="p">,</span> <span class="s1">&#39;Don Chisciotte&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Gloria&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Orgoglio e pregiudizio&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Federica&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Il barone rampante&#39;</span><span class="p">,</span><span class="s1">&#39;Moby Dick&#39;</span><span class="p">,</span><span class="s1">&#39;I Promessi Sposi&#39;</span><span class="p">]}</span>
+<span></span><span class="n">prestiti</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Marco&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;I Miserabili&#39;</span><span class="p">,</span> <span class="s1">&#39;Ulisse&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Gloria&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Guerra e pace&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Rita&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Shining&#39;</span><span class="p">,</span><span class="s1">&#39;Dracula&#39;</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
 </div>
 <p>Vediamo come è rappresentato in Python Tutor:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3278,7 +3278,7 @@ False
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3290,16 +3290,16 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmf3648957-bee0-4277-93fe-8a00408eec96" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 3, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 4, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"prestiti": ["REF", 1]}, "event": "return", "line": 4, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "stdout": "", "func_name": "<module>"}], "code": " \nprestiti = {'Marco': ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita': ['Shining','Dracula','1984']}"}
+<script id="json-jmd150e6ac-f60b-4b84-b8c7-faa2e7d18c0d" type="application/json" >
+    {"code": " \nprestiti = {'Marco': ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita': ['Shining','Dracula','1984']}", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 3, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 4, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "return", "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "line": 4, "ordered_globals": ["prestiti"], "globals": {"prestiti": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jmf3648957-bee0-4277-93fe-8a00408eec96" class="pytutorVisualizer"> </div>
+<div id="jmd150e6ac-f60b-4b84-b8c7-faa2e7d18c0d" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3319,12 +3319,12 @@ False
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmf3648957-bee0-4277-93fe-8a00408eec96').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmd150e6ac-f60b-4b84-b8c7-faa2e7d18c0d').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmf3648957-bee0-4277-93fe-8a00408eec96',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmd150e6ac-f60b-4b84-b8c7-faa2e7d18c0d',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3342,7 +3342,7 @@ False
 </div>
 <p>Se proviamo a scrivere l’espressione</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3351,7 +3351,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3361,7 +3361,7 @@ False
 </div>
 <p>Python ci mostra la lista corrispondente. Quindi Python considera <code class="docutils literal notranslate"><span class="pre">prestiti['Rita']</span></code> a tutti gli effetti come una lista, e come tale la possiamo usare. Per esempio, se volessimo accedere al libro unesimo della lista scriveremmo <code class="docutils literal notranslate"><span class="pre">[1]</span></code> dopo l’espressione</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3370,7 +3370,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3380,7 +3380,7 @@ False
 </div>
 <p>Equivalentemente, potremmo anche salvarci un puntatore alla lista assegnando l’espressione ad una variabile:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3389,7 +3389,7 @@ False
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3398,7 +3398,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3407,7 +3407,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3416,7 +3416,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3426,13 +3426,13 @@ False
 </div>
 <p>Rivediamo il tutto in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">prestiti</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Marco&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;I Miserabili&#39;</span><span class="p">,</span> <span class="s1">&#39;Ulisse&#39;</span><span class="p">],</span>
+<span></span><span class="n">prestiti</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Marco&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="s1">&#39;I Miserabili&#39;</span><span class="p">,</span> <span class="s1">&#39;Ulisse&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Gloria&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Guerra e pace&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Rita&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Shining&#39;</span><span class="p">,</span><span class="s1">&#39;Dracula&#39;</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">]}</span>
+            <span class="s1">&#39;Rita&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;Shining&#39;</span><span class="p">,</span><span class="s1">&#39;Dracula&#39;</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">]}</span>
 <span class="n">lista_rita</span> <span class="o">=</span> <span class="n">prestiti</span><span class="p">[</span><span class="s1">&#39;Rita&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lista_rita</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
@@ -3449,16 +3449,16 @@ Dracula
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm34cf04db-561e-4e47-9ebf-b18eea27ef92" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 3, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 4, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"prestiti": ["REF", 1]}, "event": "step_line", "line": 5, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "stdout": "", "func_name": "<module>"}, {"globals": {"lista_rita": ["REF", 2], "prestiti": ["REF", 1]}, "event": "step_line", "line": 6, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "stdout": "", "func_name": "<module>"}, {"globals": {"lista_rita": ["REF", 2], "prestiti": ["REF", 1]}, "event": "return", "line": 6, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "stdout": "Dracula\n", "func_name": "<module>"}], "code": " \nprestiti = {'Marco': ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita': ['Shining','Dracula','1984']}\nlista_rita = prestiti['Rita']\nprint(lista_rita[1])"}
+<script id="json-jmf30eb88f-64fe-4d1c-a3a2-c1d3feed85e6" type="application/json" >
+    {"code": " \nprestiti = {'Marco':  ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita':   ['Shining','Dracula','1984']}\nlista_rita = prestiti['Rita']\nprint(lista_rita[1])", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 3, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 4, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "line": 5, "ordered_globals": ["prestiti"], "globals": {"prestiti": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "line": 6, "ordered_globals": ["prestiti", "lista_rita"], "globals": {"lista_rita": ["REF", 2], "prestiti": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "Dracula\n", "event": "return", "heap": {"1": ["DICT", ["Rita", ["REF", 2]], ["Marco", ["REF", 3]], ["Gloria", ["REF", 4]]], "2": ["LIST", "Shining", "Dracula", "1984"], "3": ["LIST", "I Miserabili", "Ulisse"], "4": ["LIST", "Guerra e pace"]}, "line": 6, "ordered_globals": ["prestiti", "lista_rita"], "globals": {"lista_rita": ["REF", 2], "prestiti": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jm34cf04db-561e-4e47-9ebf-b18eea27ef92" class="pytutorVisualizer"> </div>
+<div id="jmf30eb88f-64fe-4d1c-a3a2-c1d3feed85e6" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3478,12 +3478,12 @@ Dracula
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm34cf04db-561e-4e47-9ebf-b18eea27ef92').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmf30eb88f-64fe-4d1c-a3a2-c1d3feed85e6').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm34cf04db-561e-4e47-9ebf-b18eea27ef92',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmf30eb88f-64fe-4d1c-a3a2-c1d3feed85e6',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3510,7 +3510,7 @@ Dracula
 <li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> se tutti tra Marco, Gloria e Rita hanno preso in prestito almeno un libro, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p></li>
 </ol>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3543,7 +3543,7 @@ Dracula
 <h2>Uguaglianza<a class="headerlink" href="#Uguaglianza" title="Permalink to this headline">¶</a></h2>
 <p>Possiamo verificare se due dizionari sono uguali con l’operatore di uguaglianza <code class="docutils literal notranslate"><span class="pre">==</span></code>, che dati due dizionari ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se contengono coppie chiave/valore uguali oppure <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3552,7 +3552,7 @@ Dracula
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3561,7 +3561,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3570,7 +3570,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3579,7 +3579,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3588,7 +3588,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3598,7 +3598,7 @@ False
 </div>
 <p>Possiamo verificare l’uguaglianza di dizionari con numero di elementi diverso:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3607,7 +3607,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3616,7 +3616,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3625,7 +3625,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3635,7 +3635,7 @@ False
 </div>
 <p>… e con elementi eterogenei:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3644,7 +3644,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3663,7 +3663,7 @@ False
 <p>Visto che l’ordine non ha importanza, dizionari creati inserendo le stesse coppie chiavi/valore ma in ordine diverso saranno considerati uguali.</p>
 <p>Esempio con creazione diretta:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3672,7 +3672,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3682,7 +3682,7 @@ True
 </div>
 <p>Esempio con aggiunta graduale:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3801,7 +3801,7 @@ True
 <p>NOTA: tutti i valori (<code class="docutils literal notranslate"><span class="pre">3</span></code> e <code class="docutils literal notranslate"><span class="pre">8</span></code>) sono <strong>immutabili</strong>.</p>
 <p><strong>RISPOSTA</strong>: In questo caso abbiamo creato manualmente un dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> indicando dei valori <em>immutabili</em> presi da <code class="docutils literal notranslate"><span class="pre">diz1</span></code>. Pertanto in Python Tutor vedremo due regioni di memoria distinte e una successiva modifica a <code class="docutils literal notranslate"><span class="pre">diz1</span></code> non altererà <code class="docutils literal notranslate"><span class="pre">diz2</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3830,16 +3830,16 @@ diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm36eaa7e8-1fe8-4293-b105-b676f598b631" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 3, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz1": ["REF", 1]}, "event": "step_line", "line": 4, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz1": ["REF", 1]}, "event": "step_line", "line": 5, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 6, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 3]], "2": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 8, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 9, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "uguali? False\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 10, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 6}\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "return", "line": 10, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 6}\ndiz2= {'b': 8, 'a': 3}\n", "func_name": "<module>"}], "code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = {'a':diz1['a'], \n        'b':diz1['b'] }\ndiz1['a'] = 6\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)"}
+<script id="json-jmf3ff37ea-5d6a-4125-9590-3922e9543eba" type="application/json" >
+    {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = {'a':diz1['a'], \n        'b':diz1['b'] }\ndiz1['a'] = 6\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 3, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "line": 4, "ordered_globals": ["diz1"], "globals": {"diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "line": 5, "ordered_globals": ["diz1"], "globals": {"diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 3]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 6, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 8, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\n", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 9, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 6}\n", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 10, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 6}\ndiz2= {'b': 8, 'a': 3}\n", "event": "return", "heap": {"1": ["DICT", ["b", 8], ["a", 6]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 10, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jm36eaa7e8-1fe8-4293-b105-b676f598b631" class="pytutorVisualizer"> </div>
+<div id="jmf3ff37ea-5d6a-4125-9590-3922e9543eba" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3859,12 +3859,12 @@ diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm36eaa7e8-1fe8-4293-b105-b676f598b631').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmf3ff37ea-5d6a-4125-9590-3922e9543eba').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm36eaa7e8-1fe8-4293-b105-b676f598b631',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmf3ff37ea-5d6a-4125-9590-3922e9543eba',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3898,7 +3898,7 @@ diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 <p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">dict</span></code> quando usato come funzione esegue una <em>copia superficiale</em> (<em>shallow copy</em>), cioè copia la struttura del dizionario senza duplicare i valori mutabili. In questo caso specifico, tutti i valori che abbiamo sono interi quindi immutabili, perciò la copia può anche essere considerata una duplicazione completa. Quando assegnamo il valore <code class="docutils literal notranslate"><span class="pre">7</span></code> alla chiave <code class="docutils literal notranslate"><span class="pre">'a'</span></code> in <code class="docutils literal notranslate"><span class="pre">diz1</span></code> stiamo modificando la struttura dati originale, lasciando inalterata la copia <code class="docutils literal notranslate"><span class="pre">diz2</span></code> appena fatta,
 pertanto <code class="docutils literal notranslate"><span class="pre">diz1</span> <span class="pre">==</span> <span class="pre">diz2</span></code> varrà <code class="docutils literal notranslate"><span class="pre">False</span></code>. Verifichiamolo in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3922,20 +3922,20 @@ pertanto <code class="docutils literal notranslate"><span class="pre">diz1</span
 <div class="highlight"><pre>
 uguali? False
 diz1= {&#39;b&#39;: 8, &#39;a&#39;: 7}
-diz2= {&#39;a&#39;: 3, &#39;b&#39;: 8}
+diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm77a7a013-0739-4001-b353-fb2a6a9c196a" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 3, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz1": ["REF", 1]}, "event": "step_line", "line": 4, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 5, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 3]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 7, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 8, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "step_line", "line": 9, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 7}\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "event": "return", "line": 9, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 7}\ndiz2= {'a': 3, 'b': 8}\n", "func_name": "<module>"}], "code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = dict(diz1)\ndiz1['a'] = 7\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)"}
+<script id="json-jm2f959db1-ad61-4998-b33f-8394eaf1a6a5" type="application/json" >
+    {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = dict(diz1)\ndiz1['a'] = 7\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 3, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 3]]}, "line": 4, "ordered_globals": ["diz1"], "globals": {"diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 3]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 5, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 7, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\n", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 8, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 7}\n", "event": "step_line", "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 9, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': 8, 'a': 7}\ndiz2= {'b': 8, 'a': 3}\n", "event": "return", "heap": {"1": ["DICT", ["b", 8], ["a", 7]], "2": ["DICT", ["b", 8], ["a", 3]]}, "line": 9, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 2], "diz1": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jm77a7a013-0739-4001-b353-fb2a6a9c196a" class="pytutorVisualizer"> </div>
+<div id="jm2f959db1-ad61-4998-b33f-8394eaf1a6a5" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3955,12 +3955,12 @@ diz2= {&#39;a&#39;: 3, &#39;b&#39;: 8}
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm77a7a013-0739-4001-b353-fb2a6a9c196a').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm2f959db1-ad61-4998-b33f-8394eaf1a6a5').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm77a7a013-0739-4001-b353-fb2a6a9c196a',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm2f959db1-ad61-4998-b33f-8394eaf1a6a5',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3995,7 +3995,7 @@ diz2= {&#39;a&#39;: 3, &#39;b&#39;: 8}
 <p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">dict</span></code> come una funzione, quindi abbiamo fatto una <em>copia superficiale</em>. In questo caso come valori abbiamo liste che sono oggetti <em>mutabili</em>. Questo vuol dire che la copia superficiale si è limitata a copiare i riferimenti alle liste, ma <em>non</em> le liste stesse. Per questa ragione vedrai delle frecce puntare dalla copia del dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> alle regioni di memoria delle liste originali. Questo significa che se cerchi di modificare una lista dopo che la copia è
 avvenuta (per esempio con il metodo <code class="docutils literal notranslate"><span class="pre">.append(3)</span></code>), di fatto modificherai anche la lista raggiungibile dal dizionario copiato <code class="docutils literal notranslate"><span class="pre">diz2</span></code>. Verifichiamolo in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4019,20 +4019,20 @@ avvenuta (per esempio con il metodo <code class="docutils literal notranslate"><
 <div class="highlight"><pre>
 uguali? True
 diz1= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2, 3]}
-diz2= {&#39;a&#39;: [1, 2, 3], &#39;b&#39;: [4, 5, 6]}
+diz2= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2, 3]}
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm4bdcd0c8-ace6-4f2b-a388-236e38b8a358" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {}, "event": "step_line", "line": 3, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz1": ["REF", 1]}, "event": "step_line", "line": 4, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "event": "step_line", "line": 5, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2], "4": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 2]]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "event": "step_line", "line": 7, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 2]]]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "event": "step_line", "line": 8, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 2]]]}, "stdout": "uguali? True\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "event": "step_line", "line": 9, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 2]]]}, "stdout": "uguali? True\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "event": "return", "line": 9, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 2]]]}, "stdout": "uguali? True\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\ndiz2= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n", "func_name": "<module>"}], "code": " \ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = dict(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)"}
+<script id="json-jm4fe146a5-dacd-4e5a-b7a4-2b713ac46f3a" type="application/json" >
+    {"code": " \ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = dict(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 3, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2]}, "line": 4, "ordered_globals": ["diz1"], "globals": {"diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2], "4": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]]}, "line": 5, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]]}, "line": 7, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? True\n", "event": "step_line", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]]}, "line": 8, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? True\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\n", "event": "step_line", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]]}, "line": 9, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? True\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\ndiz2= {'b': [4, 5, 6], 'a': [1, 2, 3]}\n", "event": "return", "heap": {"1": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]], "2": ["LIST", 4, 5, 6], "3": ["LIST", 1, 2, 3], "4": ["DICT", ["b", ["REF", 2]], ["a", ["REF", 3]]]}, "line": 9, "ordered_globals": ["diz1", "diz2"], "globals": {"diz2": ["REF", 4], "diz1": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jm4bdcd0c8-ace6-4f2b-a388-236e38b8a358" class="pytutorVisualizer"> </div>
+<div id="jm4fe146a5-dacd-4e5a-b7a4-2b713ac46f3a" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -4052,12 +4052,12 @@ diz2= {&#39;a&#39;: [1, 2, 3], &#39;b&#39;: [4, 5, 6]}
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm4bdcd0c8-ace6-4f2b-a388-236e38b8a358').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm4fe146a5-dacd-4e5a-b7a4-2b713ac46f3a').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm4bdcd0c8-ace6-4f2b-a388-236e38b8a358',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm4fe146a5-dacd-4e5a-b7a4-2b713ac46f3a',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4090,10 +4090,10 @@ diz2= {&#39;a&#39;: [1, 2, 3], &#39;b&#39;: [4, 5, 6]}
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diz2=&#39;</span><span class="p">,</span> <span class="n">diz2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code>, quindi abbiamo fatto una copia <em>in profondità</em>. In questo caso come valori abbiamo liste che sono oggetti mutabili. La copia in profondità ha duplicato qualcunque oggitto che è riuscita a raggiungere, liste incluse. Quindi in questo caso otteniamo due regioni di memoria completamente distinte. Se dopo aver effettuato la copia cerchiamo di modificare una lista accessibile dall’originale <code class="docutils literal notranslate"><span class="pre">diz1</span></code>, siamo sicuri che non potremo intaccare oggetti
+<p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code>, quindi abbiamo fatto una copia <em>in profondità</em>. In questo caso come valori abbiamo liste che sono oggetti mutabili. La copia in profondità ha duplicato qualunque oggetto che è riuscita a raggiungere, liste incluse. Quindi in questo caso otteniamo due regioni di memoria completamente distinte. Se dopo aver effettuato la copia cerchiamo di modificare una lista accessibile dall’originale <code class="docutils literal notranslate"><span class="pre">diz1</span></code>, siamo sicuri che non potremo intaccare oggetti
 raggiungibili da <code class="docutils literal notranslate"><span class="pre">diz2</span></code>. Verifichiamolo in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4118,20 +4118,20 @@ raggiungibili da <code class="docutils literal notranslate"><span class="pre">di
 <div class="highlight"><pre>
 uguali? False
 diz1= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2, 3]}
-diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
+diz2= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2]}
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm5c4675d5-cb9f-48c8-92c9-32c29f5d7cdc" type="application/json" >
-    {"trace": [{"globals": {}, "event": "step_line", "line": 2, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "", "func_name": "<module>"}, {"globals": {"copy": ["REF", 1]}, "event": "step_line", "line": 3, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": "", "func_name": "<module>"}, {"globals": {"copy": ["REF", 1]}, "event": "step_line", "line": 4, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "step_line", "line": 5, "ordered_globals": ["copy", "diz1"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "step_line", "line": 6, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "step_line", "line": 8, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "step_line", "line": 9, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "step_line", "line": 10, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\n", "func_name": "<module>"}, {"globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "event": "return", "line": 10, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\ndiz2= {'a': [1, 2], 'b': [4, 5, 6]}\n", "func_name": "<module>"}], "code": " \nimport copy\ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = copy.deepcopy(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)"}
+<script id="json-jm53fe51c2-155f-416e-8733-770cb5341ec1" type="application/json" >
+    {"code": " \nimport copy\ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = copy.deepcopy(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {}, "line": 2, "ordered_globals": [], "globals": {}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["INSTANCE", "module"]}, "line": 3, "ordered_globals": ["copy"], "globals": {"copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["INSTANCE", "module"]}, "line": 4, "ordered_globals": ["copy"], "globals": {"copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2]}, "line": 5, "ordered_globals": ["copy", "diz1"], "globals": {"diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2], "5": ["DICT", ["b", ["REF", 6]], ["a", ["REF", 7]]], "6": ["LIST", 4, 5, 6], "7": ["LIST", 1, 2]}, "line": 6, "ordered_globals": ["copy", "diz1", "diz2"], "globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "", "event": "step_line", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["b", ["REF", 6]], ["a", ["REF", 7]]], "6": ["LIST", 4, 5, 6], "7": ["LIST", 1, 2]}, "line": 8, "ordered_globals": ["copy", "diz1", "diz2"], "globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\n", "event": "step_line", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["b", ["REF", 6]], ["a", ["REF", 7]]], "6": ["LIST", 4, 5, 6], "7": ["LIST", 1, 2]}, "line": 9, "ordered_globals": ["copy", "diz1", "diz2"], "globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\n", "event": "step_line", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["b", ["REF", 6]], ["a", ["REF", 7]]], "6": ["LIST", 4, 5, 6], "7": ["LIST", 1, 2]}, "line": 10, "ordered_globals": ["copy", "diz1", "diz2"], "globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}, {"stack_to_render": [], "stdout": "uguali? False\ndiz1= {'b': [4, 5, 6], 'a': [1, 2, 3]}\ndiz2= {'b': [4, 5, 6], 'a': [1, 2]}\n", "event": "return", "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["b", ["REF", 3]], ["a", ["REF", 4]]], "3": ["LIST", 4, 5, 6], "4": ["LIST", 1, 2, 3], "5": ["DICT", ["b", ["REF", 6]], ["a", ["REF", 7]]], "6": ["LIST", 4, 5, 6], "7": ["LIST", 1, 2]}, "line": 10, "ordered_globals": ["copy", "diz1", "diz2"], "globals": {"diz2": ["REF", 5], "diz1": ["REF", 2], "copy": ["REF", 1]}, "func_name": "<module>"}]}
 </script>
-<div id="jm5c4675d5-cb9f-48c8-92c9-32c29f5d7cdc" class="pytutorVisualizer"> </div>
+<div id="jm53fe51c2-155f-416e-8733-770cb5341ec1" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -4151,12 +4151,12 @@ diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm5c4675d5-cb9f-48c8-92c9-32c29f5d7cdc').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm53fe51c2-155f-416e-8733-770cb5341ec1').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm5c4675d5-cb9f-48c8-92c9-32c29f5d7cdc',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm53fe51c2-155f-416e-8733-770cb5341ec1',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4211,8 +4211,8 @@ diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
 </ol>
 </div>
 </div>
-<div class="section" id="Esercizio---zoom">
-<h2>Esercizio - zoom<a class="headerlink" href="#Esercizio---zoom" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Esercizio---ZOOM-DOOM">
+<h2>Esercizio - ZOOM DOOM<a class="headerlink" href="#Esercizio---ZOOM-DOOM" title="Permalink to this headline">¶</a></h2>
 <p>Scrivi del codice che data una stringa <code class="docutils literal notranslate"><span class="pre">s</span></code> (es <code class="docutils literal notranslate"><span class="pre">'ZOOM'</span></code>), crea un dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> ed assegna alle chiavi <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code> e <code class="docutils literal notranslate"><span class="pre">'c'</span></code> <em>la stessa identica lista</em> contenente i caratteri della stringa come elementi (es <code class="docutils literal notranslate"><span class="pre">['Z','O','O','M']</span></code>).</p>
 <ul class="simple">
 <li><p>in Python Tutor dovrai vedere 3 frecce che dalle chiavi puntano <em>alla stessa identica regione di memoria</em></p></li>
@@ -4238,7 +4238,7 @@ diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4264,8 +4264,8 @@ diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;c&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;b&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
-{&#39;c&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;b&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
+{&#39;b&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;c&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
+{&#39;b&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;c&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
 </pre></div></div>
 </div>
 </div>

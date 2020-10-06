@@ -708,7 +708,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-sequenza-di-coppie">Dizionario da sequenza di coppie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-coppie-di-argomenti">Dizionario da coppie di argomenti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Dizionario-da-parametri-con-nome">Dizionario da parametri con nome</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dictionaries1-sol.html#Copiare-un-dizionario">Copiare un dizionario</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="dictionaries1-sol.html#Copia-superficiale">Copia superficiale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dictionaries1-sol.html#Copia-in-profondità">Copia in profondità</a></li>
@@ -749,7 +749,7 @@
 <li class="toctree-l4"><a class="reference internal" href="dictionaries2-sol.html#Uguaglianza-e-copie">Uguaglianza e copie</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dictionaries2-sol.html#Esercizio---zoom">Esercizio - zoom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dictionaries2-sol.html#Esercizio---ZOOM-DOOM">Esercizio - ZOOM DOOM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dictionaries2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -2106,7 +2106,7 @@ dictionaries
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-dict_keys([&#39;pomodori&#39;, &#39;cavoli&#39;, &#39;carote&#39;])
+dict_keys([&#39;cavoli&#39;, &#39;pomodori&#39;, &#39;carote&#39;])
 </pre></div></div>
 </div>
 <div class="admonition warning">
@@ -2150,7 +2150,7 @@ dict_keys([&#39;pomodori&#39;, &#39;cavoli&#39;, &#39;carote&#39;])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#39;])
+dict_keys([&#39;patate&#39;, &#39;cavoli&#39;, &#39;pomodori&#39;, &#39;carote&#39;])
 </pre></div></div>
 </div>
 <div class="admonition note">
@@ -2181,7 +2181,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#39;]
+[&#39;patate&#39;, &#39;cavoli&#39;, &#39;pomodori&#39;, &#39;carote&#39;]
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -2208,12 +2208,12 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#39;]
+[&#39;patate&#39;, &#39;cavoli&#39;, &#39;pomodori&#39;, &#39;carote&#39;]
 </pre></div></div>
 </div>
 <p>Rivediamo l’esempio in Python Tutor:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2227,7 +2227,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2235,24 +2235,34 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
            <span class="s1">&#39;pomodori&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
            <span class="s1">&#39;cavoli&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 <span class="n">chiavi</span> <span class="o">=</span> <span class="n">verdure</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="n">come_lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">verdure</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="n">verdure</span><span class="p">[</span><span class="s1">&#39;patate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">come_lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">verdure</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">verdure</span><span class="p">[</span><span class="s1">&#39;cetrioli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">come_lista</span><span class="p">)</span>
 
 <span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;patate&#39;, &#39;cavoli&#39;, &#39;pomodori&#39;, &#39;carote&#39;]
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm2db2d82c-4375-44c2-8500-3368e1c3fdee" type="application/json" >
-    {"trace": [{"heap": {}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "line": 2}, {"heap": {}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "line": 3}, {"heap": {}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "line": 4}, {"heap": {"1": ["DICT", ["pomodori", 8], ["cavoli", 3], ["carote", 5]]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"verdure": ["REF", 1]}, "ordered_globals": ["verdure"], "line": 5}, {"heap": {"1": ["DICT", ["pomodori", 8], ["cavoli", 3], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['pomodori', 'cavoli', 'carote'])"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"chiavi": ["REF", 2], "verdure": ["REF", 1]}, "ordered_globals": ["verdure", "chiavi"], "line": 6}, {"heap": {"1": ["DICT", ["pomodori", 8], ["cavoli", 3], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['pomodori', 'cavoli', 'carote'])"], "3": ["LIST", "pomodori", "cavoli", "carote"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"chiavi": ["REF", 2], "verdure": ["REF", 1], "come_lista": ["REF", 3]}, "ordered_globals": ["verdure", "chiavi", "come_lista"], "line": 7}, {"heap": {"1": ["DICT", ["pomodori", 8], ["patate", 8], ["cavoli", 3], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['pomodori', 'patate', 'cavoli', 'carote'])"], "3": ["LIST", "pomodori", "cavoli", "carote"]}, "stdout": "", "stack_to_render": [], "event": "return", "func_name": "<module>", "globals": {"chiavi": ["REF", 2], "verdure": ["REF", 1], "come_lista": ["REF", 3]}, "ordered_globals": ["verdure", "chiavi", "come_lista"], "line": 7}], "code": " \nverdure = {'carote':5,\n           'pomodori':8,\n           'cavoli':3}\nchiavi = verdure.keys()\ncome_lista = list(verdure.keys())\nverdure['patate'] = 8"}
+<script id="json-jm8ca18234-cd38-4ffa-92a5-27112ed8a35f" type="application/json" >
+    {"trace": [{"heap": {}, "line": 2, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {}, "func_name": "<module>", "ordered_globals": []}, {"heap": {}, "line": 3, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {}, "func_name": "<module>", "ordered_globals": []}, {"heap": {}, "line": 4, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {}, "func_name": "<module>", "ordered_globals": []}, {"heap": {"1": ["DICT", ["cavoli", 3], ["pomodori", 8], ["carote", 5]]}, "line": 5, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure"]}, {"heap": {"1": ["DICT", ["cavoli", 3], ["pomodori", 8], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['cavoli', 'pomodori', 'carote'])"]}, "line": 6, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"chiavi": ["REF", 2], "verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure", "chiavi"]}, {"heap": {"1": ["DICT", ["patate", 8], ["cavoli", 3], ["pomodori", 8], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['patate', 'cavoli', 'pomodori', 'carote'])"]}, "line": 7, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"chiavi": ["REF", 2], "verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure", "chiavi"]}, {"heap": {"1": ["DICT", ["patate", 8], ["cavoli", 3], ["pomodori", 8], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['patate', 'cavoli', 'pomodori', 'carote'])"], "3": ["LIST", "patate", "cavoli", "pomodori", "carote"]}, "line": 8, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"chiavi": ["REF", 2], "come_lista": ["REF", 3], "verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure", "chiavi", "come_lista"]}, {"heap": {"1": ["DICT", ["patate", 8], ["cetrioli", 9], ["cavoli", 3], ["pomodori", 8], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['patate', 'cetrioli', 'cavoli', 'pomodori', 'carote'])"], "3": ["LIST", "patate", "cavoli", "pomodori", "carote"]}, "line": 9, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"chiavi": ["REF", 2], "come_lista": ["REF", 3], "verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure", "chiavi", "come_lista"]}, {"heap": {"1": ["DICT", ["patate", 8], ["cetrioli", 9], ["cavoli", 3], ["pomodori", 8], ["carote", 5]], "2": ["INSTANCE_PPRINT", "dict_keys", "dict_keys(['patate', 'cetrioli', 'cavoli', 'pomodori', 'carote'])"], "3": ["LIST", "patate", "cavoli", "pomodori", "carote"]}, "line": 9, "event": "return", "stack_to_render": [], "stdout": "['patate', 'cavoli', 'pomodori', 'carote']\n", "globals": {"chiavi": ["REF", 2], "come_lista": ["REF", 3], "verdure": ["REF", 1]}, "func_name": "<module>", "ordered_globals": ["verdure", "chiavi", "come_lista"]}], "code": " \nverdure = {'carote':5,\n           'pomodori':8,\n           'cavoli':3}\nchiavi = verdure.keys()\nverdure['patate'] = 8\ncome_lista = list(verdure.keys())\nverdure['cetrioli'] = 9\nprint(come_lista)"}
 </script>
-<div id="jm2db2d82c-4375-44c2-8500-3368e1c3fdee" class="pytutorVisualizer"> </div>
+<div id="jm8ca18234-cd38-4ffa-92a5-27112ed8a35f" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2272,12 +2282,12 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm2db2d82c-4375-44c2-8500-3368e1c3fdee').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm8ca18234-cd38-4ffa-92a5-27112ed8a35f').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm2db2d82c-4375-44c2-8500-3368e1c3fdee',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm8ca18234-cd38-4ffa-92a5-27112ed8a35f',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2343,7 +2353,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </li>
 </ol>
 <p><strong>RISPOSTA</strong>: Nessuno degli esempi può funzionare, dato che non possiamo modificare direttamente oggetti di tipo <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code>. Operatori come le quadre o metodi come l’<code class="docutils literal notranslate"><span class="pre">.append</span></code>, <code class="docutils literal notranslate"><span class="pre">.add</span></code>, etc non sono supportati.</p>
-<p><strong>DOMANDA</strong>:</p>
+<p><strong>DOMANDA</strong>: Guarda questi frammenti di codice. Per ciascuno, prova a indovinare che risultato produce (o se da errore)</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
 <span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">diz</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -2400,7 +2410,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 <li><p><strong>NOTA 2</strong>: per convertire una qualsiasi sequenza a lista, usa la funzione predefinita <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2413,12 +2423,12 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&#39;b&#39;, &#39;c&#39;, &#39;a&#39;]
+[&#39;b&#39;, &#39;a&#39;, &#39;c&#39;]
 </pre></div></div>
 </div>
 </div>
@@ -2430,7 +2440,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 <li><p><strong>NOTA 2</strong>: per convertire una qualsiasi sequenza a lista, usa la funzione predefinita <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2478,7 +2488,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2508,7 +2518,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 <p>Dato un dizionario, è possibile ottenere tutti i valori chiamando il metodo <code class="docutils literal notranslate"><span class="pre">.values()</span></code></p>
 <p>Supponiamo di avere un dizionario <code class="docutils literal notranslate"><span class="pre">veicoli</span></code> che ad ogni targa di automobile assegna un proprietario:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2530,7 +2540,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 <p>Come nel caso di <code class="docutils literal notranslate"><span class="pre">dict_keys</span></code>, anche <code class="docutils literal notranslate"><span class="pre">dict_values</span></code> è <strong>una vista</strong> sul dizionario originale, quindi aggiungendo un’associazione a <code class="docutils literal notranslate"><span class="pre">veicoli</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2540,7 +2550,7 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 <p>Anche la vista<code class="docutils literal notranslate"><span class="pre">proprietari</span></code> risulterà automaticamente cambiata:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2549,12 +2559,12 @@ dict_keys([&#39;pomodori&#39;, &#39;patate&#39;, &#39;cavoli&#39;, &#39;carote&#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-dict_values([&#39;Paola&#39;, &#39;Mario&#39;, &#39;Gino&#39;, &#39;Mario&#39;, &#39;Lidia&#39;, &#39;Gino&#39;])
+dict_values([&#39;Lidia&#39;, &#39;Mario&#39;, &#39;Gino&#39;, &#39;Gino&#39;, &#39;Mario&#39;, &#39;Paola&#39;])
 </pre></div></div>
 </div>
 <p>Notiamo anche che essendo <em>valori</em> di un dizionario, sono ammessi duplicati.</p>
@@ -2653,7 +2663,7 @@ dict_values([&#39;Paola&#39;, &#39;Mario&#39;, &#39;Gino&#39;, &#39;Mario&#39;, 
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2700,7 +2710,7 @@ True
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2770,7 +2780,7 @@ True
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2848,7 +2858,7 @@ Hanno valori in comune? True
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2876,7 +2886,7 @@ Hanno valori in comune? True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -2890,7 +2900,7 @@ True
 <h2>items<a class="headerlink" href="#items" title="Permalink to this headline">¶</a></h2>
 <p>Possiamo ricavare tutte le associazioni chiave/valore come lista di coppie di tipo tupla con il metodo <code class="docutils literal notranslate"><span class="pre">.items()</span></code>. Vediamo un esempio che associa attrazioni da visitare alla città dove si trovano:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2903,7 +2913,7 @@ True
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2912,7 +2922,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -2922,7 +2932,7 @@ dict_items([(&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#
 </div>
 <p>In questo caso vediamo che ci è ritornato un oggetto di tipo <code class="docutils literal notranslate"><span class="pre">dict_items</span></code>. Come nei precedenti casi, è <strong>una vista</strong> che <strong>non</strong> possiamo modificare direttamente. Se il dizionario originale viene cambiato, la mutazione si rifletterà sulla vista:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2931,7 +2941,7 @@ dict_items([(&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2940,7 +2950,7 @@ dict_items([(&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2949,12 +2959,12 @@ dict_items([(&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#39;Venezia&#39;), (&#39;Colosseo&#39;, &#39;Roma&#39;), (&#39;Fontana di Trevi&#39;, &#39;Roma&#39;)])
+dict_items([(&#39;Uffizi&#39;, &#39;Firenze&#39;), (&#39;Piazza S.Marco&#39;, &#39;Venezia&#39;), (&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Colosseo&#39;, &#39;Roma&#39;), (&#39;Fontana di Trevi&#39;, &#39;Roma&#39;)])
 </pre></div></div>
 </div>
 <p><strong>DOMANDA</strong>: Guarda questi frammenti di codice. Per ciascuno, prova a indovinare se può funzionare, e quale risultato produce.</p>
@@ -3023,7 +3033,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3045,7 +3055,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 <h2>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
 <p>Avendo un dizionario di partenza, è possibile MODIFICARLO unendone un’altro con il metodo <code class="docutils literal notranslate"><span class="pre">.update()</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3062,7 +3072,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3071,7 +3081,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3080,7 +3090,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3091,7 +3101,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 <p>Notare come le chiavi in comune tra i dizionari come <code class="docutils literal notranslate"><span class="pre">'capre'</span></code> e <code class="docutils literal notranslate"><span class="pre">'cavoli'</span></code> e abbiano valori dal secondo.</p>
 <p>Volendo, si può anche passare una sequenza di coppie così:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3100,7 +3110,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3109,7 +3119,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3145,7 +3155,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3166,7 +3176,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3180,7 +3190,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 <p>Come abbiamo detto in precedenza, quando stampiamo un dizionario con <code class="docutils literal notranslate"><span class="pre">print</span></code> o lasciamo la visualizzazione a Jupyter, l’ordine il più delle volte non è lo stesso di quello d’inserimento. Affinchè sia predicibile, devi usare un <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code></p>
 <p>Per poterlo usare, per prima cosa devi importarlo dal modulo delle collezioni:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3189,7 +3199,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3199,7 +3209,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 <p>Un <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> appare e si comporta come dizionari regolari:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3213,7 +3223,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 <p>La visualizzazione con Jupyter mantiene l’ordine:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3222,7 +3232,7 @@ dict_items([(&#39;Palazzo Ducale&#39;, &#39;Venezia&#39;), (&#39;Uffizi&#39;, &#
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3236,7 +3246,7 @@ OrderedDict([(&#39;qualche chiave&#39;, 5),
 </div>
 <p>Così come la <code class="docutils literal notranslate"><span class="pre">print</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3254,16 +3264,16 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 </div>
 <p>Vediamo come appare in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="n">od</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">od</span><span class="p">[</span><span class="s1">&#39;gna&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">od</span><span class="p">[</span><span class="s1">&#39;bla&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">od</span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">od</span><span class="p">[</span><span class="s1">&#39;gurp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;adesso una stringa!&#39;</span>
+<span class="n">od</span><span class="p">[</span><span class="s1">&#39;qualche chiave&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">od</span><span class="p">[</span><span class="s1">&#39;qualche altra chiave&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">od</span><span class="p">[(</span><span class="s1">&#39;una&#39;</span><span class="p">,</span> <span class="s1">&#39;tupla&#39;</span><span class="p">,</span> <span class="s1">&#39;immutabile&#39;</span><span class="p">,</span><span class="s1">&#39;come chiave&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">od</span><span class="p">[</span><span class="s2">&quot;un&#39;altra chiave&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;adesso una stringa!&#39;</span>
 <span class="n">od</span><span class="p">[</span><span class="mi">123</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
 
 <span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
@@ -3271,16 +3281,16 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmbfd86d10-3ae4-4332-96c4-1f8eb8546e5b" type="application/json" >
-    {"trace": [{"heap": {}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "line": 2}, {"heap": {}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict"], "line": 3}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict()"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 4}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('gna', 5)])"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 5}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('gna', 5), ('bla', 7)])"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 6}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('gna', 5), ('bla', 7), (('a', 'b', 'c'), 3)])"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 7}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('gna', 5), ('bla', 7), (('a', 'b', 'c'), 3), ('gurp', 'adesso una stringa!')])"]}, "stdout": "", "stack_to_render": [], "event": "step_line", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 8}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('gna', 5), ('bla', 7), (('a', 'b', 'c'), 3), ('gurp', 'adesso una stringa!'), (123, 'hello')])"]}, "stdout": "", "stack_to_render": [], "event": "return", "func_name": "<module>", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "ordered_globals": ["OrderedDict", "od"], "line": 8}], "code": " \nfrom collections import OrderedDict\nod = OrderedDict()\nod['gna'] = 5\nod['bla'] = 7\nod[('a','b','c')] = 3\nod['gurp'] = 'adesso una stringa!'\nod[123] = 'hello'"}
+<script id="json-jm553acc7c-f0d4-414a-96e2-4344cc0a0d65" type="application/json" >
+    {"trace": [{"heap": {}, "line": 2, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {}, "func_name": "<module>", "ordered_globals": []}, {"heap": {}, "line": 3, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict()"]}, "line": 4, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('qualche chiave', 5)])"]}, "line": 5, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('qualche chiave', 5), ('qualche altra chiave', 7)])"]}, "line": 6, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('qualche chiave', 5), ('qualche altra chiave', 7), (('una', 'tupla', 'immutabile', 'come chiave'), 3)])"]}, "line": 7, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('qualche chiave', 5), ('qualche altra chiave', 7), (('una', 'tupla', 'immutabile', 'come chiave'), 3), (\"un'altra chiave\", 'adesso una stringa!')])"]}, "line": 8, "event": "step_line", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}, {"heap": {"1": ["INSTANCE_PPRINT", "OrderedDict", "OrderedDict([('qualche chiave', 5), ('qualche altra chiave', 7), (('una', 'tupla', 'immutabile', 'come chiave'), 3), (\"un'altra chiave\", 'adesso una stringa!'), (123, 'hello')])"]}, "line": 8, "event": "return", "stack_to_render": [], "stdout": "", "globals": {"od": ["REF", 1], "OrderedDict": ["IMPORTED_FAUX_PRIMITIVE", "imported class"]}, "func_name": "<module>", "ordered_globals": ["OrderedDict", "od"]}], "code": " \nfrom collections import OrderedDict\nod = OrderedDict()\nod['qualche chiave'] = 5\nod['qualche altra chiave'] = 7\nod[('una', 'tupla', 'immutabile','come chiave')] = 3\nod[\"un'altra chiave\"] = 'adesso una stringa!'\nod[123] = 'hello'"}
 </script>
-<div id="jmbfd86d10-3ae4-4332-96c4-1f8eb8546e5b" class="pytutorVisualizer"> </div>
+<div id="jm553acc7c-f0d4-414a-96e2-4344cc0a0d65" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3300,12 +3310,12 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmbfd86d10-3ae4-4332-96c4-1f8eb8546e5b').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm553acc7c-f0d4-414a-96e2-4344cc0a0d65').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmbfd86d10-3ae4-4332-96c4-1f8eb8546e5b',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm553acc7c-f0d4-414a-96e2-4344cc0a0d65',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3339,7 +3349,7 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3361,7 +3371,7 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 </div>
 <div class="section" id="Esercizio---copia-di-OrderedDict">
 <h2>Esercizio - copia di OrderedDict<a class="headerlink" href="#Esercizio---copia-di-OrderedDict" title="Permalink to this headline">¶</a></h2>
-<p>Dato un <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> <code class="docutils literal notranslate"><span class="pre">od1</span></code> contenente traduzioni Inglese -&gt; Italiano, crea un NUOVO <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> chiamato <code class="docutils literal notranslate"><span class="pre">od2</span></code> che contiene le stesse traduzioni come input PIU’ la traduzione ‘water’` : ‘acqua’</p>
+<p>Dato un <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> <code class="docutils literal notranslate"><span class="pre">od1</span></code> contenente traduzioni Inglese -&gt; Italiano, crea un NUOVO <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> chiamato <code class="docutils literal notranslate"><span class="pre">od2</span></code> che contiene le stesse traduzioni come input PIU’ la traduzione <code class="docutils literal notranslate"><span class="pre">'water'</span> <span class="pre">:</span> <span class="pre">'acqua'</span></code></p>
 <ul class="simple">
 <li><p>NOTA 1: il tuo codice dovrebbe funzionare con qualsiasi ordered dict di input</p></li>
 <li><p>NOTA 2: <code class="docutils literal notranslate"><span class="pre">od2</span></code> DEVE essere associata ad un NUOVO <code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code> !!</p></li>
@@ -3381,7 +3391,7 @@ OrderedDict([(&#39;qualche chiave&#39;, 5), (&#39;qualche altra chiave&#39;, 7),
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3415,7 +3425,7 @@ od2= OrderedDict([(&#39;dog&#39;, &#39;cane&#39;), (&#39;home&#39;, &#39;casa&#3
 <h2>Classi - Counter<a class="headerlink" href="#Classi---Counter" title="Permalink to this headline">¶</a></h2>
 <p>Se abbiamo bisogno di contare quanti elementi diversi si trovano in una sequenza (in altre parole, se dobbiamo calcolare un istogramma delle frequenze), la classe <code class="docutils literal notranslate"><span class="pre">Counter</span></code> ci può tornare molto utile. <code class="docutils literal notranslate"><span class="pre">Counter</span></code> è un tipo di dizionario speciale. Prima di tutto, dobbiamo dichiarare a Python la nostra intenzione di usarlo, recuperandolo dal modulo <code class="docutils literal notranslate"><span class="pre">collections</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3429,7 +3439,7 @@ od2= OrderedDict([(&#39;dog&#39;, &#39;cane&#39;), (&#39;home&#39;, &#39;casa&#3
 </div>
 <p>Possiamo inizializzare <code class="docutils literal notranslate"><span class="pre">Counter</span></code> così:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3439,7 +3449,7 @@ od2= OrderedDict([(&#39;dog&#39;, &#39;cane&#39;), (&#39;home&#39;, &#39;casa&#3
 </div>
 <p>Se lo stampiamo, vediamo che per primi sono messi gli elementi più frequenti:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3452,14 +3462,14 @@ od2= OrderedDict([(&#39;dog&#39;, &#39;cane&#39;), (&#39;home&#39;, &#39;casa&#3
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Counter({&#39;a&#39;: 3, &#39;l&#39;: 2, &#39;n&#39;: 2, &#39;r&#39;: 1, &#39;o&#39;: 1, &#39;c&#39;: 1, &#39;t&#39;: 1, &#39;e&#39;: 1, &#39;d&#39;: 1})
+Counter({&#39;a&#39;: 3, &#39;n&#39;: 2, &#39;l&#39;: 2, &#39;t&#39;: 1, &#39;e&#39;: 1, &#39;o&#39;: 1, &#39;d&#39;: 1, &#39;c&#39;: 1, &#39;r&#39;: 1})
 </pre></div></div>
 </div>
 <div class="admonition warning">
 <p><strong>ATTENZIONE: SE NON SI USA LA</strong> <code class="docutils literal notranslate"><span class="pre">print</span></code> <strong>JUPYTER STAMPERA’ IN ORDINE ALFABETICO!</strong></p>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3468,7 +3478,7 @@ Counter({&#39;a&#39;: 3, &#39;l&#39;: 2, &#39;n&#39;: 2, &#39;r&#39;: 1, &#39;o&
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3486,7 +3496,7 @@ Counter({&#39;a&#39;: 3,
 </div>
 <p>Possiamo ottenere una lista con gli <code class="docutils literal notranslate"><span class="pre">n</span></code> più frequenti col metodo <code class="docutils literal notranslate"><span class="pre">most_common</span></code>, che ritorna una lista di tuple:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3495,17 +3505,17 @@ Counter({&#39;a&#39;: 3,
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(&#39;a&#39;, 3), (&#39;l&#39;, 2), (&#39;n&#39;, 2), (&#39;r&#39;, 1), (&#39;o&#39;, 1)]
+[(&#39;a&#39;, 3), (&#39;n&#39;, 2), (&#39;l&#39;, 2), (&#39;t&#39;, 1), (&#39;e&#39;, 1)]
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Counter</span></code> si può inizializzare con una sequenza qualsiasi, per esempio con tuple:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3524,7 +3534,7 @@ Counter({50: 8, 40: 4, 60: 3, 70: 3, 30: 2})
 </div>
 <p>o stringhe:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3533,7 +3543,7 @@ Counter({50: 8, 40: 4, 60: 3, 70: 3, 30: 2})
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
