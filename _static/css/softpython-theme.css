@@ -130,6 +130,10 @@ h4 {
     
 }
 
+.rst-content blockquote {
+    font-size: 1.25rem;
+}
+
 .wy-nav-content p, .wy-nav-content li, .wy-nav-content div.admonition {
     font-size: 1.25rem;
     line-height: 1.7;
