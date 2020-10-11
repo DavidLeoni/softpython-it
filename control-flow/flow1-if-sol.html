@@ -2289,7 +2289,7 @@ Cerchiamo altri dolci!
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ho abbastanza carburante&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Il serbatorio adesso contiene&#39;</span><span class="p">,</span> <span class="n">benzina</span><span class="p">,</span> <span class="s1">&#39;litri&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Si parte con&#39;</span><span class="p">,</span> <span class="n">benzina</span><span class="p">,</span> <span class="s1">&#39;litri&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2299,7 +2299,7 @@ Cerchiamo altri dolci!
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Senza benza, faccio il pieno
-Il serbatorio adesso contiene 25 litri
+Si parte con 25 litri
 </pre></div></div>
 </div>
 </div>
@@ -2340,7 +2340,7 @@ Cerchiamo altri dolci!
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: Prova a cambiare i valori di <code class="docutils literal notranslate"><span class="pre">caramelle</span></code> nella cella qua sopra e guarda cosa succede</p>
-<p>Il programmino si comporta esattamente come i precedenti ma quando nessuna condizione viene soddisfatta viene eseguito l’ultimo blocco di codice dopo l’<code class="docutils literal notranslate"><span class="pre">else:</span></code></p>
+<p>Il programmino si comporta esattamente come i precedenti e quando nessuna condizione è soddisfatta viene eseguito l’ultimo blocco di codice dopo l’<code class="docutils literal notranslate"><span class="pre">else:</span></code></p>
 <p>Possiamo aggiungere quanti <code class="docutils literal notranslate"><span class="pre">elif</span></code> vogliamo, quindi potremmo essere ancora più specifici e mettere un <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">0:</span></code> e nell’<code class="docutils literal notranslate"><span class="pre">else</span></code> gestire tutti gli altri casi, anche quelli imprevisti o assurdi come per esempio un numero di caramelle negativo. Perchè mai dovremmo farlo? Gli imprevisti possono sempre succedere, ne avrai trovati in giro di programmi <em>buggati</em> … (vedremo meglio come gestire queste situazioni nel tutorial <a class="reference external" href="https://it.softpython.org/errors-and-testing/errors-and-testing-sol.html">Gestione errori e
 testing</a>)</p>
 <div class="nbinput docutils container">
@@ -2605,7 +2605,7 @@ BAU
 <li><p>il tuo codice deve funzionare con qualunque <code class="docutils literal notranslate"><span class="pre">parola</span></code></p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2648,13 +2648,13 @@ urrà termina con una accentata!
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Il Diavolo&#39;</span>      <span class="c1"># maggiore</span>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;La Ruota&#39;</span>     <span class="c1"># maggiore</span>
 <span class="c1">#x = &quot;L&#39;Appeso&quot;       # maggiore</span>
 <span class="c1">#x = &#39;Asso di Spade&#39;  # minore</span>
 <span class="c1">#x = &#39;Due di Denari&#39;  # minore</span>
-<span class="c1">#x = &#39;Il Cippimerlo&#39;  # mistero</span>
+<span class="c1">#x = &#39;Il Coding&#39;      # mistero</span>
 
-<span class="n">maggiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Il Diavolo&#39;</span><span class="p">,</span><span class="s1">&#39;Il Carro&#39;</span><span class="p">,</span> <span class="s2">&quot;L&#39;Appeso&quot;</span><span class="p">]</span>
+<span class="n">maggiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;La Ruota&#39;</span><span class="p">,</span><span class="s1">&#39;Il Carro&#39;</span><span class="p">,</span> <span class="s2">&quot;L&#39;Appeso&quot;</span><span class="p">]</span>
 <span class="n">minori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Asso di Spade&#39;</span><span class="p">,</span> <span class="s1">&#39;Due di Denari&#39;</span><span class="p">,</span> <span class="s1">&#39;Regina di Coppe&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
@@ -2672,7 +2672,7 @@ urrà termina con una accentata!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Il Diavolo è un Arcano maggiore
+La Ruota è un Arcano maggiore
 </pre></div></div>
 </div>
 </div>
@@ -2759,7 +2759,7 @@ primo quadrante
 <li><p>‘ascissa’ quando <code class="docutils literal notranslate"><span class="pre">y</span></code> è <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
 <li><p>‘ordinata’ quando <code class="docutils literal notranslate"><span class="pre">x</span></code> è <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
 </ul>
-<p>Scrivi qui sotto una versione modificata <strong>del codice con if annidati</strong> che consideri anche questi casi, poi testalo togliendo i commenti alle varie coppie di punti suggerite.</p>
+<p>Scrivi qui sotto una versione modificata <strong>del codice con if annidati</strong> che consideri anche questi casi, poi testalo togliendo i commenti alle varie coppie di coordinate suggerite.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
@@ -2975,7 +2975,7 @@ Non ho la tessera nè i soldi, non posso partire !
 <span class="c1">#cronometro = &#39;27:45:30&#39;   # notte</span>
 <span class="c1">#cronometro = &#39;32:28:30&#39;   # mattina</span>
 
-<span class="c1">#scrivi qui</span>
+<span class="c1"># scrivi qui</span>
 
 <span class="n">ora</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cronometro</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">%</span> <span class="mi">24</span>
 
@@ -3284,20 +3284,20 @@ spesa: 200   sconto: 0.1
 <li><p>Usa <strong>SOLO</strong> l’<strong>if ternario</strong></p></li>
 <li><p>Il tuo codice deve funzionare per <em>qualsiasi</em> valore di <code class="docutils literal notranslate"><span class="pre">scarpe</span></code></p></li>
 </ul>
-<p>Esempio 1 - dato</p>
+<p>Esempio 1 - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<p>Dopo il tuo codice, deve risultare</p>
+<p>Dopo il tuo codice, deve risultare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">scarpe</span><span class="p">)</span>
 <span class="go">3</span>
 </pre></div>
 </div>
-<p>Esempio 2 - dato</p>
+<p>Esempio 2 - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">16</span>
 </pre></div>
 </div>
-<p>Dopo il tuo codice, deve risultare</p>
+<p>Dopo il tuo codice, deve risultare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">scarpe</span><span class="p">)</span>
 <span class="go">15</span>
 </pre></div>
