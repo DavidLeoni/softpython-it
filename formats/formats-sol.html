@@ -1187,7 +1187,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#transpose_2">transpose_2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#flip">flip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#toepliz">toepliz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#moltiplicazione-di-matrici">moltiplicazione di matrici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#Moltiplicazione-di-matrici">Moltiplicazione di matrici</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists-sol.html#check_nqueen">check_nqueen</a></li>
 </ul>
 </li>
@@ -3083,7 +3083,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;_csv.reader object at 0x7fb3240bf908&gt;
+&lt;_csv.reader object at 0x7f985c63d908&gt;
 </pre></div></div>
 </div>
 <p>Quello che vediamo è piuttosto deludente.</p>
@@ -3257,11 +3257,11 @@ aquila,25,le aquile volano
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;anni&#39;: &#39;12&#39;, &#39;animale&#39;: &#39;cane&#39;}
-{&#39;anni&#39;: &#39;14&#39;, &#39;animale&#39;: &#39;gatto&#39;}
-{&#39;anni&#39;: &#39;30&#39;, &#39;animale&#39;: &#39;pellicano&#39;}
-{&#39;anni&#39;: &#39;6&#39;, &#39;animale&#39;: &#39;scoiattolo&#39;}
-{&#39;anni&#39;: &#39;25&#39;, &#39;animale&#39;: &#39;aquila&#39;}
+{&#39;animale&#39;: &#39;cane&#39;, &#39;anni&#39;: &#39;12&#39;}
+{&#39;animale&#39;: &#39;gatto&#39;, &#39;anni&#39;: &#39;14&#39;}
+{&#39;animale&#39;: &#39;pellicano&#39;, &#39;anni&#39;: &#39;30&#39;}
+{&#39;animale&#39;: &#39;scoiattolo&#39;, &#39;anni&#39;: &#39;6&#39;}
+{&#39;animale&#39;: &#39;aquila&#39;, &#39;anni&#39;: &#39;25&#39;}
 </pre></div></div>
 </div>
 </div>
@@ -3515,7 +3515,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Trento&#39;, &#39;Moena&#39;, &#39;Mezzocorona&#39;, &#39;Tonadico&#39;, &#39;Peio&#39;, &#39;Canazei&#39;, &#39;Vigo di Fassa&#39;}
+{&#39;Tonadico&#39;, &#39;Canazei&#39;, &#39;Moena&#39;, &#39;Trento&#39;, &#39;Mezzocorona&#39;, &#39;Vigo di Fassa&#39;, &#39;Peio&#39;}
 </pre></div></div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.14</strong>: prova a conteggiare in un dizionario quanti tipi di servizio vengono trovati. Dovresti ottenere un risultato così:</p>
@@ -3774,7 +3774,7 @@ Completata scrittura di:  impianti-bifuni-sistemato.csv
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;slots&#39;: 7, &#39;totalSlots&#39;: 10, &#39;position&#39;: [46.139732902099794, 11.111516155225331], &#39;name&#39;: &#39;Grazioli&#39;, &#39;id&#39;: &#39;Grazioli - Lavis&#39;, &#39;address&#39;: &#39;Piazza Grazioli - Lavis&#39;, &#39;bikes&#39;: 3}, {&#39;slots&#39;: 5, &#39;totalSlots&#39;: 7, &#39;position&#39;: [46.15368174037716, 11.106601229430453], &#39;name&#39;: &#39;Pressano&#39;, &#39;id&#39;: &#39;Pressano - Lavis&#39;, &#39;address&#39;: &#39;Piazza della Croce - Pressano&#39;, &#39;bikes&#39;: 2}, {&#39;slots&#39;: 6, &#39;totalSlots&#39;: 10, &#39;position&#39;: [46.148180371138814, 11.096753997622727], &#39;name&#39;: &#39;Stazione RFI&#39;, &#39;id&#39;: &#39;Stazione RFI - Lavis&#39;, &#39;address&#39;: &#39;Via Stazione - Lavis&#39;, &#39;bikes&#39;: 4}]
+[{&#39;position&#39;: [46.139732902099794, 11.111516155225331], &#39;bikes&#39;: 3, &#39;name&#39;: &#39;Grazioli&#39;, &#39;slots&#39;: 7, &#39;totalSlots&#39;: 10, &#39;id&#39;: &#39;Grazioli - Lavis&#39;, &#39;address&#39;: &#39;Piazza Grazioli - Lavis&#39;}, {&#39;position&#39;: [46.15368174037716, 11.106601229430453], &#39;bikes&#39;: 2, &#39;name&#39;: &#39;Pressano&#39;, &#39;slots&#39;: 5, &#39;totalSlots&#39;: 7, &#39;id&#39;: &#39;Pressano - Lavis&#39;, &#39;address&#39;: &#39;Piazza della Croce - Pressano&#39;}, {&#39;position&#39;: [46.148180371138814, 11.096753997622727], &#39;bikes&#39;: 4, &#39;name&#39;: &#39;Stazione RFI&#39;, &#39;slots&#39;: 6, &#39;totalSlots&#39;: 10, &#39;id&#39;: &#39;Stazione RFI - Lavis&#39;, &#39;address&#39;: &#39;Via Stazione - Lavis&#39;}]
 </pre></div></div>
 </div>
 <p>Notiamo che quanto letto con la funzione <code class="docutils literal notranslate"><span class="pre">json.load</span></code> non è più semplice testo ma oggetti Python. Per questo json, l’oggetto più esterno è una lista (notate le quadre all’inizio e alla fine del file), e usando <code class="docutils literal notranslate"><span class="pre">type</span></code> su <code class="docutils literal notranslate"><span class="pre">contenuto_python</span></code> ne abbiamo la conferma:</p>
@@ -3897,11 +3897,11 @@ list
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Oggetto  0
-{&#39;cognome&#39;: &#39;Rossi&#39;, &#39;nome&#39;: &#39;Mario&#39;}
+{&#39;nome&#39;: &#39;Mario&#39;, &#39;cognome&#39;: &#39;Rossi&#39;}
 Oggetto  1
-{&#39;cognome&#39;: &#39;Bianchi&#39;, &#39;nome&#39;: &#39;Paolo&#39;}
+{&#39;nome&#39;: &#39;Paolo&#39;, &#39;cognome&#39;: &#39;Bianchi&#39;}
 Oggetto  2
-{&#39;cognome&#39;: &#39;Verdi&#39;, &#39;nome&#39;: &#39;Luca&#39;}
+{&#39;nome&#39;: &#39;Luca&#39;, &#39;cognome&#39;: &#39;Verdi&#39;}
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">

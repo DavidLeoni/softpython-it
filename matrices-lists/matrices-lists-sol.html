@@ -1187,7 +1187,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#transpose_2">transpose_2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#flip">flip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#toepliz">toepliz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#moltiplicazione-di-matrici">moltiplicazione di matrici</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Moltiplicazione-di-matrici">Moltiplicazione di matrici</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#check_nqueen">check_nqueen</a></li>
 </ul>
 </li>
@@ -2274,16 +2274,19 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm0080cf8d-08ba-42c0-8b54-152c09940098" type="application/json" >
-    {"code": " \ndef esrigap(mat, i):\n    \"\"\" RITORNA la riga i-esima da mat\n    \"\"\"\n    return mat[i]\n\nm = [\n      ['a','b'],\n      ['c','d'],\n      ['a','e'] \n    ]\nriga = esrigap(m, 0)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 2, "event": "call", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "__return__": ["REF", 3]}, "ordered_varnames": ["mat", "i", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 3]}, "ordered_globals": ["esrigap", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}]}
+<script id="json-jm0af17f77-e0d9-4efd-9896-0701267caf90" type="application/json" >
+    {"code": " \ndef esrigap(mat, i):\n    \"\"\" RITORNA la riga i-esima da mat\n    \"\"\"\n    return mat[i]\n\nm = [\n      ['a','b'],\n      ['c','d'],\n      ['a','e'] \n    ]\nriga = esrigap(m, 0)", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 2, "func_name": "<module>", "heap": {}}, {"globals": {"esrigap": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esrigap"], "stack_to_render": [], "stdout": "", "line": 8, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}}, {"globals": {"esrigap": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esrigap"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}}, {"globals": {"esrigap": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esrigap"], "stack_to_render": [], "stdout": "", "line": 10, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}}, {"globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esrigap", "m"], "stack_to_render": [], "stdout": "", "line": 12, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "event": "call", "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i"], "frame_id": 1, "func_name": "esrigap", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2]}, "unique_hash": "esrigap_f1", "is_highlighted": true}], "stdout": "", "line": 2, "func_name": "esrigap", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i"], "frame_id": 1, "func_name": "esrigap", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2]}, "unique_hash": "esrigap_f1", "is_highlighted": true}], "stdout": "", "line": 5, "func_name": "esrigap", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "event": "return", "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i", "__return__"], "frame_id": 1, "func_name": "esrigap", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2], "__return__": ["REF", 3]}, "unique_hash": "esrigap_f1", "is_highlighted": true}], "stdout": "", "line": 5, "func_name": "esrigap", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esrigap": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 3]}, "event": "return", "ordered_globals": ["esrigap", "m", "riga"], "stack_to_render": [], "stdout": "", "line": 12, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}]}
 </script>
-<div id="jm0080cf8d-08ba-42c0-8b54-152c09940098" class="pytutorVisualizer"> </div>
+<div id="jm0af17f77-e0d9-4efd-9896-0701267caf90" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -2294,12 +2297,12 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm0080cf8d-08ba-42c0-8b54-152c09940098').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm0af17f77-e0d9-4efd-9896-0701267caf90').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm0080cf8d-08ba-42c0-8b54-152c09940098',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm0af17f77-e0d9-4efd-9896-0701267caf90',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2351,16 +2354,19 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm78033c7c-e890-455f-af99-4f928990ae1f" type="application/json" >
-    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO!!!!\n\ndef esriga_sbagliata(mat, i):\n    \"\"\" RITORNA la i-esima riga da mat. NOTA: la riga DEVE essere in una nuova lista ! \"\"\"\n    \n    riga = []\n    riga.append(mat[i])  \n    return riga\n    \nm = [ ['a','b'],\n      ['c','d'],\n      ['a','e'] ]\nriga = esriga_sbagliata(m,0)", "trace": [{"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 13, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6], "__return__": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "return", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 6]}, "ordered_globals": ["esriga_sbagliata", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}, "stdout": ""}]}
+<script id="json-jmd3caa02c-1c5e-4664-9cfe-3f910a3ca210" type="application/json" >
+    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO!!!!\n\ndef esriga_sbagliata(mat, i):\n    \"\"\" RITORNA la i-esima riga da mat. NOTA: la riga DEVE essere in una nuova lista ! \"\"\"\n    \n    riga = []\n    riga.append(mat[i])  \n    return riga\n    \nm = [ ['a','b'],\n      ['c','d'],\n      ['a','e'] ]\nriga = esriga_sbagliata(m,0)", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 4, "func_name": "<module>", "heap": {}}, {"globals": {"esriga_sbagliata": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "stdout": "", "line": 11, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}}, {"globals": {"esriga_sbagliata": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "stdout": "", "line": 12, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}}, {"globals": {"esriga_sbagliata": ["REF", 1]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "stdout": "", "line": 13, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [], "stdout": "", "line": 14, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "call", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i"], "frame_id": 1, "func_name": "esriga_sbagliata", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2]}, "unique_hash": "esriga_sbagliata_f1", "is_highlighted": true}], "stdout": "", "line": 4, "func_name": "esriga_sbagliata", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i"], "frame_id": 1, "func_name": "esriga_sbagliata", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2]}, "unique_hash": "esriga_sbagliata_f1", "is_highlighted": true}], "stdout": "", "line": 7, "func_name": "esriga_sbagliata", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i", "riga"], "frame_id": 1, "func_name": "esriga_sbagliata", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2], "riga": ["REF", 6]}, "unique_hash": "esriga_sbagliata_f1", "is_highlighted": true}], "stdout": "", "line": 8, "func_name": "esriga_sbagliata", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST"]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i", "riga"], "frame_id": 1, "func_name": "esriga_sbagliata", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2], "riga": ["REF", 6]}, "unique_hash": "esriga_sbagliata_f1", "is_highlighted": true}], "stdout": "", "line": 9, "func_name": "esriga_sbagliata", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "event": "return", "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "i", "riga", "__return__"], "frame_id": 1, "func_name": "esriga_sbagliata", "parent_frame_id_list": [], "encoded_locals": {"i": 0, "mat": ["REF", 2], "__return__": ["REF", 6], "riga": ["REF", 6]}, "unique_hash": "esriga_sbagliata_f1", "is_highlighted": true}], "stdout": "", "line": 9, "func_name": "esriga_sbagliata", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}}, {"globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 6]}, "event": "return", "ordered_globals": ["esriga_sbagliata", "m", "riga"], "stack_to_render": [], "stdout": "", "line": 14, "func_name": "<module>", "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}}]}
 </script>
-<div id="jm78033c7c-e890-455f-af99-4f928990ae1f" class="pytutorVisualizer"> </div>
+<div id="jmd3caa02c-1c5e-4664-9cfe-3f910a3ca210" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -2371,12 +2377,12 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm78033c7c-e890-455f-af99-4f928990ae1f').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmd3caa02c-1c5e-4664-9cfe-3f910a3ca210').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm78033c7c-e890-455f-af99-4f928990ae1f',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmd3caa02c-1c5e-4664-9cfe-3f910a3ca210',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2425,7 +2431,7 @@ essere <em>un’altra</em> copia <code class="docutils literal notranslate"><spa
 <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2507,8 +2513,7 @@ range(0, 5)
 <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni</span>
-<span class="c1"># devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2547,7 +2552,7 @@ range(0, 5)
 <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2584,7 +2589,7 @@ range(0, 5)
 <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2621,7 +2626,7 @@ range(0, 5)
 <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2654,7 +2659,7 @@ range(0, 5)
 <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
 <span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
 
-<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui (affinchè questo funzioni devi essere online)</span>
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
 <span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2763,16 +2768,19 @@ range(0, 5)
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jma4021e1a-c3ea-4aa7-8786-665315a78aae" type="application/json" >
-    {"code": " \nbad = [[0]*3]*5", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"bad": ["REF", 1]}, "ordered_globals": ["bad"], "stack_to_render": [], "heap": {"1": ["LIST", ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2]], "2": ["LIST", 0, 0, 0]}, "stdout": ""}]}
+<script id="json-jm9316b438-3d2f-4550-afeb-25d1b9da736a" type="application/json" >
+    {"code": " \nbad = [[0]*3]*5", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 2, "func_name": "<module>", "heap": {}}, {"globals": {"bad": ["REF", 1]}, "event": "return", "ordered_globals": ["bad"], "stack_to_render": [], "stdout": "", "line": 2, "func_name": "<module>", "heap": {"1": ["LIST", ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2]], "2": ["LIST", 0, 0, 0]}}]}
 </script>
-<div id="jma4021e1a-c3ea-4aa7-8786-665315a78aae" class="pytutorVisualizer"> </div>
+<div id="jm9316b438-3d2f-4550-afeb-25d1b9da736a" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -2783,12 +2791,12 @@ range(0, 5)
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jma4021e1a-c3ea-4aa7-8786-665315a78aae').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm9316b438-3d2f-4550-afeb-25d1b9da736a').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jma4021e1a-c3ea-4aa7-8786-665315a78aae',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm9316b438-3d2f-4550-afeb-25d1b9da736a',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2884,16 +2892,19 @@ range(0, 5)
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm8f899fdc-5a07-48bf-8703-e144726f17ef" type="application/json" >
-    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO:\ndef deep_clone_sbagliato(mat):\n    \"\"\" RITORNA una NUOVA lista di liste che un DEEP CLONE  di mat (che \u00e8 una lista di liste)\n    \"\"\"\n    return mat[:] \n\nm = [ ['a','b'],\n      ['b','d'] ]       \n        \nres = deep_clone_sbagliato(m)", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "__return__": ["REF", 5]}, "ordered_varnames": ["mat", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2], "res": ["REF", 5]}, "ordered_globals": ["deep_clone_sbagliato", "m", "res"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}, "stdout": ""}]}
+<script id="json-jmc25ca511-2d95-445a-a64a-a302340865c6" type="application/json" >
+    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO:\ndef deep_clone_sbagliato(mat):\n    \"\"\" RITORNA una NUOVA lista di liste che un DEEP CLONE  di mat (che \u00e8 una lista di liste)\n    \"\"\"\n    return mat[:] \n\nm = [ ['a','b'],\n      ['b','d'] ]       \n        \nres = deep_clone_sbagliato(m)", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 3, "func_name": "<module>", "heap": {}}, {"globals": {"deep_clone_sbagliato": ["REF", 1]}, "event": "step_line", "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "stdout": "", "line": 8, "func_name": "<module>", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}}, {"globals": {"deep_clone_sbagliato": ["REF", 1]}, "event": "step_line", "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}}, {"globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [], "stdout": "", "line": 11, "func_name": "<module>", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}}, {"globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "event": "call", "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat"], "frame_id": 1, "func_name": "deep_clone_sbagliato", "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "unique_hash": "deep_clone_sbagliato_f1", "is_highlighted": true}], "stdout": "", "line": 3, "func_name": "deep_clone_sbagliato", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}}, {"globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "event": "step_line", "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat"], "frame_id": 1, "func_name": "deep_clone_sbagliato", "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "unique_hash": "deep_clone_sbagliato_f1", "is_highlighted": true}], "stdout": "", "line": 6, "func_name": "deep_clone_sbagliato", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}}, {"globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "event": "return", "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"is_parent": false, "is_zombie": false, "ordered_varnames": ["mat", "__return__"], "frame_id": 1, "func_name": "deep_clone_sbagliato", "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "__return__": ["REF", 5]}, "unique_hash": "deep_clone_sbagliato_f1", "is_highlighted": true}], "stdout": "", "line": 6, "func_name": "deep_clone_sbagliato", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}}, {"globals": {"res": ["REF", 5], "deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "event": "return", "ordered_globals": ["deep_clone_sbagliato", "m", "res"], "stack_to_render": [], "stdout": "", "line": 11, "func_name": "<module>", "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}}]}
 </script>
-<div id="jm8f899fdc-5a07-48bf-8703-e144726f17ef" class="pytutorVisualizer"> </div>
+<div id="jmc25ca511-2d95-445a-a64a-a302340865c6" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -2904,12 +2915,12 @@ range(0, 5)
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm8f899fdc-5a07-48bf-8703-e144726f17ef').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmc25ca511-2d95-445a-a64a-a302340865c6').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm8f899fdc-5a07-48bf-8703-e144726f17ef',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmc25ca511-2d95-445a-a64a-a302340865c6',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3367,7 +3378,7 @@ range(0, 5)
 <h3>scambia_righe<a class="headerlink" href="#scambia_righe" title="Permalink to this headline">¶</a></h3>
 <p>Proveremo a scambiare due righe di una matrice</p>
 <p>Ci sono diversi modi di procedere. Prima di continuare, assicurati di sapere come scambiare solo due valori risolvendo questo semplice esercizio - controlla inoltre il risultato in Python Tutor.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
@@ -3381,57 +3392,9 @@ range(0, 5)
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">k</span>
 
-<span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
+<span class="c1">#jupman.pytut()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
-
-<script id="json-jmf2ff2a44-d1cf-4300-bbbc-8fc3e95b842a" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
-</script>
-<div id="jmf2ff2a44-d1cf-4300-bbbc-8fc3e95b842a" class="pytutorVisualizer"> </div>
-
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
-
-
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
-
-<script>
-(function(){
-
-    var trace = JSON.parse(document.getElementById('json-jmf2ff2a44-d1cf-4300-bbbc-8fc3e95b842a').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmf2ff2a44-d1cf-4300-bbbc-8fc3e95b842a',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
-
-
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
-
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
-
-})()
-</script></div>
 </div>
 <p>✪✪ Prende una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste, e RITORNA una NUOVA matrice dove le righe agli indici <code class="docutils literal notranslate"><span class="pre">i1</span></code> e <code class="docutils literal notranslate"><span class="pre">i2</span></code> sono scambiate</p>
 <p>Ingredienti:</p>
@@ -3833,7 +3796,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </div>
 <div class="section" id="trasposta_1">
 <h3>trasposta_1<a class="headerlink" href="#trasposta_1" title="Permalink to this headline">¶</a></h3>
-<p>Vediamo come trasporrte una una matrice <em>sul posto</em> (<em>in-place</em>). La trasposta <span class="math notranslate nohighlight">\(M^T\)</span> di una matrice <span class="math notranslate nohighlight">\(M\)</span> è definita come</p>
+<p>Vediamo come trasporre una una matrice <em>sul posto</em> (<em>in-place</em>). La trasposta <span class="math notranslate nohighlight">\(M^T\)</span> di una matrice <span class="math notranslate nohighlight">\(M\)</span> è definita come</p>
 <p><span class="math notranslate nohighlight">\(M^T[i][j] = M[j][i]\)</span></p>
 <p>La definizione è semplice eppure l’implementazione può essere insidiosa. Se non stai attento, potresti facilmente finire a scambiare valori due volte e riottenere la stessa matrice originale. Per evitare ciò, itera solo la parte triangolare superiore e ricordati che la funzione <code class="docutils literal notranslate"><span class="pre">range</span></code> può avere un indice di partenza:</p>
 <div class="nbinput docutils container">
@@ -3880,16 +3843,19 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm95ebbe33-ea4b-483e-a5f4-4a8797b7448a" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+<script id="json-jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e" type="application/json" >
+    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 2, "func_name": "<module>", "heap": {}}, {"globals": {"x": 3}, "event": "step_line", "ordered_globals": ["x"], "stack_to_render": [], "stdout": "", "line": 3, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 3}, "event": "step_line", "ordered_globals": ["x", "y"], "stack_to_render": [], "stdout": "", "line": 7, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 3, "k": 3}, "event": "step_line", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 8, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 7, "k": 3}, "event": "step_line", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {}}, {"globals": {"y": 3, "x": 7, "k": 3}, "event": "return", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {}}]}
 </script>
-<div id="jm95ebbe33-ea4b-483e-a5f4-4a8797b7448a" class="pytutorVisualizer"> </div>
+<div id="jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -3900,12 +3866,12 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm95ebbe33-ea4b-483e-a5f4-4a8797b7448a').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm95ebbe33-ea4b-483e-a5f4-4a8797b7448a',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3962,7 +3928,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
             <span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">el</span>
     <span class="c1">#/jupman-raise</span>
 
-<span class="c1"># Sistemiamo le dimensioni sbagliate della matrice:</span>
+<span class="c1"># Controlliamo le dimensioni sbagliate della matrice:</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">trasposta_1</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">])</span>
@@ -4182,8 +4148,8 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </div>
 </div>
 </div>
-<div class="section" id="moltiplicazione-di-matrici">
-<h3>moltiplicazione di matrici<a class="headerlink" href="#moltiplicazione-di-matrici" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Moltiplicazione-di-matrici">
+<h3>Moltiplicazione di matrici<a class="headerlink" href="#Moltiplicazione-di-matrici" title="Permalink to this headline">¶</a></h3>
 <p>Guarda la <a class="reference external" href="https://en.wikipedia.org/w/index.php?title=Matrix_multiplication&amp;section=2#Definition">definizione di moltiplicazione di matrici</a> su Wikipedia e prova ad implementarla nella funzione seguente.</p>
 <p>In sostanza, data una matrice nxm A e una matrice mxp B devi ritornare come output una matrice nxp C calcolando le celle <span class="math notranslate nohighlight">\(c_{ij}\)</span> con la formula</p>
 <p><span class="math notranslate nohighlight">\(c_{ij} = a_{i1}b_{1j} +\cdots + a_{im}b_{mj}= \sum_{k=1}^m a_{ik}b_{kj}\)</span></p>
