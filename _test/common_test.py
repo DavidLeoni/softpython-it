@@ -4,8 +4,7 @@ import sys
 sys.path.append('../')
 sys.path.append('.')  # good lord, without this debugging in VSCode doesn't work
 import jupman_tools as jmt
-from jupman_tools import ignore_spaces
-from jupman_tools import Jupman
+from jupman_tools import ignore_spaces, tag_regex, Jupman
 import pytest 
 import re
 from sphinx.application import Sphinx

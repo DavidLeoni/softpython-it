@@ -4,8 +4,7 @@ import sys
 sys.path.append('../')
 sys.path.append('.')  # good lord, without this debugging in VSCode doesn't work
 import jupman_tools as jmt
-from jupman_tools import ignore_spaces
-from jupman_tools import Jupman
+from jupman_tools import ignore_spaces, tag_regex, Jupman
 import pytest 
 import re
 from sphinx.application import Sphinx
@@ -69,7 +68,7 @@ def test_uproot():
 def test_replace_sysrel():
 
     assert jmt.replace_py_rel("""import sys
-sys.do_something()""", 'python-intro').strip() ==  """import sys
+sys.do_something()""", 'python-example').strip() ==  """import sys
 sys.do_something()"""
 
 
@@ -78,7 +77,7 @@ import sys
 sys.path.append('../')
 import jupman
 
-    """, 'python-intro').strip() ==  'import jupman'
+    """, 'python-example').strip() ==  'import jupman'
 
 
     assert jmt.replace_py_rel("""
@@ -86,7 +85,7 @@ import sys
 sys.path.append('../')
 import jupman
 sys.do_something()
-    """, 'python-intro').strip() ==  """import sys
+    """, 'python-example').strip() ==  """import sys
 import jupman
 sys.do_something()"""
 
@@ -119,23 +118,27 @@ def test_copy_chapter():
     nb_node = nbformat.read(replacements_fn, nbformat.NO_CONVERT)
 
     # markdown                             
-    assert '[A markdown relative link](index.ipynb)' in nb_node.cells[1].source
-    assert '![Another markdown link](_static/img/cc-by.png)' in nb_node.cells[2].source
-    assert '[A local markdown link](data/pop.csv)' in nb_node.cells[3].source
+    assert '[some link](index.ipynb)' in nb_node.cells[1].source
+    assert '![some link](_static/img/cc-by.png)' in nb_node.cells[2].source
+    assert '[some link](data/pop.csv)' in nb_node.cells[3].source
 
-    assert '<a href="index.ipynb" target="_blank">An html in markdown relative link</a>' in nb_node.cells[4].source
-
-    assert '<img src="_static/img/cc-by.png">' in nb_node.cells[5].source
-    assert '<a href="data/pop.csv">a html in markdown local link</a>' in nb_node.cells[6].source
+    assert '<a href="index.ipynb" target="_blank">a link</a>' in nb_node.cells[4].source
     
-    assert '<a href="index.ipynb">An html relative link</a>' in nb_node.cells[7].source
+    assert '<img src="_static/img/cc-by.png">' in nb_node.cells[5].source
+    assert '<a href="data/pop.csv">a link</a>' in nb_node.cells[6].source
+    
+    assert '<a href="index.ipynb">a link</a>' in nb_node.cells[7].source
 
     assert '<img src="_static/img/cc-by.png">' in nb_node.cells[8].source
 
-    assert '<a href="data/pop.csv">an html local link</a>' in nb_node.cells[9].source
+    assert '<a href="data/pop.csv">a link</a>' in nb_node.cells[9].source
 
     assert '# Python\nimport jupman' in nb_node.cells[10].source
     assert '#jupman-raise' in nb_node.cells[10].source
+
+    assert '<a href="index.html">a link</a>' in nb_node.cells[11].source
+    
+    assert '<a href="https://jupman.softpython.org">a link</a>' in nb_node.cells[12].source
 
     py_fn = os.path.join(dest_dir, 'file.py')
     assert os.path.isfile(py_fn)
@@ -176,6 +179,8 @@ def test_copy_chapter():
     assert os.path.isfile(nb_ex_fn)
 
     nb_ex = nbformat.read(nb_ex_fn, nbformat.NO_CONVERT)
+    from pprint import pprint
+    pprint(nb_ex)
     assert "# Notebook EXERCISES" in nb_ex.cells[0].source
     assert "#before\nraise" in nb_ex.cells[1].source
     assert nb_ex.cells[2].source == ""   # SOLUTION strips everything
@@ -183,23 +188,29 @@ def test_copy_chapter():
     #4 question
     #5 answer: must begin with answer and strips everything after
     assert nb_ex.cells[5].source == '**ANSWER**:\n'
+    #6 write here 
+    assert nb_ex.cells[6].source == 'x = 6\n# write here fast please\n\n'
+    assert nb_ex.cells[7].source == '' # SOLUTION strips everything
 
 def test_setup(tconf):
-    
-    
+        
     mockapp = MockSphinx()
     
     tconf.setup(mockapp)
-    assert os.path.isfile(os.path.join(tconf.jm.generated, 'jupyter-intro.zip'))
-    assert os.path.isfile(os.path.join(tconf.jm.generated, 'python-intro.zip'))
-    assert os.path.isfile(os.path.join(tconf.jm.generated, 'tools-intro.zip'))
+    # if so tests run smoothly also on non-jupman projects
+    if os.path.exists('jupyter-example'):
+        assert os.path.isfile(os.path.join(tconf.jm.generated, 'jupyter-example.zip'))
+    if os.path.exists('python-example'):
+        assert os.path.isfile(os.path.join(tconf.jm.generated, 'python-example.zip'))
+    if os.path.exists('jup-and-py-example'):
+        assert os.path.isfile(os.path.join(tconf.jm.generated, 'jup-and-py-example.zip'))
 
-def test_ignore_spaces():
+def test_tag_regex():
     
     with pytest.raises(ValueError):
-        ignore_spaces("")
+        tag_regex("")
 
-    p = re.compile(ignore_spaces(" a    b"))
+    p = re.compile(tag_regex(" a    b"))
     assert p.match(" a b")
     assert p.match(" a  b")
     assert p.match(" a  b ")
@@ -208,7 +219,13 @@ def test_ignore_spaces():
     assert p.match("   a  b\n")
     assert not p.match(" ab")
     assert not p.match("c b")
-    
+
+def test_write_solution_here():
+    jm = make_jm()
+    p = re.compile(jm.write_solution_here)
+    print(p)
+    assert p.match(" # write here a b\nc")
+    assert p.match(" # write here a   b c \nc\n1d")
 
 
 def test_validate_code_tags():

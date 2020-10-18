@@ -45,24 +45,32 @@ jm.chapter_files = ['jupman.py', 'img/cc-by.png',
 jm.chapter_patterns =  ['*/']
 jm.chapter_exclude_patterns =  ['[^_]*/','^exams/', '^project/', '^challenges/']
 
-# words used in ipynb files - you might want to translate these in your language. Use plural.
+# words used in ipynb files - you might want to translate these in your language. 
+# Use singular
+jm.ipynb_show_solution = "Mostra soluzione"
+jm.ipynb_hide_solution = "Nascondi"
+jm.ipynb_show_answer = "Mostra risposta"
+jm.ipynb_hide_answer = "Nascondi"
+
+
+# Use plural.
 jm.ipynb_solutions = "SOLUZIONI"
 jm.ipynb_exercises = "ESERCIZI"
 
 #NOTE: the following string is not just a translation, it's also a command that   when building the exercises
 #      removes the content after it in the Python cell it is contained in
 #      If the user inserts extra spaces the phrase will be recognized anyway
-jm.write_solution_here = jmt.ignore_spaces("# scrivi qui", must_begin=False)
+jm.write_solution_here = jmt.tag_regex("# scrivi qui", must_begin=False, preserve_line=True)
 
 #NOTE: the following string is not just a translation, it's also a command that  when building the exercises  completely removes the content of the python cell it is contained in (solution comment included). If the user inserts extra spaces the phrase will be recognized anyway
 
-jm.solution = jmt.ignore_spaces("# SOLUZIONE")
+jm.solution = jmt.tag_regex("# SOLUZIONE")
 
 #NOTE: the following string is not just a translation, it's also a command that 
 #   when building the exercises removes the content after it in the markdown cell
 #   it is contained in
 
-jm.markdown_answer = jmt.ignore_spaces('**RISPOSTA**:')
+jm.markdown_answer = jmt.tag_regex('**RISPOSTA**:')
 #################################################################
 
 jm.zip_ignored = ['__pycache__', '**.ipynb_checkpoints', '.pyc', '.cache', '.pytest_cache', '.vscode']
@@ -218,8 +226,9 @@ html_static_path = ['_static/']
 
 
 html_js_files = [
-    'js/jupman.js',  # shared among jupyter and ReadTheDocs
+    'js/jupman.js',  # shared among jupyter and website
     'js/pytutor-embed.bundle.min.js',
+    'js/softpython.js'
 ]
 
 html_css_files = [
@@ -417,6 +426,8 @@ pdf_fit_background_mode = 'scale'
 
 def setup(app):    
     
+    jmt.init(jm)
+
     if 'googleanalytics_id' in globals() and globals()['googleanalytics_id']:
         print("Found googleanalytics_id")
         import googleanalytics
