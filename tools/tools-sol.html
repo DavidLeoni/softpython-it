@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2285,12 +2286,25 @@ C:\Users\David\CART&gt;
 </div>
 </div>
 <p><strong>ESERCIZIO</strong>: in Python possiamo scrivere commenti iniziando una riga con un cancelletto <code class="docutils literal notranslate"><span class="pre">#</span></code>. Come prima, scrivi nella cella sotto <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">5</span></code> ma questa volta scrivilo nella riga sotto la scritta <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">scrivi</span> <span class="pre">qui</span></code>:</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># scrivi qui</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>
@@ -2541,7 +2555,9 @@ perciò ne acquisterò altri 3 al Mercato del Vapore
 <ul class="simple">
 <li><p><strong>NON</strong> mettere costanti numeriche nel tuo codice come <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code> o <code class="docutils literal notranslate"><span class="pre">3</span></code>! Scrivi del codice generico che usa solo le variabili fornite.</p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -2553,6 +2569,30 @@ perciò ne acquisterò altri 3 al Mercato del Vapore
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ho&quot;</span><span class="p">,</span> <span class="n">dirigibili</span><span class="p">,</span> <span class="s2">&quot;dirigibili a vapore&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ne voglio parcheggiare uno per castello&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;perciò ne acquisterò altri&quot;</span><span class="p">,</span> <span class="n">castelli</span> <span class="o">-</span> <span class="n">dirigibili</span><span class="p">,</span> <span class="s2">&quot;al Mercato del Vapore.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Ho costruito 7 castelli per aria
+Ho 4 dirigibili a vapore
+Ne voglio parcheggiare uno per castello
+perciò ne acquisterò altri 3 al Mercato del Vapore.
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">castelli</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">dirigibili</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2597,8 +2637,6 @@ soluzione di ripiego, che sfrutta Python Tutor.</p>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># Ricordati di eseguire questa cella con Control+Invio</span>
 <span class="c1"># Questi comandi dicono a Python dove trovare il file jupman.py</span>
-<span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">);</span>
 <span class="kn">import</span> <span class="nn">jupman</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -2873,7 +2911,9 @@ Stasera i pirati berranno 50 boccali, ne avanzano 30 per domani
 <li><p>Per tener traccia dei boccali avanzati, crea una variabile apposita <code class="docutils literal notranslate"><span class="pre">boccali_avanzati</span></code></p></li>
 <li><p>Se stai usando Jupyter, prova ad usare <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code> alla fine della cella per visualizzare l’esecuzione</p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
@@ -2891,6 +2931,33 @@ Stasera i pirati berranno 50 boccali, ne avanzano 30 per domani
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stasera i pirati berranno&quot;</span><span class="p">,</span> <span class="n">pirati</span> <span class="o">*</span> <span class="n">ognuno_vuole</span><span class="p">,</span> <span class="s2">&quot;boccali, ne avanzano&quot;</span><span class="p">,</span> <span class="n">boccali_avanzati</span><span class="p">,</span> <span class="s2">&quot;per domani&quot;</span><span class="p">)</span>
 
 <span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Nella taverna ci sono 10 pirati, ognuno vuole 5 boccali di grog
+Abbiamo 4 barili di grog pieni
+Da ogni barile possiamo prendere 20 boccali
+Stasera i pirati berranno 50 boccali, ne avanzano 30 per domani
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pirati</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">ognuno_vuole</span> <span class="o">=</span> <span class="mi">5</span>      <span class="c1"># boccali di grog</span>
+<span class="n">barili</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">capienza_barile</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># boccali di grog</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

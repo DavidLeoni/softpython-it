@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2388,8 +2389,6 @@ tuple
 <span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -2532,12 +2531,14 @@ tuple
 </pre></div>
 </div>
 </div>
-<p><strong>RISPOSTA</strong>: visto che una tupla è IMMUTABILE, una volta che abbiamo creato in memoria l’oggetto <code class="docutils literal notranslate"><span class="pre">(4,2,5)</span></code> siamo sicuri che nessuno lo modificherà, quindi non occorre creare una nuova tupla e possiamo scrivere direttamente</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: visto che una tupla è IMMUTABILE, una volta che abbiamo creato in memoria l’oggetto <code class="docutils literal notranslate"><span class="pre">(4,2,5)</span></code> siamo sicuri che nessuno lo modificherà, quindi non occorre creare una nuova tupla e possiamo scrivere direttamente</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 </pre></div>
 </div>
-<p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
+</div><p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">3.4</span><span class="p">)</span>
 </pre></div>
@@ -2908,7 +2909,9 @@ tuple
 <ul class="simple">
 <li><p>puoi assumere che <code class="docutils literal notranslate"><span class="pre">animali</span></code> contenga sempre esattamente 6 animali</p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
@@ -2929,6 +2932,27 @@ tuple
                   <span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">5</span><span class="p">])))</span>
 
 <span class="c1">#print(tuple_animali)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">animali</span> <span class="o">=</span> <span class="s2">&quot;gatto siamese,cane,canarino,porcellino,coniglio,criceto&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3218,8 +3242,6 @@ tuple
 <span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -3579,13 +3601,15 @@ False
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y=&#39;</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Stamperà</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Stamperà</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = (5, 6, 7)
 y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 </pre></div>
 </div>
 <p>perchè la moltiplicazione genera una NUOVA tupla che viene associata a <code class="docutils literal notranslate"><span class="pre">y</span></code>. La tupla associata a <code class="docutils literal notranslate"><span class="pre">x</span></code> rimane invariata.</p>
-<p><strong>DOMANDA</strong>: Guarda il codice seguente e per ciascuna espressione cerca di indovinare il risultato, o se produce un errore.</p>
+</div><p><strong>DOMANDA</strong>: Guarda il codice seguente e per ciascuna espressione cerca di indovinare il risultato, o se produce un errore.</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
 </pre></div>
@@ -3667,7 +3691,9 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="go">(&#39;w&#39;, &#39;e&#39;, &#39;l&#39;, &#39;c&#39;, &#39;w&#39;, &#39;e&#39;, &#39;l&#39;, &#39;c&#39;, &#39;o&#39;, &#39;o&#39;, &#39;o&#39;, &#39;o&#39;, &#39;m&#39;, &#39;e&#39;, &#39;m&#39;, &#39;e&#39;, &#39;m&#39;, &#39;e&#39;)</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
@@ -3679,6 +3705,20 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="n">z</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 
 <span class="c1">#print(z)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">),(</span><span class="s1">&#39;o&#39;</span><span class="p">,),(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">))</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3745,13 +3785,26 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <div class="section" id="Esercizio---errando">
 <h3>Esercizio - errando<a class="headerlink" href="#Esercizio---errando" title="Permalink to this headline">¶</a></h3>
 <p>Prova a scrivere qua sotto <code class="docutils literal notranslate"><span class="pre">(1,2,3).append(4)</span></code> e guarda che errore appare:</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># scrivi qui</span>
 <span class="c1">#(1,2,3).append(4)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3773,7 +3826,9 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="nv">y</span> <span class="o">=</span> <span class="o">(</span><span class="s1">&#39;a&#39;</span>, <span class="s1">&#39;b&#39;</span>, <span class="s1">&#39;d&#39;</span>, <span class="s1">&#39;e&#39;</span><span class="o">)</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
@@ -3785,6 +3840,19 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 
 <span class="c1">#print(&#39;x=&#39;,x)</span>
 <span class="c1">#print(&#39;y=&#39;,y)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3801,7 +3869,9 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="go">(&#39;C&#39;, &#39;R&#39;, &#39;S&#39;, &#39;A&#39;, &#39;I&#39;, &#39;O&#39;, &#39;a&#39;, &#39;i&#39;, &#39;m&#39;, &#39;t&#39;, &#39;c&#39;)</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
@@ -3811,6 +3881,19 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="c1"># scrivi qui</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 <span class="c1">#print(t)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3831,7 +3914,9 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="go">(2, 2, 3, 3, 4, 5, 5, 5)</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
@@ -3843,6 +3928,19 @@ y = (5, 6, 7, 5, 6, 7, 5, 6, 7)
 <span class="n">y</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="c1">#print(x)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4088,7 +4186,9 @@ ciliegia  è presente  <span class="m">2</span>  volte
 fragola  è presente  <span class="m">1</span>  volte
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
 </pre></div>
 </div>
@@ -4112,6 +4212,19 @@ fragola  è presente  <span class="m">1</span>  volte
 <span class="c1">#print(tpere[0], &quot; è presente &quot;, tpere[1], &quot; volte&quot;)</span>
 <span class="c1">#print(tciliegie[0], &quot; è presente &quot;, tciliegie[1], &quot; volte&quot;)</span>
 <span class="c1">#print(tfragole[0], &quot; è presente &quot;, tfragole[1], &quot; volte&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;mela|pera|mela|ciliegia|pera|mela|pera|pera|ciliegia|pera|fragola&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4139,7 +4252,9 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span class="go">[(&#39;t&#39;, &#39;a&#39;), (&#39;p&#39;, &#39;p&#39;), (&#39;e&#39;, &#39;t&#39;), (&#39;o&#39;,)]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
 </pre></div>
 </div>
@@ -4154,6 +4269,17 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],))</span>
     <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4176,7 +4302,9 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span class="go">()</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
 </pre></div>
 </div>
@@ -4189,6 +4317,17 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
             <span class="k">return</span> <span class="n">ta</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">tb</span>
 
     <span class="k">return</span> <span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4211,18 +4350,43 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">)]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">doppie</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">elemento</span><span class="p">,</span> <span class="n">elemento</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># INIZIO TEST - NON TOCCARE !</span>
+<span class="k">assert</span> <span class="n">doppie</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
+<span class="k">assert</span> <span class="n">doppie</span><span class="p">([</span><span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="p">[(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)]</span>
+<span class="k">assert</span> <span class="n">doppie</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span> <span class="o">==</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">7</span><span class="p">,</span><span class="mi">14</span><span class="p">)]</span>
+<span class="k">assert</span> <span class="n">doppie</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span> <span class="o">==</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">)]</span>
+
+<span class="c1"># verifica che la lista originale non venga cambiata</span>
+<span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="n">doppie</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">la</span> <span class="o">==</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">lb</span> <span class="o">==</span> <span class="p">[(</span><span class="mi">6</span><span class="p">,</span><span class="mi">12</span><span class="p">)]</span>
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">doppie</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !</span>
 <span class="k">assert</span> <span class="n">doppie</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
@@ -4250,7 +4414,9 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span class="go">(&#39;g2&#39;, &#39;g2&#39;, &#39;a4&#39;, &#39;a4&#39;, &#39;a4&#39;, &#39;a4&#39;, &#39;s1&#39;, &#39;p3&#39;, &#39;p3&#39;, &#39;p3&#39;)</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
@@ -4258,7 +4424,7 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="k">def</span> <span class="nf">nasty</span><span class="p">(</span><span class="n">ta</span><span class="p">,</span> <span class="n">tb</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tb</span><span class="p">):</span>
@@ -4266,7 +4432,7 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
         <span class="n">ret</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span> <span class="p">(</span><span class="n">s</span><span class="p">,)</span> <span class="o">*</span> <span class="n">tb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
-    <span class="c1">#/jupman-raise</span>
+
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !</span>
 <span class="k">assert</span> <span class="n">nasty</span><span class="p">((</span><span class="s1">&#39;a&#39;</span><span class="p">,),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,))</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;a3&#39;</span><span class="p">,</span><span class="s1">&#39;a3&#39;</span><span class="p">,</span><span class="s1">&#39;a3&#39;</span><span class="p">)</span>
@@ -4274,6 +4440,17 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span class="k">assert</span> <span class="n">nasty</span><span class="p">((</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;u4&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">,</span> <span class="s1">&#39;u4&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">,</span> <span class="s1">&#39;g3&#39;</span><span class="p">,</span> <span class="s1">&#39;g3&#39;</span><span class="p">,</span> <span class="s1">&#39;g3&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">nasty</span><span class="p">((</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;p&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;g2&#39;</span><span class="p">,</span> <span class="s1">&#39;g2&#39;</span><span class="p">,</span> <span class="s1">&#39;a4&#39;</span><span class="p">,</span> <span class="s1">&#39;a4&#39;</span><span class="p">,</span> <span class="s1">&#39;a4&#39;</span><span class="p">,</span> <span class="s1">&#39;a4&#39;</span><span class="p">,</span> <span class="s1">&#39;s1&#39;</span><span class="p">,</span> <span class="s1">&#39;p3&#39;</span><span class="p">,</span> <span class="s1">&#39;p3&#39;</span><span class="p">,</span> <span class="s1">&#39;p3&#39;</span><span class="p">)</span>
 <span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

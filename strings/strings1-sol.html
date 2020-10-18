@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2500,8 +2501,12 @@ ciao Python 3
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;len&quot;</span><span class="p">(</span><span class="s2">&quot;ciao&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: no, <code class="docutils literal notranslate"><span class="pre">&quot;len&quot;</span></code> tra virgolette verrà interpretato come una stringa, non come una funzione, e quindi Python si lamenterà dicendoci che non possiamo applicare una stringa ad un’altra stringa. Prova a vedere che errore viene fuori qua riscrivendo l’espressione qua sotto.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: no, <code class="docutils literal notranslate"><span class="pre">&quot;len&quot;</span></code> tra virgolette verrà interpretato come una stringa, non come una funzione, e quindi Python si lamenterà dicendoci che non possiamo applicare una stringa ad un’altra stringa. Prova a vedere che errore viene fuori qua riscrivendo l’espressione qua sotto.</p>
+</div><a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
@@ -2512,12 +2517,25 @@ ciao Python 3
 </pre></div>
 </div>
 </div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
 <p><strong>DOMANDA</strong>: possiamo scrivere una cosa del genere? Cosa produce? un errore? un numero ? Quale?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;len(&#39;ciao&#39;)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: restituisce il numero <code class="docutils literal notranslate"><span class="pre">11</span></code>: mettendo il codice Python <code class="docutils literal notranslate"><span class="pre">len('ciao')</span></code> tra doppie virgolette, è diventato una stringa come tutte le altre. Quindi scrivendo <code class="docutils literal notranslate"><span class="pre">len(&quot;len('ciao')&quot;)</span></code> andiamo a contare quanto è lunga la stringa <code class="docutils literal notranslate"><span class="pre">&quot;len('ciao')&quot;</span></code>, cioè 11.</p>
-<p><strong>DOMANDA</strong>: Cosa otteniamo se scriviamo così:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: restituisce il numero <code class="docutils literal notranslate"><span class="pre">11</span></code>: mettendo il codice Python <code class="docutils literal notranslate"><span class="pre">len('ciao')</span></code> tra doppie virgolette, è diventato una stringa come tutte le altre. Quindi scrivendo <code class="docutils literal notranslate"><span class="pre">len(&quot;len('ciao')&quot;)</span></code> andiamo a contare quanto è lunga la stringa <code class="docutils literal notranslate"><span class="pre">&quot;len('ciao')&quot;</span></code>, cioè 11.</p>
+</div><p><strong>DOMANDA</strong>: Cosa otteniamo se scriviamo così:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">((((((</span><span class="s2">&quot;ciao&quot;</span><span class="p">))))))</span>
 </pre></div>
 </div>
@@ -2526,8 +2544,10 @@ ciao Python 3
 <li><p>la lunghezza della stringa</p></li>
 <li><p>qualcos’altro</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 2: <code class="docutils literal notranslate"><span class="pre">&quot;ciao&quot;</span></code> è una espressione, come tale possiamo racchiuderla in quante parentesi tonde vogliamo.</p>
-<p><strong>Contare sequenze di escape</strong>: Nota che alcune sequenze particolari dette di <em>escape</em> come per esempio <code class="docutils literal notranslate"><span class="pre">\t</span></code> occupano meno spazi di quello che sembra (con <code class="docutils literal notranslate"><span class="pre">len</span></code> contano come 1), ma stampate ne occupano addirittura di più di 2 !!</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 2: <code class="docutils literal notranslate"><span class="pre">&quot;ciao&quot;</span></code> è una espressione, come tale possiamo racchiuderla in quante parentesi tonde vogliamo.</p>
+</div><p><strong>Contare sequenze di escape</strong>: Nota che alcune sequenze particolari dette di <em>escape</em> come per esempio <code class="docutils literal notranslate"><span class="pre">\t</span></code> occupano meno spazi di quello che sembra (con <code class="docutils literal notranslate"><span class="pre">len</span></code> contano come 1), ma stampate ne occupano addirittura di più di 2 !!</p>
 <p>Vediamo un esempio, nel prossimo paragrafo scenderemo nei dettagli:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
@@ -2713,7 +2733,9 @@ una
 sfida   apparentemente      semplice
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
@@ -2721,6 +2743,28 @@ sfida   apparentemente      semplice
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Questa</span><span class="se">\t</span><span class="s1">è</span><span class="se">\n</span><span class="s1">una</span><span class="se">\n\n</span><span class="s1">sfida</span><span class="se">\t</span><span class="s1">apparentemente</span><span class="se">\t\t</span><span class="s1">semplice&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Questa  è
+una
+
+sfida   apparentemente          semplice
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2744,13 +2788,39 @@ n
 te
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># scrivi qui</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;At</span><span class="se">\t</span><span class="s2">te</span><span class="se">\n</span><span class="s2">n</span><span class="se">\t</span><span class="s2">tis</span><span class="se">\n</span><span class="s2">simame</span><span class="se">\n\n</span><span class="s2">n</span><span class="se">\n</span><span class="s2">te&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+At      te
+n       tis
+simame
+
+n
+te
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2866,7 +2936,9 @@ Così è &#34;se vi pare&#34;
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Questo &quot;genio&quot; delle stringhe vuole  /\\/ fregarmi \//\ con esercizi atroci O_o&#39;
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
@@ -2874,6 +2946,25 @@ Così è &#34;se vi pare&#34;
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Questo &quot;genio&quot; delle stringhe vuole  /</span><span class="se">\\\\</span><span class="s1">/ fregarmi </span><span class="se">\\</span><span class="s1">//</span><span class="se">\\</span><span class="s1"> con esercizi atroci O_o</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Questo &#34;genio&#34; delle stringhe vuole  /\\/ fregarmi \//\ con esercizi atroci O_o&#39;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2907,7 +2998,9 @@ speciale da non essere nemmeno correttamente visualizzato, in tali situazioni si
 </tbody>
 </table>
 <p><strong>ESERCIZIO</strong>: Prova a cercare in google <em>Unicode heart</em> e prova a far stampare a Python un cuoricino , sia copia-incollando direttamente il carattere che usando la notazione <code class="docutils literal notranslate"><span class="pre">\uxxxx</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -2916,6 +3009,26 @@ speciale da non essere nemmeno correttamente visualizzato, in tali situazioni si
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I ♥ Python, con copia-e-incolla&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I </span><span class="se">\u2665</span><span class="s2"> Python, anche nel formato </span><span class="se">\\</span><span class="s2">uxxxx&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+I ♥ Python, con copia-e-incolla
+I ♥ Python, anche nel formato \uxxxx
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>
@@ -3004,8 +3117,6 @@ I ♥ Python, anche nel formato \uxxxx
 
 <span class="c1"># basta eseguirla una volta sola, la trovi presente anche in tutti i fogli nella prima cella</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -3351,7 +3462,9 @@ s =  Questo era un problema
 <li><p>puoi usare quante linee di codice ritieni opportune</p></li>
 <li><p>puoi usare ogni simbolo quante volte vuoi</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
@@ -3369,6 +3482,25 @@ s =  Questo era un problema
 <span class="n">w</span> <span class="o">=</span> <span class="n">y</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># queste variabili ti sono date</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;Questo&quot;</span>
+<span class="n">w</span> <span class="o">=</span> <span class="s1">&#39;è&#39;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;un problema&#39;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;era&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+
+<span class="c1"># scrivi qui il codice</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3886,8 +4018,10 @@ questa settimana ho fatto jogging 3 volte correndo a una media di 1.6km/h
 </div>
 <p><strong>DOMANDA</strong>: Visto quanto detto in precedenza, dopo l’esecuzione del codice nella cella precedente, alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code> risulterà associato un <em>numero</em> oppure una <em>stringa</em> ?</p>
 <p>Se hai dubbi, usa Python Tutor.</p>
-<p><strong>RISPOSTA</strong>: i numeri, come le stringhe, sono immutabili. Quindi chiamando la funzione <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> è impossibile che il numero <code class="docutils literal notranslate"><span class="pre">5</span></code> associato a <code class="docutils literal notranslate"><span class="pre">x</span></code> venga in alcun modo modificato. <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> semplicemente <em>genererà</em> una NUOVA stringa <code class="docutils literal notranslate"><span class="pre">'5'</span></code> che verrà usata poi nella concatenazione.</p>
-<div class="section" id="Esercizio---stampa-lunghezza">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: i numeri, come le stringhe, sono immutabili. Quindi chiamando la funzione <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> è impossibile che il numero <code class="docutils literal notranslate"><span class="pre">5</span></code> associato a <code class="docutils literal notranslate"><span class="pre">x</span></code> venga in alcun modo modificato. <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> semplicemente <em>genererà</em> una NUOVA stringa <code class="docutils literal notranslate"><span class="pre">'5'</span></code> che verrà usata poi nella concatenazione.</p>
+</div><div class="section" id="Esercizio---stampa-lunghezza">
 <h3>Esercizio - stampa lunghezza<a class="headerlink" href="#Esercizio---stampa-lunghezza" title="Permalink to this headline">¶</a></h3>
 <p>Scrivi del codice che data una stringa <code class="docutils literal notranslate"><span class="pre">x</span></code>, stampa il contenuto della stringa seguito dalla sua lunghezza. Il tuo codice dovrebbe funzionare con qualunque contenuto della variabile <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 <p>Esempio - dati:</p>
@@ -3898,7 +4032,9 @@ questa settimana ho fatto jogging 3 volte correndo a una media di 1.6km/h
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jaguar6
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -3907,6 +4043,25 @@ questa settimana ho fatto jogging 3 volte correndo a una media di 1.6km/h
 
 <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;jaguar&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+jaguar6
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

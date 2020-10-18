@@ -1,4 +1,6 @@
 
+/** ONLY AVAILABLE IN THE WEBSITE */
+
 
 /* Makes visible the '+' boxes in menu
   https://github.com/DavidLeoni/jupman/issues/38    
@@ -22,9 +24,10 @@ div.output_area.docutils.container:not(.rendered_html){
     max-height:600px !important;
 }
 
-#jupman-langs {
-    float : right;
-    padding-right : 8px;
+#jupman-langs {    
+    float: right;
+    margin-right: -28px;
+    margin-top: -28px;
 }
 
 /* Fix for centered images
@@ -41,4 +44,44 @@ img {
 */
 .jupman-inline-img {
     display: inline;
+}
+
+
+.jupman-sol {    
+    background-color:#f3faff !important;  /* lighter than admonition */;
+    border-color: #ede4f4 !important;
+    border-style: solid !important;
+    
+}
+
+.jupman-sol-question {
+    margin-bottom: 20px;
+}
+
+.jupman-sol-toggler {
+    margin-bottom: 20px !important;
+    text-decoration: none; 
+    display:table;
+    padding:5px !important; 
+    color: inherit;
+}
+
+.jupman-sol-content {
+    margin-bottom: 30px !important;
+    margin-top: -22px !important;
+    padding:7px !important; 
+    box-sizing:content-box;  /*prevents jupmping (to some degree)  https://stackoverflow.com/a/32769057 */
+}
+
+.jupman-sol-hidden {
+    display: 'none';
+}
+
+.jupman-sol-visible {
+    display: block;
+}
+
+.jupman-toggler {
+    text-decoration: none; 
+    display:block;
 }

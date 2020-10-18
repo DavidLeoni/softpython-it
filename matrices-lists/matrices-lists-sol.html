@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2159,12 +2160,25 @@ div.rendered_html tbody tr:hover {
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: Quando una matrice è una lista di liste, puoi solo accedere valori con notazione <code class="docutils literal notranslate"><span class="pre">m[i][j]</span></code>, <strong>NON</strong> con <code class="docutils literal notranslate"><span class="pre">m[i,j]</span></code> !!</p>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># scrivi qui la notazione sbagliata m[0,0] e guarda che errore ottieni:</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui la notazione sbagliata m[0,0] e guarda che errore ottieni:</span>
+
 
 </pre></div>
 </div>
@@ -2197,7 +2211,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -2215,6 +2231,28 @@ div.rendered_html tbody tr:hover {
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;colonne&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+righe
+3
+colonne
+2
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice per stampare righe e colonne</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2398,25 +2436,55 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 })()
 </script></div>
 </div>
-<p><strong>RISPOSTA</strong>: Il codice sopre aggiunge una LISTA come elemento ad un’altra lista vuota. In altre parole, sta includendo la riga (che è già una lista) in un’altra lista. Se verifichi il problema in Python Tutor, vedrai una freccia che va dalla riga fino alla lista di un elemento che conterrà esattamente una freccia alla riga originale.</p>
-<p>Puoi costruire una copia in diversi modi, con un <code class="docutils literal notranslate"><span class="pre">for</span></code>, una slice o una list comprehension. Prova ad implementare tutte le versioni, cominciando con il <code class="docutils literal notranslate"><span class="pre">for</span></code> qui. Assicurati di controllare il risultato con Python tutor - per visualizzare Python tutor nell’output di una cella puoi usare il comando speciale <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code> alla fine della cella come abbiamo fatto prima. In Python tutor, dovresti vedere solo <em>una</em> freccia che va dalla riga originale <code class="docutils literal notranslate"><span class="pre">['a','b']</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code>, e ci dovrebbe
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Il codice sopre aggiunge una LISTA come elemento ad un’altra lista vuota. In altre parole, sta includendo la riga (che è già una lista) in un’altra lista. Se verifichi il problema in Python Tutor, vedrai una freccia che va dalla riga fino alla lista di un elemento che conterrà esattamente una freccia alla riga originale.</p>
+</div><p>Puoi costruire una copia in diversi modi, con un <code class="docutils literal notranslate"><span class="pre">for</span></code>, una slice o una list comprehension. Prova ad implementare tutte le versioni, cominciando con il <code class="docutils literal notranslate"><span class="pre">for</span></code> qui. Assicurati di controllare il risultato con Python tutor - per visualizzare Python tutor nell’output di una cella puoi usare il comando speciale <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code> alla fine della cella come abbiamo fatto prima. In Python tutor, dovresti vedere solo <em>una</em> freccia che va dalla riga originale <code class="docutils literal notranslate"><span class="pre">['a','b']</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code>, e ci dovrebbe
 essere <em>un’altra</em> copia <code class="docutils literal notranslate"><span class="pre">['a','b']</span></code> da qualche parte, con la variabile with <code class="docutils literal notranslate"><span class="pre">riga</span></code> che ci punta.</p>
 <p>✪ <strong>ESERCIZIO</strong>: Implementa la funzione <code class="docutils literal notranslate"><span class="pre">esrigaf</span></code>, che RITORNA la <code class="docutils literal notranslate"><span class="pre">i</span></code>-esima riga da <code class="docutils literal notranslate"><span class="pre">mat</span></code></p>
 <ul class="simple">
 <li><p><strong>NOTA</strong>: la riga DEVE essere una nuova lista! Per creare una nuova lista usa un ciclo for che reitera sugli elementi, <em>non</em> gli indici (quindi non usare range) !</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">esrigaf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">riga</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
         <span class="n">riga</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">riga</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">esrigaf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigaf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigaf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># controlla che non abbia cambiato la matrice originale!</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">esrigaf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">esrigaf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
@@ -2485,18 +2553,48 @@ range(0, 5)
 <li><p><strong>NOTA 1</strong>: la riga DEVE essere una nuova lista! Per creare una nuova lista usa un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
 <li><p><strong>NOTA 2</strong>: ricordati di usare un nuovo nome per l’indice di colonna!</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">esrigar</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">riga</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
         <span class="n">riga</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">riga</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">esrigar</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigar</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigar</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># controlla che non abbia cambiato la matrice originale!</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">esrigar</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">esrigar</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
       <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
@@ -2526,15 +2624,46 @@ range(0, 5)
 <ul class="simple">
 <li><p><strong>NOTA</strong>: la riga DEVE essere una nuova lista! Per crearla, usa le slice.</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">esrigas</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">return</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][:]</span>  <span class="c1"># se ometti gli indici di inizio e fine, hai una copia di tutta la lista</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+
+
+<span class="k">assert</span> <span class="n">esrigas</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigas</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigas</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># Controlla che non abbia cambiato la matrice originale !</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">esrigas</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">esrigas</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
       <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
@@ -2564,15 +2693,45 @@ range(0, 5)
 <ul class="simple">
 <li><p><strong>NOTA</strong>: la riga DEVE essere in una nuova lista!</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">esrigac</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">esrigac</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigac</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">esrigac</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># Controlla che non abbia cambiato la matrice originale !</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">esrigac</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">esrigac</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
       <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
@@ -2599,18 +2758,47 @@ range(0, 5)
 <h3>Estrai colonna con for<a class="headerlink" href="#Estrai-colonna-con-for" title="Permalink to this headline">¶</a></h3>
 <p>✪ Prova ad estrarre una colonna alla posizione <code class="docutils literal notranslate"><span class="pre">j</span></code>-esima, in questo caso non abbiamo bisogno di pensare se ritornare un puntatore o una copia.</p>
 <p>Implementa <code class="docutils literal notranslate"><span class="pre">escolf</span></code>, che RITORNA la <code class="docutils literal notranslate"><span class="pre">j</span></code>-esima colonna da <code class="docutils literal notranslate"><span class="pre">mat</span></code>: per crearla, usa un ciclo for</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">escolf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">escolf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">escolf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># Controlla che la colonna ritornata non modifichi m</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">escolf</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">escolf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
       <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
@@ -2635,15 +2823,44 @@ range(0, 5)
 <div class="section" id="Estrai-colonna-con-list-comprehension">
 <h3>Estrai colonna con list comprehension<a class="headerlink" href="#Estrai-colonna-con-list-comprehension" title="Permalink to this headline">¶</a></h3>
 <p>✪ Implementa <code class="docutils literal notranslate"><span class="pre">escolc</span></code>, che RITORNA la <code class="docutils literal notranslate"><span class="pre">j</span></code>-esima colonna da <code class="docutils literal notranslate"><span class="pre">mat</span></code>: per crearla, usa una list comprehension.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">escolc</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">return</span> <span class="p">[</span><span class="n">riga</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">]</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">escolc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">escolc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># Controlla che la colonna ritornata non modifichi m</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">escolc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="c1"># togli il commento se vuoi visualizzare l&#39;esecuzione qui</span>
+<span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">escolc</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
       <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
@@ -2675,13 +2892,15 @@ range(0, 5)
 <ul class="simple">
 <li><p>usa due cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> annidati</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">matrice_vuota</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">riga</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2689,7 +2908,31 @@ range(0, 5)
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
             <span class="n">riga</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">matrice_vuota</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">matrice_vuota</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
 
@@ -2834,7 +3077,9 @@ range(0, 5)
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: Prova a creare una matrice con 7 righe e 4 colonne e riempila di 5.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
@@ -2842,6 +3087,32 @@ range(0, 5)
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="p">[[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[5, 5, 5, 5],
+ [5, 5, 5, 5],
+ [5, 5, 5, 5],
+ [5, 5, 5, 5],
+ [5, 5, 5, 5],
+ [5, 5, 5, 5],
+ [5, 5, 5, 5]]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2936,22 +3207,50 @@ range(0, 5)
 })()
 </script></div>
 </div>
-<p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">mat[:]</span></code> Non è sufficiente - perchè è un clone SUPERFICIALE (SHALLOW), che copia solo la lista <em>esterna</em> ma non quelle interne! Nota che avrai righe nella lista <code class="docutils literal notranslate"><span class="pre">res</span></code> che vanno alla matrice <em>originale</em>. Non vogliamo questo !</p>
-<p>Nel codice sopra, avrai bisogno di iterare attraverso le righe e <em>per ciascuna</em> riga creare una copia di quella riga.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">mat[:]</span></code> Non è sufficiente - perchè è un clone SUPERFICIALE (SHALLOW), che copia solo la lista <em>esterna</em> ma non quelle interne! Nota che avrai righe nella lista <code class="docutils literal notranslate"><span class="pre">res</span></code> che vanno alla matrice <em>originale</em>. Non vogliamo questo !</p>
+</div><p>Nel codice sopra, avrai bisogno di iterare attraverso le righe e <em>per ciascuna</em> riga creare una copia di quella riga.</p>
 <p>✪✪ <strong>ESERCIZIO</strong>: Implementa <code class="docutils literal notranslate"><span class="pre">deep_clone</span></code>, che RITORNA una NUOVA lista come un DEEP CLONE completo di <code class="docutils literal notranslate"><span class="pre">mat</span></code> (che è una lista di liste)</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">deep_clone</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
 
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[:])</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="c1"># verifica la copia</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">deep_clone</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">c</span> <span class="o">==</span> <span class="n">res</span>
+
+<span class="c1"># verifica che una copia in profondità (cioè, ha anche creato cloni delle righe !)</span>
+<span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">deep_clone</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -2989,20 +3288,68 @@ range(0, 5)
 <p class="admonition-title fa fa-exclamation-circle"><strong>NOTA</strong> : Questa funzione non ritorna nulla!</p>
 <p>Se nel testo della funzione non viene menzionato di tornare dei valori, NON bisogna mettere il <code class="docutils literal notranslate"><span class="pre">return</span></code>. Se per caso lo si mette lo stesso non casca il mondo, ma per evitare confusione è molto meglio avere un comportamento consistente col testo.</p>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">riempic</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">nrighe</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
     <span class="n">ncol</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrighe</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncol</span><span class="p">):</span>
             <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempic</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="n">m2</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m4</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempic</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m3</span> <span class="o">==</span> <span class="n">m4</span>
+
+<span class="n">m5</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m6</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempic</span><span class="p">(</span><span class="n">m5</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m5</span> <span class="o">==</span> <span class="n">m6</span>
+
+<span class="n">m7</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m8</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempic</span><span class="p">(</span><span class="n">m7</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m7</span> <span class="o">==</span> <span class="n">m8</span>
+
+<span class="c1">#     j  0   1</span>
+<span class="n">m9</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>    <span class="c1"># 0</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>    <span class="c1"># 1</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>   <span class="c1"># 2</span>
+
+<span class="n">m10</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>    <span class="c1"># 0</span>
+        <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>    <span class="c1"># 1</span>
+        <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="p">]</span>   <span class="c1"># 2</span>
+<span class="n">riempic</span><span class="p">(</span><span class="n">m9</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m9</span> <span class="o">==</span> <span class="n">m10</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">riempic</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -3069,16 +3416,59 @@ range(0, 5)
 <span class="p">]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">riempix</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># INIZIO TEST: NON TOCCARE !</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempix</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempix</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m2</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempix</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m3</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m4</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempix</span><span class="p">(</span><span class="n">m4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m4</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="c1"># FINE TEST</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">riempix</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># INIZIO TEST: NON TOCCARE !</span>
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -3142,17 +3532,59 @@ range(0, 5)
 <span class="p">]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">riempiz</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ncol</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncol</span><span class="p">):</span>
         <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># INIZIO TEST: NON TOCCARE !</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempiz</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempiz</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m2</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempiz</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m3</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m4</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">riempiz</span><span class="p">(</span><span class="n">m4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m4</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+               <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">riempiz</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># INIZIO TEST: NON TOCCARE !</span>
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -3194,20 +3626,51 @@ range(0, 5)
 <li><p><strong>NOT</strong>A: per NUOVA matrice intendiamo una matrice con nessun puntatore alle righe originali (vedi il precedente esercizio deep_clone)</p></li>
 <li><p>Per esempi, vedere gli assert</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">attacca_sotto</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat1</span><span class="p">:</span>
         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[:])</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat2</span><span class="p">:</span>
         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">[:])</span>
     <span class="k">return</span> <span class="n">res</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m11</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m12</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">attacca_sotto</span><span class="p">(</span><span class="n">m11</span><span class="p">,</span> <span class="n">m12</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="c1"># controlla che non stiamo dando indietro un deep clone</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">attacca_sotto</span><span class="p">(</span><span class="n">m11</span><span class="p">,</span> <span class="n">m12</span><span class="p">)</span>
+<span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m11</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="n">m21</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m22</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">attacca_sotto</span><span class="p">(</span><span class="n">m21</span><span class="p">,</span> <span class="n">m22</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">attacca_sotto</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m11</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">m12</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -3239,15 +3702,61 @@ range(0, 5)
 <li><p>Per implementare questa funzione, usa una chiamata al metodo attacca_sotto che hai implementato prima</p></li>
 <li><p>Per esempi, vedere gli assert</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">attacca_sopra</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">return</span> <span class="n">attacca_sotto</span><span class="p">(</span><span class="n">mat2</span><span class="p">,</span> <span class="n">mat1</span><span class="p">)</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+<span class="k">assert</span> <span class="n">attacca_sopra</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span>
+                                <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+                                <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+                              <span class="p">]</span>
+
+<span class="c1"># controlla che stiamo ritornando un deep clone</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">attacca_sopra</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m1</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">attacca_sopra</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span> <span class="o">==</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">attacca_sopra</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
@@ -3289,20 +3798,49 @@ range(0, 5)
 <div class="section" id="attacca_dx">
 <h3>attacca_dx<a class="headerlink" href="#attacca_dx" title="Permalink to this headline">¶</a></h3>
 <p>✪✪✪ Date le matrici <code class="docutils literal notranslate"><span class="pre">mat1</span></code> e <code class="docutils literal notranslate"><span class="pre">mat2</span></code> come lista di liste, con <code class="docutils literal notranslate"><span class="pre">mat1</span></code> di dimensione <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">l</span></code> e <code class="docutils literal notranslate"><span class="pre">mat2</span></code> di dimensione <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">r</span></code>, RITORNA una NUOVA matrice di dimensione <code class="docutils literal notranslate"><span class="pre">n</span></code> x (<code class="docutils literal notranslate"><span class="pre">l</span></code> + <code class="docutils literal notranslate"><span class="pre">r</span></code>) come lista di liste, attaccando <code class="docutils literal notranslate"><span class="pre">mat2</span></code> alla destra di <code class="docutils literal notranslate"><span class="pre">mat1</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">attacca_dx</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">)):</span>
         <span class="n">riga_da_aggiungere</span> <span class="o">=</span>  <span class="n">mat1</span><span class="p">[</span><span class="n">i</span><span class="p">][:]</span>
         <span class="n">riga_da_aggiungere</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">mat2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga_da_aggiungere</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">]</span>
+     <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">]</span>
+      <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">attacca_dx</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span> <span class="o">==</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">attacca_dx</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
@@ -3332,13 +3870,15 @@ range(0, 5)
 <li><p>una variabile per la matrice da ritornare</p></li>
 <li><p>per ogni riga originale, dobbiamo creare una nuova lista</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">soglia</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="n">nuova_riga</span> <span class="o">=</span> <span class="p">[]</span>
@@ -3347,7 +3887,39 @@ range(0, 5)
             <span class="n">nuova_riga</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span> <span class="o">&gt;</span> <span class="n">t</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">morig</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span>
+      <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">soglia</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">s</span>
+<span class="k">assert</span> <span class="n">m</span> <span class="o">==</span> <span class="n">morig</span>   <span class="c1"># verifica che original non sia cambiata</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">],</span>
+    <span class="p">[</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="k">assert</span> <span class="n">soglia</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">soglia</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">morig</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
           <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
@@ -3378,7 +3950,9 @@ range(0, 5)
 <h3>scambia_righe<a class="headerlink" href="#scambia_righe" title="Permalink to this headline">¶</a></h3>
 <p>Proveremo a scambiare due righe di una matrice</p>
 <p>Ci sono diversi modi di procedere. Prima di continuare, assicurati di sapere come scambiare solo due valori risolvendo questo semplice esercizio - controlla inoltre il risultato in Python Tutor.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
@@ -3396,19 +3970,35 @@ range(0, 5)
 </pre></div>
 </div>
 </div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="c1"># scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)</span>
+
+
+</pre></div>
+</div>
+</div>
 <p>✪✪ Prende una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste, e RITORNA una NUOVA matrice dove le righe agli indici <code class="docutils literal notranslate"><span class="pre">i1</span></code> e <code class="docutils literal notranslate"><span class="pre">i2</span></code> sono scambiate</p>
 <p>Ingredienti:</p>
 <ul class="simple">
 <li><p>prima clona in profondità</p></li>
 <li><p>poi scambia le righe</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">scambia_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="c1"># prima clona in profondita</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
@@ -3418,7 +4008,47 @@ range(0, 5)
     <span class="n">ret</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ret</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
     <span class="n">ret</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">scambia_righe</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+
+<span class="c1"># scambia con se stesso dovrebbe nei fatti generare un deep clone</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">scambia_righe</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">scambia_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
@@ -3456,13 +4086,15 @@ range(0, 5)
 <div class="section" id="scambia_colonne">
 <h3>scambia_colonne<a class="headerlink" href="#scambia_colonne" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ Prende una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> e due indici di colonna <code class="docutils literal notranslate"><span class="pre">j1</span></code> e <code class="docutils literal notranslate"><span class="pre">j2</span></code> e RITORNA una NUOVA matrice dove le colonne <code class="docutils literal notranslate"><span class="pre">j1</span></code> e <code class="docutils literal notranslate"><span class="pre">j2</span></code> sono scambiate</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">scambia_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="n">nuova_riga</span> <span class="o">=</span> <span class="n">riga</span><span class="p">[:]</span>
@@ -3470,7 +4102,29 @@ range(0, 5)
         <span class="n">nuova_riga</span><span class="p">[</span><span class="n">j2</span><span class="p">]</span> <span class="o">=</span> <span class="n">riga</span><span class="p">[</span><span class="n">j1</span><span class="p">]</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_riga</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">scambia_colonne</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">scambia_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
@@ -3558,20 +4212,48 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 <ul class="simple">
 <li><p>se <code class="docutils literal notranslate"><span class="pre">mat</span></code> non è <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> solleva l’eccezione <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">diag</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;mat dovrebbe essere nxn, trovato invece </span><span class="si">%s</span><span class="s2"> x </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)):</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">diag</span><span class="p">([</span>              <span class="c1"># 1x2 dimension, non quadrata</span>
+           <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+         <span class="p">])</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Dovrei aver fallito !&quot;</span><span class="p">)</span> <span class="c1"># se diag solleva un&#39;eccezione che è ValueError come ci</span>
+                                             <span class="c1"># aspettiamo che faccia, il codice non dovrebbe mai arrivare qui</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># questo cattura solo ValueError. Altri tipi di errori non sono catturati</span>
+    <span class="k">pass</span>  <span class="c1"># In una calusola except devi sempre mettere del codice</span>
+                   <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">diag</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
@@ -3599,19 +4281,40 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 <li><p>Se <code class="docutils literal notranslate"><span class="pre">mat</span></code> non è <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p></li>
 </ul>
 <p>Prima di implementarla, ricordati di scrivere gli indici richiesti come abbiamo fatto per l’esempio della funzione <a class="reference external" href="#diag">diag</a></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">anti_diag</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">anti_diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+
+<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor !</span>
+<span class="c1"># jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">anti_diag</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
       <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
@@ -3714,13 +4417,15 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo for, questa variabile deve essere nuova</strong></p>
 </div>
 <p>✪✪✪ <strong>ESERCIZIO</strong>: Se hai letto <em>tutto</em> quanto sopra, comincia ad implementare la funzione <code class="docutils literal notranslate"><span class="pre">is_utriang</span></code>, che RITORNA <code class="docutils literal notranslate"><span class="pre">True</span></code> se la matrice <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> fornita è triangolare superiore, cioè, ha tutte le celle sotto la diagonale a zero. Altrimenti, ritorna <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">is_utriang</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
     <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -3729,7 +4434,40 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
             <span class="k">if</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="kc">True</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+
+<span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">is_utriang</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
 <span class="k">assert</span> <span class="n">is_utriang</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
@@ -3767,16 +4505,41 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </div>
 <p>Guarda qui per altre info (in inglese): <a class="reference external" href="https://stackoverflow.com/a/10623383">https://stackoverflow.com/a/10623383</a></p>
 <p>✪✪✪ <strong>ESERCIZIO</strong>: implementa <code class="docutils literal notranslate"><span class="pre">attacca_sx_mod</span></code>, che date le matrici <code class="docutils literal notranslate"><span class="pre">mat1</span></code> e <code class="docutils literal notranslate"><span class="pre">mat2</span></code> come lista di liste, con <code class="docutils literal notranslate"><span class="pre">mat1</span></code> di dimensioni <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">l</span></code> e <code class="docutils literal notranslate"><span class="pre">mat2</span></code> di dimensioni <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">r</span></code>, MODIFICA <code class="docutils literal notranslate"><span class="pre">mat1</span></code> così che diventi di dimensioni <code class="docutils literal notranslate"><span class="pre">n</span></code> x (<code class="docutils literal notranslate"><span class="pre">l</span></code> + <code class="docutils literal notranslate"><span class="pre">r</span></code>), attaccando la <code class="docutils literal notranslate"><span class="pre">mat2</span></code> alla sinistra di <code class="docutils literal notranslate"><span class="pre">mat1</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">attacca_sx_mod</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">)):</span>
         <span class="n">mat1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+       <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">attacca_sx_mod</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="n">res</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">attacca_sx_mod</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
@@ -3818,7 +4581,9 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </pre></div></div>
 </div>
 <p>Inoltre, assicurati di sapere come scambiare solo due valori risolvendo questo semplice esercizio - controlla inoltre il risultato in Python Tutor.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
@@ -3833,6 +4598,71 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <span class="n">y</span> <span class="o">=</span> <span class="n">k</span>
 
 <span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+
+<script id="json-jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e" type="application/json" >
+    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"globals": {}, "event": "step_line", "ordered_globals": [], "stack_to_render": [], "stdout": "", "line": 2, "func_name": "<module>", "heap": {}}, {"globals": {"x": 3}, "event": "step_line", "ordered_globals": ["x"], "stack_to_render": [], "stdout": "", "line": 3, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 3}, "event": "step_line", "ordered_globals": ["x", "y"], "stack_to_render": [], "stdout": "", "line": 7, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 3, "k": 3}, "event": "step_line", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 8, "func_name": "<module>", "heap": {}}, {"globals": {"y": 7, "x": 7, "k": 3}, "event": "step_line", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {}}, {"globals": {"y": 3, "x": 7, "k": 3}, "event": "return", "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "stdout": "", "line": 9, "func_name": "<module>", "heap": {}}]}
+</script>
+<div id="jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e" class="pytutorVisualizer"> </div>
+
+<style>
+.vizLayoutTd {
+    background-color: #fff !important;
+}
+
+#pyStdout {
+    min-height:25px;
+}
+
+/* 'Edit this code' link, hiding because replaces browser tab !!!*/
+#editCodeLinkDiv {
+    display:none;
+}
+</style>
+
+<script>
+(function(){
+
+    var trace = JSON.parse(document.getElementById('json-jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e').innerHTML);
+    // NOTE 1: id without #
+    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
+    //        - id should be number
+    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
+    addVisualizerToPage(trace, 'jm24ab7184-4f7c-4c6f-a0fc-dcb050d5a84e',{'embeddedMode' : false,
+                                     'visualizerIdOverride':visualizerIdOverride})
+
+
+    // set overflow for pytuts - need to do in python as css
+    // does not allow parent selection
+    var pytuts = $('.pytutorVisualizer')
+    pytuts.closest('div.output_html.rendered_html.output_result')
+            .css('overflow-x', 'visible')
+
+    //pytuts.closest('div.output_html.rendered_html.output_result')
+    //      .css('background-color','red')
+
+})()
+</script></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="c1"># scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3912,13 +4742,15 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <ul class="simple">
 <li><p>Se la matrice non è <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code>, lancia l’eccezione <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">trasposta_1</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;La matrice dovrebbe essere nxn, trovato invece </span><span class="si">%s</span><span class="s2"> x </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)):</span>
@@ -3926,7 +4758,37 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
             <span class="n">el</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
             <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
             <span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">el</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># Controlliamo le dimensioni sbagliate della matrice:</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">trasposta_1</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">])</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;AVREI DOVUTO FALLIRE !&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">trasposta_1</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">trasposta_1</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">m</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+              <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">trasposta_1</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># Controlliamo le dimensioni sbagliate della matrice:</span>
 
@@ -3955,13 +4817,15 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <h3>transpose_2<a class="headerlink" href="#transpose_2" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ Adesso proviamo a trasporre una matrice generica nxm. Questa volta per semplicità ritorneremo una intera nuova matrice.</p>
 <p>Prende una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">m</span></code> come lista di liste e RITORNA una NUOVA matrice <code class="docutils literal notranslate"><span class="pre">m</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> che è la trasposta della matrice di input:</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">trasposta_2</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
     <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
@@ -3969,7 +4833,32 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
             <span class="n">ret</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">r1</span> <span class="o">=</span> <span class="n">trasposta_2</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+
+<span class="k">assert</span>  <span class="n">r1</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">r1</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;z&#39;</span>
+<span class="k">assert</span> <span class="n">m1</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span>
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">trasposta_2</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">],</span>
+                            <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span>
+                            <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">trasposta_2</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
 
@@ -4030,13 +4919,15 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <li><p>per rovesciare una lista usare il metodo <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> come in <code class="docutils literal notranslate"><span class="pre">mia_lista.reverse()</span></code> NOTA: <code class="docutils literal notranslate"><span class="pre">mia_lista.reverse()</span></code> modifica <code class="docutils literal notranslate"><span class="pre">mia_lista</span></code>, <em>non</em> ritorna una nuova lista !!</p></li>
 <li><p>ricordarsi ll <code class="docutils literal notranslate"><span class="pre">return</span></code> !!</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">flip</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">matrice</span><span class="p">:</span>
         <span class="n">nuova_riga</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4046,7 +4937,47 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
         <span class="n">nuova_riga</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_riga</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="c1"># INIZIO TEST - NON TOCCARE !!!</span>
+
+<span class="k">assert</span> <span class="n">flip</span><span class="p">([[]])</span> <span class="o">==</span> <span class="p">[[]]</span>
+<span class="k">assert</span> <span class="n">flip</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span> <span class="o">==</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="k">assert</span> <span class="n">flip</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span> <span class="o">==</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">flip</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span> <span class="o">==</span> <span class="n">r1</span>
+
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">r2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">flip</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span> <span class="o">==</span> <span class="n">r2</span>
+
+<span class="c1"># verifica che l&#39;m originale non sia cambiato !</span>
+<span class="k">assert</span> <span class="n">m2</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+               <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+               <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">flip</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !!!</span>
@@ -4109,19 +5040,53 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </pre></div>
 </div>
 <p>Restituisce <code class="docutils literal notranslate"><span class="pre">False</span></code>. Ci sono due diagonali con numeri diversi: (5,3) e (2,4,2)</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">toepliz</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
             <span class="k">if</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
                 <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="kc">True</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># INIZIO TEST - NON TOCCARE !</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">toepliz</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !</span>
 <span class="k">assert</span> <span class="n">toepliz</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
@@ -4159,13 +5124,15 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <ul class="simple">
 <li><p>Se <code class="docutils literal notranslate"><span class="pre">mat1</span></code> ha il numero di colonna diverso dal numero di righe di <code class="docutils literal notranslate"><span class="pre">mat2</span></code>, lancia un <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">)</span>
     <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -4178,7 +5145,49 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
             <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
                 <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">mat1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">mat2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># let&#39;s try wrong matrix dimensions:</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">mul</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]])</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;AVREI DOVUTO FALLIRE !&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">m11</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m12</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="n">m11</span><span class="p">,</span><span class="n">m12</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m21</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m22</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="n">m21</span><span class="p">,</span><span class="n">m22</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="mi">6</span><span class="p">],</span>
+                         <span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m31</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m32</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="n">m31</span><span class="p">,</span><span class="n">m32</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">m41</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">m42</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="n">m41</span><span class="p">,</span><span class="n">m42</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">56</span><span class="p">],</span>
+                         <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">56</span><span class="p">],</span>
+                         <span class="p">[</span><span class="mi">68</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">91</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># let&#39;s try wrong matrix dimensions:</span>
 <span class="k">try</span><span class="p">:</span>
@@ -4308,14 +5317,16 @@ i
 </div>
 <p>Vediamo che la diagonale da sinistra in alto a in basso a destra interseca l’asse verticale a <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">5</span></code> e che la diagonale da in basso a sinistra a in alto a destra interseca l’asse a <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">-3</span></code>. Dovresti usare queste informazioni per calcolare le equazioni di linea.</p>
 <p><strong>ESERCIZIO</strong>: Adessi dovresti avere tutti i suggerimenti necessari per procedere con l’implementazione. Implementa la funzione <code class="docutils literal notranslate"><span class="pre">check_nqueen</span></code>, che prende una matrice <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> di booleani che rappresentano una scacchiera dove <code class="docutils literal notranslate"><span class="pre">True</span></code> sinifica che c’è una regina nella cella, e <code class="docutils literal notranslate"><span class="pre">False</span></code> che non c’è niente. La funzione RITORNA <code class="docutils literal notranslate"><span class="pre">True</span></code> se nessuna regina può attaccare le altre, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
 <span></span><span class="k">def</span> <span class="nf">check_nqueen</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
 
     <span class="c1"># equazione linea dal basso sinistra fino ad alto destra</span>
     <span class="c1"># y = x - 3</span>
@@ -4346,7 +5357,45 @@ i
                         <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">return</span> <span class="kc">True</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="p">])</span>
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span>  <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+                      <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> <span class="p">])</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">def</span> <span class="nf">check_nqueen</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="p">])</span>
 <span class="k">assert</span> <span class="n">check_nqueen</span><span class="p">([</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>

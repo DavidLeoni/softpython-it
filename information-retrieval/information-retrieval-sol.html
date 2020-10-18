@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2136,20 +2137,24 @@ fatto bene deve essere pronto alle sorprese.</p>
 </div>
 <p>Nulla ! Come mai?</p>
 <p><strong>DOMANDA</strong>: Prima di proseguire, osserva bene il testo semplificato della pagina Visualizzazione e prova a dare una risposta. Ci sono due problemi principali. Come li risolveresti ?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Se osserviamo bene il testo della pagina Visualizzazione, vediamo che riporta in fondo <code class="docutils literal notranslate"><span class="pre">&quot;come</span> <span class="pre">fare</span> <span class="pre">grafici</span> <span class="pre">in</span> <span class="pre">Matplotlib&quot;</span></code></p>
 <p>Saltano fuori diversi problemi:</p>
 <ol class="arabic simple">
 <li><p>il nostro utente sta cercando <code class="docutils literal notranslate"><span class="pre">&quot;grafici</span> <span class="pre">con</span> <span class="pre">matplotlib&quot;</span></code> usando <code class="docutils literal notranslate"><span class="pre">&quot;con&quot;</span></code> ma nel testo della pagina c’è scritto <code class="docutils literal notranslate"><span class="pre">&quot;grafici</span> <span class="pre">in</span> <span class="pre">Matplotlib&quot;</span></code> con <code class="docutils literal notranslate"><span class="pre">&quot;in&quot;</span></code></p></li>
 <li><p>l’utente cerca <code class="docutils literal notranslate"><span class="pre">&quot;matplotlib&quot;</span></code> in minuscolo, ma nella pagina è riportato <code class="docutils literal notranslate"><span class="pre">&quot;Matplotlib&quot;</span></code> in maiuscolo.</p></li>
 </ol>
-<p><strong>DOMANDA</strong>: Come risolveresti i problemi qua sopra?</p>
-<p><strong>RISPOSTA</strong>:</p>
+</div><p><strong>DOMANDA</strong>: Come risolveresti i problemi qua sopra?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <ol class="arabic simple">
 <li><p>Preposizioni come <code class="docutils literal notranslate"><span class="pre">&quot;con&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;in&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;di&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;fra&quot;</span></code> etc. molto spesso non sono rilevanti ai fini di una ricerca. Nel gergo dell’Information retrieval, vengono chiamate <a class="reference external" href="http://comunicaresulweb.com/seo/stop-words-italiane/">stopwords</a>. Per garantire una ricerca più efficace, potresti eliminarle dalla stringa di ricerca dell’utente. Ai fini della ricerca, forse avrebbe senso eliminarle anche dal testo delle pagine ?</p></li>
 <li><p>Per risolvere problemi di maiuscole/minuscole, spesso conviene convertire la stringa di ricerca tutta in minuscolo, e fare lo stesso con il testo della pagina. Per farlo, puoi usare il metodo <code class="docutils literal notranslate"><span class="pre">lower()</span></code> delle stringhe. <strong>NOTA</strong>: <code class="docutils literal notranslate"><span class="pre">lower()</span></code>, come <em>tutti</em> i metodi delle stringhe, ritorna una <strong>nuova</strong> stringa e non modifica l’originale !!</p></li>
 </ol>
-</div>
+</div></div>
 </div>
 <div class="section" id="Una-ricerca-più-efficace">
 <h3>Una ricerca più efficace<a class="headerlink" href="#Una-ricerca-più-efficace" title="Permalink to this headline">¶</a></h3>
@@ -2334,7 +2339,9 @@ True
 <li><p>Se abbiamo miliardi di pagine, conviene cercarle in una lista? Se la stringa che cerchiamo sta nell’ultima pagina, l’algoritmo di ricerca quante pagine guarda prima di trovare quella d’interesse?</p></li>
 <li><p>Che strutture dati alternative potremmo usare per la ricerca?</p></li>
 </ul>
-<p><strong>RISPOSTA</strong>: Ci converra <em>indicizzare</em> le pagine, cioè avere un indice che ci dice per ogni parola di ricerca in quali pagine possiamo trovarla.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Ci converra <em>indicizzare</em> le pagine, cioè avere un indice che ci dice per ogni parola di ricerca in quali pagine possiamo trovarla.</p>
 <ul class="simple">
 <li><p>Per implementare questa corrispondenza in Python possiamo usare i dizionari.</p></li>
 <li><p>Per convenienza, ci conviene indicare le pagine con il numero che abbiamo usato quando le abbiamo messe nella listona.</p></li>
@@ -2348,7 +2355,7 @@ True
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
+</div></div>
 <div class="section" id="Ordinamento">
 <h3>Ordinamento<a class="headerlink" href="#Ordinamento" title="Permalink to this headline">¶</a></h3>
 <p>Osserva di nuovo bene il testo delle pagine. Noti delle particolarità / differenze tra le due pagine ?</p>
@@ -2393,9 +2400,11 @@ True
 </pre></div></div>
 </div>
 <p><strong>DOMANDA</strong>: Pensiamo all’ordine delle pagine. E’ il migliore che possiamo fornire all’utente? Secondo te, qual’è la pagina che contiene più informazione riguardo Matplotlib e che andrebbe messa per prima?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Ovviamente, noi umani sappiamo la pagina specifica sulla Visualizzazione sarà quella preferita dall’utente. Per capirlo automaticamente con un algoritmo possiamo notare che la frequenza di <code class="docutils literal notranslate"><span class="pre">&quot;Matplotlib&quot;</span></code> è mggiore nella seconda pagina rispetto alla prima. Possiamo farci dire la frequenza da Python con il comando <code class="docutils literal notranslate"><span class="pre">count</span></code>:</p>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
@@ -2525,9 +2534,11 @@ True
 <li><p>…</p></li>
 </ul>
 <p><strong>DOMANDA</strong>: Quali ti sembrano le forme più <em>simili</em> ?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Sicuramente, <code class="docutils literal notranslate"><span class="pre">grufici</span></code> ci sembra più <em>simile</em> a <code class="docutils literal notranslate"><span class="pre">grafici</span></code> di <code class="docutils literal notranslate"><span class="pre">grufbicii</span></code>. Ci è bastato contare quante lettere sono state cambiate, aggiunte o tolte per passare da una forma a l’altra.</p>
-</div>
+</div></div>
 <div class="section" id="Un-mondo-di-distanze">
 <h3>Un mondo di distanze<a class="headerlink" href="#Un-mondo-di-distanze" title="Permalink to this headline">¶</a></h3>
 <p>Guardando gli esempi sopra, ci rendiamo presto conto di come date due parole, anche molto diverse tra loro, possiamo trovare quante e quali operazioni si possono compiere per <em>trasformarle</em> l’una nell’altra. Minore è il numero di operazioni, maggiore ci apparirà la <em>similarità</em> tra le due parole.</p>
@@ -2735,7 +2746,9 @@ True
 [&#39;il&#39;, &#39;testo&#39;, &#39;della&#39;, &#39;mia&#39;, &#39;pagina&#39;]
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
@@ -2755,6 +2768,17 @@ True
                         <span class="n">risultati</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pagina</span><span class="p">)</span>
                         <span class="n">url_trovate</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">pagina</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">risultati</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

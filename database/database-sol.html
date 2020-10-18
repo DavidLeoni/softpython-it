@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2115,7 +2116,9 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -2130,6 +2133,24 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
     <span class="n">cursore</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Album LIMIT 5&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">cursore</span><span class="o">.</span><span class="n">fetchall</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cursore</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(1, &#39;For Those About To Rock We Salute You&#39;, 1), (2, &#39;Balls to the Wall&#39;, 2), (3, &#39;Restless and Wild&#39;, 2), (4, &#39;Let There Be Rock&#39;, 1), (5, &#39;Big Ones&#39;, 3)]
+&lt;class &#39;list&#39;&gt;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -2756,7 +2777,9 @@ righe alla volta:</p>
 <li><p>eseguila premendo F9</p></li>
 </ol>
 <p><strong>ESERCIZIO</strong>: chiama <code class="docutils literal notranslate"><span class="pre">esegui</span></code> per eseguire la stessa query, usando i parametri</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -2768,6 +2791,26 @@ righe alla volta:</p>
 <span class="sd">SELECT * FROM Album</span>
 <span class="sd">WHERE AlbumId &gt;= ? AND AlbumId &lt;= ?</span>
 <span class="sd">&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(3, &#39;Restless and Wild&#39;, 2), (4, &#39;Let There Be Rock&#39;, 1), (5, &#39;Big Ones&#39;, 3)]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il comando</span>
+
 
 </pre></div>
 </div>
@@ -3146,9 +3189,11 @@ CREATE TABLE [Track]
 </div>
 <p>Notiamo che in questo caso manca il compositore. Ma sorge una domanda: nella tabella originale SQL, come era segnato il fatto che il compositore mancasse?</p>
 <p><strong>ESERCIZIO</strong>: Usando SQLiteStudio, nel menu a sinistra fai doppio click sulla tabella <code class="docutils literal notranslate"><span class="pre">Track</span></code> e poi seleziona la tab <code class="docutils literal notranslate"><span class="pre">Data</span></code> a destra. Scorri le righe finchè non trovi la casella per la colonna <code class="docutils literal notranslate"><span class="pre">Composer</span></code>.</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Notiamo che in SQL le caselle vuote si indicano con <code class="docutils literal notranslate"><span class="pre">NULL</span></code>. Dato che <code class="docutils literal notranslate"><span class="pre">NULL</span></code> non è un tipo Python, durante la conversione da oggetti SQL a oggetti Python <code class="docutils literal notranslate"><span class="pre">NULL</span></code> viene convertito nell’oggetto Python <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p>Proviamo a selezionare dei valori numerici alla nostra query, come per esempio i <code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p>
+</div><p>Proviamo a selezionare dei valori numerici alla nostra query, come per esempio i <code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
@@ -3269,7 +3314,9 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: Prova ad usare <code class="docutils literal notranslate"><span class="pre">ASC</span></code> invece di <code class="docutils literal notranslate"><span class="pre">DESC</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
@@ -3282,6 +3329,30 @@ CREATE TABLE [Track]
 <span class="s2">ORDER BY Milliseconds ASC</span>
 <span class="s2">LIMIT 5</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;É Uma Partida De Futebol&#39;, &#39;Samuel Rosa&#39;, 1071),
+ (&#39;Now Sports&#39;, None, 4884),
+ (&#39;A Statistic&#39;, None, 6373),
+ (&#39;Oprah&#39;, None, 6635),
+ (&#39;Commercial 1&#39;, &#39;L. Muggerud&#39;, 7941)]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui la query</span>
 
 
 </pre></div>
@@ -3328,9 +3399,11 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <p><strong>DOMANDA</strong>: è molto meglio fare così, invece che prelevare tutte le righe in Python e contare con <code class="docutils literal notranslate"><span class="pre">len</span></code>. Perchè?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Perchè facendo i conteggi direttamente in SQL, il database si arrangerà a fare i conti e spedirà a Python solo un numero invece che una quantità di righe che potenzialmente potrebbe essere molto ingente e intasare la memoria.</p>
-</div>
+</div></div>
 <div class="section" id="GROUP-BY-E-COUNT">
 <h3>GROUP BY E COUNT<a class="headerlink" href="#GROUP-BY-E-COUNT" title="Permalink to this headline">¶</a></h3>
 <p>Ogni Track ha associato un <code class="docutils literal notranslate"><span class="pre">MediaTypeId</span></code>. Potremmo chiederci per ogni media type quante track ci sono.</p>
@@ -3364,7 +3437,9 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: I <code class="docutils literal notranslate"><span class="pre">MediaTypeId</span></code> non sono molto descrittivi. Scrivi qua sotto una query per ottenere coppie con nome del MediaType e rispettivo conteggio. Prova anche ad eseguire la query in SQLStudio:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
@@ -3396,8 +3471,34 @@ CREATE TABLE [Track]
  (&#39;Purchased AAC audio file&#39;, 7)]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;MPEG audio file&#39;, 3034),
+ (&#39;Protected AAC audio file&#39;, 237),
+ (&#39;Protected MPEG-4 video file&#39;, 214),
+ (&#39;AAC audio file&#39;, 11),
+ (&#39;Purchased AAC audio file&#39;, 7)]
+</pre></div></div>
+</div>
 <p><strong>ESERCIZIO</strong>: Scrivi qua sotto una query per creare una tabella di due colonne, nella prima ci saranno i nomi dei generi musicali e nella seconda quante track di quel genere ci sono nel database.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
@@ -3449,8 +3550,54 @@ CREATE TABLE [Track]
  (&#39;Opera&#39;, 1)]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;Rock&#39;, 1297),
+ (&#39;Latin&#39;, 579),
+ (&#39;Metal&#39;, 374),
+ (&#39;Alternative &amp; Punk&#39;, 332),
+ (&#39;Jazz&#39;, 130),
+ (&#39;TV Shows&#39;, 93),
+ (&#39;Blues&#39;, 81),
+ (&#39;Classical&#39;, 74),
+ (&#39;Drama&#39;, 64),
+ (&#39;R&amp;B/Soul&#39;, 61),
+ (&#39;Reggae&#39;, 58),
+ (&#39;Pop&#39;, 48),
+ (&#39;Soundtrack&#39;, 43),
+ (&#39;Alternative&#39;, 40),
+ (&#39;Hip Hop/Rap&#39;, 35),
+ (&#39;Electronica/Dance&#39;, 30),
+ (&#39;Heavy Metal&#39;, 28),
+ (&#39;World&#39;, 28),
+ (&#39;Sci Fi &amp; Fantasy&#39;, 26),
+ (&#39;Easy Listening&#39;, 24),
+ (&#39;Comedy&#39;, 17),
+ (&#39;Bossa Nova&#39;, 15),
+ (&#39;Science Fiction&#39;, 13),
+ (&#39;Rock And Roll&#39;, 12),
+ (&#39;Opera&#39;, 1)]
+</pre></div></div>
+</div>
 <p><strong>ESERCIZIO</strong>: Ora prova a trovare per ogni genere la lunghezza media in millisecondi usando invece di <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span></code> la funzione <code class="docutils literal notranslate"><span class="pre">AVG(Track.Milliseconds)</span></code>:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
@@ -3464,6 +3611,50 @@ CREATE TABLE [Track]
 <span class="s2">GROUP BY G.GenreId</span>
 <span class="s2">ORDER BY Lunghezza DESC</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;Sci Fi &amp; Fantasy&#39;, 2911783.0384615385),
+ (&#39;Science Fiction&#39;, 2625549.076923077),
+ (&#39;Drama&#39;, 2575283.78125),
+ (&#39;TV Shows&#39;, 2145041.0215053763),
+ (&#39;Comedy&#39;, 1585263.705882353),
+ (&#39;Metal&#39;, 309749.4438502674),
+ (&#39;Electronica/Dance&#39;, 302985.8),
+ (&#39;Heavy Metal&#39;, 297452.9285714286),
+ (&#39;Classical&#39;, 293867.5675675676),
+ (&#39;Jazz&#39;, 291755.3769230769),
+ (&#39;Rock&#39;, 283910.0431765613),
+ (&#39;Blues&#39;, 270359.77777777775),
+ (&#39;Alternative&#39;, 264058.525),
+ (&#39;Reggae&#39;, 247177.75862068965),
+ (&#39;Soundtrack&#39;, 244370.88372093023),
+ (&#39;Alternative &amp; Punk&#39;, 234353.84939759035),
+ (&#39;Latin&#39;, 232859.26252158894),
+ (&#39;Pop&#39;, 229034.10416666666),
+ (&#39;World&#39;, 224923.82142857142),
+ (&#39;R&amp;B/Soul&#39;, 220066.8524590164),
+ (&#39;Bossa Nova&#39;, 219590.0),
+ (&#39;Easy Listening&#39;, 189164.20833333334),
+ (&#39;Hip Hop/Rap&#39;, 178176.2857142857),
+ (&#39;Opera&#39;, 174813.0),
+ (&#39;Rock And Roll&#39;, 134643.5)]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui:</span>
+
 
 </pre></div>
 </div>
@@ -3932,7 +4123,9 @@ CREATE TABLE [Track]
 <p>Pandas è molto comodo, ma come già detto nella <a class="reference external" href="http://it.softpython.org/pandas/pandas-sol.html">nel relativo tutorial</a> Pandas carica tutto in memoria RAM che tipicamente sono dai 4 ai 16 giga. Se hai grandi database potresti avere dei problemi per cui valgono i metodi e considerazioni fatte nella sezione <a class="reference external" href="#Performance">Performance</a></p>
 </div>
 <p><strong>ESERCIZIO</strong>: Millisecondi e bytes occupati dovrebbero ragionevolmente essere linearmente dipendenti. Dimostralo con Pandas.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
@@ -3943,6 +4136,17 @@ CREATE TABLE [Track]
 
 
 
+
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
 
 
 </pre></div>

@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2238,8 +2239,10 @@ str
 <li><p>sempre un errore</p></li>
 <li><p>a volte un carattere, a volte un errore a seconda della stringa</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 3: potremmo ottenere un errore con la stringa vuota (prova)</p>
-<p><strong>DOMANDA</strong>: Supponiamo che <code class="docutils literal notranslate"><span class="pre">x</span></code> sia una stringa qualsiasi. Se proviamo ad eseguire questo codice:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 3: potremmo ottenere un errore con la stringa vuota (prova)</p>
+</div><p><strong>DOMANDA</strong>: Supponiamo che <code class="docutils literal notranslate"><span class="pre">x</span></code> sia una stringa qualsiasi. Se proviamo ad eseguire questo codice:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -2249,8 +2252,10 @@ str
 <li><p>sempre un errore</p></li>
 <li><p>a volte un carattere, a volte un errore a seconda della stringa</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 2: poichè l’inidicizzazione inizia da 0, <code class="docutils literal notranslate"><span class="pre">len</span></code> ci da sempre un numero che è superiore di 1 al più grande indice usabile.</p>
-<div class="section" id="Esercizio---intercalare">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 2: poichè l’inidicizzazione inizia da 0, <code class="docutils literal notranslate"><span class="pre">len</span></code> ci da sempre un numero che è superiore di 1 al più grande indice usabile.</p>
+</div><div class="section" id="Esercizio---intercalare">
 <h3>Esercizio - intercalare<a class="headerlink" href="#Esercizio---intercalare" title="Permalink to this headline">¶</a></h3>
 <p>Date due stringhe che hanno entrambe lunghezza <code class="docutils literal notranslate"><span class="pre">3</span></code>, stampa una stringa che inercala caratteri da entrambe le stringhe. Il tuo codice deve poter funzionare con qualsiasi stringa di questa lunghezza</p>
 <p>Esempio:</p>
@@ -2263,7 +2268,9 @@ str
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shaiy!
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -2273,6 +2280,25 @@ str
 <span class="n">x</span><span class="o">=</span><span class="s2">&quot;say&quot;</span>
 <span class="n">y</span><span class="o">=</span><span class="s2">&quot;hi!&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+shaiy!
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2385,8 +2411,10 @@ shaiy!
 <li><p>sempre un errore</p></li>
 <li><p>a volte un carattere, a volte un errore a seconda della stringa</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 1. (abbiamo supposto che la stringa non sia mai vuota)</p>
-<p><strong>DOMANDA</strong>: Supponendo che <code class="docutils literal notranslate"><span class="pre">x</span></code> sia una stringa qualsiasi (anche vuota), le espressioni</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 1. (abbiamo supposto che la stringa non sia mai vuota)</p>
+</div><p><strong>DOMANDA</strong>: Supponendo che <code class="docutils literal notranslate"><span class="pre">x</span></code> sia una stringa qualsiasi (anche vuota), le espressioni</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -2395,23 +2423,31 @@ shaiy!
 </pre></div>
 </div>
 <p>sono equivalenti ? Che cosa fanno ?</p>
-<p><strong>RISPOSTA</strong>: le espressioni sono equivalenti: se la stringa è vuota entrambe producono un errore, se è piena entrambe restituiscono l’ultimo carattere</p>
-<p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, l’espressione seguente cosa produce? La possiamo semplificare in una più breve?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: le espressioni sono equivalenti: se la stringa è vuota entrambe producono un errore, se è piena entrambe restituiscono l’ultimo carattere</p>
+</div><p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, l’espressione seguente cosa produce? La possiamo semplificare in una più breve?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: corrisponde a <code class="docutils literal notranslate"><span class="pre">x[0]</span></code></p>
-<p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, cosa produce la seguente espressione? Un errore? Altro? La possiamo semplificare?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: corrisponde a <code class="docutils literal notranslate"><span class="pre">x[0]</span></code></p>
+</div><p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, cosa produce la seguente espressione? Un errore? Altro? La possiamo semplificare?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;ciao&#39;</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Sappiamo che <code class="docutils literal notranslate"><span class="pre">'ciao'[0]</span></code> produce un carattere, ma sappiamo anche che in Python i caratteri estratti dalle stringhe sono a loro volta stringhe di lunghezza 1. Quindi se dopo l’espressione <code class="docutils literal notranslate"><span class="pre">&quot;ciao&quot;[0]</span></code> che produce la stringa <code class="docutils literal notranslate"><span class="pre">'c'</span></code> aggiungiamo un’altro <code class="docutils literal notranslate"><span class="pre">[0]</span></code> è come se stessimo scrivendo <code class="docutils literal notranslate"><span class="pre">'c'[0]</span></code>, che ritorna il carattere zeresimo trovato nella stringa <code class="docutils literal notranslate"><span class="pre">'c'</span></code>, cioè <code class="docutils literal notranslate"><span class="pre">c</span></code> stesso.</p>
-<p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, cosa produce la seguente espressione? Un errore? Altro? La possiamo semplificare?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Sappiamo che <code class="docutils literal notranslate"><span class="pre">'ciao'[0]</span></code> produce un carattere, ma sappiamo anche che in Python i caratteri estratti dalle stringhe sono a loro volta stringhe di lunghezza 1. Quindi se dopo l’espressione <code class="docutils literal notranslate"><span class="pre">&quot;ciao&quot;[0]</span></code> che produce la stringa <code class="docutils literal notranslate"><span class="pre">'c'</span></code> aggiungiamo un’altro <code class="docutils literal notranslate"><span class="pre">[0]</span></code> è come se stessimo scrivendo <code class="docutils literal notranslate"><span class="pre">'c'[0]</span></code>, che ritorna il carattere zeresimo trovato nella stringa <code class="docutils literal notranslate"><span class="pre">'c'</span></code>, cioè <code class="docutils literal notranslate"><span class="pre">c</span></code> stesso.</p>
+</div><p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, cosa produce la seguente espressione? Un errore? Altro? La possiamo semplificare?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">x[0]</span></code> è un espressione che produce il primo carattere della stringa <code class="docutils literal notranslate"><span class="pre">x</span></code>. In Python, possiamo mettere le espressioni tra parentesi che vogliamo. Quindi in questo caso la parentesi non produce nessun effetto, e l’espressione è equivalente a <code class="docutils literal notranslate"><span class="pre">x[0][0]</span></code> che come abbiamo visto prima è uguale a scrivere <code class="docutils literal notranslate"><span class="pre">x[0]</span></code></p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">x[0]</span></code> è un espressione che produce il primo carattere della stringa <code class="docutils literal notranslate"><span class="pre">x</span></code>. In Python, possiamo mettere le espressioni tra parentesi che vogliamo. Quindi in questo caso la parentesi non produce nessun effetto, e l’espressione è equivalente a <code class="docutils literal notranslate"><span class="pre">x[0][0]</span></code> che come abbiamo visto prima è uguale a scrivere <code class="docutils literal notranslate"><span class="pre">x[0]</span></code></p>
+</div></div>
 </div>
 <div class="section" id="Sostituire-caratteri">
 <h2>Sostituire caratteri<a class="headerlink" href="#Sostituire-caratteri" title="Permalink to this headline">¶</a></h2>
@@ -2611,16 +2647,20 @@ La slice x[3:8] è canti
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Se la stringa ha lunghezza almeno 5, potremmo avere una situazione del genere:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Se la stringa ha lunghezza almeno 5, potremmo avere una situazione del genere:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#01234</span>
 <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abcde&#39;</span>
 </pre></div>
 </div>
 <p>La slice <code class="docutils literal notranslate"><span class="pre">x[3:4]</span></code> estrarrà i caratteri da posizione 3 <strong>incluso</strong> fino alla posizione 4 <strong>esclusa</strong>, quindi di fatto estrarrà solo un carattere alla posizione 3. Il codice è quindi equivalente a <code class="docutils literal notranslate"><span class="pre">x[3]</span></code></p>
-<div class="section" id="Esercizio---garalampog">
+</div><div class="section" id="Esercizio---garalampog">
 <h3>Esercizio - garalampog<a class="headerlink" href="#Esercizio---garalampog" title="Permalink to this headline">¶</a></h3>
 <p>Scrivi del codice per estrarre e stampare <code class="docutils literal notranslate"><span class="pre">alam</span></code> dalla stringa <code class="docutils literal notranslate"><span class="pre">&quot;garalampog&quot;</span></code>. Prova a indovinare correttamente gli indici.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
@@ -2643,11 +2683,34 @@ La slice x[3:8] è canti
 alam
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;garalampog&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+alam
+</pre></div></div>
+</div>
 </div>
 <div class="section" id="Esercizio---ifEweEfav-lkSD-lkWe">
 <h3>Esercizio - ifEweEfav lkSD lkWe<a class="headerlink" href="#Esercizio---ifEweEfav-lkSD-lkWe" title="Permalink to this headline">¶</a></h3>
 <p>Scrivi del codice per estrarre e stampare <code class="docutils literal notranslate"><span class="pre">kS</span></code> dalla stringa <code class="docutils literal notranslate"><span class="pre">&quot;ifE\te\nfav</span>&#160; <span class="pre">lkD</span> <span class="pre">lkWe&quot;</span></code>. Fai attenzione agli spazi e caratteri speciali (prima potresti voler stampare <code class="docutils literal notranslate"><span class="pre">x</span></code>). Prova a indovinare gli indici corretti.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
@@ -2660,6 +2723,27 @@ alam
 <span class="c1">#x = &quot;ifE\te\nfav  lkD lkWe&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">14</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+kD
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;ifE</span><span class="se">\t</span><span class="s2">e</span><span class="se">\n</span><span class="s2">fav  lkD lkWe&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2755,9 +2839,11 @@ kD
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Ritorna sempre una NUOVA copia dell’intera stringa, perchè parte da indice 0 <em>incluso</em> e finisce a indice <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> <em>escluso</em></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Ritorna sempre una NUOVA copia dell’intera stringa, perchè parte da indice 0 <em>incluso</em> e finisce a indice <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> <em>escluso</em></p>
 <p>Funziona anche con la stringa vuota, perchè <code class="docutils literal notranslate"><span class="pre">''[0:len('')]</span></code> equivale a <code class="docutils literal notranslate"><span class="pre">''[0:0]</span></code> cioè sottostringa da 0 <em>incluso</em> a 0 <em>escluso</em>, quindi non prendiamo nessun carattere e non sforiamo i limiti della stringa. In realtà, anche se sforassimo, Python non avrebbe problemi (prova a scrivere <code class="docutils literal notranslate"><span class="pre">''[0:100]</span></code>)</p>
-</div>
+</div></div>
 <div class="section" id="Slice---omissione-limiti">
 <h3>Slice - omissione limiti<a class="headerlink" href="#Slice---omissione-limiti" title="Permalink to this headline">¶</a></h3>
 <p>Volendo, è possibile omettere l’indice di partenza, in tal caso Python supporrà sia 0:</p>
@@ -2841,7 +2927,9 @@ kD
 </div>
 <p>deve stampare</p>
 <p><code class="docutils literal notranslate"><span class="pre">arlareparlar</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
@@ -2851,6 +2939,27 @@ kD
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+isteromister
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;mistero&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3066,7 +3175,9 @@ isteromister
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>abcbcd
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
@@ -3077,6 +3188,28 @@ isteromister
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+javnda
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;javarnanda&quot;</span>
+<span class="c1">#x = &quot;abcd&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3165,7 +3298,9 @@ verbo = &quot;finita&quot;
 <ul class="simple">
 <li><p><strong>NON</strong> usare caratteri costanti nel tuo codice, quindi niente punto <code class="docutils literal notranslate"><span class="pre">'.'</span></code> !</p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
@@ -3179,6 +3314,30 @@ verbo = &quot;finita&quot;
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="mi">13</span><span class="p">]</span> <span class="o">+</span> <span class="n">cosa</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span> <span class="o">+</span> <span class="n">verbo</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">27</span><span class="p">:]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+la corsa all&#39;atomo è finita.
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>    <span class="c1">#01234567890123456789012345678</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;la corsa all&#39;oro è iniziata.&quot;</span>
+<span class="n">cosa</span> <span class="o">=</span> <span class="s2">&quot;atomo&quot;</span>
+<span class="n">verbo</span> <span class="o">=</span> <span class="s2">&quot;finita&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3273,7 +3432,9 @@ True
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
@@ -3284,6 +3445,28 @@ True
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">((</span><span class="n">x</span> <span class="ow">in</span> <span class="n">z</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span> <span class="ow">in</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;cad&#39;</span><span class="p">,</span><span class="s1">&#39;ra&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span>   <span class="c1"># True</span>
+<span class="c1">#x,y,z = &#39;zam&#39;,&#39;ra&#39;,&#39;abracadabra&#39;  # False</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3326,7 +3509,9 @@ True
 </div>
 <p>deve mostrare:</p>
 <p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
@@ -3338,6 +3523,29 @@ True
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">((</span><span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span>  <span class="ow">in</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;tti&#39;</span><span class="p">,</span> <span class="s1">&#39;patti chiari amicizia lunga&#39;</span><span class="p">,</span> <span class="s1">&#39;tutto chiaro?&#39;</span>   <span class="c1"># True</span>
+<span class="c1">#x,y,z = &#39;zio&#39;,&#39;patti chiari amicizia lunga&#39;,&#39;tutto chiaro?&#39;    # False</span>
+<span class="c1">#x,y,z = &#39;chiaro&#39;,&#39;patti chiari amicizia lunga&#39;,&#39;tutto chiaro?&#39; # True</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3527,8 +3735,10 @@ True
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Quando Python incontra <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code> vede che è un’assegnazione, che dovrebbe associare alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code> il risultato dell’espressione <code class="docutils literal notranslate"><span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code>. Quindi PRIMA calcola l’espressione <code class="docutils literal notranslate"><span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code> che produce il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code>, e POI associa il valore <code class="docutils literal notranslate"><span class="pre">True</span></code> alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code>. Quindi vedremo stampato <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
-<p><strong>DOMANDA</strong>: Per ciascuna delle espressioni seguenti, prova a indovinare se produce <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Quando Python incontra <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code> vede che è un’assegnazione, che dovrebbe associare alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code> il risultato dell’espressione <code class="docutils literal notranslate"><span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code>. Quindi PRIMA calcola l’espressione <code class="docutils literal notranslate"><span class="pre">&quot;fiume&quot;</span> <span class="pre">==</span> <span class="pre">&quot;fiume&quot;</span></code> che produce il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code>, e POI associa il valore <code class="docutils literal notranslate"><span class="pre">True</span></code> alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code>. Quindi vedremo stampato <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</div><p><strong>DOMANDA</strong>: Per ciascuna delle espressioni seguenti, prova a indovinare se produce <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;cappello&#39;</span> <span class="o">!=</span> <span class="s1">&#39;Cappello&#39;</span>
 </pre></div>
@@ -3585,7 +3795,9 @@ True
 <ul class="simple">
 <li><p>Il tuo codice deve funzionare per qualsiasi <code class="docutils literal notranslate"><span class="pre">parola</span></code></p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
@@ -3598,6 +3810,30 @@ True
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">parola</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">parola</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">parola</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">parola</span> <span class="o">=</span> <span class="s1">&#39;rockettaro&#39;</span>  <span class="c1"># True</span>
+<span class="c1">#parola = &#39;massima&#39;    # True</span>
+<span class="c1">#parola = &#39;stima&#39;      # False</span>
+<span class="c1">#parola = &#39;baobab&#39;     # False</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3692,7 +3928,9 @@ birrabirrabirrabirra
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>za za za za za za za
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
@@ -3706,6 +3944,31 @@ birrabirrabirrabirra
 <span class="c1"># scrivi qui</span>
 
 <span class="nb">print</span><span class="p">((</span><span class="n">sillaba</span> <span class="o">+</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frase</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+za za za za za za za
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">sillaba</span> <span class="o">=</span> <span class="s1">&#39;za&#39;</span>
+<span class="n">frase</span> <span class="o">=</span> <span class="s1">&#39;Il numero 7&#39;</span>   <span class="c1"># za za za za za za za</span>
+<span class="c1">#frase = &#39;Dammi il 5&#39;   # za za za za za</span>
+
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

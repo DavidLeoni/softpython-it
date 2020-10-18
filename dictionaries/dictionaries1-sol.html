@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2158,8 +2159,6 @@ div.rendered_html tbody tr:hover {
 <span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -2333,12 +2332,14 @@ div.rendered_html tbody tr:hover {
 </ul>
 </div></blockquote>
 <p><strong>DOMANDA</strong>: guarda bene le parole in grassetto - ti viene in mente una struttura dati già vista che ha quelle caratteristiche?</p>
-<p><strong>RISPOSTA</strong>: Le chiavi dei dizionari per molti aspetti si comportano come elementi di un insieme.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Le chiavi dei dizionari per molti aspetti si comportano come elementi di un insieme.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>Hai letto bene il</strong> <a class="reference external" href="https://it.softpython.org/sets/sets-sol.html">foglio sugli insiemi</a><strong>?</strong></p>
 <p><strong>Prima di proseguire, assicurati di aver capito bene la</strong> <a class="reference external" href="https://it.softpython.org/sets/sets-sol.html#Elementi-mutabili-e-hash">sezione Elementi mutabili e hash</a></p>
 </div>
-<div class="section" id="Le-chiavi-sono-immutabili">
+</div><div class="section" id="Le-chiavi-sono-immutabili">
 <h4>Le chiavi sono immutabili<a class="headerlink" href="#Le-chiavi-sono-immutabili" title="Permalink to this headline">¶</a></h4>
 <p><strong>DOMANDA</strong>: La definizione non impone di usare per forza stringhe come chiavi, possiamo usare anche altri tipi. Ma possiamo usare tutti quelli che vogliamo?</p>
 <p>Per ciascuno degli esempi seguenti, prova a dire se il dizionario si può creare o se otterremo un errore (quale?). Controlla come sono rappresentati in Python Tutor.</p>
@@ -2400,7 +2401,9 @@ div.rendered_html tbody tr:hover {
 </div>
 </li>
 </ol>
-<p><strong>RISPOSTA</strong>: interi, float, stringhe e tuple sono IMMUTABILI e quindi possiamo usarli come chiavi (vedere definizione). Invece, liste e insiemi (e altri dizionari) sono MUTABILI, e quindi non potremo usarli come chiavi. Se proviamo ad usare un elemento MUTABILE come una lista come se fosse la chiave di un dizionario, Python si offenderà, segnalandoci che l’oggetto non è <em>hashable</em> (esattamente come si offenderebbe se cercassimo di inserirlo come elemento di un insieme)</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: interi, float, stringhe e tuple sono IMMUTABILI e quindi possiamo usarli come chiavi (vedere definizione). Invece, liste e insiemi (e altri dizionari) sono MUTABILI, e quindi non potremo usarli come chiavi. Se proviamo ad usare un elemento MUTABILE come una lista come se fosse la chiave di un dizionario, Python si offenderà, segnalandoci che l’oggetto non è <em>hashable</em> (esattamente come si offenderebbe se cercassimo di inserirlo come elemento di un insieme)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">{</span>  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span><span class="s1">&#39;zam&#39;</span><span class="p">,</span>
 <span class="go">       [3,4]:&#39;zum&#39;}</span>
 
@@ -2413,7 +2416,7 @@ div.rendered_html tbody tr:hover {
 <span class="go">TypeError: unhashable type: &#39;list&#39;</span>
 </pre></div>
 </div>
-</div>
+</div></div>
 <div class="section" id="Le-chiavi-non-hanno-ordine">
 <h4>Le chiavi non hanno ordine<a class="headerlink" href="#Le-chiavi-non-hanno-ordine" title="Permalink to this headline">¶</a></h4>
 <p>In un dizionario che possiamo trovare nella vita reale, le voci sono sempre ordinate secondo qualche criterio, (tipicamente in ordine alfabetico)</p>
@@ -2674,8 +2677,10 @@ div.rendered_html tbody tr:hover {
 </div>
 </li>
 </ol>
-<p><strong>RISPOSTA</strong>: Per i valori possiamo tranquillamente mettere quello che vogliamo, Python non si offenderà. In particolare nota come chiavi diverse possano avere lo stesso valore.</p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Per i valori possiamo tranquillamente mettere quello che vogliamo, Python non si offenderà. In particolare nota come chiavi diverse possano avere lo stesso valore.</p>
+</div></div>
 <div class="section" id="Dizionario-vuoto">
 <h3>Dizionario vuoto<a class="headerlink" href="#Dizionario-vuoto" title="Permalink to this headline">¶</a></h3>
 <p>Possiamo creare un dizionario vuoto scrivendo <code class="docutils literal notranslate"><span class="pre">{}</span></code>:</p>
@@ -3038,7 +3043,9 @@ dict
     <span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: I due codici NON producono lo stesso risultato, e dobbiamo decisamente preferire il primo.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: I due codici NON producono lo stesso risultato, e dobbiamo decisamente preferire il primo.</p>
 <p>Sul nostro computer, abbiamo ottenuto questo:</p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE: sul tuo computer potresti aver ottenuto risultati diversi!</strong></p>
@@ -3065,7 +3072,7 @@ dict
 distinzione chiave/valore. Nella stampa del dizionario vediamo le stesse coppie che gli abbiamo specificato, solo in ordine diverso. Le coppie giuste sono state create grazie al fatto che le tuple invece <em>sono</em> ordinate.</p>
 <p>Nel secondo caso siamo invece partiti da una tupla di insiemi, quindi Python ha visitato gli elementi della tupla nello stesso ordine che vediamo, purtroppo specificando le coppie come insiemi non possiamo più essere sicuri dell’ordine in cui Python ha letto gli elementi all’interno degli insiemi. Sul nostro computer, con il primo insieme siamo stati fortunati e Python ha letto prima <code class="docutils literal notranslate"><span class="pre">a</span></code> e poi <code class="docutils literal notranslate"><span class="pre">5</span></code>, invece con gli altri insiemi ha letto prima il numero e poi il carattere! E sul tuo computer
 potresti aver ottenuto risultati completamente diversi !</p>
-<p><strong>DOMANDA</strong>: Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
+</div><p><strong>DOMANDA</strong>: Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>
 </pre></div>
@@ -3415,8 +3422,10 @@ potresti aver ottenuto risultati completamente diversi !</p>
 })()
 </script></div>
 </div>
-<p><strong>RISPOSTA</strong>: Il codice produce gli stessi risultati dell’esempio precedente, per quanto non sia efficiente (verrà creato un dizionario temporaneo extra con la <code class="docutils literal notranslate"><span class="pre">dict</span></code> interna e immediatamente buttato via)</p>
-<p><strong>Valori mutabili</strong>: Nell’esempio abbiamo usato valori interi, che sono <em>immutabili</em>. E se provassimo dei valori <em>mutabili</em> come delle liste, che succederebbe?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Il codice produce gli stessi risultati dell’esempio precedente, per quanto non sia efficiente (verrà creato un dizionario temporaneo extra con la <code class="docutils literal notranslate"><span class="pre">dict</span></code> interna e immediatamente buttato via)</p>
+</div><p><strong>Valori mutabili</strong>: Nell’esempio abbiamo usato valori interi, che sono <em>immutabili</em>. E se provassimo dei valori <em>mutabili</em> come delle liste, che succederebbe?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
@@ -3621,8 +3630,10 @@ potresti aver ottenuto risultati completamente diversi !</p>
 })()
 </script></div>
 </div>
-<p><strong>RISPOSTA</strong>: La risposta è sì, perchè come valori del dizionario abbiamo usato insiemi che sono mutabili.</p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La risposta è sì, perchè come valori del dizionario abbiamo usato insiemi che sono mutabili.</p>
+</div></div>
 </div>
 <div class="section" id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>

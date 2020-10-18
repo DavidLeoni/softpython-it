@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2026,8 +2027,10 @@ div.rendered_html tbody tr:hover {
 <h2>1 Prendiamoci i dati<a class="headerlink" href="#1-Prendiamoci-i-dati" title="Permalink to this headline">¶</a></h2>
 <p>Per partire da casi concreti, come già fatto in precedenza andiamo a cercarci dei dati dal catalogo opendata <code class="docutils literal notranslate"><span class="pre">dati.trentino.it</span></code>. In questo caso sceglieremo un file dal dataset <a class="reference external" href="http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs">Trasporti pubblici del Trentino (formato GTFS)</a>. Sono dati dei trasporti, ma quello che impareremo vale per qualunque dataset che contenga del testo.</p>
 <p><strong>✪ DOMANDA 1.1</strong>: Quale è la licenza del dataset? Possiamo farci tutto quello che vogliamo ?</p>
-<p><strong>RISPOSTA</strong>: La licenza è Creative Commons BY, quindi quando riusiamo dobbiamo citare l’autore</p>
-<p>Il <a class="reference external" href="https://developers.google.com/transit/gtfs/">formato GTFS</a> è un formato pratico per gli orari e tracciati del trasporto pubblico. Questo formato ci descrive i campi che ci aspettiamo nei file. Ma i file, fisicamente, in che formato sono?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La licenza è Creative Commons BY, quindi quando riusiamo dobbiamo citare l’autore</p>
+</div><p>Il <a class="reference external" href="https://developers.google.com/transit/gtfs/">formato GTFS</a> è un formato pratico per gli orari e tracciati del trasporto pubblico. Questo formato ci descrive i campi che ci aspettiamo nei file. Ma i file, fisicamente, in che formato sono?</p>
 <p>Nel dataset troviamo la risorsa <a class="reference external" href="http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs/resource/57869023-adfa-467e-8100-76403257d2d1">GTFS Urbano TTE</a> che al suo interno contiene un link <a class="reference external" href="http://www.ttesercizio.it/opendata/google_transit_urbano_tte.zip">ad uno zip</a>. Se apriamo lo zip troveremo diversi <code class="docutils literal notranslate"><span class="pre">.txt</span></code> che se attentamente osservati rivelano essere in formato CSV (cominciate a notare l’utilità del formato ;-) ?</p>
 <p>Concentriamoci sul file <a class="reference internal" href="stops.html"><span class="doc">stops.txt</span></a>, di cui vediamo un estratto qui:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,wheelchair_boarding
@@ -2043,14 +2046,18 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Come ci aspettiamo da un buon file CSV, nella prima riga costituisce le intestazioni e vediamo che i campi sono separati da virgole.</p>
 <p><strong>✪ DOMANDA 1.2</strong>: Dove possiamo trovare il significato del file ?</p>
-<p><strong>RISPOSTA</strong>: Pagina del dataset, cerca PDF MITT - Manuale OpenData - v.7: <a class="reference external" href="http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs">http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs</a></p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Pagina del dataset, cerca PDF MITT - Manuale OpenData - v.7: <a class="reference external" href="http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs">http://dati.trentino.it/dataset/trasporti-pubblici-del-trentino-formato-gtfs</a></p>
+</div></div>
 <div class="section" id="2.-Verifichiamo-che-i-dati-siano-corretti">
 <h2>2. Verifichiamo che i dati siano corretti<a class="headerlink" href="#2.-Verifichiamo-che-i-dati-siano-corretti" title="Permalink to this headline">¶</a></h2>
 <p>Come avrai intuito, il file <code class="docutils literal notranslate"><span class="pre">stops.txt</span></code> è un file CSV che contiene le informazioni riguardanti le stazioni degli autobus di Trento.</p>
 <p>Supponiamo che tu voglia fare avere la lista di tutte le fermate su <em>strade provinciali</em> (sigla <em>SP</em>):</p>
 <p><strong>✪ DOMANDA 2.1</strong>: Cerca un po’ manualmente dentro il <a class="reference internal" href="stops.html"><span class="doc">file completo</span></a>: i dati sono sempre perfettamente regolari come ci piacerebbe? Riesci ad individuare dei criteri per filtrare le righe con strade provinciali ?</p>
-<p><strong>RISPOSTA</strong>: I dati non sono uniformi.<code class="docutils literal notranslate"><span class="pre">Sp</span></code> quando è riferito alle superstrade a volte è seguito da spazio e a volte da un punto:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: I dati non sono uniformi.<code class="docutils literal notranslate"><span class="pre">Sp</span></code> quando è riferito alle superstrade a volte è seguito da spazio e a volte da un punto:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>5,28060z,Sp 85 Bivio Sopramonte,,46.085226,11.069313,10110,2
 1339,32671x,Sp.2 Noriglio,,45.884263,11.070323,10101,2
 </pre></div>
@@ -2067,11 +2074,13 @@ div.rendered_html tbody tr:hover {
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2376,21385x,Grazioli &quot;Osp. S.Camillo&quot;,,46.065677,11.132418,10110,2
 </pre></div>
 </div>
-<p><strong>✪✪ ESERCIZIO 2.2</strong>: Con quello che sai <a class="reference external" href="http://it.softpython.org/formats/formats-sol.html#File-CSV">dalla lezione sui formati</a>, prova ad aprire il CSV e stampare solo le linee che contengono qualcosa che assomiglia a strade provinciali.</p>
+</div><p><strong>✪✪ ESERCIZIO 2.2</strong>: Con quello che sai <a class="reference external" href="http://it.softpython.org/formats/formats-sol.html#File-CSV">dalla lezione sui formati</a>, prova ad aprire il CSV e stampare solo le linee che contengono qualcosa che assomiglia a strade provinciali.</p>
 <p><strong>NOTA</strong>: non serve che filtri per bene tutte, fai solo qualche tentativo per i casi più ovvi, usando funzioni sulle stringhe che già conosci. Ai casi più difficili ci penseremo in seguito con le regex!</p>
 <p><strong>SUGGERIMENTO 1</strong>: se devi usare diversi condizioni alternative in un <code class="docutils literal notranslate"><span class="pre">if</span></code>, separale con <code class="docutils literal notranslate"><span class="pre">or</span></code></p>
 <p><strong>SUGGERIMENTO 2</strong>: usa il metodo <code class="docutils literal notranslate"><span class="pre">upper</span></code> delle stringhe:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -2094,6 +2103,68 @@ div.rendered_html tbody tr:hover {
             <span class="ow">or</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot; SP.&quot;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">):</span>
 
             <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;5&#39;, &#39;28060z&#39;, &#39;Sp 85 Bivio Sopramonte&#39;, &#39;&#39;, &#39;46.085226&#39;, &#39;11.069313&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;48&#39;, &#39;22080z&#39;, &#39;Sp 76 Carpenedi&#39;, &#39;&#39;, &#39;46.117195&#39;, &#39;11.108678&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;49&#39;, &#39;22080x&#39;, &#39;Sp 76 Carpenedi&#39;, &#39;&#39;, &#39;46.117171&#39;, &#39;11.108438&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;104&#39;, &#39;24040z&#39;, &#39;Sp 131 &#34;Maso Pradiscola&#34;&#39;, &#39;&#39;, &#39;46.083189&#39;, &#39;11.135736&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;105&#39;, &#39;24040x&#39;, &#39;Sp 131 &#34;Maso Pradiscola&#34;&#39;, &#39;&#39;, &#39;46.083255&#39;, &#39;11.135874&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;109&#39;, &#39;24350z&#39;, &#39;Sp 131 &#34;Res. Silvana&#34;&#39;, &#39;&#39;, &#39;46.097726&#39;, &#39;11.126962&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;110&#39;, &#39;24350x&#39;, &#39;Sp 131 &#34;Res. Silvana&#34;&#39;, &#39;&#39;, &#39;46.097493&#39;, &#39;11.126925&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;115&#39;, &#39;24355z&#39;, &#39;Sp 131 Al Maso Specchio&#39;, &#39;&#39;, &#39;46.104391&#39;, &#39;11.123568&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;116&#39;, &#39;24355x&#39;, &#39;Sp 131 Al Maso Specchio&#39;, &#39;&#39;, &#39;46.104353&#39;, &#39;11.123420&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;131&#39;, &#39;23040z&#39;, &#39;Sp 76 &#34;Piac&#34;&#39;, &#39;&#39;, &#39;46.126690&#39;, &#39;11.114532&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;133&#39;, &#39;23035z&#39;, &#39;Sp 76 &#34;Maregioli&#34;&#39;, &#39;&#39;, &#39;46.130755&#39;, &#39;11.121750&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;134&#39;, &#39;23035x&#39;, &#39;Sp 76 &#34;Maregioli&#34;&#39;, &#39;&#39;, &#39;46.130836&#39;, &#39;11.121666&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;139&#39;, &#39;23045z&#39;, &#39;Sp 76 &#34;Via Rossa&#34;&#39;, &#39;&#39;, &#39;46.119858&#39;, &#39;11.111416&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;140&#39;, &#39;23045x&#39;, &#39;Sp 76 &#34;Via Rossa&#34;&#39;, &#39;&#39;, &#39;46.119812&#39;, &#39;11.111266&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;143&#39;, &#39;23055z&#39;, &#39;Sp 76 Dos di Lamar&#39;, &#39;&#39;, &#39;46.124939&#39;, &#39;11.113463&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;144&#39;, &#39;23055x&#39;, &#39;Sp 76 Dos di Lamar&#39;, &#39;&#39;, &#39;46.124718&#39;, &#39;11.113018&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;154&#39;, &#39;24520z&#39;, &#39;Sp 131 &#34;Paganin&#34;&#39;, &#39;&#39;, &#39;46.106288&#39;, &#39;11.137610&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;155&#39;, &#39;24520x&#39;, &#39;Sp 131 &#34;Paganin&#34;&#39;, &#39;&#39;, &#39;46.106524&#39;, &#39;11.137306&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;245&#39;, &#39;28045z&#39;, &#39;Sp 85 &#34;Soraval&#34;&#39;, &#39;&#39;, &#39;46.083258&#39;, &#39;11.063955&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;246&#39;, &#39;28045x&#39;, &#39;Sp 85 &#34;Soraval&#34;&#39;, &#39;&#39;, &#39;46.083094&#39;, &#39;11.063877&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;439&#39;, &#39;27050z&#39;, &#39;Sp 90 &#34;Maso Prudenza&#34;&#39;, &#39;&#39;, &#39;46.028867&#39;, &#39;11.111521&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;440&#39;, &#39;27050x&#39;, &#39;Sp 90 &#34;Maso Prudenza&#34;&#39;, &#39;&#39;, &#39;46.029290&#39;, &#39;11.111771&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;1296&#39;, &#39;32651x&#39;, &#34;Sp.2 Loc. Beccache&#39;&#34;, &#39;&#39;, &#39;45.882087&#39;, &#39;11.071643&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1334&#39;, &#39;32651z&#39;, &#34;Sp.2 Loc. Beccache&#39;&#34;, &#39;&#39;, &#39;45.882063&#39;, &#39;11.071733&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1338&#39;, &#39;32661x&#39;, &#39;Sp.2 Fr. Campolongo&#39;, &#39;&#39;, &#39;45.886995&#39;, &#39;11.063902&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1339&#39;, &#39;32671x&#39;, &#39;Sp.2 Noriglio&#39;, &#39;&#39;, &#39;45.884263&#39;, &#39;11.070323&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1340&#39;, &#39;32671z&#39;, &#39;Sp.2 Noriglio&#39;, &#39;&#39;, &#39;45.884371&#39;, &#39;11.069842&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1341&#39;, &#39;32661z&#39;, &#39;Sp.2 Fr. Campolongo&#39;, &#39;&#39;, &#39;45.886988&#39;, &#39;11.063994&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2217&#39;, &#39;35021x&#39;, &#39;Brancolino Sp.90&#39;, &#39;&#39;, &#39;45.900719&#39;, &#39;11.020254&#39;, &#39;15091&#39;, &#39;1&#39;]
+[&#39;2218&#39;, &#39;35021z&#39;, &#39;Brancolino Sp.90&#39;, &#39;&#39;, &#39;45.900853&#39;, &#39;11.020410&#39;, &#39;15091&#39;, &#39;1&#39;]
+[&#39;2285&#39;, &#39;38601z&#39;, &#39;Sp.20 S.Sisinio&#39;, &#39;&#39;, &#39;45.924877&#39;, &#39;11.021092&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2286&#39;, &#39;38611z&#39;, &#39;Sp.20 Zisi&#39;, &#39;&#39;, &#39;45.931009&#39;, &#39;11.022102&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2287&#39;, &#39;38611x&#39;, &#39;Sp.20 Zisi&#39;, &#39;&#39;, &#39;45.931416&#39;, &#39;11.022116&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2288&#39;, &#39;38601x&#39;, &#39;Sp.20 S.Sisinio&#39;, &#39;&#39;, &#39;45.924981&#39;, &#39;11.021093&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2363&#39;, &#39;38591x&#39;, &#39;Sp.20 Maso Tiaf&#39;, &#39;&#39;, &#39;45.936511&#39;, &#39;11.008597&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2364&#39;, &#39;38621x&#39;, &#39;Sp.20 Bivio Per Bordala&#39;, &#39;&#39;, &#39;45.930910&#39;, &#39;11.007172&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2367&#39;, &#39;38621z&#39;, &#39;Sp.20 Bivio Per Bordala&#39;, &#39;&#39;, &#39;45.930864&#39;, &#39;11.007233&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2368&#39;, &#39;38591z&#39;, &#39;Sp.20 Maso Tiaf&#39;, &#39;&#39;, &#39;45.935890&#39;, &#39;11.008594&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2377&#39;, &#39;23050x&#39;, &#39;Sp 76 Bivio S.Lazzaro&#39;, &#39;&#39;, &#39;46.129006&#39;, &#39;11.115500&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2510&#39;, &#39;32641z&#39;, &#39;Sp.2 Bivio Per Cisterna&#39;, &#39;&#39;, &#39;45.881281&#39;, &#39;11.075365&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2843&#39;, &#39;35161x&#39;, &#39;Sp.20 Bivio Noarna&#39;, &#39;&#39;, &#39;45.915825&#39;, &#39;11.016559&#39;, &#39;15091&#39;, &#39;2&#39;]
+[&#39;2844&#39;, &#39;35161z&#39;, &#39;Sp.20 Bivio Noarna&#39;, &#39;&#39;, &#39;45.915880&#39;, &#39;11.016803&#39;, &#39;15091&#39;, &#39;2&#39;]
+[&#39;2897&#39;, &#39;32218x&#39;, &#39;Sp.23 &#34;Nero Cubo&#34;&#39;, &#39;&#39;, &#39;45.855421&#39;, &#39;11.002179&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2936&#39;, &#39;37551z&#39;, &#39;Sp.89 Maso Brentegam&#39;, &#39;&#39;, &#39;45.880439&#39;, &#39;11.050882&#39;, &#39;10101&#39;, &#39;2&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2340,7 +2411,9 @@ ciao\nSoftPython
 <li><p><code class="docutils literal notranslate"><span class="pre">print(&quot;ciao\\mondo&quot;)</span></code></p></li>
 </ul>
 <p>Che differenze noti? E se metti il carattere <code class="docutils literal notranslate"><span class="pre">r</span></code> <em>davanti</em> alle stringhe (quindi subito prima del doppio apice <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, come in <code class="docutils literal notranslate"><span class="pre">r&quot;hello&quot;</span></code>), che succede ?</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
@@ -2357,6 +2430,35 @@ ciao\nSoftPython
 <span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ciao\nmondo&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ciao</span><span class="se">\\</span><span class="s2">mondo&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;ciao\rmondo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ciao mondo
+ciao    mondo
+ciao
+mondo
+ciao\mondo
+mondo
+ciao mondo
+ciao\tmondo
+ciao\nmondo
+ciao\\mondo
+ciao\rmondo
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2495,13 +2597,27 @@ None
 </div>
 <p>Vediamo che Python ci restituisce l’oggetto None, per indicare che non ha trovato nulla.</p>
 <p><strong>ESERCIZIO</strong>: Perchè in questo caso abbiamo messo il <code class="docutils literal notranslate"><span class="pre">print</span></code>? Per capirlo, prova a scrivere qui sotto la chiamata alla <code class="docutils literal notranslate"><span class="pre">re.search</span></code> senza usare la <code class="docutils literal notranslate"><span class="pre">print</span></code>, e vedi che succede (non dovrebbe succedere proprio niente perchè Jupyter di default non ci mostra gli oggetti <code class="docutils literal notranslate"><span class="pre">None</span></code> a meno che non li stampiamo esplicitamente)</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="c1"># scrivi qui</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>
@@ -2564,7 +2680,9 @@ None
 </pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 3.2</strong>: Se provi a stampare direttamente il risultato restituito <code class="docutils literal notranslate"><span class="pre">re.finditer</span></code>, non otterrai molte informazioni. Conosci un modo per ottenere una bella lista senza usare il for ?</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
@@ -2573,6 +2691,27 @@ None
 
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="nb">list</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="s1">&#39;abcabd&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;ab&#39;&gt;,
+ &lt;_sre.SRE_Match object; span=(3, 5), match=&#39;ab&#39;&gt;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2610,7 +2749,9 @@ None
 </pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 3.3</strong>: Prova a cercare tutte le stringhe in <code class="docutils literal notranslate"><span class="pre">abcabd</span></code> che iniziano con <code class="docutils literal notranslate"><span class="pre">a</span></code> e sono seguite da due caratteri qualsiasi:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
@@ -2634,8 +2775,32 @@ None
 &lt;_sre.SRE_Match object; span=(3, 6), match=&#39;abd&#39;&gt;
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;_sre.SRE_Match object; span=(0, 3), match=&#39;abc&#39;&gt;
+&lt;_sre.SRE_Match object; span=(3, 6), match=&#39;abd&#39;&gt;
+</pre></div></div>
+</div>
 <p><strong>✪ ESERCIZIO 3.4</strong>: Prova a cercare tutte le stringhe in <code class="docutils literal notranslate"><span class="pre">abcabd</span></code> che iniziano con un carattere qualsiasi e sono seguite da <code class="docutils literal notranslate"><span class="pre">b</span></code>:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
@@ -2645,6 +2810,27 @@ None
 
 <span class="k">for</span> <span class="n">trovato</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s1">&#39;.b&#39;</span><span class="p">,</span> <span class="s1">&#39;abcabd&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">trovato</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;ab&#39;&gt;
+&lt;_sre.SRE_Match object; span=(3, 5), match=&#39;ab&#39;&gt;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2687,7 +2873,9 @@ None
 </div>
 </div>
 <p><strong>✪✪ ESERCIZIO 3.5</strong>: Prova a trovare tutte le stringhe che contengono un punto seguito da qualsiasi carattere nella stringa <code class="docutils literal notranslate"><span class="pre">'il.corso.soft.python'</span></code> (dovrebbe trovare match per <code class="docutils literal notranslate"><span class="pre">.c</span></code>, <code class="docutils literal notranslate"><span class="pre">.s</span></code> e <code class="docutils literal notranslate"><span class="pre">.p</span></code>):</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
@@ -2698,6 +2886,29 @@ None
 
 <span class="k">for</span> <span class="n">trovato</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s1">&#39;\..&#39;</span><span class="p">,</span> <span class="s1">&#39;il.corso.soft.python&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">trovato</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;_sre.SRE_Match object; span=(2, 4), match=&#39;.c&#39;&gt;
+&lt;_sre.SRE_Match object; span=(8, 10), match=&#39;.s&#39;&gt;
+&lt;_sre.SRE_Match object; span=(13, 15), match=&#39;.p&#39;&gt;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2791,7 +3002,9 @@ None
 </pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 3.6</strong>: Copia a mano la funzione di sopra qua sotto, ed eseguila con Control + Invio:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
@@ -2809,6 +3022,28 @@ None
         <span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">))</span>
 
 <span class="n">test_regex</span><span class="p">(</span><span class="s2">&quot;SP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;Sp&#39;&gt;
+&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;Sp&#39;&gt;
+&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;sp&#39;&gt;
+&lt;_sre.SRE_Match object; span=(11, 13), match=&#39;Sp&#39;&gt;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2855,7 +3090,9 @@ None
 <li><p><code class="docutils literal notranslate"><span class="pre">\d</span></code> sono due caratteri ma ai fini della regex sono da considerarsi uno solo. Ogni volta che vediamo il carattere <code class="docutils literal notranslate"><span class="pre">\</span></code> è da considerarsi assieme al carattere successivo. Il significato in questo caso è una qualsiasi cifra tra <code class="docutils literal notranslate"><span class="pre">0</span></code> e <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p></li>
 </ul>
 <p><strong>✪✪✪ ESERCIZIO 3.7</strong>: Prova ad integrare l’esempio di regex qui sopra con quello di lettura del file <a class="reference internal" href="stops.html"><span class="doc">stops.txt</span></a> precedente, usando nell’<code class="docutils literal notranslate"><span class="pre">if</span></code> le regex invece delle <code class="docutils literal notranslate"><span class="pre">find</span></code> (se non lo hai risolto prendilo <a class="reference internal" href="#"><span class="doc">dalle soluzioni</span></a>):</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
@@ -2870,6 +3107,61 @@ None
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;sp.\d\d&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;5&#39;, &#39;28060z&#39;, &#39;Sp 85 Bivio Sopramonte&#39;, &#39;&#39;, &#39;46.085226&#39;, &#39;11.069313&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;48&#39;, &#39;22080z&#39;, &#39;Sp 76 Carpenedi&#39;, &#39;&#39;, &#39;46.117195&#39;, &#39;11.108678&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;49&#39;, &#39;22080x&#39;, &#39;Sp 76 Carpenedi&#39;, &#39;&#39;, &#39;46.117171&#39;, &#39;11.108438&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;104&#39;, &#39;24040z&#39;, &#39;Sp 131 &#34;Maso Pradiscola&#34;&#39;, &#39;&#39;, &#39;46.083189&#39;, &#39;11.135736&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;105&#39;, &#39;24040x&#39;, &#39;Sp 131 &#34;Maso Pradiscola&#34;&#39;, &#39;&#39;, &#39;46.083255&#39;, &#39;11.135874&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;109&#39;, &#39;24350z&#39;, &#39;Sp 131 &#34;Res. Silvana&#34;&#39;, &#39;&#39;, &#39;46.097726&#39;, &#39;11.126962&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;110&#39;, &#39;24350x&#39;, &#39;Sp 131 &#34;Res. Silvana&#34;&#39;, &#39;&#39;, &#39;46.097493&#39;, &#39;11.126925&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;115&#39;, &#39;24355z&#39;, &#39;Sp 131 Al Maso Specchio&#39;, &#39;&#39;, &#39;46.104391&#39;, &#39;11.123568&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;116&#39;, &#39;24355x&#39;, &#39;Sp 131 Al Maso Specchio&#39;, &#39;&#39;, &#39;46.104353&#39;, &#39;11.123420&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;131&#39;, &#39;23040z&#39;, &#39;Sp 76 &#34;Piac&#34;&#39;, &#39;&#39;, &#39;46.126690&#39;, &#39;11.114532&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;133&#39;, &#39;23035z&#39;, &#39;Sp 76 &#34;Maregioli&#34;&#39;, &#39;&#39;, &#39;46.130755&#39;, &#39;11.121750&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;134&#39;, &#39;23035x&#39;, &#39;Sp 76 &#34;Maregioli&#34;&#39;, &#39;&#39;, &#39;46.130836&#39;, &#39;11.121666&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;139&#39;, &#39;23045z&#39;, &#39;Sp 76 &#34;Via Rossa&#34;&#39;, &#39;&#39;, &#39;46.119858&#39;, &#39;11.111416&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;140&#39;, &#39;23045x&#39;, &#39;Sp 76 &#34;Via Rossa&#34;&#39;, &#39;&#39;, &#39;46.119812&#39;, &#39;11.111266&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;143&#39;, &#39;23055z&#39;, &#39;Sp 76 Dos di Lamar&#39;, &#39;&#39;, &#39;46.124939&#39;, &#39;11.113463&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;144&#39;, &#39;23055x&#39;, &#39;Sp 76 Dos di Lamar&#39;, &#39;&#39;, &#39;46.124718&#39;, &#39;11.113018&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;154&#39;, &#39;24520z&#39;, &#39;Sp 131 &#34;Paganin&#34;&#39;, &#39;&#39;, &#39;46.106288&#39;, &#39;11.137610&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;155&#39;, &#39;24520x&#39;, &#39;Sp 131 &#34;Paganin&#34;&#39;, &#39;&#39;, &#39;46.106524&#39;, &#39;11.137306&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;245&#39;, &#39;28045z&#39;, &#39;Sp 85 &#34;Soraval&#34;&#39;, &#39;&#39;, &#39;46.083258&#39;, &#39;11.063955&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;246&#39;, &#39;28045x&#39;, &#39;Sp 85 &#34;Soraval&#34;&#39;, &#39;&#39;, &#39;46.083094&#39;, &#39;11.063877&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;439&#39;, &#39;27050z&#39;, &#39;Sp 90 &#34;Maso Prudenza&#34;&#39;, &#39;&#39;, &#39;46.028867&#39;, &#39;11.111521&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;440&#39;, &#39;27050x&#39;, &#39;Sp 90 &#34;Maso Prudenza&#34;&#39;, &#39;&#39;, &#39;46.029290&#39;, &#39;11.111771&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2217&#39;, &#39;35021x&#39;, &#39;Brancolino Sp.90&#39;, &#39;&#39;, &#39;45.900719&#39;, &#39;11.020254&#39;, &#39;15091&#39;, &#39;1&#39;]
+[&#39;2218&#39;, &#39;35021z&#39;, &#39;Brancolino Sp.90&#39;, &#39;&#39;, &#39;45.900853&#39;, &#39;11.020410&#39;, &#39;15091&#39;, &#39;1&#39;]
+[&#39;2285&#39;, &#39;38601z&#39;, &#39;Sp.20 S.Sisinio&#39;, &#39;&#39;, &#39;45.924877&#39;, &#39;11.021092&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2286&#39;, &#39;38611z&#39;, &#39;Sp.20 Zisi&#39;, &#39;&#39;, &#39;45.931009&#39;, &#39;11.022102&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2287&#39;, &#39;38611x&#39;, &#39;Sp.20 Zisi&#39;, &#39;&#39;, &#39;45.931416&#39;, &#39;11.022116&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2288&#39;, &#39;38601x&#39;, &#39;Sp.20 S.Sisinio&#39;, &#39;&#39;, &#39;45.924981&#39;, &#39;11.021093&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2363&#39;, &#39;38591x&#39;, &#39;Sp.20 Maso Tiaf&#39;, &#39;&#39;, &#39;45.936511&#39;, &#39;11.008597&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2364&#39;, &#39;38621x&#39;, &#39;Sp.20 Bivio Per Bordala&#39;, &#39;&#39;, &#39;45.930910&#39;, &#39;11.007172&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2367&#39;, &#39;38621z&#39;, &#39;Sp.20 Bivio Per Bordala&#39;, &#39;&#39;, &#39;45.930864&#39;, &#39;11.007233&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2368&#39;, &#39;38591z&#39;, &#39;Sp.20 Maso Tiaf&#39;, &#39;&#39;, &#39;45.935890&#39;, &#39;11.008594&#39;, &#39;18511&#39;, &#39;2&#39;]
+[&#39;2377&#39;, &#39;23050x&#39;, &#39;Sp 76 Bivio S.Lazzaro&#39;, &#39;&#39;, &#39;46.129006&#39;, &#39;11.115500&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2843&#39;, &#39;35161x&#39;, &#39;Sp.20 Bivio Noarna&#39;, &#39;&#39;, &#39;45.915825&#39;, &#39;11.016559&#39;, &#39;15091&#39;, &#39;2&#39;]
+[&#39;2844&#39;, &#39;35161z&#39;, &#39;Sp.20 Bivio Noarna&#39;, &#39;&#39;, &#39;45.915880&#39;, &#39;11.016803&#39;, &#39;15091&#39;, &#39;2&#39;]
+[&#39;2897&#39;, &#39;32218x&#39;, &#39;Sp.23 &#34;Nero Cubo&#34;&#39;, &#39;&#39;, &#39;45.855421&#39;, &#39;11.002179&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2936&#39;, &#39;37551z&#39;, &#39;Sp.89 Maso Brentegam&#39;, &#39;&#39;, &#39;45.880439&#39;, &#39;11.050882&#39;, &#39;10101&#39;, &#39;2&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3115,7 +3407,9 @@ Tutti i numeri che contengono 232 o 233 o 234
 -----
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
@@ -3140,6 +3434,47 @@ Tutti i numeri che contengono 232 o 233 o 234
 <span class="c1"># Oppure</span>
 <span class="c1">#test_regex(&quot;23[2-4]&quot;)</span>
 
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Tutti i numeri che contengono 32
+3232123323
+3383123222
+-----
+Tutti i numeri che finiscono per 67
+3471234567
+3303303367
+-----
+Tutti i numeri che hanno come quarta cifra 3
+3303303367
+3383123222
+-----
+Tutti i numeri che contengono 232 o 233 o 234
+3471234567
+3232123323
+3383123222
+-----
+3471234567
+3232123323
+3383123222
+-----
+3471234567
+3232123323
+3383123222
+-----
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3327,7 +3662,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;a&#39; ma dovrebbe farlo!
 ERRORE: &#39;&#39; non matcha il pattern &#39;a&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
@@ -3339,6 +3676,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;a&#39; ma dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;bb&quot;</span><span class="p">]</span>
            <span class="p">)</span>
 
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3364,7 +3710,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;ab+&#39; ma dovrebbe farlo!
 ERRORE: &#39;&#39; non matcha il pattern &#39;ab+&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
@@ -3376,6 +3724,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;ab+&#39; ma dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;bbb&quot;</span><span class="p">,</span><span class="s2">&quot;aa&quot;</span><span class="p">]</span>
            <span class="p">)</span>
 
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3401,7 +3758,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;ab*&#39; ma dovrebbe farlo!
 ERRORE: &#39;&#39; non matcha il pattern &#39;ab*&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
@@ -3413,6 +3772,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;ab*&#39; ma dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;bb&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">]</span>
            <span class="p">)</span>
 
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3438,7 +3806,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^[ab]+[^ab]$&#39; ma dovrebbe farl
 ERRORE: &#39;&#39; non matcha il pattern &#39;^[ab]+[^ab]$&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
@@ -3451,6 +3821,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^[ab]+[^ab]$&#39; ma dovrebbe farl
            <span class="p">)</span>
 
 
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3476,7 +3855,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;.?\.{3}$&#39; ma dovrebbe farlo!
 ERRORE: &#39;&#39; non matcha il pattern &#39;.?\.{3}$&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
@@ -3487,6 +3868,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;.?\.{3}$&#39; ma dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;bar..&quot;</span><span class="p">,</span><span class="s2">&quot;... &quot;</span><span class="p">]</span>
            <span class="p">)</span>
 
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3569,7 +3959,9 @@ ERRORE: &#39;3 &#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
 ERRORE: &#39;2 &#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
@@ -3580,6 +3972,15 @@ ERRORE: &#39;2 &#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;3 ramarri&quot;</span><span class="p">,</span> <span class="s2">&quot;2 carri&quot;</span><span class="p">],</span>
             <span class="p">[</span><span class="s2">&quot;tre ramarri&quot;</span><span class="p">,</span> <span class="s2">&quot;due carri&quot;</span><span class="p">,</span> <span class="s2">&quot;3 &quot;</span><span class="p">,</span> <span class="s2">&quot;2 &quot;</span><span class="p">]</span>
            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3606,7 +4007,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^(w{3}\.)?\w\w+\.\w\w+&#39; ma dov
 ERRORE: &#39;&#39; non matcha il pattern &#39;^(w{3}\.)?\w\w+\.\w\w+&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
@@ -3617,6 +4020,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^(w{3}\.)?\w\w+\.\w\w+&#39; ma dov
             <span class="p">[</span><span class="s2">&quot;www.google.it&quot;</span><span class="p">,</span><span class="s2">&quot;youtube.com&quot;</span><span class="p">],</span>
             <span class="p">[</span><span class="s2">&quot;ciaociao&quot;</span><span class="p">,</span><span class="s2">&quot; www.google.com&quot;</span><span class="p">]</span>
            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3643,7 +4055,9 @@ ERRORE: &#39;11/20/2010&#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
 ERRORE: &#39;12-12-123&#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
@@ -3654,6 +4068,15 @@ ERRORE: &#39;12-12-123&#39; matcha il pattern &#39;&#39; ma non dovrebbe farlo!
             <span class="p">[</span><span class="s2">&quot;21.12.2017&quot;</span><span class="p">,</span> <span class="s2">&quot;11/01/2018&quot;</span><span class="p">,</span> <span class="s2">&quot;16-12-89&quot;</span><span class="p">],</span>
             <span class="p">[</span><span class="s2">&quot;1621211003&quot;</span><span class="p">,</span> <span class="s2">&quot;11/20/2010&quot;</span><span class="p">,</span> <span class="s2">&quot;12-12-123&quot;</span><span class="p">]</span>
            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -3713,8 +4136,10 @@ None
 </pre></div></div>
 </div>
 <p><strong>✪✪ DOMANDA 6.1</strong>: Riesci a capire la differenza? <code class="docutils literal notranslate"><span class="pre">help(re.match)</span></code> e <code class="docutils literal notranslate"><span class="pre">help(re.search)</span></code> possono tornarti utili.</p>
-<p><strong>RISPOSTA</strong>: Match cerca dal primo carattere.</p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Match cerca dal primo carattere.</p>
+</div></div>
 <div class="section" id="7.-Sostituzioni-con-re.sub">
 <h2>7. Sostituzioni con <code class="docutils literal notranslate"><span class="pre">re.sub</span></code><a class="headerlink" href="#7.-Sostituzioni-con-re.sub" title="Permalink to this headline">¶</a></h2>
 <p>Le espressioni regolari possono anche essere utilizzate per sostituire del testo, un po’ come il metodo <code class="docutils literal notranslate"><span class="pre">replace()</span></code> sulle stringhe. Quando chiamiamo il metodo <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code>, per ricevere in output la stringa elaborata, dobbiamo passare come argomenti:</p>
@@ -3822,7 +4247,9 @@ Sp.89 Maso Brentegam DIVENTA Strada Provinciale 89 Maso Brentegam
 tra <code class="docutils literal notranslate"><span class="pre">(</span></code> and <code class="docutils literal notranslate"><span class="pre">)</span></code> diventa un gruppo e per richiamarlo è necessario soltando aggiungere un <em>backslash</em> seguito dal numero del gruppo, contando da sinistra a destra.</p>
 <p>Nel nostro caso esiste un solo gruppo quindi non possiamo sbagliare: la ricerca prima esamina il testo per trovare <code class="docutils literal notranslate"><span class="pre">Sp</span></code> seguito da un carattere e poi (da un gruppo definito come) una o più cifre. La stringa di sostituzione riporterà prima la scritta <code class="docutils literal notranslate"><span class="pre">Strada</span> <span class="pre">Provinciale</span></code> poi uno spazio ed infine la cifra che ha verificato il gruppo definito nel pattern di ricerca.</p>
 <p><strong>✪✪✪ ESERCIZIO 7.1</strong>: Prova a ricopiare il codice precedente qua sotto, e compi la stessa operazione ma questa volta con le <em>Strade Statali</em>. Riesci a scrivere pattern diversi di ricerca e sostituzione per farlo?</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
@@ -3890,7 +4317,70 @@ tra <code class="docutils literal notranslate"><span class="pre">(</span></code>
 [&#39;2907&#39;, &#39;36541x&#39;, &#39;Calliano Strada Statale 12&#39;, &#39;&#39;, &#39;45.934334&#39;, &#39;11.095870&#39;, &#39;16501&#39;, &#39;2&#39;]
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il metodo 1</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;64&#39;, &#39;22075x&#39;, &#39;Gardolo Svincolo Strada Statale 12&#39;, &#39;&#39;, &#39;46.106227&#39;, &#39;11.109072&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;72&#39;, &#39;22230z&#39;, &#39;Strada Statale 12 &#34;Zona Ind.Le Ftm&#34;&#39;, &#39;&#39;, &#39;46.119309&#39;, &#39;11.106123&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;94&#39;, &#39;26040z&#39;, &#39;Strada Statale 12 &#34;Casteller&#34;&#39;, &#39;&#39;, &#39;46.025284&#39;, &#39;11.132751&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;95&#39;, &#39;26040x&#39;, &#39;Strada Statale 12 &#34;Casteller&#34;&#39;, &#39;&#39;, &#39;46.025707&#39;, &#39;11.132791&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;99&#39;, &#39;26045z&#39;, &#39;Strada Statale 12 &#34;Le Caverne&#34;&#39;, &#39;&#39;, &#39;46.030862&#39;, &#39;11.132677&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;100&#39;, &#39;26045x&#39;, &#39;Strada Statale 12 &#34;Le Caverne&#34;&#39;, &#39;&#39;, &#39;46.030338&#39;, &#39;11.132911&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;158&#39;, &#39;28055z&#39;, &#39;Strada Statale 45 &#34;Montevideo&#34;&#39;, &#39;&#39;, &#39;46.080499&#39;, &#39;11.098333&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;214&#39;, &#39;22230x&#39;, &#39;Strada Statale 12 &#34;Zona Ind.Le Ftm&#34;&#39;, &#39;&#39;, &#39;46.120242&#39;, &#39;11.105822&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;278&#39;, &#39;21680z&#39;, &#39;Strada Statale 47 Muralta&#39;, &#39;&#39;, &#39;46.077059&#39;, &#39;11.131773&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;286&#39;, &#39;22710x&#39;, &#39;Strada Statale 12 &#34;Pioppeto&#34;&#39;, &#39;&#39;, &#39;46.108369&#39;, &#39;11.108528&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;287&#39;, &#39;22715x&#39;, &#39;Strada Statale 12 Bivio Meano&#39;, &#39;&#39;, &#39;46.116062&#39;, &#39;11.106197&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;288&#39;, &#39;22720x&#39;, &#39;Strada Statale 12 Canova&#39;, &#39;&#39;, &#39;46.098985&#39;, &#39;11.111739&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;289&#39;, &#39;22705x&#39;, &#39;Strada Statale 12 &#34;Paludi&#34;&#39;, &#39;via Bolzano incrocio via Noce&#39;, &#39;46.102643&#39;, &#39;11.110490&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;290&#39;, &#39;22720z&#39;, &#39;Strada Statale 12 Canova&#39;, &#39;&#39;, &#39;46.100264&#39;, &#39;11.111578&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;340&#39;, &#39;25815z&#39;, &#39;Strada Statale 349 Pozzata&#39;, &#39;&#39;, &#39;46.039534&#39;, &#39;11.144070&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;1350&#39;, &#39;31221z&#39;, &#39;Lizzanella Strada Statale 12&#39;, &#39;&#39;, &#39;45.875522&#39;, &#39;11.031822&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1351&#39;, &#39;31221x&#39;, &#39;Lizzanella Strada Statale 12&#39;, &#39;&#39;, &#39;45.875686&#39;, &#39;11.032030&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1422&#39;, &#39;32221z&#39;, &#39;Strada Statale 12 &#34;Rovercenter&#34;&#39;, &#39;&#39;, &#39;45.864490&#39;, &#39;11.029338&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2289&#39;, &#39;32251x&#39;, &#39;Strada Statale 240 &#34;Millennium Sud&#34;&#39;, &#39;&#39;, &#39;45.868678&#39;, &#39;11.014119&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2291&#39;, &#39;32251z&#39;, &#39;Strada Statale 240 &#34;Millennium Sud&#34;&#39;, &#39;&#39;, &#39;45.868802&#39;, &#39;11.014170&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2293&#39;, &#39;32241z&#39;, &#39;Strada Statale 240 &#34;Millennium Nord&#34;&#39;, &#39;&#39;, &#39;45.870320&#39;, &#39;11.016768&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2294&#39;, &#39;32241x&#39;, &#39;Strada Statale 240 &#34;Millennium Nord&#34;&#39;, &#39;&#39;, &#39;45.870588&#39;, &#39;11.017358&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2337&#39;, &#39;39041z&#39;, &#39;Volano Strada Statale 12&#39;, &#39;&#39;, &#39;45.917871&#39;, &#39;11.064024&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2338&#39;, &#39;39041x&#39;, &#39;Volano Strada Statale 12&#39;, &#39;&#39;, &#39;45.917904&#39;, &#39;11.063866&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2418&#39;, &#39;22710z&#39;, &#39;Strada Statale 12 &#34;Pioppeto&#34;&#39;, &#39;&#39;, &#39;46.108623&#39;, &#39;11.108717&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;2419&#39;, &#39;22730z&#39;, &#39;Strada Statale 12 S.Anna&#39;, &#39;&#39;, &#39;46.112409&#39;, &#39;11.107438&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2438&#39;, &#39;22725z&#39;, &#39;Strada Statale 12 Talvera&#39;, &#39;&#39;, &#39;46.103288&#39;, &#39;11.110545&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;2500&#39;, &#39;21685z&#39;, &#39;Strada Statale 45 &#34;Scala&#34;&#39;, &#39;&#39;, &#39;46.077367&#39;, &#39;11.099792&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2514&#39;, &#39;34101x&#39;, &#34;Strada Statale 240 Ponte Sull&#39;adige&#34;, &#39;&#39;, &#39;45.863191&#39;, &#39;10.997289&#39;, &#39;14051&#39;, &#39;2&#39;]
+[&#39;2515&#39;, &#39;34101z&#39;, &#34;Strada Statale 240 Ponte Sull&#39;adige&#34;, &#39;&#39;, &#39;45.863235&#39;, &#39;10.997355&#39;, &#39;14051&#39;, &#39;2&#39;]
+[&#39;2699&#39;, &#39;32221x&#39;, &#39;Strada Statale 12 &#34;Rovercenter&#34;&#39;, &#39;&#39;, &#39;45.864206&#39;, &#39;11.029050&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2701&#39;, &#39;25815x&#39;, &#39;Strada Statale 349 Pozzata&#39;, &#39;&#39;, &#39;46.041779&#39;, &#39;11.142383&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2780&#39;, &#39;21687z&#39;, &#39;Strada Statale 45 S.Giorgio&#39;, &#39;&#39;, &#39;46.078668&#39;, &#39;11.099302&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2806&#39;, &#39;32236x&#39;, &#39;Strada Statale 240 &#34;Alla Staffa&#34;&#39;, &#39;&#39;, &#39;45.872760&#39;, &#39;11.024323&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2838&#39;, &#39;39061z&#39;, &#39;Strada Statale 12 Fornaci&#39;, &#39;&#39;, &#39;45.919443&#39;, &#39;11.085327&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2856&#39;, &#39;36511z&#39;, &#39;Strada Statale 12 Castel Pietra&#39;, &#39;&#39;, &#39;45.921721&#39;, &#39;11.091309&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2857&#39;, &#39;36511x&#39;, &#39;Strada Statale 12 Castel Pietra&#39;, &#39;&#39;, &#39;45.922938&#39;, &#39;11.092225&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2858&#39;, &#39;36521x&#39;, &#39;Strada Statale 12 Campagnole&#39;, &#39;&#39;, &#39;45.928854&#39;, &#39;11.093011&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2859&#39;, &#39;36521z&#39;, &#39;Strada Statale 12 Campagnole&#39;, &#39;&#39;, &#39;45.928851&#39;, &#39;11.093153&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2870&#39;, &#39;32236z&#39;, &#39;Strada Statale 240 &#34;Alla Staffa&#34;&#39;, &#39;&#39;, &#39;45.872820&#39;, &#39;11.024167&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2877&#39;, &#39;32256x&#39;, &#39;Strada Statale 240 &#34;Meb&#34;&#39;, &#39;&#39;, &#39;45.867858&#39;, &#39;11.011826&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2906&#39;, &#39;36541z&#39;, &#39;Calliano Strada Statale 12&#39;, &#39;&#39;, &#39;45.934315&#39;, &#39;11.096017&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2907&#39;, &#39;36541x&#39;, &#39;Calliano Strada Statale 12&#39;, &#39;&#39;, &#39;45.934334&#39;, &#39;11.095870&#39;, &#39;16501&#39;, &#39;2&#39;]
+</pre></div></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
@@ -3905,6 +4395,67 @@ tra <code class="docutils literal notranslate"><span class="pre">(</span></code>
                              <span class="c1">#       l&#39;abbiamo messo per non stampare tutto il dataset</span>
             <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">nuova</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;64&#39;, &#39;22075x&#39;, &#39;Gardolo Svincolo Strada Statale.12&#39;, &#39;&#39;, &#39;46.106227&#39;, &#39;11.109072&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;72&#39;, &#39;22230z&#39;, &#39;Strada Statale 12 &#34;Zona Ind.Le Ftm&#34;&#39;, &#39;&#39;, &#39;46.119309&#39;, &#39;11.106123&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;94&#39;, &#39;26040z&#39;, &#39;Strada Statale 12 &#34;Casteller&#34;&#39;, &#39;&#39;, &#39;46.025284&#39;, &#39;11.132751&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;95&#39;, &#39;26040x&#39;, &#39;Strada Statale 12 &#34;Casteller&#34;&#39;, &#39;&#39;, &#39;46.025707&#39;, &#39;11.132791&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;99&#39;, &#39;26045z&#39;, &#39;Strada Statale 12 &#34;Le Caverne&#34;&#39;, &#39;&#39;, &#39;46.030862&#39;, &#39;11.132677&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;100&#39;, &#39;26045x&#39;, &#39;Strada Statale 12 &#34;Le Caverne&#34;&#39;, &#39;&#39;, &#39;46.030338&#39;, &#39;11.132911&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;158&#39;, &#39;28055z&#39;, &#39;Strada Statale 45 &#34;Montevideo&#34;&#39;, &#39;&#39;, &#39;46.080499&#39;, &#39;11.098333&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;214&#39;, &#39;22230x&#39;, &#39;Strada Statale 12 &#34;Zona Ind.Le Ftm&#34;&#39;, &#39;&#39;, &#39;46.120242&#39;, &#39;11.105822&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;278&#39;, &#39;21680z&#39;, &#39;Strada Statale 47 Muralta&#39;, &#39;&#39;, &#39;46.077059&#39;, &#39;11.131773&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;286&#39;, &#39;22710x&#39;, &#39;Strada Statale 12 &#34;Pioppeto&#34;&#39;, &#39;&#39;, &#39;46.108369&#39;, &#39;11.108528&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;287&#39;, &#39;22715x&#39;, &#39;Strada Statale 12 Bivio Meano&#39;, &#39;&#39;, &#39;46.116062&#39;, &#39;11.106197&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;288&#39;, &#39;22720x&#39;, &#39;Strada Statale 12 Canova&#39;, &#39;&#39;, &#39;46.098985&#39;, &#39;11.111739&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;289&#39;, &#39;22705x&#39;, &#39;Strada Statale 12 &#34;Paludi&#34;&#39;, &#39;via Bolzano incrocio via Noce&#39;, &#39;46.102643&#39;, &#39;11.110490&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;290&#39;, &#39;22720z&#39;, &#39;Strada Statale 12 Canova&#39;, &#39;&#39;, &#39;46.100264&#39;, &#39;11.111578&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;340&#39;, &#39;25815z&#39;, &#39;Strada Statale 349 Pozzata&#39;, &#39;&#39;, &#39;46.039534&#39;, &#39;11.144070&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;1350&#39;, &#39;31221z&#39;, &#39;Lizzanella Strada Statale.12&#39;, &#39;&#39;, &#39;45.875522&#39;, &#39;11.031822&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1351&#39;, &#39;31221x&#39;, &#39;Lizzanella Strada Statale.12&#39;, &#39;&#39;, &#39;45.875686&#39;, &#39;11.032030&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;1422&#39;, &#39;32221z&#39;, &#39;Strada Statale.12 &#34;Rovercenter&#34;&#39;, &#39;&#39;, &#39;45.864490&#39;, &#39;11.029338&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2289&#39;, &#39;32251x&#39;, &#39;Strada Statale.240 &#34;Millennium Sud&#34;&#39;, &#39;&#39;, &#39;45.868678&#39;, &#39;11.014119&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2291&#39;, &#39;32251z&#39;, &#39;Strada Statale.240 &#34;Millennium Sud&#34;&#39;, &#39;&#39;, &#39;45.868802&#39;, &#39;11.014170&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2293&#39;, &#39;32241z&#39;, &#39;Strada Statale.240 &#34;Millennium Nord&#34;&#39;, &#39;&#39;, &#39;45.870320&#39;, &#39;11.016768&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2294&#39;, &#39;32241x&#39;, &#39;Strada Statale.240 &#34;Millennium Nord&#34;&#39;, &#39;&#39;, &#39;45.870588&#39;, &#39;11.017358&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2337&#39;, &#39;39041z&#39;, &#39;Volano Strada Statale.12&#39;, &#39;&#39;, &#39;45.917871&#39;, &#39;11.064024&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2338&#39;, &#39;39041x&#39;, &#39;Volano Strada Statale.12&#39;, &#39;&#39;, &#39;45.917904&#39;, &#39;11.063866&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2418&#39;, &#39;22710z&#39;, &#39;Strada Statale 12 &#34;Pioppeto&#34;&#39;, &#39;&#39;, &#39;46.108623&#39;, &#39;11.108717&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;2419&#39;, &#39;22730z&#39;, &#39;Strada Statale 12 S.Anna&#39;, &#39;&#39;, &#39;46.112409&#39;, &#39;11.107438&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2438&#39;, &#39;22725z&#39;, &#39;Strada Statale 12 Talvera&#39;, &#39;&#39;, &#39;46.103288&#39;, &#39;11.110545&#39;, &#39;10110&#39;, &#39;1&#39;]
+[&#39;2500&#39;, &#39;21685z&#39;, &#39;Strada Statale 45 &#34;Scala&#34;&#39;, &#39;&#39;, &#39;46.077367&#39;, &#39;11.099792&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2514&#39;, &#39;34101x&#39;, &#34;Strada Statale.240 Ponte Sull&#39;adige&#34;, &#39;&#39;, &#39;45.863191&#39;, &#39;10.997289&#39;, &#39;14051&#39;, &#39;2&#39;]
+[&#39;2515&#39;, &#39;34101z&#39;, &#34;Strada Statale.240 Ponte Sull&#39;adige&#34;, &#39;&#39;, &#39;45.863235&#39;, &#39;10.997355&#39;, &#39;14051&#39;, &#39;2&#39;]
+[&#39;2699&#39;, &#39;32221x&#39;, &#39;Strada Statale.12 &#34;Rovercenter&#34;&#39;, &#39;&#39;, &#39;45.864206&#39;, &#39;11.029050&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2701&#39;, &#39;25815x&#39;, &#39;Strada Statale 349 Pozzata&#39;, &#39;&#39;, &#39;46.041779&#39;, &#39;11.142383&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2780&#39;, &#39;21687z&#39;, &#39;Strada Statale 45 S.Giorgio&#39;, &#39;&#39;, &#39;46.078668&#39;, &#39;11.099302&#39;, &#39;10110&#39;, &#39;2&#39;]
+[&#39;2806&#39;, &#39;32236x&#39;, &#39;Strada Statale.240 &#34;Alla Staffa&#34;&#39;, &#39;&#39;, &#39;45.872760&#39;, &#39;11.024323&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2838&#39;, &#39;39061z&#39;, &#39;Strada Statale.12 Fornaci&#39;, &#39;&#39;, &#39;45.919443&#39;, &#39;11.085327&#39;, &#39;19011&#39;, &#39;2&#39;]
+[&#39;2856&#39;, &#39;36511z&#39;, &#39;Strada Statale.12 Castel Pietra&#39;, &#39;&#39;, &#39;45.921721&#39;, &#39;11.091309&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2857&#39;, &#39;36511x&#39;, &#39;Strada Statale.12 Castel Pietra&#39;, &#39;&#39;, &#39;45.922938&#39;, &#39;11.092225&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2858&#39;, &#39;36521x&#39;, &#39;Strada Statale.12 Campagnole&#39;, &#39;&#39;, &#39;45.928854&#39;, &#39;11.093011&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2859&#39;, &#39;36521z&#39;, &#39;Strada Statale.12 Campagnole&#39;, &#39;&#39;, &#39;45.928851&#39;, &#39;11.093153&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2870&#39;, &#39;32236z&#39;, &#39;Strada Statale.240 &#34;Alla Staffa&#34;&#39;, &#39;&#39;, &#39;45.872820&#39;, &#39;11.024167&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2877&#39;, &#39;32256x&#39;, &#39;Strada Statale.240 &#34;Meb&#34;&#39;, &#39;&#39;, &#39;45.867858&#39;, &#39;11.011826&#39;, &#39;10101&#39;, &#39;2&#39;]
+[&#39;2906&#39;, &#39;36541z&#39;, &#39;Calliano Strada Statale.12&#39;, &#39;&#39;, &#39;45.934315&#39;, &#39;11.096017&#39;, &#39;16501&#39;, &#39;2&#39;]
+[&#39;2907&#39;, &#39;36541x&#39;, &#39;Calliano Strada Statale.12&#39;, &#39;&#39;, &#39;45.934334&#39;, &#39;11.095870&#39;, &#39;16501&#39;, &#39;2&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il metodo 2</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3981,7 +4532,9 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^(a+)=\1$&#39; ma dovrebbe farlo!
 ERRORE: &#39;&#39; non matcha il pattern &#39;^(a+)=\1$&#39; ma dovrebbe farlo!
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
@@ -3991,6 +4544,15 @@ ERRORE: &#39;&#39; non matcha il pattern &#39;^(a+)=\1$&#39; ma dovrebbe farlo!
 <span class="n">pass_n_fail</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(a+)=\1$&#39;</span><span class="p">,</span>
            <span class="p">[</span><span class="s1">&#39;a=a&#39;</span><span class="p">,</span> <span class="s1">&#39;aaa=aaa&#39;</span><span class="p">,</span><span class="s1">&#39;aaaaaa=aaaaaa&#39;</span><span class="p">],</span> <span class="c1">#TODO Inserisci almeno 3 elementi</span>
            <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
 </pre></div>
 </div>
 </div>
@@ -4065,7 +4627,9 @@ gruppi di backreference</em> che hanno verificato il pattern.</p>
 </div>
 <p>Come vedi ci viene restituita una lista di stringhe, infatti non ci sono gruppi all’interno della regex e quindi ci viene restituito tutto il matching.</p>
 <p><strong>✪✪ ESERCIZIO 9.1</strong>: Prova a copiare la linea di sopra qua sotto e ad aggiungere uno o più gruppi nel pattern e vedi cosa succede:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
@@ -4081,6 +4645,26 @@ gruppi di backreference</em> che hanno verificato il pattern.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(terr[ae])\s\w+\b&#39;</span><span class="p">,</span> <span class="n">testo</span><span class="p">))</span>
 <span class="c1">#Ne aggiungo un altro attorno a \w+</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(terr[ae])\s(\w+)\b&#39;</span><span class="p">,</span> <span class="n">testo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;terre&#39;, &#39;terra&#39;, &#39;terra&#39;]
+[(&#39;terre&#39;, &#39;accennate&#39;), (&#39;terra&#39;, &#39;cotta&#39;), (&#39;terra&#39;, &#39;con&#39;)]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

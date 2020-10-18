@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2832,7 +2833,9 @@ pandas.core.indexes.base.Index
 </div>
 <p><strong>2.1 ESERCIZIO</strong>: Creare un nuovo dataframe chiamato <code class="docutils literal notranslate"><span class="pre">meteo</span></code> importando i dati dal file meteo.csv, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">https://www.meteotrentino.it</a>). <strong>IMPORTANTE</strong>: assegna il dataframe ad una variabile chiamata <code class="docutils literal notranslate"><span class="pre">meteo</span></code> (così evitiamo confusione con il dataframe dell’AstroPi)</p>
 <p><strong>2.2 ESERCIZIO</strong>: Visualizzare le informazioni relative a questo Dataframe.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -2850,6 +2853,110 @@ pandas.core.indexes.base.Index
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HEAD():&quot;</span><span class="p">)</span>
 
 <span class="n">meteo</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+COLUMNS:
+
+Index([&#39;Data&#39;, &#39;Pressione&#39;, &#39;Pioggia&#39;, &#39;Temp&#39;], dtype=&#39;object&#39;)
+
+INFO:
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2878 entries, 0 to 2877
+Data columns (total 4 columns):
+Data         2878 non-null object
+Pressione    2878 non-null float64
+Pioggia      2878 non-null float64
+Temp         2878 non-null float64
+dtypes: float64(3), object(1)
+memory usage: 90.1+ KB
+None
+
+HEAD():
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Data</th>
+      <th>Pressione</th>
+      <th>Pioggia</th>
+      <th>Temp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01/11/2017 00:00</td>
+      <td>995.4</td>
+      <td>0.0</td>
+      <td>5.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>01/11/2017 00:15</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01/11/2017 00:30</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>5.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01/11/2017 00:45</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>01/11/2017 01:00</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui - crea il dataframe</span>
+
 
 </pre></div>
 </div>
@@ -3810,7 +3917,9 @@ pandas.core.series.Series
 <li><p>la temperatura media</p></li>
 <li><p>le date delle giornate di pioggia</p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
@@ -3821,6 +3930,140 @@ pandas.core.series.Series
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Massimo pressione : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">meteo</span><span class="o">.</span><span class="n">Pressione</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Media temperatura : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="n">meteo</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Pioggia</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Media pressione : 986.3408269631689
+Minimo pressione : 966.3
+Massimo pressione : 998.3
+Media temperatura : 6.410701876302988
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Data</th>
+      <th>Pressione</th>
+      <th>Pioggia</th>
+      <th>Temp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>433</th>
+      <td>05/11/2017 12:15</td>
+      <td>979.2</td>
+      <td>0.2</td>
+      <td>8.6</td>
+    </tr>
+    <tr>
+      <th>435</th>
+      <td>05/11/2017 12:45</td>
+      <td>978.9</td>
+      <td>0.2</td>
+      <td>8.4</td>
+    </tr>
+    <tr>
+      <th>436</th>
+      <td>05/11/2017 13:00</td>
+      <td>979.0</td>
+      <td>0.2</td>
+      <td>8.4</td>
+    </tr>
+    <tr>
+      <th>437</th>
+      <td>05/11/2017 13:15</td>
+      <td>979.1</td>
+      <td>0.8</td>
+      <td>8.2</td>
+    </tr>
+    <tr>
+      <th>438</th>
+      <td>05/11/2017 13:30</td>
+      <td>979.0</td>
+      <td>0.6</td>
+      <td>8.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2754</th>
+      <td>29/11/2017 17:15</td>
+      <td>976.1</td>
+      <td>0.2</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>2755</th>
+      <td>29/11/2017 17:30</td>
+      <td>975.9</td>
+      <td>0.2</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>2802</th>
+      <td>30/11/2017 05:15</td>
+      <td>971.3</td>
+      <td>0.2</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <th>2803</th>
+      <td>30/11/2017 05:30</td>
+      <td>971.3</td>
+      <td>0.2</td>
+      <td>1.1</td>
+    </tr>
+    <tr>
+      <th>2804</th>
+      <td>30/11/2017 05:45</td>
+      <td>971.5</td>
+      <td>0.2</td>
+      <td>1.1</td>
+    </tr>
+  </tbody>
+</table>
+<p>107 rows × 4 columns</p>
+</div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3982,7 +4225,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_55_0.png" src="../_images/pandas_pandas-sol_55_0.png" />
+<img alt="../_images/pandas_pandas-sol_61_0.png" src="../_images/pandas_pandas-sol_61_0.png" />
 </div>
 </div>
 <p>Possiamo anche creare serie con numpy. Proviamo a fare una parabola:</p>
@@ -4049,7 +4292,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_62_0.png" src="../_images/pandas_pandas-sol_62_0.png" />
+<img alt="../_images/pandas_pandas-sol_68_0.png" src="../_images/pandas_pandas-sol_68_0.png" />
 </div>
 </div>
 <p>Se vogliamo che le unità dell’asse x siano della stessa dimensione di quelle dell’asse y, possiamo utilizzare la funzione <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gca.html?highlight=matplotlib%20pyplot%20gca#matplotlib.pyplot.gca">gca</a></p>
@@ -4074,7 +4317,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_64_0.png" src="../_images/pandas_pandas-sol_64_0.png" />
+<img alt="../_images/pandas_pandas-sol_70_0.png" src="../_images/pandas_pandas-sol_70_0.png" />
 </div>
 </div>
 <div class="section" id="Grafici-matplotlib-da-strutture-pandas">
@@ -4096,7 +4339,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_66_0.png" src="../_images/pandas_pandas-sol_66_0.png" />
+<img alt="../_images/pandas_pandas-sol_72_0.png" src="../_images/pandas_pandas-sol_72_0.png" />
 </div>
 </div>
 <p>Proviamo a mettere valori di pressione sull’asse orizzontale, e vedere quali valori di umidità sull’asse verticale corrispondono ad una certa pressione:</p>
@@ -4122,7 +4365,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_68_1.png" src="../_images/pandas_pandas-sol_68_1.png" />
+<img alt="../_images/pandas_pandas-sol_74_1.png" src="../_images/pandas_pandas-sol_74_1.png" />
 </div>
 </div>
 <p>Selezioniamo nel nuovo dataframe <code class="docutils literal notranslate"><span class="pre">df2</span></code> le righe tra la 12500esima (inclusa) e la 15000esima (esclusa):</p>
@@ -4157,7 +4400,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_71_1.png" src="../_images/pandas_pandas-sol_71_1.png" />
+<img alt="../_images/pandas_pandas-sol_77_1.png" src="../_images/pandas_pandas-sol_77_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -4183,7 +4426,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_72_1.png" src="../_images/pandas_pandas-sol_72_1.png" />
+<img alt="../_images/pandas_pandas-sol_78_1.png" src="../_images/pandas_pandas-sol_78_1.png" />
 </div>
 </div>
 <p>Il metodo <code class="docutils literal notranslate"><span class="pre">corr</span></code> permette di calcolare la correlazione tra le colonne del DataFrame.</p>
@@ -4691,7 +4934,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_76_1.png" src="../_images/pandas_pandas-sol_76_1.png" />
+<img alt="../_images/pandas_pandas-sol_82_1.png" src="../_images/pandas_pandas-sol_82_1.png" />
 </div>
 </div>
 <p>Troviamo dove il campo magnetico era al massimo:</p>
@@ -5048,7 +5291,9 @@ Name: time_stamp, dtype: object
 <div class="section" id="7.-Esercizi-col-meteo">
 <h2>7. Esercizi col meteo<a class="headerlink" href="#7.-Esercizi-col-meteo" title="Permalink to this headline">¶</a></h2>
 <p><strong>ESERCIZIO 7.1</strong>: Mettere in grafico l’andamento delle temperature del dataframe <em>meteo</em></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
@@ -5076,11 +5321,44 @@ Name: time_stamp, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_84_1.png" src="../_images/pandas_pandas-sol_84_1.png" />
+<img alt="../_images/pandas_pandas-sol_91_1.png" src="../_images/pandas_pandas-sol_91_1.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f6291f3b2e8&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas-sol_93_1.png" src="../_images/pandas_pandas-sol_93_1.png" />
 </div>
 </div>
 <p><strong>ESERCIZIO 7.2</strong>: Nello stesso grafico mostrare l’andamento della pressione e la quantità delle precipitazioni.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
@@ -5097,13 +5375,33 @@ Name: time_stamp, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_86_0.png" src="../_images/pandas_pandas-sol_86_0.png" />
+<img alt="../_images/pandas_pandas-sol_96_0.png" src="../_images/pandas_pandas-sol_96_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas-sol_98_0.png" src="../_images/pandas_pandas-sol_98_0.png" />
 </div>
 </div>
 <p>✪✪✪ <strong>ESERCIZIO 7.3</strong>: Calcolare la temperatura media giornaliera e mostrarla nel grafico.</p>
 <p><strong>SUGGERIMENTO 1</strong>: aggiungere la colonna <code class="docutils literal notranslate"><span class="pre">'Giorno'</span></code> estraendo solo il giorno dalla data. Per farlo usare la funzione <code class="docutils literal notranslate"><span class="pre">.str</span></code> applicata a tutta la colonna.</p>
 <p><strong>SUGGERIMENTO 2</strong>: Successivamente usare un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare sui giorni. Tipicamente usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> non è una buona idea con Pandas, perchè con dataset larghi ci può voler molto ad eseguire gli aggiornamenti. Comunque, dato che questo dataset è piccolo a sufficienza, puoi provare ad usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare sui giorni e dovresti ottenere i risultati in un tempo ragionevole</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
@@ -5162,7 +5460,57 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_88_2.png" src="../_images/pandas_pandas-sol_88_2.png" />
+<img alt="../_images/pandas_pandas-sol_101_2.png" src="../_images/pandas_pandas-sol_101_2.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+CON GIORNO
+               Data  Pressione  Pioggia  Temp      Giorno
+0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017
+1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017
+2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017
+3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017
+4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017
+
+CON TEMPERATURA MEDIA
+               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
+0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
+1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
+2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
+3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
+4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f6291df2400&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas-sol_103_2.png" src="../_images/pandas_pandas-sol_103_2.png" />
 </div>
 </div>
 </div>
@@ -5206,7 +5554,9 @@ memory usage: 970.1+ KB
 </pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 8.2</strong> Trova la media dei valori di inquinanti <code class="docutils literal notranslate"><span class="pre">PM10</span></code> al <code class="docutils literal notranslate"><span class="pre">Parco</span> <span class="pre">S.</span> <span class="pre">Chiara</span></code> (media su tutte le giornate)</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
@@ -5214,6 +5564,26 @@ memory usage: 970.1+ KB
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="n">aria</span><span class="p">[(</span><span class="n">aria</span><span class="o">.</span><span class="n">Stazione</span> <span class="o">==</span> <span class="s1">&#39;Parco S. Chiara&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">aria</span><span class="o">.</span><span class="n">Inquinante</span> <span class="o">==</span> <span class="s1">&#39;PM10&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">Valore</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+11.385752688172044
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -5634,7 +6004,9 @@ memory usage: 970.1+ KB
 </div></div>
 </div>
 <p><strong>✪ ESERCIZIO 8.3</strong>: Usando <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> come visto in un <a class="reference external" href="#Grafici-matplotlib-da-strutture-pandas">esempio precedente</a> (quindi passandogli direttamente le serie rilevanti di Pandas), mostra in un grafico l’andamento dei valori di inquinanti <code class="docutils literal notranslate"><span class="pre">PM10</span></code> nella giornata del 7 Maggio 2019</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
@@ -5658,7 +6030,25 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_97_0.png" src="../_images/pandas_pandas-sol_97_0.png" />
+<img alt="../_images/pandas_pandas-sol_116_0.png" src="../_images/pandas_pandas-sol_116_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas-sol_118_0.png" src="../_images/pandas_pandas-sol_118_0.png" />
 </div>
 </div>
 </div>
@@ -5808,7 +6198,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_103_1.png" src="../_images/pandas_pandas-sol_103_1.png" />
+<img alt="../_images/pandas_pandas-sol_124_1.png" src="../_images/pandas_pandas-sol_124_1.png" />
 </div>
 </div>
 </div>
@@ -6327,7 +6717,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas-sol_111_1.png" src="../_images/pandas_pandas-sol_111_1.png" />
+<img alt="../_images/pandas_pandas-sol_132_1.png" src="../_images/pandas_pandas-sol_132_1.png" />
 </div>
 </div>
 </div>

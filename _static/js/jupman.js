@@ -1,17 +1,18 @@
 
-/*
+/**
  * JUPYTER MANAGER JavaScript https://github.com/DavidLeoni/jupman 
  * 
  */
 
+
+/**
+ * @deprecated use jupman.toggleVisibility instead
+ * @param {string} what 
+ */
 function toggleVisibility(what){
-        var e = document.getElementById(what);
-        if(e.style.display == 'block')
-          e.style.display = 'none';
-        else
-          e.style.display = 'block';
-    };
-    
+    console.warn("global toggleVisibility is deprecated, use jupman.toggleVisibility instead");
+    jupman.toggleVisibility(what);            
+};
 
 function showthis(url) {
     window.open(url, "pres", "toolbar=yes,scrollbars=yes,resizable=yes,top=10,left=400,width=500,height=500");
@@ -103,42 +104,104 @@ var jupman = {
                 }
             }).parents('div .cell ').hide();        
     },
-    
-    toggleVisibility: function(what){
-        var e = document.getElementById(what);
-        if(e.style.display == 'block')
-          e.style.display = 'none';
-        else
-          e.style.display = 'block';
+   
+    /**
+     * NOTE: ONLY WORKS ON THE WEBSITE
+     *      
+     * @param {@string} caller a this from html tag onclick
+     * @since 3.2 
+     */
+    toggleSolution : function(caller){
+        
+        let toggler = $(caller);
+        let content = toggler.next();
+        
+        content.addClass('jupman-sol jupman-sol-content');        
+
+        if (content.css('display') === 'none'){            
+            toggler.text(toggler.data('jupman-hide'));
+        } else {                                    
+            toggler.text(toggler.data('jupman-show'));            
+        }
+        content.slideToggle();                                
     },
     
+    /**
+     * Simple vanilla way to toggle an element
+     * @param {string} what i.e. someid (no # prefix)
+     */
+    toggleVisibility : function (what){
+
+        var e = document.getElementById(what);
+        if(e.style.display == 'block') {
+            e.style.display = 'none';
+        } else {
+            e.style.display = 'block';        
+        }
+    },
+
     /**
      *  Code common to both jupman in jupyter and Website
     */
     initCommon : function(){
         
-        $(".jupman-solution-header").remove();
-        span = $('<div>');
-        span.addClass('jupman-solution-header');
-        span.text('Show/hide solution');
+        console.log('jupman.js initCommon start')
         
-        span.insertBefore(".jupman-solution");
-        
-        
-        $(".jupman-solution").hide();
-        $(".jupman-solution-header").show();
+        console.log("jupman.js Initializing togglable stuff");
+        if (typeof $ == "undefined"){
+            console.error("   No jquery found! Skipping ... ");
+        } else {
+                        
+            console.log("Initializing generic jupman-togglable stuff");
 
-        $('.jupman-solution-header')
-            .off('click')
-            .click(function(){
+            let defaultShowMsg = 'Show';
+            let defaultHideMsg = 'Hide';            
+
+            $(".jupman-toggler").remove();
+            
+            $(".jupman-togglable").each(function(index, value) {
+                let toggler = $('<a href="#"></a>');
+                toggler.addClass('jupman-toggler');
+                let showMsg = defaultShowMsg;            
+                if ($(this).data('jupman-show')){
+                    showMsg = $(this).data('jupman-show');
+                }
                 
-                var uls = $(this).nextAll(".jupman-solution");             
-                var sibling = uls.eq(0);
-                          
-                sibling.slideToggle();        
-                ev.preventDefault();
-                ev.stopPropagation();
-        });
+                toggler.text(showMsg);
+                toggler.insertBefore(value);
+            });            
+            
+            $(".jupman-togglable").hide();
+            $(".jupman-toggler").show();
+
+            $('.jupman-toggler')
+                .off('click')
+                .click(function(ev){                                
+                    let toggler = $(this);
+                    
+                    let uls = toggler.nextAll(".jupman-togglable");
+                    let sibling = uls.eq(0);
+                    
+                    let showMsg = defaultShowMsg;
+                    let hideMsg = defaultHideMsg;
+                    if (sibling.data('jupman-show')){
+                        showMsg = sibling.data('jupman-show');
+                    }
+                    if (sibling.data('jupman-hide')){
+                        hideMsg = sibling.data('jupman-hide');
+                    }
+                    if (sibling.css('display') === 'none'){            
+                        toggler.text(hideMsg);
+                    } else {                                    
+                        toggler.text(showMsg);
+                    }
+                    sibling.slideToggle();        
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    return false;
+            });
+        } 
+        console.log('jupman.js initCommon end')
 
     },
 
@@ -146,7 +209,8 @@ var jupman = {
      *   Jupyter only instructions - doesn't run on website
      */
     initJupyter : function(){
-        
+       console.log('jupman.js initJupyter start') 
+
        var toc = $("<div>").attr("id", "jupman-toc");              
                                                              
        var nav = $("<div>")
@@ -157,16 +221,7 @@ var jupman = {
        // ****************************     WARNING      ********************************
        //         THIS HIDE STUFF DOES NOT WORK IN SPHINX, ONLY WORKS WHEN YOU MANUALLY EXPORT TO HTML 
        // ******************************************************************************
-       jupman.hideCell("%%HTML");
-       jupman.hideCell("import jupman");
        
-        // TODO this is a bit too hacky   
-       jupman.hideCell(/from exercise(.+)_solution import \*/)
-       
-       jupman.hideCellAll(/.*jupman_init.*/); 
-       jupman.hideCell("jupman_show_run(");
-       jupman.hideCell("nxpd.draw(");
-       jupman.hideCellAll("jupman_run("); 
        
        if (jupman.hasToc()){
            if ($("#jupman-toc").length === 0){
@@ -200,7 +255,7 @@ var jupman = {
                     } else {
                         $("#jupman-toc").hide();                        
                     }
-
+$
         /*            if ($("#jupman-toc").is(":visible")){
                         if (jupman.hoverToc()) {                    
                         } else {
@@ -220,7 +275,7 @@ var jupman = {
  
         
        jupman.resize();
-       console.log("Finished initializing jupman.js in Jupyter Notebook.")
+       console.log('jupman.js initJupyter end')
     },
     
     /**
@@ -228,7 +283,7 @@ var jupman = {
     */
     initWebsite : function(){  
         
-        console.log("initializing jupman.js in Website ...")
+        console.log("jupman.js initWebsite start")
         
         console.log("Fixing menu clicks for https://github.com/DavidLeoni/jupman/issues/38")
 
@@ -268,67 +323,14 @@ var jupman = {
         fix('../../../') // probably useless but just in case ... 
 
         console.log("Fixing Python Tutor overflow ...");
-
+        
         // need it in js as there are no css parent selectors.
         // NOTE: these selectors are different from Jupyter ones !!!
         var pytuts = $('.pytutorVisualizer')        
         pytuts.closest('div.output_area.rendered_html.docutils.container')
               .css('overflow', 'visible')
-        
-        jupman.initWebsiteLangs();
 
-        console.log("Finished initializing jupman.js in website")
-    },
-    
-    /** Displays flags on SoftPython website
-     * 
-     */
-    initWebsiteLangs : function(){
-        if (!window.JUPMAN_LANG){
-            console.log("No JUPMAN_LANG defined, skipping initWebsiteLangs");
-            return;
-        }
-        var page = window.location.pathname;
-        var imgPrefix = '/'
-        if (window.location.protocol =='file:'){
-            var prefix_pos = page.indexOf('_build/html/');
-            if (prefix_pos != -1){
-                page = page.slice(prefix_pos + '_build/html/'.length);
-                imgPrefix = window.location.pathname.slice(0,prefix_pos);
-            }
-        }
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://en.softpython.org/cgi-bin/lang.php?page="+page, true);
-        xhr.onload = function (e) {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log(xhr.responseText);
-                    var trans = JSON.parse(xhr.responseText);
-                    var the_div = document.getElementById("jupman-langs");
-                    the_div.textContent = '';
-                    for (var lang in trans) {
-                        if (lang != JUPMAN_LANG){                        
-                            var link_node = document.createElement("A");
-                            link_node.setAttribute('href',trans[lang]);
-                            link_node.setAttribute('title','Switch language to ' + lang.toUpperCase());
-                            var img_node = document.createElement('IMG');
-                            img_node.setAttribute('src',imgPrefix + '_static/img/flags/flat/32/'+lang+'.png');
-                            img_node.setAttribute('alt',lang.toUpperCase());
-                            link_node.appendChild(img_node);
-                            the_div.appendChild(link_node);
-                        }
-                    }
-                } else {
-                    console.error(xhr.statusText);
-                    console.log(xhr.responseText);
-                }
-            }
-        };
-        xhr.onerror = function (e) {
-            console.error(xhr.statusText);
-            console.log(xhr.responseText);
-        };
-        xhr.send(null);           
+        console.log("jupman.js initWebsite end")
     },
     
     /**
@@ -338,7 +340,7 @@ var jupman = {
 
        jupman.initCommon();
         
-       if (typeof JUPMAN_IN_JUPYTER === "undefined" || !JUPMAN_IN_JUPYTER ){            
+       if (typeof JUPMAN_IN_JUPYTER === "undefined" || !JUPMAN_IN_JUPYTER ){
            jupman.initWebsite();
        } else {
            jupman.initJupyter();

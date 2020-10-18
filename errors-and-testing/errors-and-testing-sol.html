@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2083,15 +2084,19 @@ Ho fatto la torta !
 Festeggia
 </pre></div></div>
 </div>
-<p><strong>RISPOSTA</strong>: il programma qua sopra festeggia anche quando non abbiamo ingredienti sufficienti !</p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: il programma qua sopra festeggia anche quando non abbiamo ingredienti sufficienti !</p>
+</div></div>
 </div>
 <div class="section" id="Controllare-con-i-return">
 <h2>Controllare con i return<a class="headerlink" href="#Controllare-con-i-return" title="Permalink to this headline">¶</a></h2>
 <p><strong>ESERCIZIO</strong>: Potremmo correggere i problemi della torta di prima aggiungendo dei comandi <code class="docutils literal notranslate"><span class="pre">return</span></code>. Implementa la seguente funzione.</p>
 <p><strong>NOTA</strong>: NON spostare il <code class="docutils literal notranslate"><span class="pre">print(&quot;Festeggia&quot;)</span></code> dentro la funzione. Lo scopo dell’esercizio è proprio tenerlo fuori così da usare il valore ritornato da <code class="docutils literal notranslate"><span class="pre">fai_torta</span></code> per decidere se festeggiare o meno.</p>
 <p>Se hai dubbi sulle funzioni con valori di ritorno, puoi consultare il <a class="reference external" href="https://davidleoni.github.io/ThinkPythonItalian/html/thinkpython2007.html">Capitolo 6 di Pensare in Python</a></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -2106,7 +2111,7 @@ Festeggia
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># implementa qui la funzione</span>
-    <span class="c1">#jupman-strip</span>
+
     <span class="k">if</span> <span class="n">latte</span> <span class="o">&gt;</span> <span class="mf">1.3</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prendo il latte&quot;</span><span class="p">)</span>
         <span class="c1"># return True  # NO, finisce subito</span>
@@ -2130,20 +2135,56 @@ Festeggia
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaldo&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ho fatto la torta !&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">True</span>
-    <span class="c1">#/jupman-strip</span>
+
 
 
 <span class="c1"># e scrivi qui la chiamata a funzione, fai_torta(5,1,0.3)</span>
 <span class="c1"># usando il risultato per dichiarare se si può o meno fare il party :-(</span>
 
-<span class="c1">#jupman-strip</span>
+
 <span class="n">fatta_torta</span> <span class="o">=</span> <span class="n">fai_torta</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">fatta_torta</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No party !&quot;</span><span class="p">)</span>
-<span class="c1">#/jupman-strip</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+prendo il latte
+prendo lo zucchero
+Non ho abbastanza farina !
+No party !
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">fai_torta</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;  - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
+
+<span class="sd">         - prende come parametri le quantità che abbiamo in dispensa</span>
+<span class="sd">         MIGLIORARE CON LE return: RITORNA True se la torta è fattibile,</span>
+<span class="sd">                                           False altrimenti</span>
+<span class="sd">         *FUORI* USA IL VALORE RITORNATO PER FESTEGGIARE O MENO</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># implementa qui la funzione</span>
+
+
+
+<span class="c1"># e scrivi qui la chiamata a funzione, fai_torta(5,1,0.3)</span>
+<span class="c1"># usando il risultato per dichiarare se si può o meno fare il party :-(</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2174,7 +2215,9 @@ No party !
 </div>
 <p>Nota: nei programmi professionali, i messaggi delle exception sono intesi per programmatori, sono verbosi, e tipicamente finiscono nascosti nei log di sistema. Agli utenti finali si dovrebbero mostrare messaggi più brevi e comprensibili da un pubblico non tecnico. Al più, si può includere un codice di errore che l’utente può copiare e dare ai tecnici per aiutare a trovare il problema.</p>
 <p><strong>ESERCIZIO</strong>: Prova a riscrivere la funzione qua sopra sostituendo le righe con <code class="docutils literal notranslate"><span class="pre">return</span></code> con dei <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">Exception()</span></code> :</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -2187,7 +2230,7 @@ No party !
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># implementa la funzione</span>
-    <span class="c1">#jupman-strip</span>
+
 
     <span class="k">if</span> <span class="n">latte</span> <span class="o">&gt;</span> <span class="mf">1.3</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prendo il latte&quot;</span><span class="p">)</span>
@@ -2204,7 +2247,23 @@ No party !
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Impasto&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaldo&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ho fatto la torta !&quot;</span><span class="p">)</span>
-   <span class="c1">#/jupman-strip</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
+
+<span class="sd">        - prende come parametri le quantità che abbiamo in dispensa</span>
+<span class="sd">        - se mancano ingredienti, lancia Exception</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># implementa la funzione</span>
 
 </pre></div>
 </div>
@@ -2702,7 +2761,9 @@ AssertionError:
 <li><p>sostituisci <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">Exception(&quot;IMPLEMENTAMI&quot;)</span></code> con <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span></code> ed eseguire la cella. Se hai scritto giusto, non dovrebbe succedere niente. In tal caso complimenti, il codice che hai scritto è corretto <em>rispetto ai test</em>!</p></li>
 <li><p>Prova poi a sostituire invece con <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">10</span></code> e guarda che succede.</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
@@ -2710,9 +2771,26 @@ AssertionError:
 <span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
 <span class="k">assert</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>

@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2186,8 +2187,6 @@ div.rendered_html tbody tr:hover {
 <span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -2288,7 +2287,9 @@ None
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: Qual’è il tipo dell’oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code>? Scoprilo usando la funzione <code class="docutils literal notranslate"><span class="pre">type</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
@@ -2296,6 +2297,17 @@ None
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="c1">#type(None)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2440,7 +2452,9 @@ x è  None
 </div>
 <p><strong>ESERCIZIO</strong>: Costruisci una lista aggiungendo un elemento alla volta con il metodo <code class="docutils literal notranslate"><span class="pre">append</span></code>. Aggiungi gli elementi <code class="docutils literal notranslate"><span class="pre">77</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;prova&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">[60,93]</span></code> con tre chiamate ad <code class="docutils literal notranslate"><span class="pre">append</span></code>, ed infine stampa la lista.</p>
 <p>Dopo il tuo codice, dovresti vedere <code class="docutils literal notranslate"><span class="pre">[77,</span> <span class="pre">'prova',</span> <span class="pre">[60,</span> <span class="pre">93]]</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
@@ -2457,6 +2471,19 @@ x è  None
 </pre></div>
 </div>
 </div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
 <p><strong>DOMANDA</strong>: Il codice seguente:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">94</span><span class="p">)</span>
@@ -2466,8 +2493,10 @@ x è  None
 <li><p>produce un errore (quale?)</p></li>
 <li><p>modifica la lista (come?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 1: <code class="docutils literal notranslate"><span class="pre">append</span></code> accetta un solo argomento, passandone di più produrrà un errore, prova ad eseguire il codice in una cella per vedere quale.</p>
-<p><strong>DOMANDA</strong>: Il codice seguente</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 1: <code class="docutils literal notranslate"><span class="pre">append</span></code> accetta un solo argomento, passandone di più produrrà un errore, prova ad eseguire il codice in una cella per vedere quale.</p>
+</div><p><strong>DOMANDA</strong>: Il codice seguente</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">87</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">96</span><span class="p">)</span>
 </pre></div>
@@ -2476,8 +2505,10 @@ x è  None
 <li><p>produce un errore</p></li>
 <li><p>aggiunge a <code class="docutils literal notranslate"><span class="pre">la</span></code> i numeri <code class="docutils literal notranslate"><span class="pre">87</span></code> e <code class="docutils literal notranslate"><span class="pre">96</span></code></p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 1: produce un errore, perchè come abbiamo detto la chiamata ad <code class="docutils literal notranslate"><span class="pre">la.append(87)</span></code> MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">la</span></code> su cui è chiamato e ritorna il valore <code class="docutils literal notranslate"><span class="pre">None</span></code>. Se su <code class="docutils literal notranslate"><span class="pre">None</span></code> proviamo a chiamare <code class="docutils literal notranslate"><span class="pre">.append(96)</span></code>, visto che <code class="docutils literal notranslate"><span class="pre">None</span></code> non è una lista otterremo un messaggio di errore. Sincerati di questo usando Python Tutor.</p>
-<p><strong>DOMANDA</strong>: torniamo brevemente alle stringhe. Guarda il codice seguente (se non ti ricordi cosa fanno i metodi delle stringhe <a class="reference external" href="https://it.softpython.org/strings/strings3-sol.html#Metodi">guarda qua</a>):</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 1: produce un errore, perchè come abbiamo detto la chiamata ad <code class="docutils literal notranslate"><span class="pre">la.append(87)</span></code> MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">la</span></code> su cui è chiamato e ritorna il valore <code class="docutils literal notranslate"><span class="pre">None</span></code>. Se su <code class="docutils literal notranslate"><span class="pre">None</span></code> proviamo a chiamare <code class="docutils literal notranslate"><span class="pre">.append(96)</span></code>, visto che <code class="docutils literal notranslate"><span class="pre">None</span></code> non è una lista otterremo un messaggio di errore. Sincerati di questo usando Python Tutor.</p>
+</div><p><strong>DOMANDA</strong>: torniamo brevemente alle stringhe. Guarda il codice seguente (se non ti ricordi cosa fanno i metodi delle stringhe <a class="reference external" href="https://it.softpython.org/strings/strings3-sol.html#Metodi">guarda qua</a>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sa</span> <span class="o">=</span> <span class="s1">&#39;    trento    &#39;</span>
 <span class="n">sb</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sb</span><span class="p">)</span>
@@ -2488,7 +2519,9 @@ x è  None
 <li><p>cambia <code class="docutils literal notranslate"><span class="pre">sa</span></code> (come?)</p></li>
 <li><p>stampa qualcosa (cosa?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 3: stampa <code class="docutils literal notranslate"><span class="pre">Trento</span></code>. Diversamente dalle liste, le stringhe sono sequenze <em>immutabili</em>: significa che quando chiami un metodo sulle stringhe sei sicuro che RESTITUIRA’ una stringa NUOVA. Quindi la prima chiamata a <code class="docutils literal notranslate"><span class="pre">sa.strip()</span></code> RESTITUISCE la stringa senza spazi all’inizio e alla fine <code class="docutils literal notranslate"><span class="pre">'trento'</span></code>, e su questa stringa viene chiamato il metodo <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code> che rende il primo carattere maiuscolo.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 3: stampa <code class="docutils literal notranslate"><span class="pre">Trento</span></code>. Diversamente dalle liste, le stringhe sono sequenze <em>immutabili</em>: significa che quando chiami un metodo sulle stringhe sei sicuro che RESTITUIRA’ una stringa NUOVA. Quindi la prima chiamata a <code class="docutils literal notranslate"><span class="pre">sa.strip()</span></code> RESTITUISCE la stringa senza spazi all’inizio e alla fine <code class="docutils literal notranslate"><span class="pre">'trento'</span></code>, e su questa stringa viene chiamato il metodo <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code> che rende il primo carattere maiuscolo.</p>
 <p>Se questo non ti è chiaro, prova ad eseguire il codice seguente in Python Tutor. E’ equivalente a quello dell’esempio ma esplicita il passaggio assegnando alla variabile extra <code class="docutils literal notranslate"><span class="pre">x</span></code>. il risultato della chiamata a <code class="docutils literal notranslate"><span class="pre">sa.strip()</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sa</span> <span class="o">=</span> <span class="s1">&#39;    trento    &#39;</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -2496,7 +2529,7 @@ x è  None
 <span class="nb">print</span><span class="p">(</span><span class="n">sb</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>DOMANDA</strong>: Guarda questo codice. Stamperà qualcosa alla fine? O produrrà un errore?</p>
+</div><p><strong>DOMANDA</strong>: Guarda questo codice. Stamperà qualcosa alla fine? O produrrà un errore?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
@@ -2507,10 +2540,12 @@ x è  None
 <span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Stamperà <code class="docutils literal notranslate"><span class="pre">[[98,</span> <span class="pre">77]]</span></code>, perchè abbiamo messo <code class="docutils literal notranslate"><span class="pre">lb</span></code> dentro <code class="docutils literal notranslate"><span class="pre">la</span></code>.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Stamperà <code class="docutils literal notranslate"><span class="pre">[[98,</span> <span class="pre">77]]</span></code>, perchè abbiamo messo <code class="docutils literal notranslate"><span class="pre">lb</span></code> dentro <code class="docutils literal notranslate"><span class="pre">la</span></code>.</p>
 <p>Anche se con la prima <code class="docutils literal notranslate"><span class="pre">append</span></code> abbiamo inserito <code class="docutils literal notranslate"><span class="pre">lb</span></code> come primo elemento di <code class="docutils literal notranslate"><span class="pre">la</span></code>, dopo è perfettamente lecito continuare a modificare <code class="docutils literal notranslate"><span class="pre">lb</span></code> chiamando <code class="docutils literal notranslate"><span class="pre">lb.append(98)</span></code>.</p>
 <p>Prova ad eseguire il codice in Python Tutor, e guarda le frecce.</p>
-<div class="section" id="Esercizio---accrescere-una-lista-1">
+</div><div class="section" id="Esercizio---accrescere-una-lista-1">
 <h3>Esercizio - accrescere una lista 1<a class="headerlink" href="#Esercizio---accrescere-una-lista-1" title="Permalink to this headline">¶</a></h3>
 <p>Data la lista <code class="docutils literal notranslate"><span class="pre">la</span></code> di <em>dimensione fissa 7</em>, scrivi del codice per crescere la lista vuota <code class="docutils literal notranslate"><span class="pre">lb</span></code> così che contenga <em>solo</em> gli elementi di <code class="docutils literal notranslate"><span class="pre">la</span></code> a indici pari (0, 2, 4, …).</p>
 <ul class="simple">
@@ -2526,7 +2561,9 @@ x è  None
 <span class="go">[8,3,7,5]</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
@@ -2542,6 +2579,30 @@ x è  None
 <span class="n">lb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">la</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
 <span class="n">lb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">la</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[8, 3, 7, 5]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="c1">#   0 1 2 3 4 5 6</span>
+<span class="n">la</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">lb</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2628,8 +2689,10 @@ x è  None
 <p><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">la</span></code> è MODIFICATA, invece la sequenza che gli abbiamo passato tra le parentesi tonde no (<code class="docutils literal notranslate"><span class="pre">lb</span></code> nell’esempio)!</p>
 </div>
 <p><strong>DOMANDA</strong>: l’esecuzione del metodo <code class="docutils literal notranslate"><span class="pre">extend</span></code> ritorna qualcosa? Cosa vedi nell’output della cella <code class="docutils literal notranslate"><span class="pre">la.extend(lb)</span></code> ?</p>
-<p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">extend</span></code>, come quasi tutti i metodi delle liste, non ritorna nulla, o meglio, ritorna il poco utile oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code>, che non viene nemmeno stampato da Jupyter.</p>
-<p>Verifichiamo meglio cosa è successo con Python Tutor:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">extend</span></code>, come quasi tutti i metodi delle liste, non ritorna nulla, o meglio, ritorna il poco utile oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code>, che non viene nemmeno stampato da Jupyter.</p>
+</div><p>Verifichiamo meglio cosa è successo con Python Tutor:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
@@ -2704,7 +2767,9 @@ x è  None
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x è &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Verrà stampato questo:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Verrà stampato questo:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>la è  [34, 79, 54, 86, 45]
 lb è  [86, 45]
 x è  None
@@ -2712,7 +2777,7 @@ x è  None
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">la</span></code> è stata MODIFICATA aggiungendo tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lb</span></code>.</p>
 <p>La chiamata ad <code class="docutils literal notranslate"><span class="pre">extend</span></code>, come quasi tutti i metodi delle liste, ha ritornano l’oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code> che è stato associato alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code>. Cerca di capire bene cosa è successo usando Python Tutor.</p>
-<div class="section" id="Estendere-con-sequenze">
+</div><div class="section" id="Estendere-con-sequenze">
 <h3>Estendere con sequenze<a class="headerlink" href="#Estendere-con-sequenze" title="Permalink to this headline">¶</a></h3>
 <p>Abbiamo detto che tra le parentesi tonde <code class="docutils literal notranslate"><span class="pre">extend</span></code> può prendere una sequenza generica, non solo liste. Questo vuol dire che possiamo anche passargli una stringa. Per esempio:</p>
 <div class="nbinput nblast docutils container">
@@ -2748,8 +2813,10 @@ x è  None
 </div>
 <p>Dato che stringa è una sequenza di caratteri, <code class="docutils literal notranslate"><span class="pre">extend</span></code> ha preso ciascuno di questi elementi e li ha aggiunti a <code class="docutils literal notranslate"><span class="pre">la</span></code></p>
 <p><strong>DOMANDA</strong>: il valore associato alla variabile <code class="docutils literal notranslate"><span class="pre">s</span></code> è stato modificato?</p>
-<p><strong>RISPOSTA</strong>: assolutamente impossibile, perchè a) <code class="docutils literal notranslate"><span class="pre">extend</span></code> modifica solo la lista su cui è chiamato e b) le stringhe sono comunque immutabili.</p>
-<p><strong>DOMANDA</strong>: Il codice seguente:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: assolutamente impossibile, perchè a) <code class="docutils literal notranslate"><span class="pre">extend</span></code> modifica solo la lista su cui è chiamato e b) le stringhe sono comunque immutabili.</p>
+</div><p><strong>DOMANDA</strong>: Il codice seguente:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span><span class="mi">65</span><span class="p">]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="mi">68</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">87</span><span class="p">)</span>
 </pre></div>
@@ -2758,12 +2825,14 @@ x è  None
 <li><p>produce un errore (quale?)</p></li>
 <li><p>modifica <code class="docutils literal notranslate"><span class="pre">la</span></code> (come?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 1: produce un errore, perchè ad <code class="docutils literal notranslate"><span class="pre">extend</span></code> dobbiamo passare UN parametro solo, che deve essere <em>una sequenza</em>. Qua invece stiamo passando tanti parametri. Un’alternativa potrebbe essere costruire una lista così:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 1: produce un errore, perchè ad <code class="docutils literal notranslate"><span class="pre">extend</span></code> dobbiamo passare UN parametro solo, che deve essere <em>una sequenza</em>. Qua invece stiamo passando tanti parametri. Un’alternativa potrebbe essere costruire una lista così:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">78</span><span class="p">,</span><span class="mi">65</span><span class="p">]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">68</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">87</span><span class="p">])</span>
 </pre></div>
 </div>
-<p><strong>DOMANDA</strong>: Se questo codice viene eseguito, che succede?</p>
+</div><p><strong>DOMANDA</strong>: Se questo codice viene eseguito, che succede?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sa</span> <span class="o">=</span> <span class="s2">&quot;ciao&quot;</span>
 <span class="n">sb</span> <span class="o">=</span> <span class="s2">&quot;mondo&quot;</span>
 <span class="n">sa</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sb</span><span class="p">)</span>
@@ -2773,8 +2842,10 @@ x è  None
 <li><p><code class="docutils literal notranslate"><span class="pre">sa</span></code> viene modificata (come?)</p></li>
 <li><p>otteniamo un errore (quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 2: otteniamo un errore, perchè <code class="docutils literal notranslate"><span class="pre">extend</span></code> è un metodo esclusivo delle liste. Appartiene solo alle liste perchè MODIFICA l’oggetto su cui è chiamato - dato che le stringhe sono oggetti immutabili, non avrebbe senso estenderle.</p>
-<p><strong>DOMANDA</strong>: Se questo codice viene eseguito, che succede?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 2: otteniamo un errore, perchè <code class="docutils literal notranslate"><span class="pre">extend</span></code> è un metodo esclusivo delle liste. Appartiene solo alle liste perchè MODIFICA l’oggetto su cui è chiamato - dato che le stringhe sono oggetti immutabili, non avrebbe senso estenderle.</p>
+</div><p><strong>DOMANDA</strong>: Se questo codice viene eseguito, che succede?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">lc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -2787,7 +2858,9 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">la</span></code> diventa <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5]</span></code> e un errore(quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 3: <code class="docutils literal notranslate"><span class="pre">la</span></code> diventa <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5]</span></code> e subito dopo otteniamo un errore, perchè la chiamata a <code class="docutils literal notranslate"><span class="pre">la.extend(lb)</span></code> MODIFICA <code class="docutils literal notranslate"><span class="pre">la</span></code> a <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5]</span></code> e RITORNA il valore <code class="docutils literal notranslate"><span class="pre">None</span></code>. A quel punto, Python cerca di chiamare il metodo <code class="docutils literal notranslate"><span class="pre">extend</span></code> sull’oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code>, ma non essendo una lista, ci becchiamo questo errore (<strong>per convincerti, verifica il tutto il Python Tutor</strong> !!!)</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 3: <code class="docutils literal notranslate"><span class="pre">la</span></code> diventa <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5]</span></code> e subito dopo otteniamo un errore, perchè la chiamata a <code class="docutils literal notranslate"><span class="pre">la.extend(lb)</span></code> MODIFICA <code class="docutils literal notranslate"><span class="pre">la</span></code> a <code class="docutils literal notranslate"><span class="pre">[1,2,3,4,5]</span></code> e RITORNA il valore <code class="docutils literal notranslate"><span class="pre">None</span></code>. A quel punto, Python cerca di chiamare il metodo <code class="docutils literal notranslate"><span class="pre">extend</span></code> sull’oggetto <code class="docutils literal notranslate"><span class="pre">None</span></code>, ma non essendo una lista, ci becchiamo questo errore (<strong>per convincerti, verifica il tutto il Python Tutor</strong> !!!)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">45</span><span class="o">-</span><span class="mi">0</span><span class="n">a08a154ada4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -2798,7 +2871,7 @@ x è  None
 <span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;NoneType&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;extend&#39;</span>
 </pre></div>
 </div>
-</div>
+</div></div>
 <div class="section" id="Esercizio:-accrescere-una-lista-2">
 <h3>Esercizio: accrescere una lista 2<a class="headerlink" href="#Esercizio:-accrescere-una-lista-2" title="Permalink to this headline">¶</a></h3>
 <p>Date due <em>liste</em> <code class="docutils literal notranslate"><span class="pre">la</span></code> ed <code class="docutils literal notranslate"><span class="pre">lb</span></code> e un elemento <code class="docutils literal notranslate"><span class="pre">x</span></code>, scrivi del codice che MODIFICA <code class="docutils literal notranslate"><span class="pre">la</span></code> in modo che <code class="docutils literal notranslate"><span class="pre">la</span></code> contenga alla fine l’elemento <code class="docutils literal notranslate"><span class="pre">x</span></code> seguito da tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lb</span></code></p>
@@ -2820,7 +2893,9 @@ x è  None
 <span class="go">8</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
@@ -2836,6 +2911,22 @@ x è  None
 <span class="c1">#print(la)</span>
 <span class="c1">#print(lb)</span>
 <span class="c1">#print(x)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2858,7 +2949,9 @@ x è  None
 <span class="go">[&#39;z&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
@@ -2873,6 +2966,20 @@ x è  None
 
 <span class="c1">#print(la)</span>
 <span class="c1">#print(lb)</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>
@@ -2895,7 +3002,9 @@ x è  None
 <span class="go">[&#39;v&#39;, &#39;e&#39;, &#39;d&#39;, &#39;u&#39;, &#39;n&#39;, &#39;a&#39;, &#39;z&#39;, &#39;e&#39;, &#39;b&#39;, &#39;l&#39;, &#39;a&#39;, &#39;g&#39;]</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
@@ -2910,6 +3019,29 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">2</span><span class="p">][:</span><span class="mi">3</span><span class="p">])</span>
 <span class="n">la</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">3</span><span class="p">][:</span><span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;v&#39;, &#39;e&#39;, &#39;d&#39;, &#39;u&#39;, &#39;n&#39;, &#39;a&#39;, &#39;z&#39;, &#39;e&#39;, &#39;b&#39;, &#39;l&#39;, &#39;a&#39;, &#39;g&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">parole</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;vedo&quot;</span><span class="p">,</span> <span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;zebra&quot;</span><span class="p">,</span> <span class="s2">&quot;laggiù&quot;</span><span class="p">]</span>
+
+<span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2993,8 +3125,10 @@ x è  None
 <li><p>una stringa (quale?)</p></li>
 <li><p>una lista (quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 2: produce la stringa <code class="docutils literal notranslate"><span class="pre">'ABC'</span></code>: prima prende tutti i caratteri dalla lista <code class="docutils literal notranslate"><span class="pre">['a','b','c']</span></code> e li unisce separandoli con lo spazio vuoto <code class="docutils literal notranslate"><span class="pre">''</span></code> formando <code class="docutils literal notranslate"><span class="pre">'abc'</span></code>, poi questa stringa viene resa tutta maiuscola con <code class="docutils literal notranslate"><span class="pre">upper()</span></code>.</p>
-<p><strong>DOMANDA</strong>: Questa codice cosa produce?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 2: produce la stringa <code class="docutils literal notranslate"><span class="pre">'ABC'</span></code>: prima prende tutti i caratteri dalla lista <code class="docutils literal notranslate"><span class="pre">['a','b','c']</span></code> e li unisce separandoli con lo spazio vuoto <code class="docutils literal notranslate"><span class="pre">''</span></code> formando <code class="docutils literal notranslate"><span class="pre">'abc'</span></code>, poi questa stringa viene resa tutta maiuscola con <code class="docutils literal notranslate"><span class="pre">upper()</span></code>.</p>
+</div><p><strong>DOMANDA</strong>: Questa codice cosa produce?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;A&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;porto&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3003,8 +3137,10 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p>una lista (quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 1: produce la stringa <code class="docutils literal notranslate"><span class="pre">'pAoArAtAo'</span></code> - abbiamo detto che join prende come input una sequenza, quindi non siamo vincolati a passargli liste ma possiamo anche passare direttamente una stringa, che è una sequenza di caratteri. <code class="docutils literal notranslate"><span class="pre">join</span></code> intervallerà quindi ogni carattere della stringa con il separatore che forniamo prima del punto.</p>
-<p><strong>DOMANDA</strong>: Questo codice cosa produce?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 1: produce la stringa <code class="docutils literal notranslate"><span class="pre">'pAoArAtAo'</span></code> - abbiamo detto che join prende come input una sequenza, quindi non siamo vincolati a passargli liste ma possiamo anche passare direttamente una stringa, che è una sequenza di caratteri. <code class="docutils literal notranslate"><span class="pre">join</span></code> intervallerà quindi ogni carattere della stringa con il separatore che forniamo prima del punto.</p>
+</div><p><strong>DOMANDA</strong>: Questo codice cosa produce?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;mmmm&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3012,8 +3148,10 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p>una stringa (quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 2: <code class="docutils literal notranslate"><span class="pre">\'</span></code> è una sequenza di escape che rappresenta il carattere singolo apice <code class="docutils literal notranslate"><span class="pre">'</span></code>, quindi otterremo <code class="docutils literal notranslate"><span class="pre">m'm'm'm</span></code></p>
-<p><strong>DOMANDA</strong>: Data una stringa qualsiasi <code class="docutils literal notranslate"><span class="pre">s</span></code> e una lista di stringhe qualsiasi <code class="docutils literal notranslate"><span class="pre">la</span></code> di almeno due elementi, il seguente codice darà sempre lo stesso risultato - quale ? (pensaci, e se non sai rispondere prova a mettere dei valori a caso di <code class="docutils literal notranslate"><span class="pre">s</span></code> e <code class="docutils literal notranslate"><span class="pre">la</span></code>)</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 2: <code class="docutils literal notranslate"><span class="pre">\'</span></code> è una sequenza di escape che rappresenta il carattere singolo apice <code class="docutils literal notranslate"><span class="pre">'</span></code>, quindi otterremo <code class="docutils literal notranslate"><span class="pre">m'm'm'm</span></code></p>
+</div><p><strong>DOMANDA</strong>: Data una stringa qualsiasi <code class="docutils literal notranslate"><span class="pre">s</span></code> e una lista di stringhe qualsiasi <code class="docutils literal notranslate"><span class="pre">la</span></code> di almeno due elementi, il seguente codice darà sempre lo stesso risultato - quale ? (pensaci, e se non sai rispondere prova a mettere dei valori a caso di <code class="docutils literal notranslate"><span class="pre">s</span></code> e <code class="docutils literal notranslate"><span class="pre">la</span></code>)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">la</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -3022,14 +3160,16 @@ x è  None
 <li><p>una stringa (quale?)</p></li>
 <li><p>altro (cosa?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 3: il codice produrrà sempre il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code> perchè <code class="docutils literal notranslate"><span class="pre">s.join(la)</span></code> produce una stringa contenente tutte le stringhe in <code class="docutils literal notranslate"><span class="pre">la</span></code> intervallate dalla stringa <code class="docutils literal notranslate"><span class="pre">s</span></code>. Quindi la lunghezza di questa stringa sarà sempre uguale o superiore alla lunghezza di <code class="docutils literal notranslate"><span class="pre">s</span></code>: comparando le due lunghezze con l’operatore <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> otterremo sempre il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 3: il codice produrrà sempre il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code> perchè <code class="docutils literal notranslate"><span class="pre">s.join(la)</span></code> produce una stringa contenente tutte le stringhe in <code class="docutils literal notranslate"><span class="pre">la</span></code> intervallate dalla stringa <code class="docutils literal notranslate"><span class="pre">s</span></code>. Quindi la lunghezza di questa stringa sarà sempre uguale o superiore alla lunghezza di <code class="docutils literal notranslate"><span class="pre">s</span></code>: comparando le due lunghezze con l’operatore <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> otterremo sempre il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>Esempio</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;ab&quot;</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uief&#39;</span><span class="p">,</span><span class="s1">&#39;cb&#39;</span><span class="p">,</span><span class="s1">&#39;sd&#39;</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">la</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="section" id="ESERCIZIO---dub-dab-dib-dob">
+</div><div class="section" id="ESERCIZIO---dub-dab-dib-dob">
 <h3>ESERCIZIO - dub dab dib dob<a class="headerlink" href="#ESERCIZIO---dub-dab-dib-dob" title="Permalink to this headline">¶</a></h3>
 <p>Scrivi del codice che data una lista di stringhe <code class="docutils literal notranslate"><span class="pre">la</span></code>, associa alla variabile <code class="docutils literal notranslate"><span class="pre">s</span></code> una stringa con le stringhe concatenate separate da virgole e uno spazio</p>
 <p>Esempio:</p>
@@ -3042,7 +3182,9 @@ x è  None
 <span class="go">18</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
@@ -3055,6 +3197,19 @@ x è  None
 
 <span class="c1">#print(s)</span>
 <span class="c1">#len(s)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dub&#39;</span><span class="p">,</span> <span class="s1">&#39;dab&#39;</span><span class="p">,</span><span class="s1">&#39;dib&#39;</span><span class="p">,</span> <span class="s1">&#39;dob&#39;</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3074,7 +3229,9 @@ x è  None
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ghi,ri,go,ri_ghi+ri+go+ri
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
@@ -3085,6 +3242,20 @@ x è  None
 <span class="c1"># scrivi qui</span>
 
 <span class="c1">#print(seps[0].join(la) + seps[1] + seps[2].join(la))</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ghi&#39;</span><span class="p">,</span><span class="s1">&#39;ri&#39;</span><span class="p">,</span><span class="s1">&#39;go&#39;</span><span class="p">,</span><span class="s1">&#39;ri&#39;</span><span class="p">]</span>
+<span class="n">seps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>
@@ -3108,7 +3279,9 @@ x è  None
  well done!
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
@@ -3132,6 +3305,29 @@ x è  None
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nuova</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">nuova</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;w&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39; &#39;, &#39;d&#39;, &#39;o&#39;, &#39;n&#39;, &#39;e&#39;, &#39;!&#39;]
+
+ well done!
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;walnut&quot;</span><span class="p">,</span> <span class="s2">&quot;eggplant&quot;</span><span class="p">,</span> <span class="s2">&quot;lemon&quot;</span><span class="p">,</span> <span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;onion&quot;</span><span class="p">,</span> <span class="s2">&quot;nectarine&quot;</span><span class="p">,</span> <span class="s2">&quot;endive&quot;</span> <span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3261,11 +3457,13 @@ x è  None
 <li><p>modifica <code class="docutils literal notranslate"><span class="pre">x</span></code> (come?)</p></li>
 <li><p>un errore</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 2 - il codice MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">x</span></code> aggiungendo alla lista l’elemento <code class="docutils literal notranslate"><span class="pre">66</span></code> alla fine. Il codice è pertanto equivalente al codice</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 2 - il codice MODIFICA la lista <code class="docutils literal notranslate"><span class="pre">x</span></code> aggiungendo alla lista l’elemento <code class="docutils literal notranslate"><span class="pre">66</span></code> alla fine. Il codice è pertanto equivalente al codice</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">66</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>DOMANDA</strong>: Il seguente codice, cosa produce?</p>
+</div><p><strong>DOMANDA</strong>: Il seguente codice, cosa produce?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
@@ -3276,8 +3474,10 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p>qualcos’altro (cosa?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 3 - il codice inserisce come zeresimo elemento di <code class="docutils literal notranslate"><span class="pre">la</span></code> la lista <code class="docutils literal notranslate"><span class="pre">[1,2]</span></code>. La stampa produrrà quindi <code class="docutils literal notranslate"><span class="pre">[[1,</span> <span class="pre">2],</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code></p>
-<p><strong>DOMANDA</strong>: Il seguente codice cosa produce?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 3 - il codice inserisce come zeresimo elemento di <code class="docutils literal notranslate"><span class="pre">la</span></code> la lista <code class="docutils literal notranslate"><span class="pre">[1,2]</span></code>. La stampa produrrà quindi <code class="docutils literal notranslate"><span class="pre">[[1,</span> <span class="pre">2],</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code></p>
+</div><p><strong>DOMANDA</strong>: Il seguente codice cosa produce?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">la</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
@@ -3288,8 +3488,10 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p>qualcos’altro (cosa?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 2 - un errore, a <code class="docutils literal notranslate"><span class="pre">insert</span></code> possiamo passare solo 2 parametri, l’indice di inserimento e il singolo oggetto da inserire</p>
-<p><strong>DOMANDA</strong>: Il seguente codice cosa produce?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 2 - un errore, a <code class="docutils literal notranslate"><span class="pre">insert</span></code> possiamo passare solo 2 parametri, l’indice di inserimento e il singolo oggetto da inserire</p>
+</div><p><strong>DOMANDA</strong>: Il seguente codice cosa produce?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">lc</span> <span class="o">=</span> <span class="n">lb</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -3302,8 +3504,10 @@ x è  None
 <li><p>un errore (quale?)</p></li>
 <li><p>qualcos’altro (cosa?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: la 2 - un errore: come quasi tutti i metodi delle liste, <code class="docutils literal notranslate"><span class="pre">insert</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">None</span></code>, quindi scrivendo <code class="docutils literal notranslate"><span class="pre">lb</span> <span class="pre">=</span> <span class="pre">la.insert(0,3)</span></code> andiamo ad associare <code class="docutils literal notranslate"><span class="pre">None</span></code> a <code class="docutils literal notranslate"><span class="pre">lb</span></code>, e quando nella riga successiva Python incontra <code class="docutils literal notranslate"><span class="pre">lc</span> <span class="pre">=</span> <span class="pre">lb.insert(0,2)</span></code> e prova ad eseguire <code class="docutils literal notranslate"><span class="pre">None.insert(0,2)</span></code> si lamenterà perchè <code class="docutils literal notranslate"><span class="pre">None</span></code> non essendo una lista non ha il metodo <code class="docutils literal notranslate"><span class="pre">insert</span></code>.</p>
-<div class="section" id="Esercizio---insertando">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 2 - un errore: come quasi tutti i metodi delle liste, <code class="docutils literal notranslate"><span class="pre">insert</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">None</span></code>, quindi scrivendo <code class="docutils literal notranslate"><span class="pre">lb</span> <span class="pre">=</span> <span class="pre">la.insert(0,3)</span></code> andiamo ad associare <code class="docutils literal notranslate"><span class="pre">None</span></code> a <code class="docutils literal notranslate"><span class="pre">lb</span></code>, e quando nella riga successiva Python incontra <code class="docutils literal notranslate"><span class="pre">lc</span> <span class="pre">=</span> <span class="pre">lb.insert(0,2)</span></code> e prova ad eseguire <code class="docutils literal notranslate"><span class="pre">None.insert(0,2)</span></code> si lamenterà perchè <code class="docutils literal notranslate"><span class="pre">None</span></code> non essendo una lista non ha il metodo <code class="docutils literal notranslate"><span class="pre">insert</span></code>.</p>
+</div><div class="section" id="Esercizio---insertando">
 <h3>Esercizio - insertando<a class="headerlink" href="#Esercizio---insertando" title="Permalink to this headline">¶</a></h3>
 <p>Data la lista:</p>
 <p><code class="docutils literal notranslate"><span class="pre">la</span> <span class="pre">=</span> <span class="pre">[7,6,8,5,6]</span></code></p>
@@ -3312,7 +3516,9 @@ x è  None
 <span class="go">[7, 77, 99, 6, 8, 88, 5, 6, 55]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
@@ -3328,6 +3534,20 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">la</span><span class="p">),</span><span class="mi">55</span><span class="p">)</span>
 
 <span class="c1">#print(la)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3351,7 +3571,9 @@ x è  None
 <li><p><strong>USA</strong> il metodo <code class="docutils literal notranslate"><span class="pre">insert</span></code> e riassegnazione di celle</p></li>
 <li><p><strong>NOTA</strong>: non puoi usarle su una stringa, perchè è IMMUTABILE - dovrai quindi prima convertire la stringa in una lista</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
@@ -3365,6 +3587,19 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">)</span>
 <span class="n">sb</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 <span class="c1">#print(sb)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sa</span> <span class="o">=</span> <span class="s1">&#39;barzoletta&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3395,7 +3630,9 @@ x è  None
 [16, 18, 12, 14]
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
@@ -3409,6 +3646,20 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1">#print(la)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3483,7 +3734,9 @@ x è  None
 <span class="go">[11, 5]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
@@ -3500,6 +3753,20 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <span class="n">la</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 <span class="c1">#print(la)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3767,7 +4034,9 @@ x è  None
 <span class="go">[&#39;o&#39;,&#39;r&#39;,&#39;o&#39;,&#39;t&#39;]</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
@@ -3782,6 +4051,28 @@ x è  None
 <span class="n">scatola</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">corn</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 <span class="n">scatola</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">corn</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">scatola</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;o&#39;, &#39;r&#39;, &#39;o&#39;, &#39;t&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">corn</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">]</span>
+<span class="n">scatola</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3813,7 +4104,9 @@ x è  None
 <span class="go">[&#39;z&#39;, &#39;o&#39;, &#39;z&#39;]</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
@@ -3826,6 +4119,30 @@ x è  None
 <span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">lb</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1">#print(la)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;o&#39;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#      0   1   2   3   4</span>
+<span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3946,8 +4263,10 @@ None
 <li><p>un errore (quale?)</p></li>
 <li><p>stampa la stringa rovesciata</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> è un metodo presente SOLO nelle LISTE, quindi usandolo sulle stringhe stringhe si otterrà un errore. E c’è da attenderselo, visto che <code class="docutils literal notranslate"><span class="pre">reverse</span></code> MODIFICA l’oggetto su cui è chiamato e perchè le stringhe sono <em>immutabili</em> nessun metodo delle stringhe può modificare la stringa su cui è chiamato.</p>
-<p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una lista qualsiasi, che effetto produce il codice seguente?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> è un metodo presente SOLO nelle LISTE, quindi usandolo sulle stringhe stringhe si otterrà un errore. E c’è da attenderselo, visto che <code class="docutils literal notranslate"><span class="pre">reverse</span></code> MODIFICA l’oggetto su cui è chiamato e perchè le stringhe sono <em>immutabili</em> nessun metodo delle stringhe può modificare la stringa su cui è chiamato.</p>
+</div><p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una lista qualsiasi, che effetto produce il codice seguente?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -3956,8 +4275,10 @@ None
 <li><p>non cambia la lista</p></li>
 <li><p>genera un errore (quale?)</p></li>
 </ol>
-<p><strong>RISPOSTA</strong>: La 3 - genera un errore, perchè <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">None</span></code> e <code class="docutils literal notranslate"><span class="pre">None</span></code> non essendo una lista non ha il metodo <code class="docutils literal notranslate"><span class="pre">reverse()</span></code>.</p>
-<div class="section" id="Esercizio---come-va?">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: La 3 - genera un errore, perchè <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">None</span></code> e <code class="docutils literal notranslate"><span class="pre">None</span></code> non essendo una lista non ha il metodo <code class="docutils literal notranslate"><span class="pre">reverse()</span></code>.</p>
+</div><div class="section" id="Esercizio---come-va?">
 <h3>Esercizio - come va?<a class="headerlink" href="#Esercizio---come-va?" title="Permalink to this headline">¶</a></h3>
 <p>Scrivi del codice che date due liste <code class="docutils literal notranslate"><span class="pre">la</span></code> e <code class="docutils literal notranslate"><span class="pre">lb</span></code>, MODIFICA <code class="docutils literal notranslate"><span class="pre">la</span></code> aggiungendogli tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lb</span></code> e rovesciando poi l’intera lista.</p>
 <ul class="simple">
@@ -3976,7 +4297,9 @@ None
 <span class="go">lb= [&#39;v&#39;, &#39;a&#39;, &#39;?&#39;]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
@@ -3989,6 +4312,20 @@ None
 <span class="n">la</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 <span class="c1">#print(&#39;la=&#39;,la)</span>
 <span class="c1">#print(&#39;lb=&#39;,lb)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4010,7 +4347,9 @@ None
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
@@ -4022,6 +4361,28 @@ None
 <span class="n">lc</span> <span class="o">=</span> <span class="n">la</span> <span class="o">+</span> <span class="n">lb</span>  <span class="c1"># il + crea una NUOVA lista</span>
 <span class="n">lc</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;e&#39;, &#39;s&#39;, &#39;o&#39;, &#39;i&#39;, &#39;z&#39;, &#39;e&#39;, &#39;r&#39;, &#39;p&#39;, &#39;e&#39;, &#39;s&#39;, &#39;o&#39;, &#39;c&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4063,7 +4424,9 @@ None
 [32, 16, 8, 4, 2]
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
 </pre></div>
 </div>
@@ -4078,6 +4441,20 @@ None
 <span class="n">la</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">la</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">la</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 <span class="c1">#print(la)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -4206,7 +4583,9 @@ Last word: è
 [&#39;Questa&#39;, &#39;che&#39;, &#39;di&#39;, &#39;dice&#39;, &#39;diverse&#39;, &#39;linee&#39;, &#39;niente.&#39;, &#39;non&#39;, &#39;stringa&#39;, &#39;su&#39;, &#39;testo&#39;, &#39;una&#39;, &#39;è&#39;]
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
@@ -4267,6 +4646,41 @@ Last word: è
 [&#39;Questa&#39;, &#39;che&#39;, &#39;di&#39;, &#39;dice&#39;, &#39;diverse&#39;, &#39;linee&#39;, &#39;niente.&#39;, &#39;non&#39;, &#39;stringa&#39;, &#39;su&#39;, &#39;testo&#39;, &#39;una&#39;, &#39;è&#39;]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Questa è una stringa</span>
+<span class="s2">di testo su</span>
+<span class="s2">diverse linee che non dice niente.&quot;&quot;&quot;</span>
+
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Questa è una stringa
+di testo su
+diverse linee che non dice niente.
+
+Lines: 3 words: 13 chars: 67
+
+[&#39;Q&#39;, &#39;u&#39;, &#39;e&#39;, &#39;s&#39;, &#39;t&#39;, &#39;a&#39;, &#39; &#39;, &#39;è&#39;, &#39; &#39;, &#39;u&#39;, &#39;n&#39;, &#39;a&#39;, &#39; &#39;, &#39;s&#39;, &#39;t&#39;, &#39;r&#39;, &#39;i&#39;, &#39;n&#39;, &#39;g&#39;, &#39;a&#39;, &#39;\n&#39;, &#39;d&#39;, &#39;i&#39;, &#39; &#39;, &#39;t&#39;, &#39;e&#39;, &#39;s&#39;, &#39;t&#39;, &#39;o&#39;, &#39; &#39;, &#39;s&#39;, &#39;u&#39;, &#39;\n&#39;, &#39;d&#39;, &#39;i&#39;, &#39;v&#39;, &#39;e&#39;, &#39;r&#39;, &#39;s&#39;, &#39;e&#39;, &#39; &#39;, &#39;l&#39;, &#39;i&#39;, &#39;n&#39;, &#39;e&#39;, &#39;e&#39;, &#39; &#39;, &#39;c&#39;, &#39;h&#39;, &#39;e&#39;, &#39; &#39;, &#39;n&#39;, &#39;o&#39;, &#39;n&#39;, &#39; &#39;, &#39;d&#39;, &#39;i&#39;, &#39;c&#39;, &#39;e&#39;, &#39; &#39;, &#39;n&#39;, &#39;i&#39;, &#39;e&#39;, &#39;n&#39;, &#39;t&#39;, &#39;e&#39;, &#39;.&#39;]
+67
+
+First word:  Questa
+Last word: è
+[&#39;Questa&#39;, &#39;che&#39;, &#39;di&#39;, &#39;dice&#39;, &#39;diverse&#39;, &#39;linee&#39;, &#39;niente.&#39;, &#39;non&#39;, &#39;stringa&#39;, &#39;su&#39;, &#39;testo&#39;, &#39;una&#39;, &#39;è&#39;]
+</pre></div></div>
+</div>
 </div>
 <div class="section" id="Esercizio---numlist">
 <h3>Esercizio - numlist<a class="headerlink" href="#Esercizio---numlist" title="Permalink to this headline">¶</a></h3>
@@ -4290,7 +4704,9 @@ pari: Min:  <span class="m">10</span>  Max. <span class="m">120</span>  Median: 
 dispari: Min:  <span class="m">60</span>  Max. <span class="m">175</span>  Median:  <span class="m">89</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
 </div>
@@ -4318,6 +4734,37 @@ dispari: Min:  <span class="m">60</span>  Max. <span class="m">175</span>  Media
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;originale: Min: &quot;</span><span class="p">,</span> <span class="n">la</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot; Max.&quot;</span> <span class="p">,</span> <span class="n">la</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot; Median: &quot;</span><span class="p">,</span> <span class="n">la</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari: Min: &quot;</span><span class="p">,</span> <span class="n">pari</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot; Max.&quot;</span> <span class="p">,</span> <span class="n">pari</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot; Median: &quot;</span><span class="p">,</span> <span class="n">pari</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">pari</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari: Min: &quot;</span><span class="p">,</span> <span class="n">dispari</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot; Max.&quot;</span> <span class="p">,</span> <span class="n">dispari</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot; Median: &quot;</span><span class="p">,</span> <span class="n">dispari</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">dispari</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+originale: [10, 60, 72, 118, 11, 71, 56, 89, 120, 175]
+pari: [10, 72, 11, 56, 120]
+dispari: [60, 118, 71, 89, 175]
+
+ordinata:   [10, 11, 56, 60, 71, 72, 89, 118, 120, 175]
+ordinata pari:   [10, 11, 56, 72, 120]
+ordinata dispari:   [60, 71, 89, 118, 175]
+
+originale: Min:  10  Max. 175  Median:  72
+pari: Min:  10  Max. 120  Median:  56
+dispari: Min:  60  Max. 175  Median:  89
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">175</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

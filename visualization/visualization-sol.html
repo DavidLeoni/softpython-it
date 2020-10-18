@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2124,7 +2125,9 @@ essere utilizzato all’interno di espressioni (al contrario di <code class="doc
 <li><p>mentre il terzo <code class="docutils literal notranslate"><span class="pre">1.</span></code> rappresenta l’incremento tra un numero e quello successivo nella serie generata.</p></li>
 </ul>
 <p><strong>✪ ESERCIZIO 1.1</strong>: Prova a usare il comando <code class="docutils literal notranslate"><span class="pre">type</span></code> per controllare quale è il tipo di valore ritornato dalla chiamata a <code class="docutils literal notranslate"><span class="pre">np.arange</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -2132,6 +2135,26 @@ essere utilizzato all’interno di espressioni (al contrario di <code class="doc
 <span></span><span class="c1"># scrivi qui il comando type</span>
 
 <span class="nb">type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">1.</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+numpy.ndarray
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il comando type</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2161,7 +2184,9 @@ numpy.ndarray
 </div>
 <p>è il metodo che veramente genera il grafico e pulisce l’oggetto <code class="docutils literal notranslate"><span class="pre">plt</span></code> per renderlo pronto a disegnare un nuovo grafico. Per il momento, consideriamo che dopo che aver chiamato questo metodo <em>non sarà più possibile apportare modifiche al grafico</em> quindi lo chiameremo per ultimo.</p>
 <p><strong>✪ ESERCIZIO 1.2</strong>: Riscrivi a mano qua sotto il codice visto sopra, e prova ad eseguirlo con <code class="docutils literal notranslate"><span class="pre">Ctrl+Invio</span></code>:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -2190,11 +2215,31 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_9_0.png" src="../_images/visualization_visualization-sol_9_0.png" />
+<img alt="../_images/visualization_visualization-sol_13_0.png" src="../_images/visualization_visualization-sol_13_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_15_0.png" src="../_images/visualization_visualization-sol_15_0.png" />
 </div>
 </div>
 <p><strong>✪ ESERCIZIO 1.3</strong>: Copia e incolla qua sotto l’esempio precendente, questa volta cambiando il colore della linea (usa <code class="docutils literal notranslate"><span class="pre">r</span></code> per il rosso) e lo stile della linea, usando una linea continua con il carattere <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -2222,11 +2267,31 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_11_0.png" src="../_images/visualization_visualization-sol_11_0.png" />
+<img alt="../_images/visualization_visualization-sol_18_0.png" src="../_images/visualization_visualization-sol_18_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_20_0.png" src="../_images/visualization_visualization-sol_20_0.png" />
 </div>
 </div>
 <p><strong>✪ ESERCIZIO 1.4</strong>: Ricopia con il copia e incolla il codice qua sotto, e prova ad aggiungere la griglia con il comando <code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code>, ricordandoti che puoi sempre usare lo help con <code class="docutils literal notranslate"><span class="pre">help(plt.grid)</span></code> (nota: quando chiedi lo help non devi mettere le parentesi tonde <code class="docutils literal notranslate"><span class="pre">()</span></code> dopo il nome del metodo <code class="docutils literal notranslate"><span class="pre">grid</span></code> !)</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
@@ -2256,7 +2321,25 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_13_0.png" src="../_images/visualization_visualization-sol_13_0.png" />
+<img alt="../_images/visualization_visualization-sol_23_0.png" src="../_images/visualization_visualization-sol_23_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_25_0.png" src="../_images/visualization_visualization-sol_25_0.png" />
 </div>
 </div>
 <p><strong>✪ ESERCIZIO 1.5</strong>: Copia e incolla il codice dell’esempio precedente qua sotto, e prova ad aggiungere l’istruzione:</p>
@@ -2266,7 +2349,9 @@ numpy.ndarray
 </pre></div>
 </div>
 <p>Che cosa succede? Che cosa fanno i parametri? Prova a variare i parametri cercando nella guida di <a class="reference external" href="https://matplotlib.org/users/annotations_guide.html">matplotlib</a></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -2298,7 +2383,25 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_15_0.png" src="../_images/visualization_visualization-sol_15_0.png" />
+<img alt="../_images/visualization_visualization-sol_28_0.png" src="../_images/visualization_visualization-sol_28_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_30_0.png" src="../_images/visualization_visualization-sol_30_0.png" />
 </div>
 </div>
 </div>
@@ -2345,7 +2448,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_17_0.png" src="../_images/visualization_visualization-sol_17_0.png" />
+<img alt="../_images/visualization_visualization-sol_32_0.png" src="../_images/visualization_visualization-sol_32_0.png" />
 </div>
 </div>
 <p>Guardiamo la prima (linea 1):</p>
@@ -2381,7 +2484,9 @@ numpy.ndarray
 </div>
 <p>infine fa spazio tra i grafici per ottimizzarlo in maniera che non si sormontino tra loro: funziona in maniera automatica e fa tutto il possibile perché questo non accada ma non può fare i miracoli: alcuni layout potrebbero comunque soffrire di qualche sovrapposizione se lo spazio disponibile è davvero limitato.</p>
 <p><strong>✪ ESERCIZIO 2.1</strong>: Come al solito, inizia a copiare manualmente qua sotto il codice dell’esempio precedente, ed eseguilo con Control+Invio:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -2412,7 +2517,25 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_19_0.png" src="../_images/visualization_visualization-sol_19_0.png" />
+<img alt="../_images/visualization_visualization-sol_35_0.png" src="../_images/visualization_visualization-sol_35_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_37_0.png" src="../_images/visualization_visualization-sol_37_0.png" />
 </div>
 </div>
 <p>Proviamo adesso a mettere due grafici, uno di fianco all’altro. in maniera che ci siano due grafici per gli stessi dati, ma su due righe: nel grafico superiore ci sarà una linea rossa e in quello inferiore i punti saranno blu. Per realizzare questo effetto, dovrai aggiungere dei subplot alla figura. Prova a giocare un po’ con i codici per i quadranti di subplot per vedere cosa succede.</p>
@@ -2451,11 +2574,13 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_21_0.png" src="../_images/visualization_visualization-sol_21_0.png" />
+<img alt="../_images/visualization_visualization-sol_39_0.png" src="../_images/visualization_visualization-sol_39_0.png" />
 </div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.2</strong>: Adesso prova a copiare il grafico (anche di/con copia incolla) in maniera che ci siano due grafici per gli stessi dati, ma su due righe: nel grafico superiore ci sarà una linea rossa e in quello inferiore i punti saranno blu. Per realizzare questo effetto, dovrai aggiungere dei subplot alla figura. Prova a giocare un po’ con i codici per i quadranti di subplot per vedere cosa succede.</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -2493,11 +2618,31 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_23_0.png" src="../_images/visualization_visualization-sol_23_0.png" />
+<img alt="../_images/visualization_visualization-sol_42_0.png" src="../_images/visualization_visualization-sol_42_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_44_0.png" src="../_images/visualization_visualization-sol_44_0.png" />
 </div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.3</strong>: Prova a fare 6 grafici su 3 righe e 2 colonne</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
@@ -2559,7 +2704,25 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_25_0.png" src="../_images/visualization_visualization-sol_25_0.png" />
+<img alt="../_images/visualization_visualization-sol_47_0.png" src="../_images/visualization_visualization-sol_47_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_49_0.png" src="../_images/visualization_visualization-sol_49_0.png" />
 </div>
 </div>
 </div>
@@ -2592,7 +2755,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_28_1.png" src="../_images/visualization_visualization-sol_28_1.png" />
+<img alt="../_images/visualization_visualization-sol_52_1.png" src="../_images/visualization_visualization-sol_52_1.png" />
 </div>
 </div>
 <p>Se vedi <code class="docutils literal notranslate"><span class="pre">plt.subplots</span></code> ci ritorna due valori come una tupla ( e ci mostra anche il grafico per ora vuoto in Jupyter). Il primo valore è la <code class="docutils literal notranslate"><span class="pre">Figure</span></code> e il secondo è un <code class="docutils literal notranslate"><span class="pre">Axes</span></code>. Per metterli rapidamente in variabili con nomi che piacciono a noi come <code class="docutils literal notranslate"><span class="pre">fig</span></code> e <code class="docutils literal notranslate"><span class="pre">ax</span></code>, possiamo usare questa notazione:</p>
@@ -2609,7 +2772,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_30_0.png" src="../_images/visualization_visualization-sol_30_0.png" />
+<img alt="../_images/visualization_visualization-sol_54_0.png" src="../_images/visualization_visualization-sol_54_0.png" />
 </div>
 </div>
 <p>Proviamo adesso a generare un ndarray di numeri casuali, distribuiti secondo una distribuzione gaussiana. Definiamo la media <code class="docutils literal notranslate"><span class="pre">mu</span></code>, lo scarto quadratico medio <code class="docutils literal notranslate"><span class="pre">sigma</span></code>. La funzione <code class="docutils literal notranslate"><span class="pre">np.random.normal()</span></code> richiede come parametro la media, l’SQM e il numero di esempi che devono essere estratti, in questo caso 500:</p>
@@ -2634,7 +2797,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_32_0.png" src="../_images/visualization_visualization-sol_32_0.png" />
+<img alt="../_images/visualization_visualization-sol_56_0.png" src="../_images/visualization_visualization-sol_56_0.png" />
 </div>
 </div>
 <p>Come atteso, i numeri sono centrati sulla linea corrispondente a 0.</p>
@@ -2676,7 +2839,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_36_0.png" src="../_images/visualization_visualization-sol_36_0.png" />
+<img alt="../_images/visualization_visualization-sol_60_0.png" src="../_images/visualization_visualization-sol_60_0.png" />
 </div>
 </div>
 <p>Nella parte per l’istogramma, chiamiamo il metodo <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code>: questo prende come parametri l’array contenente i dati che abbiamo generato (<code class="docutils literal notranslate"><span class="pre">segnale</span></code>), e il numero di partizioni dell’istogramma. Oltre a disegnare la funzione di probabilità dentro l’Axes <code class="docutils literal notranslate"><span class="pre">ax</span></code> restituisce anche i valori numerici per ogni colonna in <code class="docutils literal notranslate"><span class="pre">n</span></code>, i valori per usati per partizionare i dati nelle varie colonne in <code class="docutils literal notranslate"><span class="pre">bins</span></code> e le colonne vere e proprie, intesi come i “rettangoli colorati” che compongono il grafico, in
@@ -2689,7 +2852,9 @@ documenti di testo, molto utilizzato in ambito scientifico anche grazie alla pot
 <li><p><code class="docutils literal notranslate"><span class="pre">[3,5,3,5]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[-3,-3,-3,7,7,7,7,7]</span></code></p></li>
 </ul>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
@@ -2719,10 +2884,33 @@ documenti di testo, molto utilizzato in ambito scientifico anche grazie alla pot
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_39_0.png" src="../_images/visualization_visualization-sol_39_0.png" />
+<img alt="../_images/visualization_visualization-sol_64_0.png" src="../_images/visualization_visualization-sol_64_0.png" />
 </div>
 </div>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># scrivi qui il primo grafico</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_66_0.png" src="../_images/visualization_visualization-sol_66_0.png" />
+</div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
@@ -2751,10 +2939,30 @@ documenti di testo, molto utilizzato in ambito scientifico anche grazie alla pot
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_40_0.png" src="../_images/visualization_visualization-sol_40_0.png" />
+<img alt="../_images/visualization_visualization-sol_68_0.png" src="../_images/visualization_visualization-sol_68_0.png" />
 </div>
 </div>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il secondo grafico</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_70_0.png" src="../_images/visualization_visualization-sol_70_0.png" />
+</div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
@@ -2783,7 +2991,25 @@ documenti di testo, molto utilizzato in ambito scientifico anche grazie alla pot
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_41_0.png" src="../_images/visualization_visualization-sol_41_0.png" />
+<img alt="../_images/visualization_visualization-sol_72_0.png" src="../_images/visualization_visualization-sol_72_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il terzo grafico</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_74_0.png" src="../_images/visualization_visualization-sol_74_0.png" />
 </div>
 </div>
 </div>
@@ -2801,7 +3027,9 @@ l’istogramma, che per questo la chiameremo curva di <em>fitting</em>. Per otte
 <blockquote>
 <div><p><strong>NOTA</strong> Come forse hai notato i valori sull’asse y sono cambiati e la funzione <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> ha acquisito un nuovo parametro: <code class="docutils literal notranslate"><span class="pre">density=True</span></code>: questo serve per normalizzare i valori dell’istogramma dividendo il numero di elementi in ogni <em>bin</em> per il numero totale di elementi e permettendo di comparare l’istogramma con la funzione di probabilità associata.`</p>
 </div></blockquote>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
@@ -2826,13 +3054,13 @@ l’istogramma, che per questo la chiameremo curva di <em>fitting</em>. Per otte
 <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">segnale</span><span class="p">,</span> <span class="n">num_bins</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># ESERCIZIO: Inserisci qui le due linee per disegnare la curva di fitting</span>
-<span class="c1">#jupman-strip</span>
+
 <span class="c1"># Qua usiamo direttamente mu e sigma che già conosciamo,</span>
 <span class="c1"># ma con esperimenti nel mondo reale dovremmo ricavarli in qualche modo</span>
 <span class="c1"># solo a partire dall&#39;istogramma</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="c1">#/jupman-strip</span>
+
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Segnale&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densità di probabilità&#39;</span><span class="p">)</span>
@@ -2846,7 +3074,49 @@ l’istogramma, che per questo la chiameremo curva di <em>fitting</em>. Per otte
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_43_0.png" src="../_images/visualization_visualization-sol_43_0.png" />
+<img alt="../_images/visualization_visualization-sol_77_0.png" src="../_images/visualization_visualization-sol_77_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># creiamo Figure and Axes in un comando solo</span>
+
+<span class="c1"># generiamo il segnale secondo distribuzione gaussiana</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># media</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># sqm</span>
+<span class="n">segnale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span> <span class="c1"># generiamo 500 valori distribuiti come una gaussiana, e mettiamoli nell&#39;ndarray &#39;x&#39;</span>
+
+<span class="c1"># aggiungiamo l&#39;istogramma</span>
+<span class="n">num_bins</span> <span class="o">=</span> <span class="mi">50</span>    <span class="c1"># numero di colonne per l&#39;istogramma</span>
+
+<span class="c1"># in questo caso hist ritorna tre valori che mettiamo in altrettante variabili</span>
+<span class="c1"># notare density=True per avere valori tra 0 e 1</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">segnale</span><span class="p">,</span> <span class="n">num_bins</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># ESERCIZIO: Inserisci qui le due linee per disegnare la curva di fitting</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Segnale&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densità di probabilità&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Istogramma di una Gaussiana con $\mu=0$, $\sigma=1$&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_79_0.png" src="../_images/visualization_visualization-sol_79_0.png" />
 </div>
 </div>
 </div>
@@ -2892,11 +3162,13 @@ l’istogramma, che per questo la chiameremo curva di <em>fitting</em>. Per otte
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_45_0.png" src="../_images/visualization_visualization-sol_45_0.png" />
+<img alt="../_images/visualization_visualization-sol_81_0.png" src="../_images/visualization_visualization-sol_81_0.png" />
 </div>
 </div>
 <p><strong>✪ ESERCIZIO 3.3</strong>: copia qua sotto manualmente il codice per disegnare il grafico a torta</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
@@ -2922,7 +3194,25 @@ l’istogramma, che per questo la chiameremo curva di <em>fitting</em>. Per otte
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_47_0.png" src="../_images/visualization_visualization-sol_47_0.png" />
+<img alt="../_images/visualization_visualization-sol_84_0.png" src="../_images/visualization_visualization-sol_84_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_86_0.png" src="../_images/visualization_visualization-sol_86_0.png" />
 </div>
 </div>
 <p><strong>✪✪✪ ESERCIZIO 3.4</strong> Prova a disegnare una figura con due colonne: in quella di sinistra copia un grafico a torta, e in quella di sinistra metti un grafico a barre verticali utilizzando il metodo <code class="docutils literal notranslate"><span class="pre">ax.bar()</span></code> (primo parametro la posizione x delle barre e secondo l’altezza) per disegnare un diagramma a barre equivalente. Quale ti sembra più chiaro? Prova a giocare con i parametri e <code class="docutils literal notranslate"><span class="pre">explode</span></code> <code class="docutils literal notranslate"><span class="pre">startangle</span></code>, noterai che nel grafico a torta le proporzioni sembrano cambiare, specialmente se la
@@ -2935,7 +3225,9 @@ dimensione degli spicchi è simile.</p>
 </ul>
 <p>Se non ti viene in mente niente puoi sempre guardare la soluzione.</p>
 <p><strong>Ricordati sempre</strong> che il comando <code class="docutils literal notranslate"><span class="pre">help()</span></code> è molto importante, usalo quando vuoi sapere di più sui parametri o sulle funzioni che stai utilizzando</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
@@ -2968,7 +3260,25 @@ dimensione degli spicchi è simile.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization-sol_49_0.png" src="../_images/visualization_visualization-sol_49_0.png" />
+<img alt="../_images/visualization_visualization-sol_89_0.png" src="../_images/visualization_visualization-sol_89_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/visualization_visualization-sol_91_0.png" src="../_images/visualization_visualization-sol_91_0.png" />
 </div>
 </div>
 </div>

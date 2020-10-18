@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2091,19 +2092,38 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="section" id="estrai_impiegati">
 <h3>estrai_impiegati<a class="headerlink" href="#estrai_impiegati" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ RITORNA i nomi degli impiegati in una lista</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
 <span></span><span class="k">def</span> <span class="nf">estrai_impiegati</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">diz</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diz</span><span class="p">[</span><span class="s2">&quot;nome&quot;</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">estrai_impiegati</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
+
+<span class="c1"># se non trova db_impiegati, ricordati di eseguire la cella sopra che lo definisce</span>
+<span class="k">assert</span> <span class="n">estrai_impiegati</span><span class="p">(</span><span class="n">db_impiegati</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;Mario&#39;</span><span class="p">,</span> <span class="s1">&#39;Pippo&#39;</span><span class="p">,</span> <span class="s1">&#39;Paolo&#39;</span><span class="p">]</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">def</span> <span class="nf">estrai_impiegati</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">estrai_impiegati</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
 
@@ -2117,7 +2137,9 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="section" id="estrai_aziende">
 <h3>estrai_aziende<a class="headerlink" href="#estrai_aziende" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ RITORNA i nomi di azienda in una lista (i duplicati sono ammessi)</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -2125,13 +2147,30 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <span></span><span class="k">def</span> <span class="nf">estrai_aziende</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;RITORNA i nomi di azienda in una lista (i duplicati sono ammessi)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">diz</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
         <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diz</span><span class="p">[</span><span class="s2">&quot;azienda&quot;</span><span class="p">][</span><span class="s2">&quot;nome&quot;</span><span class="p">])</span>
 
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="k">assert</span> <span class="n">estrai_aziende</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
+<span class="c1"># se non trova db_impiegati, ricordati di eseguire la cella sopra che lo definisce</span>
+<span class="k">assert</span> <span class="n">estrai_aziende</span><span class="p">(</span><span class="n">db_impiegati</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Aringhe Candite Spa&quot;</span><span class="p">,</span><span class="s2">&quot;Batworks&quot;</span><span class="p">,</span><span class="s2">&quot;Aringhe Candite Spa&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">estrai_aziende</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;RITORNA i nomi di azienda in una lista (i duplicati sono ammessi)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="k">assert</span> <span class="n">estrai_aziende</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
@@ -2144,20 +2183,39 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="section" id="età_media">
 <h3>età_media<a class="headerlink" href="#età_media" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ RITORNA l’età media degli impiegati di azienda</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
 <span></span><span class="k">def</span> <span class="nf">età_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">somma</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">diz</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
         <span class="n">somma</span> <span class="o">+=</span> <span class="n">diz</span><span class="p">[</span><span class="s2">&quot;età&quot;</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">somma</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="c1"># visto che la funzione ritorna float non si può comparare per numeri esatti ma per numeri vicini</span>
+<span class="c1"># con funzione math.isclose</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="k">assert</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">età_media</span><span class="p">(</span><span class="n">db_impiegati</span><span class="p">),</span> <span class="p">(</span><span class="mi">34</span> <span class="o">+</span> <span class="mi">20</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">def</span> <span class="nf">età_media</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="c1"># visto che la funzione ritorna float non si può comparare per numeri esatti ma per numeri vicini</span>
@@ -2171,13 +2229,15 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="section" id="tipi_aziende">
 <h3>tipi_aziende<a class="headerlink" href="#tipi_aziende" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ RITORNA i tipi (settori) di azienda in una lista, SENZA duplicati !!</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">tipi_aziende</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">diz</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
         <span class="n">settore</span> <span class="o">=</span> <span class="n">diz</span><span class="p">[</span><span class="s2">&quot;azienda&quot;</span><span class="p">][</span><span class="s2">&quot;settore&quot;</span><span class="p">]</span>
@@ -2185,7 +2245,20 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
             <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">settore</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">tipi_aziende</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
+<span class="k">assert</span> <span class="n">tipi_aziende</span><span class="p">(</span><span class="n">db_impiegati</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Alimentari&quot;</span><span class="p">,</span> <span class="s2">&quot;Abbigliamento&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">tipi_aziende</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">tipi_aziende</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
 <span class="k">assert</span> <span class="n">tipi_aziende</span><span class="p">(</span><span class="n">db_impiegati</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;Alimentari&quot;</span><span class="p">,</span> <span class="s2">&quot;Abbigliamento&quot;</span><span class="p">]</span>
@@ -2215,20 +2288,57 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">76.0</span> <span class="p">,</span> <span class="mf">73.5</span><span class="p">,</span> <span class="mf">80.5</span> <span class="p">]</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">medie</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)):</span>
         <span class="n">ret</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;V&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;VI&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
 
     <span class="k">return</span> <span class="n">ret</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="c1"># INIZIO TEST - NON TOCCARE !</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Verifica che i numeri float in lista1 siano simili a quelli di lista2</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">def</span> <span class="nf">is_list_close</span><span class="p">(</span><span class="n">lista1</span><span class="p">,</span> <span class="n">lista2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">lista1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lista2</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">assert</span> <span class="n">is_list_close</span><span class="p">(</span><span class="n">medie</span><span class="p">([</span>
+                            <span class="p">{</span><span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span> <span class="p">:</span> <span class="s1">&#39;math&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span> <span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;VI&#39;</span> <span class="p">:</span> <span class="mi">82</span><span class="p">},</span>
+                            <span class="p">{</span><span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span> <span class="p">:</span> <span class="s1">&#39;italian&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span> <span class="p">:</span> <span class="mi">73</span><span class="p">,</span> <span class="s1">&#39;VI&#39;</span> <span class="p">:</span> <span class="mi">74</span><span class="p">},</span>
+                            <span class="p">{</span><span class="s1">&#39;id&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span> <span class="p">:</span> <span class="s1">&#39;german&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span> <span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s1">&#39;VI&#39;</span> <span class="p">:</span> <span class="mi">86</span><span class="p">}</span>
+                          <span class="p">]),</span>
+                     <span class="p">[</span> <span class="mf">76.0</span> <span class="p">,</span> <span class="mf">73.5</span><span class="p">,</span> <span class="mf">80.5</span> <span class="p">])</span>
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">medie</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -2287,19 +2397,49 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 </pre></div>
 </div>
 <p>Deve ritornare <code class="docutils literal notranslate"><span class="pre">False</span></code> perchè a giacomo non piace lo sport</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
 <span></span><span class="k">def</span> <span class="nf">ha_pref</span><span class="p">(</span><span class="n">diz</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">pref</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="k">if</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">pref</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">[</span><span class="n">nome</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[]},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[</span><span class="s1">&#39;x&#39;</span><span class="p">]},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[</span><span class="s1">&#39;x&#39;</span><span class="p">]},</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>  <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;b&#39;</span><span class="p">:[</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]},</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>  <span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;aldo&#39;</span><span class="p">:[</span><span class="s1">&#39;cinema&#39;</span><span class="p">,</span> <span class="s1">&#39;musica&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;giovanni&#39;</span><span class="p">:[</span><span class="s1">&#39;musica&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;giacomo&#39;</span><span class="p">:[</span><span class="s1">&#39;cinema&#39;</span><span class="p">,</span> <span class="s1">&#39;videogiochi&#39;</span><span class="p">]</span>
+               <span class="p">},</span> <span class="s1">&#39;aldo&#39;</span><span class="p">,</span> <span class="s1">&#39;musica&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;aldo&#39;</span><span class="p">:[</span><span class="s1">&#39;cinema&#39;</span><span class="p">,</span> <span class="s1">&#39;musica&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;giovanni&#39;</span><span class="p">:[</span><span class="s1">&#39;musica&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;giacomo&#39;</span><span class="p">:[</span><span class="s1">&#39;cinema&#39;</span><span class="p">,</span> <span class="s1">&#39;videogiochi&#39;</span><span class="p">]</span>
+               <span class="p">},</span> <span class="s1">&#39;giacomo&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">def</span> <span class="nf">ha_pref</span><span class="p">(</span><span class="n">diz</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">pref</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 <span class="k">assert</span> <span class="n">ha_pref</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:[]},</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span>  <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
@@ -2362,19 +2502,69 @@ Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare i
 </pre></div>
 </div>
 <p><strong>NOTA</strong>: Ricordarsi lo spazio tra espressione e frase!</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">onomat</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="n">sentimento</span><span class="p">,</span> <span class="n">sentimenti</span><span class="p">):</span>
-    <span class="c1">#jupman-raise</span>
+
     <span class="n">sent</span> <span class="o">=</span> <span class="n">sentimenti</span><span class="p">[</span><span class="n">sentimento</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">sent</span><span class="p">[</span><span class="s2">&quot;posizione&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">sent</span><span class="p">[</span><span class="s2">&quot;espressione&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">frase</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">frase</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">sent</span><span class="p">[</span><span class="s2">&quot;espressione&quot;</span><span class="p">]</span>
-    <span class="c1">#/jupman-raise</span>
+
+
+
+<span class="c1"># INIZIO TEST - NON TOCCARE !!!</span>
+
+
+<span class="n">sentimenti</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="mi">1</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Gulp!&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span>
+                    <span class="p">},</span>
+                <span class="mi">2</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Sgaragulp!&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span>
+                    <span class="p">},</span>
+                <span class="mi">3</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Uff..&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span><span class="p">:</span> <span class="s2">&quot;f&quot;</span>
+                    <span class="p">},</span>
+                <span class="mi">4</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Yuk yuk!&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span><span class="p">:</span> <span class="s2">&quot;f&quot;</span>
+                    <span class="p">},</span>
+                <span class="mi">5</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Sgrunt!&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span><span class="p">:</span> <span class="s2">&quot;i&quot;</span>
+                    <span class="p">},</span>
+                <span class="mi">6</span><span class="p">:</span>  <span class="p">{</span>
+                        <span class="s2">&quot;espressione&quot;</span><span class="p">:</span> <span class="s2">&quot;Gasp!&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;posizione&quot;</span> <span class="p">:</span> <span class="s2">&quot;i&quot;</span>
+                    <span class="p">}</span>
+            <span class="p">}</span>
+
+
+<span class="k">assert</span> <span class="n">onomat</span><span class="p">(</span><span class="s2">&quot;Mi chiamo Pippo.&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sentimenti</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Mi chiamo Pippo. Yuk yuk!&quot;</span>
+<span class="k">assert</span> <span class="n">onomat</span><span class="p">(</span><span class="s2">&quot;Quel topastro mi ha rovinato un&#39;altra rapina!&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">sentimenti</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Sgrunt! Quel topastro mi ha rovinato un&#39;altra rapina!&quot;</span>
+<span class="k">assert</span> <span class="n">onomat</span><span class="p">(</span><span class="s2">&quot;Non voglio alzarmi dall&#39;amaca.&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sentimenti</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Non voglio alzarmi dall&#39;amaca. Uff..&quot;</span>
+
+<span class="c1"># FINE TEST</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">onomat</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="n">sentimento</span><span class="p">,</span> <span class="n">sentimenti</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !!!</span>

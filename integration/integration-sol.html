@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2053,12 +2054,16 @@ div.rendered_html tbody tr:hover {
 <h2>1 Prendiamoci i dati<a class="headerlink" href="#1-Prendiamoci-i-dati" title="Permalink to this headline">¶</a></h2>
 <p>Concentriamoci adesso sugli Agritur. Andiamo a cercarci dei dati dal catalogo opendata <code class="docutils literal notranslate"><span class="pre">dati.trentino.it</span></code>. In questo caso sceglieremo un file dal dataset <a class="reference external" href="http://dati.trentino.it/dataset/agriturismi-del-trentino">Agritur del Trentino</a>.</p>
 <p><strong>✪ DOMANDA 1.1</strong>: Quale è la licenza del dataset? Possiamo farci tutto quello che vogliamo ?</p>
-<p><strong>RISPOSTA</strong>: E’ CC-BY, basta citare la fonte</p>
-<p>Nel dataset troviamo la risorsa <a class="reference external" href="http://dati.trentino.it/dataset/agriturismi-del-trentino/resource/bb9f3185-602d-44c5-9f06-fc1f7ae25038">Elenco Agritur</a> che al suo interno contiene un link ad un file CSV.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: E’ CC-BY, basta citare la fonte</p>
+</div><p>Nel dataset troviamo la risorsa <a class="reference external" href="http://dati.trentino.it/dataset/agriturismi-del-trentino/resource/bb9f3185-602d-44c5-9f06-fc1f7ae25038">Elenco Agritur</a> che al suo interno contiene un link ad un file CSV.</p>
 <p><strong>ATTENZIONE</strong>: Per questo esercizio, <strong>NON</strong> usate il CSV dal sito, ma scaricate invece <a class="reference external" href="agritur16_10_2014.csv">agritur16_10_2014.csv a questo link</a> che come dal nome contiene un file del 2014.</p>
 <p><strong>✪ DOMANDA 1.2</strong>: notate differenze tra il file del 2014 e quello corrente sul sito ?</p>
-<p><strong>RISPOSTA</strong>: al momento (Marzo 2018) neanche si può scaricare, precedentemente a Novembre 2017 rispetto al file del 2014 erano apparsi cambiamenti nel formato delle colonne</p>
-<p><strong>✪ DOMANDA 1.3</strong>: Se realizzaste un programma per leggere questi file degli agriturismi scaricandoli periodicamente dal sito, a lungo andare quali problemi potrebbero insorgere (pensate anche al contenuto del file) ?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: al momento (Marzo 2018) neanche si può scaricare, precedentemente a Novembre 2017 rispetto al file del 2014 erano apparsi cambiamenti nel formato delle colonne</p>
+</div><p><strong>✪ DOMANDA 1.3</strong>: Se realizzaste un programma per leggere questi file degli agriturismi scaricandoli periodicamente dal sito, a lungo andare quali problemi potrebbero insorgere (pensate anche al contenuto del file) ?</p>
 <p>Vediamo qua una anterprima del file <a class="reference external" href="agritur16_10_2014.csv">agritur16_10_2014.csv</a> (NOTA: i campi a destra sono tagliati) :</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>N_prog;Num_archivio;data_rilascio_prima_autorizzazione;Nome_Impresa_agricola;A ...
 1;10;11/11/1986;DALLAGO LUCIANO;no;38060;Aldeno;Via S. D&#39;Acquisto n. 4;29251/9 ...
@@ -2067,11 +2072,17 @@ div.rendered_html tbody tr:hover {
 4;49;15/01/1987;MONTIBELLER VALTER;no;38050;Roncegno;Via Prose n. 1;138559/96; ...
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Bisogna sempre prepararsi al peggio: sparizione di colonne, aggiunta di nuove colonne, cambiamento dei valori attesi dentro le colonne, sparizione di tutto il file…</p>
-<p><strong>✪ DOMANDA 1.4</strong>: Ci sono le intestazioni ? Qual’è il separatore ?</p>
-<p><strong>RISPOSTA</strong>: ci sono le intestazioni, separate dal punto e virgola.</p>
-<p><strong>✪ DOMANDA 1.5</strong>: Quanti indirizzi ci sono nel file ? Se volessimo posizionare gli agritur su una mappa, quali indirizzi useremmo ? Ci sono le coordinate geografiche?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Bisogna sempre prepararsi al peggio: sparizione di colonne, aggiunta di nuove colonne, cambiamento dei valori attesi dentro le colonne, sparizione di tutto il file…</p>
+</div><p><strong>✪ DOMANDA 1.4</strong>: Ci sono le intestazioni ? Qual’è il separatore ?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: ci sono le intestazioni, separate dal punto e virgola.</p>
+</div><p><strong>✪ DOMANDA 1.5</strong>: Quanti indirizzi ci sono nel file ? Se volessimo posizionare gli agritur su una mappa, quali indirizzi useremmo ? Ci sono le coordinate geografiche?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>indirizzi:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>indirizzo_impresa_agricola
 Indirizzo_agriturismo
@@ -2079,7 +2090,7 @@ Indirizzo_agriturismo
 </div>
 <p>coordinate geografiche: Latitudine e Longitudine</p>
 <p>La posizione degli agritur è in Indirizzo_agriturismo, ma le coordinate geografiche sono vuote.</p>
-<p><strong>✪ DOMANDA 1.6</strong>: Prova ad aprire il file in LibreOffice Calc o Excel, facendo attenzione a specificare i separatori corretti e l’encoding (guarda l’header ‘Società’ , in particolare il carattere finale !)</p>
+</div><p><strong>✪ DOMANDA 1.6</strong>: Prova ad aprire il file in LibreOffice Calc o Excel, facendo attenzione a specificare i separatori corretti e l’encoding (guarda l’header ‘Società’ , in particolare il carattere finale !)</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE SE USI EXCEL!</strong></p>
 <p>Facendo direttamente <code class="docutils literal notranslate"><span class="pre">File-&gt;Apri</span> <span class="pre">in</span> <span class="pre">Excel</span></code>, probabilmente Excel cercherà di immaginarsi da solo come intabellare il CSV, e sbaglierà metterà tutto le righe in una colonna. Per ovviare al problema, dobbiamo dire ad Excel di mostrare un pannello per chiederci come vogliamo aprire il CSV, facendo così:</p>
@@ -2097,7 +2108,9 @@ Indirizzo_agriturismo
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">row</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">lettore</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -2113,6 +2126,34 @@ Indirizzo_agriturismo
         <span class="n">row</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">lettore</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;N_prog&#39;, &#39;Num_archivio&#39;, &#39;data_rilascio_prima_autorizzazione&#39;, &#39;Nome_Impresa_agricola&#39;, &#39;Azienda_zootecnica&#39;, &#39;CAP&#39;, &#39;sede_impresa_agricola&#39;, &#39;indirizzo_impresa_agricola&#39;, &#39;CCIAA&#39;, &#39;pref&#39;, &#39;tel&#39;, &#39;società&#39;, &#39;malga&#39;, &#39;PEC&#39;, &#39;indirizzo_e_mail&#39;, &#39;Altitudine&#39;, &#39;Latitudine&#39;, &#39;Longitudine&#39;, &#39;Comune_Sede_Agriturismo&#39;, &#39;Indirizzo_agriturismo&#39;, &#39;Denominazione_Agriturismo&#39;, &#39;N_appartamenti&#39;, &#39;N_stanze_in_appartamento&#39;, &#39;Tot_posti_letto_in_appartamento&#39;, &#39;N_bagni_appartamento&#39;, &#39;N_Stanze&#39;, &#39;Tot_posti_letto_in_stanze&#39;, &#39;N_bagni_in_stanze&#39;, &#39;N_tot_stanze_e_stanze_in_appartamento&#39;, &#39;Tot_posti_letto&#39;, &#39;Alloggio_in_appartamenti&#39;, &#39;Alloggio_in_stanze&#39;, &#39;Prima_colazione&#39;, &#39;Ristorazione_solo_per_alloggiati&#39;, &#39;Servizio_Ristorante_per_passanti&#39;, &#39;N_posti_tavola_interni_a_struttura&#39;, &#39;N_posti_tavola_esterni_alla_struttura&#39;, &#39;N_tot_posti_tavola&#39;, &#39;N_tot_Bagni&#39;, &#39;Agricampeggio&#39;, &#39;N_piazzole&#39;, &#39;N_tot_posti_in_campeggio&#39;, &#39;Fattoria_didattica&#39;, &#39;Altre_attività_ricreative&#39;, &#39;Degustazione&#39;, &#39;Classificazione_punteggio_tabella_1&#39;, &#39;Classificazione_punteggio_tabella_2&#39;, &#39;Classificazione_punteggio_tabella_3&#39;, &#39;ASSEGNAZIONE_MARGHERITE&#39;]
+[&#39;1&#39;, &#39;10&#39;, &#39;11/11/1986&#39;, &#39;DALLAGO LUCIANO&#39;, &#39;no&#39;, &#39;38060&#39;, &#39;Aldeno&#39;, &#34;Via S. D&#39;Acquisto n. 4&#34;, &#39;29251/97&#39;, &#39;0461&#39;, &#39;842629&#39;, &#39;no&#39;, &#39;no&#39;, &#39;luciano.dallago@pec.agritel.it&#39;, &#39;gastone.dallago@smach.it &#39;, &#39;810&#39;, &#39;&#39;, &#39;&#39;, &#39;Garniga Terme&#39;, &#39;Loc. al Lago n. 15&#39;, &#39;DALLAGO LUCIANO&#39;, &#39;2&#39;, &#39;5&#39;, &#39;10&#39;, &#39;2&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;5&#39;, &#39;10&#39;, &#39;si&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;&#39;]
+[&#39;2&#39;, &#39;26&#39;, &#39;16/12/1986&#39;, &#39;ARMAN CRISTINA&#39;, &#39;no&#39;, &#39;38010&#39;, &#39;Faedo&#39;, &#39;Loc. Pineta - Maso Nello&#39;, &#39;137876/96&#39;, &#39;0461&#39;, &#39;650384&#39;, &#39;no&#39;, &#39;no&#39;, &#39;cristina.arman@pec.agritel.it&#39;, &#39;masonello@hotmail.com &#39;, &#39;595&#39;, &#39;&#39;, &#39;&#39;, &#39;Faedo&#39;, &#39;Loc. Pineta - Maso Nello&#39;, &#39;MASO NELLO&#39;, &#39;1&#39;, &#39;2&#39;, &#39;4&#39;, &#39;1&#39;, &#39;4&#39;, &#39;8&#39;, &#39;4&#39;, &#39;6&#39;, &#39;12&#39;, &#39;si&#39;, &#39;si&#39;, &#39;si&#39;, &#39;no&#39;, &#39;si&#39;, &#39;30&#39;, &#39;0&#39;, &#39;30&#39;, &#39;1&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;si&#39;, &#39;&#39;, &#39;si&#39;, &#39;31&#39;, &#39;40&#39;, &#39;10&#39;, &#39;3&#39;]
+[&#39;3&#39;, &#39;37&#39;, &#39;22/12/1986&#39;, &#39;INAMA FRANCESCO&#39;, &#39;no&#39;, &#39;38010&#39;, &#39;Sanzeno&#39;, &#39;Via Casalini n. 74&#39;, &#39;130041/96&#39;, &#39;0463&#39;, &#39;434072&#39;, &#39;no&#39;, &#39;no&#39;, &#39;inama.francesco@cia.legalmail.it&#39;, &#39;&#39;, &#39;641&#39;, &#39;&#39;, &#39;&#39;, &#39;Sanzeno&#39;, &#39;Via Casalini n. 74&#39;, &#39;ANAUNIA&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;5&#39;, &#39;10&#39;, &#39;5&#39;, &#39;5&#39;, &#39;10&#39;, &#39;no&#39;, &#39;si&#39;, &#39;si&#39;, &#39;no&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;22&#39;, &#39;19&#39;, &#39;6&#39;, &#39;2&#39;]
+[&#39;4&#39;, &#39;49&#39;, &#39;15/01/1987&#39;, &#39;MONTIBELLER VALTER&#39;, &#39;no&#39;, &#39;38050&#39;, &#39;Roncegno&#39;, &#39;Via Prose n. 1&#39;, &#39;138559/96&#39;, &#39;0461&#39;, &#39;773349&#39;, &#39;no&#39;, &#39;no&#39;, &#39;AZ.MONTIBELLER@PEC.IT&#39;, &#39;&#39;, &#39;535&#39;, &#39;&#39;, &#39;&#39;, &#39;Roncegno&#39;, &#39;Via Prose n. 1&#39;, &#39;MONTIBELLER&#39;, &#39;6&#39;, &#39;6&#39;, &#39;8&#39;, &#39;6&#39;, &#39;4&#39;, &#39;8&#39;, &#39;4&#39;, &#39;10&#39;, &#39;16&#39;, &#39;si&#39;, &#39;si&#39;, &#39;si&#39;, &#39;no&#39;, &#39;si&#39;, &#39;43&#39;, &#39;0&#39;, &#39;43&#39;, &#39;2&#39;, &#39;si&#39;, &#39;15&#39;, &#39;30&#39;, &#39;si&#39;, &#39;bagni di fieno&#39;, &#39;si&#39;, &#39;32&#39;, &#39;24&#39;, &#39;10&#39;, &#39;2&#39;]
+[&#39;5&#39;, &#39;52&#39;, &#39;20/01/1987&#39;, &#39;BRESCIANI ITALO&#39;, &#39;no&#39;, &#39;38060&#39;, &#39;Tenno&#39;, &#39;Via Diaz n. 40 - Fraz. Cologna&#39;, &#39;138928/96&#39;, &#39;0464&#39;, &#39;521701&#39;, &#39;no&#39;, &#39;no&#39;, &#39;italo.bresciani@pec.agritel.it&#39;, &#39;&#39;, &#39;428&#39;, &#39;&#39;, &#39;&#39;, &#39;Tenno&#39;, &#39;Loc. Fontanelle&#39;, &#39;PIZACOL DI BRESCIANI ITALO&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;si&#39;, &#39;35&#39;, &#39;0&#39;, &#39;35&#39;, &#39;2&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;7&#39;, &#39;11&#39;, &#39;2&#39;, &#39;2&#39;]
+[&#39;6&#39;, &#39;61&#39;, &#39;30/01/1987&#39;, &#39;FONTANARI ETTORE&#39;, &#39;no&#39;, &#39;38057&#39;, &#39;Pergine Valsugana&#39;, &#39;Via Chimelli n. 25&#39;, &#39;38575/97&#39;, &#39;0461&#39;, &#39;530023&#39;, &#39;no&#39;, &#39;no&#39;, &#39;ettore.fontanari@pec.agritel.it&#39;, &#39;&#39;, &#39;482&#39;, &#39;&#39;, &#39;&#39;, &#39;Pergine Valsugana&#39;, &#39;Via Chimelli n. 25&#39;, &#39;FONTANARI ETTORE&#39;, &#39;4&#39;, &#39;6&#39;, &#39;9&#39;, &#39;4&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;6&#39;, &#39;9&#39;, &#39;si&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;8&#39;, &#39;14&#39;, &#39;4&#39;, &#39;2&#39;]
+[&#39;7&#39;, &#39;68&#39;, &#39;30/01/1987&#39;, &#39;MARINCONZ GINO&#39;, &#39;no&#39;, &#39;38010&#39;, &#39;Coredo&#39;, &#39;Via G. Inama n. 21&#39;, &#39;61840/97&#39;, &#39;0463&#39;, &#39;536328&#39;, &#39;no&#39;, &#39;no&#39;, &#39;GINO.MARINCONZ@PEC.IT&#39;, &#39;&#39;, &#39;831&#39;, &#39;&#39;, &#39;&#39;, &#39;Coredo&#39;, &#39;Via G. Inama n. 21&#39;, &#39;MARINCONZ GINO&#39;, &#39;3&#39;, &#39;6&#39;, &#39;11&#39;, &#39;3&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;6&#39;, &#39;11&#39;, &#39;si&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;9&#39;, &#39;12&#39;, &#39;4&#39;, &#39;2&#39;]
+[&#39;8&#39;, &#39;74&#39;, &#39;06/02/1987&#39;, &#39;BERNARDI ARMANDA BORTOLOTTI&#39;, &#39;no&#39;, &#39;38057&#39;, &#39;Pergine Valsugana&#39;, &#39;Via Montesei n. 2&#39;, &#39;141055/96&#39;, &#39;0461&#39;, &#39;530125&#39;, &#39;no&#39;, &#39;no&#39;, &#39;AGRITUR.BORTOLOTTI@PEC.CGN.IT&#39;, &#39;agritur.bortolotti@tin.it&#39;, &#39;482&#39;, &#39;&#39;, &#39;&#39;, &#39;Pergine Valsugana&#39;, &#39;Via Montesei n. 4&#39;, &#39;AGRITUR BORTOLOTTI&#39;, &#39;2&#39;, &#39;2&#39;, &#39;8&#39;, &#39;2&#39;, &#39;6&#39;, &#39;14&#39;, &#39;6&#39;, &#39;8&#39;, &#39;22&#39;, &#39;si&#39;, &#39;si&#39;, &#39;si&#39;, &#39;no&#39;, &#39;si&#39;, &#39;25&#39;, &#39;0&#39;, &#39;25&#39;, &#39;2&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;si&#39;, &#39;&#39;, &#39;no&#39;, &#39;31&#39;, &#39;26&#39;, &#39;11&#39;, &#39;3&#39;]
+[&#39;9&#39;, &#39;94&#39;, &#39;06/05/1987&#39;, &#39;ZAMBONI PIA&#39;, &#39;no&#39;, &#39;38040&#39;, &#39;Bosentino&#39;, &#39;Maso Fosina n. 5&#39;, &#39;129820/96&#39;, &#39;0461&#39;, &#39;848468&#39;, &#39;no&#39;, &#39;no&#39;, &#39;pia.zamboni@pec.agritel.it&#39;, &#39;&#39;, &#39;700&#39;, &#39;&#39;, &#39;&#39;, &#39;Calceranica al Lago&#39;, &#39;Maso Marini&#39;, &#39;MASO MARINI&#39;, &#39;3&#39;, &#39;5&#39;, &#39;8&#39;, &#39;3&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;5&#39;, &#39;8&#39;, &#39;si&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;0&#39;, &#39;0&#39;, &#39;no&#39;, &#39;&#39;, &#39;no&#39;, &#39;27&#39;, &#39;39&#39;, &#39;15&#39;, &#39;4&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2149,15 +2190,19 @@ Indirizzo_agriturismo
 </li>
 </ul>
 <p><strong>✪ DOMANDA 3.1.1</strong>: Le due stringhe trovano risultati diversi. Come mai? Manca forse qualche dato ad OpenStreetMap?</p>
-<p><strong>RISPOSTA</strong>: Mancano i numeri civici, ma c’è il nome esatto dell’agritur. Quindi la query con il numero civico viene semplicemente centrata sulla strada ma non sull’agritur</p>
-</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Mancano i numeri civici, ma c’è il nome esatto dell’agritur. Quindi la query con il numero civico viene semplicemente centrata sulla strada ma non sull’agritur</p>
+</div></div>
 <div class="section" id="3.2-Webapi-JSON">
 <h3>3.2 Webapi JSON<a class="headerlink" href="#3.2-Webapi-JSON" title="Permalink to this headline">¶</a></h3>
 <p>Oggigiorno, tantissimi portali offrono la possibilità di leggere e scrivere informazioni programmaticamente tramite cosiddette ‘API REST’. <code class="docutils literal notranslate"><span class="pre">API</span></code> significa <code class="docutils literal notranslate"><span class="pre">Application</span> <span class="pre">Programming</span> <span class="pre">Interface</span></code>, ed è una serie di specifiche su come accedere programmaticamente ai dati di un sito. Di solito, le API disponibili vengono descritte nella sezione sviluppatori.</p>
 <p><strong>✪ DOMANDA 3.2.2</strong>: prova ad andare sul sito di <a class="reference external" href="https://www.dati.gov.it/">dati.gov.it</a> e cerca dove sono le API. Provane qualcuna dal browser cercando di capire cosa viene ritornato.</p>
-<p><strong>RISPOSTA</strong>: Ci sono API alla <a class="reference external" href="https://www.dati.gov.it/content/sviluppatori">sezione Sviluppatori</a> tipo questa che ritorna tutti i dataset (chiamati anche <em>packages</em> in CKAN) :</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Ci sono API alla <a class="reference external" href="https://www.dati.gov.it/content/sviluppatori">sezione Sviluppatori</a> tipo questa che ritorna tutti i dataset (chiamati anche <em>packages</em> in CKAN) :</p>
 <p><a class="reference external" href="http://www.dati.gov.it/api/3/action/package_list">http://www.dati.gov.it/api/3/action/package_list</a></p>
-<p><strong>Webapi geografiche</strong></p>
+</div><p><strong>Webapi geografiche</strong></p>
 <p>Abbiamo visto una bella rappresentazione grafica del punto sulla mappa. Però ci piacerebbe ottenere quell’informazione in Python. Come fare? <a class="reference external" href="http://openstreetmap.org">openstreetmap.org</a> offre delle API che potremmo usare, ma teniamo presente che OpenStreetMap è un servizio gratuito gestito principalmente su base volontaristica con risorse limitate.</p>
 <p>In alternativa, conviene rivolgersi a servizi offerti da aziende commerciali che possono sostenere un traffico più elevato. Di interessante c’è MapQuest, che oltre a mappe commerciali, offre anche lo stesso identico servizio di OpenStreetMap (può farlo perchè le condizioni di licenza di OSM, molto libere, lo permettono). L’unico vincolo è che per usare il servizio bisogna prima registrare una cosiddetta ‘Api key’ da passare al servizio ogni volta che lo usiamo. Questo consente a MapQuest di
 monitorare eventuali abusi del servizio (per più info, vedere le <a class="reference external" href="https://developer.mapquest.com/documentation/open/">condizioni di licenza di MapQuest</a>. Quando ci connettiamo a indirizzi che iniziano con <code class="docutils literal notranslate"><span class="pre">open.mapquestapi</span></code>, vuol dire che stiamo usando mappe di OpenStreetMap.</p>
@@ -2555,7 +2600,9 @@ dict
 </pre></div></div>
 </div>
 <p><strong>✪ DOMANDA 3.3.1</strong>: Come è stato convertito in Python il campo <code class="docutils literal notranslate"><span class="pre">lat</span></code>. Numero o qualcos’altro? In cosa potremmo convertirlo?:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
@@ -2577,8 +2624,30 @@ dict
 11.4115734
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;class &#39;str&#39;&gt;
+11.4115734
+</pre></div></div>
+</div>
 <p><strong>✪ ESERCIZIO 3.3.2</strong>: prova a chiamare <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> passandogli una URL sbagliata, come <code class="docutils literal notranslate"><span class="pre">boh</span></code> o parzialmente giusta come <code class="docutils literal notranslate"><span class="pre">http://open.mapquestapi.com/BLA</span></code>. Cosa ottieni di ritorno per i vari campi di <code class="docutils literal notranslate"><span class="pre">r</span></code>? Il <a class="reference external" href="https://it.wikipedia.org/wiki/Codici_di_stato_HTTP">codice HTTP di ritorno</a> (successo / errore) ti sembra consistente con il risultato che ottieni?</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
@@ -2587,6 +2656,26 @@ dict
 
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://open.mapquestapi.com/BLA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Response [200]&gt;
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2755,8 +2844,10 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
 </div>
 <p>Con query generiche è possibile che vengano ritornati parecchi risultati:</p>
 <p><strong>✪ DOMANDA 3.4.1</strong>: Qual’è il risultato più rilevante secondo Nominatim (ricordiamo che Nominatim è il search engine di OpenStreetMap)? E quanto è rilevante ? Qual’è la rilevanza minimima? Qual’è la massima ?</p>
-<p><strong>RISPOSTA</strong>: Il primo, i risultati sono ordinati secondo il campo <code class="docutils literal notranslate"><span class="pre">importance</span></code>, che può andare da 0 a 1.0. Molte API hanno ordinamenti di questo tipo (es: rilevanza risultati ricerca in Google)</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Il primo, i risultati sono ordinati secondo il campo <code class="docutils literal notranslate"><span class="pre">importance</span></code>, che può andare da 0 a 1.0. Molte API hanno ordinamenti di questo tipo (es: rilevanza risultati ricerca in Google)</p>
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
@@ -2897,7 +2988,9 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
 </div>
 <p><strong>✪✪✪ ESERCIZIO 3.4.2</strong>: guardando anche la documentazione di <a class="reference external" href="https://docs.python.org/3/howto/sorting.html">sorted</a> scrivere del codice python per riordinare i risultati precedenti dal meno rilevante al più rilevante. Ci sono vari modi per farlo, ma il più sintetico è con funzioni lambda. Riuscite a usarlo?</p>
 <p><strong>SUGGERIMENTO</strong>: Per ottenere per es. il campo <code class="docutils literal notranslate"><span class="pre">'osm_id'</span></code> di un dizionario <code class="docutils literal notranslate"><span class="pre">miodiz</span></code>, si può chiamare il metodo <code class="docutils literal notranslate"><span class="pre">miodiz.get('odm_id')</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
@@ -2905,6 +2998,147 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
 <span></span><span class="c1"># scrivi qui</span>
 
 <span class="nb">sorted</span><span class="p">(</span><span class="n">geocode_generic</span><span class="p">(</span><span class="s2">&quot;Trento&quot;</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">res</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;importance&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;q=Trento
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[{&#39;place_id&#39;: &#39;166654422&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;way&#39;,
+  &#39;osm_id&#39;: &#39;431617802&#39;,
+  &#39;boundingbox&#39;: [&#39;46.0782422&#39;, &#39;46.0784452&#39;, &#39;11.1421592&#39;, &#39;11.1427322&#39;],
+  &#39;lat&#39;: &#39;46.0783806&#39;,
+  &#39;lon&#39;: &#39;11.1424334&#39;,
+  &#39;display_name&#39;: &#34;Trento, Marnighe, Trento, Territorio Val d&#39;Adige, TN, TAA, 38122, Italia&#34;,
+  &#39;class&#39;: &#39;highway&#39;,
+  &#39;type&#39;: &#39;pedestrian&#39;,
+  &#39;importance&#39;: 0.135},
+ {&#39;place_id&#39;: &#39;132505515&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;way&#39;,
+  &#39;osm_id&#39;: &#39;252075211&#39;,
+  &#39;boundingbox&#39;: [&#39;-32.9847715&#39;, &#39;-32.9825163&#39;, &#39;-60.6614742&#39;, &#39;-60.6609117&#39;],
+  &#39;lat&#39;: &#39;-32.9836455&#39;,
+  &#39;lon&#39;: &#39;-60.6611934&#39;,
+  &#39;display_name&#39;: &#39;Trento, Villa Moreno, Domingo Matheu, Distrito Sur, Rosario, Municipio de Rosario, Departamento Rosario, Sta. Fe, S2000, Argentina&#39;,
+  &#39;class&#39;: &#39;highway&#39;,
+  &#39;type&#39;: &#39;residential&#39;,
+  &#39;importance&#39;: 0.135},
+ {&#39;place_id&#39;: &#39;89398989&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;way&#39;,
+  &#39;osm_id&#39;: &#39;73838593&#39;,
+  &#39;boundingbox&#39;: [&#39;-32.9893919&#39;, &#39;-32.985958&#39;, &#39;-60.6626152&#39;, &#39;-60.6617997&#39;],
+  &#39;lat&#39;: &#39;-32.9882128&#39;,
+  &#39;lon&#39;: &#39;-60.6623171&#39;,
+  &#39;display_name&#39;: &#39;Trento, La Guardia, Distrito Sur, Rosario, Municipio de Rosario, Departamento Rosario, Sta. Fe, S2000, Argentina&#39;,
+  &#39;class&#39;: &#39;highway&#39;,
+  &#39;type&#39;: &#39;residential&#39;,
+  &#39;importance&#39;: 0.135},
+ {&#39;place_id&#39;: &#39;89720595&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;way&#39;,
+  &#39;osm_id&#39;: &#39;80595940&#39;,
+  &#39;boundingbox&#39;: [&#39;45.7466148&#39;, &#39;45.7469574&#39;, &#39;9.2305622&#39;, &#39;9.2319169&#39;],
+  &#39;lat&#39;: &#39;45.7468391&#39;,
+  &#39;lon&#39;: &#39;9.2310522&#39;,
+  &#39;display_name&#39;: &#39;Trento, Inverigo, CO, LOM, 22044, Italia&#39;,
+  &#39;class&#39;: &#39;highway&#39;,
+  &#39;type&#39;: &#39;residential&#39;,
+  &#39;importance&#39;: 0.135},
+ {&#39;place_id&#39;: &#39;105325154&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;way&#39;,
+  &#39;osm_id&#39;: &#39;147148070&#39;,
+  &#39;boundingbox&#39;: [&#39;44.1482269&#39;, &#39;44.1507838&#39;, &#39;4.8476098&#39;, &#39;4.850579&#39;],
+  &#39;lat&#39;: &#39;44.14948815&#39;,
+  &#39;lon&#39;: &#39;4.84974947145189&#39;,
+  &#39;display_name&#39;: &#34;Trento, La Baussenque, Orange, Carpentras, Vaucluse, Provence-Alpes-Côte d&#39;Azur, France métropolitaine, 84100, France&#34;,
+  &#39;class&#39;: &#39;landuse&#39;,
+  &#39;type&#39;: &#39;industrial&#39;,
+  &#39;importance&#39;: 0.16},
+ {&#39;place_id&#39;: &#39;531699&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;node&#39;,
+  &#39;osm_id&#39;: &#39;198505670&#39;,
+  &#39;boundingbox&#39;: [&#39;8.0059463&#39;, &#39;8.0859463&#39;, &#39;126.0214264&#39;, &#39;126.1014264&#39;],
+  &#39;lat&#39;: &#39;8.0459463&#39;,
+  &#39;lon&#39;: &#39;126.0614264&#39;,
+  &#39;display_name&#39;: &#39;Trento, Agusan del Sur, Caraga, 8505, Philippines&#39;,
+  &#39;class&#39;: &#39;place&#39;,
+  &#39;type&#39;: &#39;town&#39;,
+  &#39;importance&#39;: 0.16650761976897,
+  &#39;icon&#39;: &#39;http://ip-10-98-165-99.mq-us-east-1.ec2.aolcloud.net/nominatim/images/mapicons/poi_place_town.p.20.png&#39;},
+ {&#39;place_id&#39;: &#39;43377314&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;node&#39;,
+  &#39;osm_id&#39;: &#39;3134911289&#39;,
+  &#39;boundingbox&#39;: [&#39;44.9456976&#39;, &#39;44.9856976&#39;, &#39;11.4473224&#39;, &#39;11.4873224&#39;],
+  &#39;lat&#39;: &#39;44.9656976&#39;,
+  &#39;lon&#39;: &#39;11.4673224&#39;,
+  &#39;display_name&#39;: &#39;Trento, RO, VEN, Italia&#39;,
+  &#39;class&#39;: &#39;place&#39;,
+  &#39;type&#39;: &#39;hamlet&#39;,
+  &#39;importance&#39;: 0.17875,
+  &#39;icon&#39;: &#39;http://ip-10-98-165-99.mq-us-east-1.ec2.aolcloud.net/nominatim/images/mapicons/poi_place_village.p.20.png&#39;},
+ {&#39;place_id&#39;: &#39;652743&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;node&#39;,
+  &#39;osm_id&#39;: &#39;248804218&#39;,
+  &#39;boundingbox&#39;: [&#39;46.0721752&#39;, &#39;46.0722752&#39;, &#39;11.1189539&#39;, &#39;11.1190539&#39;],
+  &#39;lat&#39;: &#39;46.0722252&#39;,
+  &#39;lon&#39;: &#39;11.1190039&#39;,
+  &#39;display_name&#39;: &#34;Trento, Piazzetta Filippo Foti e Edoardo Martini, Centro storico Trento, Trento, Territorio Val d&#39;Adige, TN, TAA, 38122, Italia&#34;,
+  &#39;class&#39;: &#39;railway&#39;,
+  &#39;type&#39;: &#39;stop&#39;,
+  &#39;importance&#39;: 0.18947959270135},
+ {&#39;place_id&#39;: &#39;187948156&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;relation&#39;,
+  &#39;osm_id&#39;: &#39;3870471&#39;,
+  &#39;boundingbox&#39;: [&#39;7.9378151&#39;, &#39;8.292381&#39;, &#39;126.00048&#39;, &#39;126.355208&#39;],
+  &#39;lat&#39;: &#39;8.114415&#39;,
+  &#39;lon&#39;: &#39;126.158888603496&#39;,
+  &#39;display_name&#39;: &#39;Trento, Agusan del Sur, Caraga, 8505, Philippines&#39;,
+  &#39;class&#39;: &#39;boundary&#39;,
+  &#39;type&#39;: &#39;administrative&#39;,
+  &#39;importance&#39;: 0.2225,
+  &#39;icon&#39;: &#39;http://ip-10-98-165-99.mq-us-east-1.ec2.aolcloud.net/nominatim/images/mapicons/poi_boundary_administrative.p.20.png&#39;},
+ {&#39;place_id&#39;: &#39;186698302&#39;,
+  &#39;licence&#39;: &#39;Data © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright&#39;,
+  &#39;osm_type&#39;: &#39;relation&#39;,
+  &#39;osm_id&#39;: &#39;46663&#39;,
+  &#39;boundingbox&#39;: [&#39;45.9775306&#39;, &#39;46.1530112&#39;, &#39;11.0224735&#39;, &#39;11.1948226&#39;],
+  &#39;lat&#39;: &#39;46.0664228&#39;,
+  &#39;lon&#39;: &#39;11.1257601&#39;,
+  &#39;display_name&#39;: &#34;Trento, Territorio Val d&#39;Adige, TN, TAA, Italia&#34;,
+  &#39;class&#39;: &#39;place&#39;,
+  &#39;type&#39;: &#39;city&#39;,
+  &#39;importance&#39;: 0.26364591679333,
+  &#39;icon&#39;: &#39;http://ip-10-98-165-99.mq-us-east-1.ec2.aolcloud.net/nominatim/images/mapicons/poi_place_city.p.20.png&#39;}]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3144,7 +3378,9 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
 <p><strong>✪ DOMANDA 4.3</strong>: di default, lo <code class="docutils literal notranslate"><span class="pre">scrittore</span></code> che separatori usa? Guarda il file di risultato.</p>
 <p><strong>SOLUZIONE</strong>: Usa la virgola</p>
 <p><strong>✪✪ ESERCIZIO 4.4</strong>: Prova ad aggiungere un contatore per verificare a che riga siamo, poi tanto per capire dove sta la latitudine, prova a modificare <code class="docutils literal notranslate"><span class="pre">row</span></code> prima che venga scritta, in modo che il campo <code class="docutils literal notranslate"><span class="pre">Latitudine</span></code> (<code class="docutils literal notranslate"><span class="pre">row[16]</span></code>) e <code class="docutils literal notranslate"><span class="pre">Longitudine</span></code> (<code class="docutils literal notranslate"><span class="pre">row[17]</span></code>) siano messi rispettivamente a <code class="docutils literal notranslate"><span class="pre">123</span></code> e <code class="docutils literal notranslate"><span class="pre">456</span></code></p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
@@ -3170,13 +3406,26 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
 </pre></div>
 </div>
 </div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
 <p><strong>✪✪ ESERCIZIO 4.5</strong>: Mentre leggi il CSV, adesso setta latitudine e longitudine usando risultati ottenuti chiamando <code class="docutils literal notranslate"><span class="pre">geocode_street_county</span></code> definita precedentemente. Per gli input, puoi usare questi indici:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Indirizzo_agriturismo</span></code> : <code class="docutils literal notranslate"><span class="pre">riga[19]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Comune_Sede_Agriturismo</span></code> : <code class="docutils literal notranslate"><span class="pre">riga[18]</span></code></p></li>
 </ul>
 <p>(ci sarebbe la <code class="docutils literal notranslate"><span class="pre">Denominazione_Agriturismo</span></code> : <code class="docutils literal notranslate"><span class="pre">riga[20]</span></code> ma come visto prima funziona solo se l’agriturismo è già in OpenStreetMap, usando solo la via abbiamo qualche probabilità in più di successo)</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
@@ -3215,6 +3464,47 @@ http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uE
                     <span class="n">riga</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
             <span class="n">scrittore</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>  <span class="c1"># chiamiamo l&#39;oggetto scrittore dicendogli di scrivere la riga appena letta</span>
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Loc.+al+Lago+n.+15&amp;county=Garniga+Terme
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Loc.+Pineta+-+Maso+Nello&amp;county=Faedo
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Via+Casalini+n.+74&amp;county=Sanzeno
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Via+Prose+n.+1&amp;county=Roncegno
+trovato !
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Loc.+Fontanelle&amp;county=Tenno
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Via+Chimelli+n.+25&amp;county=Pergine+Valsugana
+trovato !
+http://open.mapquestapi.com/nominatim/v1/search?key=Er38WkJVmeOl5AvFIAzM6lBBq4uEdgvG&amp;format=json&amp;street=Via+G.+Inama+n.+21&amp;county=Coredo
+trovato !
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">def</span> <span class="nf">geocode_street_county</span><span class="p">(</span><span class="n">street</span><span class="p">,</span> <span class="n">county</span><span class="p">):</span>
+    <span class="c1"># &#39;payload&#39; è una variabile che ci definiamo noi, per metterci più comodamente i parametri</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>  <span class="c1"># api_key è la chiave lunga tipo Er38Wk... che abbiamo definito più sopra</span>
+               <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;street&#39;</span> <span class="p">:</span> <span class="n">street</span><span class="p">,</span>
+               <span class="s1">&#39;county&#39;</span> <span class="p">:</span> <span class="n">county</span><span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url_base</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>  <span class="c1"># qua passiamo il &#39;payload&#39; alla libreria requests</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="c1"># stampa l&#39;url che requests ha usato</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>

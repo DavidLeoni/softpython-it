@@ -157,3 +157,8 @@ div.nbinput.container div.prompt, div.nboutput.container div.prompt{
     width:5px !important;
 }
 
+
+.jupman-sol {    
+    background-color:#ebf3ed !important;  
+    border-color: #d3dfd6 !important;            
+}

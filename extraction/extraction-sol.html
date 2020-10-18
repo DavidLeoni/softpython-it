@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2075,7 +2076,9 @@ html, potresti provare a sostituire <code class="docutils literal notranslate"><
 <div class="section" id="2.1-Estraiamo-i-nomi">
 <h3>2.1 Estraiamo i nomi<a class="headerlink" href="#2.1-Estraiamo-i-nomi" title="Permalink to this headline">¶</a></h3>
 <p><strong>✪ ESERCIZIO 2.1.1</strong> Cerca nell’HTML la stringa <code class="docutils literal notranslate"><span class="pre">Coppa</span> <span class="pre">del</span> <span class="pre">Mondo</span> <span class="pre">di</span> <span class="pre">Snowboard</span></code>, cercando di capire bene in quali blocchi appare.</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Compare in 4 blocchi: h2, script Javascript, script semantici <code class="docutils literal notranslate"><span class="pre">ld+json</span></code> e blocchi <code class="docutils literal notranslate"><span class="pre">h4</span></code>, li ricapitoliamo qua sotto:</p>
 <p><strong>RISPOSTA 2.1.1 - blocchi h2</strong> : Compare in blocchi <code class="docutils literal notranslate"><span class="pre">h2</span></code> come <code class="docutils literal notranslate"><span class="pre">&lt;h2</span> <span class="pre">class=&quot;text-secondary&quot;&gt;Coppa</span> <span class="pre">del</span> <span class="pre">Mondo</span> <span class="pre">di</span> <span class="pre">Snowboard&lt;/h2&gt;</span></code> qua:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col col-sm-9 arrange__item&quot;</span><span class="p">&gt;</span>
@@ -2111,7 +2114,7 @@ html, potresti provare a sostituire <code class="docutils literal notranslate"><
 &lt;/script&gt;
 </pre></div>
 </div>
-<p><strong>Cerchiamo con Python</strong></p>
+</div><p><strong>Cerchiamo con Python</strong></p>
 <p>Se hai fatto l’esercizio precedente, dovresti aver trovato vari blocchi che contengono <code class="docutils literal notranslate"><span class="pre">Coppa</span> <span class="pre">del</span> <span class="pre">Mondo</span> <span class="pre">di</span> <span class="pre">Snowboard</span></code>. Per un elenco e discussione, <a class="reference internal" href="#2.1-Estraiamo-i-nomi"><span class="std std-ref">guarda la soluzione</span></a> Per questo esercizio, considereremo principalmente i blocchi <code class="docutils literal notranslate"><span class="pre">h4</span></code>, in cui il nome <code class="docutils literal notranslate"><span class="pre">Coppa</span> <span class="pre">del</span> <span class="pre">Mondo</span> <span class="pre">di</span> <span class="pre">Snowboard</span></code> compare in questa riga:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-headline&quot;</span><span class="p">&gt;</span>Coppa del Mondo di Snowboard<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
 </pre></div>
@@ -2503,7 +2506,9 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 <h3>2.2 Estraiamo le date<a class="headerlink" href="#2.2-Estraiamo-le-date" title="Permalink to this headline">¶</a></h3>
 <p>Bene, è tempo di aggiungere un altro campo, per esempio per la data. Dove trovarlo?</p>
 <p><strong>✪ DOMANDA 2.2.1</strong>: Cerca dentro l’HTML il valore della data della Coppa del Mondo di Snowboard <code class="docutils literal notranslate"><span class="pre">14/12/2017</span></code>. Quanti valori trovi? Intorno alle date, trovi del testo che potrebbero permetterci di filtrare tutte e sole le date ?</p>
-<p><strong>RISPOSTA</strong>: Guardiamo l’HTML intorno alle posizioni <code class="docutils literal notranslate"><span class="pre">h4</span></code>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Guardiamo l’HTML intorno alle posizioni <code class="docutils literal notranslate"><span class="pre">h4</span></code>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-text text-white&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-headline&quot;</span><span class="p">&gt;</span>Coppa del Mondo di Snowboard<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
@@ -2517,8 +2522,10 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 </pre></div>
 </div>
 <p>Vediamo che le date sono dentro attributi <code class="docutils literal notranslate"><span class="pre">span</span></code>, questi attributi semplicemente indicano una sequenza di testo.</p>
-<p><strong>✪ ESERCIZIO 2.2.2</strong>: Prova a filtrare qui sotto in Python le tag <code class="docutils literal notranslate"><span class="pre">span</span></code>, stampando i risultati. Trovi solo le date ?</p>
-<div class="nbinput nblast docutils container">
+</div><p><strong>✪ ESERCIZIO 2.2.2</strong>: Prova a filtrare qui sotto in Python le tag <code class="docutils literal notranslate"><span class="pre">span</span></code>, stampando i risultati. Trovi solo le date ?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
@@ -2531,6 +2538,17 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 <span class="c1">#    print(tag)</span>
 
 
+
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui il codice</span>
 
 
 </pre></div>
@@ -2614,7 +2632,9 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 </pre></div></div>
 </div>
 <p><strong>✪ DOMANDA 2.2.3</strong>: possiamo scrivere direttamente senza nient’altro la stringa <code class="docutils literal notranslate"><span class="pre">moodboard__item-subline</span> <span class="pre">strong</span> <span class="pre">fz14</span> <span class="pre">text-uppercase</span> <span class="pre">d-b</span></code> nella <code class="docutils literal notranslate"><span class="pre">select</span></code> ? Scrivi qui sotto i tuoi esperimenti.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
@@ -2624,8 +2644,21 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 </pre></div>
 </div>
 </div>
-<p><strong>RISPOSTA</strong>: No, le regole CSS sono abbastanza rigide e non consentono ricerca di testo libero.</p>
-<p>Come fatto prima, possiamo crearci una lista per le date:</p>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: No, le regole CSS sono abbastanza rigide e non consentono ricerca di testo libero.</p>
+</div><p>Come fatto prima, possiamo crearci una lista per le date:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -2736,7 +2769,9 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 <h3>2.3 Estraiamo i luoghi<a class="headerlink" href="#2.3-Estraiamo-i-luoghi" title="Permalink to this headline">¶</a></h3>
 <p>E’ tempo di aggiungere il luogo.</p>
 <p><strong>✪✪ ESERCIZIO 2.3.1</strong>: Cerca nell’HTML il luogo <code class="docutils literal notranslate"><span class="pre">Passo</span> <span class="pre">Costalunga</span></code> dell’evento Coppa di Snowboard. Con quale criterio possiamo filtrare i luoghi ?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Possiamo usare la classe <code class="docutils literal notranslate"><span class="pre">class=&quot;moodboard__item-subline</span> <span class="pre">strong</span> <span class="pre">fz14</span> <span class="pre">d-b&quot;</span></code> nelle righe:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-text text-white&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -2750,9 +2785,11 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><strong>✪ ESERCIZIO 2.3.2</strong>: Scrivi il codice Python per estrarre i luoghi e metterlo nella lista <code class="docutils literal notranslate"><span class="pre">luoghi</span></code> (usa sempre l’html intorno ai blocchi <code class="docutils literal notranslate"><span class="pre">h4</span></code>)</p>
+</div><p><strong>✪ ESERCIZIO 2.3.2</strong>: Scrivi il codice Python per estrarre i luoghi e metterlo nella lista <code class="docutils literal notranslate"><span class="pre">luoghi</span></code> (usa sempre l’html intorno ai blocchi <code class="docutils literal notranslate"><span class="pre">h4</span></code>)</p>
 <p><strong>SUGGERIMENTO</strong>: Non importa se il testo che cerchi è contenuto in uno span all’interno di un’altro span identificabile</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
@@ -2814,11 +2851,69 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
  &#39; Baselga di Piné&#39;]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ Passo Costalunga
+ Pozza di Fassa
+ Madonna di Campiglio
+ Val di Fassa
+ Tesero
+ Pozza di Fassa
+ Pozza di Fassa
+ Tenno
+ Fondo
+ Trento
+ Rovereto
+ Levico Terme
+ Cavalese
+ Arco
+ Baselga di Piné
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39; Passo Costalunga&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Madonna di Campiglio&#39;,
+ &#39; Val di Fassa &#39;,
+ &#39; Tesero&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Tenno&#39;,
+ &#39; Fondo&#39;,
+ &#39; Trento&#39;,
+ &#39; Rovereto&#39;,
+ &#39; Levico Terme&#39;,
+ &#39; Cavalese&#39;,
+ &#39; Arco&#39;,
+ &#39; Baselga di Piné&#39;]
+</pre></div></div>
+</div>
 </div>
 <div class="section" id="2.3-Sistemiamo-i-luoghi">
 <h3>2.3 Sistemiamo i luoghi<a class="headerlink" href="#2.3-Sistemiamo-i-luoghi" title="Permalink to this headline">¶</a></h3>
 <p><strong>✪ DOMANDA 2.3.3</strong>: Quanti luoghi hai trovato ? Dovrebbero essere 16, ma se ne hai trovato 15 allora manca un dato! Che dato è? Guarda la pagina e cerca se qualche evento non ha un luogo. In che posizione è nella lista ?</p>
-<p><strong>RISPOSTA</strong>: L’evento incriminato è <code class="docutils literal notranslate"><span class="pre">TrentinoSkiSunrise:</span> <span class="pre">sulle</span> <span class="pre">piste</span> <span class="pre">alla</span> <span class="pre">luce</span> <span class="pre">dell’alba</span></code>, guardando dentro l’html vediamo che manca proprio lo <code class="docutils literal notranslate"><span class="pre">span</span></code> con la classe:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: L’evento incriminato è <code class="docutils literal notranslate"><span class="pre">TrentinoSkiSunrise:</span> <span class="pre">sulle</span> <span class="pre">piste</span> <span class="pre">alla</span> <span class="pre">luce</span> <span class="pre">dell’alba</span></code>, guardando dentro l’html vediamo che manca proprio lo <code class="docutils literal notranslate"><span class="pre">span</span></code> con la classe:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-text text-white&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;moodboard__item-headline&quot;</span><span class="p">&gt;</span>TrentinoSkiSunrise: sulle piste alla luce dell’alba<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
@@ -2830,7 +2925,7 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><strong>✪ ESERCIZIO 2.3.4</strong>: Come rimediare al problema? Ci sono metodo più furbi, ma per stavolta semplicemente possiamo inserire una stringa vuota alla posizione della lista <code class="docutils literal notranslate"><span class="pre">luoghi</span></code> in cui ci dovrebbe essere il campo mancante - e cioè dopo <code class="docutils literal notranslate"><span class="pre">Val</span> <span class="pre">di</span> <span class="pre">Fassa</span></code>. Per farlo, puoi usare il metodo <code class="docutils literal notranslate"><span class="pre">insert</span></code>. Qua puoi vedere qualche esempio di utilizzo.</p>
+</div><p><strong>✪ ESERCIZIO 2.3.4</strong>: Come rimediare al problema? Ci sono metodo più furbi, ma per stavolta semplicemente possiamo inserire una stringa vuota alla posizione della lista <code class="docutils literal notranslate"><span class="pre">luoghi</span></code> in cui ci dovrebbe essere il campo mancante - e cioè dopo <code class="docutils literal notranslate"><span class="pre">Val</span> <span class="pre">di</span> <span class="pre">Fassa</span></code>. Per farlo, puoi usare il metodo <code class="docutils literal notranslate"><span class="pre">insert</span></code>. Qua puoi vedere qualche esempio di utilizzo.</p>
 <p><strong>NOTA</strong>: Ricordati che gli indici iniziano da 0 !</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -2872,7 +2967,9 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
 [&#39;a&#39;, &#39;b&#39;, &#39;x&#39;, &#39;c&#39;, &#39;d&#39;]
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
@@ -2908,10 +3005,47 @@ Procediamo quindi ad aggiungere 16 dizionari aggiungendo un dizionario vuoto all
  &#39; Baselga di Piné&#39;]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui la soluzione</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39; Passo Costalunga&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Madonna di Campiglio&#39;,
+ &#39; Val di Fassa &#39;,
+ &#39;&#39;,
+ &#39; Tesero&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Pozza di Fassa&#39;,
+ &#39; Tenno&#39;,
+ &#39; Fondo&#39;,
+ &#39; Trento&#39;,
+ &#39; Rovereto&#39;,
+ &#39; Levico Terme&#39;,
+ &#39; Cavalese&#39;,
+ &#39; Arco&#39;,
+ &#39; Baselga di Piné&#39;]
+</pre></div></div>
+</div>
 <p><strong>✪✪ ESERCIZIO 2.3.5</strong>: Prima di procedere, verifica che la lunghezza della lista <code class="docutils literal notranslate"><span class="pre">len(luoghi)</span></code> sia corretta (= 16). Adesso, osserva attentamente le stringhe dei luoghi. Dovresti vedere che iniziano tutte con uno spazio inutile: sistema la lista <code class="docutils literal notranslate"><span class="pre">luoghi</span></code> togliendo gli spazi extra usando una <em>list comprehension</em> (vedere <a class="reference external" href="https://davidleoni.github.io/ThinkPythonItalian/html/thinkpython2020.html#sec227">Capitolo 19.2 Pensare in Python</a>). Per eliminare gli spazi puoi usare il metodo delle
 stringhe <code class="docutils literal notranslate"><span class="pre">.strip()</span></code></p>
 <p><strong>NOTA</strong>: quando crei una <em>list comprehension</em>, ne generi una nuova, la lista originale <em>non</em> viene modificata!</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
@@ -2922,12 +3056,25 @@ stringhe <code class="docutils literal notranslate"><span class="pre">.strip()</
 </pre></div>
 </div>
 </div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="2.4-Tipo-dell'evento">
 <h3>2.4 Tipo dell’evento<a class="headerlink" href="#2.4-Tipo-dell'evento" title="Permalink to this headline">¶</a></h3>
 <p>Proseguiamo con il tipo dell’evento. Per esempio, per la Coppa del Mondo di Snowboard, la tipologia dell’evento sarebbe <code class="docutils literal notranslate"><span class="pre">Sport,</span> <span class="pre">TOP</span> <span class="pre">EVENTI</span> <span class="pre">SPORT</span></code></p>
 <p><strong>✪ ESERCIZIO 2.4.1</strong>: Cerca la stringa <code class="docutils literal notranslate"><span class="pre">Sport,</span> <span class="pre">TOP</span> <span class="pre">EVENTI</span> <span class="pre">SPORT</span></code> nell’HTML. Quante occorrenze ci sono ? E’ possibile filtrare il tipo eventi in modo univoco ?</p>
-<p><strong>RISPOSTA</strong>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Questa volta il tipo eventi appare solo nei blocchi intorno agli <code class="docutils literal notranslate"><span class="pre">h2</span></code>, in particolare notiamo la riga</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;span</span> <span class="pre">class=&quot;text-secondary</span> <span class="pre">fz14</span> <span class="pre">text-uppercase</span> <span class="pre">strong&quot;&gt;Sport,</span> <span class="pre">TOP</span> <span class="pre">EVENTI</span> <span class="pre">SPORT&lt;/span&gt;</span></code> :</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col col-sm-9 arrange__item&quot;</span><span class="p">&gt;</span>
@@ -2948,9 +3095,11 @@ stringhe <code class="docutils literal notranslate"><span class="pre">.strip()</
                 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><strong>✪✪ ESERCIZIO 2.4.2</strong>: Scrivi il codice Python per estrarre la lista degli eventi, e chiamala <code class="docutils literal notranslate"><span class="pre">tipo_evento</span></code>. Per farlo, puoi usare il codice già visto in precedenza, ma questa volta, per creare la lista sforzati di usare una <em>list comprehension</em>. Verifica poi che la lunghezza della stringa sia 16.</p>
+</div><p><strong>✪✪ ESERCIZIO 2.4.2</strong>: Scrivi il codice Python per estrarre la lista degli eventi, e chiamala <code class="docutils literal notranslate"><span class="pre">tipo_evento</span></code>. Per farlo, puoi usare il codice già visto in precedenza, ma questa volta, per creare la lista sforzati di usare una <em>list comprehension</em>. Verifica poi che la lunghezza della stringa sia 16.</p>
 <p><strong>SUGGERIMENTO</strong>: La lista originale da cui prelevare il testo delle le tag sarà creata dalla chiamata a <code class="docutils literal notranslate"><span class="pre">soup.select</span></code></p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
@@ -3013,12 +3162,72 @@ Mercati e mercatini, Folklore
  &#39;Mercati e mercatini, Folklore&#39;]
 </pre></div></div>
 </div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Sport, TOP EVENTI SPORT
+Sport, TOP EVENTI SPORT
+Sport, TOP EVENTI SPORT
+Sport, TOP EVENTI SPORT
+Enogastronomia, Intrattenimento della Località, Sport
+Sport, Intrattenimento della Località, Enogastronomia
+Wellness
+Wellness
+Intrattenimento della Località, Mercati e mercatini
+Sport, TOP EVENTI SPORT
+Intrattenimento della Località, Mercati e mercatini
+Intrattenimento della Località, Mercati e mercatini
+Mercati e mercatini, Intrattenimento della Località
+Intrattenimento della Località, Mercati e mercatini
+Intrattenimento della Località, Mercati e mercatini
+Mercati e mercatini, Folklore
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Sport, TOP EVENTI SPORT&#39;,
+ &#39;Sport, TOP EVENTI SPORT&#39;,
+ &#39;Sport, TOP EVENTI SPORT&#39;,
+ &#39;Sport, TOP EVENTI SPORT&#39;,
+ &#39;Enogastronomia, Intrattenimento della Località, Sport&#39;,
+ &#39;Sport, Intrattenimento della Località, Enogastronomia&#39;,
+ &#39;Wellness&#39;,
+ &#39;Wellness&#39;,
+ &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
+ &#39;Sport, TOP EVENTI SPORT&#39;,
+ &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
+ &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
+ &#39;Mercati e mercatini, Intrattenimento della Località&#39;,
+ &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
+ &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
+ &#39;Mercati e mercatini, Folklore&#39;]
+</pre></div></div>
+</div>
 </div>
 <div class="section" id="2.5-descrizione">
 <h3>2.5 descrizione<a class="headerlink" href="#2.5-descrizione" title="Permalink to this headline">¶</a></h3>
 <p>Rimane da aggiungere la descrizione, per esempio per la Coppa del Mondo di Snowboard la descrizione sarebbe “Al Passo Costalunga sfida tra i migliori specialisti del mondo”.</p>
 <p><strong>✪ ESERCIZIO 2.5.1</strong>: Cerca manualmente nell’HTML la stringa <code class="docutils literal notranslate"><span class="pre">Al</span> <span class="pre">Passo</span> <span class="pre">Costalunga</span> <span class="pre">sfida</span> <span class="pre">tra</span> <span class="pre">i</span> <span class="pre">migliori</span> <span class="pre">specialisti</span> <span class="pre">del</span> <span class="pre">mondo</span></code>. In quante posizioni appare ? In base a quali criteri potremo filtrare i tipi degli eventi ? <strong>NOTA</strong>: In base a quanto sai finora, ti sarà impossibile trovare un selettore che possa filtrare quello che serve, quindi per ora pensa solo a trovare stringhe ricorrenti intorno alle descrizioni</p>
-<p><strong>RISPOSTA</strong>: Vediamo che compare in un blocco html regolare e come già successo prima in un blocco <code class="docutils literal notranslate"><span class="pre">script</span></code>. Concentriamoci sul blocco html. Vediamo che la descrizione sta solo vicino ai blocchi <code class="docutils literal notranslate"><span class="pre">h2</span></code>, in particolare alla linea <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;Al</span> <span class="pre">Passo</span> <span class="pre">Costalunga</span> <span class="pre">sfida</span> <span class="pre">tra</span> <span class="pre">i</span> <span class="pre">migliori</span> <span class="pre">specialisti</span> <span class="pre">del</span> <span class="pre">mondo&lt;/p&gt;</span></code>:</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Vediamo che compare in un blocco html regolare e come già successo prima in un blocco <code class="docutils literal notranslate"><span class="pre">script</span></code>. Concentriamoci sul blocco html. Vediamo che la descrizione sta solo vicino ai blocchi <code class="docutils literal notranslate"><span class="pre">h2</span></code>, in particolare alla linea <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;Al</span> <span class="pre">Passo</span> <span class="pre">Costalunga</span> <span class="pre">sfida</span> <span class="pre">tra</span> <span class="pre">i</span> <span class="pre">migliori</span> <span class="pre">specialisti</span> <span class="pre">del</span> <span class="pre">mondo&lt;/p&gt;</span></code>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col col-sm-9 arrange__item&quot;</span><span class="p">&gt;</span>
                     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.visittrentino.info/it/guida/eventi/coppa-del-mondo-di-snowboard_e_165375&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-primary list-teaser__link&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icon icon-circle-arrow fz30&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
                     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;teaser__body&quot;</span><span class="p">&gt;</span>
@@ -3050,7 +3259,7 @@ Mercati e mercatini, Folklore
 </pre></div>
 </div>
 <p>Vediamo che la tag in questione <code class="docutils literal notranslate"><span class="pre">&lt;ul</span> <span class="pre">class=&quot;list-unstyled</span> <span class="pre">list-inline</span> <span class="pre">list__teaser__list</span> <span class="pre">mb15</span> <span class="pre">mt10&quot;&gt;</span></code> contiene una classe, se la cerchiamo nel documento troveremo che tutte queste <code class="docutils literal notranslate"><span class="pre">ul</span></code> con questa classe compaiono sempre e solo prima del <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> che vogliamo noi.</p>
-<div class="section" id="Trovare-la-descrizione-in-Python">
+</div><div class="section" id="Trovare-la-descrizione-in-Python">
 <h4>Trovare la descrizione in Python<a class="headerlink" href="#Trovare-la-descrizione-in-Python" title="Permalink to this headline">¶</a></h4>
 <p>Guarda la <a class="reference external" href="#2.5-descrizione">soluzione dell’esercizio precedente</a>. Troverai scritto che la tag <code class="docutils literal notranslate"><span class="pre">&lt;ul</span> <span class="pre">class=&quot;list-unstyled</span> <span class="pre">list-inline</span> <span class="pre">list__teaser__list</span> <span class="pre">mb15</span> <span class="pre">mt10&quot;&gt;</span></code> contiene una classe, se la cerchiamo nel documento scopriremo che tutte queste <code class="docutils literal notranslate"><span class="pre">ul</span></code> con questa classe compaiono sempre e solo prima del <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> con le descrizioni che vogliamo noi. Non ci resta quindi che trovare un selettore CSS che</p>
 <ul class="simple">
@@ -3279,7 +3488,9 @@ Mercati e mercatini, Folklore
 <p><code class="docutils literal notranslate"><span class="pre">nome,</span> <span class="pre">data,</span> <span class="pre">luogo,</span> <span class="pre">tipo,</span> <span class="pre">descrizione</span></code></p>
 <p>Diversamente da quanto fatto finora, in cui abbiamo solo considerato righe come liste, in questo caso dato che abbiamo dizionari ci servirà un oggetto di tipo <code class="docutils literal notranslate"><span class="pre">DictWriter</span></code>. Leggi la <a class="reference external" href="https://docs.python.org/3/library/csv.html#csv.DictWriter">documentazione Python su DictWriter</a> e copiandone l’esempio prova a scrivere il csv in un file chiamato <code class="docutils literal notranslate"><span class="pre">eventi.csv</span></code>.</p>
 <p><strong>NOTA</strong>: Per testare il tutto, fai attenzione a che nella cartella di questo progetto non sia già presente il file <code class="docutils literal notranslate"><span class="pre">eventi.csv</span></code>, in caso eliminalo a mano.</p>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
@@ -3302,6 +3513,17 @@ Mercati e mercatini, Folklore
     <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">diz</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">:</span> <span class="c1"># stavolta le righe contengono dizionari</span>
         <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>  <span class="c1"># chiamiamo l&#39;oggetto scrittore dicendogli di scrivere il dizionario corrente</span>
+
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
 
 </pre></div>
 </div>

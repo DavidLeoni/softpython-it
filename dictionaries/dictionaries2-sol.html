@@ -38,6 +38,7 @@
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script type="text/javascript" src="../_static/js/jupman.js"></script>
         <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script type="text/javascript" src="../_static/js/softpython.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -2235,8 +2236,10 @@ div.rendered_html tbody tr:hover {
 <span class="nb">print</span><span class="p">(</span> <span class="n">arredo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Assolutamente NO. Le coppie chiave/valore nel dizionario <em>non</em> sono ordinate, pertanto non ha nessun senso procurarsi un valore ad una certa posizione.</p>
-<p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Assolutamente NO. Le coppie chiave/valore nel dizionario <em>non</em> sono ordinate, pertanto non ha nessun senso procurarsi un valore ad una certa posizione.</p>
+</div><p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kabbalah</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">1</span> <span class="p">:</span> <span class="s1">&#39;Progresso&#39;</span><span class="p">,</span>
     <span class="mi">3</span> <span class="p">:</span> <span class="s1">&#39;Amore&#39;</span><span class="p">,</span>
@@ -2274,7 +2277,9 @@ div.rendered_html tbody tr:hover {
 </div>
 </li>
 </ul>
-<p><strong>RISPOSTA</strong>: Nel dizionario abbiamo delle chiavi che sono dei numeri interi. Pertanto possiamo usare dei numeri tra le quadre, ma indicheranno <em>chiavi</em>, <em>non posizioni</em>.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Nel dizionario abbiamo delle chiavi che sono dei numeri interi. Pertanto possiamo usare dei numeri tra le quadre, ma indicheranno <em>chiavi</em>, <em>non posizioni</em>.</p>
 <p>Le uniche espressioni che produrranno risultati sono quelle per cui il numero specificato tra quadre è effettivamente presente tra le chiavi:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">kabbalah</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="go">&#39;Progresso&#39;</span>
@@ -2297,7 +2302,7 @@ div.rendered_html tbody tr:hover {
 <span class="go">KeyError: 2</span>
 </pre></div>
 </div>
-<p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
+</div><p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2420,7 +2425,9 @@ div.rendered_html tbody tr:hover {
 <span class="go">{&#39;z&#39;: 7}</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
@@ -2432,6 +2439,27 @@ div.rendered_html tbody tr:hover {
 <span class="n">diz2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;z&#39;</span> <span class="p">:</span> <span class="n">diz1</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">diz1</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">diz2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;z&#39;: 7}
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">diz1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2707,7 +2735,9 @@ div.rendered_html tbody tr:hover {
 <span class="go">{&#39;ruote&#39;: 4, &#39;bulloni&#39;: 5, &#39;tenaglie&#39;: 5}</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
@@ -2721,6 +2751,21 @@ div.rendered_html tbody tr:hover {
 <span class="n">officina</span><span class="p">[</span><span class="s1">&#39;ruote&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">officina</span><span class="p">[</span><span class="s1">&#39;ruote&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">officina</span><span class="p">[</span><span class="s1">&#39;bulloni&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">officina</span><span class="p">[</span><span class="s1">&#39;tenaglie&#39;</span><span class="p">]</span>
 <span class="c1">#print(officina)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">officina</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ruote&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+            <span class="s1">&#39;bulloni&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s1">&#39;tenaglie&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2889,7 +2934,9 @@ div.rendered_html tbody tr:hover {
 <ul class="simple">
 <li><p><strong>NON</strong> scrivere linee che iniziano con <code class="docutils literal notranslate"><span class="pre">scrivania</span> <span class="pre">=</span></code> (questo creerebbe un nuovo dizionario, invece noi vogliamo modificare quello esistente)</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
@@ -2905,6 +2952,23 @@ div.rendered_html tbody tr:hover {
 <span class="k">del</span> <span class="n">scrivania</span><span class="p">[</span><span class="s1">&#39;penne&#39;</span><span class="p">]</span>
 <span class="n">scrivania</span><span class="p">[</span><span class="s1">&#39;temperino&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1">#print(scrivania)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">scrivania</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;carta&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+            <span class="s1">&#39;matite&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">3</span>
+<span class="p">}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2940,7 +3004,9 @@ div.rendered_html tbody tr:hover {
 <span class="go">{&#39;ortensie&#39;: 3, &#39;tulipani&#39;: 11, &#39;rose&#39;: 7}</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
@@ -2965,6 +3031,30 @@ div.rendered_html tbody tr:hover {
 <span class="n">giardino</span><span class="p">[</span><span class="s1">&#39;rose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">giardino</span><span class="p">[</span><span class="s1">&#39;rose&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">da_aggiungere</span><span class="p">[</span><span class="s1">&#39;rose&#39;</span><span class="p">]</span>
 <span class="n">giardino</span><span class="p">[</span><span class="s1">&#39;tulipani&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">giardino</span><span class="p">[</span><span class="s1">&#39;tulipani&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">da_aggiungere</span><span class="p">[</span><span class="s1">&#39;tulipani&#39;</span><span class="p">]</span>
 <span class="c1">#print(giardino)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">da_togliere</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;erbacce&#39;</span><span class="p">,</span> <span class="s1">&#39;cartacce&#39;</span><span class="p">]</span>
+<span class="n">da_aggiungere</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;tulipani&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;rose&#39;</span> <span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="n">giardino</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;ortensie&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+             <span class="s1">&#39;tulipani&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span>
+             <span class="s1">&#39;erbacce&#39;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+             <span class="s1">&#39;rose&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+             <span class="s1">&#39;cartacce&#39;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -2996,7 +3086,9 @@ div.rendered_html tbody tr:hover {
 <span class="go">{&#39;hello&#39;: &#39;hola&#39;, &#39;road&#39;: &#39;carretera&#39;}</span>
 </pre></div>
 </div>
-<div class="nbinput nblast docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
@@ -3017,6 +3109,29 @@ div.rendered_html tbody tr:hover {
 <span class="n">en_es</span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">it_es</span><span class="p">[</span><span class="n">en_it</span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">]]</span>
 <span class="n">en_es</span><span class="p">[</span><span class="s1">&#39;road&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">it_es</span><span class="p">[</span><span class="n">en_it</span><span class="p">[</span><span class="s1">&#39;road&#39;</span><span class="p">]]</span>
 <span class="c1">#print(en_es)</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">en_it</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;hello&#39;</span> <span class="p">:</span> <span class="s1">&#39;ciao&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;road&#39;</span> <span class="p">:</span> <span class="s1">&#39;strada&#39;</span>
+<span class="p">}</span>
+
+<span class="n">it_es</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ciao&#39;</span> <span class="p">:</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;strada&#39;</span> <span class="p">:</span> <span class="s1">&#39;carretera&#39;</span>
+<span class="p">}</span>
+
+<span class="n">en_es</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3271,8 +3386,6 @@ False
 <span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">jupman</span>
 </pre></div>
 </div>
@@ -3509,7 +3622,9 @@ Dracula
 <li><p>Il numero di libri presi in prestito da Rita</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> se tutti tra Marco, Gloria e Rita hanno preso in prestito almeno un libro, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p></li>
 </ol>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
@@ -3524,6 +3639,32 @@ Dracula
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Rita ha preso in prestito&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">prestiti</span><span class="p">[</span><span class="s1">&#39;Rita&#39;</span><span class="p">]),</span> <span class="s2">&quot;libro/i&quot;</span><span class="p">)</span>
 <span class="n">res</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">prestiti</span><span class="p">[</span><span class="s1">&#39;Marco&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">prestiti</span><span class="p">[</span><span class="s1">&#39;Gloria&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">prestiti</span><span class="p">[</span><span class="s1">&#39;Rita&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Hanno preso tutti in prestito almeno un libro?&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1. Il primo libro preso in prestito da Gloria è Guerra e pace
+   L&#39;ultimo libro preso in prestito da Rita è 1984
+2. Rita ha preso in prestito 3 libro/i
+3. Hanno preso tutti in prestito almeno un libro? True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">prestiti</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Marco&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="s1">&#39;I Miserabili&#39;</span><span class="p">,</span> <span class="s1">&#39;Ulisse&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Gloria&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Guerra e pace&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Rita&#39;</span><span class="p">:</span>   <span class="p">[</span><span class="s1">&#39;Shining&#39;</span><span class="p">,</span><span class="s1">&#39;Dracula&#39;</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">]}</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -3799,8 +3940,10 @@ True
 </pre></div>
 </div>
 <p>NOTA: tutti i valori (<code class="docutils literal notranslate"><span class="pre">3</span></code> e <code class="docutils literal notranslate"><span class="pre">8</span></code>) sono <strong>immutabili</strong>.</p>
-<p><strong>RISPOSTA</strong>: In questo caso abbiamo creato manualmente un dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> indicando dei valori <em>immutabili</em> presi da <code class="docutils literal notranslate"><span class="pre">diz1</span></code>. Pertanto in Python Tutor vedremo due regioni di memoria distinte e una successiva modifica a <code class="docutils literal notranslate"><span class="pre">diz1</span></code> non altererà <code class="docutils literal notranslate"><span class="pre">diz2</span></code>:</p>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: In questo caso abbiamo creato manualmente un dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> indicando dei valori <em>immutabili</em> presi da <code class="docutils literal notranslate"><span class="pre">diz1</span></code>. Pertanto in Python Tutor vedremo due regioni di memoria distinte e una successiva modifica a <code class="docutils literal notranslate"><span class="pre">diz1</span></code> non altererà <code class="docutils literal notranslate"><span class="pre">diz2</span></code>:</p>
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
@@ -3895,9 +4038,11 @@ diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diz2=&#39;</span><span class="p">,</span> <span class="n">diz2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">dict</span></code> quando usato come funzione esegue una <em>copia superficiale</em> (<em>shallow copy</em>), cioè copia la struttura del dizionario senza duplicare i valori mutabili. In questo caso specifico, tutti i valori che abbiamo sono interi quindi immutabili, perciò la copia può anche essere considerata una duplicazione completa. Quando assegnamo il valore <code class="docutils literal notranslate"><span class="pre">7</span></code> alla chiave <code class="docutils literal notranslate"><span class="pre">'a'</span></code> in <code class="docutils literal notranslate"><span class="pre">diz1</span></code> stiamo modificando la struttura dati originale, lasciando inalterata la copia <code class="docutils literal notranslate"><span class="pre">diz2</span></code> appena fatta,
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: <code class="docutils literal notranslate"><span class="pre">dict</span></code> quando usato come funzione esegue una <em>copia superficiale</em> (<em>shallow copy</em>), cioè copia la struttura del dizionario senza duplicare i valori mutabili. In questo caso specifico, tutti i valori che abbiamo sono interi quindi immutabili, perciò la copia può anche essere considerata una duplicazione completa. Quando assegnamo il valore <code class="docutils literal notranslate"><span class="pre">7</span></code> alla chiave <code class="docutils literal notranslate"><span class="pre">'a'</span></code> in <code class="docutils literal notranslate"><span class="pre">diz1</span></code> stiamo modificando la struttura dati originale, lasciando inalterata la copia <code class="docutils literal notranslate"><span class="pre">diz2</span></code> appena fatta,
 pertanto <code class="docutils literal notranslate"><span class="pre">diz1</span> <span class="pre">==</span> <span class="pre">diz2</span></code> varrà <code class="docutils literal notranslate"><span class="pre">False</span></code>. Verifichiamolo in Python Tutor:</p>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
@@ -3992,9 +4137,11 @@ diz2= {&#39;b&#39;: 8, &#39;a&#39;: 3}
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diz2=&#39;</span><span class="p">,</span> <span class="n">diz2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">dict</span></code> come una funzione, quindi abbiamo fatto una <em>copia superficiale</em>. In questo caso come valori abbiamo liste che sono oggetti <em>mutabili</em>. Questo vuol dire che la copia superficiale si è limitata a copiare i riferimenti alle liste, ma <em>non</em> le liste stesse. Per questa ragione vedrai delle frecce puntare dalla copia del dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> alle regioni di memoria delle liste originali. Questo significa che se cerchi di modificare una lista dopo che la copia è
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">dict</span></code> come una funzione, quindi abbiamo fatto una <em>copia superficiale</em>. In questo caso come valori abbiamo liste che sono oggetti <em>mutabili</em>. Questo vuol dire che la copia superficiale si è limitata a copiare i riferimenti alle liste, ma <em>non</em> le liste stesse. Per questa ragione vedrai delle frecce puntare dalla copia del dizionario <code class="docutils literal notranslate"><span class="pre">diz2</span></code> alle regioni di memoria delle liste originali. Questo significa che se cerchi di modificare una lista dopo che la copia è
 avvenuta (per esempio con il metodo <code class="docutils literal notranslate"><span class="pre">.append(3)</span></code>), di fatto modificherai anche la lista raggiungibile dal dizionario copiato <code class="docutils literal notranslate"><span class="pre">diz2</span></code>. Verifichiamolo in Python Tutor:</p>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
@@ -4090,9 +4237,11 @@ diz2= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2, 3]}
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diz2=&#39;</span><span class="p">,</span> <span class="n">diz2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code>, quindi abbiamo fatto una copia <em>in profondità</em>. In questo caso come valori abbiamo liste che sono oggetti mutabili. La copia in profondità ha duplicato qualunque oggetto che è riuscita a raggiungere, liste incluse. Quindi in questo caso otteniamo due regioni di memoria completamente distinte. Se dopo aver effettuato la copia cerchiamo di modificare una lista accessibile dall’originale <code class="docutils literal notranslate"><span class="pre">diz1</span></code>, siamo sicuri che non potremo intaccare oggetti
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Abbiamo usato <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code>, quindi abbiamo fatto una copia <em>in profondità</em>. In questo caso come valori abbiamo liste che sono oggetti mutabili. La copia in profondità ha duplicato qualunque oggetto che è riuscita a raggiungere, liste incluse. Quindi in questo caso otteniamo due regioni di memoria completamente distinte. Se dopo aver effettuato la copia cerchiamo di modificare una lista accessibile dall’originale <code class="docutils literal notranslate"><span class="pre">diz1</span></code>, siamo sicuri che non potremo intaccare oggetti
 raggiungibili da <code class="docutils literal notranslate"><span class="pre">diz2</span></code>. Verifichiamolo in Python Tutor:</p>
-<div class="nbinput docutils container">
+</div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
@@ -4237,7 +4386,9 @@ diz2= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2]}
 <span class="go">}</span>
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
@@ -4256,6 +4407,28 @@ diz2= {&#39;b&#39;: [4, 5, 6], &#39;a&#39;: [1, 2]}
 <span class="nb">print</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
 
 <span class="c1">#jupman.pytut()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;b&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;c&#39;: [&#39;Z&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
+{&#39;b&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;a&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;], &#39;c&#39;: [&#39;D&#39;, &#39;O&#39;, &#39;O&#39;, &#39;M&#39;]}
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;ZOOM&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
 </pre></div>
 </div>
 </div>
