@@ -11,14 +11,14 @@ jobs:
         sudo apt-get install tree
     - name: sets environment 
       run: |        
-        echo "::set-env name=GIT_TAG::${GITHUB_REF##*/}"
-        echo "::set-env name=VERSION::${GITHUB_REF##*/}"
-        echo "::set-env name=LANGUAGE::en"        
+        echo "GIT_TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
+        echo "VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
+        echo "LANGUAGE=en" >> $GITHUB_ENV
     - name: apply docs version renaming
       if: env.GIT_TAG == 'master'
-      run: echo "::set-env name=VERSION::latest"
+      run: echo "VERSION=latest" >> $GITHUB_ENV
     - name: sets WEB_PATH
-      run: echo "::set-env name=WEB_PATH::"
+      run: echo "WEB_PATH=" >> $GITHUB_ENV
     - name: Run Sphinx in RTD docker      
       uses: DavidLeoni/readthedocs-to-actions@v1.2
       with:
