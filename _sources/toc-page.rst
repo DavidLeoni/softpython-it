@@ -8,3 +8,6 @@
    
    toc.rst
 
+   references.ipynb
+      
+   Indice <toc.html#http://>

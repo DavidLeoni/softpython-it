@@ -300,15 +300,13 @@ $
         
         var fix = function(prefix){
 
-            s = 'a.reference.internal[href^="' + prefix + 'toc.html"]'
-
-            // DIRTY: THIS IS A POTENTIAL BUG: IF 'index' is not the last one it won't be selected !
-           //  Made so because index may be translated in other languages   
-
-            var link = $(s).not(":last")
+            var s = 'a.reference.internal[href^="' + prefix + 'toc.html"]';            
+            
             var span = $(s + ' > span');
             span.off('click')
 
+            var link = $(s); 
+            
             link.on('click', function (ev) {
                 ev.preventDefault();
                 toggleCurrent($(this));
@@ -317,6 +315,23 @@ $
             });
         }
 
+        // fix for https://github.com/DavidLeoni/jupman/issues/71
+        // should better do it serverside, but at least it works!
+        console.log("Fixing home link ...");
+        var home = $('a.icon-home');
+        
+        if (home.length > 0){
+            
+            home.attr('href', home.attr('href').replace('toc-page.html', 'index.html'))
+        
+            console.log("Fixing Index link ...");
+            var home_root = home.attr('href').replace('toc-page.html','').replace('index.html','');            
+            //DIRTY, if you wonder why see  https://github.com/DavidLeoni/jupman/issues/11
+            //                         and  https://stackoverflow.com/a/31820846     
+            var tocRef = "toc.html#http://";
+            $('a.reference.external[href$="'+ tocRef + '"]').attr('href', home_root + tocRef);
+        }                        
+        
         fix('')
         fix('../')
         fix('../../')    // probably useless but just in case ...
