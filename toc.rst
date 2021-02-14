@@ -4,7 +4,6 @@
 
     Home <index.ipynb>
     overview.ipynb
-    references.ipynb
     installation.ipynb    
     
 A - Fondamenti
@@ -86,11 +85,3 @@ D - Progetti
     project-ideas.ipynb    
     challenges.ipynb    
     
-|space|
-==========
-
-.. |space| unicode:: U+0020 .. space
-
-
-Indice
-==========
