@@ -245,7 +245,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../basics/basics-sol.html">Basi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Riferimenti">Riferimenti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Jupyter">Jupyter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Oggetti">Oggetti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics-sol.html#Variabili">Variabili</a><ul>
@@ -1642,6 +1641,23 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">Riferimenti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../references.html#Riferimenti-per-argomento">Riferimenti per argomento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Basi">Basi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Stringhe">Stringhe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Liste">Liste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Tuple">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Dizionari">Dizionari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Controllo-di-flusso---if">Controllo di flusso - if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Controllo-di-flusso---cicli-for">Controllo di flusso - cicli for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Controllo-di-flusso---cicli-while">Controllo di flusso - cicli while</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Matrici-Numpy">Matrici Numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Gestione-errori-ed-eccezioni">Gestione errori ed eccezioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Funzioni">Funzioni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Sequenze">Sequenze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#List-Comprehensions">List Comprehensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#Insiemi">Insiemi</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../references.html#Libro-Passo-dopo-passo-impariamo-a-programmare-con-Python">Libro Passo dopo passo impariamo a programmare con Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../references.html#Lezioni-di-Nicola-Cassetta">Lezioni di Nicola Cassetta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../references.html#Pensare-in-Python-seconda-edizione">Pensare in Python seconda edizione</a></li>
@@ -3374,7 +3390,7 @@ Mercati e mercatini, Folklore
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;h4&quot;</span><span class="p">))):</span>
     <span class="n">righe</span><span class="o">.</span><span class="n">append</span><span class="p">({})</span>
 
-<span class="n">aggiungi_campo</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;h4&quot;</span><span class="p">)])</span>
+<span class="n">aggiungi_campo</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;h4&quot;</span><span class="p">)])</span>
 <span class="n">aggiungi_campo</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;[class=&quot;moodboard__item-subline strong fz14 text-uppercase d-b&quot;]&#39;</span><span class="p">)])</span>
 
 <span class="n">luoghi</span> <span class="o">=</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;[class=&quot;moodboard__item-subline strong fz14 d-b&quot;]&#39;</span><span class="p">)]</span>
@@ -3394,82 +3410,82 @@ Mercati e mercatini, Folklore
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[{&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+[{&#39;nome&#39;: &#39;Coppa del Mondo di Snowboard&#39;,
   &#39;data&#39;: &#39;14/12/2017&#39;,
   &#39;luogo&#39;: &#39;Passo Costalunga&#39;,
   &#39;tipo&#39;: &#39;Sport, TOP EVENTI SPORT&#39;,
   &#39;descrizione&#39;: &#39;Al Passo Costalunga sfida tra i migliori specialisti del mondo&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Coppa Europa di sci alpino maschile - slalom speciale&#39;,
   &#39;data&#39;: &#39;18/12/2017&#39;,
   &#39;luogo&#39;: &#39;Pozza di Fassa&#39;,
   &#39;tipo&#39;: &#39;Sport, TOP EVENTI SPORT&#39;,
   &#39;descrizione&#39;: &#39;Lunedì 18 dicembre la Coppa Europa fa tappa in Val di Fassa&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;3Tre - AUDI FIS Ski World Cup&#39;,
   &#39;data&#39;: &#39;22/12/2017&#39;,
   &#39;luogo&#39;: &#39;Madonna di Campiglio&#39;,
   &#39;tipo&#39;: &#39;Sport, TOP EVENTI SPORT&#39;,
   &#39;descrizione&#39;: &#34;Torna il mitico slalom in notturna: vivi l&#39;evento da VIP!&#34;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;La Marcialonga di Fiemme e Fassa &#39;,
   &#39;data&#39;: &#39;28/01/2018&#39;,
   &#39;luogo&#39;: &#39;Val di Fassa&#39;,
   &#39;tipo&#39;: &#39;Sport, TOP EVENTI SPORT&#39;,
   &#39;descrizione&#39;: &#39;La “regina” delle granfondo compie 45 anni&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;TrentinoSkiSunrise: sulle piste alla luce dell’alba&#39;,
   &#39;data&#39;: &#39;06/01/2018 - 07/04/2018&#39;,
   &#39;luogo&#39;: &#39;&#39;,
   &#39;tipo&#39;: &#39;Enogastronomia, Intrattenimento della Località, Sport&#39;,
   &#39;descrizione&#39;: &#34;L&#39;emozione di sciare all’alba e prima di tutti. Dopo, una colazione da campioni!&#34;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Tour de Ski&#39;,
   &#39;data&#39;: &#39;06/01/2018 - 07/01/2018&#39;,
   &#39;luogo&#39;: &#39;Tesero&#39;,
   &#39;tipo&#39;: &#39;Sport, Intrattenimento della Località, Enogastronomia&#39;,
   &#39;descrizione&#39;: &#39;Coppa del Mondo Sci di Fondo\n&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;La mia nuvola&#39;,
   &#39;data&#39;: &#39;01/10/2017 - 30/11/2017&#39;,
   &#39;luogo&#39;: &#39;Pozza di Fassa&#39;,
   &#39;tipo&#39;: &#39;Wellness&#39;,
   &#39;descrizione&#39;: &#39;Contest fotografico della Nuvola del Benessere&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Dormire sotto un cielo di stelle&#39;,
   &#39;data&#39;: &#39;31/10/2017 - 20/12/2017&#39;,
   &#39;luogo&#39;: &#39;Pozza di Fassa&#39;,
   &#39;tipo&#39;: &#39;Wellness&#39;,
   &#39;descrizione&#39;: &#39;Fra le nuvole ai piedi delle Dolomiti&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Mercatini di Natale di Canale di Tenno e Rango &#39;,
   &#39;data&#39;: &#39;19/11/2017 - 30/12/2017&#39;,
   &#39;luogo&#39;: &#39;Tenno&#39;,
   &#39;tipo&#39;: &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
   &#39;descrizione&#39;: &#34;L&#39;incanto genuino del Natale&#34;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;La Ciaspolada&#39;,
   &#39;data&#39;: &#39;06/01/2018&#39;,
   &#39;luogo&#39;: &#39;Fondo&#39;,
   &#39;tipo&#39;: &#39;Sport, TOP EVENTI SPORT&#39;,
   &#39;descrizione&#39;: &#39;La regina delle ciaspole nel giorno della Befana&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Mercatini di Natale a Trento&#39;,
   &#39;data&#39;: &#39;18/11/2017 - 06/01/2018&#39;,
   &#39;luogo&#39;: &#39;Trento&#39;,
   &#39;tipo&#39;: &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
   &#39;descrizione&#39;: &#39;Profumi, luci, atmosfera di festa &#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Mercatini di Natale di Rovereto&#39;,
   &#39;data&#39;: &#39;25/11/2017 - 06/01/2018&#39;,
   &#39;luogo&#39;: &#39;Rovereto&#39;,
   &#39;tipo&#39;: &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
   &#39;descrizione&#39;: &#34;La forza della tradizione con un omaggio all&#39;arte&#34;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Mercatino di Natale asburgico di Levico Terme&#39;,
   &#39;data&#39;: &#39;25/11/2017 - 06/01/2018&#39;,
   &#39;luogo&#39;: &#39;Levico Terme&#39;,
   &#39;tipo&#39;: &#39;Mercati e mercatini, Intrattenimento della Località&#39;,
   &#39;descrizione&#39;: &#39;Parco secolare degli Asburgo &#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Magnifico Mercatino di Cavalese&#39;,
   &#39;data&#39;: &#39;01/12/2017 - 06/01/2018&#39;,
   &#39;luogo&#39;: &#39;Cavalese&#39;,
   &#39;tipo&#39;: &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
   &#39;descrizione&#39;: &#39;Musica, zelten, vin brulé e spumante Trentodoc per assaporare l’atmosfera prenatalizia&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;Mercatino di Natale ad Arco&#39;,
   &#39;data&#39;: &#39;17/11/2017 - 07/01/2018&#39;,
   &#39;luogo&#39;: &#39;Arco&#39;,
   &#39;tipo&#39;: &#39;Intrattenimento della Località, Mercati e mercatini&#39;,
   &#39;descrizione&#39;: &#39;Quasi 40 casette negli angoli più suggestivi del centro&#39;},
- {&#39;nome&#39;: &#39;Mercati e mercatini, Folklore&#39;,
+ {&#39;nome&#39;: &#39;El paès dei presepi&#39;,
   &#39;data&#39;: &#39;08/12/2017 - 07/01/2018&#39;,
   &#39;luogo&#39;: &#39;Baselga di Piné&#39;,
   &#39;tipo&#39;: &#39;Mercati e mercatini, Folklore&#39;,
