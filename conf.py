@@ -458,7 +458,7 @@ def setup(app):
 
     jm.zip_paths(['project', 'requirements.txt'], 
                     '_static/generated/project-template',
-                    patterns = sub)
+                   remap = sub)
 
         
 
