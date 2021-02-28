@@ -15,7 +15,10 @@ A - Fondamenti
 
     Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
     Strumenti e script <tools/tools-sol.ipynb>    
-    Basi <basics/basics-sol.ipynb>
+    Basi 1: variabili e interi <basics/basics1-ints-sol.ipynb>
+    Basi 2: booleani <basics/basics2-bools-sol.ipynb>
+    Basi 3: numeri reali <basics/basics3-floats-sol.ipynb>
+    Basi 4: challenges <basics/basics4-chal.ipynb>
     Stringhe 1: introduzione <strings/strings1-sol.ipynb>
     Stringhe 2: operatori <strings/strings2-sol.ipynb>
     Stringhe 3: metodi <strings/strings3-sol.ipynb>
