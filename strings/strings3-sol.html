@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="../_static/css/softpython-theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stringhe 4 - altri esercizi" href="strings4-sol.html" />
+    <link rel="next" title="Stringhe 4 - iterazione e funzioni" href="strings4-sol.html" />
     <link rel="prev" title="Stringhe 2 - operatori" href="strings2-sol.html" /> 
 </head>
 
@@ -340,6 +340,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -347,8 +352,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Prosegui">Prosegui</a></li>
@@ -380,8 +387,13 @@
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -404,16 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -422,14 +424,48 @@
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#invertilet">invertilet</a></li>
@@ -447,6 +483,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/lists1-sol.html">Liste 1: introduzione</a><ul>
@@ -2042,6 +2083,30 @@ div.rendered_html tbody tr:hover {
 <td><p><a class="reference external" href="#Metodo-capitalize">str.capitalize()</a></p></td>
 <td><p>Ritorna la stringa con il primo carattere maiuscolo</p></td>
 </tr>
+<tr class="row-odd"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodo-startswith">str.startswith(str)</a></p></td>
+<td><p>Controlla se la stringa inizia con un’altra</p></td>
+</tr>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodo-endswith">str.endswith(str)</a></p></td>
+<td><p>Controlla se la stringa finisce con un’altra</p></td>
+</tr>
+<tr class="row-odd"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodo-isalpha">str.isalpha(str)</a></p></td>
+<td><p>Controlla se tutti i caratteri sono alfabetici</p></td>
+</tr>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodo-isdigit">str.isdigit(str)</a></p></td>
+<td><p>Controlla se tutti i caratteri sono cifre</p></td>
+</tr>
+<tr class="row-odd"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.isupper</a></p></td>
+<td><p>Controlla se tutti i caratteri sono minuscoli</p></td>
+</tr>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.islower</a></p></td>
+<td><p>Controlla se tutti i caratteri sono maiuscoli</p></td>
+</tr>
 <tr class="row-odd"><td><p>str</p></td>
 <td><p><a class="reference external" href="#Metodo-strip">str.strip(str)</a></p></td>
 <td><p>Rimuove stringhe dai lati</p></td>
@@ -2054,29 +2119,21 @@ div.rendered_html tbody tr:hover {
 <td><p><a class="reference external" href="#Metodo-rstrip">str.rstrip(str)</a></p></td>
 <td><p>Rimuove stringhe da destra</p></td>
 </tr>
-<tr class="row-even"><td><p>str</p></td>
-<td><p><a class="reference external" href="#Metodo-replace">str.replace(str, str)</a></p></td>
-<td><p>Sostituisce sottostringhe</p></td>
-</tr>
-<tr class="row-odd"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-startswith">str.startswith(str)</a></p></td>
-<td><p>Controlla se la stringa inizia con un’altra</p></td>
-</tr>
-<tr class="row-even"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-endswith">str.endswith(str)</a></p></td>
-<td><p>Controlla se la stringa finisce con un’altra</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p><a class="reference external" href="#Metodo-count">str.count(str)</a></p></td>
+<td><p>Conta il numero di occorrenze di una sottostringa</p></td>
 </tr>
 <tr class="row-odd"><td><p>int</p></td>
-<td><p>str.find(str)</p></td>
+<td><p><a class="reference external" href="#Metodo-find">str.find(str)</a></p></td>
 <td><p>Ritorna la prima posizione di una sottostringa a partire da sinistra</p></td>
 </tr>
 <tr class="row-even"><td><p>int</p></td>
-<td><p>str.rfind(str)</p></td>
+<td><p><a class="reference external" href="#Metodo-rfind">str.rfind(str)</a></p></td>
 <td><p>Ritorna la prima posizione di una sottostringa a partire da destra</p></td>
 </tr>
-<tr class="row-odd"><td><p>int</p></td>
-<td><p>str.count(str)</p></td>
-<td><p>Conta il numero di occorrenze di una sottostringa</p></td>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p><a class="reference external" href="#Metodo-replace">str.replace(str, str)</a></p></td>
+<td><p>Sostituisce sottostringhe</p></td>
 </tr>
 </tbody>
 </table>
@@ -2240,10 +2297,10 @@ CIAO
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmdfabb985-06b0-4405-8c0a-f685b41ebb5e" type="application/json" >
-    {"trace": [{"stack_to_render": [], "event": "step_line", "func_name": "<module>", "stdout": "", "ordered_globals": [], "line": 2, "heap": {}, "globals": {}}, {"stack_to_render": [], "event": "step_line", "func_name": "<module>", "stdout": "", "ordered_globals": ["x"], "line": 3, "heap": {}, "globals": {"x": "ciao"}}, {"stack_to_render": [], "event": "step_line", "func_name": "<module>", "stdout": "", "ordered_globals": ["x", "y"], "line": 4, "heap": {}, "globals": {"x": "ciao", "y": "CIAO"}}, {"stack_to_render": [], "event": "step_line", "func_name": "<module>", "stdout": "ciao\n", "ordered_globals": ["x", "y"], "line": 5, "heap": {}, "globals": {"x": "ciao", "y": "CIAO"}}, {"stack_to_render": [], "event": "return", "func_name": "<module>", "stdout": "ciao\nCIAO\n", "ordered_globals": ["x", "y"], "line": 5, "heap": {}, "globals": {"x": "ciao", "y": "CIAO"}}], "code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)"}
+<script id="json-jm395350d4-1ba4-4505-9505-ecb6ce872571" type="application/json" >
+    {"code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nCIAO\n"}]}
 </script>
-<div id="jmdfabb985-06b0-4405-8c0a-f685b41ebb5e" class="pytutorVisualizer"> </div>
+<div id="jm395350d4-1ba4-4505-9505-ecb6ce872571" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2263,12 +2320,12 @@ CIAO
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmdfabb985-06b0-4405-8c0a-f685b41ebb5e').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm395350d4-1ba4-4505-9505-ecb6ce872571').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmdfabb985-06b0-4405-8c0a-f685b41ebb5e',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm395350d4-1ba4-4505-9505-ecb6ce872571',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2338,11 +2395,9 @@ cammina CAMMINA cammina CAMMINA
 <div class="highlight"><pre>
 Help on built-in function strip:
 
-strip(...) method of builtins.str instance
-    S.strip([chars]) -&gt; str
+strip(chars=None, /) method of builtins.str instance
+    Return a copy of the string with leading and trailing whitespace removed.
 
-    Return a copy of the string S with leading and trailing
-    whitespace removed.
     If chars is given and not None, remove characters in chars instead.
 
 </pre></div></div>
@@ -2587,625 +2642,11 @@ Vostra Eccellenza
 </div>
 </div>
 </div>
-<div class="section" id="Metodo-strip">
-<h2>Metodo strip<a class="headerlink" href="#Metodo-strip" title="Permalink to this headline">¶</a></h2>
-<p>Elimina spazi bianchi, tab e ritorni a capo dalle <em>estremità</em> della stringa. In genere, questo insieme di caratteri viene definito <em>blank</em></p>
-<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità destra e sinistra.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t\n\n\t</span><span class="s1"> ciao mondo </span><span class="se">\t</span><span class="s1">  &#39;</span>   <span class="c1"># alle estremità abbiamo messo spazi bianchi, tab e ritorni a capo</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39; \t\n\n\t ciao mondo \t  &#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-
-
-         ciao mondo
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># ricorda che i caratteri speciali come \t e \n occupano 1 carattere</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-20
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;ciao mondo&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-ciao mondo
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-10
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>      <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39; \t\n\n\t ciao mondo \t  &#39;
-</pre></div></div>
-</div>
-</div>
-<div class="section" id="Metodo-lstrip">
-<h2>Metodo lstrip<a class="headerlink" href="#Metodo-lstrip" title="Permalink to this headline">¶</a></h2>
-<p>Elimina spazi bianchi, tab e ritorni a capo dall’ <em>estremità sinistra</em> della stringa.</p>
-<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità sinistra.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> la strada </span><span class="se">\t</span><span class="s1"> &#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;\n \t la strada \t &#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-16
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;la strada \t &#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-12
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>       <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;\n \t la strada \t &#39;
-</pre></div></div>
-</div>
-</div>
-<div class="section" id="Metodo-rstrip">
-<h2>Metodo rstrip<a class="headerlink" href="#Metodo-rstrip" title="Permalink to this headline">¶</a></h2>
-<p>Elimina spazi bianchi, tab e ritorni a capo dall’ <em>estremità destra</em> della stringa.</p>
-<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità destra.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> il faro </span><span class="se">\t</span><span class="s1"> &#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;\n \t il faro \t &#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-14
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;\n \t il faro&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-11
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>       <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;\n \t il faro \t &#39;
-</pre></div></div>
-</div>
-<div class="section" id="Esercizio---hatespace">
-<h3>Esercizio - hatespace<a class="headerlink" href="#Esercizio---hatespace" title="Permalink to this headline">¶</a></h3>
-<p>Data una stringa <code class="docutils literal notranslate"><span class="pre">x</span></code> che può contenere dei <em>blank</em> (spazi, caratteri di controllo come <code class="docutils literal notranslate"><span class="pre">\t</span></code> e <code class="docutils literal notranslate"><span class="pre">\n</span></code>, …) all’inizio e alla fine, scrivi del codice che stampa la stringa senza i <em>blank</em> e le stringhe <code class="docutils literal notranslate"><span class="pre">INIZIO</span></code> e <code class="docutils literal notranslate"><span class="pre">FINE</span></code> alle estremità.</p>
-<p>Esempio - dato:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t</span><span class="s1">  </span><span class="se">\n</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> hatespace</span><span class="se">\n</span><span class="s1">   </span><span class="se">\t</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
-</pre></div>
-</div>
-<p>stampa:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>INIZIOhatespaceFINE
-</pre></div>
-</div>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t</span><span class="s1">  </span><span class="se">\n</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> hatespace</span><span class="se">\n</span><span class="s1">   </span><span class="se">\t</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;INIZIO&#39;</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;FINE&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-INIZIOhatespaceFINE
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-INIZIOhatespaceFINE
-</pre></div></div>
-</div>
-</div>
-</div>
-<div class="section" id="Metodo-replace">
-<h2>Metodo replace<a class="headerlink" href="#Metodo-replace" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">str.replace</span></code> prende due stringhe, e restituisce una NUOVA stringa ricavata sostituendo nella stringa su cui è chiamata tutte le occorrenze del primo parametero stringa con il secondo.</p>
-<p>Esempio:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="s2">&quot;il treno percorre&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;re&#39;</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;il trono percorro&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="s2">&quot;alberello bello&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;llo&#39;</span><span class="p">,</span> <span class="s1">&#39;llini&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;alberellini bellini&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="s2">&quot;parlare e brindare&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ARE&#39;</span><span class="p">,</span> <span class="s1">&#39;iamo&#39;</span><span class="p">)</span>  <span class="c1"># se cerchiamo maiuscole qua non le troveremo</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;parlare e brindare&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="s2">&quot;PARLARE E BRINDARE&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ARE&#39;</span><span class="p">,</span> <span class="s1">&#39;IAMO&#39;</span><span class="p">)</span>  <span class="c1"># ma qua sì</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;PARLIAMO E BRINDIAMO&#39;
-</pre></div></div>
-</div>
-<p>Come sempre per le stringhe, replace NON modifica la stringa su cui è chiamato:</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;sulla panca&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;panca&#39;</span><span class="p">,</span> <span class="s1">&#39;panca la capra campa&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;sulla panca la capra campa&#39;
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span>  <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;sulla panca&#39;
-</pre></div></div>
-</div>
-<div class="section" id="Esercizio---sostituisci">
-<h3>Esercizio - sostituisci<a class="headerlink" href="#Esercizio---sostituisci" title="Permalink to this headline">¶</a></h3>
-<p>Data una stringa <code class="docutils literal notranslate"><span class="pre">x</span></code>, scrivi del codice per stampare una stringa come <code class="docutils literal notranslate"><span class="pre">x</span></code> ma con tutte le occorrenze di <code class="docutils literal notranslate"><span class="pre">bab</span></code> sostituite da <code class="docutils literal notranslate"><span class="pre">dada</span></code></p>
-<p>Esempio - dati:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;kljsfsdbabòkkrbabej&#39;</span>
-</pre></div>
-</div>
-<p>Dovrebbe stampare:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kljsfsddadaòkkrdadaej
-</pre></div>
-</div>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;kljsfsdbabòkkrbabej&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;bab&#39;</span><span class="p">,</span> <span class="s1">&#39;dada&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-kljsfsddadaòkkrdadaej
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-kljsfsddadaòkkrdadaej
-</pre></div></div>
-</div>
-</div>
-</div>
 <div class="section" id="Metodo-startswith">
 <h2>Metodo startswith<a class="headerlink" href="#Metodo-startswith" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">str.startswith</span></code> prende come parametro una stringa e ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa prima del punto inizia con la stringa passata come parametro. Esempio:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3214,7 +2655,7 @@ kljsfsddadaòkkrdadaej
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3223,7 +2664,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3232,7 +2673,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3241,7 +2682,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3250,7 +2691,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3259,7 +2700,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3268,7 +2709,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3312,7 +2753,7 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3335,7 +2776,7 @@ True
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3363,7 +2804,7 @@ True
 <h2>Metodo endswith<a class="headerlink" href="#Metodo-endswith" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">str.endswith</span></code> prende come parametro una stringa e ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa prima del punto finisce con la stringa passata come parametro. Esempio:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3372,7 +2813,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3381,7 +2822,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3390,7 +2831,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3399,7 +2840,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3408,7 +2849,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3417,7 +2858,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3426,7 +2867,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3444,7 +2885,7 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3467,7 +2908,7 @@ True
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3488,6 +2929,2178 @@ True
 <div class="highlight"><pre>
 True
 </pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Metodo-isalpha">
+<h2>Metodo isalpha<a class="headerlink" href="#Metodo-isalpha" title="Permalink to this headline">¶</a></h2>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">isalpha</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se tutti i caratteri nella stringa sono alfabetici:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;BarrieraCorallina&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>I numeri non sono considerati alfabetici:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Route 666&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Nota che le spaziature (i cosiddetti <em>blank</em>) <em>non</em> sono alfabetiche:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Barriera Corallina&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>… nè la punteggiatura:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;!&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>… e neanche strani caratteri Unicode:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;♥&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Metodo-isdigit">
+<h2>Metodo isdigit<a class="headerlink" href="#Metodo-isdigit" title="Permalink to this headline">¶</a></h2>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">isdigit</span></code> ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se una stringa è solo composta di cifre:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;391&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;400m&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Le notazioni a virgola mobile e scientifica non sono riconosciute:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;3.14&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;4e29&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Metodi-isupper-e-islower">
+<h2>Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code><a class="headerlink" href="#Metodi-isupper-e-islower" title="Permalink to this headline">¶</a></h2>
+<p>Possiamo controllare se un carattere è maiuscolo o minuscolo con i metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;q&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Q&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;b&#39;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;B&#39;</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Funzionano anche con stringhe lunghe, controllando se tutti i caratteri soddisfano il criterio:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;GREAT&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;NotSoGREAT&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Nota che spaziatura in genere (i <em>blank</em>) e punteggiatura non sono prese in considerazione:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;TROPPO</span><span class="se">\n</span><span class="s1">GIUSTO !&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>Potremmo controllare se un carattere è maiuscolo/minuscolo guardando il codice ASCII ma il miglior modo per coprire tutti gli alfabeti è usare i metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code>, per esempio funzionano anche con lettere accentate:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;à&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Á&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Metodi-di-ricerca-e-trasformazione">
+<h2>Metodi di ricerca e trasformazione<a class="headerlink" href="#Metodi-di-ricerca-e-trasformazione" title="Permalink to this headline">¶</a></h2>
+<p>Le stringhe mettono a disposizione diversi metodi per effettuare ricerche e trasformazioni al loro interno, ma attenzione: il potere è nulla senza il controllo! Spesso ti troverai con l’esigenza di usarli, e potrebbero anche funzionare con qualche piccolo esempio, ma molto spesso nascondono tranelli che poi si rimpiangono amaramente. Quindi quando scrivi codice con uno di questi metodi, <strong>poniti sempre le domande che evidenzieremo!</strong></p>
+</div>
+<div class="section" id="Metodo-strip">
+<h2>Metodo strip<a class="headerlink" href="#Metodo-strip" title="Permalink to this headline">¶</a></h2>
+<p>Elimina spazi bianchi, tab e ritorni a capo dalle <em>estremità</em> della stringa. In genere, questo insieme di caratteri viene definito <em>blank</em></p>
+<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità destra e sinistra.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t\n\n\t</span><span class="s1"> ciao mondo </span><span class="se">\t</span><span class="s1">  &#39;</span>   <span class="c1"># alle estremità abbiamo messo spazi bianchi, tab e ritorni a capo</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39; \t\n\n\t ciao mondo \t  &#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+
+         ciao mondo
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># ricorda che i caratteri speciali come \t e \n occupano 1 carattere</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+20
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;ciao mondo&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ciao mondo
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+10
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>      <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39; \t\n\n\t ciao mondo \t  &#39;
+</pre></div></div>
+</div>
+<div class="section" id="Specificare-i-caratteri-da-rimuovere">
+<h3>Specificare i caratteri da rimuovere<a class="headerlink" href="#Specificare-i-caratteri-da-rimuovere" title="Permalink to this headline">¶</a></h3>
+<p>Se vuoi che Python si limiti a rimuovere solo qualche carattere specifico, puoi specificarli in parentesi. Proviamo a specificarne solo uno:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;salsa&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>    <span class="c1">#  nota che la `s` interna non è rimossa</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;alsa&#39;
+</pre></div></div>
+</div>
+<p>Se ne specifichiamo due o più, Python rimuove tutti i caratteri che può trovare dai lati</p>
+<p>Nota che l’ordine in cui specifichi i caratteri <strong>non</strong> conta:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;caustic&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;aci&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;ust&#39;
+</pre></div></div>
+</div>
+<div class="admonition warning">
+<p><strong>ATTENZIONE: Se specifici i caratteri, Python non proverà più a rimuovere i</strong> <strong>*blank!*</strong></p>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;bouquet  &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>    <span class="c1"># non rimuoverà gli spazi a destra!</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;ouquet  &#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">bouquet  &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>    <span class="c1"># ... nè rimuoverà i blank a sinistra come il tab</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\tbouquet  &#39;
+</pre></div></div>
+</div>
+<p>Secondo lo stesso principio, se specifichi uno spazio <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>, allora Python rimuoverà <strong>solo</strong> gli spazi e non cercherà gli altri <em>blank</em> !!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;  attento! </span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>   <span class="c1"># rimuove solo dalla sinistra!</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;attento! \t&#39;
+</pre></div></div>
+</div>
+<p><strong>DOMANDA</strong>: per ciascuna delle espressioni seguenti, prova ad indovinare che risultato produce (o se da errore):</p>
+<ol class="arabic">
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">tumultuoso</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; a b c &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">a</span><span class="se">\t</span><span class="s1">b</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">tMmm&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;sky diving&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;sky&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;anacondas&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">no way &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">no way &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">no way &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;salsa&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;as&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1"> ACE &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; e allora? &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="Metodo-lstrip">
+<h2>Metodo lstrip<a class="headerlink" href="#Metodo-lstrip" title="Permalink to this headline">¶</a></h2>
+<p>Elimina spazi bianchi, tab e ritorni a capo dall’ <em>estremità sinistra</em> della stringa.</p>
+<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità sinistra.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> la strada </span><span class="se">\t</span><span class="s1"> &#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n \t la strada \t &#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+16
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;la strada \t &#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+12
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>       <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n \t la strada \t &#39;
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Metodo-rstrip">
+<h2>Metodo rstrip<a class="headerlink" href="#Metodo-rstrip" title="Permalink to this headline">¶</a></h2>
+<p>Elimina spazi bianchi, tab e ritorni a capo dall’ <em>estremità destra</em> della stringa.</p>
+<p><strong>NOTA</strong>: NON rimuove i <em>blank</em> tra le parole della stringa! Solo quelli all’estremità destra.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> il faro </span><span class="se">\t</span><span class="s1"> &#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n \t il faro \t &#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+14
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n \t il faro&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+11
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>       <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n \t il faro \t &#39;
+</pre></div></div>
+</div>
+<div class="section" id="Esercizio---hatespace">
+<h3>Esercizio - hatespace<a class="headerlink" href="#Esercizio---hatespace" title="Permalink to this headline">¶</a></h3>
+<p>Data una stringa <code class="docutils literal notranslate"><span class="pre">x</span></code> che può contenere dei <em>blank</em> (spazi, caratteri di controllo come <code class="docutils literal notranslate"><span class="pre">\t</span></code> e <code class="docutils literal notranslate"><span class="pre">\n</span></code>, …) all’inizio e alla fine, scrivi del codice che stampa la stringa senza i <em>blank</em> e le stringhe <code class="docutils literal notranslate"><span class="pre">INIZIO</span></code> e <code class="docutils literal notranslate"><span class="pre">FINE</span></code> alle estremità.</p>
+<p>Esempio - dato:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t</span><span class="s1">  </span><span class="se">\n</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> hatespace</span><span class="se">\n</span><span class="s1">   </span><span class="se">\t</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>stampa:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>INIZIOhatespaceFINE
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t</span><span class="s1">  </span><span class="se">\n</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> hatespace</span><span class="se">\n</span><span class="s1">   </span><span class="se">\t</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;INIZIO&#39;</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;FINE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+INIZIOhatespaceFINE
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+INIZIOhatespaceFINE
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---Bad-to-the-bone">
+<h3>Esercizio - Bad to the bone<a class="headerlink" href="#Esercizio---Bad-to-the-bone" title="Permalink to this headline">¶</a></h3>
+<p>Hai una stringa in maiuscolo <code class="docutils literal notranslate"><span class="pre">s</span></code> che contiene ai lati dei caratteri che vuoi rimuovere: <code class="docutils literal notranslate"><span class="pre">punteggiatura</span></code>, un <code class="docutils literal notranslate"><span class="pre">carattere</span></code> minuscolo e dei <em>blank</em>. Scrivi del codice per eseguire la rimozione</p>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">carattere</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+<span class="n">punteggiatura</span> <span class="o">=</span> <span class="s1">&#39;!?.;,&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t\n</span><span class="s1">...bbbbbBAD TO THE BONE</span><span class="se">\n</span><span class="s1">!&#39;</span>
+</pre></div>
+</div>
+<p>il tuo codice dovrebbe mostrare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;BAD TO THE BONE&#39;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>usa solo i metodi <code class="docutils literal notranslate"><span class="pre">strip</span></code> (o <code class="docutils literal notranslate"><span class="pre">lstrip</span></code> e <code class="docutils literal notranslate"><span class="pre">rstrip</span></code>) (se necessario, puoi fare chiamate ripetute)</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">carattere</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+<span class="n">punteggiatura</span> <span class="o">=</span> <span class="s1">&#39;!?.;,&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t\n</span><span class="s1">...bbbbbBAD TO THE BONE</span><span class="se">\n</span><span class="s1">!&#39;</span>
+
+<span class="c1"># write here</span>
+<span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">carattere</span> <span class="o">+</span> <span class="n">punteggiatura</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;BAD TO THE BONE&#39;
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Metodo-count">
+<h2>Metodo count<a class="headerlink" href="#Metodo-count" title="Permalink to this headline">¶</a></h2>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">count</span></code> prende una sottostringa e conta quante occorrenze vi sono nella stringa prima del punto.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;raggi astrali&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;raggi astrali&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>    <span class="c1"># distingue maiuscole/minuscole</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;raggi astrali&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;st&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1
+</pre></div></div>
+</div>
+<p>Opzionalmente, puoi passare due altri parametri per denotare un indice da quale partire a contare (incluso) e dove terminare (escluso):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#012345678901</span>
+<span class="s2">&quot;raggi astrali&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012</span>
+<span class="s2">&quot;raggi astrali&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1
+</pre></div></div>
+</div>
+<div class="section" id="Non-abusare-count">
+<h3>Non abusare count<a class="headerlink" href="#Non-abusare-count" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">count</span></code> <strong>viene spesso usato in modo errato / inefficiente</strong></p>
+<p>Chiediti sempre:</p>
+<ol class="arabic simple">
+<li><p>la stringa su cui operare potrebbe contenere duplicati? Ricordati che verranno tutti conteggiati!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> compie una ricerca in tutta la stringa, che può essere inefficiente: è proprio necessaria, o sappiamo già l’intervallo in cui cercare?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="Esercizio---denaro-astrale">
+<h3>Esercizio - denaro astrale<a class="headerlink" href="#Esercizio---denaro-astrale" title="Permalink to this headline">¶</a></h3>
+<p>Durante il lockdown 2020, mentre guardavi le stelle nella notte, hai cominciato a sentire… onde. Rimuginandoci sopra, hai deciso che LORO vogliono comunicare con te, perciò hai montato un antenna satellitare sul tuo tetto per ricevere messaggi dagli alieni. Dopo mesi di rumori apparentemente irrilevanti, un giorno hai finalmente ricevuto un radio-messaggio che pensi di poter tradurre. Gli alieni <em>ovviamente</em> stanno cercando di dirti i numeri vincenti della lotto!</p>
+<p>Un messaggio è una sequenza di esattamente 3 <em>diverse</em> ripetizioni di caratteri: il numero di caratteri in ogni ripetizione è un numero che proverai alla lotteria. Inizi freneticamente a sviluppare il traduttore per mostrare questi numeri fortunati sul terminale.</p>
+<p>Esempio - data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;$$$$€€€€€!!&#39;</span>
+</pre></div>
+</div>
+<p>dovrebbe stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ € !
+4 5 2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>IMPORTANTE: puoi assumere che tutte le sequenze abbiano caratteri</strong> <strong>*differenti*</strong></p></li>
+<li><p><strong>NON</strong> usare cicli nè comprehension</p></li>
+<li><p>per semplicità assumi che ogni sequenza di caratteri abbia al più 9 ripetizioni</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>    <span class="c1">#01234567890      # $ € !</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;$$$$€€€€€!!&#39;</span>     <span class="c1"># 4 5 2</span>
+
+                      <span class="c1"># a b c</span>
+<span class="c1">#s = &#39;aaabbbbbbccc&#39;   # 3 6 3</span>
+
+                      <span class="c1"># H A L</span>
+<span class="c1">#s = &#39;HAL&#39;            # 1 1 1</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p1</span><span class="p">])</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">d1</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p2</span><span class="p">])</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">p2</span> <span class="o">+</span> <span class="n">d2</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p1</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">p2</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">p3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+$ € !
+4 5 2
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>    <span class="c1">#01234567890      # $ € !</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;$$$$€€€€€!!&#39;</span>     <span class="c1"># 4 5 2</span>
+
+                      <span class="c1"># a b c</span>
+<span class="c1">#s = &#39;aaabbbbbbccc&#39;   # 3 6 3</span>
+
+                      <span class="c1"># H A L</span>
+<span class="c1">#s = &#39;HAL&#39;            # 1 1 1</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+$ € !
+4 5 2
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Metodo-find">
+<h2>Metodo find<a class="headerlink" href="#Metodo-find" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">find</span></code> ritorna l’indice della <em>prima</em> occorrenza di qualche sottostringa data.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012345</span>
+<span class="s1">&#39;bingo bongo bong&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ong&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+7
+</pre></div></div>
+</div>
+<p>Se nessuna occorrenza è trovata, ritorna <code class="docutils literal notranslate"><span class="pre">-1</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012345</span>
+<span class="s1">&#39;bingo bongo bong&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;bang&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-1
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012345</span>
+<span class="s1">&#39;bingo bongo bong&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;Bong&#39;</span><span class="p">)</span>    <span class="c1">#  differenzia tra maiuscole/minuscole</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-1
+</pre></div></div>
+</div>
+<p>Opzionalmente, puoi specificare un indice da dove iniziare a cercare (incluso):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012345</span>
+<span class="s1">&#39;bingo bongo bong&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ong&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+13
+</pre></div></div>
+</div>
+<p>E anche dove finire (escluso):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#0123456789012345</span>
+<span class="s1">&#39;bingo bongo bong&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-1
+</pre></div></div>
+</div>
+<div class="section" id="Metodo-rfind">
+<h3>Metodo rfind<a class="headerlink" href="#Metodo-rfind" title="Permalink to this headline">¶</a></h3>
+<p>Come il <a class="reference external" href="#Metodo-find">metodo find</a>, ma la ricerca inizia dalla destra.</p>
+</div>
+<div class="section" id="Non-abusare-find">
+<h3>Non abusare find<a class="headerlink" href="#Non-abusare-find" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">find</span></code> <strong>viene spesso usato in modo errato / inefficiente</strong></p>
+<p>Chiediti sempre:</p>
+<ol class="arabic simple">
+<li><p>la stringa su cui operare potrebbe contenere duplicati? Ricordati che solo il <em>primo</em> verrà trovato!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find</span></code> compie una ricerca in tutta la stringa, che può essere inefficiente: è proprio necessaria, o sappiamo già l’intervallo in cui cercare?</p></li>
+<li><p>Se sappiamo che c’è un solo elemento da cercare, e che se c’è, è in una specifica posizione nota, <code class="docutils literal notranslate"><span class="pre">find</span></code> non serve a nulla!</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="Esercizio---Il-porto-di-Monkey-Island">
+<h3>Esercizio - Il porto di Monkey Island<a class="headerlink" href="#Esercizio---Il-porto-di-Monkey-Island" title="Permalink to this headline">¶</a></h3>
+<p>L’isola di Monkey Island ha un porto che dispone di 4 moli a cui attraccano le navi provenienti da tutto l’arcipelago. Il punto di attracco non è mai preciso, e possono esserci degli spazi arbitrari con i bordi dei moli. Vi possono anche essere navi dal nome duplicato.</p>
+<ol class="arabic simple">
+<li><p>Supponiamo che ad ogni molo può contenere una sola nave, e vogliamo scrivere del codice che mostri <code class="docutils literal notranslate"><span class="pre">True</span></code> se la <code class="docutils literal notranslate"><span class="pre">&quot;The</span> <span class="pre">Jolly</span> <span class="pre">Rasta&quot;</span></code> è attraccata al molo <code class="docutils literal notranslate"><span class="pre">2</span></code> oppure <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p></li>
+</ol>
+<p>Guarda i porti seguenti, e per ciascun cerca di indovinare se le righe di codice seguenti produrranno risultati corretti oppure no. Prova poi a scrivere del codice da te che non abbia i problemi che riscontrerai.</p>
+<ul class="simple">
+<li><p><strong>NON</strong> istruzioni <code class="docutils literal notranslate"><span class="pre">if</span></code>, cicli nè comprehension</p></li>
+<li><p><strong>NON</strong> usare liste (quindi niente split)</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">larghezza</span> <span class="o">=</span> <span class="mi">21</span>  <span class="c1"># larghezza di un molo,  INCLUSO il `|` di destra</span>
+<span class="n">molo</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="c1"># moli     :  1                    2                    3                    4</span>
+<span class="n">porto</span> <span class="o">=</span>      <span class="s2">&quot;The Mad Monkey      |  The Jolly Rasta   |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;  The Mad Monkey    |                    | The Sea Cucumber   |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;    The Mad Monkey  |The Jolly Rasta     |   The Sea Cucumber |                    |&quot;</span>
+<span class="c1">#porto =     &quot;The Jolly Rasta     |                    |    The Sea Cucumber|LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;                    | The Mad Monkey     |   The Jolly Rasta  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;    The Jolly Rasta |                    | The Jolly Rasta    |   The Jolly Rasta  |&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La Jolly Rasta è attraccata al molo&#39;</span><span class="p">,</span> <span class="n">molo</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">porto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;                     in:&#39;</span><span class="p">,</span> <span class="s1">&#39;The Jolly Rasta&#39;</span> <span class="ow">in</span> <span class="n">porto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;          find su tutto:&#39;</span><span class="p">,</span> <span class="n">porto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;The Jolly Rasta&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  find dal secondo molo:&#39;</span><span class="p">,</span> <span class="n">porto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;The Jolly Rasta&#39;</span><span class="p">,</span> <span class="n">larghezza</span><span class="o">*</span><span class="p">(</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">sub</span> <span class="o">=</span> <span class="n">porto</span><span class="p">[</span><span class="n">larghezza</span><span class="o">*</span><span class="p">(</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span><span class="n">larghezza</span><span class="o">*</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;              Soluzione:&#39;</span><span class="p">,</span> <span class="n">sub</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;The Jolly Rasta&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+La Jolly Rasta è attraccata al molo 2 ?
+
+The Mad Monkey      |  The Jolly Rasta   |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|
+
+                     in: True
+
+          find su tutto: True
+
+  find dal secondo molo: True
+
+              Soluzione: True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">larghezza</span> <span class="o">=</span> <span class="mi">21</span>  <span class="c1"># larghezza di un molo,  INCLUSO il `|` di destra</span>
+<span class="n">molo</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="c1"># moli     :  1                    2                    3                    4</span>
+<span class="n">porto</span> <span class="o">=</span>      <span class="s2">&quot;The Mad Monkey      |  The Jolly Rasta   |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;  The Mad Monkey    |                    | The Sea Cucumber   |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;    The Mad Monkey  |The Jolly Rasta     |   The Sea Cucumber |                    |&quot;</span>
+<span class="c1">#porto =     &quot;The Jolly Rasta     |                    |    The Sea Cucumber|LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;                    | The Mad Monkey     |   The Jolly Rasta  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;    The Jolly Rasta |                    | The Jolly Rasta    |   The Jolly Rasta  |&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La Jolly Rasta è attraccata al molo&#39;</span><span class="p">,</span> <span class="n">molo</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">porto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;                     in:&#39;</span><span class="p">,</span> <span class="s1">&#39;The Jolly Rasta&#39;</span> <span class="ow">in</span> <span class="n">porto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;          find su tutto:&#39;</span><span class="p">,</span> <span class="n">porto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;The Jolly Rasta&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  find dal secondo molo:&#39;</span><span class="p">,</span> <span class="n">porto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;The Jolly Rasta&#39;</span><span class="p">,</span> <span class="n">larghezza</span><span class="o">*</span><span class="p">(</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+La Jolly Rasta è attraccata al molo 2 ?
+
+The Mad Monkey      |  The Jolly Rasta   |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|
+
+                     in: True
+
+          find su tutto: True
+
+  find dal secondo molo: True
+
+              Soluzione: True
+</pre></div></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Supponiamo ora che ogni molo possa accogliere più di una nave, anche con lo stesso nome. Scrivi del codice che mostri <code class="docutils literal notranslate"><span class="pre">True</span></code> se <strong>una sola</strong> Grog Ship è attraccata al secondo molo, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p></li>
+</ol>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># moli     :  1                    2                    3                    4</span>
+<span class="n">porto</span> <span class="o">=</span>      <span class="s2">&quot;The Mad Monkey      |The Jolly Rasta     |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;The Mad Monkey      | Grog Ship Grog Ship| The Jolly Rasta    |   The Sea Cucumber &quot;</span>
+<span class="c1">#porto =     &quot;   The Jolly Rasta  |   Grog Ship        | The Jolly Rasta    |   The Jolly Rasta  &quot;</span>
+<span class="c1">#porto =     &quot;   Grog Ship        |   Grog Ship        |LeChuck&#39;s Ghost Ship|    Grog Ship       &quot;</span>
+<span class="c1">#porto =     &quot;LeChuck&#39;s Ghost Ship|                    |   Grog Ship        |   The Jolly Rasta  &quot;</span>
+<span class="c1">#porto =     &quot;The Jolly Rasta     | Grog Ship Grog Ship|       Grog Ship    |   The Jolly Rasta  &quot;</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Una sola Grog Ship è attraccata al molo&#39;</span><span class="p">,</span> <span class="n">molo</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">sub</span> <span class="o">=</span> <span class="n">porto</span><span class="p">[</span><span class="n">larghezza</span><span class="o">*</span><span class="p">(</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span><span class="n">larghezza</span><span class="o">*</span><span class="n">molo</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Soluzione Grog Ship:&#39;</span><span class="p">,</span> <span class="n">sub</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;Grog Ship&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+Una sola Grog Ship è attraccata al molo 2 ?
+
+Soluzione Grog Ship: False
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># moli     :  1                    2                    3                    4</span>
+<span class="n">porto</span> <span class="o">=</span>      <span class="s2">&quot;The Mad Monkey      |The Jolly Rasta     |  The Sea Cucumber  |LeChuck&#39;s Ghost Ship|&quot;</span>
+<span class="c1">#porto =     &quot;The Mad Monkey      | Grog Ship Grog Ship| The Jolly Rasta    |   The Sea Cucumber &quot;</span>
+<span class="c1">#porto =     &quot;   The Jolly Rasta  |   Grog Ship        | The Jolly Rasta    |   The Jolly Rasta  &quot;</span>
+<span class="c1">#porto =     &quot;   Grog Ship        |   Grog Ship        |LeChuck&#39;s Ghost Ship|    Grog Ship       &quot;</span>
+<span class="c1">#porto =     &quot;LeChuck&#39;s Ghost Ship|                    |   Grog Ship        |   The Jolly Rasta  &quot;</span>
+<span class="c1">#porto =     &quot;The Jolly Rasta     | Grog Ship Grog Ship|       Grog Ship    |   The Jolly Rasta  &quot;</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Una sola Grog Ship è attraccata al molo&#39;</span><span class="p">,</span> <span class="n">molo</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+Una sola Grog Ship è attraccata al molo 2 ?
+
+Soluzione Grog Ship: False
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---banane">
+<h3>Esercizio - banane<a class="headerlink" href="#Esercizio---banane" title="Permalink to this headline">¶</a></h3>
+<p>Durante l’esplorazione di una regione tropicale remota, un etologo scopre una popolazione di scimmie che sembra abbiano qualche concetto dei numeri. Collezionano centinaia di banane che sono poi scambiate con noci di cocco collezionate da un’altro gruppo. Per comunicare quantità fino a 999 banane, usano una serie di esattamente tre suoni gutturali. L’etologo scrive le sequenze e formula la teoria seguente: ogni suono è rappresentato da una sequenza dello stesso carattere, ripetuto un certo
+numero di volte. Il numero di caratteri nella prima sequenza è la prima cifra (le centinaia), il numero di caratteri nella seconda sequenza è la seconda cifra (le decine), mentre l’ultima sequenza rappresenta le unità.</p>
+<p>Scrivi del codice che mette nella variabile <code class="docutils literal notranslate"><span class="pre">banane</span></code> <strong>un intero</strong> che rappresenti il numero.</p>
+<p>Per esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;bb bbbbb aaaa&#39;</span>
+</pre></div>
+</div>
+<p>il tuo codice dovrebbe stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; banane
+254
+&gt;&gt;&gt; type(banane)
+int
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>IMPORTANTE 1: sequenze differenti possono usare lo</strong> <strong>*stesso*</strong> <strong>carattere!</strong></p></li>
+<li><p><strong>IMPORTANTE 2: non puoi assumere quali caratteri le scimmie useranno</strong>: conosci solo che ogni cifra è rappresentata da una ripetizione dello stesso carattere</p></li>
+<li><p><strong>NON</strong> usare cicli nè comprehensions</p></li>
+<li><p>le scimmie non hanno cognizione dello zero</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>    <span class="c1">#0123456789012</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;bb bbbbb aaaa&#39;</span>     <span class="c1"># 254</span>
+<span class="c1">#s = &#39;ccc cc ccc&#39;       # 323</span>
+<span class="c1">#s = &#39;vvv rrrr ww&#39;      # 342</span>
+<span class="c1">#s = &#39;cccc h jjj&#39;       # 413</span>
+<span class="c1">#s = &#39;🌳🌳🌳 🍌🍌🍌🍌🍌🍌 🐵🐵🐵🐵&#39;  # 364   (potresti ottenere *qualunque* strano carattere, anche unicode ...)</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">banane</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="n">p1</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">p1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">banane</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p1</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">p2</span><span class="p">])</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">banane</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">p2</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span><span class="o">*</span><span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Le banane sono&#39;</span><span class="p">,</span><span class="n">banane</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">banane</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Le banane sono 254
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+int
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>    <span class="c1">#0123456789012</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;bb bbbbb aaaa&#39;</span>     <span class="c1"># 254</span>
+<span class="c1">#s = &#39;ccc cc ccc&#39;       # 323</span>
+<span class="c1">#s = &#39;vvv rrrr ww&#39;      # 342</span>
+<span class="c1">#s = &#39;cccc h jjj&#39;       # 413</span>
+<span class="c1">#s = &#39;🌳🌳🌳 🍌🍌🍌🍌🍌🍌 🐵🐵🐵🐵&#39;  # 364   (potresti ottenere *qualunque* strano carattere, anche unicode ...)</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Le banane sono 254
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+int
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Metodo-replace">
+<h2>Metodo replace<a class="headerlink" href="#Metodo-replace" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">str.replace</span></code> prende due stringhe, e restituisce una NUOVA stringa ricavata sostituendo nella stringa su cui è chiamata <em>tutte</em> le occorrenze del primo parametero stringa con il secondo.</p>
+<p>Esempio:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;il treno percorre&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;re&#39;</span><span class="p">,</span> <span class="s1">&#39;RO&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;il tROno percorRO&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;alberello bello&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;llo&#39;</span><span class="p">,</span> <span class="s1">&#39;llini&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;alberellini bellini&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;parlare e brindare&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ARE&#39;</span><span class="p">,</span> <span class="s1">&#39;iamo&#39;</span><span class="p">)</span>  <span class="c1"># se cerchiamo maiuscole qua non le troveremo</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;parlare e brindare&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s2">&quot;PARLARE E BRINDARE&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ARE&#39;</span><span class="p">,</span> <span class="s1">&#39;IAMO&#39;</span><span class="p">)</span>  <span class="c1"># ma qua sì</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;PARLIAMO E BRINDIAMO&#39;
+</pre></div></div>
+</div>
+<p>Come sempre per le stringhe, <code class="docutils literal notranslate"><span class="pre">replace</span></code> NON modifica la stringa su cui è chiamato:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;sulla panca&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;panca&#39;</span><span class="p">,</span> <span class="s1">&#39;panca la capra campa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;sulla panca la capra campa&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span>  <span class="c1"># IMPORTANTE: x è ancora associato alla vecchia stringa !</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;sulla panca&#39;
+</pre></div></div>
+</div>
+<p>E’ possile specificare fino a quante occorrenze verranno sostituite:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;apollo fece una palla di pelle di pollo&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="s1">&#39;Zz&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;apoZzo fece una paZza di peZze di pollo&#39;
+</pre></div></div>
+</div>
+<div class="section" id="Non-abusare-replace">
+<h3>Non abusare replace<a class="headerlink" href="#Non-abusare-replace" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">replace</span></code> <strong>viene spesso usato in modo errato / inefficiente</strong></p>
+<p>Chiediti sempre:</p>
+<ol class="arabic simple">
+<li><p>la stringa su cui operare potrebbe contenere duplicati? Ricordati che verranno <em>tutti</em> sostituiti!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> compie una ricerca in tutta la stringa, che può essere inefficiente: è proprio necessaria, o sappiamo già la posizione dove è presente il testo da sostituire?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="Esercizio---Non-aprite-quella-porta">
+<h3>Esercizio - Non aprite quella porta<a class="headerlink" href="#Esercizio---Non-aprite-quella-porta" title="Permalink to this headline">¶</a></h3>
+<p><strong>DOMANDA</strong> Hai una biblioteca di libri, con etichette come <code class="docutils literal notranslate"><span class="pre">G-Il</span> <span class="pre">padrino</span></code>, <code class="docutils literal notranslate"><span class="pre">R-I</span> <span class="pre">promessi</span> <span class="pre">sposi</span></code> o <code class="docutils literal notranslate"><span class="pre">'H-Non</span> <span class="pre">aprite</span> <span class="pre">quella</span> <span class="pre">porta'</span></code> composte da una un carattere che identifica il tipo (<code class="docutils literal notranslate"><span class="pre">G</span></code> giallo, <code class="docutils literal notranslate"><span class="pre">R</span></code> romanzo, <code class="docutils literal notranslate"><span class="pre">H</span></code> horror) seguito da <code class="docutils literal notranslate"><span class="pre">-</span></code> e dal titolo. Dato un <code class="docutils literal notranslate"><span class="pre">libro</span></code>, vuoi stampare l’etichetta completa, due punti e poi il titolo, come <code class="docutils literal notranslate"><span class="pre">'Giallo:</span> <span class="pre">Il</span> <span class="pre">padrino'</span></code>. Guarda i seguenti frammenti di codice, e per ciascuno prova a scrivere delle etichette tra quelle proposte <strong>o creane altre</strong>
+che darebbero risultati errati (se esistono)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;G-Il padrino&#39;</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;R-I promessi sposi&#39;</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;H-Non aprite quella porta&#39;</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span>  \
+        <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;HORROR: &#39;</span><span class="p">)</span>  \
+        <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">libro</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G-&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R-&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G-&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R-&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">libro</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G-&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R-&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">libro</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># SOLUTION</span>
+
+
+
+<span class="c1">#1</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;R-Guerra e Pace&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">))</span>
+
+<span class="c1">#2</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;H-Non aprite quella porta&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">libro</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;HORROR: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">libro</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+<span class="c1">#3</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;R-G-Force&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G-&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R-&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">))</span>
+
+<span class="c1">#4</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s1">&#39;G-L-A-R-A-P-I-N-A&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">libro</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G-&#39;</span><span class="p">,</span> <span class="s1">&#39;Giallo: &#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;R-&#39;</span><span class="p">,</span> <span class="s1">&#39;Romanzo: &#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">#5 questo è abbastanza blindato, SE assumiamo che le categorie siano fisse e NON contengano trattini</span>
+<span class="c1"># per es una categoria malefica potrebbe essere C- espanso a C-R-O-S-T-A-C-E-I  (che conterrebbe R-)</span>
+<span class="c1">#print(libro[0:2].replace(&#39;G-&#39;, &#39;Giallo: &#39;).replace(&#39;R-&#39;, &#39;Romanzo: &#39;).replace(&#39;H-&#39;, &#39;Horror: &#39;) + libro[2:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Esercizio---Il-Regno-degli-Stringardi">
+<h3>Esercizio - Il Regno degli Stringardi<a class="headerlink" href="#Esercizio---Il-Regno-degli-Stringardi" title="Permalink to this headline">¶</a></h3>
+<p>La landa dei Caratterinzi è dominata col pugno di ferro dal Ducato degli Stringardi. I borghi comandati degli Stringardi si distinguono per essere monodimensionali e possono essere rappresentati come una stringa: offrono ospitalità ai duchi <code class="docutils literal notranslate"><span class="pre">'d'</span></code>, ai signori <code class="docutils literal notranslate"><span class="pre">'s'</span></code>, ai vassalli <code class="docutils literal notranslate"><span class="pre">'v'</span></code>, e alla plebe <code class="docutils literal notranslate"><span class="pre">'p'</span></code>. Al fine di separare le varie cerchie sociali da disdicevoli commistioni sono state erette delle mura <code class="docutils literal notranslate"><span class="pre">|mm|</span></code>. Purtroppo, il Ducato è sotto attacco dalla tribù dei beceri Replaceri, che
+con loro tecniche barbare e poco avvedute rischiano di radere al suolo la città. Per difendersi, gli Stringardi decidono di innalzare le mura, trasformandole da <code class="docutils literal notranslate"><span class="pre">|mm|</span></code> a <code class="docutils literal notranslate"><span class="pre">|MM|</span></code>.</p>
+<ul class="simple">
+<li><p><strong>NON</strong> usare cicli nè list comprehension</p></li>
+<li><p><strong>NON</strong> usare liste (quindi niente split)</p></li>
+</ul>
+<div class="section" id="Stringardi-I:-Innalza-tutte-le-mura">
+<h4>Stringardi I: Innalza tutte le mura<a class="headerlink" href="#Stringardi-I:-Innalza-tutte-le-mura" title="Permalink to this headline">¶</a></h4>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">borgo</span> <span class="o">=</span> <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">borgo</span>
+<span class="go">&#39;ppp|MM|vvvvvv|MM|sss|MM|dd|MM|sssss|MM|vvvvvv|MM|pppppp&#39;</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1"># risultato: &#39;ppp|MM|vvvvvv|MM|sss|MM|dd|MM|sssss|MM|vvvvvv|MM|pppppp&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|mm|&#39;</span><span class="p">,</span><span class="s1">&#39;|MM|&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">borgo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ppp|MM|vvvvvv|MM|sss|MM|dd|MM|sssss|MM|vvvvvv|MM|pppppp
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1"># risultato: &#39;ppp|MM|vvvvvv|MM|sss|MM|dd|MM|sssss|MM|vvvvvv|MM|pppppp&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Stringardi-II:-Mura-esterne">
+<h4>Stringardi II: Mura esterne<a class="headerlink" href="#Stringardi-II:-Mura-esterne" title="Permalink to this headline">¶</a></h4>
+<p>Purtroppo la plebaglia non lavora abbastanza e non vi sono fondi per innalzare tutte le mura: innalza <strong>solo le mura all’esterno</strong></p>
+<ul class="simple">
+<li><p><strong>NON</strong> usare <code class="docutils literal notranslate"><span class="pre">if</span></code>, cicli nè list comprehension</p></li>
+<li><p><strong>NON</strong> usare liste (quindi niente split)</p></li>
+</ul>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">borgo</span> <span class="o">=</span> <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">borgo</span>
+<span class="go">&#39;ppp|MM|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|MM|pppppp&#39;</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#risultato:  &#39;ppp|MM|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|MM|pppppp&#39;</span>
+<span class="c1">#borgo =     &#39;|mm|vvvvvv|mm||mm|ddddd|mm|ssvvv|mm|pp&#39;</span>
+<span class="c1">#risultato:  &#39;|MM|vvvvvv|mm||mm|ddddd|mm|ssvvv|MM|pp&#39;</span>
+
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;|mm|&#39;</span><span class="p">)</span>
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|MM|&#39;</span> <span class="o">+</span> <span class="n">borgo</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">:]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;|mm|&#39;</span><span class="p">)</span>
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|MM|&#39;</span> <span class="o">+</span> <span class="n">borgo</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">borgo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ppp|MM|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|MM|pppppp
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#risultato:  &#39;ppp|MM|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|MM|pppppp&#39;</span>
+<span class="c1">#borgo =     &#39;|mm|vvvvvv|mm||mm|ddddd|mm|ssvvv|mm|pp&#39;</span>
+<span class="c1">#risultato:  &#39;|MM|vvvvvv|mm||mm|ddddd|mm|ssvvv|MM|pp&#39;</span>
+
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Stringardi-III:-Potere-al-popolo">
+<h4>Stringardi III: Potere al popolo<a class="headerlink" href="#Stringardi-III:-Potere-al-popolo" title="Permalink to this headline">¶</a></h4>
+<p>Una minaccia ancora più grande affligge gli Stringardi: <em>la democrazia</em>. A seguito del dilagare di questo male oscuro, in alcune città si sono sviluppate fazioni di destra e sinistra, che tendono a privilegiare solo alcune parti della città. Se il sentimento dominante di una città è di sinistra, tutte le abitazioni a sinistra del duca sono privilegiate a suon di dobloni, altrimenti se di destra sono privilegiate quelle a destra del duca. Quando una casa è privilegiata la lettera corrispondente
+viene resa in maiuscolo.</p>
+<ul class="simple">
+<li><p>assumi che almeno un blocco con <code class="docutils literal notranslate"><span class="pre">d</span></code> sia sempre presente, e che sia unico</p></li>
+<li><p><strong>NON</strong> usare <code class="docutils literal notranslate"><span class="pre">if</span></code>, cicli nè list comprehension</p></li>
+<li><p><strong>NON</strong> usare liste (quindi niente split)</p></li>
+</ul>
+<p><strong>3.1) privilegia solo le case di sinistra</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">borgo</span> <span class="o">=</span> <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">borgo</span>
+<span class="go">&#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1"># risultato: &#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#borgo =     &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|ssss|ss|mm|vvvvvv|mm|&#39;</span>
+<span class="c1"># risultato: &#39;|P|PPP||P|PP|mm|VVV|VVVV|mm|SSSSS|mm|ddd|mm|ssss|ss|mm|vvvvvv|mm|&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">dpos</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="p">[:</span><span class="n">dpos</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;V&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">borgo</span><span class="p">[</span><span class="n">dpos</span><span class="p">:]</span>
+
+<span class="n">borgo</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>      <span class="s1">&#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1"># risultato: &#39;PPP|mm|VVVVVV|mm|SSS|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#borgo =     &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|ssss|ss|mm|vvvvvv|mm|&#39;</span>
+<span class="c1"># risultato: &#39;|P|PPP||P|PP|mm|VVV|VVVV|mm|SSSSS|mm|ddd|mm|ssss|ss|mm|vvvvvv|mm|&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<p><strong>3.2) privilegia solo le case di destra</strong></p>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">borgo</span> <span class="o">=</span> <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">borgo</span>
+<span class="go">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|SSSSS|mm|VVVVVV|mm|PPPPPP&#39;</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>     <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|SSSSS|mm|VVVVVV|mm|PPPPPP&#39;</span>
+<span class="c1">#borgo =    &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|ssss|ss|mm|vvvvvv|p|pp|mm|&#39;</span>
+<span class="c1">#risultato: &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|SSSS|SS|mm|VVVVVV|P|PP|mm|&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">dpos</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="p">[:</span><span class="n">dpos</span><span class="p">]</span> <span class="o">+</span> <span class="n">borgo</span><span class="p">[</span><span class="n">dpos</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;V&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+
+<span class="n">borgo</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|SSSSS|mm|VVVVVV|mm|PPPPPP&#39;
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">borgo</span> <span class="o">=</span>     <span class="s1">&#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|sssss|mm|vvvvvv|mm|pppppp&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|vvvvvv|mm|sss|mm|dd|mm|SSSSS|mm|VVVVVV|mm|PPPPPP&#39;</span>
+<span class="c1">#borgo =    &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|ssss|ss|mm|vvvvvv|p|pp|mm|&#39;</span>
+<span class="c1">#risultato: &#39;|p|ppp||p|pp|mm|vvv|vvvv|mm|sssss|mm|ddd|mm|SSSS|SS|mm|VVVVVV|P|PP|mm|&#39;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Stringardi-IV:-Lotte-di-potere">
+<h4>Stringardi IV: Lotte di potere<a class="headerlink" href="#Stringardi-IV:-Lotte-di-potere" title="Permalink to this headline">¶</a></h4>
+<p>Nel tempo la famiglia ducale si è espansa e purtroppo sono nate faide spietate. A seconda della popolosità del borgo di sinistra o destra, un corrispondonete numero dei membri della famiglia più a sinistra nel palazzo ducale o più a destra ricevono supporto per attuare i loro giochi di potere. Un membro del palazzo ducale che riceve supporto diventa in maiuscolo. Ogni lettera <code class="docutils literal notranslate"><span class="pre">'p'</span></code>, <code class="docutils literal notranslate"><span class="pre">'v'</span></code> o <code class="docutils literal notranslate"><span class="pre">'s'</span></code> contribuisce supporto (ma non i muri). I membri della famiglia ducale che non sono raggiunti
+da nessun supporto vengono trucidati dai parenti, e sostituiti con una <a class="reference external" href="https://www.compart.com/en/unicode/U+271D">Latin Cross Unicode</a> ✝</p>
+<ul class="simple">
+<li><p>assumi che almeno un blocco con <code class="docutils literal notranslate"><span class="pre">d</span></code> sia sempre presente, e che sia unico</p></li>
+<li><p>assumi che per ogni casa di sinistra/destra, vi sia <em>almeno un</em> duca di sinistra/destra</p></li>
+<li><p><strong>NON</strong> usare <code class="docutils literal notranslate"><span class="pre">if</span></code>, cicli nè list comprehension</p></li>
+<li><p><strong>NON</strong> usare liste (quindi niente split)</p></li>
+</ul>
+<p>Esempio - dato:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">borgo</span> <span class="o">=</span> <span class="s1">&#39;ppp|mm|vv|mm|v|s|mm|dddddddddddddddddddddddd|mm|ss|mm|vvvvv|mm|pppp&#39;</span>
+</pre></div>
+</div>
+<p>Dopo il tuo codice, deve stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Membri della famiglia reale: 24
+                di sinistra: 7
+                  di destra: 11
+
+Dopo la lotta fratricida, il nuovo borgo è:
+
+ppp|mm|vv|mm|v|s|mm|DDDDDDD✝✝✝✝✝✝DDDDDDDDDDD|mm|ss|mm|vvvvv|mm|pppp
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">borgo</span> <span class="o">=</span>     <span class="s1">&#39;ppp|mm|vv|mm|v|s|mm|dddddddddddddddddddddddd|mm|ss|mm|vvvvv|mm|pppp&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|vv|mm|v|s|mm|DDDDDDD✝✝✝✝✝✝DDDDDDDDDDD|mm|ss|mm|vvvvv|mm|pppp&#39;  tot:24 sx:7 dx:11</span>
+<span class="c1">#borgo =    &#39;ppp|mm|ppp|mm|vv|mm|ss|mm|dddddddddddddddddddd|mm|ss|mm|mm|s|v|mm|p|p|&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|ppp|mm|vv|mm|ss|mm|DDDDDDDDDD✝✝✝✝DDDDDD|mm|ss|mm|mm|s|v|mm|p|p|&#39; tot:20 sx:10 dx:6</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Membri della famiglia reale:&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+
+<span class="n">dpos_sx</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="n">c_sx</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dpos_sx</span><span class="p">)</span> <span class="o">+</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dpos_sx</span><span class="p">)</span> <span class="o">+</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dpos_sx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;                di sinistra:&#39;</span><span class="p">,</span> <span class="n">c_sx</span><span class="p">)</span>
+
+
+<span class="n">dpos_dx</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+<span class="n">c_dx</span> <span class="o">=</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">dpos_dx</span><span class="p">)</span> <span class="o">+</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">dpos_dx</span><span class="p">)</span> <span class="o">+</span> <span class="n">borgo</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">dpos_dx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;                  di destra:&#39;</span><span class="p">,</span> <span class="n">c_dx</span><span class="p">)</span>
+
+<span class="n">borgo</span> <span class="o">=</span> <span class="n">borgo</span><span class="p">[:</span><span class="n">dpos_sx</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;D&#39;</span><span class="o">*</span><span class="n">c_sx</span> <span class="o">+</span> <span class="s1">&#39;✝&#39;</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="n">c_sx</span><span class="o">-</span><span class="n">c_dx</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;D&#39;</span><span class="o">*</span><span class="n">c_dx</span> <span class="o">+</span> <span class="n">borgo</span><span class="p">[</span><span class="n">dpos_dx</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dopo la lotta fratricida, il nuovo borgo è:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">borgo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Membri della famiglia reale: 24
+                di sinistra: 7
+                  di destra: 11
+
+Dopo la lotta fratricida, il nuovo borgo è:
+
+ppp|mm|vv|mm|v|s|mm|DDDDDDD✝✝✝✝✝✝DDDDDDDDDDD|mm|ss|mm|vvvvv|mm|pppp
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">borgo</span> <span class="o">=</span>     <span class="s1">&#39;ppp|mm|vv|mm|v|s|mm|dddddddddddddddddddddddd|mm|ss|mm|vvvvv|mm|pppp&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|vv|mm|v|s|mm|DDDDDDD✝✝✝✝✝✝DDDDDDDDDDD|mm|ss|mm|vvvvv|mm|pppp&#39;  tot:24 sx:7 dx:11</span>
+<span class="c1">#borgo =    &#39;ppp|mm|ppp|mm|vv|mm|ss|mm|dddddddddddddddddddd|mm|ss|mm|mm|s|v|mm|p|p|&#39;</span>
+<span class="c1">#risultato: &#39;ppp|mm|ppp|mm|vv|mm|ss|mm|DDDDDDDDDD✝✝✝✝DDDDDD|mm|ss|mm|mm|s|v|mm|p|p|&#39; tot:20 sx:10 dx:6</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3515,16 +5128,7 @@ True
 </div>
 <div class="section" id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
-<p>Trovi ulteriori esercizi nel foglio Stringhe 4</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
+<p>Trovi ulteriori esercizi nel foglio <a class="reference external" href="https://it.softpython.org/strings/strings4-sol.html">Stringhe 4</a></p>
 </div>
 </div>
 
@@ -3536,7 +5140,7 @@ True
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="strings4-sol.html" class="btn btn-neutral float-right" title="Stringhe 4 - altri esercizi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="strings4-sol.html" class="btn btn-neutral float-right" title="Stringhe 4 - iterazione e funzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="strings2-sol.html" class="btn btn-neutral float-left" title="Stringhe 2 - operatori" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

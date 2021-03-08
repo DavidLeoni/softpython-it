@@ -340,6 +340,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -347,8 +352,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Prosegui">Prosegui</a></li>
@@ -380,8 +387,13 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -404,16 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -422,14 +424,48 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="strings/strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#invertilet">invertilet</a></li>
@@ -447,6 +483,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lists/lists1-sol.html">Liste 1: introduzione</a><ul>
@@ -2019,6 +2060,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -2026,8 +2072,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Prosegui">Prosegui</a></li>
@@ -2059,8 +2107,13 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings2-sol.html#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings2-sol.html#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -2083,16 +2136,6 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -2101,14 +2144,54 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings/strings3-sol.html#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="strings/strings3-sol.html#Stringardi-I:-Innalza-tutte-le-mura">Stringardi I: Innalza tutte le mura</a></li>
+<li class="toctree-l5"><a class="reference internal" href="strings/strings3-sol.html#Stringardi-II:-Mura-esterne">Stringardi II: Mura esterne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="strings/strings3-sol.html#Stringardi-III:-Potere-al-popolo">Stringardi III: Potere al popolo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="strings/strings3-sol.html#Stringardi-IV:-Lotte-di-potere">Stringardi IV: Lotte di potere</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="strings/strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#invertilet">invertilet</a></li>
@@ -2126,6 +2209,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings/strings4-sol.html#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings/strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lists/lists1-sol.html">Liste 1: introduzione</a><ul>

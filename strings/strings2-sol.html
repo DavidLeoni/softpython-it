@@ -340,6 +340,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -347,8 +352,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Prosegui">Prosegui</a></li>
@@ -380,8 +387,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -404,16 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -422,14 +424,48 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#invertilet">invertilet</a></li>
@@ -447,6 +483,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/lists1-sol.html">Liste 1: introduzione</a><ul>
@@ -2038,14 +2079,13 @@ div.rendered_html tbody tr:hover {
 <td><p>str</p></td>
 <td><p>Concatena due stringhe</p></td>
 </tr>
-<tr class="row-even"><td><p><a href="#id1"><span class="problematic" id="id2">`</span></a>inclusione &lt;#Operatore-in&gt;
-<a href="#id3"><span class="problematic" id="id4">`</span></a>__</p></td>
+<tr class="row-even"><td><p>inclusione</p></td>
 <td><p>str <code class="docutils literal notranslate"><span class="pre">in</span></code> str</p></td>
 <td><p>bool</p></td>
 <td><p>Controlla se la stringa è presente in
 un’altra stringa</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id5"><span class="problematic" id="id6">`indice &lt;#Leggere-caratteri
+<tr class="row-odd"><td><p><a href="#id1"><span class="problematic" id="id2">`indice &lt;#Leggere-caratteri
 &gt;`__</span></a></p></td>
 <td><p>str<code class="docutils literal notranslate"><span class="pre">[</span></code>int<code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
 <td><p>str</p></td>
@@ -2567,10 +2607,10 @@ shaiy!
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmeda084e2-51d3-4d65-980a-2ed22aef8eda" type="application/json" >
-    {"code": " \nx = \"ciao\"\ny = x\nx = y[0] + y[1] + 'b' + y[3]", "trace": [{"globals": {}, "stdout": "", "func_name": "<module>", "ordered_globals": [], "stack_to_render": [], "line": 2, "event": "step_line", "heap": {}}, {"globals": {"x": "ciao"}, "stdout": "", "func_name": "<module>", "ordered_globals": ["x"], "stack_to_render": [], "line": 3, "event": "step_line", "heap": {}}, {"globals": {"x": "ciao", "y": "ciao"}, "stdout": "", "func_name": "<module>", "ordered_globals": ["x", "y"], "stack_to_render": [], "line": 4, "event": "step_line", "heap": {}}, {"globals": {"x": "cibo", "y": "ciao"}, "stdout": "", "func_name": "<module>", "ordered_globals": ["x", "y"], "stack_to_render": [], "line": 4, "event": "return", "heap": {}}]}
+<script id="json-jm94135a86-8288-420e-a6a8-9ccb41889847" type="application/json" >
+    {"code": " \nx = \"ciao\"\ny = x\nx = y[0] + y[1] + 'b' + y[3]", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "ciao"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"x": "cibo", "y": "ciao"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jmeda084e2-51d3-4d65-980a-2ed22aef8eda" class="pytutorVisualizer"> </div>
+<div id="jm94135a86-8288-420e-a6a8-9ccb41889847" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2590,12 +2630,12 @@ shaiy!
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmeda084e2-51d3-4d65-980a-2ed22aef8eda').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm94135a86-8288-420e-a6a8-9ccb41889847').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmeda084e2-51d3-4d65-980a-2ed22aef8eda',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm94135a86-8288-420e-a6a8-9ccb41889847',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3591,6 +3631,11 @@ True
 </div>
 </div>
 </div>
+<div class="section" id="Comparazioni">
+<h2>Comparazioni<a class="headerlink" href="#Comparazioni" title="Permalink to this headline">¶</a></h2>
+<p>Python ci offre la possibilità di eseguire una <em>comparazione lessicografica</em> tra stringhe, come faremmo scrivendo nomi in una agenda di indirizzi. Sebbene ordinare nomi sia qualcosa di intuitivo che facciamo spesso, dobbiamo prestare attenzione ai casi speciali.</p>
+<p>Per prima cosa, vediamo come determinare quando due stringhe sono uguali.</p>
+</div>
 <div class="section" id="Operatori-uguaglianza">
 <h2>Operatori uguaglianza<a class="headerlink" href="#Operatori-uguaglianza" title="Permalink to this headline">¶</a></h2>
 <p>Per verificare se due stringhe sono uguali, possiamo usare l’operatore <code class="docutils literal notranslate"><span class="pre">==</span></code> che come risultato produce un booleano <code class="docutils literal notranslate"><span class="pre">True</span></code> oppure <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -3878,16 +3923,15 @@ True
 </pre></div></div>
 </div>
 </div>
-</div>
-<div class="section" id="Operatore-di-replicazione">
-<h2>Operatore di replicazione<a class="headerlink" href="#Operatore-di-replicazione" title="Permalink to this headline">¶</a></h2>
-<p>Con l’operatore <code class="docutils literal notranslate"><span class="pre">*</span></code> puoi replicare una stringa n volte, per esempio:</p>
+<div class="section" id="Comparare-caratteri">
+<h3>Comparare caratteri<a class="headerlink" href="#Comparare-caratteri" title="Permalink to this headline">¶</a></h3>
+<p>I caratteri hanno un ordine che possiamo sfruttare. Vediamo un esempio:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="s1">&#39;birra&#39;</span> <span class="o">*</span> <span class="mi">4</span>
+<span></span><span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;g&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -3897,12 +3941,725 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>un altro:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;m&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;c&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>Sembrano comparazioni ragionevoli! Ma cosa dire di queste (nota la <code class="docutils literal notranslate"><span class="pre">Z</span></code> maiuscola)?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;Z&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Forse questa non sembra così ovvia. E se proviamo ad essere creativi e compariamo con simboli come parentesi quadre o cuori <a class="reference external" href="https://it.softpython.org/strings/strings1-sol.html#Caratteri-Unicode">Unicode</a> ??</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;a&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;♥&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Per determinare come gestire questi casi speciali, dobbiamo ricordare che la codifica <a class="reference external" href="https://it.softpython.org/strings/strings1-sol.html#Caratteri-ASCII">ASCII</a> assegna un numero di posizione ad ogni carattere, definendo di fatto <em>un ordine</em> tra tutti i suoi caratteri.</p>
+<p>Se vogliamo sapere il numero corrispondente di un carattere, possiamo usare la funzione <code class="docutils literal notranslate"><span class="pre">ord</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+97
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+98
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+122
+</pre></div></div>
+</div>
+<p>Se vogliamo andare nell’altro senso, dato un numero di posizione possiamo ottenere il carattere corrispondente con la funzione <code class="docutils literal notranslate"><span class="pre">chr</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;a&#39;
+</pre></div></div>
+</div>
+<p>I caratteri maiuscoli hanno posizioni differenti:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+65
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+90
+</pre></div></div>
+</div>
+<p><strong>ESERCIZIO</strong>: Usando le funzioni sopra, prova a trovare quali caratteri sono <em>tra</em> la <code class="docutils literal notranslate"><span class="pre">Z</span></code> maiuscola e la <code class="docutils literal notranslate"><span class="pre">a</span></code> minuscola.</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+<span class="c1">#print(chr(91),chr(92), chr(93),chr(94), chr(95),chr(96))</span>
+</pre></div>
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<p>L’ordine ci permette di eseguire <em>comparazioni lessicografiche</em> tra caratteri singoli:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;b&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;g&#39;</span> <span class="o">&gt;=</span> <span class="s1">&#39;m&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p><strong>ESERCIZIO</strong>: Scrivi del codice che:</p>
+<ol class="arabic simple">
+<li><p>stampa i valori <code class="docutils literal notranslate"><span class="pre">ord</span></code> di <code class="docutils literal notranslate"><span class="pre">'A'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Z'</span></code> e un dato carattere <code class="docutils literal notranslate"><span class="pre">car</span></code></p></li>
+<li><p>stampa <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">car</span></code> è maiuscolo, e <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p></li>
+</ol>
+<ul class="simple">
+<li><p>il tuo codice funzionerebbe anche con caratteri accentati capitalizzati come <code class="docutils literal notranslate"><span class="pre">'Á'</span></code>?</p></li>
+<li><p><strong>NOTA</strong>: gli insiemi di caratteri possibili sono parecchi, perciò la soluzione appropriata sarebbe usare il metodo <a class="reference external" href="https://it.softpython.org/strings/strings3-sol.html#Metodi-isupper-e-islower">isupper</a> che vedremo nel prossimo tutorial.</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">car</span> <span class="o">=</span> <span class="s1">&#39;G&#39;</span>   <span class="c1"># True</span>
+<span class="c1">#car = &#39;g&#39;  # False</span>
+
+<span class="c1">#car = &#39;Á&#39;  # True ?? Nota l&#39;accento!</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A:&#39;</span><span class="p">,</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="s1">&#39; Z:&#39;</span><span class="p">,</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="o">+</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="nb">ord</span><span class="p">(</span><span class="n">car</span><span class="p">))</span>
+<span class="nb">ord</span><span class="p">(</span><span class="n">car</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">ord</span><span class="p">(</span><span class="n">car</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>  <span class="c1">#  only checks simple English alphabet cases</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A: 65  Z: 90
+G: 71
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">car</span> <span class="o">=</span> <span class="s1">&#39;G&#39;</span>   <span class="c1"># True</span>
+<span class="c1">#car = &#39;g&#39;  # False</span>
+
+<span class="c1">#car = &#39;Á&#39;  # True ?? Nota l&#39;accento!</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A: 65  Z: 90
+G: 71
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>Inoltre, dato che l’insieme dei caratteri Unicode <em>include</em> l’ASCII, l’ordine dei caratteri ASCII può essere usato per compararli in sicurezza con i caratteri unicode, perciò comparare i caratteri o i loro <code class="docutils literal notranslate"><span class="pre">ord</span></code> dovrebbe sempre essere equivalente:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>   <span class="c1"># ascii</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+97
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;♥&#39;</span><span class="p">)</span>   <span class="c1"># unicode</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+9829
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;a&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;♥&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;♥&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<p>Python offre anche comparazioni lessigrafiche su stringhe con più di un carattere. Per capire quale dovrebbe essere il risultato atteso, dobbiamo però distinguere diversi casi:</p>
+<ul class="simple">
+<li><p>stringhe di lunghezza uguale / differente</p></li>
+<li><p>stringhe con capitalizzazione uguale / diversa</p></li>
+</ul>
+<p>Cominciamo con stringhe della stessa lunghezza:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;mario&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;luigi&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;mario&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;wario&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Mario&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;Wario&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;Wario&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;mario&#39;</span>    <span class="c1"># il maiuscolo è *prima* del minuscolo in ASCII</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Comparare-lunghezze-diverse">
+<h3>Comparare lunghezze diverse<a class="headerlink" href="#Comparare-lunghezze-diverse" title="Permalink to this headline">¶</a></h3>
+<p>Stringhe corte che sono incluse in altre più lunghe appaiono prima nell’ordinamento:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;troll&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;trolley&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<p>Se condividono solo un prefisso con una stringa più lunga, Python compara i caratteri dopo il prefisso comune, in questo caso rileva che <code class="docutils literal notranslate"><span class="pre">e</span></code> precede la <code class="docutils literal notranslate"><span class="pre">s</span></code> corrispondente:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;trolley&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;trolls&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---Intervalli-di-caratteri">
+<h3>Esercizio - Intervalli di caratteri<a class="headerlink" href="#Esercizio---Intervalli-di-caratteri" title="Permalink to this headline">¶</a></h3>
+<p>Ti vengono fornite due coppie di stringhe <code class="docutils literal notranslate"><span class="pre">i1</span></code> e <code class="docutils literal notranslate"><span class="pre">i2</span></code> da due caratteri ciascuna.</p>
+<p>Supponi che rappresentino intervalli di caratteri: il primo carattere di un intervallo ha sempre un numero d’ordine inferiore o uguale al secondo.</p>
+<p>Ci sono cinque possibilità: il primo intervallo ‘è contenuto in’, oppure ‘contiene’, oppure ‘si sovrappone parzialmente a’, oppure ‘è prima’ o ‘è dopo’ il secondo intervallo. Scrivi del codice che dice quale relazione di contenimento abbiamo.</p>
+<p>Esempio 1 - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span> <span class="o">=</span> <span class="s1">&#39;gm&#39;</span>
+<span class="n">i2</span> <span class="o">=</span> <span class="s1">&#39;cp&#39;</span>
+</pre></div>
+</div>
+<p>Il tuo programma dovrebbe stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>gm è contenuto in cp
+</pre></div>
+</div>
+<p>Per vedere perchè, puoi guardare a questa piccola rappresentazione (<strong>non</strong> è necessario stamparla!):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  c   g     m  p
+abcdefghijklmnopqrstuvwxyz
+</pre></div>
+</div>
+<p>Esempio 2 - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span> <span class="o">=</span> <span class="s1">&#39;mr&#39;</span>
+<span class="n">i2</span> <span class="o">=</span> <span class="s1">&#39;pt&#39;</span>
+</pre></div>
+</div>
+<p>Il tuo programma dovrebbe stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mr si sovrappone parzialmente a pt
+</pre></div>
+</div>
+<p>perchè <code class="docutils literal notranslate"><span class="pre">mr</span></code> non è contenuto nè contiene ne completamente precede nè completamente segue <code class="docutils literal notranslate"><span class="pre">pt</span></code> (<strong>non</strong> è necessario stampare questo:)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>            m  p r t
+abcdefghijklmnopqrstuvwxyz
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>se l’intervallo <code class="docutils literal notranslate"><span class="pre">i1</span></code> coincide con <code class="docutils literal notranslate"><span class="pre">i2</span></code>, è considerato come contenente <code class="docutils literal notranslate"><span class="pre">i2</span></code></p></li>
+<li><p><strong>NON</strong> usare cicli nè <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p><strong>SUGGERIMENTO</strong>: per soddisfare i vincoli qui sopra, pensa all’<a class="reference external" href="https://it.softpython.org/basics/basics2-bools-sol.html#Ordine-di-valutazione">ordine di valutazione dei booleani</a>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;g&#39;</span> <span class="o">&gt;=</span> <span class="s1">&#39;c&#39;</span> <span class="ow">and</span> <span class="s1">&#39;m&#39;</span> <span class="o">&lt;=</span> <span class="s1">&#39;p&#39;</span> <span class="ow">and</span> <span class="s1">&#39;è contenuto in&#39;</span>
+</pre></div>
+</div>
+<p>produce come risultato la stringa <code class="docutils literal notranslate"><span class="pre">'è</span> <span class="pre">contenuto</span> <span class="pre">in'</span></code></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span> <span class="o">=</span> <span class="s1">&#39;gm&#39;</span><span class="p">,</span><span class="s1">&#39;cp&#39;</span>   <span class="c1"># gm è contenuto in cp</span>
+<span class="c1">#i1,i2 = &#39;dh&#39;,&#39;dh&#39;  # gm è contenuto in cp  #(caso speciale)</span>
+<span class="c1">#i1,i2 = &#39;bw&#39;,&#39;dq&#39;  # bw contiene dq</span>
+<span class="c1">#i1,i2 = &#39;ac&#39;,&#39;bd&#39;  # ac si sovrappone parzialmente a bd</span>
+<span class="c1">#i1,i2 = &#39;mr&#39;,&#39;pt&#39;  # mr si sovrappone parzialmente  pt</span>
+<span class="c1">#i1,i2 = &#39;fm&#39;,&#39;su&#39;  # fm è prima di su</span>
+<span class="c1">#i1,i2 = &#39;xz&#39;,&#39;pq&#39;  # xz è dopo pq</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;è contenuto in&#39;</span><span class="p">)</span>  \
+      <span class="ow">or</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">i2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span><span class="n">i2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;contiene&#39;</span><span class="p">)</span>         \
+      <span class="ow">or</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;si sovrappone parzialmente a&#39;</span><span class="p">)</span> \
+      <span class="ow">or</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;si sovrappone parzialmente a&#39;</span><span class="p">)</span>  \
+      <span class="ow">or</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">i2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;è prima di&#39;</span><span class="p">)</span>   \
+      <span class="ow">or</span> <span class="p">(</span><span class="n">i1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">i2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;è dopo&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">i2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+gm è contenuto in cp
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span> <span class="o">=</span> <span class="s1">&#39;gm&#39;</span><span class="p">,</span><span class="s1">&#39;cp&#39;</span>   <span class="c1"># gm è contenuto in cp</span>
+<span class="c1">#i1,i2 = &#39;dh&#39;,&#39;dh&#39;  # gm è contenuto in cp  #(caso speciale)</span>
+<span class="c1">#i1,i2 = &#39;bw&#39;,&#39;dq&#39;  # bw contiene dq</span>
+<span class="c1">#i1,i2 = &#39;ac&#39;,&#39;bd&#39;  # ac si sovrappone parzialmente a bd</span>
+<span class="c1">#i1,i2 = &#39;mr&#39;,&#39;pt&#39;  # mr si sovrappone parzialmente  pt</span>
+<span class="c1">#i1,i2 = &#39;fm&#39;,&#39;su&#39;  # fm è prima di su</span>
+<span class="c1">#i1,i2 = &#39;xz&#39;,&#39;pq&#39;  # xz è dopo pq</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+gm è contenuto in cp
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---La-Biblioteca-di-Encodicus">
+<h3>Esercizio - La Biblioteca di Encodicus<a class="headerlink" href="#Esercizio---La-Biblioteca-di-Encodicus" title="Permalink to this headline">¶</a></h3>
+<p>Nello studio dell’algoritmista Encodicus è presente uno scaffale diviso in 26 sezioni ordinate alfabeticamente, ove custodisce gelosamente i suoi preziosi testi alchemici. Ciascuna sezione può contenere al massimo 9 libri. Un giorno, Encodicus decide di acquistare un nuovo tomo da aggiungere alla sua collezione: scrivi del codice che data una stringa rappresentante le <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> con i conteggi dei libri e un nuovo <code class="docutils literal notranslate"><span class="pre">libro</span></code>, trovi la giusta posizione del libro e aggiorni <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> di
+conseguenza</p>
+<ul class="simple">
+<li><p>assumi che nessuna sezione contenga <code class="docutils literal notranslate"><span class="pre">9</span></code> libri</p></li>
+<li><p>assumi che i nomi dei libri siano sempre in minuscolo</p></li>
+<li><p><strong>NON usare cicli,</strong> <code class="docutils literal notranslate"><span class="pre">if</span></code><strong>, o metodi delle stringhe</strong></p></li>
+<li><p><strong>NON</strong> scrivere manualmente stringhe con 26 caratteri, o peggio creare 26 variabili !!!</p></li>
+<li><p><strong>USA</strong> <code class="docutils literal notranslate"><span class="pre">ord</span></code> per trovare la posizione della sezione</p></li>
+</ul>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scaffale</span> <span class="o">=</span> <span class="s2">&quot;|a 7|b 5|c 5|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|&quot;</span>
+<span class="n">libro</span> <span class="o">=</span> <span class="s2">&quot;ciclare all&#39;aperto&quot;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> deve risultare aggiornato con <code class="docutils literal notranslate"><span class="pre">|c</span> <span class="pre">6|</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">scaffale</span><span class="p">)</span>
+<span class="go">|a 7|b 5|c 6|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">libro</span> <span class="o">=</span> <span class="s2">&quot;ciclare all&#39;aperto&quot;</span>
+<span class="c1">#libro = &quot;algoritmi occulti&quot;</span>
+<span class="c1">#libro = &quot;teoria dello zippo&quot;</span>
+<span class="c1">#libro = &quot;zoologia dello sviluppatore software&quot;</span>
+
+<span class="n">scaffale</span> <span class="o">=</span> <span class="s2">&quot;|a 7|b 5|c 5|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">libro</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">scaffale</span><span class="p">[(</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="mi">3</span><span class="p">:((</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">scaffale</span> <span class="o">=</span> <span class="n">scaffale</span><span class="p">[:</span><span class="n">i</span><span class="o">*</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="o">+</span> <span class="n">scaffale</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">scaffale</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+|a 7|b 5|c 6|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">libro</span> <span class="o">=</span> <span class="s2">&quot;ciclare all&#39;aperto&quot;</span>
+<span class="c1">#libro = &quot;algoritmi occulti&quot;</span>
+<span class="c1">#libro = &quot;teoria dello zippo&quot;</span>
+<span class="c1">#libro = &quot;zoologia dello sviluppatore software&quot;</span>
+
+<span class="n">scaffale</span> <span class="o">=</span> <span class="s2">&quot;|a 7|b 5|c 5|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+|a 7|b 5|c 6|d 8|e 2|f 0|g 4|h 8|i 7|j 1|k 6|l 0|m 5|n 0|o 3|p 7|q 2|r 2|s 4|t 6|u 1|v 3|w 3|x 5|y 7|z 6|
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Operatore-di-replicazione">
+<h2>Operatore di replicazione<a class="headerlink" href="#Operatore-di-replicazione" title="Permalink to this headline">¶</a></h2>
+<p>Con l’operatore <code class="docutils literal notranslate"><span class="pre">*</span></code> puoi replicare una stringa n volte, per esempio:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;birra&#39;</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
 &#39;birrabirrabirrabirra&#39;
 </pre></div></div>
 </div>
-<p>Nota come venga creata una NUOVA stringa, l’originale non viene intaccata</p>
+<p>Nota come venga creata una NUOVA stringa, l’originale non viene intaccata:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3911,7 +4668,7 @@ True
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3928,7 +4685,7 @@ birrabirrabirrabirra
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3937,7 +4694,7 @@ birrabirrabirrabirra
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3963,7 +4720,7 @@ birrabirrabirrabirra
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3975,7 +4732,7 @@ birrabirrabirrabirra
 
 <span class="c1"># scrivi qui</span>
 
-<span class="nb">print</span><span class="p">((</span><span class="n">sillaba</span> <span class="o">+</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frase</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">sillaba</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frase</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
 </pre></div>
 </div>
 </div>
@@ -3988,7 +4745,7 @@ za za za za za za za
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>

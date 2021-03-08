@@ -19,7 +19,7 @@
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Stringhe 4 - altri esercizi &mdash; SoftPython</title>
+  <title>Stringhe 4 - iterazione e funzioni &mdash; SoftPython</title>
   
 
   
@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="../_static/css/softpython-theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Liste 1 - Introduzione" href="../lists/lists1-sol.html" />
+    <link rel="next" title="Stringhe 5 - Challenges" href="strings5-chal.html" />
     <link rel="prev" title="Stringhe 3 - metodi" href="strings3-sol.html" /> 
 </head>
 
@@ -340,6 +340,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -347,8 +352,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings1-sol.html#Prosegui">Prosegui</a></li>
@@ -380,8 +387,13 @@
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -404,16 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -422,14 +424,48 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#invertilet">invertilet</a></li>
@@ -447,6 +483,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/lists1-sol.html">Liste 1: introduzione</a><ul>
@@ -1746,7 +1787,7 @@
     
         <li><a href="../toc.html">A - Fondamenti</a> &raquo;</li>
     
-    <li>Stringhe 4 - altri esercizi</li>
+    <li>Stringhe 4 - iterazione e funzioni</li>
     -->
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -2007,21 +2048,11 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Stringhe-4---altri-esercizi">
-<h1>Stringhe 4 - altri esercizi<a class="headerlink" href="#Stringhe-4---altri-esercizi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Stringhe-4---iterazione-e-funzioni">
+<h1>Stringhe 4 - iterazione e funzioni<a class="headerlink" href="#Stringhe-4---iterazione-e-funzioni" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Scarica-zip-esercizi">
 <h2><a class="reference external" href="../_static/generated/strings.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/strings">Naviga file online</a></p>
-</div>
-<div class="section" id="Esercizi-con-le-funzioni">
-<h2>Esercizi con le funzioni<a class="headerlink" href="#Esercizi-con-le-funzioni" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Gli esercizi seguenti richiedono di conoscere:</strong></p>
-<ul><li><p>Tutti gli esercizi sulle stringhe precedenti</p>
-</li><li><p><a class="reference external" href="https://it.softpython.org/control-flow/control-flow-sol.html">Controllo di flusso</a></p>
-</li><li><p><a class="reference external" href="https://it.softpython.org/functions/functions-sol.html">Funzioni</a></p>
-</li></ul><p><strong>Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare in seguito</strong></p>
-</div>
 <div class="section" id="Che-fare">
 <h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -2051,6 +2082,16 @@ div.rendered_html tbody tr:hover {
 <li><p>Per eseguire il codice Python dentro una cella di Jupyter E creare una nuova cella subito dopo, premi <code class="docutils literal notranslate"><span class="pre">Alt+Invio</span></code></p></li>
 <li><p>Se per caso il Notebook sembra inchiodato, prova a selezionare <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span></code></p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="Esercizi-con-le-funzioni">
+<h2>Esercizi con le funzioni<a class="headerlink" href="#Esercizi-con-le-funzioni" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Gli esercizi seguenti richiedono di conoscere:</strong></p>
+<ul><li><p>Tutti gli esercizi sulle stringhe precedenti</p>
+</li><li><p><a class="reference external" href="https://it.softpython.org/#control-flow">Controllo di flusso</a></p>
+</li><li><p><a class="reference external" href="https://it.softpython.org/functions/functions-sol.html">Funzioni</a></p>
+</li></ul><p><strong>Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare in seguito</strong></p>
 </div>
 <div class="section" id="lung">
 <h3>lung<a class="headerlink" href="#lung" title="Permalink to this headline">¶</a></h3>
@@ -2119,7 +2160,7 @@ div.rendered_html tbody tr:hover {
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2131,7 +2172,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2313,12 +2354,12 @@ div.rendered_html tbody tr:hover {
 <h2>Esercizi con eccezioni e test<a class="headerlink" href="#Esercizi-con-eccezioni-e-test" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Gli esercizi seguenti richiedono di conoscere:</strong></p>
-<ul><li><p><a class="reference external" href="https://it.softpython.org/control-flow/control-flow-sol.html">Controllo di flusso</a></p>
+<ul><li><p><a class="reference external" href="https://it.softpython.org/#control-flow">Controllo di flusso</a></p>
 </li><li><p><a class="reference external" href="https://it.softpython.org/functions/functions-sol.html">Funzioni</a></p>
 </li><li><p><strong>e anche</strong>: <a class="reference external" href="https://it.softpython.org/errors-and-testing/errors-and-testing-sol.html">Eccezioni e test con assert</a></p>
   </ul>
 
-**Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare in seguito**</div>
+Se sei alle prime armi con la programmazione, ti conviene saltarli e ripassare in seguito</div>
 <div class="section" id="halet">
 <h3>halet<a class="headerlink" href="#halet" title="Permalink to this headline">¶</a></h3>
 <p>✪ RITORNA <code class="docutils literal notranslate"><span class="pre">True</span></code> se parola contiene lettera, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p>
@@ -2791,7 +2832,7 @@ div.rendered_html tbody tr:hover {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../lists/lists1-sol.html" class="btn btn-neutral float-right" title="Liste 1 - Introduzione" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="strings5-chal.html" class="btn btn-neutral float-right" title="Stringhe 5 - Challenges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="strings3-sol.html" class="btn btn-neutral float-left" title="Stringhe 3 - metodi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

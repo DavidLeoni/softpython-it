@@ -340,6 +340,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#Esempio---tabulazione">Esempio - tabulazione</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#Encodings">Encodings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Caratteri-ASCII">Caratteri ASCII</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Caratteri-Unicode">Caratteri Unicode</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#Le-stringhe-sono-immutabili">Le stringhe sono immutabili</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Riassegnare-variabili">Riassegnare variabili</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Riassegnare-una-variabile-a-sè-stessa">Riassegnare una variabile a sè stessa</a></li>
@@ -347,8 +352,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Stringhe-e-numeri">Stringhe e numeri</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Conversioni---da-stringa-a-numero">Conversioni - da stringa a numero</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---stampa-lunghezza">Esercizio - stampa lunghezza</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Formattare-stringhe">Formattare stringhe</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
@@ -380,8 +387,13 @@
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Comparazioni">Comparazioni</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatori-uguaglianza">Operatori uguaglianza</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---rockettaro">Esercizio - rockettaro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-caratteri">Comparare caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Comparare-lunghezze-diverse">Comparare lunghezze diverse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---Intervalli-di-caratteri">Esercizio - Intervalli di caratteri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings2-sol.html#Esercizio---La-Biblioteca-di-Encodicus">Esercizio - La Biblioteca di Encodicus</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="strings2-sol.html#Operatore-di-replicazione">Operatore di replicazione</a><ul>
@@ -404,16 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Vostra-Eccellenza">Esercizio - Vostra Eccellenza</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---sostituisci">Esercizio - sostituisci</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-startswith">Metodo startswith</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---per-Giove">Esercizio - per Giove</a></li>
 </ul>
@@ -422,14 +424,48 @@
 <li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Snobbonis">Esercizio - Snobbonis</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isalpha">Metodo isalpha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-isdigit">Metodo isdigit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodi-di-ricerca-e-trasformazione">Metodi di ricerca e trasformazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-strip">Metodo strip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Specificare-i-caratteri-da-rimuovere">Specificare i caratteri da rimuovere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-lstrip">Metodo lstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-rstrip">Metodo rstrip</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---hatespace">Esercizio - hatespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Bad-to-the-bone">Esercizio - Bad to the bone</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-count">Metodo count</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-count">Non abusare count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---denaro-astrale">Esercizio - denaro astrale</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-find">Metodo find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Metodo-rfind">Metodo rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-find">Non abusare find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-porto-di-Monkey-Island">Esercizio - Il porto di Monkey Island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---banane">Esercizio - banane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Metodo-replace">Metodo replace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Non-abusare-replace">Non abusare replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Non-aprite-quella-porta">Esercizio - Non aprite quella porta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strings3-sol.html#Esercizio---Il-Regno-degli-Stringardi">Esercizio - Il Regno degli Stringardi</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Altri-esercizi">Altri esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="strings4-sol.html">Stringhe 4: altri esercizi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#Che-fare">Che fare</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="strings4-sol.html#Esercizi-con-le-funzioni">Esercizi con le funzioni</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#lung">lung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#contin">contin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#invertilet">invertilet</a></li>
@@ -447,6 +483,11 @@
 <li class="toctree-l4"><a class="reference internal" href="strings4-sol.html#palindroma">palindroma</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="strings5-chal.html">Stringhe 5: challenges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="strings5-chal.html#Sfida:-Censura-al-tiramisù">Sfida: Censura al tiramisù</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lists/lists1-sol.html">Liste 1: introduzione</a><ul>
@@ -2141,7 +2182,7 @@ su più righe
 </div>
 <p><strong>Tre apici, su più linee</strong></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2169,7 +2210,7 @@ su più righe
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 la mia quarta stringa,
-in triple doppie-virgolette
+in tripli apici
 può pure essere messa
 
 su più linee
@@ -3017,17 +3058,55 @@ speciale da non essere nemmeno correttamente visualizzato, in tali situazioni si
 </tbody>
 </table>
 <p><strong>ESERCIZIO</strong>: Prova a cercare in google <em>Unicode heart</em> e prova a far stampare a Python un cuoricino , sia copia-incollando direttamente il carattere che usando la notazione <code class="docutils literal notranslate"><span class="pre">\uxxxx</span></code></p>
+</div>
+</div>
+<div class="section" id="Encodings">
+<h2>Encodings<a class="headerlink" href="#Encodings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Caratteri-ASCII">
+<h3>Caratteri ASCII<a class="headerlink" href="#Caratteri-ASCII" title="Permalink to this headline">¶</a></h3>
+<p>Quando usi le stringhe nei tuoi programmi quotidiani, tipicamente non hai bisogno di pensare molto a come i caratteri sono fisicamente rappresentati come bit in memoria, ma a volte è importante. La rappresentazione è chiamata <em>encoding</em> e va tenuta in considerazione in particolare quando leggi dati da sorgenti esterne come file e siti web.</p>
+<p>L’encoding più usato e famoso è lo <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> (American Standard Code for Information Interchange), che offre 127 caselle fatte da caratteri stampabili dall’alfabeto inglese (<code class="docutils literal notranslate"><span class="pre">a</span></code>-<code class="docutils literal notranslate"><span class="pre">z</span></code>, <code class="docutils literal notranslate"><span class="pre">A</span></code>-<code class="docutils literal notranslate"><span class="pre">Z</span></code>, punteggiatura come <code class="docutils literal notranslate"><span class="pre">.;,!</span></code> e caratteri come <code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> …) e sequenze di controllo (come <code class="docutils literal notranslate"><span class="pre">\t</span></code>, <code class="docutils literal notranslate"><span class="pre">\n</span></code>)</p>
+<ul class="simple">
+<li><p>Vedi <a class="reference external" href="https://it.wikipedia.org/wiki/ASCII#Stampabili">caratteri stampabili</a> (Wikipedia)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C0_and_C1_control_codes#Basic_ASCII_control_codes">Codici di controllo ASCII</a> (Wikipedia)</p></li>
+</ul>
+<p>Visto che la tabella originale ASCII manca del supporto per linguaggi non-inglesi (per esempio, non ha le lettere accentate italiane come <code class="docutils literal notranslate"><span class="pre">è</span></code>,<code class="docutils literal notranslate"><span class="pre">à</span></code>, …), parecchie estensioni sono state sviluppate per supportare altri linguaggi, per esempio vedere la pagina <a class="reference external" href="https://it.wikipedia.org/wiki/ASCII_esteso">Extended ASCII</a> su Wikipedia.</p>
+</div>
+<div class="section" id="Caratteri-Unicode">
+<h3>Caratteri Unicode<a class="headerlink" href="#Caratteri-Unicode" title="Permalink to this headline">¶</a></h3>
+<p>Quando abbiamo bisogno di caratteri particolari come ✪ che non sono disponibili sulla tastiera, possiamo guardare i caratteri Unicode. <a class="reference external" href="http://www.fileformat.info/info/unicode/char/a.htm">Ce ne sono parecchi</a>, e possiamo spesso usarli in Python 3 semplicemente copia-incollandoli. Per esempio, se vai a <a class="reference external" href="https://www.fileformat.info/info/unicode/char/272a/index.htm">questa pagina</a> puoi copia-incollare il carattere ✪. In altri casi potrebbe essere così speciale che non può nemmeno essere
+correttamente visualizzato, perciò in questi casi puoi usare una sequenza più complessa nel formato <code class="docutils literal notranslate"><span class="pre">\uxxxx</span></code> come questo:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Descrizione</p></th>
+<th class="head"><p>Sequenza di escape</p></th>
+<th class="head"><p>Risultato stampato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Esempio stella in un cerchio nel formato <code class="docutils literal notranslate"><span class="pre">\uxxxx</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\u272A</span></code></p></td>
+<td><p>✪</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ESERCIZIO</strong>: Cerca su Google <em>Unicode heart</em> e prova a stampare un cuore in Python, sia copia-incollando direttamente il carattere che usando la notazione <code class="docutils literal notranslate"><span class="pre">\uxxxx</span></code></p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># scrivi qui</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I ♥ Python, con copia-e-incolla&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I </span><span class="se">\u2665</span><span class="s2"> Python, anche nel formato </span><span class="se">\\</span><span class="s2">uxxxx&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I ♥ Python, con copia e incolla&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I </span><span class="se">\u2665</span><span class="s2"> Python, anche in formato </span><span class="se">\\</span><span class="s2">uxxxx&quot;</span><span class="p">)</span>
 
 </pre></div>
 </div>
@@ -3037,12 +3116,12 @@ speciale da non essere nemmeno correttamente visualizzato, in tali situazioni si
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-I ♥ Python, con copia-e-incolla
-I ♥ Python, anche nel formato \uxxxx
+I ♥ Python, con copia e incolla
+I ♥ Python, anche in formato \uxxxx
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3057,10 +3136,15 @@ I ♥ Python, anche nel formato \uxxxx
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-I ♥ Python, con copia-e-incolla
-I ♥ Python, anche nel formato \uxxxx
+I ♥ Python, con copia e incolla
+I ♥ Python, anche in formato \uxxxx
 </pre></div></div>
 </div>
+<p><strong>Riferimenti Unicode</strong>: abbiamo solo menzionato Unicode ma può essere un argomento complesso, se avrai mai a che fare con insiemi di caratteri giapponesi o <em>encodings</em> eterogenei trovi qua un paio di riferimenti che dovresti leggere:</p>
+<ul class="simple">
+<li><p>prima parte sull’encoding Unicode <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/stringhe.html">dal capitolo Stringhe nel libro Dive into Python 3</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/howto/unicode.html">Documentazione unicode di Python 3</a></p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="Le-stringhe-sono-immutabili">
@@ -3171,16 +3255,19 @@ ciaomondo
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm91dd9044-2d5c-4867-b8b7-d18c37db10c5" type="application/json" >
+<script id="json-jm6c2aae36-838e-4678-86f1-4c0464171be5" type="application/json" >
     {"code": " \nx = 'ciao'\ny = x + 'mondo'\n\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "ciaomondo"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "ciaomondo"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "ciaomondo"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nciaomondo\n"}]}
 </script>
-<div id="jm91dd9044-2d5c-4867-b8b7-d18c37db10c5" class="pytutorVisualizer"> </div>
+<div id="jm6c2aae36-838e-4678-86f1-4c0464171be5" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -3191,12 +3278,12 @@ ciaomondo
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm91dd9044-2d5c-4867-b8b7-d18c37db10c5').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm6c2aae36-838e-4678-86f1-4c0464171be5').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm91dd9044-2d5c-4867-b8b7-d18c37db10c5',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm6c2aae36-838e-4678-86f1-4c0464171be5',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3278,7 +3365,7 @@ ciaomondo
 &#39;mondo&#39;
 </pre></div></div>
 </div>
-<p>Se una stringa che è stata creata non risulta assegnata a nessuna variabile, Python si occuperà automaticamente di eliminarla dalla memoria. Nel caso qui sopra, la stringa ‘ciao’ in sè non è mai cambiata, semplicemente a un certo punto si è ritrovata non più assegnata ad alcuna variabile, e perciò Python ha provveduto ad eliminarla dalla memoria. Guarda cosa succede in Python Tutor:</p>
+<p>Se una stringa che è stata creata non risulta assegnata a nessuna variabile, Python si occuperà automaticamente di eliminarla dalla memoria. Nel caso qui sopra, la stringa <code class="docutils literal notranslate"><span class="pre">'ciao'</span></code> in sè non è mai cambiata, semplicemente a un certo punto si è ritrovata non più assegnata ad alcuna variabile, e perciò Python ha provveduto ad eliminarla dalla memoria. Guarda cosa succede in Python Tutor:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
@@ -3299,16 +3386,19 @@ ciaomondo
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm955f3f10-f1cb-4a14-929c-3b5b5c0dbc94" type="application/json" >
+<script id="json-jm5ff228fa-6da1-430e-a6d4-4918130ddea4" type="application/json" >
     {"code": " \nx = 'ciao'\ny = 'mondo'\nx = y", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "mondo"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"x": "mondo", "y": "mondo"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jm955f3f10-f1cb-4a14-929c-3b5b5c0dbc94" class="pytutorVisualizer"> </div>
+<div id="jm5ff228fa-6da1-430e-a6d4-4918130ddea4" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -3319,12 +3409,12 @@ ciaomondo
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm955f3f10-f1cb-4a14-929c-3b5b5c0dbc94').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm5ff228fa-6da1-430e-a6d4-4918130ddea4').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm955f3f10-f1cb-4a14-929c-3b5b5c0dbc94',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm5ff228fa-6da1-430e-a6d4-4918130ddea4',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3427,16 +3517,19 @@ ciaomondo
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm4f67a63e-4884-46fd-8ba0-6983d2daa83c" type="application/json" >
+<script id="json-jmcba3312b-ab5e-4c00-8978-4bf1366156dc" type="application/json" >
     {"code": " \nx = 'ciao'\nx = x + 'mondo'", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "<module>", "globals": {"x": "ciaomondo"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jm4f67a63e-4884-46fd-8ba0-6983d2daa83c" class="pytutorVisualizer"> </div>
+<div id="jmcba3312b-ab5e-4c00-8978-4bf1366156dc" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -3447,12 +3540,12 @@ ciaomondo
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm4f67a63e-4884-46fd-8ba0-6983d2daa83c').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmcba3312b-ab5e-4c00-8978-4bf1366156dc').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm4f67a63e-4884-46fd-8ba0-6983d2daa83c',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmcba3312b-ab5e-4c00-8978-4bf1366156dc',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3923,16 +4016,19 @@ int
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm02460c6c-ff33-415a-9009-3b97df770af2" type="application/json" >
+<script id="json-jm624c8bb9-5e60-4caf-965c-494d3b0d069d" type="application/json" >
     {"code": " \nx = \"254\"\n\ny = int(x)\n\nprint(y + 3)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "254"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"x": "254", "y": 254}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"x": "254", "y": 254}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "257\n"}]}
 </script>
-<div id="jm02460c6c-ff33-415a-9009-3b97df770af2" class="pytutorVisualizer"> </div>
+<div id="jm624c8bb9-5e60-4caf-965c-494d3b0d069d" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
     background-color: #fff !important;
 }
 
+#pyStdout {
+    min-height:25px;
+}
 
 /* 'Edit this code' link, hiding because replaces browser tab !!!*/
 #editCodeLinkDiv {
@@ -3943,12 +4039,12 @@ int
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm02460c6c-ff33-415a-9009-3b97df770af2').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm624c8bb9-5e60-4caf-965c-494d3b0d069d').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm02460c6c-ff33-415a-9009-3b97df770af2',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm624c8bb9-5e60-4caf-965c-494d3b0d069d',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4040,47 +4136,106 @@ questa settimana ho fatto jogging 3 volte correndo a una media di 1.6km/h
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: i numeri, come le stringhe, sono immutabili. Quindi chiamando la funzione <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> è impossibile che il numero <code class="docutils literal notranslate"><span class="pre">5</span></code> associato a <code class="docutils literal notranslate"><span class="pre">x</span></code> venga in alcun modo modificato. <code class="docutils literal notranslate"><span class="pre">str(x)</span></code> semplicemente <em>genererà</em> una NUOVA stringa <code class="docutils literal notranslate"><span class="pre">'5'</span></code> che verrà usata poi nella concatenazione.</p>
-</div><div class="section" id="Esercizio---stampa-lunghezza">
-<h3>Esercizio - stampa lunghezza<a class="headerlink" href="#Esercizio---stampa-lunghezza" title="Permalink to this headline">¶</a></h3>
-<p>Scrivi del codice che data una stringa <code class="docutils literal notranslate"><span class="pre">x</span></code>, stampa il contenuto della stringa seguito dalla sua lunghezza. Il tuo codice dovrebbe funzionare con qualunque contenuto della variabile <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
-<p>Esempio - dati:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;jaguar&#39;</span>
-</pre></div>
-</div>
-<p>Dovrebbe stampare:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jaguar6
-</pre></div>
-</div>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</div></div>
+<div class="section" id="Formattare-stringhe">
+<h2>Formattare stringhe<a class="headerlink" href="#Formattare-stringhe" title="Permalink to this headline">¶</a></h2>
+<p>Concatenare stringhe con un segno <code class="docutils literal notranslate"><span class="pre">+</span></code> come sopra è macchinoso e si presta ad errori. Ci sono diverse soluzioni migliori, per una recensione completa ci riferiamo al sito <a class="reference external" href="https://realpython.com/python-formatted-output/">Real Python</a>. In particolare, guardare le più utili che sono le <a class="reference external" href="https://realpython.com/python-formatted-output/#the-python-formatted-string-literal-f-string">f-strings</a> che sono disponibili per Python <span class="math notranslate nohighlight">\(\geq\)</span> 3.6</p>
+<div class="section" id="Formattare-con-%">
+<h3>Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code><a class="headerlink" href="#Formattare-con-%" title="Permalink to this headline">¶</a></h3>
+<p>Vediamo come formattare stringhe con l’operatore <code class="docutils literal notranslate"><span class="pre">%</span></code>. Questa soluzione non è la migliore, ma è molto usata e supportata in tutte le versioni di Python, perciò l’abbiamo adottata nel libro:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;jaguar&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="s2">&quot;Ho saltato </span><span class="si">%s</span><span class="s2"> volte&quot;</span> <span class="o">%</span> <span class="n">x</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-jaguar6
+&#39;Ho saltato 3 volte&#39;
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<p>Nota che abbiamo messo un cosìdetto <em>place-holder</em> (segnaposto) <code class="docutils literal notranslate"><span class="pre">%s</span></code> dentro la stringa, per dire a Python di sostituirlo con una variabile. Per passare a Python la variabile, <em>dopo</em> la stringa abbiamo messo un simbolo <code class="docutils literal notranslate"><span class="pre">%</span></code> seguito da una variabile, in questo caso <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Se vogliamo mettere più di una variabile, dobbiamo solo aggiungere più segnaposti <code class="docutils literal notranslate"><span class="pre">%s</span></code> e dopo il <code class="docutils literal notranslate"><span class="pre">%</span></code> esterno mettiamo le variabili richieste in parentesi tonde, separandole con virgole:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="s2">&quot;Ho saltato </span><span class="si">%s</span><span class="s2"> volte e fatto </span><span class="si">%s</span><span class="s2"> flessioni&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Ho saltato 3 volte e fatto 5 flessioni&#39;
+</pre></div></div>
+</div>
+<p>Possiamo mettere quante variabili vogliamo, anche non-numeriche:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">premio</span> <span class="o">=</span> <span class="s1">&#39;Migliore Atleta della Valle&#39;</span>
+<span class="s2">&quot;Ho saltato </span><span class="si">%s</span><span class="s2"> volte, fatto </span><span class="si">%s</span><span class="s2"> flessioni e vinto il premio &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">premio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#34;Ho saltato 3 volte, fatto 5 flessioni e vinto il premio &#39;Migliore Atleta della Valle&#39;&#34;
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---supercar">
+<h3>Esercizio - supercar<a class="headerlink" href="#Esercizio---supercar" title="Permalink to this headline">¶</a></h3>
+<p>Hai ricevuto dei soldi, perciò decidi di comprare due modelli di auto sportive. Visto lo stile di guida scellerato prevedi già incidenti, perciò per ciascun modello comprerai tante auto quanti caratteri ci sono nel nome di ciascun modello.</p>
+<p>Scrivi del codice che salva nella stringa <code class="docutils literal notranslate"><span class="pre">s</span></code> il numero di auto che comprerai.</p>
+<ul class="simple">
+<li><p><strong>USA</strong> il segnaposto <code class="docutils literal notranslate"><span class="pre">%s</span></code></p></li>
+</ul>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">auto1</span> <span class="o">=</span> <span class="s1">&#39;Jaguar&#39;</span>
+<span class="n">auto2</span> <span class="o">=</span> <span class="s1">&#39;Ferrari&#39;</span>
+</pre></div>
+</div>
+<p>Dopo il tuo codice, dovrebbe mostrare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>
+<span class="go">&#39;Comprerò 6 Jaguar e 7 Ferrari perchè tengo i dindi&#39;</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">auto1</span><span class="p">,</span> <span class="n">auto2</span> <span class="o">=</span> <span class="s1">&#39;Jaguar&#39;</span><span class="p">,</span><span class="s1">&#39;Ferrari&#39;</span>        <span class="c1"># Comprerò 6 Jaguar e 7 Ferrari perchè tengo i dindi</span>
+<span class="c1">#auto1, auto2 = &#39;Porsche&#39;,&#39;Lamborghini&#39;  # Comprerò 7 Porsche e 11 Lamborghini perchè tengo i dindi</span>
 
+<span class="c1"># write here</span>
 
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Comprerò </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> e </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> perchè tengo i dindi&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">auto1</span><span class="p">),</span> <span class="n">auto1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">auto2</span><span class="p">),</span> <span class="n">auto2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4089,7 +4244,7 @@ jaguar6
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-jaguar6
+Comprerò 6 Jaguar e 7 Ferrari perchè tengo i dindi
 </pre></div></div>
 </div>
 </div>
