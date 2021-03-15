@@ -126,11 +126,12 @@ extensions = [
 exclude_patterns = [jm.build,
                     jm.generated, 
                     "_templates/exam-server",
-                     "_private",
-                     "_test",                     
-                     'README.md',
-                     'readme.md',
-                     'gui/esempi-bqplot']  # was giving weird notebook version 2 errors on RTD
+                    "**/*-chal-sol.*",
+                    "_private",
+                    "_test",                     
+                    'README.md',
+                    'readme.md',
+                    'gui/esempi-bqplot']  # was giving weird notebook version 2 errors on RTD
 
 exclude_patterns.extend(jm.zip_ignored)
 
