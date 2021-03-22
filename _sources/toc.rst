@@ -29,8 +29,10 @@ A - Fondamenti
     Liste 3: metodi <lists/lists3-sol.ipynb>
     Liste 4: iterazione e funzioni <lists/lists4-sol.ipynb>    
     Liste 5: challenges <lists/lists5-chal.ipynb>
-    Tuple <tuples/tuples-sol.ipynb>    
-    Insiemi <sets/sets-sol.ipynb>    
+    Tuple 1: introduzione <tuples/tuples1-sol.ipynb>
+    Tuple 2: challenges <tuples/tuples2-chal.ipynb>
+    Insiemi 1: introduzione <sets/sets1-sol.ipynb>
+    Insiemi 2: challenges <sets/sets2-chal.ipynb>
     Dizionari 1: creazione <dictionaries/dictionaries1-sol.ipynb>
     Dizionari 2: operatori <dictionaries/dictionaries2-sol.ipynb>
     Dizionari 3: metodi <dictionaries/dictionaries3-sol.ipynb>
