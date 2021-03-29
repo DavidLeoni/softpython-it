@@ -1,3 +1,12 @@
+# important! challenges are *not* versioned
+*_chal_sol.py
+*-chal-sol.ipynb
+*_chal_sol.ipynb  # shouldn't be allowed but just in case
+*-chal-sol.md
+!challenge-example/example-chal-sol.ipynb
+!_test/test-chapter/my_chal_sol.py
+!_test/test-chapter/nb-chal-sol.ipynb
+
 
 _build/
 _private/*
