@@ -42,6 +42,7 @@ A - Fondamenti
     Controllo di flusso 1: if <control-flow/flow1-if-sol.ipynb>
     Controllo di flusso 2: for <control-flow/flow2-for-sol.ipynb>
     Controllo di flusso 3: while <control-flow/flow3-while-sol.ipynb>
+    Controllo di flusso 4: challenges <control-flow/flow4-chal.ipynb>
     Sequenze e comprehensions<sequences/sequences-sol.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
     Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
