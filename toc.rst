@@ -43,7 +43,8 @@ A - Fondamenti
     Controllo di flusso 2: for <control-flow/flow2-for-sol.ipynb>
     Controllo di flusso 3: while <control-flow/flow3-while-sol.ipynb>
     Controllo di flusso 4: challenges <control-flow/flow4-chal.ipynb>
-    Sequenze e comprehensions<sequences/sequences-sol.ipynb>
+    Sequenze e comprehensions 1: introduzione <sequences/sequences1-sol.ipynb>
+    Sequenze e comprehensions 2: challenges <sequences/sequences2-chal.ipynb>
     Funzioni <functions/functions-sol.ipynb>        
     Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
     Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    
