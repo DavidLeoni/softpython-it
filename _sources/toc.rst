@@ -45,8 +45,10 @@ A - Fondamenti
     Controllo di flusso 4: challenges <control-flow/flow4-chal.ipynb>
     Sequenze e comprehensions 1: introduzione <sequences/sequences1-sol.ipynb>
     Sequenze e comprehensions 2: challenges <sequences/sequences2-chal.ipynb>
-    Funzioni <functions/functions-sol.ipynb>        
-    Gestione errori e testing <errors-and-testing/errors-and-testing-sol.ipynb>       
+    Funzioni 1: introduzione<functions/functions1-sol.ipynb>        
+    Funzioni 2: challenges<functions/functions2-chal.ipynb>        
+    Gestione errori e testing 1 <errors-and-testing/errors-and-testing1-sol.ipynb>
+    Gestione errori e testing 2: challenges <errors-and-testing/errors-and-testing2-chal.ipynb>
     Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    
     Matrici Numpy <matrices-numpy/matrices-numpy-sol.ipynb>
     commandments.ipynb
