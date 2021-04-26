@@ -49,7 +49,9 @@ A - Fondamenti
     Funzioni 2: challenges<functions/functions2-chal.ipynb>        
     Gestione errori e testing 1 <errors-and-testing/errors-and-testing1-sol.ipynb>
     Gestione errori e testing 2: challenges <errors-and-testing/errors-and-testing2-chal.ipynb>
-    Matrici liste di liste <matrices-lists/matrices-lists-sol.ipynb>    
+    Matrici liste di liste 1 <matrices-lists/matrices-lists1-sol.ipynb>    
+    Matrici liste di liste 2: altri esercizi <matrices-lists/matrices-lists2-sol.ipynb>    
+    Matrici liste di liste 3: challenges <matrices-lists/matrices-lists3-chal.ipynb>    
     Matrici Numpy <matrices-numpy/matrices-numpy-sol.ipynb>
     commandments.ipynb
         
