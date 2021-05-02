@@ -68,7 +68,8 @@ B - Analisi dati
     Formati dati 2: file CSV <formats/formats2-csv-sol.ipynb>
     Formati dati 3: file JSON <formats/formats3-json-sol.ipynb>
     Formati dati 4: Challenge Personaggi storici del Trentino <formats/formats4-chal.ipynb>    
-    Visualizzazione <visualization/visualization-sol.ipynb>
+    Visualizzazione 1 - introduzione <visualization/visualization1-sol.ipynb>
+    Visualizzazione 2 - challenge <visualization/visualization2-chal.ipynb>
     Ricerca <search/regex-sol.ipynb>
     Integrazione <integration/integration-sol.ipynb>
     Estrazione <extraction/extraction-sol.ipynb>
