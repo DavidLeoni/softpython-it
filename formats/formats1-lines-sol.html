@@ -1483,7 +1483,7 @@
 <li class="toctree-l3"><a class="reference internal" href="formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../visualization/visualization1-sol.html">Visualizzazione dati 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visualization/visualization1-sol.html">Visualizzazione 1 - introduzione</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization1-sol.html#Introduzione">Introduzione</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../visualization/visualization1-sol.html#Che-fare">Che fare</a></li>
@@ -1511,9 +1511,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization1-sol.html#Esportare-fogli-Jupyter">Esportare fogli Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization1-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../visualization/visualization1-sol.html#Prosegui">Prosegui</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../visualization/visualization2-chal.html">Visualizzazione 2 - challenge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html#Il-protosincrotrone">Il protosincrotrone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html#Fake-science">Fake science</a></li>
@@ -2586,8 +2586,7 @@ Niccolò Macchiavelli
 <p>Prima leggiamo una linea, e due casi sono possibili:</p>
 <ol class="loweralpha simple">
 <li><p>siamo alla fine del file (o il file è vuoto): in questo caso la chiamata a <code class="docutils literal notranslate"><span class="pre">readline()</span></code> ritorna una stringa vuota</p></li>
-<li><p>non siamo alla fine del file: la prima linea è messa come una stringa dentro la variabile <code class="docutils literal notranslate"><span class="pre">linea</span></code>.</p></li>
-<li><p>we are not at the end of the file: the first line is put as a string inside the variable <code class="docutils literal notranslate"><span class="pre">line</span></code>. Dato che Python internamente usa un puntatore per tenere traccia della posizione a cui si è durante la lettura del file, dopo una lettura questo puntatore è mosso all’inizio della riga successiva. In questo modo una chiamata successiva a <code class="docutils literal notranslate"><span class="pre">readline()</span></code> leggera la linea dalla nuova posizione.</p></li>
+<li><p>non siamo alla fine del file: la prima linea è messa come una stringa dentro la variabile <code class="docutils literal notranslate"><span class="pre">linea</span></code>. Dato che Python internamente usa un puntatore per tenere traccia della posizione a cui si è durante la lettura del file, dopo una lettura questo puntatore è mosso all’inizio della riga successiva. In questo modo una chiamata successiva a <code class="docutils literal notranslate"><span class="pre">readline()</span></code> leggerà la linea dalla nuova posizione.</p></li>
 </ol>
 <p>Nel blocco <code class="docutils literal notranslate"><span class="pre">while</span></code> diciamo a Python di continuare il ciclo fintanto che <code class="docutils literal notranslate"><span class="pre">linea</span></code> <em>non</em> è vuota. In questo caso, dentro il blocco <code class="docutils literal notranslate"><span class="pre">while</span></code> estraiamo il nome dalla linea e lo mettiamo nella variabile <code class="docutils literal notranslate"><span class="pre">nome</span></code> (rimuovendo il carattere extra di ritorno a capo con la <code class="docutils literal notranslate"><span class="pre">rstrip()</span></code> come fatto in precedenza), e poi procediamo leggendo la nuova riga ed estraendo il risultato dentro la variabile <code class="docutils literal notranslate"><span class="pre">cognome</span></code>. Infine, leggiamo di nuovo la linea dentro la variabile <code class="docutils literal notranslate"><span class="pre">linea</span></code> così sarà pronta per la
 prossima iterazione di estrazione nome. Se la <code class="docutils literal notranslate"><span class="pre">linea</span></code> è vuota il ciclo terminerà:</p>
