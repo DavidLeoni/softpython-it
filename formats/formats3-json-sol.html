@@ -2219,9 +2219,9 @@ div.rendered_html tbody tr:hover {
 <h2><a class="reference external" href="../_static/generated/formats.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/formats">Naviga file online</a></p>
 <p>Il JSON è un formato più elaborato, molto diffuso nel mondo delle applicazioni web.</p>
-<p>Un file json è semplicemente un file di testo, strutturato <em>ad albero</em>. Vediamone un esempio, tratto dal dataset stazioni di Bike sharing di Lavis trovato su dati.trentino :</p>
+<p>Un file con estensione <code class="docutils literal notranslate"><span class="pre">.json</span></code> è semplicemente un file di testo, strutturato <em>ad albero</em>. Vediamone un esempio, tratto dal dataset stazioni di Bike sharing di Lavis:</p>
 <ul class="simple">
-<li><p>Fonte dati: <a class="reference external" href="https://dati.trentino.it/dataset/stazioni-bike-sharing-emotion-trentino">dati.trentino.it</a>, Servizio Trasporti Provincia Autonoma di Trento</p></li>
+<li><p>Fonte dati: <a class="reference external" href="https://dati.trentino.it/dataset/stazioni-bike-sharing-emotion-trentino">dati.trentino.it</a> - Servizio Trasporti Provincia Autonoma di Trento</p></li>
 <li><p>Licenza: <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/deed.it">CC-BY 4.0</a></p></li>
 </ul>
 <p>File <a class="reference external" href="bike-sharing-lavis.json">bike-sharing-lavis.json</a>:</p>
@@ -2265,7 +2265,7 @@ div.rendered_html tbody tr:hover {
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>Come si può notare, il formato del json è molto simile a strutture dati che già abbiamo in Python, come stringhe, numeri interi, float, liste e dizionari. L’unica differenza sono i campi <code class="docutils literal notranslate"><span class="pre">null</span></code> in json che diventano <code class="docutils literal notranslate"><span class="pre">None</span></code> in Python. Quindi la conversione a Python è quasi sempre facile e indolore, e per farla basta usare il modulo già pronto <code class="docutils literal notranslate"><span class="pre">json</span></code> con la funzione <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, che interpreta il testo dal file json e lo converte in strutture dati Python:</p>
+<p>Come si può notare, il formato del JSON è molto simile a strutture dati che già abbiamo in Python, come stringhe, numeri interi, float, liste e dizionari. L’unica differenza sono i campi <code class="docutils literal notranslate"><span class="pre">null</span></code> del JSON che diventano <code class="docutils literal notranslate"><span class="pre">None</span></code> in Python. Quindi la conversione a Python è quasi sempre facile e indolore, per farla basta usare il modulo già pronto <code class="docutils literal notranslate"><span class="pre">json</span></code> con la funzione <code class="docutils literal notranslate"><span class="pre">json.load</span></code>, che interpreta il testo dal file json e lo converte in strutture dati Python:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -2288,7 +2288,7 @@ div.rendered_html tbody tr:hover {
 [{&#39;name&#39;: &#39;Grazioli&#39;, &#39;address&#39;: &#39;Piazza Grazioli - Lavis&#39;, &#39;id&#39;: &#39;Grazioli - Lavis&#39;, &#39;bikes&#39;: 3, &#39;slots&#39;: 7, &#39;totalSlots&#39;: 10, &#39;position&#39;: [46.139732902099794, 11.111516155225331]}, {&#39;name&#39;: &#39;Pressano&#39;, &#39;address&#39;: &#39;Piazza della Croce - Pressano&#39;, &#39;id&#39;: &#39;Pressano - Lavis&#39;, &#39;bikes&#39;: 2, &#39;slots&#39;: 5, &#39;totalSlots&#39;: 7, &#39;position&#39;: [46.15368174037716, 11.106601229430453]}, {&#39;name&#39;: &#39;Stazione RFI&#39;, &#39;address&#39;: &#39;Via Stazione - Lavis&#39;, &#39;id&#39;: &#39;Stazione RFI - Lavis&#39;, &#39;bikes&#39;: 4, &#39;slots&#39;: 6, &#39;totalSlots&#39;: 10, &#39;position&#39;: [46.148180371138814, 11.096753997622727]}]
 </pre></div></div>
 </div>
-<p>Notiamo che quanto letto con la funzione <code class="docutils literal notranslate"><span class="pre">json.load</span></code> non è più semplice testo ma oggetti Python. Per questo json, l’oggetto più esterno è una lista (notate le quadre all’inizio e alla fine del file), e usando <code class="docutils literal notranslate"><span class="pre">type</span></code> su <code class="docutils literal notranslate"><span class="pre">contenuto_python</span></code> ne abbiamo la conferma:</p>
+<p>Notiamo che quanto letto con la funzione <code class="docutils literal notranslate"><span class="pre">json.load</span></code> non è più semplice testo ma oggetti Python. Per questo json, l’oggetto più esterno è una lista (nota le quadre all’inizio e alla fine del file), e usando <code class="docutils literal notranslate"><span class="pre">type</span></code> su <code class="docutils literal notranslate"><span class="pre">contenuto_python</span></code> ne abbiamo la conferma:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -2307,7 +2307,7 @@ div.rendered_html tbody tr:hover {
 list
 </pre></div></div>
 </div>
-<p>Guardando meglio il JSON, vedrete che è una lista di dizionari. Quindi, per accedere al primo dizionario (cioè quello all0indice zeresimo), possiamo scrivere</p>
+<p>Guardando meglio il JSON, vedrai che è una lista di dizionari. Quindi, per accedere al primo dizionario (cioè quello all’indice zeresimo), possiamo scrivere</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
