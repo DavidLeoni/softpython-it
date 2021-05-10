@@ -52,7 +52,8 @@ A - Fondamenti
     Matrici liste di liste 1 <matrices-lists/matrices-lists1-sol.ipynb>    
     Matrici liste di liste 2: altri esercizi <matrices-lists/matrices-lists2-sol.ipynb>    
     Matrici liste di liste 3: challenges <matrices-lists/matrices-lists3-chal.ipynb>    
-    Matrici Numpy <matrices-numpy/matrices-numpy-sol.ipynb>
+    Matrici Numpy 1: introduzione <matrices-numpy/matrices-numpy1-sol.ipynb>
+    Matrici Numpy 2: challenges  <matrices-numpy/matrices-numpy2-chal.ipynb>
     commandments.ipynb
         
 
