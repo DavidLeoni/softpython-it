@@ -1545,7 +1545,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../visualization/visualization2-chal.html">Visualizzazione 2 - challenge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html#Il-protosincrotrone">Il protosincrotrone</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html#Fake-science">Fake science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html#IgNobel">IgNobel</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../search/regex-sol.html">Ricerca</a><ul>
@@ -2347,11 +2347,13 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
     <span class="n">diag</span><span class="p">([</span>              <span class="c1"># 1x2 dimension, non quadrata</span>
            <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
          <span class="p">])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Dovrei aver fallito !&quot;</span><span class="p">)</span> <span class="c1"># se diag solleva un&#39;eccezione che è ValueError come ci</span>
-                                             <span class="c1"># aspettiamo che faccia, il codice non dovrebbe mai arrivare qui</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># questo cattura solo ValueError. Altri tipi di errori non sono catturati</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Dovrei aver fallito !&quot;</span><span class="p">)</span> <span class="c1"># se diag solleva un&#39;eccezione che</span>
+                                             <span class="c1"># è ValueError come ci aspettiamo</span>
+                                             <span class="c1"># che faccia, il codice non dovrebbe</span>
+                                             <span class="c1"># mai arrivare qui</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori non sono catturati</span>
     <span class="k">pass</span>  <span class="c1"># In una calusola except devi sempre mettere del codice</span>
-                   <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
+          <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
 </pre></div>
 </div>
 </div>
@@ -2373,11 +2375,13 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
     <span class="n">diag</span><span class="p">([</span>              <span class="c1"># 1x2 dimension, non quadrata</span>
            <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
          <span class="p">])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Dovrei aver fallito !&quot;</span><span class="p">)</span> <span class="c1"># se diag solleva un&#39;eccezione che è ValueError come ci</span>
-                                             <span class="c1"># aspettiamo che faccia, il codice non dovrebbe mai arrivare qui</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># questo cattura solo ValueError. Altri tipi di errori non sono catturati</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Dovrei aver fallito !&quot;</span><span class="p">)</span> <span class="c1"># se diag solleva un&#39;eccezione che</span>
+                                             <span class="c1"># è ValueError come ci aspettiamo</span>
+                                             <span class="c1"># che faccia, il codice non dovrebbe</span>
+                                             <span class="c1"># mai arrivare qui</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori non sono catturati</span>
     <span class="k">pass</span>  <span class="c1"># In una calusola except devi sempre mettere del codice</span>
-                   <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
+          <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
 </pre></div>
 </div>
 </div>
@@ -2392,7 +2396,7 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2401,7 +2405,8 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">])</span>
+        <span class="c1">#ret.append(mat[i][n-1-i])  # versione alternativa</span>
     <span class="k">return</span> <span class="n">ret</span>
 
 
@@ -2411,13 +2416,13 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 
 <span class="k">assert</span> <span class="n">anti_diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
 
-<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor !</span>
+<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor!</span>
 <span class="c1"># jupman.pytut()</span>
 </pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2430,7 +2435,7 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 
 <span class="k">assert</span> <span class="n">anti_diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
 
-<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor !</span>
+<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor!</span>
 <span class="c1"># jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2469,8 +2474,8 @@ i
                                 i
                                    [
                                 0   [3,2,5,8],
-inizia da riga a indice i=1 --&gt; 1   [0,6,2,3],      Controlla fino a colonna limite j=0 inclusa
-                                2   [0,0,4,9],
+inizia da riga a indice i=1 --&gt; 1   [0,6,2,3],  Controlla fino a
+                                2   [0,0,4,9],  colonna limite j=0 inclusa
                                 3   [0,7,0,5]
                                    ]
 </pre></div>
@@ -2481,8 +2486,8 @@ inizia da riga a indice i=1 --&gt; 1   [0,6,2,3],      Controlla fino a colonna 
                                    [
                                 0   [3,2,5,8],
                                 1   [0,6,2,3],
-controlla riga a indice i=2 --&gt; 2   [0,0,4,9],      Controlla fino a colonna limite  j=1 inclusa
-                                3   [0,7,0,5]
+controlla riga a indice i=2 --&gt; 2   [0,0,4,9],      Controlla fino a
+                                3   [0,7,0,5]       colonna limite  j=1 inclusa
                                    ]
 </pre></div>
 </div>
@@ -2493,10 +2498,15 @@ controlla riga a indice i=2 --&gt; 2   [0,0,4,9],      Controlla fino a colonna 
                                 0   [3,2,5,8],
                                 1   [0,6,2,3],
                                 2   [0,0,4,9],
-controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna limite  j=2 inclusa
-                                   ]                MA può fermarsi prima a j=1 perchè il numero a j=1
-                                                    è differente da zero. Appena 7 è trovato, può ritornare False
-                                                    In questo caso la matrice non è triangolare superiore
+controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
+                                   ]                limite  j=2 inclusa MA
+                                                    può fermarsi prima a j=1
+                                                    perchè il numero a j=1
+                                                    è differente da zero.
+                                                    Appena 7 è trovato, può
+                                                    ritornare False
+                                                    In questo caso la matrice
+                                                    non è triangolare superiore
 </pre></div>
 </div>
 <div class="admonition note">
@@ -2504,13 +2514,33 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </div>
 <p>Quando sviluppi questi algoritmi, è fondamentale scrivere un esempio passo passo come quello sopra per avere un’idea chiara di cosa sta succedendo. Inoltre, se scrivi giù gli indici correttamente, sarai facilmente in grado di derivare una generalizzazione. Per trovarla, prova a scrivere ulteriormente gli indici trovati in una tabella.</p>
 <p>Per esempio, da quanto sopra per ciascuna riga indice <code class="docutils literal notranslate"><span class="pre">i</span></code> possiamo facilmente trovare di quale indice limite <code class="docutils literal notranslate"><span class="pre">j</span></code> abbiamo bisogno per raggiungere nella nostra caccia agli zero:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>| i | limit j (included) |            Notes                    |
-|---|--------------------|-------------------------------------|
-| 1 |          0         |  cominciamo dalla riga a indice i=1 |
-| 2 |          1         |                                     |
-| 3 |          2         |                                     |
-</pre></div>
-</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 34%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>i</p></th>
+<th class="head"><p>limite j (incluso)</p></th>
+<th class="head"><p>Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>cominciamo dalla riga a indice i=1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>2</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>Dalla tabella, possiamo vedere che il limite per <code class="docutils literal notranslate"><span class="pre">j</span></code> può essere calcolato in termini dell’indice riga corrente <code class="docutils literal notranslate"><span class="pre">i</span></code> con una semplice formula <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">-</span> <span class="pre">1</span></code></p>
 <p>Il fatto che tu debba muoverti attraverso righe e colonne suggerisce che hai bisogno di due <code class="docutils literal notranslate"><span class="pre">for</span></code>, uno per le righe e uno per le colonne - cioè un <em>for annidato</em></p>
 <p>per svolgere l’esercizio:</p>
@@ -2717,10 +2747,10 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm17699fc4-9ad6-4ca0-9893-1963ffbb8005" type="application/json" >
+<script id="json-jm8ae11a5d-40ed-4bae-b694-720d34626a86" type="application/json" >
     {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jm17699fc4-9ad6-4ca0-9893-1963ffbb8005" class="pytutorVisualizer"> </div>
+<div id="jm8ae11a5d-40ed-4bae-b694-720d34626a86" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2740,12 +2770,12 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm17699fc4-9ad6-4ca0-9893-1963ffbb8005').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm8ae11a5d-40ed-4bae-b694-720d34626a86').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm17699fc4-9ad6-4ca0-9893-1963ffbb8005',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm8ae11a5d-40ed-4bae-b694-720d34626a86',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2782,10 +2812,10 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm17699fc4-9ad6-4ca0-9893-1963ffbb8005" type="application/json" >
+<script id="json-jm8ae11a5d-40ed-4bae-b694-720d34626a86" type="application/json" >
     {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jm17699fc4-9ad6-4ca0-9893-1963ffbb8005" class="pytutorVisualizer"> </div>
+<div id="jm8ae11a5d-40ed-4bae-b694-720d34626a86" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2805,12 +2835,12 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm17699fc4-9ad6-4ca0-9893-1963ffbb8005').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm8ae11a5d-40ed-4bae-b694-720d34626a86').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm17699fc4-9ad6-4ca0-9893-1963ffbb8005',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm8ae11a5d-40ed-4bae-b694-720d34626a86',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2842,7 +2872,8 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 
     <span class="c1"># Per il solo caso di parametri composti come liste (o liste di liste...),</span>
     <span class="c1"># puoi scrivere cose come questa SE E SOLO SE le specifiche della funzione</span>
-    <span class="c1"># ti richiedono di modificare gli elementi interni del parametro (es. trasopsta _in-place_)</span>
+    <span class="c1"># ti richiedono di modificare gli elementi interni del parametro</span>
+    <span class="c1"># (es. trasopsta _in-place_)</span>
 
     <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span>  <span class="mi">6663</span>
 </pre></div>
@@ -3123,8 +3154,8 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna 
 </div>
 <div class="section" id="Esercizio---discarica">
 <h2>Esercizio - discarica<a class="headerlink" href="#Esercizio---discarica" title="Permalink to this headline">¶</a></h2>
-<p>✪✪✪ La multinazionale ToxiCorp vuole assumerti per sviluppare un camion a guida automatica che depositerà materiali altamente contaminati nelle discariche illegali che possiede in tutto il mondo. Lo trovi eticamente questionabile, ma pagano bene, e quindi accetti. Una discarica è modellata come una regione rettangolare di dimensioni <code class="docutils literal notranslate"><span class="pre">nrow</span></code> e <code class="docutils literal notranslate"><span class="pre">ncol</span></code>, implementata come una matrice di liste. Ogni cella <code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code> contiene le tonnellate di materiali contaminati presenti, e può contenere al
-massimo <code class="docutils literal notranslate"><span class="pre">7</span></code> tonnellate di materiale.</p>
+<p>✪✪✪ La multinazionale ToxiCorp vuole assumerti per sviluppare un camion a guida automatica che depositerà materiali altamente contaminati nelle discariche illegali che possiede in tutto il mondo. Lo trovi eticamente questionabile, ma pagano bene, e quindi accetti.</p>
+<p>Una discarica è modellata come una regione rettangolare di dimensioni <code class="docutils literal notranslate"><span class="pre">nrow</span></code> e <code class="docutils literal notranslate"><span class="pre">ncol</span></code>, implementata come una matrice di liste. Ogni cella <code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code> contiene le tonnellate di materiali contaminati presenti, e può contenere al massimo <code class="docutils literal notranslate"><span class="pre">7</span></code> tonnellate di materiale.</p>
 <p>Il camion dei rifiuti trasporterà <code class="docutils literal notranslate"><span class="pre">q</span></code> tonnellate di materiale, e proverà a riempire la discarica depositando i rifiuti nella prima riga, riempiendo ogni cella fino a <code class="docutils literal notranslate"><span class="pre">7</span></code> tonnellate. Quando la prima riga sarà riempita, procederà con la seconda riga a partire da sinistra, quindi la terza di nuovo da sinistra fino a che non ci sono più rifiuti da smaltire.</p>
 <p>La funzione <code class="docutils literal notranslate"><span class="pre">discarica(n,m)</span></code> prende in input <code class="docutils literal notranslate"><span class="pre">mat</span></code> e il numero di tonnellate <code class="docutils literal notranslate"><span class="pre">q</span></code> da smaltire, e RITORNA una NUOVA lista rappresentante un piano con la sequenza di tonnellate da smaltire. Se i rifiuti da eliminare eccedono la dimensione della discarica, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
 <p><strong>NOTA</strong>: la funzione NON modifica la matrice</p>
@@ -3145,7 +3176,7 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">discarica</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
 
-<span class="go">[2, 3, 1, 3, 0, 6, 4*, 3]</span>
+<span class="go">[2, 3, 1, 3, 0, 6, 4, 3]</span>
 </pre></div>
 </div>
 <p>Per la prima riga smaltiamo 2,3,1 tonnellate in tre celle, nella seconda riga smaltiamo 3,0,6 tonnellate in tre celle, nella terza riga smaltiamo solo 4, 3 tonnellate in due celle perchè il limite <code class="docutils literal notranslate"><span class="pre">q=22</span></code> è raggiunto</p>
@@ -3159,24 +3190,24 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span></span><span class="k">def</span> <span class="nf">discarica</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
 
-    <span class="n">rem</span> <span class="o">=</span> <span class="n">q</span>
+    <span class="n">rimanente</span> <span class="o">=</span> <span class="n">q</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">mat</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">riga</span><span class="p">)):</span>
-            <span class="n">cellfill</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">-</span> <span class="n">riga</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-            <span class="n">unload</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">cellfill</span><span class="p">,</span> <span class="n">rem</span><span class="p">)</span>
-            <span class="n">rem</span> <span class="o">-=</span> <span class="n">unload</span>
+            <span class="n">da_riempire</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">-</span> <span class="n">riga</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">scarica</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">da_riempire</span><span class="p">,</span> <span class="n">rimanente</span><span class="p">)</span>
+            <span class="n">rimanente</span> <span class="o">-=</span> <span class="n">scarica</span>
 
-            <span class="k">if</span> <span class="n">rem</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unload</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rimanente</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scarica</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">unload</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">unload</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">scarica</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scarica</span><span class="p">)</span>
                 <span class="k">return</span> <span class="n">ret</span>
 
-    <span class="k">if</span> <span class="n">rem</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t fill the dump, </span><span class="si">%s</span><span class="s2"> tons remain!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rimanente</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Non posso riempire la discarica, rimangono </span><span class="si">%s</span><span class="s2"> tonnellate!&quot;</span> <span class="o">%</span> <span class="n">rimanente</span><span class="p">)</span>
 
 
 <span class="c1"># INIZIO TEST - NON TOCCARE !</span>
@@ -3337,13 +3368,13 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="kc">None</span><span class="p">]])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Dovrebbe aver fallito prima con un ValueError!&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Mi aspettavo un ValueError!&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="s2">&quot;Test passato&quot;</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">]])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Dovrebbe aver fallito prima con un ValueError!&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Mi aspettavo un ValueError!&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="s2">&quot;Test passato&quot;</span>
 
@@ -3352,14 +3383,16 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="n">r0</span> <span class="o">=</span> <span class="n">lab</span><span class="p">([],</span><span class="n">m0</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">m0</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
-<span class="k">assert</span> <span class="n">r0</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla (perciò ritorna None di default)</span>
+<span class="k">assert</span> <span class="n">r0</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla</span>
+                   <span class="c1"># (perciò ritorna None di default)</span>
 
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">r1</span> <span class="o">=</span> <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">m1</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
-<span class="k">assert</span> <span class="n">r1</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla (perciò ritorna None di default)</span>
+<span class="k">assert</span> <span class="n">r1</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla</span>
+                   <span class="c1"># (perciò ritorna None di default)</span>
 
 <span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">m2</span><span class="p">)</span>  <span class="c1"># 1 studente 2 sedie in una fila</span>
@@ -3379,7 +3412,8 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="k">assert</span> <span class="n">m4</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
 
-<span class="k">assert</span> <span class="n">ss4</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># modificato anche lista di input come richiesto dal testo della funzione</span>
+<span class="k">assert</span> <span class="n">ss4</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># modificato anche lista di input</span>
+                          <span class="c1"># come richiesto dal testo della funzione</span>
 
 <span class="n">m5</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
        <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
@@ -3429,13 +3463,13 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="kc">None</span><span class="p">]])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Dovrebbe aver fallito prima con un ValueError!&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Mi aspettavo un ValueError!&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="s2">&quot;Test passato&quot;</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">[[</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">]])</span>
-    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Dovrebbe aver fallito prima con un ValueError!&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;TEST FALLITO: Mi aspettavo un ValueError!&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="s2">&quot;Test passato&quot;</span>
 
@@ -3444,14 +3478,16 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="n">r0</span> <span class="o">=</span> <span class="n">lab</span><span class="p">([],</span><span class="n">m0</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">m0</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
-<span class="k">assert</span> <span class="n">r0</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla (perciò ritorna None di default)</span>
+<span class="k">assert</span> <span class="n">r0</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla</span>
+                   <span class="c1"># (perciò ritorna None di default)</span>
 
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">r1</span> <span class="o">=</span> <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">m1</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="p">]</span>
-<span class="k">assert</span> <span class="n">r1</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla (perciò ritorna None di default)</span>
+<span class="k">assert</span> <span class="n">r1</span> <span class="o">==</span> <span class="kc">None</span>  <span class="c1"># si suppone la funzione non ritorni nulla</span>
+                   <span class="c1"># (perciò ritorna None di default)</span>
 
 <span class="n">m2</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">lab</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">m2</span><span class="p">)</span>  <span class="c1"># 1 studente 2 sedie in una fila</span>
@@ -3471,7 +3507,8 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 
 <span class="k">assert</span> <span class="n">m4</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="p">]</span>
 
-<span class="k">assert</span> <span class="n">ss4</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># modificato anche lista di input come richiesto dal testo della funzione</span>
+<span class="k">assert</span> <span class="n">ss4</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>  <span class="c1"># modificato anche lista di input</span>
+                          <span class="c1"># come richiesto dal testo della funzione</span>
 
 <span class="n">m5</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
        <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="p">]</span>
@@ -3646,7 +3683,7 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
     <span class="k">return</span> <span class="n">ret</span>
 
 
-<span class="c1"># let&#39;s try wrong matrix dimensions:</span>
+<span class="c1"># proviamo con dimensioni sbagliate per la matrice:</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">mul</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]])</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;AVREI DOVUTO FALLIRE !&quot;</span><span class="p">)</span>
@@ -3688,7 +3725,7 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 <span></span><span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
-<span class="c1"># let&#39;s try wrong matrix dimensions:</span>
+<span class="c1"># proviamo con dimensioni sbagliate per la matrice:</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">mul</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]])</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;AVREI DOVUTO FALLIRE !&quot;</span><span class="p">)</span>
@@ -3725,7 +3762,7 @@ massimo <code class="docutils literal notranslate"><span class="pre">7</span></c
 </div>
 <div class="section" id="Esercizio---check_nqueen">
 <h2>Esercizio - check_nqueen<a class="headerlink" href="#Esercizio---check_nqueen" title="Permalink to this headline">¶</a></h2>
-<p>✪✪✪✪ Questo è un problema difficile ma non ti preoccupare, il resto del corso è ben più semplice !</p>
+<p>✪✪✪✪ E ora un problema difficile, per i più tenaci!</p>
 <p>Hai una matrice nxn di booleani che rappresenta una scacchiera dove il valore True significa che c’è una regina nella cella, e False significa cella vuota.</p>
 <p>Ai fini della visualizzazione, possiamo rappresentare una configurazione usando <code class="docutils literal notranslate"><span class="pre">.</span></code> per significare <code class="docutils literal notranslate"><span class="pre">False</span></code> e lettere come <code class="docutils literal notranslate"><span class="pre">A</span></code> e <code class="docutils literal notranslate"><span class="pre">B</span></code> per indicare che c’è una regina in una cella. Contrariamente a quanto abbiamo fatto sino ad adesso, per convenienza mostriamo la matrice con le <code class="docutils literal notranslate"><span class="pre">j</span></code> che vanno dal basso fino alla sommità.</p>
 <p>Vediamo un esempio. In questo caso A e B non possono attaccare ciascun’altro, perciò l’algoritmo ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
@@ -3797,7 +3834,7 @@ i
 </div>
 <p>Per comprendere completamente il range della regina e come calcolare le diagonali, è conveniente estendere visualmente la tabella così da avere le diagonali che intersichino gli assi. Nota inoltre che abbiamo aggiunto le lettere <code class="docutils literal notranslate"><span class="pre">y</span></code> e <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 <div class="admonition warning">
-<p><strong>NOTA</strong>: nell’algoritmo <strong>non hai</strong> bisogno di estendere la matrice ! in the algorithm you <strong>do not</strong> need to extend the matrix !</p>
+<p><strong>NOTA</strong>: nell’algoritmo <strong>non hai</strong> bisogno di estendere la matrice !</p>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> y
  6  ....|....
