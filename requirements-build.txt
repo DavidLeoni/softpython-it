@@ -9,3 +9,4 @@ sphinx_rtd_theme==0.4.3
 pylatexenc==2.1
 pathspec==0.7.0
 pygments==2.7.1
+jinja2==2.11.3
