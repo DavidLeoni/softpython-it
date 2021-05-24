@@ -19,7 +19,7 @@ A - Fondamenti
     Basi 2: booleani <basics/basics2-bools-sol.ipynb>
     Basi 3: numeri reali <basics/basics3-floats-sol.ipynb>
     Basi 4: challenges <basics/basics4-chal.ipynb>
-    Stringhe 1: introduzione <strings/strings1-sol.ipynb>
+    Stringhe 1: intro <strings/strings1-sol.ipynb>
     Stringhe 2: operatori <strings/strings2-sol.ipynb>
     Stringhe 3: metodi <strings/strings3-sol.ipynb>
     Stringhe 4: altri esercizi <strings/strings4-sol.ipynb>
@@ -31,7 +31,7 @@ A - Fondamenti
     Liste 5: challenges <lists/lists5-chal.ipynb>
     Tuple 1: introduzione <tuples/tuples1-sol.ipynb>
     Tuple 2: challenges <tuples/tuples2-chal.ipynb>
-    Insiemi 1: introduzione <sets/sets1-sol.ipynb>
+    Insiemi 1: intro <sets/sets1-sol.ipynb>
     Insiemi 2: challenges <sets/sets2-chal.ipynb>
     Dizionari 1: creazione <dictionaries/dictionaries1-sol.ipynb>
     Dizionari 2: operatori <dictionaries/dictionaries2-sol.ipynb>
@@ -43,7 +43,7 @@ A - Fondamenti
     Controllo di flusso 2: for <control-flow/flow2-for-sol.ipynb>
     Controllo di flusso 3: while <control-flow/flow3-while-sol.ipynb>
     Controllo di flusso 4: challenges <control-flow/flow4-chal.ipynb>
-    Sequenze e comprehensions 1: introduzione <sequences/sequences1-sol.ipynb>
+    Sequenze e comprehensions 1: intro <sequences/sequences1-sol.ipynb>
     Sequenze e comprehensions 2: challenges <sequences/sequences2-chal.ipynb>
     Funzioni 1: introduzione<functions/functions1-sol.ipynb>        
     Funzioni 2: challenges<functions/functions2-chal.ipynb>        
@@ -52,7 +52,7 @@ A - Fondamenti
     Matrici liste di liste 1 <matrices-lists/matrices-lists1-sol.ipynb>    
     Matrici liste di liste 2: altri esercizi <matrices-lists/matrices-lists2-sol.ipynb>    
     Matrici liste di liste 3: challenges <matrices-lists/matrices-lists3-chal.ipynb>    
-    Matrici Numpy 1: introduzione <matrices-numpy/matrices-numpy1-sol.ipynb>
+    Matrici Numpy 1: intro <matrices-numpy/matrices-numpy1-sol.ipynb>
     Matrici Numpy 2: challenges  <matrices-numpy/matrices-numpy2-chal.ipynb>
     commandments.ipynb
         
@@ -74,7 +74,7 @@ B - Analisi dati
     Ricerca <search/regex-sol.ipynb>
     Integrazione <integration/integration-sol.ipynb>
     Estrazione <extraction/extraction-sol.ipynb>
-    Pandas <pandas/pandas-sol.ipynb>
+    Analitiche con Pandas <pandas/pandas-sol.ipynb>
     Information retrieval <information-retrieval/information-retrieval-sol.ipynb>    
     Computer vision <computer-vision/computer-vision-sol.ipynb>
     

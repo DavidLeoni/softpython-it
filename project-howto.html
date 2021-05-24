@@ -328,7 +328,7 @@
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---L'Anello-di-Luce">Sfida - L’Anello di Luce</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="strings/strings1-sol.html">Stringhe 1: introduzione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="strings/strings1-sol.html">Stringhe 1: intro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Che-fare">Che fare</a></li>
 <li class="toctree-l3"><a class="reference internal" href="strings/strings1-sol.html#Creare-stringhe">Creare stringhe</a></li>
@@ -741,7 +741,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tuples/tuples2-chal.html#Sfida---cannocchiale">Sfida - cannocchiale</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="sets/sets1-sol.html">Insiemi 1: introduzione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sets/sets1-sol.html">Insiemi 1: intro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sets/sets1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="sets/sets1-sol.html#Che-fare">Che fare</a></li>
 </ul>
@@ -1186,7 +1186,7 @@
 <li class="toctree-l3"><a class="reference internal" href="control-flow/flow4-chal.html#Sfida---Il-Dungeon">Sfida - Il Dungeon</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="sequences/sequences1-sol.html">Sequenze e comprehensions 1: introduzione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sequences/sequences1-sol.html">Sequenze e comprehensions 1: intro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sequences/sequences1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="sequences/sequences1-sol.html#Che-fare">Che fare</a></li>
 </ul>
@@ -1377,7 +1377,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html#Sfida---Precariato-a-Murabasso">Sfida - Precariato a Murabasso</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: introduzione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: intro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html#Introduzione">Introduzione</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html#Che-fare">Che fare</a></li>
@@ -1623,7 +1623,7 @@
 <li class="toctree-l3"><a class="reference internal" href="extraction/extraction-sol.html#3.-Scriviamo-il-CSV">3. Scriviamo il CSV</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pandas/pandas-sol.html">Pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pandas/pandas-sol.html">Analitiche con Pandas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pandas/pandas-sol.html#1.-Introduzione">1. Introduzione</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pandas/pandas-sol.html#Che-fare">Che fare</a></li>
@@ -1989,6 +1989,237 @@
             
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -2025,7 +2256,7 @@
 </div>
 <div class="section" id="Challenge">
 <h2>Challenge<a class="headerlink" href="#Challenge" title="Permalink to this headline">¶</a></h2>
-<p>Questo sito prevede delle challenge. Per affrontarle al meglio, dovrete aver dimostrato di aver fatto almeno alcune tra le seguenti attività:</p>
+<p>Questo sito prevede <a class="reference external" href="https://it.softpython.org/challenges.html">delle challenge</a>. Per affrontarle al meglio, dovrete aver dimostrato di aver fatto almeno alcune tra le seguenti attività:</p>
 <ul class="simple">
 <li><p>Analisi</p></li>
 <li><p>Pulizia</p></li>
@@ -2083,7 +2314,7 @@
 <div class="section" id="Codice-Python">
 <h3>Codice Python<a class="headerlink" href="#Codice-Python" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
-<p><strong>NOTA: non spaventarti se i requisiti sembrano troppo formali: li ho scritti per limitare i problemi tecnici, se poi insorgono comunque pazienza!</strong> L’idea è anche farvi capire cosa succede quando si riesegue codice su computer diversi dal proprio.</p>
+<p><strong>NOTA: non spaventarti se i requisiti sembrano troppo formali: li abbiamo scritti per limitare i problemi tecnici, se poi insorgono comunque pazienza!</strong> L’idea è anche farvi capire cosa succede quando si riesegue codice su computer diversi dal proprio.</p>
 </div>
 <p>Tutto il codice nel notebook del progetto dovrebbe poter essere rieseguibile senza errori su computer altrui. A tal fine:</p>
 <ul class="simple">
@@ -2129,8 +2360,8 @@ Required-by: traittypes, pollster, geopandas, fuzzymatcher, bqplot
 </div>
 <div class="section" id="Interfacce-grafiche">
 <h3>Interfacce grafiche<a class="headerlink" href="#Interfacce-grafiche" title="Permalink to this headline">¶</a></h3>
-<p>Se volete implementare dei widget grafici in Jupyter, tenete conto che sviluppare interfacce grafiche per il web è un mestiere tedioso - ottenere i risultati desiderati è spesso un lungo processo costituito da innumerevoli prove e altrettanti fallimenti. Inoltre, i widget di Jupyter al 2018 sono ancora da considerarsi software sperimentale, che spesso non è documentato a sufficienza. Vi conviene non puntare ad avere componenti perfettamente allineati e immagini ottimamente dimensionate,
-piuttosto programmate in modo corretto le reazioni dei vari componenti.</p>
+<p>Se volete implementare dei widget grafici in Jupyter, tenete conto che sviluppare interfacce grafiche per il web richiede parecchie attenzioni - ottenere i risultati desiderati è spesso un lungo processo costituito da innumerevoli prove. Inoltre, i widget di Jupyter al 2018 sono ancora da considerarsi software sperimentale, che spesso non è documentato a sufficienza. Vi conviene non puntare ad avere componenti perfettamente allineati e immagini ottimamente dimensionate, piuttosto programmate in
+modo corretto le reazioni dei vari componenti.</p>
 </div>
 <div class="section" id="Fare-attenzione-a">
 <h3>Fare attenzione a<a class="headerlink" href="#Fare-attenzione-a" title="Permalink to this headline">¶</a></h3>
@@ -2149,13 +2380,22 @@ piuttosto programmate in modo corretto le reazioni dei vari componenti.</p>
 <li><p>Windows non distingue tra nomi di file con caratteri maiuscoli e minuscoli</p></li>
 <li><p>esempio: se referenziate in Jupyter un file come <code class="docutils literal notranslate"><span class="pre">ciao.jpg</span></code> e il file su disco si chiama <code class="docutils literal notranslate"><span class="pre">Ciao.JPG</span></code>, il file verrà letto in Windows, ma non in Linux/Mac. Per evitare problemi, mettete sempre i nomi dei file in minuscolo, estensione inclusa come <code class="docutils literal notranslate"><span class="pre">ciao.jpg</span></code></p></li>
 <li><p>evitate nomi di file con spazi, usate invece il trattino <code class="docutils literal notranslate"><span class="pre">-</span></code></p></li>
-<li><p>Attenti a usare link con percorsi assoluti a file fuori dalla cartella che mi consegnerete (per es. <code class="docutils literal notranslate"><span class="pre">C:\Users\Paolo\excel.xls</span></code>)</p></li>
+<li><p>Attenti a usare link con percorsi assoluti a file fuori dalla cartella che consegnerete (per es. <code class="docutils literal notranslate"><span class="pre">C:\Users\Paolo\excel.xls</span></code>)</p></li>
 </ul>
 </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>VIETATO IL DISORDINE!</strong></p>
-<p><em>DETESTO</em> quando mi si consegnano cartelle a caso, perchè poi devo andare a scartabellarmi i file in cerca di roba da eseguire sperando di interpretare le vostre intenzioni. Quindi prima di consegnare a chichessia, date un occhio che sia tutto in ordine e possibilmente fate provare lo zip al componente del vostro gruppo che <em>meno</em> ne sa di informatica. Se riesce ad installare lui/lei senza suggerimenti, allora forse ci riuscirò anch’io.</p>
+<p>Se consegnate cartelle a caso farete arrabbiare chi vi dovrà valutare, perchè dovrà scartabellarsi i file in cerca di roba da eseguire sperando di interpretare le vostre intenzioni. Quindi prima di consegnare a chichessia, date un occhio che sia tutto in ordine e possibilmente fate provare lo zip al componente del vostro gruppo che <em>meno</em> ne sa di informatica. Se riesce ad installare lui/lei senza suggerimenti, allora forse ci riuscirà il vostro esaminatore.</p>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
