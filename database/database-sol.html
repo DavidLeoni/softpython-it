@@ -1808,11 +1808,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#Query-ai-metadati">Query ai metadati</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#ORDER-BY">ORDER BY</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#JOIN">JOIN</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Tabella-Track">Tabella Track</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#GROUP-BY-and-COUNT">GROUP BY and COUNT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Aggregare-i-dati">Aggregare i dati</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#COUNT">COUNT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#GROUP-BY-E-COUNT">GROUP BY E COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#GROUP-BY-e-COUNT">GROUP BY e COUNT</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Pandas">Pandas</a></li>
@@ -2335,7 +2336,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Connessione-in-SQLStudio">
 <h2>Connessione in SQLStudio<a class="headerlink" href="#Connessione-in-SQLStudio" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://sqlitestudio.pl/index.rvt?act=download">Scarica</a> e prova a lanciare SQLite Studio (non serve nemmeno l’installazione). Se ti dà problemi, in alternativa prova <a class="reference external" href="http://sqlitebrowser.org/">SQLite browser</a>:</p>
+<p><a class="reference external" href="https://sqlitestudio.pl">Scarica</a> e prova a lanciare SQLite Studio (non serve nemmeno l’installazione). Se ti dà problemi, in alternativa prova <a class="reference external" href="http://sqlitebrowser.org/">SQLite browser</a>:</p>
 <p>Una volta scaricato e szippato SQLStudio, eseguilo e poi:</p>
 <ol class="arabic simple">
 <li><p>Dal menu in alto, clicca <code class="docutils literal notranslate"><span class="pre">Database-&gt;Add</span> <span class="pre">Database</span></code> e connettilo al database <code class="docutils literal notranslate"><span class="pre">chinook.sqlite</span></code>:</p></li>
@@ -3193,12 +3194,84 @@ CREATE TABLE [Album]
 </div>
 </div>
 </div>
+<div class="section" id="ORDER-BY">
+<h2>ORDER BY<a class="headerlink" href="#ORDER-BY" title="Permalink to this headline">¶</a></h2>
+<p>Spesso vorremo ordinare il risultato in base a qualche colonna, per farlo possiamo aggiungere la clausola <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>:</p>
+<p><strong>NOTA</strong>: se aggiungiamo LIMIT, questo viene applicato DOPO che l’ordinamento è stato fatto</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">FROM Album</span>
+<span class="s2">ORDER BY Album.Title</span>
+<span class="s2">LIMIT 10</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(156, &#39;...And Justice For All&#39;, 50),
+ (257,
+  &#39;20th Century Masters - The Millennium Collection: The Best of Scorpions&#39;,
+  179),
+ (296, &#39;A Copland Celebration, Vol. I&#39;, 230),
+ (94, &#39;A Matter of Life and Death&#39;, 90),
+ (95, &#39;A Real Dead One&#39;, 90),
+ (96, &#39;A Real Live One&#39;, 90),
+ (285, &#39;A Soprano Inspired&#39;, 219),
+ (139, &#39;A TempestadeTempestade Ou O Livro Dos Dias&#39;, 99),
+ (203, &#39;A-Sides&#39;, 132),
+ (160, &#39;Ace Of Spades&#39;, 106)]
+</pre></div></div>
+</div>
+<p>Per ordinare in ordine decrescente possiamo aggiungere DESC:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">FROM Album</span>
+<span class="s2">ORDER BY Album.Title DESC</span>
+<span class="s2">LIMIT 10</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(208, &#39;[1997] Black Light Syndrome&#39;, 136),
+ (240, &#39;Zooropa&#39;, 150),
+ (267, &#39;Worlds&#39;, 202),
+ (334, &#39;Weill: The Seven Deadly Sins&#39;, 264),
+ (8, &#39;Warner 25 Anos&#39;, 6),
+ (239, &#39;War&#39;, 150),
+ (175, &#39;Walking Into Clarksdale&#39;, 115),
+ (287, &#39;Wagner: Favourite Overtures&#39;, 221),
+ (182, &#39;Vs.&#39;, 118),
+ (53, &#39;Vozes do MPB&#39;, 21)]
+</pre></div></div>
+</div>
+</div>
 <div class="section" id="JOIN">
 <h2>JOIN<a class="headerlink" href="#JOIN" title="Permalink to this headline">¶</a></h2>
 <p>Nella tabella <code class="docutils literal notranslate"><span class="pre">Album</span></code> per gli artisti vediamo solo dei numeri. Come possiamo fare una query per vedere anche i nomi degli artisti? Useremo il comando SQL <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> :</p>
 <p><strong>ESERCIZIO</strong>: Per capire cosa succede, esegui le query in SQLStudio</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3212,7 +3285,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3226,7 +3299,7 @@ CREATE TABLE [Album]
 </div>
 <p>Invece del JOIN possiamo usare una virgola:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3239,7 +3312,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3254,7 +3327,7 @@ CREATE TABLE [Album]
 <p>Meglio ancora, in questo caso visto che abbiamo lo stesso nome di colonna in entrambe le tabelle, possiamo usare la clausola <code class="docutils literal notranslate"><span class="pre">USING</span></code> che ha anche il beneficio di eliminare la colonna duplicata</p>
 <p><strong>NOTA</strong>: Per ragioni oscure, in SQLiteStudio la colonna <code class="docutils literal notranslate"><span class="pre">ArtistId</span></code> appare comunque duplicata con nome <code class="docutils literal notranslate"><span class="pre">ArtistiId:1</span></code></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3267,7 +3340,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3279,9 +3352,9 @@ CREATE TABLE [Album]
  (5, &#39;Big Ones&#39;, 3, &#39;Aerosmith&#39;)]
 </pre></div></div>
 </div>
-<p>Infine possiamo filtrare solo le colonne che ci interessano, <code class="docutils literal notranslate"><span class="pre">Title</span></code> di album e <code class="docutils literal notranslate"><span class="pre">Name</span></code> di <code class="docutils literal notranslate"><span class="pre">Artisti</span></code>. Per chiarezza, possiamo identificare le tabelle con variabili che assegnamo in FROM (qua usiamo i nomi <code class="docutils literal notranslate"><span class="pre">ALB</span></code> e <code class="docutils literal notranslate"><span class="pre">ART</span></code> ma potrebbero essere qualsiasi):</p>
+<p>Infine possiamo selezionare solo le colonne che ci interessano, <code class="docutils literal notranslate"><span class="pre">Title</span></code> di album e <code class="docutils literal notranslate"><span class="pre">Name</span></code> di <code class="docutils literal notranslate"><span class="pre">Artisti</span></code>. Per chiarezza, possiamo identificare le tabelle con variabili che assegnamo in FROM (qua usiamo i nomi <code class="docutils literal notranslate"><span class="pre">ALB</span></code> e <code class="docutils literal notranslate"><span class="pre">ART</span></code> ma potrebbero essere qualsiasi):</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3294,7 +3367,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3309,9 +3382,9 @@ CREATE TABLE [Album]
 </div>
 <div class="section" id="Tabella-Track">
 <h2>Tabella Track<a class="headerlink" href="#Tabella-Track" title="Permalink to this headline">¶</a></h2>
-<p>Passiamo adesso ad una tabella più complessa, come <code class="docutils literal notranslate"><span class="pre">Track</span></code>, che contiene un po’ di canzoni ascoltate dagli utenti di iTunes:</p>
+<p>Passiamo adesso ad una tabella più complessa, come <code class="docutils literal notranslate"><span class="pre">Track</span></code>, che contiene canzoni ascoltate dagli utenti di iTunes:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3320,7 +3393,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3365,7 +3438,7 @@ CREATE TABLE [Album]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3374,7 +3447,7 @@ CREATE TABLE [Album]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3383,7 +3456,7 @@ CREATE TABLE [Album]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3418,7 +3491,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3431,7 +3504,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3446,7 +3519,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3459,7 +3532,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3470,7 +3543,7 @@ CREATE TABLE [Track]
 </div>
 <p>Per la seconda riga:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3483,7 +3556,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3499,7 +3572,7 @@ CREATE TABLE [Track]
 <p>Notiamo che in SQL le caselle vuote si indicano con <code class="docutils literal notranslate"><span class="pre">NULL</span></code>. Dato che <code class="docutils literal notranslate"><span class="pre">NULL</span></code> non è un tipo Python, durante la conversione da oggetti SQL a oggetti Python <code class="docutils literal notranslate"><span class="pre">NULL</span></code> viene convertito nell’oggetto Python <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </div><p>Proviamo a selezionare dei valori numerici alla nostra query, come per esempio i <code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3512,7 +3585,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3525,7 +3598,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3538,7 +3611,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3547,7 +3620,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3560,7 +3633,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3569,7 +3642,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3582,7 +3655,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3591,7 +3664,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3605,7 +3678,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3621,7 +3694,7 @@ CREATE TABLE [Track]
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3633,13 +3706,11 @@ CREATE TABLE [Track]
 <span class="s2">ORDER BY Milliseconds ASC</span>
 <span class="s2">LIMIT 5</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3652,7 +3723,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3663,7 +3734,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3676,13 +3747,13 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="GROUP-BY-and-COUNT">
-<h2>GROUP BY and COUNT<a class="headerlink" href="#GROUP-BY-and-COUNT" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Aggregare-i-dati">
+<h2>Aggregare i dati<a class="headerlink" href="#Aggregare-i-dati" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="COUNT">
 <h3>COUNT<a class="headerlink" href="#COUNT" title="Permalink to this headline">¶</a></h3>
 <p>Per contare quante righe ci sono in una tabella, possiamo usare la parola chiave <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span></code> nella <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>. Per esempio, per vedere quante tracce ci sono, possiamo fare così:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3694,7 +3765,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3708,8 +3779,8 @@ CREATE TABLE [Track]
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Perchè facendo i conteggi direttamente in SQL, il database si arrangerà a fare i conti e spedirà a Python solo un numero invece che una quantità di righe che potenzialmente potrebbe essere molto ingente e intasare la memoria.</p>
 </div></div>
-<div class="section" id="GROUP-BY-E-COUNT">
-<h3>GROUP BY E COUNT<a class="headerlink" href="#GROUP-BY-E-COUNT" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="GROUP-BY-e-COUNT">
+<h3>GROUP BY e COUNT<a class="headerlink" href="#GROUP-BY-e-COUNT" title="Permalink to this headline">¶</a></h3>
 <p>Ogni Track ha associato un <code class="docutils literal notranslate"><span class="pre">MediaTypeId</span></code>. Potremmo chiederci per ogni media type quante track ci sono.</p>
 <ul class="simple">
 <li><p>Per conteggiare, dovremo usare la parola chiave <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span> <span class="pre">AS</span> <span class="pre">Conteggio</span></code> nella <code class="docutils literal notranslate"><span class="pre">SELECT</span></code></p></li>
@@ -3718,7 +3789,7 @@ CREATE TABLE [Track]
 </ul>
 <p><strong>Nota</strong>: il <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span></code> conteggierà in questo caso quanti elementi ci sono nei gruppi, non in tutta la tabella:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3732,7 +3803,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3744,7 +3815,7 @@ CREATE TABLE [Track]
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3758,12 +3829,11 @@ CREATE TABLE [Track]
 <span class="s2">ORDER BY Conteggio DESC</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 
-
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3776,7 +3846,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3787,7 +3857,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3803,7 +3873,7 @@ CREATE TABLE [Track]
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3822,7 +3892,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3855,7 +3925,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3866,7 +3936,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3902,7 +3972,7 @@ CREATE TABLE [Track]
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3920,7 +3990,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3953,7 +4023,7 @@ CREATE TABLE [Track]
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3964,7 +4034,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4003,7 +4073,7 @@ CREATE TABLE [Track]
 <p>Finora abbiamo usato metodi base di Python, ma ovviamente processare il tutto in pandas è più comodo.</p>
 <p>Per maggiori informazioni su Pandas, guarda il <a class="reference external" href="https://it.softpython.org/pandas/pandas-sol.html">relativo tutorial</a></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4014,7 +4084,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4023,7 +4093,7 @@ CREATE TABLE [Track]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4082,310 +4152,10 @@ CREATE TABLE [Track]
       <td>375418</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Put The Finger On You</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>205662</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Let's Get It Up</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>233926</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Inject The Venom</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>210834</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Snowballed</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>203102</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Evil Walks</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>263497</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>C.O.D.</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>199836</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Breaking The Rules</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>263288</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Night Of The Long Knives</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>205688</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Spellbound</td>
-      <td>Angus Young, Malcolm Young, Brian Johnson</td>
-      <td>270863</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Go Down</td>
-      <td>AC/DC</td>
-      <td>331180</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Dog Eat Dog</td>
-      <td>AC/DC</td>
-      <td>215196</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Let There Be Rock</td>
-      <td>AC/DC</td>
-      <td>366654</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Bad Boy Boogie</td>
-      <td>AC/DC</td>
-      <td>267728</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Problem Child</td>
-      <td>AC/DC</td>
-      <td>325041</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Overdose</td>
-      <td>AC/DC</td>
-      <td>369319</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Hell Ain't A Bad Place To Be</td>
-      <td>AC/DC</td>
-      <td>254380</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Whole Lotta Rosie</td>
-      <td>AC/DC</td>
-      <td>323761</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Walk On Water</td>
-      <td>Steven Tyler, Joe Perry, Jack Blades, Tommy Shaw</td>
-      <td>295680</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>Love In An Elevator</td>
-      <td>Steven Tyler, Joe Perry</td>
-      <td>321828</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Rag Doll</td>
-      <td>Steven Tyler, Joe Perry, Jim Vallance, Holly K...</td>
-      <td>264698</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>What It Takes</td>
-      <td>Steven Tyler, Joe Perry, Desmond Child</td>
-      <td>310622</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>Dude (Looks Like A Lady)</td>
-      <td>Steven Tyler, Joe Perry, Desmond Child</td>
-      <td>264855</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Janie's Got A Gun</td>
-      <td>Steven Tyler, Tom Hamilton</td>
-      <td>330736</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Cryin'</td>
-      <td>Steven Tyler, Joe Perry, Taylor Rhodes</td>
-      <td>309263</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>Amazing</td>
-      <td>Steven Tyler, Richie Supa</td>
-      <td>356519</td>
-    </tr>
-    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-    </tr>
-    <tr>
-      <th>3473</th>
-      <td>October Song</td>
-      <td>Matt Rowe &amp; Stefan Skarbek</td>
-      <td>204846</td>
-    </tr>
-    <tr>
-      <th>3474</th>
-      <td>What Is It About Men</td>
-      <td>Delroy "Chris" Cooper, Donovan Jackson, Earl C...</td>
-      <td>209573</td>
-    </tr>
-    <tr>
-      <th>3475</th>
-      <td>Help Yourself</td>
-      <td>Freddy James, Jimmy hogarth &amp; Larry Stock</td>
-      <td>300884</td>
-    </tr>
-    <tr>
-      <th>3476</th>
-      <td>Amy Amy Amy (Outro)</td>
-      <td>Astor Campbell, Delroy "Chris" Cooper, Donovan...</td>
-      <td>663426</td>
-    </tr>
-    <tr>
-      <th>3477</th>
-      <td>Slowness</td>
-      <td>None</td>
-      <td>215386</td>
-    </tr>
-    <tr>
-      <th>3478</th>
-      <td>Prometheus Overture, Op. 43</td>
-      <td>Ludwig van Beethoven</td>
-      <td>339567</td>
-    </tr>
-    <tr>
-      <th>3479</th>
-      <td>Sonata for Solo Violin: IV: Presto</td>
-      <td>Béla Bartók</td>
-      <td>299350</td>
-    </tr>
-    <tr>
-      <th>3480</th>
-      <td>A Midsummer Night's Dream, Op.61 Incidental Mu...</td>
-      <td>None</td>
-      <td>387826</td>
-    </tr>
-    <tr>
-      <th>3481</th>
-      <td>Suite No. 3 in D, BWV 1068: III. Gavotte I &amp; II</td>
-      <td>Johann Sebastian Bach</td>
-      <td>225933</td>
-    </tr>
-    <tr>
-      <th>3482</th>
-      <td>Concert pour 4 Parties de V**les, H. 545: I. P...</td>
-      <td>Marc-Antoine Charpentier</td>
-      <td>110266</td>
-    </tr>
-    <tr>
-      <th>3483</th>
-      <td>Adios nonino</td>
-      <td>Astor Piazzolla</td>
-      <td>289388</td>
-    </tr>
-    <tr>
-      <th>3484</th>
-      <td>Symphony No. 3 Op. 36 for Orchestra and Sopran...</td>
-      <td>Henryk Górecki</td>
-      <td>567494</td>
-    </tr>
-    <tr>
-      <th>3485</th>
-      <td>Act IV, Symphony</td>
-      <td>Henry Purcell</td>
-      <td>364296</td>
-    </tr>
-    <tr>
-      <th>3486</th>
-      <td>3 Gymnopédies: No.1 - Lent Et Grave, No.3 - Le...</td>
-      <td>Erik Satie</td>
-      <td>385506</td>
-    </tr>
-    <tr>
-      <th>3487</th>
-      <td>Music for the Funeral of Queen Mary: VI. "Thou...</td>
-      <td>Henry Purcell</td>
-      <td>142081</td>
-    </tr>
-    <tr>
-      <th>3488</th>
-      <td>Symphony No. 2: III. Allegro vivace</td>
-      <td>Kurt Weill</td>
-      <td>376510</td>
-    </tr>
-    <tr>
-      <th>3489</th>
-      <td>Partita in E Major, BWV 1006A: I. Prelude</td>
-      <td>Johann Sebastian Bach</td>
-      <td>285673</td>
-    </tr>
-    <tr>
-      <th>3490</th>
-      <td>Le Sacre Du Printemps: I.iv. Spring Rounds</td>
-      <td>Igor Stravinsky</td>
-      <td>234746</td>
-    </tr>
-    <tr>
-      <th>3491</th>
-      <td>Sing Joyfully</td>
-      <td>William Byrd</td>
-      <td>133768</td>
-    </tr>
-    <tr>
-      <th>3492</th>
-      <td>Metopes, Op. 29: Calypso</td>
-      <td>Karol Szymanowski</td>
-      <td>333669</td>
-    </tr>
-    <tr>
-      <th>3493</th>
-      <td>Symphony No. 2, Op. 16 -  "The Four Temperamen...</td>
-      <td>Carl Nielsen</td>
-      <td>286998</td>
-    </tr>
-    <tr>
-      <th>3494</th>
-      <td>24 Caprices, Op. 1, No. 24, for Solo Violin, i...</td>
-      <td>Niccolò Paganini</td>
-      <td>265541</td>
-    </tr>
-    <tr>
-      <th>3495</th>
-      <td>Étude 1, In C Major - Preludio (Presto) - Liszt</td>
-      <td>None</td>
-      <td>51780</td>
-    </tr>
-    <tr>
-      <th>3496</th>
-      <td>Erlkonig, D.328</td>
-      <td>None</td>
-      <td>261849</td>
-    </tr>
-    <tr>
-      <th>3497</th>
-      <td>Concerto for Violin, Strings and Continuo in G...</td>
-      <td>Pietro Antonio Locatelli</td>
-      <td>493573</td>
     </tr>
     <tr>
       <th>3498</th>
@@ -4427,28 +4197,74 @@ CREATE TABLE [Track]
 <p>Pandas è molto comodo, ma come già detto nella <a class="reference external" href="http://it.softpython.org/pandas/pandas-sol.html">nel relativo tutorial</a> Pandas carica tutto in memoria RAM che tipicamente sono dai 4 ai 16 giga. Se hai grandi database potresti avere dei problemi per cui valgono i metodi e considerazioni fatte nella sezione <a class="reference external" href="#Performance">Performance</a></p>
 </div>
 <p><strong>ESERCIZIO</strong>: Millisecondi e bytes occupati dovrebbero ragionevolmente essere linearmente dipendenti. Dimostralo con Pandas.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="c1"># scrivi qui</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT Name, Composer, Milliseconds, Bytes from Track&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1"># l&#39;indice di correlazione lineare tra milliseconds e bytes è prossimo al massimo 1.0</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Milliseconds</th>
+      <th>Bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Milliseconds</th>
+      <td>1.000000</td>
+      <td>0.960181</td>
+    </tr>
+    <tr>
+      <th>Bytes</th>
+      <td>0.960181</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
 <span></span><span class="c1"># scrivi qui</span>
 
 
-
-
-
-
-
-</pre></div>
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
 </pre></div>
 </div>
 </div>
