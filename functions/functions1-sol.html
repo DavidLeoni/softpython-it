@@ -1652,11 +1652,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#6.-Operazioni-su-colonne">6. Operazioni su colonne</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.1---Selezionare-colonne">5.1 - Selezionare colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2---Aggiungere-Colonne">5.2 - Aggiungere Colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">5.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2.2-Esercizio---Pressione-vs-Temperatura">5.2.2 Esercizio - Pressione vs Temperatura</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.3-Trasformare-colonne">5.3 Trasformare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.1---Selezionare-colonne">6.1 - Selezionare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2---Aggiungere-Colonne">6.2 - Aggiungere Colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">6.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2.2-Esercizio---Pressione-vs-Temperatura">6.2.2 Esercizio - Pressione vs Temperatura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.3-Trasformare-colonne">6.3 Trasformare colonne</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#7.-Raggruppare">7. Raggruppare</a></li>
@@ -3553,7 +3553,7 @@ il volume è 267.94666666666666
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3562,43 +3562,47 @@ il volume è 267.94666666666666
     <span class="n">ore_partenza</span> <span class="o">=</span> <span class="mi">6</span>
     <span class="n">minuti_partenza</span> <span class="o">=</span> <span class="mi">52</span>
 
-    <span class="c1"># secondi trascorsi</span>
-    <span class="n">secondi</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">495</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="mi">432</span>
-
     <span class="c1"># tempo trascorso</span>
-    <span class="n">secondi_due</span> <span class="o">=</span> <span class="n">secondi</span> <span class="o">%</span> <span class="mi">60</span>
-    <span class="n">minuti</span><span class="o">=</span> <span class="n">secondi</span> <span class="o">//</span> <span class="mi">60</span>
-    <span class="n">ore</span><span class="o">=</span> <span class="n">minuti</span> <span class="o">//</span> <span class="mi">60</span>
+    <span class="n">secondi</span> <span class="o">=</span> <span class="n">ore_partenza</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="n">minuti_partenza</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="mi">15</span><span class="p">)</span> <span class="o">+</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="mi">7</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">minuti</span> <span class="o">=</span> <span class="n">secondi</span> <span class="o">//</span> <span class="mi">60</span>
+    <span class="n">ore</span> <span class="o">=</span> <span class="n">minuti</span> <span class="o">//</span> <span class="mi">60</span>
+
+    <span class="n">ora_mostra</span> <span class="o">=</span> <span class="n">ore</span> <span class="o">%</span> <span class="mi">24</span>
+    <span class="n">minuti_mostra</span> <span class="o">=</span> <span class="n">minuti</span> <span class="o">%</span> <span class="mi">60</span>
+
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ora_mostra</span><span class="p">,</span> <span class="n">minuti_mostra</span><span class="p">)</span>
 
 
-    <span class="n">ore_arrivo</span><span class="o">=</span> <span class="n">ore</span> <span class="o">+</span> <span class="n">ore_partenza</span>
-    <span class="n">minuti_arrivo</span><span class="o">=</span> <span class="n">minuti</span> <span class="o">+</span> <span class="n">minuti_partenza</span>
-
-    <span class="n">minuti_finale</span> <span class="o">=</span> <span class="n">minuti_arrivo</span> <span class="o">%</span> <span class="mi">60</span>
-    <span class="n">ore_finale</span> <span class="o">=</span> <span class="n">minuti_arrivo</span> <span class="o">//</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">ore_arrivo</span>
-
-    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">ore_finale</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">minuti_finale</span><span class="p">)</span>
 
 
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;6:52&#39;</span>
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;7:22&#39;</span>
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;7:44&#39;</span>
-<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;9:34&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;8:34&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;12:58&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;23:37&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;1:25&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">305</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;19:43&#39;</span> <span class="c1"># Forrest Gump</span>
 </pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">ora_arrivo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
+
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;6:52&#39;</span>
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;7:22&#39;</span>
 <span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;7:44&#39;</span>
-<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;9:34&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;8:34&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;12:58&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;23:37&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;1:25&#39;</span>
+<span class="k">assert</span> <span class="n">ora_arrivo</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">305</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;19:43&#39;</span> <span class="c1"># Forrest Gump</span>
 </pre></div>
 </div>
 </div>

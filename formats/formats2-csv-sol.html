@@ -1652,11 +1652,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#6.-Operazioni-su-colonne">6. Operazioni su colonne</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.1---Selezionare-colonne">5.1 - Selezionare colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2---Aggiungere-Colonne">5.2 - Aggiungere Colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">5.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.2.2-Esercizio---Pressione-vs-Temperatura">5.2.2 Esercizio - Pressione vs Temperatura</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#5.3-Trasformare-colonne">5.3 Trasformare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.1---Selezionare-colonne">6.1 - Selezionare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2---Aggiungere-Colonne">6.2 - Aggiungere Colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">6.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.2.2-Esercizio---Pressione-vs-Temperatura">6.2.2 Esercizio - Pressione vs Temperatura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pandas/pandas-sol.html#6.3-Trasformare-colonne">6.3 Trasformare colonne</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pandas/pandas-sol.html#7.-Raggruppare">7. Raggruppare</a></li>
@@ -2631,7 +2631,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;_csv.reader object at 0x7f4c3cd199d0&gt;
+&lt;_csv.reader object at 0x7f98ae7b39d0&gt;
 </pre></div></div>
 </div>
 <p>Quello che vediamo è piuttosto deludente.</p>
@@ -2692,6 +2692,7 @@ a scorrerlo due volte all’interno della stessa <code class="docutils literal n
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
 <span></span><span class="c1"># scrivi qui il codice</span>
 
 <span class="kn">import</span> <span class="nn">csv</span>
@@ -2711,25 +2712,17 @@ a scorrerlo due volte all’interno della stessa <code class="docutils literal n
 []
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
 <span></span><span class="c1"># scrivi qui il codice</span>
 
 
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[&#39;animale&#39;, &#39;anni&#39;], [&#39;cane&#39;, &#39;12&#39;], [&#39;gatto&#39;, &#39;14&#39;], [&#39;pellicano&#39;, &#39;30&#39;], [&#39;scoiattolo&#39;, &#39;6&#39;], [&#39;aquila&#39;, &#39;25&#39;]]
-[]
-</pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 2.8</strong>: Prendendo la soluzione all’esercizio di prima (usando una sola print), prova qua sotto a spostare la print tutta a sinistra (eliminando gli spazi). Funziona ancora?</p>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3156,7 +3149,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Moena&#39;, &#39;Tonadico&#39;, &#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Canazei&#39;, &#39;Peio&#39;, &#39;Mezzocorona&#39;}
+{&#39;Mezzocorona&#39;, &#39;Tonadico&#39;, &#39;Peio&#39;, &#39;Canazei&#39;, &#39;Vigo di Fassa&#39;, &#39;Trento&#39;, &#39;Moena&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -3181,7 +3174,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Moena&#39;, &#39;Tonadico&#39;, &#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Canazei&#39;, &#39;Peio&#39;, &#39;Mezzocorona&#39;}
+{&#39;Mezzocorona&#39;, &#39;Tonadico&#39;, &#39;Peio&#39;, &#39;Canazei&#39;, &#39;Vigo di Fassa&#39;, &#39;Trento&#39;, &#39;Moena&#39;}
 </pre></div></div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.14</strong>: prova a conteggiare in un dizionario quanti tipi di servizio vengono trovati. Dovresti ottenere un risultato così:</p>

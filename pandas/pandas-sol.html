@@ -1652,11 +1652,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#6.-Operazioni-su-colonne">6. Operazioni su colonne</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#5.1---Selezionare-colonne">5.1 - Selezionare colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#5.2---Aggiungere-Colonne">5.2 - Aggiungere Colonne</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#5.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">5.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#5.2.2-Esercizio---Pressione-vs-Temperatura">5.2.2 Esercizio - Pressione vs Temperatura</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#5.3-Trasformare-colonne">5.3 Trasformare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.1---Selezionare-colonne">6.1 - Selezionare colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.2---Aggiungere-Colonne">6.2 - Aggiungere Colonne</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">6.2.1 Esercizio - temperatura meteo in Fahrenheit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.2.2-Esercizio---Pressione-vs-Temperatura">6.2.2 Esercizio - Pressione vs Temperatura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#6.3-Trasformare-colonne">6.3 Trasformare colonne</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#7.-Raggruppare">7. Raggruppare</a></li>
@@ -4027,7 +4027,7 @@ numpy.ndarray
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f9085d04b90&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f4d7ff7ff50&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4216,7 +4216,7 @@ Name: 6, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f9085c5c8d0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f4d7fedddd0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4242,7 +4242,7 @@ Name: 6, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;AxesSubplot:label=&#39;6ffe6223-f002-484a-bc3c-c35453da2396&#39;&gt;
+&lt;AxesSubplot:label=&#39;c053845d-24c2-48d0-a523-5088edb1dc97&#39;&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -5404,8 +5404,8 @@ Name: time_stamp, Length: 110869, dtype: object
 <div class="section" id="6.-Operazioni-su-colonne">
 <h2>6. Operazioni su colonne<a class="headerlink" href="#6.-Operazioni-su-colonne" title="Permalink to this headline">¶</a></h2>
 <p>Vediamo ora come selezionare, aggiungere e trasformare colonne.</p>
-<div class="section" id="5.1---Selezionare-colonne">
-<h3>5.1 - Selezionare colonne<a class="headerlink" href="#5.1---Selezionare-colonne" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="6.1---Selezionare-colonne">
+<h3>6.1 - Selezionare colonne<a class="headerlink" href="#6.1---Selezionare-colonne" title="Permalink to this headline">¶</a></h3>
 <p>Se vogliamo un sotto-insieme di colonne, possiamo indicare i nomi in una lista così:</p>
 <p><strong>NOTA</strong>: dentro le quadre esterne c’è una semplice lista di stringhe senza <code class="docutils literal notranslate"><span class="pre">df</span></code>!</p>
 <div class="nbinput docutils container">
@@ -5693,8 +5693,8 @@ Name: time_stamp, Length: 110869, dtype: object
 </div></div>
 </div>
 </div>
-<div class="section" id="5.2---Aggiungere-Colonne">
-<h3>5.2 - Aggiungere Colonne<a class="headerlink" href="#5.2---Aggiungere-Colonne" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="6.2---Aggiungere-Colonne">
+<h3>6.2 - Aggiungere Colonne<a class="headerlink" href="#6.2---Aggiungere-Colonne" title="Permalink to this headline">¶</a></h3>
 <p>E’ possibile ottenere nuove colonne effettuando calcoli da campi di altri colonne in modo molto naturale. Per esempio, qua ricaviamo la nuova colonna <code class="docutils literal notranslate"><span class="pre">mag_tot</span></code>, cioè il campo magnetico assoluto rilevato dalla stazione spaziale ricavandolo a partire da <code class="docutils literal notranslate"><span class="pre">mag_x</span></code>, <code class="docutils literal notranslate"><span class="pre">mag_y</span></code>, e <code class="docutils literal notranslate"><span class="pre">mag_z</span></code>, e poi la plottiamo:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
@@ -5950,8 +5950,8 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 </div>
-<div class="section" id="5.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">
-<h3>5.2.1 Esercizio - temperatura meteo in Fahrenheit<a class="headerlink" href="#5.2.1-Esercizio---temperatura-meteo-in-Fahrenheit" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="6.2.1-Esercizio---temperatura-meteo-in-Fahrenheit">
+<h3>6.2.1 Esercizio - temperatura meteo in Fahrenheit<a class="headerlink" href="#6.2.1-Esercizio---temperatura-meteo-in-Fahrenheit" title="Permalink to this headline">¶</a></h3>
 <p>Nel dataframe <code class="docutils literal notranslate"><span class="pre">meteo</span></code>, crea una colonna <code class="docutils literal notranslate"><span class="pre">Temp</span> <span class="pre">(Fahrenheit)</span></code> con la temperatura misurata in gradi Fahrenheit</p>
 <p>Formula per calcolare la conversione dai gradi Celsius (C):</p>
 <p><span class="math notranslate nohighlight">\(Fahrenheit = \frac{9}{5}C + 32\)</span></p>
@@ -6159,8 +6159,8 @@ Name: time_stamp, dtype: object
 </div></div>
 </div>
 </div>
-<div class="section" id="5.2.2-Esercizio---Pressione-vs-Temperatura">
-<h3>5.2.2 Esercizio - Pressione vs Temperatura<a class="headerlink" href="#5.2.2-Esercizio---Pressione-vs-Temperatura" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="6.2.2-Esercizio---Pressione-vs-Temperatura">
+<h3>6.2.2 Esercizio - Pressione vs Temperatura<a class="headerlink" href="#6.2.2-Esercizio---Pressione-vs-Temperatura" title="Permalink to this headline">¶</a></h3>
 <p>La pressione dovrebbe essere direttamente proporzionale alla temperatura in un ambiente chiuso secondo la <a class="reference external" href="https://en.wikipedia.org/wiki/Gay-Lussac%27s_law">Legge di Gay-Lussac</a>:</p>
 <p><span class="math notranslate nohighlight">\(\frac{P}{T} = k\)</span></p>
 <p>E’ vero per il dataset del <code class="docutils literal notranslate"><span class="pre">meteo</span></code>? Prova a scoprirlo calcolando direttamente la formula e comparando con i risultati del metodo <code class="docutils literal notranslate"><span class="pre">corr()</span></code>.</p>
@@ -6189,8 +6189,8 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 </div>
-<div class="section" id="5.3-Trasformare-colonne">
-<h3>5.3 Trasformare colonne<a class="headerlink" href="#5.3-Trasformare-colonne" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="6.3-Trasformare-colonne">
+<h3>6.3 Trasformare colonne<a class="headerlink" href="#6.3-Trasformare-colonne" title="Permalink to this headline">¶</a></h3>
 <p>Supponiamo di voler convertire tutti i valori della colonna temperatura da float a interi.</p>
 <p>Sappiamo che per convertire un float in un intero c’è la funzione predefinita di Python <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
 <div class="nbinput docutils container">
