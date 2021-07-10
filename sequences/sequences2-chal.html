@@ -1217,9 +1217,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#Domande-list-comprehension">Domande list comprehension</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#Esercizio---list-comprehension">Esercizio - list comprehension</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---potenza">Esercizio - potenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---Bubble-bubble">Esercizio - Bubble bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---radice">Esercizio - radice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---primi-car">Esercizio - primi car</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---QuandoFuoriPiove">Esercizio - QuandoFuoriPiove</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---porta-pazienza">Esercizio - porta pazienza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---maggiore-3">Esercizio - maggiore 3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---pari">Esercizio - pari</a></li>
@@ -1233,7 +1233,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#List-comprehension-filtrate">List comprehension filtrate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#Domande-list-comprehension-filtrate">Domande list comprehension filtrate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#Esercizio---list-comprehension-filtrate">Esercizio - list comprehension filtrate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sequences1-sol.html#Esercizi---list-comprehension-filtrate">Esercizi - list comprehension filtrate</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---savana">Esercizio - savana</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sequences1-sol.html#Esercizio---barZa">Esercizio - barZa</a></li>
 </ul>
@@ -1245,6 +1245,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sequenze e comprehensions 2: challenges</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Sfida---Hattori-Hanzō">Sfida - Hattori Hanzō</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---Elettromania">Sfida - Elettromania</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---Guardaroba">Sfida - Guardaroba</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Sfida---Por-el-suelo">Sfida - Por el suelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Sfida---Strambilia">Sfida - Strambilia</a></li>
 </ul>
@@ -2291,7 +2293,7 @@ div.rendered_html tbody tr:hover {
 <h2>Sfida - Hattori Hanzō<a class="headerlink" href="#Sfida---Hattori-Hanzō" title="Permalink to this headline">¶</a></h2>
 <p>✪ Requisiti: list comprehensions, stringhe</p>
 <p>Da oggi, sei un ninja Python.</p>
-<p>Dimostrerai il tuo valore esibendo maestria nell’uso delle <em>sequenze</em>, l’arma più elegante che solo i veri discepoli della <em>Via del Coding</em> riescono a volteggiare con disinvoltura.</p>
+<p>Dimostrerai il tuo valore esibendo maestria nell’uso delle <em>sequenze</em>, l’arma più elegante che solo i veri discepoli della <em>Via del Coding</em> riescono a brandire con disinvoltura.</p>
 <ul class="simple">
 <li><p><strong>NON</strong> usare cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
 <li><p><strong>NON</strong> usare metodi delle liste</p></li>
@@ -2330,9 +2332,67 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 </div>
+<div class="section" id="Sfida---Elettromania">
+<h2>Sfida - Elettromania<a class="headerlink" href="#Sfida---Elettromania" title="Permalink to this headline">¶</a></h2>
+<p>✪✪ Produce una sequenza con tutti i nomi dei componenti con almeno 4 pezzi</p>
+<ul class="simple">
+<li><p><strong>NON USARE</strong> cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p><strong>USA UNA</strong> sola list comprehension</p></li>
+<li><p>il tuo codice deve stare in una riga sola</p></li>
+</ul>
+<p>INPUT: <code class="docutils literal notranslate"><span class="pre">[('condensatore',</span> <span class="pre">8),</span> <span class="pre">('resistenza',4),</span> <span class="pre">('led',5),</span> <span class="pre">('diodo',1),</span> <span class="pre">('trasduttore',2),</span> <span class="pre">('transistor',12)</span> <span class="pre">,</span> <span class="pre">('sensore',3),('solenoide',10)]</span></code></p>
+<p>OUTPUT: <code class="docutils literal notranslate"><span class="pre">['condensatore',</span> <span class="pre">'led',</span> <span class="pre">'transistor'</span> <span class="pre">'solenoide']</span></code></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">circuito</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;condensatore&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;resistenza&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;led&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;diodo&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;trasduttore&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;transistor&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span> <span class="p">,</span> <span class="p">(</span><span class="s1">&#39;sensore&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="s1">&#39;solenoide&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Sfida---Guardaroba">
+<h2>Sfida - Guardaroba<a class="headerlink" href="#Sfida---Guardaroba" title="Permalink to this headline">¶</a></h2>
+<p>✪✪ Produce una sequenza di stringhe da due di input</p>
+<ul class="simple">
+<li><p><strong>NON</strong> usare <code class="docutils literal notranslate"><span class="pre">range</span></code></p></li>
+<li><p><strong>USA UNA</strong> sola list comprehension</p></li>
+<li><p>il tuo codice deve stare in una riga sola</p></li>
+</ul>
+<p>Esempio - data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">indumenti</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cappotti&#39;</span><span class="p">,</span> <span class="s1">&#39;giacconi&#39;</span><span class="p">,</span> <span class="s1">&#39;mantelli&#39;</span><span class="p">,</span> <span class="s1">&#39;ventine&#39;</span><span class="p">]</span>
+<span class="n">capi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Il tuo codice deve produrre:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;ci sono 9 cappotti&#39;</span><span class="p">,</span> <span class="s1">&#39;ci sono 5 giacconi&#39;</span><span class="p">,</span> <span class="s1">&#39;ci sono 7 mantelli&#39;</span><span class="p">,</span> <span class="s1">&#39;ci sono 3 ventine&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="n">indumenti</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cappotti&#39;</span><span class="p">,</span> <span class="s1">&#39;giacconi&#39;</span><span class="p">,</span> <span class="s1">&#39;mantelli&#39;</span><span class="p">,</span> <span class="s1">&#39;ventine&#39;</span><span class="p">]</span>
+<span class="n">capi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="Sfida---Por-el-suelo">
 <h2>Sfida - Por el suelo<a class="headerlink" href="#Sfida---Por-el-suelo" title="Permalink to this headline">¶</a></h2>
-<p>✪✪ Requisiti: ilst comprehensions, range</p>
+<p>✪✪ Requisiti: list comprehensions, range</p>
 <p>Data una <code class="docutils literal notranslate"><span class="pre">frase</span></code> di n parole, scrivi del codice che produce una NUOVA lista di n tuple di numeri. Ogni tupla conterrà numeri da 1 a k, dove k è la lunghezza della parola corrispondente.</p>
 <ul class="simple">
 <li><p><strong>NON USARE</strong> cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
@@ -2341,7 +2401,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 <p>Esempio - data:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2359,7 +2419,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2391,7 +2451,7 @@ div.rendered_html tbody tr:hover {
 <p>Scrivi del codice che produce una NUOVA lista.</p>
 <p>Esempio - data:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2410,7 +2470,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>

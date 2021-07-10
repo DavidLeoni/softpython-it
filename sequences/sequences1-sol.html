@@ -1217,9 +1217,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Domande-list-comprehension">Domande list comprehension</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Esercizio---list-comprehension">Esercizio - list comprehension</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---potenza">Esercizio - potenza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Bubble-bubble">Esercizio - Bubble bubble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---radice">Esercizio - radice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---primi-car">Esercizio - primi car</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---QuandoFuoriPiove">Esercizio - QuandoFuoriPiove</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---porta-pazienza">Esercizio - porta pazienza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---maggiore-3">Esercizio - maggiore 3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---pari">Esercizio - pari</a></li>
@@ -1233,7 +1233,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#List-comprehension-filtrate">List comprehension filtrate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Domande-list-comprehension-filtrate">Domande list comprehension filtrate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Esercizio---list-comprehension-filtrate">Esercizio - list comprehension filtrate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Esercizi---list-comprehension-filtrate">Esercizi - list comprehension filtrate</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---savana">Esercizio - savana</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---barZa">Esercizio - barZa</a></li>
 </ul>
@@ -1245,6 +1245,8 @@
 <li class="toctree-l2"><a class="reference internal" href="sequences2-chal.html">Sequenze e comprehensions 2: challenges</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Sfida---Hattori-Hanzō">Sfida - Hattori Hanzō</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Sfida---Elettromania">Sfida - Elettromania</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Sfida---Guardaroba">Sfida - Guardaroba</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Sfida---Por-el-suelo">Sfida - Por el suelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sequences2-chal.html#Sfida---Strambilia">Sfida - Strambilia</a></li>
 </ul>
@@ -2333,7 +2335,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;list_iterator at 0x7efd06fd24d0&gt;
+&lt;list_iterator at 0x7f4274019390&gt;
 </pre></div></div>
 </div>
 <p>Notiamo che Python ha creato un oggetto di tipo <code class="docutils literal notranslate"><span class="pre">list_iterator</span></code>.</p>
@@ -2516,7 +2518,7 @@ range(0, 4)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;range_iterator at 0x7efd170fcf00&gt;
+&lt;range_iterator at 0x7f4274078ba0&gt;
 </pre></div></div>
 </div>
 <p>Per chiederglieli dobbiamo usare la funzione <code class="docutils literal notranslate"><span class="pre">next</span></code>:</p>
@@ -2761,10 +2763,10 @@ range(0, 4)
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm57d5f101-68e2-4598-93d9-edadd495ea1e" type="application/json" >
+<script id="json-jm6eb044ad-c18f-4e6f-ad5d-421792aaa6e0" type="application/json" >
     {"code": " \nsequenza = range(4)\niteratore = iter(sequenza)\nnuova1 = list(iteratore)\nnuova2 = list(iteratore)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sequenza": ["REF", 1]}, "ordered_globals": ["sequenza"], "stack_to_render": [], "heap": {"1": ["INSTANCE_PPRINT", "range", "range(0, 4)"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sequenza": ["REF", 1], "iteratore": ["REF", 2]}, "ordered_globals": ["sequenza", "iteratore"], "stack_to_render": [], "heap": {"1": ["INSTANCE_PPRINT", "range", "range(0, 4)"], "2": ["INSTANCE", "range_iterator"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sequenza": ["REF", 1], "iteratore": ["REF", 2], "nuova1": ["REF", 3]}, "ordered_globals": ["sequenza", "iteratore", "nuova1"], "stack_to_render": [], "heap": {"1": ["INSTANCE_PPRINT", "range", "range(0, 4)"], "2": ["INSTANCE", "range_iterator"], "3": ["LIST", 0, 1, 2, 3]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"sequenza": ["REF", 1], "iteratore": ["REF", 2], "nuova1": ["REF", 3], "nuova2": ["REF", 4]}, "ordered_globals": ["sequenza", "iteratore", "nuova1", "nuova2"], "stack_to_render": [], "heap": {"1": ["INSTANCE_PPRINT", "range", "range(0, 4)"], "2": ["INSTANCE", "range_iterator"], "3": ["LIST", 0, 1, 2, 3], "4": ["LIST"]}, "stdout": ""}]}
 </script>
-<div id="jm57d5f101-68e2-4598-93d9-edadd495ea1e" class="pytutorVisualizer"> </div>
+<div id="jm6eb044ad-c18f-4e6f-ad5d-421792aaa6e0" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2784,12 +2786,12 @@ range(0, 4)
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm57d5f101-68e2-4598-93d9-edadd495ea1e').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm6eb044ad-c18f-4e6f-ad5d-421792aaa6e0').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm57d5f101-68e2-4598-93d9-edadd495ea1e',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm6eb044ad-c18f-4e6f-ad5d-421792aaa6e0',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -2900,7 +2902,7 @@ range(0, 4)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;list_reverseiterator at 0x7efd06ffd5d0&gt;
+&lt;list_reverseiterator at 0x7f42740ed410&gt;
 </pre></div></div>
 </div>
 <p>Vediamo che <code class="docutils literal notranslate"><span class="pre">reversed</span></code> ha prodotto un risultato che è un <em>iteratore</em> (non una lista rovesciata).</p>
@@ -3060,10 +3062,10 @@ range(0, 4)
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmc479ed3d-3417-4517-ba7b-b181db52dfba" type="application/json" >
+<script id="json-jm1ad79521-4af2-4e19-886b-1f9ff84fb9c1" type="application/json" >
     {"code": " \nla = ['a','b','c']\niteratore = reversed(la)\nlb = []\nlb.append(next(iteratore))\nlb.append(next(iteratore))\nlb.append(next(iteratore))\nprint(lb)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2]}, "ordered_globals": ["la", "iteratore"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "lb": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "lb": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "c"]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "lb": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "c", "b"]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "lb": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "c", "b", "a"]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "lb": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "a", "b", "c"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "c", "b", "a"]}, "stdout": "['c', 'b', 'a']\n"}]}
 </script>
-<div id="jmc479ed3d-3417-4517-ba7b-b181db52dfba" class="pytutorVisualizer"> </div>
+<div id="jm1ad79521-4af2-4e19-886b-1f9ff84fb9c1" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3083,12 +3085,12 @@ range(0, 4)
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmc479ed3d-3417-4517-ba7b-b181db52dfba').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm1ad79521-4af2-4e19-886b-1f9ff84fb9c1').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmc479ed3d-3417-4517-ba7b-b181db52dfba',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm1ad79521-4af2-4e19-886b-1f9ff84fb9c1',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3396,10 +3398,10 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm458f9f19-35c3-4617-b2a7-e9885ce87d20" type="application/json" >
+<script id="json-jm9b1205fe-5fee-4281-80f1-05aa1af48d28" type="application/json" >
     {"code": " \nla = ['p','r','o','v','a']\niteratore = reversed(la)\nnuova = list(iteratore)\nprint(\"la \u00e8\",la)\nprint(\"nuova \u00e8\",nuova)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", "p", "r", "o", "v", "a"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2]}, "ordered_globals": ["la", "iteratore"], "stack_to_render": [], "heap": {"1": ["LIST", "p", "r", "o", "v", "a"], "2": ["INSTANCE", "list_reverseiterator"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "nuova": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "nuova"], "stack_to_render": [], "heap": {"1": ["LIST", "p", "r", "o", "v", "a"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "a", "v", "o", "r", "p"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "nuova": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "nuova"], "stack_to_render": [], "heap": {"1": ["LIST", "p", "r", "o", "v", "a"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "a", "v", "o", "r", "p"]}, "stdout": "la \u00e8 ['p', 'r', 'o', 'v', 'a']\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "iteratore": ["REF", 2], "nuova": ["REF", 3]}, "ordered_globals": ["la", "iteratore", "nuova"], "stack_to_render": [], "heap": {"1": ["LIST", "p", "r", "o", "v", "a"], "2": ["INSTANCE", "list_reverseiterator"], "3": ["LIST", "a", "v", "o", "r", "p"]}, "stdout": "la \u00e8 ['p', 'r', 'o', 'v', 'a']\nnuova \u00e8 ['a', 'v', 'o', 'r', 'p']\n"}]}
 </script>
-<div id="jm458f9f19-35c3-4617-b2a7-e9885ce87d20" class="pytutorVisualizer"> </div>
+<div id="jm9b1205fe-5fee-4281-80f1-05aa1af48d28" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3419,12 +3421,12 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm458f9f19-35c3-4617-b2a7-e9885ce87d20').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm9b1205fe-5fee-4281-80f1-05aa1af48d28').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm458f9f19-35c3-4617-b2a7-e9885ce87d20',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm9b1205fe-5fee-4281-80f1-05aa1af48d28',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3575,7 +3577,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;zip at 0x7efd06e073c0&gt;
+&lt;zip at 0x7f4274031730&gt;
 </pre></div></div>
 </div>
 <p>Per quanto non si veda scritto ‘iteratore’ nel nome dell’oggetto, possiamo comunque usarlo come tale con <code class="docutils literal notranslate"><span class="pre">next</span></code>:</p>
@@ -3871,10 +3873,10 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmc35c0e6b-e2f3-45bd-bd00-54b41de7c8fc" type="application/json" >
+<script id="json-jm2c5d7a80-e3b5-4aa7-ab6b-c426fa8dbeb9" type="application/json" >
     {"code": " \nla = [7,5,6,9]\nlb = [x for x in la]", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2]}, "ordered_varnames": [".0"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2]}, "ordered_varnames": [".0"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "x": 7}, "ordered_varnames": [".0", "x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "x": 5}, "ordered_varnames": [".0", "x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "x": 6}, "ordered_varnames": [".0", "x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "x": 9}, "ordered_varnames": [".0", "x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "<listcomp>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "x": 9, "__return__": ["REF", 3]}, "ordered_varnames": [".0", "x", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "3": ["LIST", 7, 5, 6, 9], "1": ["LIST", 7, 5, 6, 9]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 3]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 5, 6, 9], "3": ["LIST", 7, 5, 6, 9]}, "stdout": ""}]}
 </script>
-<div id="jmc35c0e6b-e2f3-45bd-bd00-54b41de7c8fc" class="pytutorVisualizer"> </div>
+<div id="jm2c5d7a80-e3b5-4aa7-ab6b-c426fa8dbeb9" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3894,12 +3896,12 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmc35c0e6b-e2f3-45bd-bd00-54b41de7c8fc').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm2c5d7a80-e3b5-4aa7-ab6b-c426fa8dbeb9').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmc35c0e6b-e2f3-45bd-bd00-54b41de7c8fc',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm2c5d7a80-e3b5-4aa7-ab6b-c426fa8dbeb9',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3978,10 +3980,10 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm1c1b17c7-30ec-4d88-921a-8a47a496295b" type="application/json" >
+<script id="json-jmbb876a83-7740-40e4-ae9b-ddfbebe956d1" type="application/json" >
     {"code": " \nanimali = ['cani', 'gatti', 'scoiattoli', 'alci']\n\nnuova_lista = [animale.upper() for animale in animali]", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [], "heap": {"1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2]}, "ordered_varnames": [".0"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2]}, "ordered_varnames": [".0"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "animale": "cani"}, "ordered_varnames": [".0", "animale"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "animale": "gatti"}, "ordered_varnames": [".0", "animale"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "animale": "scoiattoli"}, "ordered_varnames": [".0", "animale"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "animale": "alci"}, "ordered_varnames": [".0", "animale"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<listcomp>", "globals": {"animali": ["REF", 1]}, "ordered_globals": ["animali"], "stack_to_render": [{"func_name": "<listcomp>", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {".0": ["REF", 2], "animale": "alci", "__return__": ["REF", 3]}, "ordered_varnames": [".0", "animale", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "<listcomp>_f1"}], "heap": {"2": ["INSTANCE", "list_iterator"], "3": ["LIST", "CANI", "GATTI", "SCOIATTOLI", "ALCI"], "1": ["LIST", "cani", "gatti", "scoiattoli", "alci"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"animali": ["REF", 1], "nuova_lista": ["REF", 3]}, "ordered_globals": ["animali", "nuova_lista"], "stack_to_render": [], "heap": {"1": ["LIST", "cani", "gatti", "scoiattoli", "alci"], "3": ["LIST", "CANI", "GATTI", "SCOIATTOLI", "ALCI"]}, "stdout": ""}]}
 </script>
-<div id="jm1c1b17c7-30ec-4d88-921a-8a47a496295b" class="pytutorVisualizer"> </div>
+<div id="jmbb876a83-7740-40e4-ae9b-ddfbebe956d1" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -4001,12 +4003,12 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm1c1b17c7-30ec-4d88-921a-8a47a496295b').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmbb876a83-7740-40e4-ae9b-ddfbebe956d1').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm1c1b17c7-30ec-4d88-921a-8a47a496295b',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmbb876a83-7740-40e4-ae9b-ddfbebe956d1',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4139,12 +4141,12 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 <div class="section" id="Esercizio---list-comprehension">
 <h2>Esercizio - list comprehension<a class="headerlink" href="#Esercizio---list-comprehension" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Esercizio---potenza">
-<h3>Esercizio - potenza<a class="headerlink" href="#Esercizio---potenza" title="Permalink to this headline">¶</a></h3>
-<p>✪ Data una lista di numeri, produrre una lista con la potenza quadrata dei numeri di input</p>
+<div class="section" id="Esercizio---Bubble-bubble">
+<h3>Esercizio - Bubble bubble<a class="headerlink" href="#Esercizio---Bubble-bubble" title="Permalink to this headline">¶</a></h3>
+<p>✪ Data una lista di stringhe, produrre una sequenza con tutte le stringhe replicate 4 volte</p>
 <ul class="simple">
-<li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">[4,5,9]</span></code></p></li>
-<li><p>OUTPUT: <code class="docutils literal notranslate"><span class="pre">[16,</span> <span class="pre">25,</span> <span class="pre">81]</span></code></p></li>
+<li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['gomma',</span> <span class="pre">'ciunga',</span> <span class="pre">'cicca']</span></code></p></li>
+<li><p>OUTPUT: <code class="docutils literal notranslate"><span class="pre">['gommagommagommagomma',</span>&#160; <span class="pre">'ciungaciungaciungaciunga',</span> <span class="pre">'ciccaciccaciccacicca']</span></code></p></li>
 </ul>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -4153,20 +4155,19 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-<span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="o">*</span> <span class="mi">4</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bubble_bubble</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[16, 25, 81]
+[&#39;gommagommagommagomma&#39;, &#39;ciungaciungaciungaciunga&#39;, &#39;ciccaciccaciccacicca&#39;]
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -4174,7 +4175,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -4183,12 +4184,11 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[16, 25, 81]
+[&#39;gommagommagommagomma&#39;, &#39;ciungaciungaciungaciunga&#39;, &#39;ciccaciccaciccacicca&#39;]
 </pre></div></div>
 </div>
 </div>
@@ -4245,8 +4245,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Esercizio---primi-car">
-<h3>Esercizio - primi car<a class="headerlink" href="#Esercizio---primi-car" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Esercizio---QuandoFuoriPiove">
+<h3>Esercizio - QuandoFuoriPiove<a class="headerlink" href="#Esercizio---QuandoFuoriPiove" title="Permalink to this headline">¶</a></h3>
 <p>✪ Data una lista di stringhe, produrre una lista con i primi caratteri di ogni stringa</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['Quando',</span> <span class="pre">'Fuori',</span> <span class="pre">'Piove',</span> <span class="pre">'Programmiamo']</span></code></p></li>
@@ -4641,7 +4641,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 <div class="section" id="Esercizio---puffi">
 <h3>Esercizio - puffi<a class="headerlink" href="#Esercizio---puffi" title="Permalink to this headline">¶</a></h3>
-<p>✪ Dati dei nomi produrre una lista con i nomi in ordine alfabetico tutti in maiuscolo</p>
+<p>✪ Dati dei nomi produrre una lista ordinata con i nomi in ordine alfabetico tutti in maiuscolo</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['Quattrocchi',</span> <span class="pre">'Forzuto',</span> <span class="pre">'Puffetta',</span> <span class="pre">'Tontolone']</span></code></p></li>
 <li><p>OUTPUT: <code class="docutils literal notranslate"><span class="pre">['FORZUTO',</span> <span class="pre">'PUFFETTA',</span> <span class="pre">'QUATTROCCHI',</span> <span class="pre">'TONTOLONE']</span></code></p></li>
@@ -4842,8 +4842,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </li>
 </ol>
 </div>
-<div class="section" id="Esercizio---list-comprehension-filtrate">
-<h2>Esercizio - list comprehension filtrate<a class="headerlink" href="#Esercizio---list-comprehension-filtrate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Esercizi---list-comprehension-filtrate">
+<h2>Esercizi - list comprehension filtrate<a class="headerlink" href="#Esercizi---list-comprehension-filtrate" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="Esercizio---savana">
 <h3>Esercizio - savana<a class="headerlink" href="#Esercizio---savana" title="Permalink to this headline">¶</a></h3>
 <p>Data una lista di stringhe, produrre una lista con solo le stringhe di lunghezza maggiore di 6</p>
