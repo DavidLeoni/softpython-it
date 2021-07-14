@@ -2563,10 +2563,10 @@ CIAO
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm121ddbc0-085e-4cba-b997-ec5a87980ece" type="application/json" >
+<script id="json-jmf8975adc-90ba-4a43-aca1-c55c32a30ce6" type="application/json" >
     {"code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nCIAO\n"}]}
 </script>
-<div id="jm121ddbc0-085e-4cba-b997-ec5a87980ece" class="pytutorVisualizer"> </div>
+<div id="jmf8975adc-90ba-4a43-aca1-c55c32a30ce6" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2586,12 +2586,12 @@ CIAO
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm121ddbc0-085e-4cba-b997-ec5a87980ece').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmf8975adc-90ba-4a43-aca1-c55c32a30ce6').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm121ddbc0-085e-4cba-b997-ec5a87980ece',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmf8975adc-90ba-4a43-aca1-c55c32a30ce6',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3458,9 +3458,9 @@ False
 <p>La multinazionale ToxiCorp è riuscita a mettere le mani su un tesoro di dati personali di ignari utenti, e ti propone di analizzarli per poi vendere informazioni private sul mercato nero al miglior offerente. L’offerta ti pare questionabile, ma pagano bene, perciò accetti.</p>
 <p>Occorre capire che dati sono e come catalogarli. Tra i tanti hai trovato una serie di stringhe che sembrano dei numeri di telefono.</p>
 <p>Ogni numero dovrebbe essere così composto:</p>
-<ul class="simple">
-<li><p>[<strong>prefisso nazionale 39</strong>] [<strong>10 numeri</strong>]</p></li>
-</ul>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+ [prefisso nazionale 39] [10 numeri]
+</pre></div>
+</div>
 <p>Scrivi del codice che stampa <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa è un numero telefonico, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p>
 <ul class="simple">
 <li><p>Dentro <code class="docutils literal notranslate"><span class="pre">telefono</span></code> metti uno alla volta i numeri che hai trovato</p></li>
