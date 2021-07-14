@@ -436,7 +436,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Metodo-isdigit">Metodo isdigit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Rubrica-telefonica">Esercizio - Rubrica telefonica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
@@ -2563,10 +2563,10 @@ CIAO
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmeeb5a777-3f33-4367-9812-f0a5b4be5555" type="application/json" >
+<script id="json-jm121ddbc0-085e-4cba-b997-ec5a87980ece" type="application/json" >
     {"code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nCIAO\n"}]}
 </script>
-<div id="jmeeb5a777-3f33-4367-9812-f0a5b4be5555" class="pytutorVisualizer"> </div>
+<div id="jm121ddbc0-085e-4cba-b997-ec5a87980ece" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -2586,12 +2586,12 @@ CIAO
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmeeb5a777-3f33-4367-9812-f0a5b4be5555').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm121ddbc0-085e-4cba-b997-ec5a87980ece').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmeeb5a777-3f33-4367-9812-f0a5b4be5555',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm121ddbc0-085e-4cba-b997-ec5a87980ece',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3453,19 +3453,18 @@ False
 False
 </pre></div></div>
 </div>
-<div class="section" id="Esercizio---Rubrica-telefonica">
-<h3>Esercizio - Rubrica telefonica<a class="headerlink" href="#Esercizio---Rubrica-telefonica" title="Permalink to this headline">¶</a></h3>
-<p>Sei riuscito a mettere le mani su un tesoretto di dati personali. Vista la tua vocazione per il crimine vuoi analizzarli per vedere se riesci a vendere informazioni private sul mercato nero al miglior offerente. Prima però occorre capire che dati sono e come catalogarli.</p>
-<p>Tra i tanti hai trovato una serie di stringhe che sembrano dei numeri di telefono. Scrivi del codice che ci risponderà True se è probabile che la stringa sia un numero telefonico.</p>
+<div class="section" id="Esercizio---Vendere-numeri">
+<h3>Esercizio - Vendere numeri<a class="headerlink" href="#Esercizio---Vendere-numeri" title="Permalink to this headline">¶</a></h3>
+<p>La multinazionale ToxiCorp è riuscita a mettere le mani su un tesoro di dati personali di ignari utenti, e ti propone di analizzarli per poi vendere informazioni private sul mercato nero al miglior offerente. L’offerta ti pare questionabile, ma pagano bene, perciò accetti.</p>
+<p>Occorre capire che dati sono e come catalogarli. Tra i tanti hai trovato una serie di stringhe che sembrano dei numeri di telefono.</p>
 <p>Ogni numero dovrebbe essere così composto:</p>
 <ul class="simple">
 <li><p>[<strong>prefisso nazionale 39</strong>] [<strong>10 numeri</strong>]</p></li>
 </ul>
+<p>Scrivi del codice che stampa <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa è un numero telefonico, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p>
 <ul class="simple">
-<li><p>Dentro x metti uno alla volta i numeri che hai trovato</p></li>
+<li><p>Dentro <code class="docutils literal notranslate"><span class="pre">telefono</span></code> metti uno alla volta i numeri che hai trovato</p></li>
 <li><p>Il codice deve essere generico, valido per tutti i numeri</p></li>
-<li><p>Devi restituire <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa può essere un numero di telefono</p></li>
-<li><p>Devi restituire <code class="docutils literal notranslate"><span class="pre">False</span></code> se la stringa può essere un numero di telefono</p></li>
 </ul>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3475,27 +3474,27 @@ False
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="c1"># Prova con ciascuno di questi numeri!</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;+392574856985&#39;</span>   <span class="c1"># Dovrebbe dare true</span>
-<span class="c1">#x = &#39;395851256954&#39;    # Dovrebbe dare false (manca il &#39;+&#39;)</span>
-<span class="c1">#x = &#39;++7485125874&#39;    # Dovrebbe dare false (manca il prefisso)</span>
-<span class="c1">#x = &#39;+39333457Ciao&#39;   # Dovrebbe dare false (mi pare ovvio :D )</span>
-<span class="c1">#x = &quot;+3912&quot;           # Dovrebbe dare false (troppo corto)</span>
-<span class="c1">#x = &#39;+393481489945&#39;   # Dovrebbe dare true</span>
+
+<span></span><span class="n">telefono</span> <span class="o">=</span> <span class="s1">&#39;+392574856985&#39;</span>    <span class="c1"># True</span>
+<span class="c1">#telefono = &#39;395851256954&#39;    # False (manca il &#39;+&#39;)</span>
+<span class="c1">#telefono = &#39;++7485125874&#39;    # False (manca il prefisso)</span>
+<span class="c1">#telefono = &#39;+39333457Ciao&#39;   # False (mi pare ovvio :D )</span>
+<span class="c1">#telefono = &quot;+3912&quot;           # False (troppo corto)</span>
+<span class="c1">#telefono = &#39;+393481489945&#39;   # True</span>
 
 <span class="c1"># scrivi qui</span>
-<span class="n">actual_number</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># Mi salvo la stringa escluso l&#39;eventuale +39</span>
+<span class="n">numero</span> <span class="o">=</span> <span class="n">telefono</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># Mi salvo la stringa escluso l&#39;eventuale +39</span>
 
 <span class="c1"># Facciamo 4 bool per tenere traccia di tutte le condizioni</span>
-<span class="n">plus</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>                  <span class="c1"># Comincia con il + ?</span>
-<span class="n">national_prefix</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;39&#39;</span><span class="p">)</span>  <span class="c1"># Dopo c&#39;è 39?     (Volendo si poteva fare insieme aLLA riga sopra)</span>
-<span class="n">is10long</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual_number</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>       <span class="c1"># Escluso il prefisso gli altri sono 10 caratteri?</span>
-<span class="n">digits</span> <span class="o">=</span> <span class="n">actual_number</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>          <span class="c1"># Sono tutti numeri?</span>
+<span class="n">segno_piu</span> <span class="o">=</span> <span class="n">telefono</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>                  <span class="c1"># Comincia con il + ?</span>
+<span class="n">prefisso_nazionale</span> <span class="o">=</span> <span class="n">telefono</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;39&#39;</span><span class="p">)</span>  <span class="c1"># Dopo c&#39;è 39?     (Volendo si poteva fare insieme aLLA riga sopra)</span>
+<span class="n">lungo10</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>       <span class="c1"># Escluso il prefisso gli altri sono 10 caratteri?</span>
+<span class="n">tutte_cifre</span> <span class="o">=</span> <span class="n">numero</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>          <span class="c1"># Sono tutti numeri?</span>
 
 <span class="c1"># Questa è solo una stampa di debug</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Controllo delle variabili: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">plus</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">national_prefix</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is10long</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">digits</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Controllo delle variabili:&quot;</span><span class="p">,</span> <span class="n">segno_piu</span><span class="p">,</span> <span class="n">prefisso_nazionale</span><span class="p">,</span> <span class="n">lungo10</span><span class="p">,</span> <span class="n">tutte_cifre</span><span class="p">)</span>
 <span class="c1"># Soluzione finale, combina tutto</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">plus</span> <span class="ow">and</span> <span class="n">national_prefix</span> <span class="ow">and</span> <span class="n">is10long</span> <span class="ow">and</span> <span class="n">digits</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E&#39; un numero di telefono?&quot;</span><span class="p">,</span> <span class="n">segno_piu</span> <span class="ow">and</span> <span class="n">prefisso_nazionale</span> <span class="ow">and</span> <span class="n">lungo10</span> <span class="ow">and</span> <span class="n">tutte_cifre</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3505,7 +3504,7 @@ False
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Controllo delle variabili: True True True True
-True
+E&#39; un numero di telefono? True
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
@@ -3514,13 +3513,13 @@ True
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="c1"># Prova con ciascuno di questi numeri!</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;+392574856985&#39;</span>   <span class="c1"># Dovrebbe dare true</span>
-<span class="c1">#x = &#39;395851256954&#39;    # Dovrebbe dare false (manca il &#39;+&#39;)</span>
-<span class="c1">#x = &#39;++7485125874&#39;    # Dovrebbe dare false (manca il prefisso)</span>
-<span class="c1">#x = &#39;+39333457Ciao&#39;   # Dovrebbe dare false (mi pare ovvio :D )</span>
-<span class="c1">#x = &quot;+3912&quot;           # Dovrebbe dare false (troppo corto)</span>
-<span class="c1">#x = &#39;+393481489945&#39;   # Dovrebbe dare true</span>
+
+<span></span><span class="n">telefono</span> <span class="o">=</span> <span class="s1">&#39;+392574856985&#39;</span>    <span class="c1"># True</span>
+<span class="c1">#telefono = &#39;395851256954&#39;    # False (manca il &#39;+&#39;)</span>
+<span class="c1">#telefono = &#39;++7485125874&#39;    # False (manca il prefisso)</span>
+<span class="c1">#telefono = &#39;+39333457Ciao&#39;   # False (mi pare ovvio :D )</span>
+<span class="c1">#telefono = &quot;+3912&quot;           # False (troppo corto)</span>
+<span class="c1">#telefono = &#39;+393481489945&#39;   # True</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -3700,14 +3699,22 @@ True
 </div>
 <div class="section" id="Esercizio---nani-e-GIGANTI">
 <h3>Esercizio - nani e GIGANTI<a class="headerlink" href="#Esercizio---nani-e-GIGANTI" title="Permalink to this headline">¶</a></h3>
-<p>In un mondo fantasy eccitante e sconosciuto vivono due popolazioni. Si tratta dei nani e dei GIGANTI. I nani amano dare nomi ai propri pargoli che contengono solo lettere minuscole. I GIGANTI invece non deono nemmeno pensarci, perchè come scritto sulle tavole di GROCK i nomi dei “piccoli” GIGANTI possono solo avere lettere maiuscole.</p>
-<p>Un giorno arrivò una minaccia malvagia da un regno lontano e come in tutti i clichè fu composta una compagnia. Una profezia diceva che solo una compagnia mista di GIGANTI e di nani per un totale di <strong>4</strong> persone avrebbe potuto sconfiggere il malvagio di turno.</p>
-<p>Beh allora scriviamo del codiche che controlla se quattro componenti possono comporre una compagnia valida.</p>
+<p>In un mondo fantasy eccitante e sconosciuto vivono due popolazioni: si tratta dei nani e dei GIGANTI.</p>
 <ul class="simple">
-<li><p>Il codice deve essere generico, valido per tutti i numeri</p></li>
-<li><p>Devi restituire True se i quattro nomi sono sia di nani che di GIGANTI</p></li>
-<li><p>Devi restituire False se i quattro nomi sono di una sola delle due popolazioni</p></li>
+<li><p>I nani amano dare nomi ai propri pargoli che contengono solo lettere minuscole.</p></li>
+<li><p>I GIGANTI invece non devono nemmeno pensarci, perchè come scritto sulle tavole di GROCK i nomi dei GIGANTI possono solo avere lettere maiuscole.</p></li>
 </ul>
+<p>Un giorno arrivò una minaccia malvagia da un regno lontano e come in tutti i clichè fu composta una compagnia. Una profezia diceva che solo una compagnia mista di GIGANTI e di nani per un totale di <strong>4</strong> persone avrebbe potuto sconfiggere il malvagio di turno.</p>
+<ol class="arabic simple">
+<li><p>Scrivi del codice che controlla se quattro componenti possono comporre una compagnia valida:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Stampa <code class="docutils literal notranslate"><span class="pre">True</span></code> se i quattro nomi sono sia di nani che di GIGANTI, altrimenti se sono di una sola delle due popolazioni stampa <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Il codice deve essere generico, valido per tutte le stringhe</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Cerca dei <a class="reference external" href="https://www.fantasynamegenerators.com/giant-names.php">nomi di GIGANTI</a> e <a class="reference external" href="https://www.fantasynamegenerators.com/dwarf_names.php">Nomi di nani</a> e prova a metterli, facendo attenzione a tradurli con la capitalizzazione tutta minuscola / tutta maiuscola corretta, es “Jisog” non è un nome di gigante valido, va tradotto alla scrittura gigantica “JISOG”.</p></li>
+</ol>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
@@ -3716,21 +3723,16 @@ True
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">avventurieroa1</span> <span class="o">=</span> <span class="s1">&#39;gimli&#39;</span>
-<span class="n">avventurieroa2</span> <span class="o">=</span> <span class="s1">&#39;savorlim&#39;</span>
-<span class="n">avventurieroa3</span> <span class="o">=</span> <span class="s1">&#39;glazouc&#39;</span>
-<span class="n">avventurieroa4</span> <span class="o">=</span> <span class="s1">&#39;hondouni&#39;</span>
-
-<span class="c1"># Cerca dei nomi e prova a metterli.</span>
-<span class="c1"># (Ovviamente devi tradurre i nomi di GIGANTI dalla scrittura umana &quot;Giorgio&quot; alla scrittura gigantica &quot;GIORGIO&quot;)</span>
-<span class="c1"># Nomi di nanə https://www.fantasynamegenerators.com/dwarf_names.php</span>
-<span class="c1"># Nomi di GIGANTə https://www.fantasynamegenerators.com/giant-names.php</span>
+<span></span><span class="n">avv1</span><span class="p">,</span> <span class="n">avv2</span><span class="p">,</span> <span class="n">avv3</span><span class="p">,</span> <span class="n">avv4</span> <span class="o">=</span> <span class="s1">&#39;gimli&#39;</span><span class="p">,</span> <span class="s1">&#39;savorlim&#39;</span><span class="p">,</span> <span class="s1">&#39;glazouc&#39;</span><span class="p">,</span> <span class="s1">&#39;hondouni&#39;</span>       <span class="c1"># False</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;OXLOR&#39;, &#39;HIVAR&#39;, &#39;ELOR&#39;, &#39;SUXGROG&#39;             # False</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;krakrerlig&#39;, &#39;GUCAM&#39;, &#39;SUXGROG&#39;, &#39;kodearen&#39;    # True</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;yarnithra&#39;, &#39;krakrerlig&#39;, &#39;jandreda&#39;, &#39;TOVIR&#39;  # True</span>
 
 <span class="c1"># scrivi qui</span>
-<span class="n">a1</span> <span class="o">=</span> <span class="n">avventurieroa1</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
-<span class="n">a2</span> <span class="o">=</span> <span class="n">avventurieroa2</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
-<span class="n">a3</span> <span class="o">=</span> <span class="n">avventurieroa3</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
-<span class="n">a4</span> <span class="o">=</span> <span class="n">avventurieroa4</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">avv1</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">avv2</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<span class="n">a3</span> <span class="o">=</span> <span class="n">avv3</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+<span class="n">a4</span> <span class="o">=</span> <span class="n">avv4</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="n">a1</span> <span class="o">==</span> <span class="n">a2</span> <span class="o">==</span> <span class="n">a3</span> <span class="o">==</span> <span class="n">a4</span><span class="p">))</span>
 </pre></div>
@@ -3750,15 +3752,10 @@ False
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">avventurieroa1</span> <span class="o">=</span> <span class="s1">&#39;gimli&#39;</span>
-<span class="n">avventurieroa2</span> <span class="o">=</span> <span class="s1">&#39;savorlim&#39;</span>
-<span class="n">avventurieroa3</span> <span class="o">=</span> <span class="s1">&#39;glazouc&#39;</span>
-<span class="n">avventurieroa4</span> <span class="o">=</span> <span class="s1">&#39;hondouni&#39;</span>
-
-<span class="c1"># Cerca dei nomi e prova a metterli.</span>
-<span class="c1"># (Ovviamente devi tradurre i nomi di GIGANTI dalla scrittura umana &quot;Giorgio&quot; alla scrittura gigantica &quot;GIORGIO&quot;)</span>
-<span class="c1"># Nomi di nanə https://www.fantasynamegenerators.com/dwarf_names.php</span>
-<span class="c1"># Nomi di GIGANTə https://www.fantasynamegenerators.com/giant-names.php</span>
+<span></span><span class="n">avv1</span><span class="p">,</span> <span class="n">avv2</span><span class="p">,</span> <span class="n">avv3</span><span class="p">,</span> <span class="n">avv4</span> <span class="o">=</span> <span class="s1">&#39;gimli&#39;</span><span class="p">,</span> <span class="s1">&#39;savorlim&#39;</span><span class="p">,</span> <span class="s1">&#39;glazouc&#39;</span><span class="p">,</span> <span class="s1">&#39;hondouni&#39;</span>       <span class="c1"># False</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;OXLOR&#39;, &#39;HIVAR&#39;, &#39;ELOR&#39;, &#39;SUXGROG&#39;             # False</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;krakrerlig&#39;, &#39;GUCAM&#39;, &#39;SUXGROG&#39;, &#39;kodearen&#39;    # True</span>
+<span class="c1">#avv1, avv2, avv3, avv4 = &#39;yarnithra&#39;, &#39;krakrerlig&#39;, &#39;jandreda&#39;, &#39;TOVIR&#39;  # True</span>
 
 <span class="c1"># scrivi qui</span>
 
