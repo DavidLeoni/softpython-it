@@ -41,7 +41,7 @@ troverete solo nell'ipynb originale su Github
 - Nelle `print` se possibile preferire la virgola  es `print("Hai fatto", salti, "salti")` a formattazione / concatenazione.
 - per la formattazione delle stringhe, usare i `%` tipo `"Hai fatto %s " % salti`. Non usare f-string. Evitare concatenzioni tipo `"fai " + str(n) + " salti"`
 
-# Altro
+## Altro
 
 - evitare codice con `input` da utente (è difficile e noioso da testare, può andar bene per fare giochi)
 - inclusività maschile/femminile: quando in dubbio, usare il criterio stocastico e tirare una moneta, croce usare maschile testa usare femminile, distribuendo equamente. Evitare forme intermedie tipo *, ə.
