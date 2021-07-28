@@ -321,7 +321,7 @@
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---quali-booleani-1?">Sfida - quali booleani 1?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---quali-booleani-2?">Sfida - quali booleani 2?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---Aereoporto">Sfida - Aereoporto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Teoria-del-boccino">Teoria del boccino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---Teoria-del-boccino">Sfida - Teoria del boccino</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---Space-mining">Sfida - Space mining</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---La-fabbrica-infinita">Sfida - La fabbrica infinita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics/basics4-chal.html#Sfida---L'Anello-di-Luce">Sfida - L’Anello di Luce</a></li>
@@ -1383,8 +1383,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html">Matrici liste di liste 3: challenges</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html#Sfida---Precariato-a-Murabasso">Sfida - Precariato a Murabasso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html#Sfida---incarta">Sfida - incarta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matrices-lists/matrices-lists3-chal.html#Sfida---cantiere">Sfida - cantiere</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: intro</a><ul>
@@ -2062,9 +2063,10 @@
 <p>SoftPython vuole essere un libro per umani, quindi:</p>
 <ul class="simple">
 <li><p>Dare del tu al lettore, quindi preferire <em>scrivi</em> a <em>scrivete</em></p></li>
-<li><p>Quando possibile inventare storielle, variando i temi (pirati, cowboy, etc), aumentano incredibilmente l’attenzione e partecipazione degli studenti.</p></li>
+<li><p>Quando possibile inventare storielle, variando i temi (pirati, cowboy, etc), aumentano incredibilmente l’attenzione e partecipazione degli studenti</p></li>
+<li><p>Ogni concetto presentato dovrebbe essere seguito da un qualche esercizio e/o domande</p></li>
 <li><p>Usare nomi in italiano per le variabili, evitare nomi astratti tipo <code class="docutils literal notranslate"><span class="pre">x</span></code>, per es <code class="docutils literal notranslate"><span class="pre">monete</span></code> è molto meglio</p></li>
-<li><p>Se si ha voglia, fare disegni / schemi in SVG con Inkscape ed esportarli in png (fornire entrambi)</p></li>
+<li><p>Se si ha voglia, fare disegni / schemi in SVG con Inkscape ed esportarli in png (fornire entrambi). Metterli in sottocartelle <code class="docutils literal notranslate"><span class="pre">img/</span></code></p></li>
 <li><p>Per ogni comando che si usa, accertarsi sempre che sia stato definito precedentemente nel libro. Tenere ridotto il numero di metodi diversi da usare negli esercizi</p></li>
 </ul>
 <p>Nei primi fogli dei fondamenti (1,2,3..):</p>
@@ -2073,9 +2075,9 @@
 <li><p>deve essere sempre chiaro se del codice produce un risultato (eventualmente da stampare) oppure MODIFICA l’input.</p></li>
 <li><p>quando possibile mettere gli input su una sola linea seguiti dal risultato atteso commentato, aggiungendo  almeno un’altro caso di test commentato tipo:</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vel</span><span class="o">=</span><span class="mi">23</span><span class="p">;</span> <span class="n">km</span><span class="o">=</span><span class="mi">48</span>    <span class="c1"># True</span>
-<span class="c1"># vel=15; km=39  # False</span>
-<span class="c1"># vel=18; km=22  # False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vel</span><span class="p">,</span><span class="n">km</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span><span class="mi">48</span>    <span class="c1"># True</span>
+<span class="c1"># vel,km = 15,39  # False</span>
+<span class="c1"># vel,km = 22,50  # False</span>
 </pre></div>
 </div>
 <p>Nelle sezioni più avanzate (es matrici):</p>
@@ -2086,10 +2088,12 @@
 </ul>
 <div class="section" id="editing">
 <h2>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
-<p>Ci sono una serie di comandi per ricavare automaticamente il testo degli esercizi a partire dalle soluzioni, li trovate nella pagina <a class="reference external" href="https://jupman.softpython.org/en/latest/usage.html#Solution-tags">Jupman: Usage</a>
-- nota: per l’edizione italiana <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">write</span> <span class="pre">here</span></code> diventa  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">scrivi</span> <span class="pre">qui</span></code> e <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">SOLUTION</span></code> diventa <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">SOLUZIONE</span></code>
-- NOTA: i comandi purge rimuovono il testo sia dall’esercizio che dalla soluzione presenti negli zip, quindi i comandi li
-troverete solo nell’ipynb originale su Github</p>
+<p>Ci sono una serie di comandi per ricavare automaticamente il testo degli esercizi a partire dalle soluzioni, li trovate nella pagina <a class="reference external" href="https://jupman.softpython.org/en/latest/usage.html#Solution-tags">Jupman: Usage</a></p>
+<ul class="simple">
+<li><p>nota: per l’edizione italiana <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">write</span> <span class="pre">here</span></code> diventa  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">scrivi</span> <span class="pre">qui</span></code> e <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">SOLUTION</span></code> diventa <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">SOLUZIONE</span></code></p></li>
+<li><p>NOTA: i comandi purge rimuovono il testo sia dall’esercizio che dalla soluzione presenti negli zip, quindi i comandi li
+troverete solo nell’ipynb originale su Github</p></li>
+</ul>
 </div>
 <div class="section" id="formattazione">
 <h2>Formattazione<a class="headerlink" href="#formattazione" title="Permalink to this headline">¶</a></h2>
@@ -2099,13 +2103,13 @@ troverete solo nell’ipynb originale su Github</p>
 <li><p>per la formattazione delle stringhe, usare i <code class="docutils literal notranslate"><span class="pre">%</span></code> tipo <code class="docutils literal notranslate"><span class="pre">&quot;Hai</span> <span class="pre">fatto</span> <span class="pre">%s</span> <span class="pre">&quot;</span> <span class="pre">%</span> <span class="pre">salti</span></code>. Non usare f-string. Evitare concatenzioni tipo <code class="docutils literal notranslate"><span class="pre">&quot;fai</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">str(n)</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">salti&quot;</span></code></p></li>
 </ul>
 </div>
-</div>
 <div class="section" id="altro">
-<h1>Altro<a class="headerlink" href="#altro" title="Permalink to this headline">¶</a></h1>
+<h2>Altro<a class="headerlink" href="#altro" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>evitare codice con <code class="docutils literal notranslate"><span class="pre">input</span></code> da utente (è difficile e noioso da testare, può andar bene per fare giochi)</p></li>
+<li><p>evitare codice con <code class="docutils literal notranslate"><span class="pre">input</span></code> da utente: è difficile e noioso da testare, ma potrebbe andar bene per fare giochi</p></li>
 <li><p>inclusività maschile/femminile: quando in dubbio, usare il criterio stocastico e tirare una moneta, croce usare maschile testa usare femminile, distribuendo equamente. Evitare forme intermedie tipo *, ə.</p></li>
 </ul>
+</div>
 </div>
 
 

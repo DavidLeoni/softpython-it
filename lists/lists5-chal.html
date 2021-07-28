@@ -323,7 +323,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---quali-booleani-1?">Sfida - quali booleani 1?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---quali-booleani-2?">Sfida - quali booleani 2?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Aereoporto">Sfida - Aereoporto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Teoria-del-boccino">Teoria del boccino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Teoria-del-boccino">Sfida - Teoria del boccino</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Space-mining">Sfida - Space mining</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---La-fabbrica-infinita">Sfida - La fabbrica infinita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---L'Anello-di-Luce">Sfida - L’Anello di Luce</a></li>
@@ -1385,8 +1385,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matrices-lists/matrices-lists3-chal.html">Matrici liste di liste 3: challenges</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists3-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists3-chal.html#Sfida---Precariato-a-Murabasso">Sfida - Precariato a Murabasso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists3-chal.html#Sfida---incarta">Sfida - incarta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matrices-lists/matrices-lists3-chal.html#Sfida---cantiere">Sfida - cantiere</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: intro</a><ul>
@@ -2464,7 +2465,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Sfida---Rupert-e-Mortimer">
 <h2>Sfida - Rupert e Mortimer<a class="headerlink" href="#Sfida---Rupert-e-Mortimer" title="Permalink to this headline">¶</a></h2>
 <p>✪✪ Requisiti: stringhe, liste</p>
-<p>I riccastri Rupert e Mortimer hanno alle dipendenze due faccendieri dalla dubbia reputazione, e non vogliono risulti traccia della loro presenza. Ogni ingresso e uscita dal palazzo di Rupert e Mortimer viene registrato dal guardiano, il quale però è stato appena assunto e sbadatamente ha segnato nel registro anche i nomi dei faccendieri. Scrivi del codice che elimini i loro nomi.</p>
+<p>I riccastri Rupert e Mortimer hanno alle dipendenze due faccendieri dalla dubbia reputazione, e non vogliono risulti traccia della loro presenza. Ogni ingresso e uscita dal palazzo di Rupert e Mortimer viene registrato dal guardiano, il quale però è stato appena assunto e sbadatamente ha segnato nel registro anche i nomi dei faccendieri. Scrivi del codice che MODIFICA la lista eliminando i loro nomi.</p>
 <ul class="simple">
 <li><p>I faccendieri si muovono sempre in coppia e oggi sono entrati e usciti esattamente 1 volta</p></li>
 <li><p>Il tuo codice deve funzionare con qualsiasi lista avente 1 ingresso e uscita</p></li>
@@ -2506,20 +2507,20 @@ div.rendered_html tbody tr:hover {
 <h2>Sfida - La ricetta della nonna<a class="headerlink" href="#Sfida---La-ricetta-della-nonna" title="Permalink to this headline">¶</a></h2>
 <p>✪✪ Requisiti: stringhe, liste, for, if</p>
 <p>La nonna ci ha dato la sua miracolosa ricetta della pasta olive acciughe e capperi.</p>
-<p>Dobbiamo andare a comprare gli ingredienti e dobbiamo capire quanti CAPPERI, OLIVE E ACCIUGHE comprare. Ovviamente di pasta ne abbiamo già in quantità, quindi non ci interessa .</p>
-<p>Per comprarli, dobbiamo sapere QUANTI prodotti comprare di ciascun tipo.</p>
+<p>Dobbiamo andare a comprare gli ingredienti e dobbiamo capire quanti <strong>capperi</strong>, <strong>olive</strong> e <strong>pepe</strong> comprare. Ovviamente di pasta ne abbiamo già in quantità, quindi non ci interessa.</p>
+<p>Per comprarli, dobbiamo sapere <strong>quanti</strong> prodotti comprare di ciascun tipo.</p>
 <ul class="simple">
 <li><p><strong>ATTENZIONE:</strong> la nonna ha la sua età ed è sempre stata pasticciona e quindi la ricetta è scritta in modo non consistente, e le parole vanno <em>normalizzate</em></p></li>
 <li><p><strong>SUGGERIMENTO:</strong> trasforma prima la stringa in una lista con il <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Metodo-split---da-stringhe-a-liste">metodo .split</a></p></li>
 </ul>
 <p>Esempio - dati:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ricetta</span> <span class="o">=</span> <span class="s2">&quot;oliva</span><span class="se">\t</span><span class="s2">, acciuga,cappero ,detersivo, cappero,acciuga ,oliva , cappero , oliva,pasta</span><span class="se">\n</span><span class="s2">&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ricetta</span> <span class="o">=</span> <span class="s2">&quot;oliva</span><span class="se">\t</span><span class="s2">, pepe,cappero ,detersivo, cappero, peperone, acciuga ,oliva , pepe</span><span class="se">\t</span><span class="s2">, cappero , oliva,pasta</span><span class="se">\n</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-<p>STAMPA:</p>
+<p>stampa:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Servono:
    3 oliva
-   2 acciuga
+   2 pepe
    3 cappero
 </pre></div>
 </div>
@@ -2529,11 +2530,11 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">ingrediente</span> <span class="o">=</span> <span class="s2">&quot;cappero&quot;</span>
-<span class="c1">#          0          1       2        3          4       5       6</span>
-<span class="n">ricetta</span> <span class="o">=</span> <span class="s2">&quot;oliva</span><span class="se">\t</span><span class="s2">, acciuga,cappero ,detersivo, cappero,acciuga ,oliva , cappero , oliva,pasta</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="n">num_oliva</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">num_acciuga</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span></span><span class="c1">#          0        1    2        3          4        5         6        7       8       9         10    11</span>
+<span class="n">ricetta</span> <span class="o">=</span> <span class="s2">&quot;oliva</span><span class="se">\t</span><span class="s2">, pepe,cappero ,detersivo, cappero, peperone, acciuga ,oliva , pepe</span><span class="se">\t</span><span class="s2">, cappero , oliva,pasta</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">num_oliva</span>   <span class="o">=</span> <span class="mi">0</span>
+<span class="n">num_pepe</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">num_cappero</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># scrivi qui</span>

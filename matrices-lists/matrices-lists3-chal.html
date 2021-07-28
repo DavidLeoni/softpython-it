@@ -323,7 +323,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---quali-booleani-1?">Sfida - quali booleani 1?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---quali-booleani-2?">Sfida - quali booleani 2?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Aereoporto">Sfida - Aereoporto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Teoria-del-boccino">Teoria del boccino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Teoria-del-boccino">Sfida - Teoria del boccino</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---Space-mining">Sfida - Space mining</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---La-fabbrica-infinita">Sfida - La fabbrica infinita</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../basics/basics4-chal.html#Sfida---L'Anello-di-Luce">Sfida - L’Anello di Luce</a></li>
@@ -1385,8 +1385,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Matrici liste di liste 3: challenges</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Sfida---Precariato-a-Murabasso">Sfida - Precariato a Murabasso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---incarta">Sfida - incarta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---cantiere">Sfida - cantiere</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: intro</a><ul>
@@ -2294,10 +2295,6 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="section" id="Matrici---Liste-di-liste-3---Challenges">
 <h1>Matrici - Liste di liste 3 - Challenges<a class="headerlink" href="#Matrici---Liste-di-liste-3---Challenges" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/matrices-lists.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/matrices-lists">Naviga file online</a></p>
-</div>
 <div class="section" id="Sfida---Precariato-a-Murabasso">
 <h2>Sfida - Precariato a Murabasso<a class="headerlink" href="#Sfida---Precariato-a-Murabasso" title="Permalink to this headline">¶</a></h2>
 <p>Siamo nel 2020 e per Pier Giorgio della Cinta di Murabasso il lavoro fisso è ormai un miraggio. Ogni mese si giostra tra vari lavoretti e, siccome è una persona poco ordinata, tiene un registro di tutti i lavoretti part time ed occasionali che svolge per portare a casa la pagnotta.</p>
@@ -2313,7 +2310,7 @@ div.rendered_html tbody tr:hover {
 </ol>
 <p>Esempio - dati:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2332,7 +2329,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2362,6 +2359,130 @@ div.rendered_html tbody tr:hover {
     Totale da ricevere:  1150
 2.  Il lavoro più pagato finora è:  Vendita zafferano
 </pre></div></div>
+</div>
+</div>
+<div class="section" id="Sfida---incarta">
+<h2>Sfida - incarta<a class="headerlink" href="#Sfida---incarta" title="Permalink to this headline">¶</a></h2>
+<p>Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste di stringhe, MODIFICA <code class="docutils literal notranslate"><span class="pre">mat</span></code> mettendo ai lati di ogni stringa caratteri presi dalla lista <code class="docutils literal notranslate"><span class="pre">confezioni</span></code>. Ogni riga avrà una confezione diversa, vedere esempi.</p>
+<ul class="simple">
+<li><p>se la lista di <code class="docutils literal notranslate"><span class="pre">confezioni</span></code> ha lunghezza diversa dalle righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code>, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="k">def</span> <span class="nf">incarta</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">confezioni</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">]]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">incarta</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;|a|&#39;</span><span class="p">]]</span>
+<span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="kc">None</span>
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]]</span>
+<span class="n">incarta</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">m2</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;|f|&#39;</span><span class="p">,</span><span class="s1">&#39;|g|&#39;</span><span class="p">]]</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],]</span>
+<span class="n">incarta</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">m3</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;?a?&#39;</span><span class="p">],</span>
+              <span class="p">[</span><span class="s1">&#39;|b|&#39;</span><span class="p">]]</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]]</span>
+<span class="n">incarta</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="c1">#pprint(m3, width=53)</span>
+<span class="k">assert</span> <span class="n">m3</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;/f/&#39;</span><span class="p">,</span> <span class="s1">&#39;/e/&#39;</span><span class="p">,</span> <span class="s1">&#39;/a/&#39;</span><span class="p">,</span> <span class="s1">&#39;/b/&#39;</span><span class="p">],</span>
+              <span class="p">[</span><span class="s1">&#39;|a|&#39;</span><span class="p">,</span> <span class="s1">&#39;|c|&#39;</span><span class="p">,</span> <span class="s1">&#39;|g|&#39;</span><span class="p">,</span> <span class="s1">&#39;|f|&#39;</span><span class="p">],</span>
+              <span class="p">[</span><span class="s1">&#39;!b!&#39;</span><span class="p">,</span> <span class="s1">&#39;!c!&#39;</span><span class="p">,</span> <span class="s1">&#39;!d!&#39;</span><span class="p">,</span> <span class="s1">&#39;!f!&#39;</span><span class="p">]]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">incarta</span><span class="p">([[</span><span class="s1">&#39;a&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">])</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Avrei dovuto fallire prima !&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Sfida---cantiere">
+<h2>Sfida - cantiere<a class="headerlink" href="#Sfida---cantiere" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste di stringhe <code class="docutils literal notranslate"><span class="pre">nxm</span></code> e una lista di caratteri <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> di <code class="docutils literal notranslate"><span class="pre">n+1</span></code> elementi, RITORNA una NUOVA matrice ottenuta intervallando le righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code> con caratteri presi da <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Ai lati delle righe mettere sempre il carattare <code class="docutils literal notranslate"><span class="pre">'|'</span></code> eccetto per l’ultimo piano del tetto</p></li>
+<li><p>Se <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> è di lunghezza diversa dal numero di righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code> + 1, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>L’esercizio chiede solo di restituire una matrice. Volendo far qualcosa in più per stampare meglio, dalla matrice ottenuta provare a stampare qualcosa del genere:</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ^^^^
+|feab|
+|----|
+|acgf|
+|____|
+|bcdf|
+|====|
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="k">def</span> <span class="nf">cantiere</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">mattonelle</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
+
+
+<span class="n">m1</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">]]</span>
+<span class="k">assert</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                    <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">]]</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">]]</span>
+
+<span class="n">m2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]]</span>
+<span class="k">assert</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]]</span>
+
+<span class="n">m3</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],]</span>
+<span class="k">assert</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                       <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]]</span>
+
+<span class="n">m4</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+      <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]]</span>
+<span class="c1">#pprint(cantiere(m4, [&#39;^&#39;,&#39;-&#39;,&#39;-&#39;,&#39;=&#39;]))</span>
+<span class="c1">#pprint(m3, width=53)</span>
+<span class="k">assert</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+                                           <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">cantiere</span><span class="p">([[</span><span class="s1">&#39;a&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="s1">&#39;!&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Avrei dovuto fallire prima !&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
