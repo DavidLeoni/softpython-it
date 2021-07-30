@@ -2420,13 +2420,13 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Sfida---cantiere-pubblico">
 <h2>Sfida - cantiere pubblico<a class="headerlink" href="#Sfida---cantiere-pubblico" title="Permalink to this headline">¶</a></h2>
-<p>✪✪✪ Il sindaco ha ordinato che venga costruita la sua nuova una mega-villa dirigenziale di n piani con fondi pubblici. Per costruirla, ha assunto come ingegnere capo il figlio neo-diplomato geometra. Prevedibilmente, la casa risultante è un disastro:</p>
+<p>✪✪✪ Il sindaco ha ordinato che venga costruita la sua nuova mega-villa con fondi pubblici. Per dirigere i lavori ha assunto come ingegnere capo il figlio neo-diplomato geometra: prevedibilmente, la casa risultante è un disastro… ci sono i mattoni dei piani, ma mancano le mura esterne, il tetto, le fondamenta e le mattonelle per ricoprire i piani.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
  <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
  <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>ci sono i mattoni dei piani, ma mancano le mura esterne, il tetto, le fondamenta e le mattonelle per ricoprire i piani. Riluttante, per rimediare alla situazione imbarazzante il sindaco decide di assumere te, perchè nel curriculum mandato alla pubblica amministrazione hai falsamente dichiarato di essere un ingegnere vero con 8 lauree e vent’anni d’esperienza in costruzione di ville abusive.</p>
+<p>Per rimediare alla situazione imbarazzante il sindaco decide di assumere te, perchè nel curriculum che hai inviato alla pubblica amministrazione hai falsamente dichiarato di essere un ingegnere plurilaureato con vent’anni d’esperienza in costruzione di ville abusive.</p>
 <p>Data una lista di <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> come per es <code class="docutils literal notranslate"><span class="pre">['^','-','_','=']</span></code>, dovrai produrre una NUOVA casa così (le mura sono sempre <code class="docutils literal notranslate"><span class="pre">'|'</span></code>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>  <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">],</span>
    <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
@@ -2507,8 +2507,6 @@ div.rendered_html tbody tr:hover {
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Avrei dovuto fallire prima !&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="k">pass</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>  <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])]))</span>
 </pre></div>
 </div>
 </div>
