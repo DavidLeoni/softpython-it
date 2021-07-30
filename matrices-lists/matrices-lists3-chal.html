@@ -1386,8 +1386,8 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Matrici liste di liste 3: challenges</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Sfida---Precariato-a-Murabasso">Sfida - Precariato a Murabasso</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Sfida---incarta">Sfida - incarta</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Sfida---cantiere">Sfida - cantiere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---Incartati">Sfida - Incartati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Sfida---cantiere-pubblico">Sfida - cantiere pubblico</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matrices-numpy/matrices-numpy1-sol.html">Matrici Numpy 1: intro</a><ul>
@@ -2297,7 +2297,7 @@ div.rendered_html tbody tr:hover {
 <h1>Matrici - Liste di liste 3 - Challenges<a class="headerlink" href="#Matrici---Liste-di-liste-3---Challenges" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Sfida---Precariato-a-Murabasso">
 <h2>Sfida - Precariato a Murabasso<a class="headerlink" href="#Sfida---Precariato-a-Murabasso" title="Permalink to this headline">¶</a></h2>
-<p>Siamo nel 2020 e per Pier Giorgio della Cinta di Murabasso il lavoro fisso è ormai un miraggio. Ogni mese si giostra tra vari lavoretti e, siccome è una persona poco ordinata, tiene un registro di tutti i lavoretti part time ed occasionali che svolge per portare a casa la pagnotta.</p>
+<p>✪ Siamo nel 2020 e per Pier Giorgio della Cinta di Murabasso il lavoro fisso è ormai un miraggio. Ogni mese si giostra tra vari lavoretti e, siccome è una persona poco ordinata, tiene un registro di tutti i lavoretti part time ed occasionali che svolge per portare a casa la pagnotta.</p>
 <p>Il problema del disordine è infatti che usa liste, ma il povero Pier Giorgio non sa che esistono strutture molto più comode! Una volta risolto potresti guardare la sfida simile <a class="reference external" href="https://it.softpython.org/dictionaries/dictionaries6-chal.html#Sfida---Precariato-ad-Altomuro">Precariato ad Altomuro</a> che usa invece liste di dizionari.</p>
 <p>Questi dati sono salvati un una lista di liste, in cui ogni elemento è così composto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Etichetta</span><span class="p">,</span> <span class="n">Ammontare</span><span class="p">,</span> <span class="n">Stato_pagamento</span><span class="p">]</span>
@@ -2328,11 +2328,12 @@ div.rendered_html tbody tr:hover {
 2. Il lavoro più pagato finora è: Pettinatura pitoni
 </pre></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
 
 <span></span><span class="n">lavori</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="s2">&quot;Ripetizioni statistica&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">&quot;pagato&quot;</span><span class="p">],</span>
@@ -2350,22 +2351,25 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-1.  Totale ricevuto:  1500
-    Totale da ricevere:  1150
-2.  Il lavoro più pagato finora è:  Vendita zafferano
-</pre></div></div>
+<div class="section" id="Sfida---Incartati">
+<h2>Sfida - Incartati<a class="headerlink" href="#Sfida---Incartati" title="Permalink to this headline">¶</a></h2>
+<p>✪✪ La ditta <em>Le Cariamelle</em> in collaborazione con vari studi dentistici produce caramelle giganti iper-zuccherose che stiva in uno <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> con <code class="docutils literal notranslate"><span class="pre">n</span></code> ripiani aventi ciascuno <code class="docutils literal notranslate"><span class="pre">m</span></code> scompartimenti. Purtroppo, una visita del Nuclo Anti Sofisticazioni dei carabinieri scopre che le caramelle non sono confezionate a dovere: per evitare multe stellari, la fabbrica deve al più presto incartarle, e assegna quindi ad ogni ripiano un tipo di confezionamento diverso.</p>
+<p>Per esempio, dato uno <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> di cariamelle così:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]]</span>
+</pre></div>
 </div>
+<p>e una lista di <code class="docutils literal notranslate"><span class="pre">confezioni</span></code> come <code class="docutils literal notranslate"><span class="pre">['/','|','!']</span></code>, dovrai MODIFICARE lo <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> così:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;/f/&#39;</span><span class="p">,</span> <span class="s1">&#39;/e/&#39;</span><span class="p">,</span> <span class="s1">&#39;/a/&#39;</span><span class="p">,</span> <span class="s1">&#39;/b/&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;|a|&#39;</span><span class="p">,</span> <span class="s1">&#39;|c|&#39;</span><span class="p">,</span> <span class="s1">&#39;|g|&#39;</span><span class="p">,</span> <span class="s1">&#39;|f|&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;!b!&#39;</span><span class="p">,</span> <span class="s1">&#39;!c!&#39;</span><span class="p">,</span> <span class="s1">&#39;!d!&#39;</span><span class="p">,</span> <span class="s1">&#39;!f!&#39;</span><span class="p">]]</span>
+</pre></div>
 </div>
-<div class="section" id="Sfida---incarta">
-<h2>Sfida - incarta<a class="headerlink" href="#Sfida---incarta" title="Permalink to this headline">¶</a></h2>
-<p>Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste di stringhe, MODIFICA <code class="docutils literal notranslate"><span class="pre">mat</span></code> mettendo ai lati di ogni stringa caratteri presi dalla lista <code class="docutils literal notranslate"><span class="pre">confezioni</span></code>. Ogni riga avrà una confezione diversa, vedere esempi.</p>
+<p>Più formalmente, scrivi una funzione che data una matrice <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> come lista di liste di stringhe, MODIFICA <code class="docutils literal notranslate"><span class="pre">scaffale</span></code> mettendo ai lati di ogni stringa caratteri presi dalla lista <code class="docutils literal notranslate"><span class="pre">confezioni</span></code>. Ogni riga avrà una confezione diversa, vedere esempi.</p>
 <ul class="simple">
-<li><p>se la lista di <code class="docutils literal notranslate"><span class="pre">confezioni</span></code> ha lunghezza diversa dalle righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code>, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
+<li><p>se la lista di <code class="docutils literal notranslate"><span class="pre">confezioni</span></code> ha lunghezza diversa dalle righe di <code class="docutils literal notranslate"><span class="pre">scaffale</span></code>, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
 </ul>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -2374,13 +2378,16 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 
-<span class="k">def</span> <span class="nf">incarta</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">confezioni</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">incarta</span><span class="p">(</span><span class="n">scaffale</span><span class="p">,</span> <span class="n">confezioni</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">]]</span>
+<span class="n">riga_zero_m1</span> <span class="o">=</span> <span class="n">m1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">incarta</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">])</span>
-<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;|a|&#39;</span><span class="p">]]</span>
 <span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="kc">None</span>
+<span class="k">assert</span> <span class="n">m1</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;|a|&#39;</span><span class="p">]]</span>
+<span class="c1"># controlla che la riga zeresima punti ancora esattamente alla stessa regione di memoria originale</span>
+<span class="k">assert</span> <span class="nb">id</span><span class="p">(</span><span class="n">m1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">riga_zero_m1</span><span class="p">)</span>
 
 <span class="n">m2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]]</span>
 <span class="n">incarta</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">])</span>
@@ -2411,8 +2418,27 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 </div>
-<div class="section" id="Sfida---cantiere">
-<h2>Sfida - cantiere<a class="headerlink" href="#Sfida---cantiere" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Sfida---cantiere-pubblico">
+<h2>Sfida - cantiere pubblico<a class="headerlink" href="#Sfida---cantiere-pubblico" title="Permalink to this headline">¶</a></h2>
+<p>✪✪✪ Il sindaco ha ordinato che venga costruita la sua nuova una mega-villa dirigenziale di n piani con fondi pubblici. Per costruirla, ha assunto come ingegnere capo il figlio neo-diplomato geometra. Prevedibilmente, la casa risultante è un disastro:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>ci sono i mattoni dei piani, ma mancano le mura esterne, il tetto, le fondamenta e le mattonelle per ricoprire i piani. Riluttante, per rimediare alla situazione imbarazzante il sindaco decide di assumere te, perchè nel curriculum mandato alla pubblica amministrazione hai falsamente dichiarato di essere un ingegnere vero con 8 lauree e vent’anni d’esperienza in costruzione di ville abusive.</p>
+<p>Data una lista di <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> come per es <code class="docutils literal notranslate"><span class="pre">['^','-','_','=']</span></code>, dovrai produrre una NUOVA casa così (le mura sono sempre <code class="docutils literal notranslate"><span class="pre">'|'</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>  <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">],</span>
+   <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Più formalmente, scrivi una funzione che:</p>
 <ol class="arabic simple">
 <li><p>Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste di stringhe <code class="docutils literal notranslate"><span class="pre">nxm</span></code> e una lista di caratteri <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> di <code class="docutils literal notranslate"><span class="pre">n+1</span></code> elementi, RITORNA una NUOVA matrice ottenuta intervallando le righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code> con caratteri presi da <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code>.</p></li>
 </ol>
@@ -2421,7 +2447,7 @@ div.rendered_html tbody tr:hover {
 <li><p>Se <code class="docutils literal notranslate"><span class="pre">mattonelle</span></code> è di lunghezza diversa dal numero di righe di <code class="docutils literal notranslate"><span class="pre">mat</span></code> + 1, solleva <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="2">
-<li><p>L’esercizio chiede solo di restituire una matrice. Volendo far qualcosa in più per stampare meglio, dalla matrice ottenuta provare a stampare qualcosa del genere:</p></li>
+<li><p>L’esercizio chiede solo di restituire una matrice. Volendo far qualcosa in più per stampare meglio, dalla matrice ottenuta chiamando la funzione provare a stampare qualcosa del genere:</p></li>
 </ol>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ^^^^
 |feab|
@@ -2481,6 +2507,8 @@ div.rendered_html tbody tr:hover {
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Avrei dovuto fallire prima !&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="k">pass</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>  <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">cantiere</span><span class="p">(</span><span class="n">m4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;^&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">])]))</span>
 </pre></div>
 </div>
 </div>
