@@ -5168,7 +5168,6 @@ numeri uguali
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong></p>
 <p>Gli esercizi che seguono contengono dei test con gli <em>assert</em>. Per capire come svolgerli, leggi prima <a class="reference external" href="https://it.softpython.org/errors-and-testing/errors-and-testing-sol.html">Gestione errori e testing</a></p>
 </div>
-<p>Prova adesso a implementare queste funzioni</p>
 <div class="section" id="Esercizio---quadrofor">
 <h3>Esercizio - quadrofor<a class="headerlink" href="#Esercizio---quadrofor" title="Permalink to this headline">¶</a></h3>
 <p>✪✪✪ Restituisce una NUOVA matrice numpy di n righe e n colonne, in cui tutti i valori sono a zero eccetto quelli sui bordi, che devono essere uguali a k</p>
@@ -5515,19 +5514,18 @@ numeri uguali
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE media_righe_pro</span>
 
 
 <span class="k">def</span> <span class="nf">media_righe_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">righe</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span>   <span class="c1"># calcolo il numero delle righe e colonne</span>
     <span class="n">media</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># media per righe</span>
     <span class="n">media</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">righe</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>      <span class="c1"># trasformo in matrice con una colonna e n righe</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">media</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="p">[</span><span class="mf">5.0</span><span class="p">]</span>  <span class="p">])</span>
@@ -5556,44 +5554,16 @@ numeri uguali
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[5.]]
-[[4.]]
-[[2.5 ]
- [4.  ]
- [3.75]
- [4.75]
- [5.25]]
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE media_righe_pro</span>
 
 
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[5.]]
-[[4.]]
-[[2.5 ]
- [4.  ]
- [3.75]
- [4.75]
- [5.25]]
-</pre></div></div>
 </div>
 </div>
 <div class="section" id="Esercizio---matrot">
@@ -5880,7 +5850,8 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; 1 con where</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
+
 
 <span class="k">def</span> <span class="nf">disp_pro1</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mat</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">mat</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">mat</span><span class="p">))</span>
@@ -5908,7 +5879,8 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; 1 con where</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
+
 
 </pre></div>
 </div>
@@ -5920,7 +5892,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; 2 senza where</span>
+<span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
 
 
 <span class="k">def</span> <span class="nf">disp_pro2</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -5949,7 +5921,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; 2 senza where</span>
+<span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
 
 </pre></div>
 </div>
@@ -6079,7 +6051,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">radalt_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -6120,7 +6092,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 </pre></div>
 </div>
@@ -6217,7 +6189,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 <span class="k">def</span> <span class="nf">scacchiera_pro</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -6250,7 +6222,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 </pre></div>
@@ -6372,7 +6344,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 <span class="k">def</span> <span class="nf">somma_alterna_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -6412,7 +6384,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 </pre></div>
@@ -6524,7 +6496,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">media_meta_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">righe</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span>
@@ -6573,7 +6545,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 </pre></div>
 </div>
@@ -6645,7 +6617,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">matxarr_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">*</span> <span class="n">mat</span>
@@ -6669,7 +6641,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 </pre></div>
 </div>
@@ -6802,7 +6774,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">quadranti_pro</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">matrice</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -6846,7 +6818,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 </pre></div>
 </div>
@@ -6954,7 +6926,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; (SUGGERIMENTO: usare np.tile)</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
 
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -7001,7 +6973,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39; (SUGGERIMENTO: usare np.tile)</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
 
 </pre></div>
 </div>
@@ -7130,7 +7102,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="k">def</span> <span class="nf">gradini_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -7168,7 +7140,7 @@ numeri uguali
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 </pre></div>
 </div>
