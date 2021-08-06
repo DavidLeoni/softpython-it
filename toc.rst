@@ -74,7 +74,8 @@ B - Analisi dati
     Ricerca <search/regex-sol.ipynb>
     Integrazione <integration/integration-sol.ipynb>
     Estrazione <extraction/extraction-sol.ipynb>
-    Analitiche con Pandas <pandas/pandas-sol.ipynb>
+    Analitiche con Pandas 1: intro <pandas/pandas1-sol.ipynb>
+    Analitiche con Pandas 2: challenge <pandas/pandas2-chal.ipynb>
     Information retrieval <information-retrieval/information-retrieval-sol.ipynb>    
     Computer vision <computer-vision/computer-vision-sol.ipynb>
     
