@@ -130,6 +130,11 @@ h4 {
     
 }
 
+.toctree-l4 > a {
+    font-size: 1.06rem !important;
+    padding: .4045em 1.663em .4045em  4.663em !important;
+}
+
 .rst-content blockquote {
     font-size: 1.25rem;
 }
@@ -161,4 +166,8 @@ div.nbinput.container div.prompt, div.nboutput.container div.prompt{
 .jupman-sol {    
     background-color:#ebf3ed !important;  
     border-color: #d3dfd6 !important;            
+}
+
+a.jupman-sol-toggler:hover {
+    color: #21aa21 !important;
 }
