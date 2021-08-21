@@ -416,6 +416,23 @@ def init(jupman, conf={}):
     
     nbsphinx.Exporter.from_notebook_node = _from_notebook_node
 
+def make_stripped_cell_id(cid):
+    """ Given a solution id, creates a predictable new one 
+            
+        @since 3.3
+    """
+    
+    #See https://nbformat.readthedocs.io/en/latest/format_description.html#cell-ids
+    
+    mx = 64    
+    postfix = "-stripped"  # note: - is legal
+        
+    cand = cid + postfix
+    if len(cand) > mx:
+        return cid[:len(cid)-len(postfix)] + postfix
+    else:
+        return cand
+
 
 class JupmanPreprocessor(Preprocessor):
     """ @since 3.2 """
@@ -922,6 +939,9 @@ class Jupman:
 
         for cell in sh_cells:
             stripped_cell = copy.deepcopy(cell)
+            if "id" in cell:
+                stripped_cell["id"] = make_stripped_cell_id(cell["id"])
+
             if cell.cell_type == "code":
                 if self.is_to_strip(cell.source):                            
                                                             
@@ -1056,20 +1076,20 @@ class Jupman:
 
         # creating folders
         for dirpath, dirnames, filenames in os.walk(source_dir):
+                                    
             compath = os.path.commonpath([dirpath, source_dir])
-            dest_dir = os.path.join(dest_dir, dirpath[len(compath)+1:])            
-            if not self.is_zip_ignored(dest_dir):
-                if not os.path.isdir(dest_dir) :
-                    info("Creating dir %s" % dest_dir)
-                    os.makedirs(dest_dir)
-
-                
-                
+            dest_subdir = os.path.join(dest_dir, dirpath[len(compath)+1:])
+                            
+            if not self.is_zip_ignored(dest_subdir):
+                if not os.path.isdir(dest_subdir) :
+                    info("Creating dir %s" % dest_subdir)
+                    os.makedirs(dest_subdir)
+                        
                 for source_fn in filenames:                    
                     if not self.is_zip_ignored(source_fn):
                         
                         source_abs_fn = os.path.join(dirpath,source_fn)
-                        dest_fn = os.path.join(dest_dir , source_fn)                           
+                        dest_fn = os.path.join(dest_subdir , source_fn)                           
                         fileKind = FileKinds.detect(source_fn)
                         
                         if fileKind == FileKinds.CHALLENGE_SOLUTION:
@@ -1086,7 +1106,7 @@ class Jupman:
                             if FileKinds.is_supported_ext(  source_fn,
                                                             self.distrib_ext):
                                 self.generate_exercise( os.path.join(dirpath,source_fn),
-                                                        dest_dir=dest_dir)
+                                                        dest_dir=dest_subdir)
                                             
                                 
                         elif fileKind == FileKinds.TEST:                            
@@ -1097,7 +1117,6 @@ class Jupman:
                             self._copy_other(source_abs_fn,
                                              source_fn,
                                              dest_fn)
-
 
     def _common_files_maps(self, zip_name):
         """        
