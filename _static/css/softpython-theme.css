@@ -135,6 +135,11 @@ h4 {
     padding: .4045em 1.663em .4045em  4.663em !important;
 }
 
+.toctree-l5 > a {
+    font-size: 0.97rem !important;
+    padding: .4045em 1.663em .4045em  5em !important;
+}
+
 .rst-content blockquote {
     font-size: 1.25rem;
 }
