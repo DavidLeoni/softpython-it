@@ -300,9 +300,9 @@ $
         
         var fix = function(prefix){
 
-            var s = 'a.reference.internal[href^="' + prefix + 'toc.html"]';            
+            var s = 'nav a.reference.internal[href^="' + prefix + 'toc"]';            
             
-            var span = $(s + ' > span');
+            var span = $(s + ' > span.toctree-expand');
             span.off('click')
 
             var link = $(s); 
