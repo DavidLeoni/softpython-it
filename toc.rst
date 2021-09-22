@@ -6,102 +6,270 @@
     overview.ipynb
     installation.ipynb    
     
-A - Fondamenti
-=======================
+    
+A - Fondamenti      
+====================
 
 .. toctree::
     :maxdepth: 2
     :glob:
 
-    Introduzione rapida <quick-intro/quick-intro-sol.ipynb>    
-    Strumenti e script <tools/tools-sol.ipynb>    
-    Basi 1: variabili e interi <basics/basics1-ints-sol.ipynb>
-    Basi 2: booleani <basics/basics2-bools-sol.ipynb>
-    Basi 3: numeri reali <basics/basics3-floats-sol.ipynb>
-    Basi 4: challenges <basics/basics4-chal.ipynb>
-    Stringhe 1: intro <strings/strings1-sol.ipynb>
-    Stringhe 2: operatori <strings/strings2-sol.ipynb>
-    Stringhe 3: metodi <strings/strings3-sol.ipynb>
-    Stringhe 4: altri esercizi <strings/strings4-sol.ipynb>
-    Stringhe 5: challenges <strings/strings5-chal.ipynb>
-    Liste 1: introduzione <lists/lists1-sol.ipynb>
-    Liste 2: operatori <lists/lists2-sol.ipynb>
-    Liste 3: metodi <lists/lists3-sol.ipynb>
-    Liste 4: iterazione e funzioni <lists/lists4-sol.ipynb>    
-    Liste 5: challenges <lists/lists5-chal.ipynb>
-    Tuple 1: introduzione <tuples/tuples1-sol.ipynb>
-    Tuple 2: challenges <tuples/tuples2-chal.ipynb>
-    Insiemi 1: intro <sets/sets1-sol.ipynb>
-    Insiemi 2: challenges <sets/sets2-chal.ipynb>
-    Dizionari 1: creazione <dictionaries/dictionaries1-sol.ipynb>
-    Dizionari 2: operatori <dictionaries/dictionaries2-sol.ipynb>
-    Dizionari 3: metodi <dictionaries/dictionaries3-sol.ipynb>
-    Dizionari 4: iterazione e funzioni <dictionaries/dictionaries4-sol.ipynb>
-    Dizionari 5: strutture composte <dictionaries/dictionaries5-sol.ipynb>
-    Dizionari 6: challenges <dictionaries/dictionaries6-chal.ipynb>
-    Controllo di flusso 1: if <control-flow/flow1-if-sol.ipynb>
-    Controllo di flusso 2: for <control-flow/flow2-for-sol.ipynb>
-    Controllo di flusso 3: while <control-flow/flow3-while-sol.ipynb>
-    Controllo di flusso 4: challenges <control-flow/flow4-chal.ipynb>
-    Sequenze e comprehensions 1: intro <sequences/sequences1-sol.ipynb>
-    Sequenze e comprehensions 2: challenges <sequences/sequences2-chal.ipynb>
-    Funzioni 1: introduzione<functions/functions1-sol.ipynb>        
-    Funzioni 2: challenges<functions/functions2-chal.ipynb>        
-    Gestione errori e testing 1 <errors-and-testing/errors-and-testing1-sol.ipynb>
-    Gestione errori e testing 2: challenges <errors-and-testing/errors-and-testing2-chal.ipynb>
-    Matrici liste di liste 1 <matrices-lists/matrices-lists1-sol.ipynb>    
-    Matrici liste di liste 2: altri esercizi <matrices-lists/matrices-lists2-sol.ipynb>    
-    Matrici liste di liste 3: challenges <matrices-lists/matrices-lists3-chal.ipynb>    
-    Matrici Numpy 1: intro <matrices-numpy/matrices-numpy1-sol.ipynb>
-    Matrici Numpy 2: challenges  <matrices-numpy/matrices-numpy2-chal.ipynb>
-    commandments.ipynb
+    quick-intro/quick-intro-sol.ipynb
+    tools/tools-sol.ipynb    
+
+A1 Tipi di dato
+===============================
+    
+Basi
+-------
+    
+.. toctree::
+    :maxdepth: 3
+    :glob:            
+    
+    interi <basics/basics1-ints-sol.ipynb>
+    booleani <basics/basics2-bools-sol.ipynb>
+    float <basics/basics3-floats-sol.ipynb>
+    challenge <basics/basics4-chal.ipynb>
+    
+    
+Stringhe
+----------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+    
+    introduzione <strings/strings1-sol.ipynb>
+    operatori <strings/strings2-sol.ipynb>
+    metodi base <strings/strings3-sol.ipynb>
+    metodi di ricerca <strings/strings4-sol.ipynb>
+    challenge <strings/strings5-chal.ipynb>
+    
+    
+Liste
+--------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+    
+    introduzione <lists/lists1-sol.ipynb>
+    operatori <lists/lists2-sol.ipynb>
+    metodi di base <lists/lists3-sol.ipynb>
+    metodi di ricerca <lists/lists4-sol.ipynb>
+    challenge <lists/lists5-chal.ipynb>
+    
+Tuple
+--------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <tuples/tuples1-sol.ipynb>
+    challenge <tuples/tuples2-chal.ipynb>
+    
+    
+Insiemi
+---------
+    
+.. toctree::
+    :maxdepth: 3
+    :glob:
         
+    introduzione <sets/sets1-sol.ipynb>
+    challenge <sets/sets2-chal.ipynb>
+
+Dizionari
+--------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+    
+    introduzione <dictionaries/dictionaries1-sol.ipynb>
+    operatori <dictionaries/dictionaries2-sol.ipynb>
+    metodi <dictionaries/dictionaries3-sol.ipynb>
+    dizionari speciali <dictionaries/dictionaries4-sol.ipynb>
+    challenge <dictionaries/dictionaries5-chal.ipynb>
+    
+A2 Controllo di flusso
+=====================================
+
+Comando if
+-----------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <if/if1-sol.ipynb>
+    challenge <if/if2-chal.ipynb>
+
+Ciclo for
+------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+    
+    introduzione <for/for1-intro-sol.ipynb>    
+    iterare stringhe <for/for2-strings-sol.ipynb>
+    iterare liste <for/for3-lists-sol.ipynb>
+    iterare tuple <for/for4-tuples-sol.ipynb>
+    iterare insiemi <for/for5-sets-sol.ipynb>
+    iterare dizionari <for/for6-dictionaries-sol.ipynb>
+    for annidati <for/for7-nested-sol.ipynb>    
+    challenge <for/for8-chal.ipynb>
+
+Ciclo while
+-------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <while/while1-sol.ipynb>
+    challenge <while/while2-chal.ipynb>
+
+Sequenze
+-----------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <sequences/sequences1-sol.ipynb>
+    challenge <sequences/sequences2-chal.ipynb>
+    
+    
+A3 Algoritmi    
+============================
+
+Funzioni, gestione errori e testing
+--------------------------------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    definire funzioni <functions/fun1-intro-sol.ipynb>
+    gestione errori e testing <functions/fun2-errors-and-testing-sol.ipynb>
+    funzioni con stringhe <functions/fun3-strings-sol.ipynb>
+    funzioni con liste <functions/fun4-lists-sol.ipynb>    
+    funzioni con tuple <functions/fun5-tuples-sol.ipynb>
+    funzioni con insiemi <functions/fun6-sets-sol.ipynb>
+    funzioni con dizionari <functions/fun7-dictionaries-sol.ipynb>
+    challenge <functions/fun8-chal.ipynb>
+    
+    
+Matrici di liste
+--------------------    
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <matrices-lists/matrices-lists1-sol.ipynb>
+    altri esercizi <matrices-lists/matrices-lists2-sol.ipynb>
+    challenge <matrices-lists/matrices-lists3-chal.ipynb>
+
+Strutture composte
+---------------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <mixed-structures/mixed-structures1-sol.ipynb>
+    challenge <mixed-structures/mixed-structures2-chal.ipynb>
+
+Matrici Numpy
+-------------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    introduzione <matrices-numpy/matrices-numpy1-sol.ipynb>
+    esercizi <matrices-numpy/matrices-numpy2-sol.ipynb>
+    challenge <matrices-numpy/matrices-numpy3-chal.ipynb>  
+
 
 B - Analisi dati
 =======================
 
-.. toctree::
-    :maxdepth: 2
+
+.. toctree::   
+    :maxdepth: 3
     :glob:
 
+    toc-analytics.rst
 
-    Formati dati 1: file a linee <formats/formats1-lines-sol.ipynb>
-    Formati dati 2: file CSV <formats/formats2-csv-sol.ipynb>
-    Formati dati 3: file JSON <formats/formats3-json-sol.ipynb>
-    Formati dati 4: Challenge Personaggi storici del Trentino <formats/formats4-chal.ipynb>    
-    Visualizzazione 1 - introduzione <visualization/visualization1-sol.ipynb>
-    Visualizzazione 2 - challenge <visualization/visualization2-chal.ipynb>
-    Ricerca <search/regex-sol.ipynb>
-    Integrazione <integration/integration-sol.ipynb>
-    Estrazione <extraction/extraction-sol.ipynb>
-    Analitiche con Pandas 1: intro <pandas/pandas1-sol.ipynb>
-    Analitiche con Pandas 2: challenge <pandas/pandas2-chal.ipynb>
-    Information retrieval <information-retrieval/information-retrieval-sol.ipynb>    
-    Computer vision <computer-vision/computer-vision-sol.ipynb>
+    search/regex-sol.ipynb
+    integration/integration-sol.ipynb
+    extraction/extraction-sol.ipynb
+    information-retrieval/information-retrieval-sol.ipynb
+    computer-vision/computer-vision-sol.ipynb
+    
     
 C - Applicazioni
 ========================
 
+
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :glob:
 
-    Interfacce utente <gui/gui-sol.ipynb>    
-    Interfacce utente - Mappe <gui/gui-maps-sol.ipynb>    
-    Interfacce utente - Esempio webapp <gui/my-webapp.ipynb>    
-    Database <database/database-sol.ipynb>
-    Web development <web/web-sol.ipynb>
+    gui/gui-sol.ipynb
+    gui/gui-maps-sol.ipynb    
+    gui/my-webapp.ipynb
+    database/database-sol.ipynb
+    web/web-sol.ipynb
     
 D - Progetti
 ======================
 
+
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :glob:
 
-    project-howto.ipynb
-    Template progetto <project/project.ipynb>
-    project/markdown.ipynb    
-    project-ideas.ipynb    
-    challenges.ipynb    
+    project-howto.ipynb        
+    project/markdown.ipynb         
+    project/project.ipynb
     
+
+Progetti svolti    
+------------------    
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    toc-worked-projects.rst
+    
+    
+Challenge progetti
+--------------------
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+
+    project-ideas.ipynb
+    challenges.ipynb
+    
+E - Appendice
+=================
+
+.. toctree::
+    :maxdepth: 3
+    :glob:
+    
+    references.ipynb
+    commandments.ipynb
+    thanks.ipynb
+    changelog.ipynb
+   

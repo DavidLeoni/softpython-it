@@ -1,0 +1,1132 @@
+remoteId;published;modified;Nome;"Abstract (descrizione in breve)";Descrizione;Competenze;"Scheda della struttura";"Orario per il pubblico";Immagine;"Tipologia della Struttura";"Servizio di appartenenza";"Incarico di appartenenza";"Ufficio di appartenenza";"Struttura di appartenenza";"Area di appartenenza";Circoscrizione;"Telefono segreteria";Fax;"Indirizzo e-mail";"Indirizzo e-mail secondario";"Indirizzo e-mail certificata";Sede;Indirizzo;CAP;"Identificativo DB AS400 struttura (univoco)";"Codice identificativo della struttura AS400";"Codice del servizio (primo livello) AS400";"Codice dell'incarico (secondo livello) AS400";"Codice dell'ufficio (terzo livello) AS400";"Codice della struttura (quarto livello) AS400";"Codice altra struttura (quinto livello) AS400";"Data inizio validità";"Data fine validità";lat;lon;address
+struttura201;2009-02-24T09:51:54+01:00;2017-01-02T20:05:38+01:00;Clarina;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-889879;;tn.clarina@biblio.infotn.it;;;"CENTRO CIVICO OLTREFERSINA - CLARINA";"VIA LA CLARINA, 2  1";38123;201;201;17;;1;1;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.051936;11.128265;"VIA LA CLARINA, 2  1 "
+struttura202;2009-02-24T09:53:29+01:00;2017-01-02T20:05:39+01:00;"Madonna Bianca";"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-921377;;tn.madonnabianca@biblio.infotn.it;;;"CENTRO CIVICO MADONNA BIANCA";"PIAZZALE EUROPA, 11  ";38123;202;202;17;;1;2;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.040257;11.133271;"PIAZZALE EUROPA, 11   "
+struttura203;2009-02-24T09:54:48+01:00;2017-01-02T20:05:39+01:00;Argentario;"Sede periferica della biblioteca comunale di Trento. Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili.";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 06 - Argentario";0461-889797;;tn.argentario@biblio.infotn.it;;;"CENTRO CIVICO ""MARNIGHE"" A COGNOLA";"VIA CARLO E VALERIA JULG, 13  ";38121;203;203;17;;1;3;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.07694;11.141592;"VIA CARLO E VALERIA JULG, 13   "
+struttura204;2009-02-24T09:55:46+01:00;2017-01-02T20:05:39+01:00;Martignano;"Punto di prestito periferico della Biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 06 - Argentario";0461-828402;;martignano@biblio.infotn.it;;;"CENTRO CIVICO MARTIGNANO (ITEA)";"PIAZZA G. MENGHIN, 5  ";38121;204;204;17;;1;4;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089846;11.131505;"PIAZZA G. MENGHIN, 5   "
+struttura208;2009-02-24T09:56:56+01:00;2017-01-02T20:05:40+01:00;Montevaccino;"Punto di prestito periferico della Biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 06 - Argentario";0461-992166;;puntodiprestito@montevaccino.it;;;"CENTRO CIVICO (EX ELEMENTARI) DI MONTEVACCINO";"STRADA DI MONTEVACCINO, 1  ";38121;208;208;17;;1;5;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.108166;11.144407;"STRADA DI MONTEVACCINO, 1   "
+struttura209;2009-02-24T09:57:19+01:00;2017-01-02T20:05:40+01:00;Gardolo;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-889815;;tn.gardolo@biblio.infotn.it;;;"CENTRO CIVICO SOCIO-CULTUR.""CASA PEDROLLI"" GARDOLO";"PIAZZALE L. GROFF, 2  ";38121;209;209;17;;1;6;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.107853;11.112259;"PIAZZALE L. GROFF, 2   "
+struttura210;2009-02-24T09:57:48+01:00;2017-01-02T20:05:40+01:00;Meano;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 02 - Meano";0461-889758;;tn.meano@biblio.infotn.it;;;"CENTRO CIVICO MASERA A MEANO (ITEA)";"VIA DELLE SUGARINE, 28  ";38121;210;210;17;;1;7;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.126433;11.116412;"VIA DELLE SUGARINE, 28   "
+struttura212;2009-02-24T10:01:03+01:00;2017-01-02T20:05:42+01:00;Villazzano;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";;0461-912533;;tn.villazzano@biblio.infotn.it;;;;;;212;212;17;;1;9;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;0;4.511256;" "
+struttura213;2009-02-24T10:07:31+01:00;2017-01-02T20:05:42+01:00;Mattarello;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 08 - Mattarello";0461-889868;;tn.mattarello@biblio.infotn.it;;;"CENTRO CIVICO S. VIGILIO A MATTARELLO";"VIA G. POLI, 4  ";38123;213;213;17;;1;10;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.006129;11.128142;"VIA G. POLI, 4   "
+struttura214;2009-02-24T10:11:50+01:00;2017-01-02T20:05:42+01:00;Ravina;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 05 - Ravina - Romagnano";0461-889786;;tn.ravina@biblio.infotn.it;;;"CENTRO CIVICO RAVINA";"VIA VAL GOLA, 2  ";38123;214;214;17;;1;11;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.037829;11.106558;"VIA VAL GOLA, 2   "
+struttura215;2009-02-24T10:14:46+01:00;2017-01-02T20:05:43+01:00;Sopramonte;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 03 - Bondone";0461-889897;;tn.sopramonte@biblio.infotn.it;;;"CENTRO CIVICO SOPRAMONTE";"VIA DI REVÒLTA, 4  ";38123;215;215;17;;1;12;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.071699;11.060041;"VIA DI REVÒLTA, 4   "
+struttura216;2009-02-24T10:16:15+01:00;2017-01-02T20:05:43+01:00;Cadine;"Punto di prestito periferico della Biblioteca comunale di Trento. Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 03 - Bondone";0461-865481;;;;;"VIGILI DEL FUOCO CADINE C/O EDIFICIO ITEA";"VIA DI COLTURA, 34  A";38123;216;216;17;;1;13;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089459;11.067413;"VIA DI COLTURA, 34  A "
+struttura217;2009-02-24T10:18:44+01:00;2017-01-02T20:05:43+01:00;Romagnano;"Punto di prestito periferico della Biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 05 - Ravina - Romagnano";;;;;;"CENTRO CIVICO (EX MATERNA) - ROMAGNANO";"VIA ALLE SETTE FONTANE, 1  ";38123;217;217;17;;1;14;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.017179;11.105925;"VIA ALLE SETTE FONTANE, 1   "
+struttura218;2009-02-24T10:21:55+01:00;2017-01-02T20:05:44+01:00;"Ospedale - Reparti pediatrici";"Libri per i piccoli pazienti";"Presso i reparti pediatrici del S. Chiara è a disposizione dei piccoli pazienti una biblioteca di libri per ragazzi, che possono essere presi in prestito durante la degenza con la possibilità di portarli a casa e restituirli presso una qualunque biblioteca comunale del Trentino.";;;;;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";;0461-275559;;;;;;;;218;218;17;;1;15;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;0;4.511256;" "
+struttura219;2009-02-24T10:25:42+01:00;2017-01-02T20:05:44+01:00;Piscine;"In collaborazione con ASIS";"
+Nei soli mesi di giugno, luglio e agosto e in collaborazione con ASIS, è attivo un servizio di prestito presso il Lido di Gardolo e il Lido Manazzon.Una volta terminato il servizio, i materiali presi in prestito possono essere restituiti presso una qualsiasi delle sedi della BIblioteca comunale di Trento.";;;"Gli orari del servizio vengono comunicati nel periodo in cui il Punto di prestito è operativo";;"Punto di prestito";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";;;;;;;;;;219;219;17;;1;16;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;0;4.511256;" "
+struttura220;2009-02-24T10:27:25+01:00;2017-01-02T20:05:44+01:00;"Sede centrale";;;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Altra struttura";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889521;0461-889520;info@bibcom.trento.it;;;"BIBLIOTECA COMUNALE  ""EX COLLEGIO GESUITI""";"VIA ROMA, 55  ";38122;220;220;17;;1;17;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.069736;11.120889;"VIA ROMA, 55   "
+struttura130;2008-01-01T00:00:00+01:00;2017-01-02T20:05:23+01:00;Europa;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/europa/2924093-2-ita-IT/Europa.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-924622;0461-924622;europa@citta-futura.it;;;"EDIFICIO PLURIUSO-NIDO ""EUROPA"" (ITEA)";"VIA E. FERMI, 23  ";38123;130;130;18;;1;12;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.048596;11.12777;"VIA E. FERMI, 23   "
+struttura131;2008-01-01T00:00:00+01:00;2017-01-02T20:05:24+01:00;"Gianni Rodari";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/gianni-rodari/2924092-2-ita-IT/Gianni-Rodari.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-233192;0461-233192;rodari@citta-futura.it;;;"SCUOLA MATERNA E ASILO NIDO ""GIANNI RODARI""";"VIA B. GIOVANELLI, 6  ";38122;131;131;18;;1;13;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064569;11.131185;"VIA B. GIOVANELLI, 6   "
+struttura132;2008-01-01T00:00:00+01:00;2017-01-02T20:05:24+01:00;"Padre V.Tonini - Vigolo Baselga";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/padre-v.tonini-vigolo-baselga/2924091-2-ita-IT/Padre-V.Tonini-Vigolo-Baselga.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 03 - Bondone";0461-866291;0461-866291;tonini@citta-futura.it;;;"ASILO NIDO-VIGILI FUOCO VIGOLO BAS.(EX ELEMENTARE)";"VIA DON LUCA DEFLORIAN, 20  ";38123;132;132;18;;1;14;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.081465;11.043728;"VIA DON LUCA DEFLORIAN, 20   "
+struttura134;2008-01-01T00:00:00+01:00;2017-01-02T20:05:26+01:00;"La Mongolfiera - Mattarello";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/la-mongolfiera-mattarello/2924073-2-ita-IT/La-Mongolfiera-Mattarello.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 08 - Mattarello";0461-944428;0461-942500;nido.lamongolfiera@lacoccinella.coop;;;"ASILO NIDO ""LA MONGOLFIERA"" DI MATTARELLO";"VIA DELLA ROZOLA, 36  ";38123;134;134;18;;1;16;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.011508;11.132994;"VIA DELLA ROZOLA, 36   "
+struttura136;2008-01-01T00:00:00+01:00;2017-01-02T20:05:26+01:00;Oltrecastello;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/oltrecastello/2924071-2-ita-IT/Oltrecastello.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 07 - Povo";0461-342169;0461-342169;nido.oltrecastello@progestrento.it;;;"ASILO NIDO DI OLTRECASTELLO";"VIA BORINO, 1  ";38123;136;136;18;;1;18;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.070423;11.162653;"VIA BORINO, 1   "
+struttura137;2008-01-01T00:00:00+01:00;2017-01-02T20:05:27+01:00;"Roncafort (via Caproni)";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/roncafort-via-caproni/2924070-2-ita-IT/Roncafort-via-Caproni.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-420943;0461-420943;nido.roncafort@progestrento.it;;;"ASILO NIDO PART TIME RONCAFORT (ITEA)";"VIA G. CAPRONI, 36  ";38121;137;137;18;;1;19;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.1004;11.098932;"VIA G. CAPRONI, 36   "
+struttura138;2008-01-01T00:00:00+01:00;2017-01-02T20:05:27+01:00;"Viale dei Tigli";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/viale-dei-tigli/2924069-2-ita-IT/Viale-dei-Tigli.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-390147;0461-390147;nido.tigli@progestrento.it;;;"ASILO NIDO PART-TIME VIALE DEI TIGLI";"V.LE DEI TIGLI, 19  ";38123;138;138;18;;1;20;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.051812;11.133118;"V.LE DEI TIGLI, 19   "
+struttura222;2009-10-29T17:12:44+01:00;2013-04-15T20:00:02+02:00;"Cimitero di via Giusti";;;;;;;"Altra struttura";"SERVIZI FUNERARI";;;;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-884460;0461-884562;;;;"CIMITERO DI TRENTO E UFFICI COMUNALI (FUNERARIO)";"VIA C. MADRUZZO, 6  ";38122;222;222;38;0;0;1;0;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.063456;11.118908;"VIA C. MADRUZZO, 6   "
+struttura223;2009-10-29T17:12:48+01:00;2013-02-25T15:56:51+01:00;"Camere Mortuarie";"Informazioni di contatto, personale assegnato e altre informazioni utili";" c/o Ospedale Santa Chiara via S.F. Crosina - B.Sartori, n 4";;;"
+
+
+da lunedì al sabato 8 -18
+
+domenica e festivi  8 -12  14 -18
+
+
+";;"Altra struttura";"SERVIZI FUNERARI";;;;"AREA SERVIZI ALLA PERSONA";;0461-903219;;;;;;;;223;223;38;0;0;2;0;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;0;4.511256;" "
+struttura207;2009-10-30T09:55:18+01:00;2013-02-15T11:57:29+01:00;"Cantiere Strade";"Informazioni di contatto, personale assegnato e altre informazioni utili";;;;;;"Ulteriore struttura";"GESTIONE STRADE E PARCHI";;"Manutenzione aree demaniali (Strade)";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";"0461-889672  0461-884780";0461-889670;;;;"CAPANNONE SEDE CANTIERE VIA MACCANI";"VIA E. MACCANI, 150  ";38121;207;207;27;0;2;0;1;2009-01-01T00:00:00+01:00;;46.091149;11.108474;"VIA E. MACCANI, 150   "
+struttura259;2009-10-30T09:57:08+01:00;2010-12-31T12:40:03+01:00;"Squadra Pronto Intervento";;;;;;;"Ulteriore struttura";"GESTIONE STRADE E PARCHI";;"Manutenzione aree demaniali (Strade)";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884771;;;;;"TOP CENTER  - UFFICI COMUNALI";"VIA DEL BRENNERO,        312  ";38121;259;259;27;0;2;0;2;2009-07-01T00:00:00+02:00;1970-01-01T00:59:59+01:00;46.090683;11.117483;"VIA DEL BRENNERO,        312   "
+struttura415;2016-12-30T00:00:00+01:00;2017-03-08T11:50:01+01:00;Archivio;;;;;"dal lunedì al venerdì dalle 8.30 alle 12";;"Altra struttura";"INNOVAZIONE E SERVIZI DIGITALI";;"Protocollo e spedizione";;"DIREZIONE GENERALE";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889375;0461-889370;;;;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;415;0;8;;3;1;;2016-12-30T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura430;2016-12-30T00:00:00+01:00;2017-01-17T14:41:04+01:00;URP;;;;;"Da lunedì a venerdì dalle 9 alle 16.30";/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/urp/10234728-2-ita-IT/URP.png;"Ulteriore struttura";"BENI COMUNI E GESTIONE ACQUISTI";;;;"DIREZIONE GENERALE";"Circoscrizione n. 12 - Centro storico - Piedicastello";"0461-884453    numero verde 800017615";0461-884457;comurp@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO TORRE MIRANA E LOGGIA";"VIA R. BELENZANI, 3  ";38122;430;0;40;;;;1;2016-12-30T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.069545;11.121285;"VIA R. BELENZANI, 3   "
+struttura432;2016-12-30T00:00:00+01:00;2016-12-31T20:05:11+01:00;Stamperia;;;;;;;"Altra struttura";"BENI COMUNI E GESTIONE ACQUISTI";;Economato;;"DIREZIONE GENERALE";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884336;;stamperia@comune.trento.it;;;"UFFICI COMUNALI PALAZZO THUN";"VIA R. BELENZANI, 19  ";38122;432;0;40;;1;1;;2016-12-30T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.069111;11.121313;"VIA R. BELENZANI, 19   "
+struttura448;2017-01-01T00:00:00+01:00;2017-03-17T20:05:03+01:00;Avvocatura;;;"
+
+
+Provvede alla tutela dei diritti e degli interessi del Comune in qualsiasi sede e forma. Formula pareri su atti comunali che possano dare adito a contestazioni o comunque costituire materia di lite. 
+
+Assicura inoltre la consulenza su materie giuridiche nonché sulla attività legislativa dello Stato, della Regione e della Provincia a richiesta degli Amministratori comunali, del Segretario generale, nonché delle altre strutture organizzative comunali.
+
+Le attività di patrocinio sono svolte da tutti i laureati assegnati alla struttura in possesso della relativa abilitazione e iscritti nell'apposito elenco.
+
+ Cura le problematiche e la gestione diretta del contenzioso tributario.
+
+
+";;;;"Altra struttura";"SEGRETERIA GENERALE";;;;;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884350;0461-884159;avvocatura@comune.trento.it;;avvocatura.comune.tn@cert.legalmail.it;"UFFICI COMUNALI PALAZZO THUN";"VIA R. BELENZANI, 19  ";38122;448;0;1;;;1;;2017-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.069111;11.121313;"VIA R. BELENZANI, 19   "
+struttura133;2008-01-01T00:00:00+01:00;2017-01-02T20:05:25+01:00;"Madonna Bianca";"Nido d'infanzia comunale";"Vedi informazioni dettagliate";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/madonna-bianca/2924090-2-ita-IT/Madonna-Bianca.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-931290;0461-931290;nido.madonnabianca@progestrento.it;;;"SCUOLA MATERNA E ASILO NIDO ""MADONNA BIANCA""";"VIA A. BETTINI, 1  ";38123;133;133;18;;1;15;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.040213;11.135067;"VIA A. BETTINI, 1   "
+struttura283;2010-01-01T00:00:00+01:00;2017-01-02T20:05:47+01:00;"Il Magicocastello";"Nido d'infanzia comunale";"Vedi informazioni dettagliate";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-magicocastello/2943063-3-ita-IT/Il-Magicocastello.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-261443;0461-221868;nido.magicocastello@progestrento.it;;;"ASILO NIDO ""MAGICOCASTELLO"" (PETRARCA)";"VIA F. PETRARCA, 9  ";38122;283;0;18;;1;24;;2010-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.071911;11.123444;"VIA F. PETRARCA, 9   "
+struttura382;2016-01-11T00:00:00+01:00;2018-01-29T11:24:17+01:00;"Nucleo Edilizia";;;;;"L'ufficio è aperto al pubblico dal lunedì al venerdì dalle 07.00 alle 09.00 oppure previo appuntamento.Per insegne e impianti pubblicitari l'orario al pubblico è da lunedì al venerdì dalle 09.00 alle 11.00.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;"Posizione in staff comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889270;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;382;0;6;;;1;3;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura389;2016-01-11T00:00:00+01:00;2017-08-21T11:07:36+02:00;"Ufficio Gestione Apparati";"Manutenzione, aggiornamento e revisione di tutte le apparecchiature in dotazione alla Polizia Locale.";;;;"L'ufficio non è aperto al pubblico.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889130;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;389;0;6;;1;1;4;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura386;2016-01-11T00:00:00+01:00;2017-08-21T11:18:12+02:00;"Ufficio Segreteria Dirigente";;;;;"Per appuntamento con il Comandante dott. Lino Giacomoni chiamare dal lunedì al giovedì con orario 08.00 - 12.00 e 14.00 - 16.00. Il venerdì con orario 08.00 - 12.00";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889100;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;386;0;6;;1;1;1;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura390;2016-01-11T00:00:00+01:00;2017-08-21T11:03:44+02:00;"Ufficio Educazione Stradale";;;;;"L'ufficio non è aperto al pubblico";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889140;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;390;0;6;;1;1;5;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura388;2016-01-11T00:00:00+01:00;2017-08-21T11:00:50+02:00;"Ufficio Contabilità e Acquisti";;;;;"L'ufficio non è aperto al pubblico";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889180;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;388;0;6;;1;1;3;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura405;2016-01-11T00:00:00+01:00;2017-08-21T12:15:05+02:00;"Ufficio Pubblici Esercizi";;;;;"L'ufficio è aperto al pubblico dal lunedì al venerdì dalle ore 07.00 alle 09.00 o su appuntamento.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione polizia amministrativa";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889260;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;405;0;6;;2;2;2;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura380;2016-01-11T00:00:00+01:00;2017-08-21T12:50:07+02:00;"Nucleo Polizia Giudiziaria";;;;;"L'ufficio è aperto al pubblico solo su appuntamento";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;"Posizione in staff comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889230;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;380;0;6;;;1;1;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura399;2016-01-11T00:00:00+01:00;2017-08-21T12:16:49+02:00;"Ufficio Centrale Radio -Raccordo Unità Operativa";;;;;"L'ufficio non è aperto al pubblico.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889221;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;399;0;6;;2;1;1;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura400;2016-01-11T00:00:00+01:00;2017-08-21T12:18:46+02:00;"Ufficio Coordinamento Attività Esterne";;;;;"L'uffico è aperto solo  su appuntamento.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889200;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;400;0;6;;2;1;2;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura401;2016-01-11T00:00:00+01:00;2017-08-21T12:24:12+02:00;"Ufficio Viabilità - Pronto Intervento";;;;;"L'ufficio non è aperto al pubblico.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889111;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;401;0;6;;2;1;3;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura383;2016-01-11T00:00:00+01:00;2017-08-21T12:33:42+02:00;"Aliquota Procura";;;;;"L'ufficio non è aperto al pubblico.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;"Posizione in staff comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;383;0;6;;;1;4;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura402;2016-01-11T00:00:00+01:00;2017-08-21T12:21:06+02:00;"Ufficio Polizia di Prossimità";;;;;"L'ufficio è aperto solo su appuntamento.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889210;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;402;0;6;;2;1;4;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura403;2016-01-11T00:00:00+01:00;2017-08-21T12:22:28+02:00;"Ufficio Servizi";;;;;"L'ufficio non è aperto al pubblico.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889120;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;403;0;6;;2;1;5;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura379;2016-02-02T00:00:00+01:00;2017-09-29T20:05:02+02:00;"Posizione in staff comando";;;;;;;"Altra struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;;;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;379;0;6;;;1;;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura391;2016-02-02T00:00:00+01:00;2017-09-29T20:05:04+02:00;"Sezione comando";;;;;;;"Altra struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";;;"Circoscrizione n. 12 - Centro storico - Piedicastello";;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;391;0;6;;1;1;;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura392;2016-02-02T00:00:00+01:00;2017-09-29T20:05:04+02:00;"Sezione studi e contenzioso";;;;;;;"Altra struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";;;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;392;0;6;;1;2;;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura393;2016-02-01T00:00:00+01:00;2017-09-29T20:05:04+02:00;"Sezione servizi esterni";;;;;;;"Altra struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";;;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;393;0;6;;2;1;;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura394;2016-02-01T00:00:00+01:00;2017-09-29T20:05:05+02:00;"Sezione polizia amministrativa";;;;;;;"Altra struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";;;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;394;0;6;;2;2;;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura395;2016-01-11T00:00:00+01:00;2017-08-22T20:05:01+02:00;"Ufficio Studi e Pianificazione Viabilità";;;;;"L'ufficio non è aperto al pubblico";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione studi e contenzioso";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889301;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;395;0;6;;1;2;1;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura397;2016-02-01T00:00:00+01:00;2017-01-04T20:05:09+01:00;"Ufficio Procedure Sanzionatorie";;;;;"Gli uffici sono aperti al pubblico dal lunedì al venerdì dalle ore 8.30 alle ore 12.30";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione studi e contenzioso";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889310;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;397;0;6;;1;2;3;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura404;2016-02-01T00:00:00+01:00;2017-01-04T20:05:12+01:00;"Ufficio Commercio";;;;;"Gli uffici sono aperti al pubblico dalle ore 07.00 alle ore 09.00";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione polizia amministrativa";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889250;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;404;0;6;;2;2;1;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura406;2016-02-01T00:00:00+01:00;2017-01-04T20:05:13+01:00;"Ufficio Accertatori";;;;;"L'ufficio è aperto al pubblico dal lunedì al venerdì dalle 10.00 alle 12.00";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione polizia amministrativa";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889170;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;406;0;6;;2;2;3;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura407;2016-02-01T00:00:00+01:00;2017-01-04T20:05:13+01:00;"Ufficio Infortunistica";;;;;"L'ufficio è aperto al pubblico dal lunedì al venerdì dalle ore 08.00 alle 12.00";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione polizia amministrativa";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889240;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;407;0;6;;2;2;4;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura408;2016-02-01T00:00:00+01:00;2017-01-04T20:05:13+01:00;"Servizio Micologico";;;;;;;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione polizia amministrativa";;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;408;0;6;;2;2;5;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura409;2016-02-02T00:00:00+01:00;2017-01-04T20:05:14+01:00;"Servizio Piste";;;;;;;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area servizi sul territorio";"Sezione servizi esterni";;"Circoscrizione n. 12 - Centro storico - Piedicastello";;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;409;0;6;;2;1;6;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura396;2016-01-11T00:00:00+01:00;2017-09-12T11:41:51+02:00;"Ufficio Permessi e Varchi";;;;;"L'ufficio è aperto al pubblico lunedì, martedì, mercoledì e venerdì dalle 8.30 alle 12.30Il giovedì dalle 8.30 alle 13.00.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione studi e contenzioso";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889160;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;396;0;6;;1;2;2;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura205;2009-10-30T09:55:10+01:00;2011-11-11T21:40:07+01:00;"Serre comunali";;;;;;;"Ulteriore struttura";"GESTIONE STRADE E PARCHI";;"Parchi e giardini";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"0461-884528 0461-884541";;;;;"UFFICI COMUNALI E SERRE ""MASO SCHMALZL""";"VIA DEL MASO SMALZ, 3  ";38122;205;205;27;0;1;0;1;2009-01-01T00:00:00+01:00;1970-01-01T00:59:59+01:00;46.053134;11.115962;"VIA DEL MASO SMALZ, 3   "
+struttura387;2016-01-11T00:00:00+01:00;2018-02-20T08:47:25+01:00;"Ufficio Segreteria Comando";;;;;"Gli uffici sono aperti al pubblico dal lunedì al venerdì dalle ore 08.00 alle 12.00.Il giovedì l'orario è dalle ore 7.30 alle 13.00.Il sabato su appuntamento.Per occupazione plateatici l'orario al pubblico è il martedì e il giovedì  dalle 08.30 alle 12.00.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889150;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;387;0;6;;1;1;2;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura122;2008-01-01T00:00:00+01:00;2017-01-02T20:05:19+01:00;"Il Piccolo Girasole - Marnighe";"Nido d'infanzia comunale";"Vedi informazioni dettagliate";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-piccolo-girasole-marnighe/2924085-2-ita-IT/Il-Piccolo-Girasole-Marnighe.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 06 - Argentario";0461-236528;0461-236528;cognola@citta-futura.it;;;"ASILO NIDO ""IL PICCOLO GIRASOLE"" (MARNIGHE)COGNOLA";"VIA CARLO E VALERIA JULG, 40  ";38121;122;122;18;;1;4;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.077411;11.141737;"VIA CARLO E VALERIA JULG, 40   "
+struttura398;2016-01-11T00:00:00+01:00;2018-03-13T11:32:38+01:00;"Ufficio Ricorsi";;;;;"Gli uffici sono aperti al pubblico dal lunedì al venerdì dalle ore 8.30 alle ore 12.00 L'ufficio Sanzioni Trentino Trasporti è aperto  al pubblico il martedì e il giovedì  dalle 08.30 alle 12.00.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;"Area amministrativa e contenzioso";"Sezione studi e contenzioso";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889340;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;398;0;6;;1;2;4;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura139;2008-01-01T00:00:00+01:00;2017-01-02T20:05:28+01:00;Gardolo;"Nido d'infanzia comunale";"Vedi informazioni dettagliate";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/gardolo2/2924063-3-ita-IT/Gardolo.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-994364;0461-994364;nido.gardolo@bellesini.it;;;"ASILO NIDO DI VIA 4 NOVEMBRE/RIENZA GARDOLO (PAT)";"VIA 4 NOVEMBRE, 98  B";38121;139;139;18;;1;21;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.101006;11.112736;"VIA 4 NOVEMBRE, 98  B "
+struttura451;2017-06-29T00:00:00+02:00;2018-04-24T20:05:03+02:00;Semplificazione;;;;;;;"Altra struttura";"DIREZIONE GENERALE";;;;;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884167;;semplificazione@comune.trento.it;;;"EDIFICIO ""CASA DEL CAPITOLO"" VIA BELENZANI 18";"VIA R. BELENZANI, 18  ";38122;451;0;5;;;1;;2017-06-29T00:00:00+02:00;2050-12-31T00:00:00+01:00;46.069314;11.12109;"VIA R. BELENZANI, 18   "
+struttura118;2008-01-01T00:00:00+01:00;2018-09-21T11:35:17+02:00;"Argentario - Povo - Villazzano";"Polo sociale Argentario Povo Villazzano: recapiti telefonici impiegati e assistenti sociali, ubicazione uffici, orario per il pubblico, modalità appuntamenti...";"Struttura organizzativa
+Segreteria: Ceschini Vittorina - Vantini Giorgia
+Personale amministrativo: Ciurletti Diego
+Coordinatrice: Malpaga CristinaEducatore professionale: Ianes ElsaAssistenti socialiArea adulti e anziani
+
+
+Nicolodi Paola
+
+Toller Silvana
+
+Zanella Mirta
+
+
+Area minori e famiglie
+
+
+Motta Martina
+
+Winterle Ivano
+
+
+";;;"Sede di Povo
+Via della Resistenza, 61/Ftelefono 0461 - 889960
+
+
+lunedì, martedì, mercoledì 8.30 - 12.30
+
+giovedì 10.00 - 12.00 / 13.30 - 16.00
+
+venerdì 8.30 - 12.00
+
+
+";;"Polo Sociale";"ATTIVITA' SOCIALI";;"Poli sociali";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 07 - Povo";"Povo 0461-889960";0461-889961;;;;"CENTRO POLIFUNZIONALE PER ANZIANI ""VILLA CAVAGNA""";"VIA DELLA RESISTENZA, 61  ";38123;118;118;15;;1;5;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.066588;11.157017;"VIA DELLA RESISTENZA, 61   "
+struttura47;2008-01-01T00:00:00+01:00;2018-10-27T20:05:02+02:00;"Centro storico Piedicastello";"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività 
+    
+nella Circoscrizione.";;;;"Servizio anagrafe e certificazionimartedì, giovedì e venerdì dalle 8.00 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889930;0461-889931;circoscrizione.centrostoricopiedicastello@comune.trento.it;;;"CENTRO CIVICO CORSO BUONARROTI";"C.SO M. BUONARROTI, 45  ";38122;47;47;11;;1;12;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.073981;11.118936;"C.SO M. BUONARROTI, 45   "
+struttura453;2018-11-01T00:00:00+01:00;2018-11-06T20:05:02+01:00;"Ufficio Nucleo Autotrasporto";;;;;;;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;"Posizione in staff comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889190;;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;453;0;6;;;1;5;2018-11-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura128;2008-01-01T00:00:00+01:00;2018-11-08T20:05:02+01:00;Clarina;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/clarina/2924095-2-ita-IT/Clarina.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-925060;0461-925060;nido.clarina@progestrento.it;;;"ASILO NIDO ""CLARINA""";"VIA L. EINAUDI, 24  ";38123;128;128;18;;1;10;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.052274;11.126835;"VIA L. EINAUDI, 24   "
+struttura135;2008-01-01T00:00:00+01:00;2018-11-08T20:05:02+01:00;Meano;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/meano2/2924072-2-ita-IT/Meano.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 02 - Meano";0461-950398;0461-956445;meano@citta-futura.it;;;"SCUOLA MATERNA ""PARTELLONI"" E NIDO A MEANO";"VIA DELLE SUGARINE, 38  ";38121;135;135;18;;1;17;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.125568;11.116221;"VIA DELLE SUGARINE, 38   "
+struttura381;2016-01-11T00:00:00+01:00;2018-11-13T10:46:23+01:00;"Nucleo Operativo Ambientale";;;;;"L'ufficio è aperto al pubblico dal lunedì al venerdì dalle 07.30 alle 09.00.";;"Ulteriore struttura";"CORPO POLIZIA LOCALE DI TRENTO - MONTE BONDONE";;;"Posizione in staff comando";;"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889280;0461889109;;;poliziam.comune.tn@cert.legalmail.it;"UFFICI COMUNALI VIA MACCANI E PARCHEGGIO VIGILI";"VIA E. MACCANI, 148  ";38121;381;0;6;;;1;2;2016-01-11T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.091015;11.10881;"VIA E. MACCANI, 148   "
+struttura123;2008-01-01T00:00:00+01:00;2018-12-28T20:05:03+01:00;"S. Giuseppe";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/s.-giuseppe/2924084-2-ita-IT/S.-Giuseppe.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-914014;0461-914014;asilonido.sgiuseppe@comune.trento.it;;;"ASILO NIDO S. GIUSEPPE";"VIA G. GIUSTI, 54  ";38122;123;123;18;;1;5;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.058942;11.117736;"VIA G. GIUSTI, 54   "
+struttura153;2008-01-01T00:00:00+01:00;2018-12-28T20:05:06+01:00;"San Martino";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/san-martino/2924150-3-ita-IT/San-Martino.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-237516;0461-237516;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA ""S.MARTINO""";"VIA DELLA PREDARA, 16  ";38121;153;153;18;;2;11;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.074772;11.126332;"VIA DELLA PREDARA, 16   "
+struttura124;2008-01-01T00:00:00+01:00;2018-12-28T20:05:03+01:00;"La Trottola - Solteri";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/la-trottola-solteri/2924083-2-ita-IT/La-Trottola-Solteri.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889702;0461-889702;asilonido.solteri@comune.trento.it;;;"SCUOLA MATERNA A ASILO NIDO SOLTERI";"VIA DEI SOLTERI, 24  ";38121;124;124;18;;1;6;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.087821;11.12102;"VIA DEI SOLTERI, 24   "
+struttura121;2008-01-01T00:00:00+01:00;2018-12-28T20:05:02+01:00;"Aquilone - Gardolo";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/aquilone-gardolo/2924086-25-ita-IT/Aquilone-Gardolo.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-889721;0461-889720;asilonido.gardolo@comune.trento.it;;;"SCUOLA MATERNA E ASILO NIDO GARDOLO PALUDI";"VIA PALUDI, 9  1";38121;121;121;18;;1;3;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.104441;11.108045;"VIA PALUDI, 9  1 "
+struttura127;2008-01-01T00:00:00+01:00;2018-12-28T20:05:04+01:00;"Villazzano 3";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/villazzano-3/2924096-2-ita-IT/Villazzano-3.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-932440;0461-932440;nido.villazzano3@progestrento.it;;;"SCUOLA MATERNA E ASILO NIDO VILLAZZANO TRE";"VIA CONCI, 12  ";38123;127;127;18;;1;9;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.040966;11.139549;"VIA CONCI, 12   "
+struttura352;2014-08-19T00:00:00+02:00;2018-12-28T20:05:08+01:00;Ravina;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/ravina2/8414438-2-ita-IT/Ravina.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 05 - Ravina - Romagnano";0461-935187;0461-935187;ravina@citta-futura.it;;;"ASILO NIDO DI RAVINA";"VIA PER BELVEDERE,  6  A";38123;352;0;18;;1;26;;2014-08-19T00:00:00+02:00;2200-12-31T00:00:00+01:00;46.038939;11.108165;"VIA PER BELVEDERE,  6  A "
+struttura152;2008-01-01T00:00:00+01:00;2018-12-28T20:05:06+01:00;"L'Albero del Sole - Madonna Bianca";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/l-albero-del-sole-madonna-bianca/2924151-3-ita-IT/L-Albero-del-Sole-Madonna-Bianca.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-922124;0461-922124;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA E ASILO NIDO ""MADONNA BIANCA""";"VIA A. BETTINI, 1  ";38123;152;152;18;;2;10;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.040213;11.135067;"VIA A. BETTINI, 1   "
+struttura141;2008-01-01T00:00:00+01:00;2018-12-28T20:05:07+01:00;"Centro genitori bambini Torrione";"Servizio integrativo per bimbi fino ai 36 mesi.";"Per informazioni visita la 						
+					                scheda informativa dedicata
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/centro-genitori-bambini-torrione/2924098-6-ita-IT/Centro-genitori-bambini-Torrione.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-261414;0461-261414;asilonido.centrogenitori@comune.trento.it;;;"EDIFICIO ""TORRIONE"" (MATERNA-NIDO-MENSA BRESADOLA)";"VIA AL TORRIONE, 10  ";38122;141;141;18;;1;23;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.065259;11.122383;"VIA AL TORRIONE, 10   "
+struttura126;2008-01-01T00:00:00+01:00;2018-12-28T20:05:04+01:00;"Gabbiolo - Villazzano";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/gabbiolo-villazzano/2924097-2-ita-IT/Gabbiolo-Villazzano.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 09 - Villazzano";0461-910259;0461-910259;asilonido.gabbiolo@comune.trento.it;;;"ASILO NIDO A VILLAZZANO/GABBIOLO";"VIA ZNOJMO, 12  ";38123;126;126;18;;1;8;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.051822;11.149914;"VIA ZNOJMO, 12   "
+struttura120;2008-01-01T00:00:00+01:00;2018-12-28T20:05:02+01:00;"Orsetto Pandi - Cristo Re";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/orsetto-pandi-cristo-re/2924087-2-ita-IT/Orsetto-Pandi-Cristo-Re.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889701;0461-889701;asilonido.cristore@comune.trento.it;;;"SCUOLA MATERNA E ASILO NIDO CRISTO RE";"VIA L. SENESI, 3  ";38121;120;120;18;;1;2;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.081516;11.118067;"VIA L. SENESI, 3   "
+struttura146;2008-01-01T00:00:00+01:00;2018-12-28T20:05:05+01:00;"Il Piccolo Principe - Cristo Re";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-piccolo-principe-cristo-re/2924176-3-ita-IT/Il-Piccolo-Principe-Cristo-Re.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-824334;0461-824334;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA E ASILO NIDO CRISTO RE";"VIA L. SENESI, 3  ";38121;146;146;18;;2;4;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.081516;11.118067;"VIA L. SENESI, 3   "
+struttura165;2008-01-01T00:00:00+01:00;2018-12-28T20:05:07+01:00;"Mariachiara Conotter - Povo";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/mariachiara-conotter-povo/2924165-3-ita-IT/Mariachiara-Conotter-Povo.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 07 - Povo";0461-810574;0461-810574;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA ""MARIACHIARA CONOTTER"" A POVO";"VIA DELLA RESISTENZA, 48  ";38123;165;165;18;;2;23;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.067738;11.161619;"VIA DELLA RESISTENZA, 48   "
+struttura367;2015-08-18T00:00:00+02:00;2018-12-28T20:05:08+01:00;Martignano;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/martignano2/9254566-3-ita-IT/Martignano.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";;0461-262733;0461-262733;nido.martignano@lacoccinella.coop;;;"ASILO NIDO DI MARTIGNANO";"VIA DI MADERNO, 2  ";38121;367;0;18;;1;27;;2015-08-18T00:00:00+02:00;2200-12-31T00:00:00+01:00;46.088457;11.134438;"VIA DI MADERNO, 2   "
+struttura119;2008-01-01T00:00:00+01:00;2018-12-28T20:05:02+01:00;"Il Trenino - Bolghera";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-trenino-bolghera/2924088-2-ita-IT/Il-Trenino-Bolghera.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-889705;0461-889705;asilonido.bolghera@comune.trento.it;;;"ASILO NIDO ""BOLGHERA""";"VIA GOCCIADORO, 84  ";38122;119;119;18;;1;1;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.055465;11.132422;"VIA GOCCIADORO, 84   "
+struttura342;2008-01-01T00:00:00+01:00;2018-12-28T20:05:08+01:00;"Roncafort (via Caneppele)";"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/roncafort-via-caneppele/6875840-3-ita-IT/Roncafort-via-Caneppele.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-829854;0461-829854;roncafort@citta-futura.it;;;"ASILO NIDO A RONCAFORT (PROPRIETÀ ITEA)";"VIA L. CANEPPELE, 19  ";38121;342;0;18;;1;25;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.100689;11.101801;"VIA L. CANEPPELE, 19   "
+struttura147;2008-01-01T00:00:00+01:00;2018-12-28T20:05:06+01:00;"Crosina Sartori";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/crosina-sartori/2924175-3-ita-IT/Crosina-Sartori.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-925679;0461-925679;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA ""CROSINA SARTORI""";"VIA GOCCIADORO, 84  ";38122;147;147;18;;2;5;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.055465;11.132422;"VIA GOCCIADORO, 84   "
+struttura145;2008-01-01T00:00:00+01:00;2018-12-28T20:05:05+01:00;"Piccolo Mondo";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/piccolo-mondo/2924177-3-ita-IT/Piccolo-Mondo.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-925726;0461-925726;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA ""PICCOLO MONDO"" CLARINA";"VIA A. GRAMSCI, 11  ";38123;145;145;18;;2;3;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.053322;11.126373;"VIA A. GRAMSCI, 11   "
+struttura142;2008-01-01T00:00:00+01:00;2018-12-28T20:05:04+01:00;"Gianni Rodari";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-986198;0461-986198;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA E ASILO NIDO ""GIANNI RODARI""";"VIA B. GIOVANELLI, 6  ";38122;142;142;18;;2;1;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064569;11.131185;"VIA B. GIOVANELLI, 6   "
+struttura164;2008-01-01T00:00:00+01:00;2018-12-28T20:05:07+01:00;"L'Officina degli Gnomi - Villazzano 3";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/l-officina-degli-gnomi-villazzano-3/2924167-6-ita-IT/L-Officina-degli-Gnomi-Villazzano-3.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";0461-920367;0461-920367;circolo.coordinamento03@provincia.tn.it;;;"SCUOLA MATERNA E ASILO NIDO VILLAZZANO TRE";"VIA CONCI, 12  ";38123;164;164;18;;2;22;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.040966;11.139549;"VIA CONCI, 12   "
+struttura125;2008-01-01T00:00:00+01:00;2018-12-28T20:05:03+01:00;Torrione;"Nido d'infanzia comunale";"Vedi 						
+					                informazioni dettagliate
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/torrione/2924082-2-ita-IT/Torrione.jpg;"Nido d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Servizi per l'infanzia";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-987283;0461-987283;asilonido.torrione@comune.trento.it;;;"EDIFICIO ""TORRIONE"" (MATERNA-NIDO-MENSA BRESADOLA)";"VIA AL TORRIONE, 10  ";38122;125;125;18;;1;7;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.065259;11.122383;"VIA AL TORRIONE, 10   "
+struttura150;2008-01-01T00:00:00+01:00;2019-01-03T20:05:03+01:00;"Il Castello - Mattarello";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-castello-mattarello/2924153-3-ita-IT/Il-Castello-Mattarello.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 08 - Mattarello";0461-945095;0461-945095;circolo.coordinamento04@provincia.tn.it;;;"SCUOLA MATERNA ""IL CASTELLO"" DI MATTARELLO";"VIA DEL CASTEL, 1  A";38123;150;150;18;;2;8;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.005814;11.129542;"VIA DEL CASTEL, 1  A "
+struttura154;2008-01-01T00:00:00+01:00;2019-01-03T20:05:04+01:00;"Arcobaleno - Martignano";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/arcobaleno-martignano/2924149-5-ita-IT/Arcobaleno-Martignano.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 06 - Argentario";0461-830411;0461-830411;circolo.coordinamento06@provincia.tn.it;;;"SCUOLA MATERNA E SUCCURSALE ELEMENTARI MARTIGNANO";"VIA ALLA FORMIGHETA, 4  ";38121;154;154;18;;2;12;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089674;11.132001;"VIA ALLA FORMIGHETA, 4   "
+struttura161;2008-01-01T00:00:00+01:00;2019-01-03T20:05:06+01:00;"Il Quadrifoglio - Solteri";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-quadrifoglio-solteri/2924159-3-ita-IT/Il-Quadrifoglio-Solteri.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-821343;0461-821343;circolo.coordinamento06@provincia.tn.it;;;"SCUOLA MATERNA A ASILO NIDO SOLTERI";"VIA DEI SOLTERI, 24  ";38121;161;161;18;;2;19;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.087821;11.12102;"VIA DEI SOLTERI, 24   "
+struttura156;2008-01-01T00:00:00+01:00;2019-01-03T20:05:04+01:00;"Girotondo - Ravina";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/girotondo-ravina/2924164-3-ita-IT/Girotondo-Ravina.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 05 - Ravina - Romagnano";0461-922216;0461-922216;circolo.coordinamento04@provincia.tn.it;;;"SCUOLA MATERNA DI RAVINA";"VIA PER BELVEDERE, 8  ";38123;156;156;18;;2;14;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.038637;11.107508;"VIA PER BELVEDERE, 8   "
+struttura158;2008-01-01T00:00:00+01:00;2019-01-03T20:05:05+01:00;"Margit Levinson - Roncafort";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/margit-levinson-roncafort/2924162-4-ita-IT/Margit-Levinson-Roncafort.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-960422;0461-960422;circolo.coordinamento05@provincia.tn.it;;;"SCUOLA MATERNA RONCAFORT ""MARGIT LEVINSON""";"VIA DELL'ASILO, 8  ";38121;158;158;18;;2;16;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.100771;11.10263;"VIA DELL'ASILO, 8   "
+struttura331;2011-09-01T00:00:00+02:00;2019-01-03T20:05:07+01:00;"M.R. Giobatta Partelloni - Meano";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/m.r.-giobatta-partelloni-meano/6341666-2-ita-IT/M.R.-Giobatta-Partelloni-Meano.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 02 - Meano";0461-991187;0461-991187;circolo.coordinamento06@provincia.tn.it;;;"SCUOLA MATERNA ""PARTELLONI"" E NIDO A MEANO";"VIA DELLE SUGARINE, 38  ";38121;331;0;18;;2;13;;2011-09-01T00:00:00+02:00;2200-12-31T00:00:00+01:00;46.125568;11.116221;"VIA DELLE SUGARINE, 38   "
+struttura163;2008-01-01T00:00:00+01:00;2019-01-03T20:05:06+01:00;Torrione;"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/torrione2/2924157-3-ita-IT/Torrione.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-232554;0461-232554;circolo.coordinamento04@provincia.tn.it;;;"EDIFICIO ""TORRIONE"" (MATERNA-NIDO-MENSA BRESADOLA)";"VIA AL TORRIONE, 10  ";38122;163;163;18;;2;21;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.065259;11.122383;"VIA AL TORRIONE, 10   "
+struttura149;2008-01-01T00:00:00+01:00;2019-01-03T20:05:03+01:00;"Biancaneve - Gardolo";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/biancaneve-gardolo/2924156-8-ita-IT/Biancaneve-Gardolo.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-992128;0461-992128;circolo.coordinamento05@provincia.tn.it;;;"SCUOLA MATERNA E ASILO NIDO GARDOLO PALUDI";"VIA PALUDI, 9  1";38121;149;149;18;;2;7;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.104441;11.108045;"VIA PALUDI, 9  1 "
+struttura157;2008-01-01T00:00:00+01:00;2019-01-03T20:05:04+01:00;"Gli gnomi del bosco - Romagnano";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/gli-gnomi-del-bosco-romagnano/2924163-3-ita-IT/Gli-gnomi-del-bosco-Romagnano.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 05 - Ravina - Romagnano";0461-349153;0461-349153;circolo.coordinamento04@provincia.tn.it;;;"CENTRO POLIFUNZIONALE-MATERNA ROMAGNANO(E CABINA)";"VIA DELLE PREDE, 2  ";38123;157;157;18;;2;15;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.016386;11.105372;"VIA DELLE PREDE, 2   "
+struttura162;2008-01-01T00:00:00+01:00;2019-01-03T20:05:06+01:00;Piedicastello;"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/piedicastello/2924158-3-ita-IT/Piedicastello.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-983539;0461-983539;circolo.coordinamento05@provincia.tn.it;;;"SCUOLA MATERNA DI PIEDICASTELLO";"VIA DOS TRENTO, 86  ";38122;162;162;18;;2;20;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.071512;11.114278;"VIA DOS TRENTO, 86   "
+struttura159;2008-01-01T00:00:00+01:00;2019-01-03T20:05:05+01:00;"Maso Ginocchio - S.Giuseppe";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-930042;0461-930042;circolo.coordinamento04@provincia.tn.it;;;"SCUOLA MATERNA ""MASO GINOCCHIO""";"VIA G. GIUSTI, 56  ";38122;159;159;18;;2;17;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.058848;11.117713;"VIA G. GIUSTI, 56   "
+struttura148;2008-01-01T00:00:00+01:00;2019-01-03T20:05:03+01:00;"Girasole - Melta";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/girasole-melta/2924155-4-ita-IT/Girasole-Melta.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 01 - Gardolo";0461-991622;0461-991622;circolo.coordinamento06@provincia.tn.it;;;"SCUOLA MATERNA DI MELTA";"VIA DI MELTA, 14  ";38121;148;148;18;;2;6;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.100678;11.118575;"VIA DI MELTA, 14   "
+struttura143;2008-01-01T00:00:00+01:00;2019-01-03T20:05:02+01:00;"Il Melograno - Cadine";"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;/var/comunetn/storage/images/comune/organizzazione-comunale/organigramma/articolazioni-interne/il-melograno-cadine/2924178-3-ita-IT/Il-Melograno-Cadine.jpg;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 03 - Bondone";0461-866302;0461-866302;circolo.coordinamento05@provincia.tn.it;;;"SCUOLA MATERNA DI CADINE ""IL MELOGRANO""";"VIA DI COLTURA, 3  ";38123;143;143;18;;2;2;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089134;11.065125;"VIA DI COLTURA, 3   "
+struttura160;2008-01-01T00:00:00+01:00;2019-01-03T20:05:05+01:00;Sardagna;"Scuola dell'infanzia provinciale";"Vedi 						
+					                maggiori informazioni
+    
+";;;;;"Scuola d'infanzia";"SERVIZI ALL'INFANZIA, ISTRUZIONE E SPORT";;"Istruzione e sport";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 04 - Sardagna";0461-234186;0461-234186;circolo.coordinamento05@provincia.tn.it;;;"SCUOLA MATERNA DI SARDAGNA";"VIA CADUTI DI SARDAGNA, 8  ";38123;160;160;18;;2;18;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.063656;11.097598;"VIA CADUTI DI SARDAGNA, 8   "
+struttura115;2008-01-01T00:00:00+01:00;2019-01-04T12:09:42+01:00;"Centro storico - Piedicastello - Bondone - Sardagna";"Polo sociale: recapiti telefonici impiegati e assistenti sociali, ubicazione uffici, orario per il pubblico, modalità appuntamenti...";"
+
+Struttura organizzativa
+Segreteria:  - Bridarolli Marina
+Personale amministrativo: Benini Serena - Viola Ivana - Pompermaier Lorenza
+Coordinatrice: Carlin FrancescaEducatori professionali: Dellai Alessandro - Garberoglio DomingoAssistenti socialiArea adulti e anziani
+
+
+Dossi Barbara
+
+Carolini Leonora
+
+Ippolito Maria Teresa
+
+Rudatis Soraya Fortunata
+
+
+Area minori e famiglie
+
+
+Collini Monica
+
+Facenda Sara
+
+Luchesa Elena
+
+Armani Emanuele
+
+
+";;;"Sede Centro storico/Piedicastello
+via V. Alfieri, 6 - 38122 Trentotelefono 0461 889940
+
+
+lunedì, martedì, mercoledì 8.30 - 12.30
+
+giovedì 10.00 - 12.00 / 13.30 - 16.00
+
+venerdì 8.30 - 12.00
+
+
+";;"Polo Sociale";"ATTIVITA' SOCIALI";;"Poli sociali";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 12 - Centro storico - Piedicastello";"Centro storico/Piedicastello 0461-889940";;;;;"UFFICI COMUNALI DI VIA ALFIERI (PALAZZO EX ENEL)";"VIA V. ALFIERI, 6  ";38122;115;115;15;;1;2;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.070034;11.121492;"VIA V. ALFIERI, 6   "
+struttura114;2008-01-01T00:00:00+01:00;2019-01-04T12:11:17+01:00;"Gardolo - Meano";"Polo sociale di Gardolo - Meano: recapiti telefonici impiegati e assistenti sociali, ubicazione uffici, orario per il pubblico, modalità appuntamenti...";"Struttura organizzativa
+Segreteria: Esposito Rosaria - Postal Carla
+Personale amministrativo: Mattivi Alessandro - Viola Ivana
+Coordinatrice: Poli NicolettaEducatore professionale: Galassi RaffaellaAssistenti socialiArea adulti anziani
+
+
+Bailo Michela
+
+Bellegante Emma
+
+Drago Laura Maria
+
+
+Area Minori e famiglie 
+
+
+Chistè Sara 
+
+Marotta Katiuscia
+
+Pedergnana Nicola
+
+Sartori Benedetta
+
+
+";;;"Sede di Gardolovia S.Anna, 5/a - 2° piano Palazzo Crivelli telefono 0461 - 889825
+
+
+lunedì, martedì, mercoledì 8.30 - 12.30
+
+giovedì 10.00 - 12.00 / 13.30 - 16.00
+
+venerdì 8.30 - 12.00
+
+
+";;"Polo Sociale";"ATTIVITA' SOCIALI";;"Poli sociali";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 01 - Gardolo";"Gardolo 0461-889825";;;;;"PALAZZO CRIVELLI A GARDOLO (E CABINA ENEL)";"VIA SANT'ANNA,  5  A";38121;114;114;15;;1;1;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.109382;11.110916;"VIA SANT&#039;ANNA,  5  A "
+struttura116;2008-01-01T00:00:00+01:00;2019-01-04T12:36:50+01:00;"S.Giuseppe - S. Chiara - Ravina- Romagnano";"Polo sociale  S.Giuseppe S.Chiara - Ravina Romagnano: recapiti telefonici impiegati e assistenti sociali, ubicazione uffici, orario per il pubblico, modalità appunamenti...";"Struttura organizzativa
+Segreteria: Bort Giovanna 
+Personale amministrativo: Mattei Monica
+Coordinatrice: Mosele VallìEducatore professionale: Zendri MariaserenaAssistenti socialiArea adulti anziani
+
+
+Bruschetti Cinzia
+
+Comai Olga
+
+Filippi Tiziana
+
+Mariotto Silvia
+
+Stenico Valentina
+
+
+Area minori e famiglie 
+
+
+Casagrande Veronica
+
+Paolazzi Elisa
+
+Tonelli Lorenza
+
+Torresani Marcella
+
+
+";;;"Sede S.Giuseppe/S.Chiara
+Via Bronzetti, 1 - 38122 Trentotelefono 0461 - 889910 / fax 0461 - 889911
+
+
+lunedì, martedì, mercoledì 8.30 -12.30
+
+giovedì 10.00 - 12.00 / 13.30 - 16.00
+
+venerdì 8.30 - 12.00
+
+
+Recapito Aldeno
+c/o Ambulatorio APSS Via Florida, 1telefono 0461 - 843313
+
+
+martedì 09.00 - 11.00 (area adulti e anziani)
+
+2° e 4° lunedì del mese 9.00 - 11.00 (area minori e famiglie)
+
+
+";;"Polo Sociale";"ATTIVITA' SOCIALI";;"Poli sociali";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"S.Giuseppe/S.Chiara e Ravina/Romagnano 0461-889910";0461-889911;;;;"UFFICI COMUNALI EDIFICIO VIA BRONZETTI";"VIA F.LLI BRONZETTI, 1  ";38122;116;116;15;;1;3;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.059597;11.121087;"VIA F.LLI BRONZETTI, 1   "
+struttura117;2008-01-01T00:00:00+01:00;2019-01-04T12:18:47+01:00;"Oltrefersina - Mattarello";"Polo sociale Oltrefersina Mattarello: recapiti telefonici impiegati e assistenti sociali, ubicazione uffici, orario per il pubblico, modalità appunamenti";"
+
+Struttura organizzativa
+Segreteria : Pedrolli Gloria
+Personale amministrativo: Aloisi Silvia Benini Serena
+Coordinatrice: Frasson SusannaEducatore professionale: Banal Antonia Assistenti socialiArea adulti anziani
+
+
+Iori Stefania
+
+Zambanini Roberta
+
+Zanoni Anna
+
+
+Area minori e famiglie
+
+
+Cattani Martina
+
+Fedrizzi Elisabetta
+
+Mattera Gianfranco
+
+
+";;;"Sede Oltrefersina
+via Clarina, 2/1 - Trentotelefono 0461 - 889880
+
+
+lunedì, martedì, mercoledì 8.30 - 12.30
+
+giovedì 10.00 - 12.00 / 13.30 - 16.00
+
+venerdì 8.30 - 12.00
+
+
+";;"Polo Sociale";"ATTIVITA' SOCIALI";;"Poli sociali";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 10 - Oltrefersina";Oltrefersina0461-889880;0461-889881;;;;"CENTRO CIVICO OLTREFERSINA - CLARINA";"VIA LA CLARINA, 2  1";38123;117;117;15;;1;4;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.051936;11.128265;"VIA LA CLARINA, 2  1 "
+struttura225;2009-10-29T17:12:55+01:00;2019-01-09T20:06:20+01:00;"Cantiere di via Maccani- Manutenzione Fabbricati";"Informazioni di contatto, personale assegnato e altre informazioni utili";;;;;;"Altra struttura";"GESTIONE FABBRICATI";;"Manutenzione fabbricati";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";;;servizio.gestionefabbricati@comune.trento.it;;;"CANTIERE COMUNALE DI VIA MACCANI";"VIA E. MACCANI, 110  7";38121;225;225;52;;1;1;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089874;11.111923;"VIA E. MACCANI, 110  7 "
+struttura441;2017-01-01T00:00:00+01:00;2019-01-09T20:06:20+01:00;Toponomastica;;;;;"dal lunedì al venerdì 8.30 - 12.00";;"Altra struttura";"URBANISTICA E AMBIENTE";;;;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";"0461-884793 0461-884662 0461-884668 0461-884795";0461-884702;ufficio.toponomastica@comune.trento.it;;;"TOP CENTER  - UFFICI COMUNALI (PRIVATO)";"VIA DEL BRENNERO, 312  ";38121;441;0;53;;;1;;2017-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.090683;11.117483;"VIA DEL BRENNERO, 312   "
+struttura41;2008-01-01T00:00:00+01:00;2019-01-09T20:05:27+01:00;Argentario;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione. Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili";;;;"Servizio anagrafe e certificazionidal lunedì al giovedì dalle 8.00 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 06 - Argentario";0461-889790;0461-889791;circoscrizione.argentario@comune.trento.it;;;"CENTRO CIVICO ""MARNIGHE"" A COGNOLA";"VIA CARLO E VALERIA JULG, 13  ";38121;41;41;11;;1;6;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.07694;11.141592;"VIA CARLO E VALERIA JULG, 13   "
+struttura37;2008-01-01T00:00:00+01:00;2019-01-09T20:05:26+01:00;Meano;"Struttura organizzativa comunale a disposizione della Circoscrizione.Accedi alla sezione dedicata alle informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività nella Circoscrizione
+    
+.";;;;"Servizio anagrafe e certificazionilunedì, mercoledì e venerdì dalle 8.00 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 02 - Meano";0461-889760;0461-889761;circoscrizione.meano@comune.trento.it;;;"CENTRO CIVICO MASERA A MEANO (ITEA)";"VIA DELLE SUGARINE, 28  ";38121;37;37;11;;1;2;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.126433;11.116412;"VIA DELLE SUGARINE, 28   "
+struttura40;2008-01-01T00:00:00+01:00;2019-01-09T20:05:27+01:00;"Ravina Romagnano";"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionilunedì, mercoledì dalle 8.00 alle 12.00 e nei seguenti venerdì dalle 8.00 alle 12.00* (*aperture alternate fra Mattarello e Ravina-Romagnano)ANNO 2019:
+
+  GENNAIO
+  
+  LUGLIO
+  
+
+
+
+
+  VENERDÍ 11
+  
+  VENERDÍ 12
+  
+
+
+
+
+  VENERDÍ 25
+  
+  VENERDÍ 26
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  FEBBRAIO
+  
+  AGOSTO
+  
+
+
+
+
+  VENERDÍ 8
+  
+  VENERDÍ 9
+  
+
+
+
+
+  VENERDÍ 22
+  
+  VENERDÍ 23
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  MARZO
+  
+  SETTEMBRE
+  
+
+
+
+
+  VENERDÍ 8
+  
+  VENERDÍ 6
+  
+
+
+
+
+  VENERDÍ 22
+  
+  VENERDÍ 20
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  APRILE
+  
+  OTTOBRE
+  
+
+
+
+
+  VENERDÍ 5
+  
+  VENERDÍ 4
+  
+
+
+
+
+  VENERDÍ 19
+  
+  VENERDÍ 18
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  MAGGIO
+  
+  NOVEMBRE
+  
+
+
+
+
+  VENERDÍ 3VENERDÍ 17VENERDÍ 31
+  
+  VENERDÍ 15
+  
+
+
+
+
+  VENERDÍ 29
+  
+
+
+
+
+   
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  GIUGNO
+  
+  DICEMBRE
+  
+
+
+
+
+  VENERDÍ 14
+  
+  VENERDÍ 13VENERDÍ 27
+  
+
+
+
+
+  VENERDÍ 28
+  
+
+
+
+
+   
+  
+
+
+
+
+";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 05 - Ravina - Romagnano";0461-889780;0461-889781;circoscrizione.ravina@comune.trento.it;;;"CENTRO CIVICO RAVINA";"VIA VAL GOLA, 2  ";38123;40;40;11;;1;5;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.037829;11.106558;"VIA VAL GOLA, 2   "
+struttura226;2009-10-29T17:12:58+01:00;2019-01-09T20:06:20+01:00;"Cantiere di via Maccani - Impianti tecnologici";"Informazioni di contatto, personale assegnato e altre informazioni utili";;;;;;"Altra struttura";"GESTIONE FABBRICATI";;"Impianti tecnologici";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";;;servizio.gestionefabbricati@comune.trento.it;;;"CANTIERE COMUNALE DI VIA MACCANI";"VIA E. MACCANI, 110  7";38121;226;226;52;;2;1;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089874;11.111923;"VIA E. MACCANI, 110  7 "
+struttura46;2008-01-01T00:00:00+01:00;2019-01-09T20:05:29+01:00;"S. Giuseppe S. Chiara";"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività 
+    
+nella Circoscrizione.";;;;"Servizio anagrafe e certificazionimercoledì e venerdì dalle 8 alle 12";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-889900;0461-889901;circoscrizione.sangiuseppe@comune.trento.it;;;"UFFICI CIRCOSCRIZIONE 11 (EX MATERNA ""COLLODI"")";"VIA C. MARTINI, 4  ";38122;46;46;11;;1;11;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.056474;11.11908;"VIA C. MARTINI, 4   "
+struttura211;2009-02-24T09:58:48+01:00;2019-01-09T20:05:45+01:00;Povo;"Sede periferica della biblioteca comunale di Trento";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Sede periferica";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 07 - Povo";0461-889918;;Biblioteca.Povo@comune.trento.it;;;"CENTRO CIVICO DI POVO (EX ELEMENTARI)";"VIA DON T. DALLAFIOR, 5  ";38123;211;211;17;;1;8;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064921;11.153456;"VIA DON T. DALLAFIOR, 5   "
+struttura248;2009-01-01T00:00:00+01:00;2019-01-09T20:05:30+01:00;Elettorale;;;;;"Orari in vigore dal 01/09/2011lunedì, martedì, mercoledì e venerdì 8.00/12.00giovedì 8.00/16.00 ";;"Altra struttura";"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Anagrafe - elettorale";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"0461-884299 0461-884298";0461-884017;ufficio.elettorale@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO ANNONA CIVICA EX ONAIRC";"PIAZZA DI FIERA, 17  ";38122;248;248;11;;2;2;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064971;11.123015;"PIAZZA DI FIERA, 17   "
+struttura43;2008-01-01T00:00:00+01:00;2019-01-09T20:05:28+01:00;Mattarello;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionimartedì, giovedì dalle 8.00 alle 12.00 e nei seguenti venerdì dalle 8.00 alle 12.00* (*aperture alternate fra Mattarello e Ravina-Romagnano)ANNO 2019:
+
+  GENNAIO
+  
+  LUGLIO
+  
+
+
+
+
+  VENERDÍ 4
+  
+  VENERDÍ 5
+  
+
+
+
+
+  VENERDÍ 18
+  
+  VENERDÍ 19
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  FEBBRAIO
+  
+  AGOSTO
+  
+
+
+
+
+  VENERDÍ 1VENERDÍ 15
+  
+  VENERDÍ 2
+  
+
+
+
+
+  VENERDÍ 16
+  
+
+
+
+
+  VENERDÍ 30
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  MARZO
+  
+  SETTEMBRE
+  
+
+
+
+
+  VENERDÍ 1
+  
+  VENERDÍ 13VENERDÍ 27
+  
+
+
+
+
+  VENERDÍ 15
+  
+
+
+
+
+  VENERDÍ 29
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  APRILE
+  
+  OTTOBRE
+  
+
+
+
+
+  VENERDÍ 12
+  
+  VENERDÍ 11
+  
+
+
+
+
+  VENERDÍ 26
+  
+  VENERDÍ 25
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  MAGGIO
+  
+  NOVEMBRE
+  
+
+
+
+
+  VENERDÍ 10VENERDÍ 24
+  
+  VENERDÍ 8
+  
+
+
+
+
+  VENERDÍ 22
+  
+
+
+
+
+   
+  
+   
+  
+
+
+
+
+  GIUGNO
+  
+  DICEMBRE
+  
+
+
+
+
+  VENERDÍ 7
+  
+  VENERDÍ 6VENERDÍ 20
+  
+
+
+
+
+  VENERDÍ 21
+  
+
+
+
+
+";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 08 - Mattarello";0461-889860;0461-889861;circoscrizione.mattarello@comune.trento.it;;;"CENTRO CIVICO S. VIGILIO A MATTARELLO";"VIA G. POLI, 4  ";38123;43;43;11;;1;8;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.006129;11.128142;"VIA G. POLI, 4   "
+struttura250;2009-01-01T00:00:00+01:00;2019-01-09T20:05:42+01:00;"Consultorio familiare via Malta";"Consultorio per il singolo, la coppia e la famiglia.";"
+
+
+Sostegno alle donne in gravidanza e precarietà abitativa
+
+Tematica della prostituzione
+
+Violenza di genere
+
+Genitorilità e problemi di coppia
+
+Adolescenza
+
+Interruzione volontaria gravidanza (in particolare minori)
+
+Scuola (progetto conoscere il consultorio)
+
+
+";;;"
+Consultorio per il singolo, la coppia e la famiglia
+Via Malta,12 - 38122 TRENTOtelefono: 0461 / 902190
+
+
+
+						
+					                Bailo Michela
+    
+mercoledì tutto il giorno - giovedì pomeriggio
+
+						
+					                Menestrina Laura
+    
+
+
+
+        al mattino nei giorni di lunedì martedì mercoledì e venerdì";;"Altra struttura";"ATTIVITA' SOCIALI";;"Servizi sociali non decentrati";;"AREA SERVIZI ALLA PERSONA";;"0461-902190 0461-902191";;servizio.attivitasociali@comune.trento.it;;;;;;250;250;15;;4;1;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;0;4.511256;" "
+struttura44;2008-01-01T00:00:00+01:00;2019-01-09T20:05:28+01:00;Villazzano;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionilunedì dalle 14.30 alle 16, martedì e giovedì dalle 8 alle 12";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 09 - Villazzano";0461-889850;0461-889857;circoscrizione.villazzano@comune.trento.it;;;"VILLA DE MERSI A VILLAZZANO";"VIA DELLA VILLA, 6  ";38123;44;44;11;;1;9;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.048661;11.145496;"VIA DELLA VILLA, 6   "
+struttura287;2011-01-01T21:40:07+01:00;2019-01-09T20:05:57+01:00;"Cantiere illuminazione e semafori  - via Maccani";"Informazioni di contatto, personale assegnato e altre informazioni utili";;;;;;"Altra struttura";"OPERE DI URBANIZZAZIONE PRIMARIA";;"Reti tecnologiche";;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889687;0461-884704;servizio.opereurbanizzazioneprimaria@comune.trento.it;;;"CANTIERE COMUNALE DI VIA MACCANI";"VIA E. MACCANI, 110  7";38121;287;287;23;;2;1;;2011-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089874;11.111923;"VIA E. MACCANI, 110  7 "
+struttura38;2008-01-01T00:00:00+01:00;2019-01-09T20:05:26+01:00;Bondone;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione. Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili.";;;;"Servizio anagrafe e certificazionilunedì, mercoledì e giovedì dalle 8.00 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 03 - Bondone";0461-889890;0461-889891;circoscrizione.bondone@comune.trento.it;;;"CENTRO CIVICO SOPRAMONTE";"VIA DI REVÒLTA, 4  ";38123;38;38;11;;1;3;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.071699;11.060041;"VIA DI REVÒLTA, 4   "
+struttura251;2009-01-01T00:00:00+01:00;2019-01-09T20:05:42+01:00;"Adozione, Accoglienza famigliare, Centri diurni, Assegno di cura";"Adozione nazionale ed internazionaleSportello accoglienza minori ed adultiIntegrazione socio sanitaria per assegno di cura e centro diurno ";"Segreteria: 						
+					                Nardon Claudia
+    
+Si riceve su appuntamento.Adozioni nazionali ed internazionali   Sportello accoglienza minori ed adulti 						
+					                Castagna Manuela
+    
+Integrazione socio sanitaria per assegno di cura e centro diurno						
+					                Graffer Irene
+    
+						
+					                Sicilia Domenica
+    
+";;;;;"Altra struttura";"ATTIVITA' SOCIALI";;"Servizi sociali non decentrati";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461889953;;servizio.attivitasociali@comune.trento.it;;;"UFFICI COMUNALI DI VIA ALFIERI (PALAZZO EX ENEL)";"VIA V. ALFIERI, 6  ";38122;251;251;15;;4;2;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.070034;11.121492;"VIA V. ALFIERI, 6   "
+struttura221;2009-02-24T10:28:08+01:00;2019-01-09T20:05:45+01:00;"Archivio storico";"Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili";;;;"						
+					                Consulta il sito della Biblioteca comunale
+    
+";;"Altra struttura";"BIBLIOTECA E ARCHIVIO STORICO";;"Servizi al pubblico e organizzazione tecnica";;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-889548;0461-889520;archivio.storico@comune.trento.it;;;"BIBLIOTECA COMUNALE  ""EX COLLEGIO GESUITI""";"VIA ROMA, 55  ";38122;221;221;17;;1;18;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.069736;11.120889;"VIA ROMA, 55   "
+struttura319;2011-01-01T00:00:00+01:00;2019-01-09T20:05:43+01:00;"Area inclusione sociale";"Informazioni di contatto, orario per il pubblico, competenze, personale assegnato e altre informazioni utili";"Struttura organizzativa
+Segreteria: 						
+					                Endrighi Cristina
+    
+ - 						
+					                Eccli Margaret
+    
+ - 						
+					                Gorga Maurizio
+    
+Coordinatrice: 						
+					                Larcher Elisa
+    
+Assistenti sociali
+
+
+						
+					                Cainelli Elisa
+    
+
+
+						
+					                Corazza Annalisa
+    
+
+
+						
+					                Dalsaso Sandra
+    
+
+
+						
+					                Degasperi Marco
+    
+
+
+						
+					                Ermano Maria Jole
+    
+
+
+						
+					                Groff Anna
+    
+
+
+						
+					                Zini Barbara
+    
+
+
+
+appuntamento presso la segreteria dell'ufficiolunedì, martedì, mercoledì  8.30 - 12.30giovedì 10.00 - 12.00 / 13.30 - 16.00venerdì 8.30 - 12.00";"Cura, in collaborazione con gli altri Uffici e la direzione del Servizio, lo svolgimento di tutte le funzioni e compiti attinenti il servizio sociale che non hanno uno specifico collegamento con gli ambiti e le funzioni di competenza dei Poli sociali e riguardano pertanto indistintamente il territorio cittadino.
+
+
+Unitamente all’Ufficio poli sociali cura i rapporti con gli enti pubblici e privati che operano nel settore sociale (sanità, magistratura, privato sociale, scuola, ecc.), definendo le modalità di collaborazione ed integrazione.
+
+Gestisce in particolare le seguenti attività e funzioni: 
+
+
+Funzioni di natura socio-assistenziale nell’ambito del consultorio per il singolo, la coppia e la famiglia istituito nel distretto sanitario ai sensi della legge provinciale n. 20/1977;
+
+Compiti inerenti l’adozione dei minori (sia nazionale che internazionale) come disciplinata dalla legge 4 maggio 1983, n. 184, ed attribuiti dalla medesima o dalla disciplina provinciale di settore al Comune (attività informativa, formativa e di valutazione e supporto alle coppie interessate all’adozione, tenuta rapporti con la magistratura, stipula protocolli, ecc.);
+
+Compiti attinenti alla promozione e sostegno dell’accoglienza familiare (organizzazione, gestione e attuazione di iniziative quali lo “sportello accoglienza”);
+
+Funzioni di coordinamento, in collaborazione con l’ufficio Poli sociali, in relazione alle attività di coprogettazione, verifica e valutazione delle gestioni esterne dei centri diurni e di servizio e all’inserimento degli ospiti nei centri stessi;
+
+
+
+
+Funzioni relative all’area dell’inclusione sociale (le funzioni riguardanti la popolazione zingara, italiani senza fissa dimora, adulti e nuclei stranieri senza fissa dimora, richiedenti asilo politico, rifugiati politici, minori stranieri non accompagnati, il fenomeno della prostituzione, gli ex carcerati, eccIn particolare, per quanto riguarda le funzioni sopra descritte, attua gli interventi socio assistenziali attribuiti al Comune dalla legislazione provinciale e nazionale in materia, quali ad esempio:
+
+
+
+
+Interventi del servizio sociale professionale (attività di sostegno psico sociale, segretariato sociale);
+
+Interventi di tutela ordinari e/o urgenti (collaborazione con la magistratura civile/penale, adulti/minori, attuazione di decreti della magistratura, ecc.);
+
+Attivazione di altri servizi con invii, relazioni, progetti (servizi assistenziali previsti dalle leggi provinciali 35/1983, 13/1990, 16/1991, 21/1992 ecc.);
+
+Partecipazione ad organismi interistituzionali operanti in campo socio sanitario (UVM, commissione per l’inserimento in strutture residenziali di portatori di handicap di cui alla legge n. 104/1992, ecc.);
+
+Elaborazione di progetti di presa in carico attinenti l’attivazione e l’erogazione dei servizi socio assistenziali (educativa a domicilio, servizi residenziali e semiresidenziali, assistenza economica, ecc.).
+
+
+
+
+Cura in collaborazione con gli altri uffici e con la direzione del servizio gli aspetti progettuali e sociali attinenti alla gestione del campo sosta nomadi, dell’ostello per lavoratori extracomunitari, degli interventi socio assistenziali residenziali a favore di persone e nuclei in fase di reinserimento sociale (alloggi semi protetti) e dell’attuazione delle “clausole sociali” relative agli inserimenti lavorativi
+
+Collabora inoltre con l’Ufficio servizi alla persona per i procedimenti amministrativi relativi all’attivazione, in relazioni ai compiti e alle funzioni assegnate, degli interventi socio-assistenziali nelle materie delegate dalla Provincia con la legge provinciale 14/1991.
+
+In collaborazione con gli altri Uffici segue l’informatizzazione delle proprie attività e la raccolta dei dati sull’utenza, sugli interventi e sulla qualità dei servizi erogati.
+
+Collabora con la direzione del Servizio e gli altri Uffici nello svolgimento di tutte le funzioni e compiti che richiedono confronto, coprogettazione ed integrazione delle attività.
+
+
+";;;;"Altra struttura";"ATTIVITA' SOCIALI";;"Servizi sociali non decentrati";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-884466;;servizio.attivitasociali@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO VIA BRONZETTI";"VIA F.LLI BRONZETTI, 1  ";38122;319;0;15;;4;3;;2011-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.059597;11.121087;"VIA F.LLI BRONZETTI, 1   "
+struttura36;2008-01-01T00:00:00+01:00;2019-01-09T20:05:26+01:00;Gardolo;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionidal lunedì al venerdì dalle 8.00 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 01 - Gardolo";0461-889800;0461-889811;circoscrizione.gardolo@comune.trento.it;;;"CENTRO CIVICO SOCIO-CULTUR.""CASA PEDROLLI"" GARDOLO";"PIAZZALE L. GROFF, 2  ";38121;36;36;11;;1;1;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.107853;11.112259;"PIAZZALE L. GROFF, 2   "
+struttura45;2008-01-01T00:00:00+01:00;2019-01-09T20:05:29+01:00;Oltrefersina;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività 
+    
+nella Circoscrizione.";;;;"Servizio anagrafe e certificazionilunedì, giovedì e venerdì dalle 8.00 alle 12.00, martedì dalle 8.00 alle 12.00 e dalle 14.30 alle 16.00, mercoledì dalle 8.00 alle 13.00 e dalle 14.30 alle 16.00dal 1° gennaio 2018:
+
+
+lunedì 8.00 - 12.00
+
+martedì 8.00 - 12.00  14.30 - 16.00
+
+mercoledì 8.00 - 13.00  14.30 - 16.00
+
+giovedì 8.00 - 12.00
+
+venerdì 8.00 - 12.00
+
+
+";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 10 - Oltrefersina";0461-889870;0461-889871;circoscrizione.oltrefersina@comune.trento.it;;;"CENTRO CIVICO OLTREFERSINA - CLARINA";"VIA LA CLARINA, 2  1";38123;45;45;11;;1;10;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.051936;11.128265;"VIA LA CLARINA, 2  1 "
+struttura247;2009-01-01T00:00:00+01:00;2019-01-09T20:05:30+01:00;Anagrafe;"Informazioni inerenti indirizzo, telefoni, orario per il pubblico, indirizzo e-mail, personale, posizione gps, competenze dell'ufficio Anagrafe";;;;"lunedì, martedì, mercoledì e venerdì 8.00/12.00giovedì 8.00/16.00 ";;"Altra struttura";"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Anagrafe - elettorale";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"0461-884291 0461-884292";0461-884096;ufficio.anagrafe@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO ANNONA CIVICA EX ONAIRC";"PIAZZA DI FIERA, 17  ";38122;247;247;11;;2;1;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064971;11.123015;"PIAZZA DI FIERA, 17   "
+struttura39;2008-01-01T00:00:00+01:00;2019-01-09T20:05:27+01:00;Sardagna;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionimartedì e venerdì dalle 8.30 alle 12.00";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 04 - Sardagna";0461-889770;0461-889771;circoscrizione.sardagna@comune.trento.it;;;"CENTRO CIVICO DI SARDAGNA";"VIA GEROLAMO BUCELLENI, 1  ";38123;39;39;11;;1;4;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.063313;11.097203;"VIA GEROLAMO BUCELLENI, 1   "
+struttura236;2009-10-29T17:13:03+01:00;2019-01-09T20:05:29+01:00;"Stato civile";;;;;"Lunedì, Martedì, Mercoledì e Venerdì dalle 8.00 alle 12.00Giovedì dalle 8.00 alle 16.00 ";;"Altra struttura";"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"0461-884295 0461-884296";0461-884452;ufficio.statocivile@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO ANNONA CIVICA EX ONAIRC";"PIAZZA DI FIERA, 17  ";38122;236;236;11;;1;13;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064971;11.123015;"PIAZZA DI FIERA, 17   "
+struttura326;2011-01-01T00:00:00+01:00;2019-01-09T20:05:43+01:00;"Area lavoro";"Diritto al lavoro per disabili L.68/99Intervento di accompagnamento all'occupabilita' (intervento 19)";" 
+Segreteria amministrativa: 						
+					                Endrighi Cristina
+    
+						
+					                Chiodi Letizia
+    
+ riceve su appuntamento
+
+
+Diritto al lavoro per disabili - Lavoratori socialmente utili
+
+
+ ";"Funzioni di coordinamento, in collaborazione con gli altri Uffici, delle politiche a favore dell'inserimento lavorativo attuate dal Servizio e in particolare delle funzioni del servizio sociale inerenti al collocamento delle persone disabili;";;;;"Altra struttura";"ATTIVITA' SOCIALI";;"Servizi sociali non decentrati";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";0461-884466;;servizio.attivitasociali@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO VIA BRONZETTI";"VIA F.LLI BRONZETTI, 1  ";38122;326;0;15;;4;4;;2011-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.059597;11.121087;"VIA F.LLI BRONZETTI, 1   "
+struttura42;2008-01-01T00:00:00+01:00;2019-01-09T20:05:28+01:00;Povo;"Informazioni sul 						
+					                Consiglio circoscrizionale e sull'attività
+    
+ nella Circoscrizione.";;;;"Servizio anagrafe e certificazionilunedì, mercoledì e venerdì dalle 8 alle 12Il  Presidente  Sergio Casetti riceve su appuntamento   tel. n. 3297188688 mail:						
+					                presidente.circoscrizionepovo@comune.trento.it
+    
+Il Vicepresidente Luca Laner riceve su appuntamento    tel. n. 3492362486  mail: 						
+					                l.laner@hotmail.com
+    
+";;Circoscrizione;"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 07 - Povo";0461-889920;0461-889921;circoscrizione.povo@comune.trento.it;;;"CENTRO CIVICO DI POVO (EX ELEMENTARI)";"VIA DON T. DALLAFIOR, 5  ";38123;42;42;11;;1;7;;2008-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064921;11.153456;"VIA DON T. DALLAFIOR, 5   "
+struttura246;2009-10-29T17:13:06+01:00;2019-01-09T20:05:30+01:00;Decentramento;;;;;"Lunedì, Martedì, Mercoledì e Venerdì dalle 8.00 alle 12.00Giovedì dalle 8.00 alle 16.00 ";;"Altra struttura";"SERVIZI DEMOGRAFICI E DECENTRAMENTO";;"Stato civile - decentramento";;"AREA SERVIZI ALLA PERSONA";"Circoscrizione n. 11 - S. Giuseppe S. Chiara";"0461-884239 0461-884083";0461-884242;ufficio.decentramento@comune.trento.it;;;"UFFICI COMUNALI EDIFICIO ANNONA CIVICA EX ONAIRC";"PIAZZA DI FIERA, 17  ";38122;246;246;11;;1;14;;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.064971;11.123015;"PIAZZA DI FIERA, 17   "
+struttura355;2015-03-01T00:00:00+01:00;2019-01-24T20:05:02+01:00;"Centro musica";;"						
+					                 
+    
+";;;"						
+					                Informazioni dettagliate
+    
+ sulle caratteristiche del centro e su orari, tariffe e contatti";;"Altra struttura";"CULTURA, TURISMO E POLITICHE GIOVANILI";;;;"AREA ISTRUZIONE E CULTURA";"Circoscrizione n. 10 - Oltrefersina";"0461 217497";;ufficio.politichegiovanili@comune.trento.it;;;"CENTRO MUSICA (PROPRIETÀ OPERA UNIVERSITARIA)";"VIA DELLA MALPENSADA, 82  A";38123;355;0;28;;;2;;2015-03-01T00:00:00+01:00;2050-12-31T00:00:00+01:00;46.045689;11.13303;"VIA DELLA MALPENSADA, 82  A "
+struttura206;2009-10-30T09:55:14+01:00;2019-01-30T20:05:01+01:00;"Autoparco e Officina";"Informazioni di contatto, personale assegnato e altre informazioni utili";;;;"da lunedì a venerdì 8.30/12.00";;"Ulteriore struttura";"GESTIONE STRADE E PARCHI";;;;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884782;;alessandro.rodegher@comune.trento.it;;;"CANTIERE COMUNALE DI VIA MACCANI";"VIA E. MACCANI, 110  7";38121;206;206;27;;;;1;2009-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.089874;11.111923;"VIA E. MACCANI, 110  7 "
+struttura455;2019-01-01T00:00:00+01:00;2019-01-31T20:05:02+01:00;"Unità operativa controllo del territorio";;;;;;;"Altra struttura";"ATTIVITA' EDILIZIA";;;;"AREA TECNICA E DEL TERRITORIO";"Circoscrizione n. 12 - Centro storico - Piedicastello";0461-884798;0461-884701;;;servizio.attivitaedilizia@pec.comune.trento.it;"TOP CENTER  - UFFICI COMUNALI (PRIVATO)";"VIA DEL BRENNERO, 312  ";38121;455;0;51;;;1;;2019-01-01T00:00:00+01:00;2200-12-31T00:00:00+01:00;46.090683;11.117483;"VIA DEL BRENNERO, 312   "
