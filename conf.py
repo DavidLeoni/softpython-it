@@ -428,7 +428,7 @@ pdf_use_numbered_links = False
 pdf_fit_background_mode = 'scale'
 
 def setup(app):    
-    jmt.init(jm)
+    jmt.init(jm, globals())
 
     if 'googleanalytics_id' in globals() and globals()['googleanalytics_id']:
         print("Found googleanalytics_id")

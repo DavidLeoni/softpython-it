@@ -29,5 +29,6 @@ Pandas
     :glob:
     
     introduzione <pandas/pandas1-sol.ipynb>
-    challenge <pandas/pandas2-chal.ipynb>
+    esercizi <pandas/pandas2-sol.ipynb>
+    challenge <pandas/pandas3-chal.ipynb>
 
