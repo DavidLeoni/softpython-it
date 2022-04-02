@@ -239,7 +239,7 @@ D - Progetti
     toc-worked-projects.rst
 
 
-Come fare il tuo progetto
+Realizza il tuo progetto
 -------------------------------
 
 .. toctree::
@@ -252,15 +252,14 @@ Come fare il tuo progetto
     
     
     
-Challenge progetti
+Challenge
 ------------------------------
 
 .. toctree::
     :maxdepth: 3
     :glob:
 
-    project-ideas.ipynb
-    challenges.ipynb
+    toc-projects-chal.rst
     
 E - Appendice
 =================

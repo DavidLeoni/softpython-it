@@ -2,4 +2,4 @@
     :maxdepth: 2
     :glob:
     
-    projects/alberi-campania/alberi-campania-sol.ipynb
+    Alberi della Campania <projects/alberi-campania/alberi-campania-sol.ipynb>

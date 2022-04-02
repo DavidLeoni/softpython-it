@@ -447,7 +447,7 @@ def setup(app):
         jm.zip_folder(folder)
     #jm.zip_folders('exams/*/solutions', 
     #                lambda x:  '%s-%s-exam' % (jm.filename, x.split('/')[-2]))
-    jm.zip_folders('projects-chal/*/', renamer = lambda x: '%s-challenge' % x.split('/')[1])
+    jm.zip_folders('projects-chal/*/', renamer = lambda x: '%s-chal' % x.split('/')[1])
     jm.zip_folders('projects/*/', renamer = lambda x: '%s-prj' % x.split('/')[1])
     #jm.zip_paths(['project'], '_static/generated/project-template')
 
