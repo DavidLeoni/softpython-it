@@ -1,0 +1,178 @@
+
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Regular.eot");
+    src:url("../fonts/Archivo/Archivo-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Regular.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Regular.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Bold.eot");
+    src:url("../fonts/Archivo/Archivo-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Bold.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Bold.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot");
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-BoldItalic.ttf") format("truetype");
+    font-weight:700;
+    font-style:italic
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Italic.eot");
+    src:url("../fonts/Archivo/Archivo-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Italic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Italic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Italic.ttf") format("truetype");
+    font-weight:400;
+    font-style:italic
+   }
+
+@font-face {
+    font-family:"Hussar";
+    font-style:normal;
+    
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot");
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff2") format("woff2"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff") format("woff"),
+    url("../fonts/Hussar/HussarBold-7mRE.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family:"Varela";
+    font-style:normal;
+    
+    src:url("../fonts/Varela/Varela-Regular.eot");
+    src:url("../fonts/Varela/Varela-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Varela/Varela-Regular.woff2") format("woff2"),
+    url("../fonts/Varela/Varela-Regular.woff") format("woff"),
+    url("../fonts/Varela/Varela-Regular.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family: "Inconsolata";
+
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot");
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.woff2") format("woff2"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.woff") format("woff"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.ttf") format("truetype");
+
+    src: url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.ttf");
+}
+
+.wy-nav-content {
+    background: #f9f8f3;
+    max-width:920px;
+ }
+
+
+
+ .wy-side-nav-search, .wy-nav-top {
+   background-color: #537326;
+ }
+
+.wy-nav-side {
+   background-color: #705d39;
+}
+
+div.highlight, div.highlight-none, div.highlight-python, div.highlight-bash, div.highlight-ipython3 {
+    border-radius:12px;
+}
+
+div.admonition {
+    border-radius:12px;
+}
+
+body {
+    font-family: "Archivo","proxima-nova","Helvetica Neue",Arial,sans-serif;    
+}
+
+
+h1 {
+    font-family: "Hussar","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+}
+
+h2,h3,h4,h5,h6,h7,h8 {
+    font-family: "Varela","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    
+}
+
+h2 {
+    font-size:1.5rem;
+    padding-top:1.0rem;
+}
+
+h3 {
+    font-size:1.3rem;
+}
+
+h4 {
+    font-size:1.2rem;
+}
+
+
+.wy-side-scroll {
+    font-size: 1.22rem;
+    
+}
+
+.toctree-l4 > a {
+    font-size: 1.06rem !important;
+    padding: .4045em 1.663em .4045em  4.663em !important;
+}
+
+.toctree-l5 > a {
+    font-size: 0.97rem !important;
+    padding: .4045em 1.663em .4045em  5em !important;
+}
+
+.rst-content blockquote {
+    font-size: 1.25rem;
+}
+
+.wy-nav-content p, .wy-nav-content li, .wy-nav-content div.admonition {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+/* hack for Python Tutor 'next line to execute' becoming too big */
+#legendDiv p {
+    font-size: 9pt;
+}
+
+pre {
+    font-family: "Inconsolata" !important;
+    font-size:20px !important;
+    background-color:#f8f8ec;
+    line-height: 1.0 !important;
+}
+
+
+div.nbinput.container div.prompt, div.nboutput.container div.prompt{
+    opacity: 0;        
+    width:5px !important;
+}
+
+
+.jupman-sol {    
+    background-color:#ebf3ed !important;  
+    border-color: #d3dfd6 !important;            
+}
+
+a.jupman-sol-toggler:hover {
+    color: #21aa21 !important;
+}

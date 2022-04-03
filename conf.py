@@ -228,16 +228,16 @@ html_static_path = ['_static/']
 #html_extra_path = [] 
 
 
-html_js_files = [
-    'js/jupman.js',  # shared among jupyter and website
+html_js_files = [    
+    'js/jupman.3.3.js',  # shared among jupyter and website
     'js/pytutor-embed.bundle.min.js',
     'js/softpython.js'
 ]
 
-html_css_files = [
-    'css/jupman.css',      # shared among jupyter and website
-    'css/jupman-web.css',  # only on website
-    'css/softpython-theme.css',  
+html_css_files = [    
+    'css/jupman.3.3.css',      # shared among jupyter and website
+    'css/jupman-web.3.3.css',  # only on website    
+    'css/softpython-theme.3.3.css',  
 ]
 
 
