@@ -231,6 +231,8 @@ C - Applicazioni
 D - Progetti
 ======================
 
+Progetti svolti
+-------------------------------
 
 .. toctree::
     :maxdepth: 3
