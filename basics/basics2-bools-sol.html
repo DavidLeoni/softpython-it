@@ -310,6 +310,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#Ordine-di-valutazione">Ordine di valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Errori-nella-valutazione">Errori nella valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Operatori-di-comparazione">Operatori di comparazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Tagliaerbe-1">Esercizio - Il Tagliaerbe 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Tagliaerbe-2">Esercizio - Il Tagliaerbe 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Tagliaerbe-3">Esercizio - Il Tagliaerbe 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Tagliaerbe-4">Esercizio - Il Tagliaerbe 4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Tempio-di-Lava">Esercizio - Il Tempio di Lava</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---La-Torre-di-Gradius-I">Esercizio - La Torre di Gradius I</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---Il-Salto-del-Tubo">Esercizio - Il Salto del Tubo</a></li>
@@ -323,6 +327,7 @@
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Notazione-scientifica">Notazione scientifica</a></li>
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Numeri-troppo-grandi-o-troppo-piccoli">Numeri troppo grandi o troppo piccoli</a></li>
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Esercizio---cerchio">Esercizio - cerchio</a></li>
+<li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Il-campo-da-golf">Il campo da golf</a></li>
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Esercizio---frazionamento">Esercizio - frazionamento</a></li>
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Esercizio---sommatoria">Esercizio - sommatoria</a></li>
 <li class="toctree-l5"><a class="reference internal" href="basics3-floats-sol.html#Reali---conversione">Reali - conversione</a></li>
@@ -3784,6 +3789,291 @@ True
 </li>
 </ol>
 </div>
+<div class="section" id="Esercizio---Il-Tagliaerbe-1">
+<h2>Esercizio - Il Tagliaerbe 1<a class="headerlink" href="#Esercizio---Il-Tagliaerbe-1" title="Permalink to this headline">¶</a></h2>
+<p>Il dottor Angelo possiede un prato di area quadrata di lato <code class="docutils literal notranslate"><span class="pre">d=100</span></code> metri che viene accudito ogni settimana da Jobe il giardiniere. Jobe passa sempre meticolosomente il tagliarbe su tutta l’area del prato, ma un giorno il dottore decide di rendere più elaborato il giardino e chiede a Jobe di tagliare solo alcune zone. Purtroppo, Jobe non è molto forte in geometria e per agevolarlo il dottore inventa un sensore in grado di rilevare la posizione, collegato ad una spia che si illumina solo quando
+il tagliaerbe va azionato. Scrivi un’espressione che date due coordinate <code class="docutils literal notranslate"><span class="pre">x,y</span></code>, produca <code class="docutils literal notranslate"><span class="pre">True</span></code> quando il tagliaerbe è nella zona verde chiaro, e <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p>
+<ul class="simple">
+<li><p>Nota che l’origine delle coordinate è in basso a sinistra</p></li>
+<li><p><strong>NON usare istruzioni</strong> <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p><strong>SCRIVI</strong> una formula generica usando <code class="docutils literal notranslate"><span class="pre">d</span></code> (quindi non scrivere <code class="docutils literal notranslate"><span class="pre">50</span></code>…)</p></li>
+</ul>
+<p><img alt="img/lawnmower-1" src="../_images/lawnmower-4.png" /></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span>      <span class="c1"># False</span>
+<span class="c1">#x,y = 25, 25    # False</span>
+<span class="c1">#x,y = 75, 75    # False</span>
+<span class="c1">#x,y = 75, 25    # False</span>
+<span class="c1">#x,y = 25, 75    # True</span>
+<span class="c1">#x,y = 100, 100  # False</span>
+<span class="c1">#x,y = 10, 90    # True</span>
+<span class="c1">#x,y = 60, 60    # False</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">x</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span>      <span class="c1"># False</span>
+<span class="c1">#x,y = 25, 25    # False</span>
+<span class="c1">#x,y = 75, 75    # False</span>
+<span class="c1">#x,y = 75, 25    # False</span>
+<span class="c1">#x,y = 25, 75    # True</span>
+<span class="c1">#x,y = 100, 100  # False</span>
+<span class="c1">#x,y = 10, 90    # True</span>
+<span class="c1">#x,y = 60, 60    # False</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---Il-Tagliaerbe-2">
+<h2>Esercizio - Il Tagliaerbe 2<a class="headerlink" href="#Esercizio---Il-Tagliaerbe-2" title="Permalink to this headline">¶</a></h2>
+<p>Il dottor Angelo adesso richiede a Jobe di tagliare più zone…</p>
+<ul class="simple">
+<li><p><strong>NON usare istruzioni</strong> <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+</ul>
+<p><img alt="img/lawnmower-1" src="../_images/lawnmower-4.png" /></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span>      <span class="c1"># True</span>
+<span class="c1">#x,y = 25, 25    # True</span>
+<span class="c1">#x,y = 75, 75    # True</span>
+<span class="c1">#x,y = 75, 25    # False</span>
+<span class="c1">#x,y = 25, 75    # False</span>
+<span class="c1">#x,y = 100, 100  # True</span>
+<span class="c1">#x,y = 10, 90    # False</span>
+<span class="c1">#x,y = 60, 60    # True</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span>      <span class="c1"># True</span>
+<span class="c1">#x,y = 25, 25    # True</span>
+<span class="c1">#x,y = 75, 75    # True</span>
+<span class="c1">#x,y = 75, 25    # False</span>
+<span class="c1">#x,y = 25, 75    # False</span>
+<span class="c1">#x,y = 100, 100  # True</span>
+<span class="c1">#x,y = 10, 90    # False</span>
+<span class="c1">#x,y = 60, 60    # True</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---Il-Tagliaerbe-3">
+<h2>Esercizio - Il Tagliaerbe 3<a class="headerlink" href="#Esercizio---Il-Tagliaerbe-3" title="Permalink to this headline">¶</a></h2>
+<p>Il dottor Angelo si è stufato di giardini squadrati, e vuole dividere il prato in diagonale.</p>
+<ul class="simple">
+<li><p><strong>NON usare istruzioni</strong> <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+</ul>
+<p><img alt="img/lawnmower-1" src="../_images/lawnmower-4.png" /></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span>  <span class="c1"># True</span>
+<span class="c1">#x,y = 100,0   # True</span>
+<span class="c1">#x,y = 75, 70  # True</span>
+<span class="c1">#x,y = 25,75   # False</span>
+<span class="c1">#x,y = 25, 5   # True</span>
+<span class="c1">#x,y = 5, 80   # False</span>
+<span class="c1">#x,y = 60, 70  # False</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">y</span> <span class="o">&lt;</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span>  <span class="c1"># True</span>
+<span class="c1">#x,y = 100,0   # True</span>
+<span class="c1">#x,y = 75, 70  # True</span>
+<span class="c1">#x,y = 25,75   # False</span>
+<span class="c1">#x,y = 25, 5   # True</span>
+<span class="c1">#x,y = 5, 80   # False</span>
+<span class="c1">#x,y = 60, 70  # False</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Esercizio---Il-Tagliaerbe-4">
+<h2>Esercizio - Il Tagliaerbe 4<a class="headerlink" href="#Esercizio---Il-Tagliaerbe-4" title="Permalink to this headline">¶</a></h2>
+<p>Altro giorno, altra diagonale per Jobe..</p>
+<ul class="simple">
+<li><p><strong>NON usare istruzioni</strong> <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+</ul>
+<p><img alt="img/lawnmower-1" src="../_images/lawnmower-4.png" /></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span>   <span class="c1"># True</span>
+<span class="c1">#x,y = 0,0     # True</span>
+<span class="c1">#x,y = 75, 70  # False</span>
+<span class="c1">#x,y = 25,90   # False</span>
+<span class="c1">#x,y = 25, 5   # True</span>
+<span class="c1">#x,y = 80, 20  # False</span>
+<span class="c1">#x,y = 25, 25  # True</span>
+
+<span class="c1"># scrivi qui</span>
+<span class="n">y</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span>   <span class="c1"># True</span>
+<span class="c1">#x,y = 0,0     # True</span>
+<span class="c1">#x,y = 75, 70  # False</span>
+<span class="c1">#x,y = 25,90   # False</span>
+<span class="c1">#x,y = 25, 5   # True</span>
+<span class="c1">#x,y = 80, 20  # False</span>
+<span class="c1">#x,y = 25, 25  # True</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+</div>
 <div class="section" id="Esercizio---Il-Tempio-di-Lava">
 <h2>Esercizio - Il Tempio di Lava<a class="headerlink" href="#Esercizio---Il-Tempio-di-Lava" title="Permalink to this headline">¶</a></h2>
 <p>Durante i tuoi studi scopri una mappa di un antico tempio, ove sono custoditi mirabolanti tesori.</p>
@@ -3796,7 +4086,7 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3820,7 +4110,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3829,7 +4119,7 @@ False
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3853,7 +4143,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3878,7 +4168,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3917,7 +4207,7 @@ False
 
 <span class="c1"># 2. SOLUZIONE &#39;BREVE&#39;</span>
 
-<span class="c1"># In alternativa, possiamo anche usare una soluzione &#39;breve&#39;, che considera il fatto</span>
+<span class="c1"># In alternativa, possiamo anche usare una soluzione breve, osservando il fatto</span>
 <span class="c1"># che se consideri sequenze di 4 spicchi di 30° l&#39;uno, ogni sequenza occupa 120°</span>
 <span class="c1"># e a noi ci interessa sapere se la lancetta è nell&#39;ultimo spicchio, tra 90° e 120°.</span>
 <span class="c1"># Quindi possiamo usare creativamente il modulo per &#39;accorciare&#39; la plancia</span>
@@ -3931,7 +4221,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3940,7 +4230,7 @@ False
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3967,7 +4257,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3987,7 +4277,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4006,7 +4296,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4015,7 +4305,7 @@ False
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4034,7 +4324,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4054,7 +4344,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4076,7 +4366,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4085,7 +4375,7 @@ True
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4108,7 +4398,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
