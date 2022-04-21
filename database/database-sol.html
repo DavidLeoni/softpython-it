@@ -828,7 +828,7 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#len">len</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Leggere-di-un-valore">Leggere di un valore</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Leggere-un-valore">Leggere un valore</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Disordine-veloce">Disordine veloce</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../dictionaries/dictionaries2-sol.html#Esercizio---z7">Esercizio - z7</a></li>
 </ul>
@@ -2133,8 +2133,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../gui/my-webapp.html">Esempio webapp</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Database</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Introduzione">Introduzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Che-fare">Che fare</a></li>
 </ul>
 </li>
@@ -2336,7 +2335,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../references.html#Corso-Python-3-di-Nicola-Zoppetti">Corso Python 3 di Nicola Zoppetti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../references.html#Guida-Introduttiva-a-Python-3-guida-ufficiale">Guida Introduttiva a Python 3 guida ufficiale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../references.html#Immersione-in-Python-3">Immersione in Python 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../references.html#Corso-Scientific-Programming-Master-Data-Science---Trento">Corso Scientific Programming Master Data Science - Trento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../references.html#SoftPython-in-inglese">SoftPython in inglese</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../references.html#Geeks-for-Geeks">Geeks for Geeks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../references.html#Introduction-to-Scientific-Programming-with-Python">Introduction to Scientific Programming with Python</a></li>
 </ul>
@@ -2694,9 +2693,6 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Scarica-zip-esercizi">
 <h2><a class="reference external" href="../_static/generated/database.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/database">Naviga file online</a></p>
-</div>
-<div class="section" id="Introduzione">
-<h2>Introduzione<a class="headerlink" href="#Introduzione" title="Permalink to this headline">¶</a></h2>
 <p>In questo tutorial affronteremo il tema database in Python:</p>
 <ul class="simple">
 <li><p>Uso SQLStudio con connessione a SQLite</p></li>
@@ -2733,7 +2729,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Guardiamo-il-database">
 <h2>Guardiamo il database<a class="headerlink" href="#Guardiamo-il-database" title="Permalink to this headline">¶</a></h2>
 <p>Proveremo ad accedere via SQLiteStudio e Python al database Chinhook.</p>
-<p>Il modello dati di Chinook rappresenta un uno store online di canzoni, e include tabelle per artisti (<code class="docutils literal notranslate"><span class="pre">Artist</span></code>), album (<code class="docutils literal notranslate"><span class="pre">Album</span></code>), tracce (<code class="docutils literal notranslate"><span class="pre">Track</span></code>), fatture (<code class="docutils literal notranslate"><span class="pre">Invoice</span></code>) e clienti (<code class="docutils literal notranslate"><span class="pre">Customer</span></code>):</p>
+<p>Il modello dati di Chinook rappresenta uno store online di canzoni, e include tabelle per artisti (<code class="docutils literal notranslate"><span class="pre">Artist</span></code>), album (<code class="docutils literal notranslate"><span class="pre">Album</span></code>), tracce (<code class="docutils literal notranslate"><span class="pre">Track</span></code>), fatture (<code class="docutils literal notranslate"><span class="pre">Invoice</span></code>) e clienti (<code class="docutils literal notranslate"><span class="pre">Customer</span></code>):</p>
 <p><img alt="chinook-93823" src="../_images/ChinookDatabaseSchema1.1.png" /></p>
 <p>I dati provengono da varie sorgenti:</p>
 <ul class="simple">
@@ -2755,7 +2751,7 @@ div.rendered_html tbody tr:hover {
 <li><p>Clicca su <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">connection</span></code> per verificare che la connessione funzioni, poi premi <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
 </ol>
 <p>Cominciamo a guardare una tabella semplice come <code class="docutils literal notranslate"><span class="pre">Album</span></code>.</p>
-<p><strong>ESERCIZIO</strong>: Prima di procedere, in SQLiteStudio, nel menu a sinistra sotto il nodo <code class="docutils literal notranslate"><span class="pre">Tables</span></code> fai doppio click sulla tabella <code class="docutils literal notranslate"><span class="pre">Album</span></code> e poi nel pannello principale a destra seleziona la tab <code class="docutils literal notranslate"><span class="pre">Data</span></code>.</p>
+<p><strong>ESERCIZIO</strong>: Prima di procedere, in SQLiteStudio, nel menu a sinistra sotto il nodo <code class="docutils literal notranslate"><span class="pre">Tables</span></code> fai doppio click sulla tabella <code class="docutils literal notranslate"><span class="pre">Album</span></code>.</p>
 <p>Adesso nel pannello principale a destra seleziona la tab <code class="docutils literal notranslate"><span class="pre">Data</span></code>:</p>
 <p><img alt="album-data-82347" src="../_images/album-data.png" /></p>
 <p>Vediamo che ci sono 3 colonne, due con numeri <code class="docutils literal notranslate"><span class="pre">AlbumId</span></code> e <code class="docutils literal notranslate"><span class="pre">ArtistId</span></code> e una di stringhe, chiamata <code class="docutils literal notranslate"><span class="pre">Title</span></code></p>
@@ -2781,7 +2777,7 @@ div.rendered_html tbody tr:hover {
 <p><strong>NOTA 2</strong>: stiamo specificando che lo vogliamo aprire in modalità <code class="docutils literal notranslate"><span class="pre">mode=rw</span></code>, cioè di lettura + scrittura (Read Write). SE il database non esiste, questa funzione lancerà un errore.</p>
 <p><strong>NOTA 3</strong>: se volessimo creare un nuovo database, dovremmo usare la modalità lettura + scrittura + creazione (Read Write Creation), specificando come parametro <code class="docutils literal notranslate"><span class="pre">mode=rwc</span></code> (notare la <code class="docutils literal notranslate"><span class="pre">c</span></code> in più)</p>
 <p><strong>NOTA 4</strong>: in tanti sistemi di database (SQLite incluso), di default quando ci si connette ad un database su disco non esistente, ne creano uno. Questo è causa di tantissime imprecazioni, perchè se si sbaglia a scrivere il nome del database non saranno segnalati errori e ci si ritroverà connessi ad un database vuoto, chiedendosi che fine abbiano fatto i dati. E ci si troverà anche il disco pieno di file di database con nomi sbagliati!</p>
-<p>Tramite l’oggetto connessione <code class="docutils literal notranslate"><span class="pre">conn</span></code> possiamo creare un cosiddetto cursore, che ci consentintirà di eseguire query verso il database. Usare una connessione per fare query equivale a chiedere una risorsa del sistema a Python. Le regole di buona educazione ci dicono che quando chiediamo in prestito qualcosa, dopo averlo usato lo si restituisce. La ‘restituzione’ equivarrebbe in Python a <em>chiudere</em> la risorsa aperta. Ma mentre usiamo la risorsa si potrebbe verificare un errore, che potrebbe
+<p>Tramite l’oggetto connessione <code class="docutils literal notranslate"><span class="pre">conn</span></code> possiamo creare un cosiddetto cursore, che ci consentirà di eseguire query verso il database. Usare una connessione per fare query equivale a chiedere una risorsa del sistema a Python. Le regole di buona educazione ci dicono che quando chiediamo in prestito qualcosa, dopo averlo usato lo si restituisce. La ‘restituzione’ equivarrebbe in Python a <em>chiudere</em> la risorsa aperta. Ma mentre usiamo la risorsa si potrebbe verificare un errore, che potrebbe
 impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che vogliamo che la risorsa venga chiusa automaticamente in caso di errore, usiamo il comando <code class="docutils literal notranslate"><span class="pre">with</span></code> come abbiamo fatto per i file:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
