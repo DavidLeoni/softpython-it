@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman-web.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.3.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.1.css" type="text/css" />
 
   
   
@@ -4251,7 +4251,7 @@ dimensione degli spicchi è simile.</p>
 <span class="c1"># CAMBIA INTENSITA&#39; DEL COLORE CON alpha</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span><span class="mi">400</span><span class="p">],</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">],</span>
-         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span>
+         <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
          <span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># colore pieno</span>
          <span class="n">linewidth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span><span class="mi">400</span><span class="p">],</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">],</span>
@@ -4284,13 +4284,8 @@ dimensione degli spicchi è simile.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/tmp/ipykernel_6217/3617304712.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">25</span>
-<span class="ansi-red-fg">    alpha=1.0,  # colore pieno</span>
-        ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-
-</pre></div></div>
+<img alt="../_images/visualization_visualization1-sol_108_0.png" src="../_images/visualization_visualization1-sol_108_0.png" />
+</div>
 </div>
 </div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
@@ -4310,13 +4305,8 @@ dimensione degli spicchi è simile.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;/tmp/ipykernel_6217/3617304712.py&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">25</span>
-<span class="ansi-red-fg">    alpha=1.0,  # colore pieno</span>
-        ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-
-</pre></div></div>
+<img alt="../_images/visualization_visualization1-sol_110_0.png" src="../_images/visualization_visualization1-sol_110_0.png" />
+</div>
 </div>
 </div>
 </div>
@@ -4340,8 +4330,8 @@ numpy</a>.</p>
 <h3>Google Calendar<a class="headerlink" href="#Google-Calendar" title="Permalink to this headline">¶</a></h3>
 <p>Se vai nelle impostazioni di un Google Calendar, vedrai che c’è una voce ‘Incorpora codice’ con dentro del codice che inizia con <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code>.</p>
 <p>Se copi quel codice in Jupyter, ricordandoti di mettere <code class="docutils literal notranslate"><span class="pre">%%HTML</span></code> nella prima cella vedrai il calendario.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4351,12 +4341,18 @@ numpy</a>.</p>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<iframe src="https://calendar.google.com/calendar/embed?src=h5tv130eddjl9mmgh55hr2ak7k%40group.calendar.google.com&ctz=Europe%2FRome&dates=20180201%2F20180401" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+</div>
 </div>
 <div class="section" id="Video-YouTube">
 <h3>Video YouTube<a class="headerlink" href="#Video-YouTube" title="Permalink to this headline">¶</a></h3>
 <p>Se in YouTube sotto un video clicchi su <em>CONDIVIDI</em> e poi scegli <em>incorpora</em>, vedrai del codice che inizia con <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span></code>. Puoi incollare tale codice in Jupyter in una cella, basta che nella prima riga scrivi <code class="docutils literal notranslate"><span class="pre">%%HTML</span></code></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4366,14 +4362,20 @@ numpy</a>.</p>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jeG49DxMsvw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+</div>
 </div>
 <div class="section" id="Mappa-Umap">
 <h3>Mappa Umap<a class="headerlink" href="#Mappa-Umap" title="Permalink to this headline">¶</a></h3>
 <p>Sempre tramite è possibile inserire mappe, per esempio UMap - qua vediamo solo un’esempio, vedremo i dettagli nel tutorial sull’<a class="reference external" href="https://it.softpython.org/integration/integration-sol.html">integrazione</a>.</p>
 <p><strong>NOTA</strong>: Queste mappe permettono di essere cliccate e sono spesso più che sufficienti per scopi di viusalizzazione / browsing, ma non è possibile scrivere del codice Python che reagisca ai click. Se hai questa esigenza, bisogna usare sistemi più avanzati discussi nel <a class="reference external" href="https://it.softpython.org/gui/gui-sol.html#Mappe">tutorial Interfacce utente</a></p>
 <p>Questa che segue è la <a class="reference external" href="https://umap.openstreetmap.fr/it/map/servizi-rovereto_41127#14/45.8883/11.0500">mappa Umap</a> dei Servizi di Rovereto (<a class="reference external" href="https://docs.google.com/presentation/d/1CWo9pFl6jcR1EmDAXOmNeOayfyjfLqLR5-h5U8zxrrk/edit?usp=sharing">tutorial creazione mappa</a>)</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4383,6 +4385,12 @@ numpy</a>.</p>
 
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<iframe width="100%" height="300px" frameBorder="0" allowfullscreen src="https://umap.openstreetmap.fr/it/map/servizi-rovereto_41127?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false#14/45.8883/11.0500"></iframe><p><a href="https://umap.openstreetmap.fr/it/map/servizi-rovereto_41127">Visualizza a schermo intero</a></p></div>
 </div>
 </div>
 </div>
