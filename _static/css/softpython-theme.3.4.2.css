@@ -78,7 +78,7 @@ html { font-size:0.81em; }
 }
 @media screen and (min-device-width:1400px) { 
     .wy-nav-content {
-        max-width:695px;
+        max-width:700px;
     }
 
 }
@@ -87,21 +87,19 @@ html { font-size:0.81em; }
     html { font-size:0.85em; }    
     
     .wy-nav-content {
-        max-width:755px;
+        max-width:750px;
     }
     
 }
-
 
 @media screen and (min-device-width: 1900px) {    
-    html { font-size:0.98em; }  
+    html { font-size:1em; }  
     
     .wy-nav-content {
-        max-width:870px;
+        max-width:800px;
     }
     
 }
-
 
 /* I presume higher res users are accustomed  to zooming
       which also works better with Python Tutor
@@ -229,28 +227,6 @@ html { font-size:0.81em; }
    background-color: #705d39;   
 }
 
-.toctree-l1 > a {
-    line-height:2ch !important;
-}
-.toctree-l2 > a {
-    line-height:2ch !important;
-}
-.toctree-l3 > a {
-    line-height:2ch !important;
-}
-
-.toctree-l4 > a {
-    padding: .4045em 1.663em .4045em  4.663em !important;    
-    line-height:2ch !important;
-}
-
-.toctree-l5 > a {
-    font-size: 0.97rem !important;
-    padding: .4045em 1.663em .4045em  5em !important;
-    line-height:2ch !important;
-}
-
-
 div.highlight, div.highlight-none, div.highlight-python, div.highlight-bash, div.highlight-ipython3 {
     border-radius:12px;
 }
@@ -283,27 +259,39 @@ h2 { font-size:1.6rem; }
 h3 { font-size:1.3rem; }
 h4 { font-size:1.2rem; }
 
+
+
+.toctree-l1 > a {
+    line-height:2ch !important;
+}
+.toctree-l2 > a {
+    line-height:2ch !important;
+}
+.toctree-l3 > a {
+    line-height:2ch !important;
+}
+
+.toctree-l4 > a {
+    padding: .4045em 1.663em .4045em  4.663em !important;    
+    line-height:2ch !important;
+}
+
+.toctree-l5 > a {
+    font-size: 0.97rem !important;
+    padding: .4045em 1.663em .4045em  5em !important;
+    line-height:2ch !important;
+}
+
 .rst-content blockquote {
     font-size: 1.25rem;
 }
 
-pre {
-    font-family: "Inconsolata" !important;
-    font-size:1.2rem !important;
-    background-color:#f8f8ec;
-    line-height: 1.5rem !important;
+
+/* hack for Python Tutor 'next line to execute' becoming too big */
+#legendDiv p {
+    font-size: 9pt;
 }
 
-
-.rst-content code.literal {
-    color:black;
-    background-color: white !important;
-}
-
-/* cell number */
-div.nbinput.container div.prompt, div.nboutput.container div.prompt{
-    display:none
-}
 
 table.docutils th > p {
     font-size:1.1rem !important;
@@ -316,14 +304,23 @@ table.docutils td > p {
 }
 
 
-
-
-/* hack for Python Tutor 'next line to execute' becoming too big */
-#legendDiv p {
-    font-size: 9pt;
+pre {
+    font-family: "Inconsolata" !important;
+    font-size:1.2rem !important;
+    background-color:#f8f8ec;
+    line-height: 1.5rem !important;
 }
 
 
+/* cell number */
+div.nbinput.container div.prompt, div.nboutput.container div.prompt{
+    display:none
+}
+
+.rst-content code.literal {
+    color:black;
+    background-color: white !important;
+}
 
 .jupman-sol {    
     background-color:#ebf3ed !important;  
