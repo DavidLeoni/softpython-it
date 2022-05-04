@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.4.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
 
   
   
@@ -509,8 +509,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings5-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Il-drago-Smaug">Sfida - Il drago Smaug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida:-Psycho-Circus">Sfida: Psycho Circus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 </ul>
 </li>
 </ul>
@@ -2776,7 +2776,7 @@ DING!
 <h3>Sfida - La ricetta della nonna<a class="headerlink" href="#Sfida---La-ricetta-della-nonna" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ Requisiti: stringhe, liste, if, for</p>
 <p>La nonna ci ha dato la sua miracolosa ricetta della pasta olive acciughe e capperi.</p>
-<p>Dobbiamo andare a comprare gli ingredienti e dobbiamo capire quanti <strong>capperi</strong>, <strong>olive</strong> e <strong>pepe</strong> comprare. Ovviamente di pasta ne abbiamo già in quantità, quindi non ci interessa.</p>
+<p>Dobbiamo andare a comprare gli ingredienti e dobbiamo capire quanti <strong>capperi</strong>, <strong>olive</strong> e <strong>pepe</strong> comprare. Di pasta e altri ingrdienti ne abbiamo già in quantità, quindi non ci interessano.</p>
 <p>Per comprarli, dobbiamo sapere <strong>quanti</strong> prodotti comprare di ciascun tipo.</p>
 <ul class="simple">
 <li><p><strong>ATTENZIONE:</strong> la nonna ha la sua età ed è sempre stata pasticciona e quindi la ricetta è scritta in modo non consistente, e le parole vanno <em>normalizzate</em></p></li>
@@ -2802,9 +2802,7 @@ DING!
 
 <span></span><span class="c1">#          0        1    2        3          4        5         6        7       8       9         10    11</span>
 <span class="n">ricetta</span> <span class="o">=</span> <span class="s2">&quot;oliva</span><span class="se">\t</span><span class="s2">, pepe,cappero ,detersivo, cappero, peperone, acciuga ,oliva , pepe</span><span class="se">\t</span><span class="s2">, cappero , oliva,pasta</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="n">num_oliva</span>   <span class="o">=</span> <span class="mi">0</span>
-<span class="n">num_pepe</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">num_cappero</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1">#ricetta = &quot;cappone , pepe,\noliva\n,\n\tpepe, acciuga &quot;   #  1 oliva 2 pepe 0 cappero</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -2825,8 +2823,8 @@ DING!
 </pre></div>
 </div>
 <p>dopo il tuo codice dovrebbe risultare:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; print(tradotto)
-cIaO qUeStO e&#39; Un tEsTo StOrTO
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tradotto</span><span class="p">)</span>
+<span class="go">cIaO qUeStO e&#39; Un tEsTo StOrTO</span>
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -2835,7 +2833,8 @@ cIaO qUeStO e&#39; Un tEsTo StOrTO
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;CiAo QuEsTo E&#39; uN TeStO sToRto&quot;</span>
+<span></span><span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;CiAo QuEsTo E&#39; uN TeStO sToRto&quot;</span>   <span class="c1"># cIaO qUeStO e&#39; Un tEsTo StOrTO</span>
+<span class="c1">#testo = &quot;gInGillo&quot;                        # GiNgILLO</span>
 <span class="n">tradotto</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
 <span class="c1"># scrivi qui</span>
@@ -2882,12 +2881,15 @@ cIaO qUeStO e&#39; Un tEsTo StOrTO
 <h3>Sfida - Monte ordinato<a class="headerlink" href="#Sfida---Monte-ordinato" title="Permalink to this headline">¶</a></h3>
 <p>✪✪ Requisiti: liste, sort, for</p>
 <p>Data una lista <code class="docutils literal notranslate"><span class="pre">monte</span></code> con <span class="math notranslate nohighlight">\(n\)</span> numeri (supponi che <span class="math notranslate nohighlight">\(n\)</span> sia pari), scrivi del codice che MODIFICA <code class="docutils literal notranslate"><span class="pre">monte</span></code>, ordinando solo i numeri nella prima metà in ordine crescente e poi ordinando solo i numeri nella seconda metà in ordine inverso</p>
-<p><strong>SUGGERIMENTO:</strong> <code class="docutils literal notranslate"><span class="pre">sort()</span></code> funziona solo su tutta la lista, per ordinarne solo metà dovrai creare altre liste dove mettere i valori da ordinare, e poi copiarli nella lista originale</p>
+<ul class="simple">
+<li><p><strong>NON</strong> riassegnare <code class="docutils literal notranslate"><span class="pre">monte</span></code>, perchè perderesti la zona di memoria originale (quindi niente <code class="docutils literal notranslate"><span class="pre">monte</span> <span class="pre">=</span></code>)</p></li>
+<li><p><strong>SUGGERIMENTO:</strong> <code class="docutils literal notranslate"><span class="pre">sort()</span></code> funziona solo su tutta la lista, per ordinarne solo metà dovrai creare altre liste dove mettere i valori da ordinare, e poi copiarli nella lista originale</p></li>
+</ul>
 <p>Esempio - data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Dopo il tuo codice, scrivendo <code class="docutils literal notranslate"><span class="pre">print(monte)</span></code> deve risultare:</p>
+<p>Dopo il tuo codice deve risultare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">monte</span><span class="p">)</span>
 <span class="go">[20, 40, 50, 60, 90, 9, 8, 7, 4, 3]</span>
 </pre></div>
@@ -2898,7 +2900,8 @@ cIaO qUeStO e&#39; Un tEsTo StOrTO
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">monte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span></span><span class="n">monte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>   <span class="c1"># [20, 40, 50, 60, 90, 9, 8, 7, 4, 3]</span>
+<span class="c1">#monte = [5,0,3,4,3,8]                    # [0, 3, 5, 8, 4, 3]</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -3056,7 +3059,8 @@ cIaO qUeStO e&#39; Un tEsTo StOrTO
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">parole</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="s1">&#39;oooo&#39;</span><span class="p">,</span> <span class="s1">&#39;nnn&#39;</span><span class="p">,</span> <span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;lllllll&#39;</span><span class="p">,</span> <span class="s1">&#39;oo&#39;</span><span class="p">]</span>
+<span></span><span class="n">parole</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="s1">&#39;oooo&#39;</span><span class="p">,</span> <span class="s1">&#39;nnn&#39;</span><span class="p">,</span> <span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;lllllll&#39;</span><span class="p">,</span> <span class="s1">&#39;oo&#39;</span><span class="p">]</span>  <span class="c1"># {&#39;d&#39;: 8, &#39;o&#39;: 7, &#39;n&#39;: 3, &#39;l&#39;: 7}</span>
+<span class="c1">#parole = [&#39;d&#39;,&#39;ii&#39;,&#39;nnn&#39;,&#39;dd&#39;,&#39;ooo&#39;,&#39;n&#39;]                        # {&#39;d&#39;: 3, &#39;i&#39;: 2, &#39;n&#39;: 4, &#39;o&#39;: 3}</span>
 
 <span class="c1"># scrivi qui</span>
 

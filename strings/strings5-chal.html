@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.4.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
 
   
   
@@ -509,8 +509,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Sfida---Il-drago-Smaug">Sfida - Il drago Smaug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Sfida:-Psycho-Circus">Sfida: Psycho Circus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 </ul>
 </li>
 </ul>
@@ -2728,6 +2728,63 @@ Il      cavaliere
 </div>
 </div>
 </div>
+<div class="section" id="Sfida:-Psycho-Circus">
+<h2>Sfida: Psycho Circus<a class="headerlink" href="#Sfida:-Psycho-Circus" title="Permalink to this headline">¶</a></h2>
+<p>✪ Requisiti: slice</p>
+<p>Nella variabile <code class="docutils literal notranslate"><span class="pre">kiss_album</span></code> è contenuta la lista delle tracce dell’album <em>Psycho Circus</em> pubblicato nel 1998 dai KISS, una band di gentlemen del glam rock. La variabile è una stringa multilinea (aperta come si vede tramite tre <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> e chiusa nello stesso modo).</p>
+<p>In ogni riga della stringa è presente del testo, il titolo della canzone, e una serie di <code class="docutils literal notranslate"><span class="pre">_</span></code> in modo da rendere tutte le righe della stessa lunghezza.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#La lunghezza di ogni riga</span>
+<span class="n">lunghezza_etichetta</span> <span class="o">=</span> <span class="mi">48</span>
+
+<span class="c1"># Il database contenente le canzoni</span>
+<span class="n">kiss_album</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Psycho Circus _________________________________</span>
+<span class="s2">Within ________________________________________</span>
+<span class="s2">I Pledge Allegiance to the State of Rock &amp; Roll</span>
+<span class="s2">Into the Void _________________________________</span>
+<span class="s2">We Are One ____________________________________</span>
+<span class="s2">You Wanted the Best ___________________________</span>
+<span class="s2">Raise Your Glasses ____________________________</span>
+<span class="s2">I Finally Found My Way_________________________</span>
+<span class="s2">Dreamin _______________________________________</span>
+<span class="s2">Journey of 1,000 Years ________________________&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Stiamo programmando il controllore di uno stereo e dato il suo numero <code class="docutils literal notranslate"><span class="pre">num_canzone</span></code> nell’album, vogliamo STAMPARE numero e titolo.</p>
+<p>Per esempio, se riceviamo <code class="docutils literal notranslate"><span class="pre">num_canzone</span> <span class="pre">=</span> <span class="pre">3</span></code> dobbiamo stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>numero canzone: 3
+Into the Void _________________________________
+</pre></div>
+</div>
+<p><strong>NOTA</strong>: alla fine di ogni riga di <code class="docutils literal notranslate"><span class="pre">kiss_album</span></code>, c’è un carattere speciale, giusto? :)</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+
+<span></span><span class="n">lunghezza_etichetta</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="n">num_canzone</span> <span class="o">=</span> <span class="mi">3</span>    <span class="c1">#  Into the Void _________________________________</span>
+<span class="c1">#num_canzone = 9   #  Journey of 1,000 Years ________________________</span>
+
+<span class="n">kiss_album</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Psycho Circus _________________________________</span>
+<span class="s2">Within ________________________________________</span>
+<span class="s2">I Pledge Allegiance to the State of Rock &amp; Roll</span>
+<span class="s2">Into the Void _________________________________</span>
+<span class="s2">We Are One ____________________________________</span>
+<span class="s2">You Wanted the Best ___________________________</span>
+<span class="s2">Raise Your Glasses ____________________________</span>
+<span class="s2">I Finally Found My Way_________________________</span>
+<span class="s2">Dreamin _______________________________________</span>
+<span class="s2">Journey of 1,000 Years ________________________&quot;&quot;&quot;</span>
+
+<span class="c1"># scrivi qui</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="Sfida---Censura-al-tiramisù">
 <h2>Sfida - Censura al tiramisù<a class="headerlink" href="#Sfida---Censura-al-tiramisù" title="Permalink to this headline">¶</a></h2>
 <p>✪ Ci è stato inviato un testo illegale, immorale e che fa pure ingrassare. Per tutelare la pubblica salute abbiamo l’arduo compito di censurarlo e renderlo consono al buon costume.</p>
@@ -2748,7 +2805,7 @@ Il      cavaliere
 </pre></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2787,59 +2844,6 @@ Senza contare le rivisitazioni più raffinate come la crostata morbida o la tort
 
 6
 </pre></div></div>
-</div>
-</div>
-<div class="section" id="Sfida:-Psycho-Circus">
-<h2>Sfida: Psycho Circus<a class="headerlink" href="#Sfida:-Psycho-Circus" title="Permalink to this headline">¶</a></h2>
-<p>✪ Requisiti: slice</p>
-<p>Nella variabile <code class="docutils literal notranslate"><span class="pre">kiss_album</span></code> è contenuta la lista delle tracce dell’album <em>Psycho Circus</em> pubblicato nel 1998 dai KISS, una band di gentlemen del glam rock. La variabile è una stringa multilinea (aperta come si vede tramite tre <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> e chiusa nello stesso modo).</p>
-<p>In ogni riga della stringa è presente del testo, il titolo della canzone, e una serie di <code class="docutils literal notranslate"><span class="pre">__</span></code> in modo da rendere tutte le righe lunghe uguali.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#La lunghezza di ogni riga</span>
-<span class="n">lunghezza_etichetta</span> <span class="o">=</span> <span class="mi">48</span>
-
-<span class="c1"># Il database contenente le canzoni</span>
-<span class="n">kiss_album</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Psycho Circus _________________________________</span>
-<span class="s2">Within ________________________________________</span>
-<span class="s2">I Pledge Allegiance to the State of Rock &amp; Roll</span>
-<span class="s2">Into the Void _________________________________</span>
-<span class="s2">We Are One ____________________________________</span>
-<span class="s2">You Wanted the Best ___________________________</span>
-<span class="s2">Raise Your Glasses ____________________________</span>
-<span class="s2">I Finally Found My Way_________________________</span>
-<span class="s2">Dreamin _______________________________________</span>
-<span class="s2">Journey of 1,000 Years ________________________&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-<p>Stiamo programmando il controllore di uno stereo e dato il suo numero <code class="docutils literal notranslate"><span class="pre">num_canzone</span></code> nell’album, vogliamo stampare il titolo. Per esempio, la canzone numero <em>3</em> è intitolata <em>Into the Void</em> e il nostro compito è quello di estrarre la seguente sottostringa:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;Into</span> <span class="pre">the</span> <span class="pre">Void</span> <span class="pre">_________________________________&quot;</span></code></p>
-<p><strong>NOTA</strong>: alla fine di ogni riga di <code class="docutils literal notranslate"><span class="pre">kiss_album</span></code>, c’è un carattere speciale, giusto? :)</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-
-<span></span><span class="n">canzone</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">num_canzone</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">lunghezza_etichetta</span> <span class="o">=</span> <span class="mi">48</span>
-
-<span class="n">kiss_album</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Psycho Circus _________________________________</span>
-<span class="s2">Within ________________________________________</span>
-<span class="s2">I Pledge Allegiance to the State of Rock &amp; Roll</span>
-<span class="s2">Into the Void _________________________________</span>
-<span class="s2">We Are One ____________________________________</span>
-<span class="s2">You Wanted the Best ___________________________</span>
-<span class="s2">Raise Your Glasses ____________________________</span>
-<span class="s2">I Finally Found My Way_________________________</span>
-<span class="s2">Dreamin _______________________________________</span>
-<span class="s2">Journey of 1,000 Years ________________________&quot;&quot;&quot;</span>
-
-<span class="c1"># scrivi qui</span>
-
-
-</pre></div>
-</div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
