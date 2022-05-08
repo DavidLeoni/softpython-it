@@ -310,6 +310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Ordine-di-valutazione">Ordine di valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Errori-nella-valutazione">Errori nella valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Operatori-di-comparazione">Operatori di comparazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Congiungere-comparazioni">Congiungere comparazioni</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-1">Esercizio - Il Tagliaerbe 1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-2">Esercizio - Il Tagliaerbe 2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-3">Esercizio - Il Tagliaerbe 3</a></li>
@@ -2698,19 +2699,19 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Sfida---Nozze-di-platino">
 <h2>Sfida - Nozze di platino<a class="headerlink" href="#Sfida---Nozze-di-platino" title="Permalink to this headline">¶</a></h2>
 <p>✪ Requisiti: dizionari</p>
-<p>Al tranquillissimo paesello di Gerontonia vi sono delle coppie assai tenaci che dopo 75 anni dal fatico “Sì!” meritano di festeggiare le nozze di platino. Abbiamo una lista dei matrimoni con esattamente 3 coppie scritte nel formato “maschio-femmina”, e vogliamo creare un dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> che associa ad ogni maschio la corrispondente compagna.</p>
+<p>Al tranquillissimo paesino di Gerontonia vi sono delle coppie assai tenaci che dopo 75 anni dal fatico “Sì!” meritano di festeggiare le nozze di platino. Abbiamo una lista dei matrimoni con esattamente 3 coppie scritte nel formato “maschio-femmina”, e vogliamo creare un dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> che associa ad ogni maschio la corrispondente compagna.</p>
 <ul class="simple">
 <li><p>assumi che i nomi dei maschi siano tutti diversi e che vi siano <strong>esattamente</strong> 3 coppie</p></li>
 </ul>
 <p>Esempio - data:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrimoni</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Amilcare-Genoveffa&quot;</span><span class="p">,</span> <span class="s2">&quot;Oronzo-Eusonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Venceslao-Elvira&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrimoni</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Amilcare-Maria Eusonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Oronzo Pio-Genoveffa&quot;</span><span class="p">,</span> <span class="s2">&quot;Venceslao-Elvira&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>dopo il tuo codice, deve risultare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
-<span class="go">{&#39;Amilcare&#39;: &#39;Genoveffa&#39;,</span>
-<span class="go"> &#39;Oronzo&#39;: &#39;Eusonia&#39;,</span>
-<span class="go"> &#39;Venceslao&#39;: &#39;Elvira&#39;}</span>
+<span class="go">{&#39;Amilcare&#39;   : &#39;Maria Eusonia&#39;,</span>
+<span class="go"> &#39;Oronzo Pio&#39;: &#39;Genoveffa&#39;,</span>
+<span class="go"> &#39;Venceslao&#39;  : &#39;Elvira&#39;}</span>
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -2719,8 +2720,8 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">matrimoni</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Amilcare-Genoveffa&quot;</span><span class="p">,</span> <span class="s2">&quot;Oronzo-Eusonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Venceslao-Elvira&quot;</span><span class="p">]</span>
-<span class="c1">#matrimoni = [&quot;Liutprando-Brunilde&quot;, &quot;Clodoveo-Pancrazia&quot;, &quot;Evaristo-Ubalda&quot;]</span>
+<span></span><span class="n">matrimoni</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Amilcare-Maria Eusonia&quot;</span><span class="p">,</span> <span class="s2">&quot;Oronzo Pio-Genoveffa&quot;</span><span class="p">,</span> <span class="s2">&quot;Venceslao-Elvira&quot;</span><span class="p">]</span>
+<span class="c1">#matrimoni = [&quot;Liutprando-Brunilde&quot;, &quot;Clodoveo-Elvira Pancrazia Ludmilla&quot;, &quot;Gian Evaristo-Ubalda&quot;]</span>
 
 <span class="c1"># scrivi qui</span>
 

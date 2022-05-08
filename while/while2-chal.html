@@ -310,6 +310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Ordine-di-valutazione">Ordine di valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Errori-nella-valutazione">Errori nella valutazione</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Operatori-di-comparazione">Operatori di comparazione</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Congiungere-comparazioni">Congiungere comparazioni</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-1">Esercizio - Il Tagliaerbe 1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-2">Esercizio - Il Tagliaerbe 2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../basics/basics2-bools-sol.html#Esercizio---Il-Tagliaerbe-3">Esercizio - Il Tagliaerbe 3</a></li>
@@ -2697,18 +2698,18 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Sfida---Se-magna">
 <h2>Sfida - Se magna<a class="headerlink" href="#Sfida---Se-magna" title="Permalink to this headline">¶</a></h2>
-<p>✪✪ Requisiti: if, while</p>
+<p>✪✪ Requisiti: <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
 <p>C’è una festa post-esame, e siamo affamati. Bisogna servire dei panini con hamburger. Abbiamo un certo numero di panini e dei burgers, non necessariamente nella stessa quantità. Dovremo servire panini fino a quando o il pane o i burger finiscono. Alla fine avviseremo se sono avanzati ingredienti.</p>
-<p>Scrivi del codice che STAMPA la procedura</p>
+<p>Scrivi del codice che MODIFICA l’input e STAMPA dettagliatamente la procedura eseguita.</p>
 <p>Esempio:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">burgers</span><span class="p">,</span><span class="n">panini</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">panini</span><span class="p">,</span> <span class="n">burgers</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span>
 </pre></div>
 </div>
-<p>STAMPA:</p>
+<p>stampa:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Servito un panino: 2 panini rimanenti, 4 burger rimanenti
 Servito un panino: 1 panini rimanenti, 3 burger rimanenti
 Servito un panino: 0 panini rimanenti, 2 burger rimanenti
-Avanzano 2 burger
+Avanzano 2 burger.
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -2717,9 +2718,9 @@ Avanzano 2 burger
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">burgers</span><span class="p">,</span><span class="n">panini</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>   <span class="c1"># ... avanzeranno 2 burger</span>
-<span class="c1">#burgers,panini = 3,9   # ... avanzeranno 6 panini</span>
-<span class="c1">#burgers,panini = 4,4   # ... alla fine stampa &#39;credenza vuota&#39;</span>
+<span></span><span class="n">panini</span><span class="p">,</span> <span class="n">burgers</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span>   <span class="c1"># Servito bla bla... alla fine stampa &#39;Avanzano 2 burger.&#39;</span>
+<span class="c1">#panini, burgers = 9,3   # Servito bla bla... alla fine stampa &#39;Avanzano 6 panini.&#39;</span>
+<span class="c1">#panini, burgers = 4,4   # Servito bla bla... alla fine stampa &#39;credenza vuota!&#39;</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -2730,49 +2731,49 @@ Avanzano 2 burger
 </div>
 <div class="section" id="Sfida---Il-Dungeon">
 <h2>Sfida - Il Dungeon<a class="headerlink" href="#Sfida---Il-Dungeon" title="Permalink to this headline">¶</a></h2>
-<p>✪✪✪ Requisiti: while, if, liste</p>
+<p>✪✪✪ Requisiti: <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">liste</span></code></p>
 <p>Un cavaliere si inoltra in una caverna alla ricerca di oggetti preziosi. Appena trova quello che sta cercando, esulta e torna indietro.</p>
 <p>Rappresentiamo la <code class="docutils literal notranslate"><span class="pre">caverna</span></code> come una lista di stringhe. L’oggetto da cercare è indicato nella variabile <code class="docutils literal notranslate"><span class="pre">cerco</span></code>.</p>
 <p>Scrivi del codice che date le voci STAMPA il percorso.</p>
 <ul class="simple">
+<li><p><strong>USA</strong> un <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
 <li><p><strong>NON USARE</strong> <code class="docutils literal notranslate"><span class="pre">break</span></code> !!</p></li>
-<li><p><strong>NON USARE</strong> il metodo <code class="docutils literal notranslate"><span class="pre">.find</span></code> !!</p></li>
+<li><p><strong>NON USARE</strong> metodi di ricerca come <code class="docutils literal notranslate"><span class="pre">.index</span></code> o <code class="docutils literal notranslate"><span class="pre">count</span></code></p></li>
 </ul>
-<p>Esempio 1 - dati:</p>
+<p><strong>Esempio 1</strong> - Dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cerco</span> <span class="o">=</span> <span class="s1">&#39;il tesoro&#39;</span>
 <span class="n">caverna</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;un masso&#39;</span><span class="p">,</span><span class="s1">&#39;una trappola&#39;</span><span class="p">,</span><span class="s1">&#39;delle spade&#39;</span><span class="p">,</span>
            <span class="s1">&#39;il tesoro&#39;</span><span class="p">,</span><span class="s1">&#39;una ragnatela&#39;</span><span class="p">,</span> <span class="s1">&#39;un boleto delle tombe&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>STAMPA:</p>
+<p>stampa:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Entro
-Ho trovato un masso
-Ho trovato una trappola
-Ho trovato delle spade
+Vedo un masso
+Vedo una trappola
+Vedo delle spade
 Che fortuna! Ho trovato il tesoro
 Torno indietro!
-Ho trovato delle spade
-Ho trovato una trappola
-Ho trovato un masso
+Vedo delle spade
+Vedo una trappola
+Vedo un masso
 Esco
 </pre></div>
 </div>
-<p>Esempio 2:</p>
-<p>Una lista può anche <em>non</em> contenere l’oggetto cercato, in tal caso bisognerà mostrare un messaggio apposito:</p>
+<p><strong>Esempio 2:</strong> Una lista può anche <em>non</em> contenere l’oggetto cercato, in tal caso bisognerà mostrare un messaggio apposito. Per es, dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cerco</span> <span class="o">=</span> <span class="s1">&#39;il talismano del potere&#39;</span>
 <span class="n">caverna</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;una trappola&#39;</span><span class="p">,</span><span class="s1">&#39;un boleto delle tombe&#39;</span><span class="p">,</span><span class="s1">&#39;una ragnatela&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>STAMPA:</p>
+<p>stampa:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Entro
-Ho trovato una trappola
-Ho trovato un boleto delle tombe
-Ho trovato una ragnatela
-Purtroppo non c&#39;è nessun tesoro!
+Vedo una trappola
+Vedo un boleto delle tombe
+Vedo una ragnatela
+Purtroppo il talismano del potere non c&#39;è
 Torno indietro!
-Ho trovato una ragnatela
-Ho trovato un boleto delle tombe
-Ho trovato una trappola
+Vedo una ragnatela
+Vedo un boleto delle tombe
+Vedo una trappola
 Esco
 </pre></div>
 </div>
@@ -2782,11 +2783,12 @@ Esco
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 
-<span></span><span class="n">cerco</span> <span class="o">=</span> <span class="s1">&#39;il tesoro&#39;</span>
-<span class="n">caverna</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;un masso&#39;</span><span class="p">,</span><span class="s1">&#39;una trappola&#39;</span><span class="p">,</span><span class="s1">&#39;delle spade&#39;</span><span class="p">,</span><span class="s1">&#39;il tesoro&#39;</span><span class="p">,</span><span class="s1">&#39;una ragnatela&#39;</span><span class="p">,</span> <span class="s1">&#39;un boleto delle tombe&#39;</span><span class="p">]</span>
+<span></span><span class="n">cerco</span><span class="p">,</span><span class="n">caverna</span><span class="o">=</span><span class="s1">&#39;il tesoro&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;un masso&#39;</span><span class="p">,</span><span class="s1">&#39;una trappola&#39;</span><span class="p">,</span><span class="s1">&#39;delle spade&#39;</span><span class="p">,</span><span class="s1">&#39;il tesoro&#39;</span><span class="p">,</span><span class="s1">&#39;una ragnatela&#39;</span><span class="p">,</span><span class="s1">&#39;un boleto delle tombe&#39;</span><span class="p">]</span>
 
-<span class="n">cerco</span> <span class="o">=</span> <span class="s1">&#39;il talismano del potere&#39;</span>
-<span class="n">caverna</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;una trappola&#39;</span><span class="p">,</span><span class="s1">&#39;un boleto delle tombe&#39;</span><span class="p">,</span><span class="s1">&#39;una ragnatela&#39;</span><span class="p">]</span>
+<span class="c1">#cerco,caverna = &#39;il talismano del potere&#39;, [&#39;una trappola&#39;,&#39;un boleto delle tombe&#39;,&#39;una ragnatela&#39;]</span>
+<span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, []                         # funziona anche in questi casi particolari?</span>
+<span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, [&#39;la corona di rubini&#39;]    #</span>
+<span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, [&#39;il martello di granito&#39;] #</span>
 
 <span class="c1"># scrivi qui</span>
 
