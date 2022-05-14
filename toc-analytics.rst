@@ -5,10 +5,10 @@ Formati dati
     :maxdepth: 3
     :glob:
 
-    file a linea <formats/formats1-lines-sol.ipynb>
-    file CSV <formats/formats2-csv-sol.ipynb>
-    file JSON <formats/formats3-json-sol.ipynb>
-    challenge <formats/formats4-chal.ipynb>
+    File a linea <formats/formats1-lines-sol.ipynb>
+    File CSV <formats/formats2-csv-sol.ipynb>
+    File JSON <formats/formats3-json-sol.ipynb>
+    Challenge <formats/formats4-chal.ipynb>
     
 Visualizzazione    
 ---------------
@@ -17,8 +17,8 @@ Visualizzazione
     :maxdepth: 3
     :glob:    
     
-    introduzione <visualization/visualization1-sol.ipynb>
-    challenge <visualization/visualization2-chal.ipynb>
+    Introduzione <visualization/visualization1-sol.ipynb>
+    Challenge <visualization/visualization2-chal.ipynb>
         
 
 Pandas    
@@ -28,7 +28,7 @@ Pandas
     :maxdepth: 3
     :glob:
     
-    introduzione <pandas/pandas1-sol.ipynb>
-    esercizi <pandas/pandas2-sol.ipynb>
-    challenge <pandas/pandas3-chal.ipynb>
+    Introduzione <pandas/pandas1-sol.ipynb>
+    Esercizi <pandas/pandas2-sol.ipynb>
+    Challenge <pandas/pandas3-chal.ipynb>
 
