@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Cicli for 6 - iterare dizionari &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/for/for6-dictionaries-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Cicli for annidati" href="for7-nested-sol.html" />
     <link rel="prev" title="Cicli for 5 - iterare insiemi" href="for5-sets-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,15 +2643,15 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Cicli-for-6---iterare-dizionari">
-<h1>Cicli for 6 - iterare dizionari<a class="headerlink" href="#Cicli-for-6---iterare-dizionari" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/for.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Cicli-for-6---iterare-dizionari">
+<h1>Cicli for 6 - iterare dizionari<a class="headerlink" href="#Cicli-for-6---iterare-dizionari" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/for.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/for">Naviga file online</a></p>
 <p>Dato un dizionario, possiamo esaminare la sequenza di chiavi, di valori o entrambi con un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-</div>
-<div class="section" id="Iterare-le-chiavi">
-<h2>Iterare le chiavi<a class="headerlink" href="#Iterare-le-chiavi" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Iterare-le-chiavi">
+<h2>Iterare le chiavi<a class="headerlink" href="#Iterare-le-chiavi" title="Permalink to this headline"></a></h2>
 <p>Per iterare <strong>solo le chiavi</strong> è sufficiente usare l’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code>:</p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: l’ordine di iterazione delle chiavi <strong>non</strong> è prevedibile !</p>
@@ -2705,8 +2660,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;bignè&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
     <span class="s1">&#39;brioche&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
     <span class="s1">&#39;krapfen&#39;</span><span class="p">:</span><span class="mi">2</span>
@@ -2718,8 +2672,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trovata chiave&#39;</span><span class="p">,</span> <span class="n">chiave</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    con valore&#39;</span><span class="p">,</span> <span class="n">diz</span><span class="p">[</span><span class="n">chiave</span><span class="p">])</span>
 </pre></div>
@@ -2739,16 +2692,15 @@ Trovata chiave krapfen
 </pre></div></div>
 </div>
 <p>Ad ogni iterazione, alla variabile <code class="docutils literal notranslate"><span class="pre">chiave</span></code> che abbiamo dichiarato viene assegnata una chiave presa dal dizionario, in un ordine che possiamo considerare non prevedibile.</p>
-</div>
-<div class="section" id="Iterare-coppie-chiave-valore">
-<h2>Iterare coppie chiave valore<a class="headerlink" href="#Iterare-coppie-chiave-valore" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Iterare-coppie-chiave-valore">
+<h2>Iterare coppie chiave valore<a class="headerlink" href="#Iterare-coppie-chiave-valore" title="Permalink to this headline"></a></h2>
 <p>Possiamo anche ottenere direttamente nel <code class="docutils literal notranslate"><span class="pre">for</span></code> sia la chiave che il valore corrispondente con questa notazione:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">chiave</span><span class="p">,</span> <span class="n">valore</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">chiave</span><span class="p">,</span> <span class="n">valore</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trovata chiave&#39;</span><span class="p">,</span> <span class="n">chiave</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    con valore&#39;</span><span class="p">,</span> <span class="n">diz</span><span class="p">[</span><span class="n">chiave</span><span class="p">])</span>
 </pre></div>
@@ -2768,9 +2720,9 @@ Trovata chiave krapfen
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">.items()</span></code> ritorna una lista di coppie chiave/valore, e ad ogni iterazione una coppia viene assegnata alle variabili <code class="docutils literal notranslate"><span class="pre">chiave</span></code> e <code class="docutils literal notranslate"><span class="pre">valore</span></code>.</p>
-</div>
-<div class="section" id="Iterare-valori">
-<h2>Iterare valori<a class="headerlink" href="#Iterare-valori" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Iterare-valori">
+<h2>Iterare valori<a class="headerlink" href="#Iterare-valori" title="Permalink to this headline"></a></h2>
 <p>Possiamo iterare i valori chiamando il metodo <code class="docutils literal notranslate"><span class="pre">.values()</span></code></p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: anche l’ordine di iterazione dei valori <strong>non</strong> è prevedibile !</p>
@@ -2779,8 +2731,7 @@ Trovata chiave krapfen
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">valore</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">valore</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trovato valore&#39;</span><span class="p">,</span> <span class="n">valore</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2795,9 +2746,9 @@ Trovato valore 8
 Trovato valore 2
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Domande---iterare">
-<h2>Domande - iterare<a class="headerlink" href="#Domande---iterare" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Domande---iterare">
+<h2>Domande - iterare<a class="headerlink" href="#Domande---iterare" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: Ricordati che l’ordine è IMPOSSIBILE da prevedere, quello che è importante è indovinare tutto quello che verrà stampato</p>
@@ -2858,16 +2809,16 @@ Trovato valore 2
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Domande---Sono-equivalenti?">
-<h2>Domande - Sono equivalenti?<a class="headerlink" href="#Domande---Sono-equivalenti?" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Domande---Sono-equivalenti?">
+<h2>Domande - Sono equivalenti?<a class="headerlink" href="#Domande---Sono-equivalenti?" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice: in ciascuno, vi sono due parti, A e B. In ciascun frammento, cerca di indovinare se la parte A stamperà esattamente quello che stampa il codice nella parte B</p>
 <ul class="simple">
 <li><p><strong>PRIMA</strong> pensa alla risposta</p></li>
 <li><p><strong>POI</strong> prova ad eseguire</p></li>
 </ul>
-<div class="section" id="Sono-equivalenti-?-postin">
-<h3>Sono equivalenti ? postin<a class="headerlink" href="#Sono-equivalenti-?-postin" title="Permalink to this headline">¶</a></h3>
+<section id="Sono-equivalenti-?-postin">
+<h3>Sono equivalenti ? postin<a class="headerlink" href="#Sono-equivalenti-?-postin" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;p&#39;</span><span class="p">:</span><span class="s1">&#39;t&#39;</span><span class="p">,</span>
     <span class="s1">&#39;o&#39;</span><span class="p">:</span><span class="s1">&#39;i&#39;</span><span class="p">,</span>
@@ -2883,9 +2834,9 @@ Trovato valore 2
     <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti-?-cortel">
-<h3>Sono equivalenti ? cortel<a class="headerlink" href="#Sono-equivalenti-?-cortel" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti-?-cortel">
+<h3>Sono equivalenti ? cortel<a class="headerlink" href="#Sono-equivalenti-?-cortel" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="s1">&#39;t&#39;</span><span class="p">,</span>
     <span class="s1">&#39;o&#39;</span><span class="p">:</span><span class="s1">&#39;e&#39;</span><span class="p">,</span>
@@ -2901,9 +2852,9 @@ Trovato valore 2
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti-?---gel">
-<h3>Sono equivalenti ? - gel<a class="headerlink" href="#Sono-equivalenti-?---gel" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti-?---gel">
+<h3>Sono equivalenti ? - gel<a class="headerlink" href="#Sono-equivalenti-?---gel" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;g&#39;</span><span class="p">:</span><span class="s1">&#39;l&#39;</span><span class="p">,</span>
     <span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="s1">&#39;e&#39;</span><span class="p">,</span>
@@ -2919,9 +2870,9 @@ Trovato valore 2
     <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti-?---giri">
-<h3>Sono equivalenti ? - giri<a class="headerlink" href="#Sono-equivalenti-?---giri" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti-?---giri">
+<h3>Sono equivalenti ? - giri<a class="headerlink" href="#Sono-equivalenti-?---giri" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;p&#39;</span><span class="p">:</span><span class="s1">&#39;g&#39;</span><span class="p">,</span>
     <span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="s1">&#39;i&#39;</span><span class="p">,</span>
@@ -2940,9 +2891,9 @@ Trovato valore 2
         <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---Trovato">
-<h3>Sono equivalenti? - Trovato<a class="headerlink" href="#Sono-equivalenti?---Trovato" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---Trovato">
+<h3>Sono equivalenti? - Trovato<a class="headerlink" href="#Sono-equivalenti?---Trovato" title="Permalink to this headline"></a></h3>
 <p>Prima pensa se sono equivalenti, poi verifica con tutti i valori di <code class="docutils literal notranslate"><span class="pre">k</span></code> proposti.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>Fai bene attenzione a questo esercizio !</strong></p>
@@ -2976,12 +2927,12 @@ Trovato valore 2
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: assicurati di capire bene questo punto!</strong></p>
 <p>In tanti scrivono codice come nella parte A perdendo di fatto la principale utilità dei dizionari che è l’accesso veloce. Finchè i dati sono pochi è facile non accorgersene, ma quando abbiamo megabyte di coppie chiave / valore il tempo perso in cicli inutili si fa sentire! Per ulteriori chiarimenti puoi leggere (o rivedere) la <a class="reference external" href="https://it.softpython.org/dictionaries/dictionaries2-sol.html#Disordine-veloce">sezione Disordine veloce</a> nel foglio sui dizionari.</p>
 </div>
-</div></div>
-</div>
-<div class="section" id="Esercizi-iterazione">
-<h2>Esercizi iterazione<a class="headerlink" href="#Esercizi-iterazione" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Esercizio---colore-di-cuori">
-<h3>Esercizio - colore di cuori<a class="headerlink" href="#Esercizio---colore-di-cuori" title="Permalink to this headline">¶</a></h3>
+</div></section>
+</section>
+<section id="Esercizi-iterazione">
+<h2>Esercizi iterazione<a class="headerlink" href="#Esercizi-iterazione" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---colore-di-cuori">
+<h3>Esercizio - colore di cuori<a class="headerlink" href="#Esercizio---colore-di-cuori" title="Permalink to this headline"></a></h3>
 <p>✪ Scrivi del codice che dato un dizionario <code class="docutils literal notranslate"><span class="pre">semi</span></code>, per ogni seme stampa il suo colore.</p>
 <p>Esempio - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">semi</span> <span class="o">=</span> <span class="p">{</span>
@@ -3009,9 +2960,7 @@ Il colore di quadri è rosso
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">semi</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">semi</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;cuori&#39;</span><span class="p">:</span><span class="s1">&#39;rosso&#39;</span><span class="p">,</span>
     <span class="s1">&#39;picche&#39;</span><span class="p">:</span><span class="s1">&#39;nero&#39;</span><span class="p">,</span>
     <span class="s1">&#39;quadri&#39;</span><span class="p">:</span><span class="s1">&#39;rosso&#39;</span><span class="p">,</span>
@@ -3040,9 +2989,7 @@ Il colore di fiori è nero
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">semi</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">semi</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;cuori&#39;</span><span class="p">:</span><span class="s1">&#39;rosso&#39;</span><span class="p">,</span>
     <span class="s1">&#39;picche&#39;</span><span class="p">:</span><span class="s1">&#39;nero&#39;</span><span class="p">,</span>
     <span class="s1">&#39;quadri&#39;</span><span class="p">:</span><span class="s1">&#39;rosso&#39;</span><span class="p">,</span>
@@ -3050,14 +2997,12 @@ Il colore di fiori è nero
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---preziosi">
-<h3>Esercizio - preziosi<a class="headerlink" href="#Esercizio---preziosi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---preziosi">
+<h3>Esercizio - preziosi<a class="headerlink" href="#Esercizio---preziosi" title="Permalink to this headline"></a></h3>
 <p>✪ Nel dizionario <code class="docutils literal notranslate"><span class="pre">preziosi</span></code> alcune chiavi sono uguali ai rispettivi valori. Scrivi del codice che trova tali chiavi e le stampa.</p>
 <p>Esempio - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">preziosi</span> <span class="o">=</span> <span class="p">{</span>
@@ -3080,9 +3025,7 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">preziosi</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">preziosi</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;rubini&#39;</span>  <span class="p">:</span> <span class="s1">&#39;giada&#39;</span><span class="p">,</span>
     <span class="s1">&#39;opali&#39;</span>   <span class="p">:</span> <span class="s1">&#39;topazi&#39;</span><span class="p">,</span>
     <span class="s1">&#39;gemme&#39;</span>   <span class="p">:</span> <span class="s1">&#39;gemme&#39;</span><span class="p">,</span>
@@ -3110,9 +3053,7 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">preziosi</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">preziosi</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;rubini&#39;</span>  <span class="p">:</span> <span class="s1">&#39;giada&#39;</span><span class="p">,</span>
     <span class="s1">&#39;opali&#39;</span>   <span class="p">:</span> <span class="s1">&#39;topazi&#39;</span><span class="p">,</span>
     <span class="s1">&#39;gemme&#39;</span>   <span class="p">:</span> <span class="s1">&#39;gemme&#39;</span><span class="p">,</span>
@@ -3121,14 +3062,12 @@ coppia di elementi uguali: gemme e gemme
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---potenze">
-<h3>Esercizio - potenze<a class="headerlink" href="#Esercizio---potenze" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---potenze">
+<h3>Esercizio - potenze<a class="headerlink" href="#Esercizio---potenze" title="Permalink to this headline"></a></h3>
 <p>✪ Dato un numero <code class="docutils literal notranslate"><span class="pre">n</span></code>, scrvi del codice che crea un NUOVO dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> contenente come chiavi i numeri da 1 a <code class="docutils literal notranslate"><span class="pre">n</span></code> INCLUSI, associando ad ogni chiave il suo quadrato.</p>
 <p>Esempio - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
@@ -3145,9 +3084,7 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="c1"># scrivi qui</span>
 <span class="n">diz</span> <span class="o">=</span> <span class="p">{}</span>
@@ -3170,19 +3107,15 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---fiori">
-<h3>Esercizio - fiori<a class="headerlink" href="#Esercizio---fiori" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---fiori">
+<h3>Esercizio - fiori<a class="headerlink" href="#Esercizio---fiori" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista <code class="docutils literal notranslate"><span class="pre">fiori</span></code>, scrivi del codice che crea un NUOVO dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> che associa ad ogni fiore <code class="docutils literal notranslate"><span class="pre">True</span></code> se il nome del fiore è scritto tutto in maiuscolo, e <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p>
 <ul class="simple">
 <li><p><strong>SUGGERIMENTO</strong>: per verificare se una stringa è tutta in maiuscolo, usa il metodo <code class="docutils literal notranslate"><span class="pre">.isupper()</span></code></p></li>
@@ -3207,9 +3140,7 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">fiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;girasole&#39;</span><span class="p">,</span><span class="s1">&#39;GAROFANO&#39;</span><span class="p">,</span> <span class="s1">&#39;tulipano&#39;</span><span class="p">,</span> <span class="s1">&#39;VIOLA&#39;</span><span class="p">,</span> <span class="s1">&#39;ROSA&#39;</span><span class="p">,</span> <span class="s1">&#39;violetta&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">fiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;girasole&#39;</span><span class="p">,</span><span class="s1">&#39;GAROFANO&#39;</span><span class="p">,</span> <span class="s1">&#39;tulipano&#39;</span><span class="p">,</span> <span class="s1">&#39;VIOLA&#39;</span><span class="p">,</span> <span class="s1">&#39;ROSA&#39;</span><span class="p">,</span> <span class="s1">&#39;violetta&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -3239,19 +3170,15 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">fiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;girasole&#39;</span><span class="p">,</span><span class="s1">&#39;GAROFANO&#39;</span><span class="p">,</span> <span class="s1">&#39;tulipano&#39;</span><span class="p">,</span> <span class="s1">&#39;VIOLA&#39;</span><span class="p">,</span> <span class="s1">&#39;ROSA&#39;</span><span class="p">,</span> <span class="s1">&#39;violetta&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">fiori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;girasole&#39;</span><span class="p">,</span><span class="s1">&#39;GAROFANO&#39;</span><span class="p">,</span> <span class="s1">&#39;tulipano&#39;</span><span class="p">,</span> <span class="s1">&#39;VIOLA&#39;</span><span class="p">,</span> <span class="s1">&#39;ROSA&#39;</span><span class="p">,</span> <span class="s1">&#39;violetta&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---arte">
-<h3>Esercizio - arte<a class="headerlink" href="#Esercizio---arte" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---arte">
+<h3>Esercizio - arte<a class="headerlink" href="#Esercizio---arte" title="Permalink to this headline"></a></h3>
 <p>✪ Un artista ha dipinto una serie di opere con diverse tecniche. Nel dizionario <code class="docutils literal notranslate"><span class="pre">prezzi</span></code> per ciascuna tecnica segna il prezzo. L’artista intende fare una serie di esposizioni, e in ognuna presenterà una particolare tecnica. Supponendo che per ciascuna tecnica abbia prodotto <code class="docutils literal notranslate"><span class="pre">q</span></code> quadri, mostrare quanto guadagnerà in ciascuna esposizione (supponendo venda tutto).</p>
 <p>Esempio - dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span>
@@ -3283,9 +3210,7 @@ coppia di elementi uguali: gemme e gemme
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="n">esposizioni</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;acquerello&#39;</span><span class="p">,</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="s1">&#39;murale&#39;</span><span class="p">,</span> <span class="s1">&#39;tempera&#39;</span><span class="p">,</span> <span class="s1">&#39;carboncino&#39;</span><span class="p">,</span><span class="s1">&#39;inchiostro&#39;</span><span class="p">]</span>
 
@@ -3325,9 +3250,7 @@ Guadagni previsti:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="n">esposizioni</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;acquerello&#39;</span><span class="p">,</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="s1">&#39;murale&#39;</span><span class="p">,</span> <span class="s1">&#39;tempera&#39;</span><span class="p">,</span> <span class="s1">&#39;carboncino&#39;</span><span class="p">,</span><span class="s1">&#39;inchiostro&#39;</span><span class="p">]</span>
 
@@ -3341,14 +3264,12 @@ Guadagni previsti:
 
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---cartolerie">
-<h3>Esercizio - cartolerie<a class="headerlink" href="#Esercizio---cartolerie" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---cartolerie">
+<h3>Esercizio - cartolerie<a class="headerlink" href="#Esercizio---cartolerie" title="Permalink to this headline"></a></h3>
 <p>✪ Un proprietario di due negozi di cartoleria per riorganizzare il magazzino vuole sapere i materiali in comune disponibili nei negozi che possiede. Dati quindi due dizionari <code class="docutils literal notranslate"><span class="pre">cartoleria1</span></code> e <code class="docutils literal notranslate"><span class="pre">cartoleria2</span></code> che associano oggetti alla loro quantità, scrivi del codice che trova tutte le chiavi in comune e per ciascuna stampa la somma delle quantità trovate.</p>
 <p>Esempio - dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cartoleria1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
@@ -3377,9 +3298,7 @@ Guadagni previsti:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">cartoleria1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cartoleria1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
         <span class="s1">&#39;cartelle&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;carta&#39;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
         <span class="s1">&#39;forbici&#39;</span><span class="p">:</span><span class="mi">40</span><span class="p">}</span>
@@ -3415,9 +3334,7 @@ materiali in comune:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">cartoleria1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cartoleria1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penne&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
         <span class="s1">&#39;cartelle&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;carta&#39;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span>
         <span class="s1">&#39;forbici&#39;</span><span class="p">:</span><span class="mi">40</span><span class="p">}</span>
@@ -3430,14 +3347,12 @@ materiali in comune:
         <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---legumi">
-<h3>Esercizio - legumi<a class="headerlink" href="#Esercizio---legumi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---legumi">
+<h3>Esercizio - legumi<a class="headerlink" href="#Esercizio---legumi" title="Permalink to this headline"></a></h3>
 <p>✪ Un magazzino ha scaffali numerati, ciascuno contenente una quantità di legumi espressa in chili. Rappresentiamo <code class="docutils literal notranslate"><span class="pre">magazzino</span></code> come una lista. E’ disponibile anche un <code class="docutils literal notranslate"><span class="pre">registro</span></code> come dizionario che associa ai nomi dei legumi il numero dello scaffale in cui sono contenuti nel magazzino.</p>
 <p>Scrivi del codice che data una lista di nomi di legumi, mostra la somma dei chili presenti in magazzino per quei legumi.</p>
 <p>Esempio - dati</p>
@@ -3468,9 +3383,7 @@ Totale: 110 kg
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">legumi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ceci&#39;</span><span class="p">,</span> <span class="s1">&#39;soia&#39;</span><span class="p">]</span>     <span class="c1"># 110</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">legumi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ceci&#39;</span><span class="p">,</span> <span class="s1">&#39;soia&#39;</span><span class="p">]</span>     <span class="c1"># 110</span>
 <span class="c1">#legumi = [&#39;fagioli&#39;, &#39;fave&#39;, &#39;lenticchie&#39;]   # 170</span>
 
 <span class="c1">#            0  1  2  3  4  5</span>
@@ -3510,9 +3423,7 @@ Totale: 110 kg
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">legumi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ceci&#39;</span><span class="p">,</span> <span class="s1">&#39;soia&#39;</span><span class="p">]</span>     <span class="c1"># 110</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">legumi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ceci&#39;</span><span class="p">,</span> <span class="s1">&#39;soia&#39;</span><span class="p">]</span>     <span class="c1"># 110</span>
 <span class="c1">#legumi = [&#39;fagioli&#39;, &#39;fave&#39;, &#39;lenticchie&#39;]   # 170</span>
 
 <span class="c1">#            0  1  2  3  4  5</span>
@@ -3527,14 +3438,12 @@ Totale: 110 kg
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---smog">
-<h3>Esercizio - smog<a class="headerlink" href="#Esercizio---smog" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---smog">
+<h3>Esercizio - smog<a class="headerlink" href="#Esercizio---smog" title="Permalink to this headline"></a></h3>
 <p>✪ Scrivi del codice che dati due dizionari <code class="docutils literal notranslate"><span class="pre">smog</span></code> e <code class="docutils literal notranslate"><span class="pre">preposizioni</span></code> che associano a luoghi rispettivamente valori di smog e preposizioni, stampa tutti i luoghi indicando:</p>
 <ul class="simple">
 <li><p>‘PREPOSIZIONE LUOGO l’inquinamento è eccessivo’ se il valore di smog è superiore a 30</p></li>
@@ -3572,9 +3481,7 @@ Alla ciclabile l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">smog</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;strada&#39;</span>    <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">smog</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;strada&#39;</span>    <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
         <span class="s1">&#39;ciclabile&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;autostrada&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
         <span class="s1">&#39;parco&#39;</span>     <span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
@@ -3614,9 +3521,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">smog</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;strada&#39;</span>    <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">smog</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;strada&#39;</span>    <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
         <span class="s1">&#39;ciclabile&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
         <span class="s1">&#39;autostrada&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
         <span class="s1">&#39;parco&#39;</span>     <span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
@@ -3632,14 +3537,12 @@ Al lago l&#39;inquinamento è tollerabile
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---sport">
-<h3>Esercizio - sport<a class="headerlink" href="#Esercizio---sport" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---sport">
+<h3>Esercizio - sport<a class="headerlink" href="#Esercizio---sport" title="Permalink to this headline"></a></h3>
 <p>✪✪ Scrivi del codice che dato un dizionario <code class="docutils literal notranslate"><span class="pre">sport</span></code> in cui persone sono associate allo sport che preferiscono, crea un NUOVO dizionario <code class="docutils literal notranslate"><span class="pre">conteggi</span></code> che associa ad ogni sport il numero di persone che lo preferiscono.</p>
 <p>Esempio - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sport</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gianni&#39;</span> <span class="p">:</span> <span class="s1">&#39;calcio&#39;</span><span class="p">,</span>
@@ -3662,9 +3565,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">sport</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gianni&#39;</span> <span class="p">:</span> <span class="s1">&#39;calcio&#39;</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">sport</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gianni&#39;</span> <span class="p">:</span> <span class="s1">&#39;calcio&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Paolo&#39;</span>  <span class="p">:</span> <span class="s1">&#39;tennis&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Sara&#39;</span>   <span class="p">:</span> <span class="s1">&#39;pallavolo&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Elena&#39;</span>  <span class="p">:</span> <span class="s1">&#39;tennis&#39;</span><span class="p">,</span>
@@ -3698,9 +3599,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">sport</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gianni&#39;</span> <span class="p">:</span> <span class="s1">&#39;calcio&#39;</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">sport</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Gianni&#39;</span> <span class="p">:</span> <span class="s1">&#39;calcio&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Paolo&#39;</span>  <span class="p">:</span> <span class="s1">&#39;tennis&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Sara&#39;</span>   <span class="p">:</span> <span class="s1">&#39;pallavolo&#39;</span><span class="p">,</span>
          <span class="s1">&#39;Elena&#39;</span>  <span class="p">:</span> <span class="s1">&#39;tennis&#39;</span><span class="p">,</span>
@@ -3709,22 +3608,19 @@ Al lago l&#39;inquinamento è tollerabile
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---ramarro">
-<h3>Esercizio - ramarro<a class="headerlink" href="#Esercizio---ramarro" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---ramarro">
+<h3>Esercizio - ramarro<a class="headerlink" href="#Esercizio---ramarro" title="Permalink to this headline"></a></h3>
 <p>✪✪ Scrivi del codice che dato un insieme <code class="docutils literal notranslate"><span class="pre">cerca</span></code> di caratteri da cercare, per ciascuno conta quanti ce ne sono nella stringa <code class="docutils literal notranslate"><span class="pre">testo</span></code> e mette il numero nel dizionario <code class="docutils literal notranslate"><span class="pre">conteggi</span></code></p>
 <p>Esempio - dati:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cerca</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">}</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cerca</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">}</span>
 <span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;Il ramarro orientale è un sauro della famiglia dei Lacertidi, di colore verde brillante&quot;</span>
 <span class="n">conteggi</span> <span class="o">=</span> <span class="p">{}</span>
 </pre></div>
@@ -3741,8 +3637,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#jupman-ignore-output</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ignore-output</span>
 <span class="n">cerca</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">}</span>
 <span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;Il ramarro orientale è un sauro della famiglia dei Lacertidi, di colore verde brillante&quot;</span>
 <span class="n">conteggi</span> <span class="o">=</span> <span class="p">{}</span>
@@ -3780,16 +3675,13 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#jupman-ignore-output</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ignore-output</span>
 <span class="n">cerca</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">}</span>
 <span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;Il ramarro orientale è un sauro della famiglia dei Lacertidi, di colore verde brillante&quot;</span>
 <span class="n">conteggi</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3801,10 +3693,10 @@ Al lago l&#39;inquinamento è tollerabile
 {&#39;z&#39;: 0, &#39;t&#39;: 3, &#39;r&#39;: 9}
 </pre></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Modificare-un-dizionario-durante-l'iterazione">
-<h2>Modificare un dizionario durante l’iterazione<a class="headerlink" href="#Modificare-un-dizionario-durante-l'iterazione" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Modificare-un-dizionario-durante-l'iterazione">
+<h2>Modificare un dizionario durante l’iterazione<a class="headerlink" href="#Modificare-un-dizionario-durante-l'iterazione" title="Permalink to this headline"></a></h2>
 <p>Supponi di avere un dizionario delle province</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">province</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;tn&#39;</span><span class="p">:</span> <span class="s1">&#39;Trento&#39;</span><span class="p">,</span>
             <span class="s1">&#39;mi&#39;</span><span class="p">:</span><span class="s1">&#39;Milano&#39;</span><span class="p">,</span>
@@ -3887,8 +3779,8 @@ Al lago l&#39;inquinamento è tollerabile
 </pre></div>
 </div>
 <p><strong>Se proprio devi rimuovere elementi dalla sequenza su cui stai iterando</strong>, usa <a class="reference external" href="https://it.softpython.org/control-flow/flow3-while-sol.html">un ciclo while</a> o effettua prima una copia della sequenza originale.</p>
-<div class="section" id="Esercizio---zazb">
-<h3>Esercizio - zazb<a class="headerlink" href="#Esercizio---zazb" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---zazb">
+<h3>Esercizio - zazb<a class="headerlink" href="#Esercizio---zazb" title="Permalink to this headline"></a></h3>
 <p>✪✪ Scrivere del codice che dato un dizionario <code class="docutils literal notranslate"><span class="pre">diz</span></code> con caratteri come chiavi, MODIFICA il dizionario affinchè gli vengano aggiunte chiavi uguali a quelle esistenti ma precedute dal carattere <code class="docutils literal notranslate"><span class="pre">'z'</span></code> - come valore associato alle nuove chiavi, poni l’intero <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
 <p>Esempio - dato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
@@ -3941,9 +3833,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
     <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
     <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">4</span>
@@ -3971,23 +3861,19 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
     <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
     <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">4</span>
 <span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---brico">
-<h3>Esercizio - brico<a class="headerlink" href="#Esercizio---brico" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---brico">
+<h3>Esercizio - brico<a class="headerlink" href="#Esercizio---brico" title="Permalink to this headline"></a></h3>
 <p>✪✪ Un magazzino per appassionati del fai da te dispone di un <code class="docutils literal notranslate"><span class="pre">catalogo</span></code> che associa tipologie di oggetti agli scaffali dove posizionarli. Ogni giorno, una lista di <code class="docutils literal notranslate"><span class="pre">arrivi</span></code> viene popolata con le tipologie di oggetti arrivati. Tali tipologie vanno collocate nel <code class="docutils literal notranslate"><span class="pre">magazzino</span></code>, un dizionario che associa ad ogni scaffale la tipologia di oggetto prescritta dal catalogo. Scrivi del codice che data la lista di <code class="docutils literal notranslate"><span class="pre">arrivi</span></code> e il <code class="docutils literal notranslate"><span class="pre">catalogo</span></code>, popola il dizionario <code class="docutils literal notranslate"><span class="pre">magazzino</span></code>.</p>
 <p>Esempio - dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arrivi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedie&#39;</span><span class="p">,</span> <span class="s1">&#39;lampade&#39;</span><span class="p">,</span> <span class="s1">&#39;cavi&#39;</span><span class="p">]</span>
@@ -4013,9 +3899,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">arrivi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedie&#39;</span><span class="p">,</span> <span class="s1">&#39;lampade&#39;</span><span class="p">,</span> <span class="s1">&#39;cavi&#39;</span><span class="p">]</span>  <span class="c1"># magazzino diventa: {&#39;B&#39;: &#39;sedie&#39;, &#39;C&#39;: &#39;lampade&#39;, &#39;F&#39;: &#39;cavi&#39;}</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">arrivi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedie&#39;</span><span class="p">,</span> <span class="s1">&#39;lampade&#39;</span><span class="p">,</span> <span class="s1">&#39;cavi&#39;</span><span class="p">]</span>  <span class="c1"># magazzino diventa: {&#39;B&#39;: &#39;sedie&#39;, &#39;C&#39;: &#39;lampade&#39;, &#39;F&#39;: &#39;cavi&#39;}</span>
 <span class="c1">#arrivi = [&#39;caraffe&#39;, &#39;giardinaggio&#39;]  # magazzino diventa: {&#39;D&#39;: &#39;caraffe&#39;, &#39;E&#39;: &#39;giardinaggio&#39;}</span>
 <span class="c1">#arrivi = [&#39;stufe&#39;]                    # magazzino diventa: {&#39;A&#39;: &#39;stufe&#39;}</span>
 
@@ -4050,9 +3934,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">arrivi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedie&#39;</span><span class="p">,</span> <span class="s1">&#39;lampade&#39;</span><span class="p">,</span> <span class="s1">&#39;cavi&#39;</span><span class="p">]</span>  <span class="c1"># magazzino diventa: {&#39;B&#39;: &#39;sedie&#39;, &#39;C&#39;: &#39;lampade&#39;, &#39;F&#39;: &#39;cavi&#39;}</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">arrivi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sedie&#39;</span><span class="p">,</span> <span class="s1">&#39;lampade&#39;</span><span class="p">,</span> <span class="s1">&#39;cavi&#39;</span><span class="p">]</span>  <span class="c1"># magazzino diventa: {&#39;B&#39;: &#39;sedie&#39;, &#39;C&#39;: &#39;lampade&#39;, &#39;F&#39;: &#39;cavi&#39;}</span>
 <span class="c1">#arrivi = [&#39;caraffe&#39;, &#39;giardinaggio&#39;]  # magazzino diventa: {&#39;D&#39;: &#39;caraffe&#39;, &#39;E&#39;: &#39;giardinaggio&#39;}</span>
 <span class="c1">#arrivi = [&#39;stufe&#39;]                    # magazzino diventa: {&#39;A&#39;: &#39;stufe&#39;}</span>
 
@@ -4064,14 +3946,12 @@ Al lago l&#39;inquinamento è tollerabile
             <span class="s1">&#39;giardinaggio&#39;</span> <span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---miniera">
-<h3>Esercizio - miniera<a class="headerlink" href="#Esercizio---miniera" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---miniera">
+<h3>Esercizio - miniera<a class="headerlink" href="#Esercizio---miniera" title="Permalink to this headline"></a></h3>
 <p>✪✪ Dato un dizionario <code class="docutils literal notranslate"><span class="pre">miniera</span></code> che associa chiavi a numeri, MODIFICA il dizionario <code class="docutils literal notranslate"><span class="pre">estratto</span></code> associando le stesse chiavi di <code class="docutils literal notranslate"><span class="pre">miniera</span></code> a liste con le chiavi ripetute il numero di volte indicato.</p>
 <p>Esempio - dati:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">miniera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ottone&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
@@ -4093,9 +3973,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">miniera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ottone&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">miniera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ottone&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
            <span class="s1">&#39;rame&#39;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
            <span class="s1">&#39;ferro&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 
@@ -4125,74 +4003,53 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">miniera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ottone&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">miniera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ottone&#39;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
            <span class="s1">&#39;rame&#39;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
            <span class="s1">&#39;ferro&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 
 <span class="n">estratto</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con <a class="reference external" href="https://it.softpython.org/for/for7-nested-sol.html">cicli for annidati</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="for7-nested-sol.html" class="btn btn-neutral float-right" title="Cicli for annidati" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="for5-sets-sol.html" class="btn btn-neutral float-left" title="Cicli for 5 - iterare insiemi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="for7-nested-sol.html" class="btn btn-neutral float-right" title="Cicli for annidati" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

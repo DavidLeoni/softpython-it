@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Database &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/database/database-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Web development" href="../web/web-sol.html" />
     <link rel="prev" title="Esempio webapp" href="../gui/my-webapp.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,10 +2643,10 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Database">
-<h1>Database<a class="headerlink" href="#Database" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/database.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Database">
+<h1>Database<a class="headerlink" href="#Database" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/database.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/database">Naviga file online</a></p>
 <p>In questo tutorial affronteremo il tema database in Python:</p>
 <ul class="simple">
@@ -2699,8 +2654,8 @@ div.rendered_html tbody tr:hover {
 <li><p>semplici query SQL da Python</p></li>
 <li><p>esempi con libreria Pandas</p></li>
 </ul>
-<div class="section" id="Che-fare">
-<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline">¶</a></h3>
+<section id="Che-fare">
+<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>scompatta lo zip in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ul>
@@ -2724,10 +2679,10 @@ div.rendered_html tbody tr:hover {
 <li><p>Per eseguire il codice Python dentro una cella di Jupyter E creare una nuova cella subito dopo, premi <code class="docutils literal notranslate"><span class="pre">Alt+Invio</span></code></p></li>
 <li><p>Se per caso il Notebook sembra inchiodato, prova a selezionare <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span></code></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="Guardiamo-il-database">
-<h2>Guardiamo il database<a class="headerlink" href="#Guardiamo-il-database" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Guardiamo-il-database">
+<h2>Guardiamo il database<a class="headerlink" href="#Guardiamo-il-database" title="Permalink to this headline"></a></h2>
 <p>Proveremo ad accedere via SQLiteStudio e Python al database Chinhook.</p>
 <p>Il modello dati di Chinook rappresenta uno store online di canzoni, e include tabelle per artisti (<code class="docutils literal notranslate"><span class="pre">Artist</span></code>), album (<code class="docutils literal notranslate"><span class="pre">Album</span></code>), tracce (<code class="docutils literal notranslate"><span class="pre">Track</span></code>), fatture (<code class="docutils literal notranslate"><span class="pre">Invoice</span></code>) e clienti (<code class="docutils literal notranslate"><span class="pre">Customer</span></code>):</p>
 <p><img alt="chinook-93823" src="../_images/ChinookDatabaseSchema1.1.png" /></p>
@@ -2738,9 +2693,9 @@ div.rendered_html tbody tr:hover {
 <li><p>Gli indirizzi sono georeferenziabili su Google Maps, e altri dati ben formattatati (telefono, fax, email, etc.)</p></li>
 <li><p>Le informazioni sulle vendite sono auto-generate usando dati casuali per lungo un periodo di 4 anni</p></li>
 </ul>
-</div>
-<div class="section" id="Connessione-in-SQLStudio">
-<h2>Connessione in SQLStudio<a class="headerlink" href="#Connessione-in-SQLStudio" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Connessione-in-SQLStudio">
+<h2>Connessione in SQLStudio<a class="headerlink" href="#Connessione-in-SQLStudio" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://sqlitestudio.pl">Scarica</a> e prova a lanciare SQLite Studio (non serve nemmeno l’installazione). Se ti dà problemi, in alternativa prova <a class="reference external" href="http://sqlitebrowser.org/">SQLite browser</a>:</p>
 <p>Una volta scaricato e szippato SQLStudio, eseguilo e poi:</p>
 <ol class="arabic simple">
@@ -2756,16 +2711,15 @@ div.rendered_html tbody tr:hover {
 <p><img alt="album-data-82347" src="../_images/album-data.png" /></p>
 <p>Vediamo che ci sono 3 colonne, due con numeri <code class="docutils literal notranslate"><span class="pre">AlbumId</span></code> e <code class="docutils literal notranslate"><span class="pre">ArtistId</span></code> e una di stringhe, chiamata <code class="docutils literal notranslate"><span class="pre">Title</span></code></p>
 <p><strong>NOTA</strong>: I nomi delle colonne in SQL possono essere arbitrariamente scelte da chi crea i database. Quindi non è strettamente necessario che i nomi delle colonne numeriche terminino con <code class="docutils literal notranslate"><span class="pre">Id</span></code>.</p>
-</div>
-<div class="section" id="Connessione-in-Python">
-<h2>Connessione in Python<a class="headerlink" href="#Connessione-in-Python" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Connessione-in-Python">
+<h2>Connessione in Python<a class="headerlink" href="#Connessione-in-Python" title="Permalink to this headline"></a></h2>
 <p>Proviamo adesso a recuperare gli stessi dati della tabella <code class="docutils literal notranslate"><span class="pre">Album</span></code> in Python. SQLite è talmente popolare che la libreria per accederlo viene fornita direttamente con Python, quindi non ci servirà installare niente di particolare e possiamo tuffarci subito nel codice:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -2783,8 +2737,7 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">conn</span><span class="p">:</span>                       <span class="c1"># col blocco with ci cauteliamo da errori imprevisti</span>
@@ -2820,10 +2773,8 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi il codice</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi il codice</span>
+<br/></pre></div>
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -2832,8 +2783,7 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># SOLUZIONE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
 <span class="c1"># E&#39; una lista Python. Le singole righe sono delle tuple (cioè sequenze immutabili)</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2859,8 +2809,7 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -2873,9 +2822,9 @@ impedirci di chiudere la risorsa correttamente. Per indicare a Pyhton che voglia
 &lt;class &#39;list&#39;&gt;
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Performance">
-<h2>Performance<a class="headerlink" href="#Performance" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Performance">
+<h2>Performance<a class="headerlink" href="#Performance" title="Permalink to this headline"></a></h2>
 <p>I database sono pensati apposta per gestire grandi quantità dati che risiedono su hard-disk. Vediamo brevemente i vari tipi di memoria disponibili nel computer, e come vengono usati dai database:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -2930,8 +2879,7 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">conn</span><span class="p">:</span>
@@ -2944,8 +2892,7 @@ righe alla volta:</p>
                 <span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>                          <span class="c1"># altrimenti interrompe forzatamente il ciclo while</span>
             <span class="k">break</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3302,16 +3249,15 @@ righe alla volta:</p>
 (347, &#39;Koyaanisqatsi (Soundtrack from the Motion Picture)&#39;, 275)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Passare-parametri-alla-query">
-<h2>Passare parametri alla query<a class="headerlink" href="#Passare-parametri-alla-query" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Passare-parametri-alla-query">
+<h2>Passare parametri alla query<a class="headerlink" href="#Passare-parametri-alla-query" title="Permalink to this headline"></a></h2>
 <p>E se volessimo passare agevolmente dei parametri alla query, come per esempio il numero dei risultati da ottenere? Per fare ciò possiamo usare dei cosiddetti <em>placeholder</em>, cioè dei caratteri punto di domanda <code class="docutils literal notranslate"><span class="pre">?</span></code> che segnano dove vorremmo mettere le variabili. In questo caso sistituiremo il <code class="docutils literal notranslate"><span class="pre">5</span></code> con un punto di domanda, e passeremo il <code class="docutils literal notranslate"><span class="pre">5</span></code> in una lista di parametri a parte:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
@@ -3343,8 +3289,7 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
@@ -3371,17 +3316,16 @@ righe alla volta:</p>
 (6, &#39;Jagged Little Pill&#39;, 4)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Funzione-Esegui-Query">
-<h2>Funzione Esegui Query<a class="headerlink" href="#Funzione-Esegui-Query" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Funzione-Esegui-Query">
+<h2>Funzione Esegui Query<a class="headerlink" href="#Funzione-Esegui-Query" title="Permalink to this headline"></a></h2>
 <p>Per agevolare le prossime operazioni, ci definiamo una funzione <code class="docutils literal notranslate"><span class="pre">esegui</span></code> che esegue le query che desideriamo e ritorna la lista delle righe ottenute:</p>
 <p><strong>IMPORTANTE</strong>: Fai <code class="docutils literal notranslate"><span class="pre">Ctrl+Invio</span></code> nella cella seguente così Python in seguito riconoscerà la funzione:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">()):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">()):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Esegue una query usando la connessione conn, e ritorna la lista di risultati ottenuti.</span>
 
@@ -3400,8 +3344,7 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;SELECT * FROM Album LIMIT 5&quot;</span><span class="p">)</span>
@@ -3426,8 +3369,7 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
@@ -3457,8 +3399,7 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM Album</span>
 <span class="s2">WHERE AlbumId &lt; ? AND ArtistId &lt; ?</span>
@@ -3493,16 +3434,14 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui il comando</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui il comando</span>
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">SELECT * FROM Album</span>
 <span class="sd">WHERE AlbumId &gt;= ? AND AlbumId &lt;= ?</span>
 <span class="sd">&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3518,11 +3457,8 @@ righe alla volta:</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui il comando</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui il comando</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3534,13 +3470,13 @@ righe alla volta:</p>
 [(3, &#39;Restless and Wild&#39;, 2), (4, &#39;Let There Be Rock&#39;, 1), (5, &#39;Big Ones&#39;, 3)]
 </pre></div></div>
 </div>
-<div class="section" id="Struttura-della-tabella">
-<h3>Struttura della tabella<a class="headerlink" href="#Struttura-della-tabella" title="Permalink to this headline">¶</a></h3>
+<section id="Struttura-della-tabella">
+<h3>Struttura della tabella<a class="headerlink" href="#Struttura-della-tabella" title="Permalink to this headline"></a></h3>
 <p><strong>ESERCIZIO</strong>: Guarda meglio la tab <code class="docutils literal notranslate"><span class="pre">Structure</span></code> di <code class="docutils literal notranslate"><span class="pre">Album</span></code>:</p>
 <p><img alt="album-structure-328239" src="../_images/album-structure.png" /></p>
-</div>
-<div class="section" id="DDL">
-<h3>DDL<a class="headerlink" href="#DDL" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="DDL">
+<h3>DDL<a class="headerlink" href="#DDL" title="Permalink to this headline"></a></h3>
 <p>Confronta quanto sopra con la tab <code class="docutils literal notranslate"><span class="pre">DDL</span></code> (Data Definition Language), che contiene le istruzioni SQL per creare la tabella nel database:</p>
 <p><img alt="album-ddl-394823" src="../_images/album-ddl.png" /></p>
 <p>Una caratteristica dei database è la possibilità di dichiarare vincoli sui dati inseriti. Per esempio, qua notiamo che</p>
@@ -3550,16 +3486,15 @@ righe alla volta:</p>
 </ul>
 <p><strong>ESERCIZIO</strong>: Vai alla tab <code class="docutils literal notranslate"><span class="pre">Data</span></code> e prova a cambiare un <code class="docutils literal notranslate"><span class="pre">ArtistId</span></code> mettendo un numero inesistente (tipo 1000). Apparentemente il database non si lamenterà, ma solo perchè al momento non abbiamo ancora registrato il cambiamento su disco, cioè non abbiamo operato una operazione di <em>commit</em>. I commit ci permettono di eseguire più operazioni in modo atomico, nel senso che o tutti i cambiamenti fatti vengono registrati con successo, o non viene fatta nessuna modifica. Prova ad eseguire un commit
 premendo il bottoncino verde con la spunta (o premere Ctrl-Return). Che succede? Per riparare al danno fatto, esegui <em>rollback</em> col bottoncino rosso con la x (o premi Ctrl-Backspace).</p>
-</div>
-<div class="section" id="Query-ai-metadati">
-<h3>Query ai metadati<a class="headerlink" href="#Query-ai-metadati" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Query-ai-metadati">
+<h3>Query ai metadati<a class="headerlink" href="#Query-ai-metadati" title="Permalink to this headline"></a></h3>
 <p>Una cosa interessante e a volte utile di molti database SQL è che spesso i metadati sul tipo di tabelle nel database sono salvate essi stessi come tabelle, quindi è possibile eseguire query SQL su questi metadati. Per esempio, con SQLite si può eseguire una query del genere. Non la spieghiamo nel dettaglio, limitandoci a mostrare qualche esempio di utilizzo:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tabella</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">tabella</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Ritorna una stringa con le istruzioni SQL per creare la tabella (senza i dati)  &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    SELECT sql FROM sqlite_master</span>
@@ -3572,8 +3507,7 @@ premendo il bottoncino verde con la spunta (o premere Ctrl-Return). Che succede?
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;file:chinook.sqlite?mode=rw&#39;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
@@ -3597,18 +3531,17 @@ CREATE TABLE [Album]
 )
 </pre></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="ORDER-BY">
-<h2>ORDER BY<a class="headerlink" href="#ORDER-BY" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="ORDER-BY">
+<h2>ORDER BY<a class="headerlink" href="#ORDER-BY" title="Permalink to this headline"></a></h2>
 <p>Spesso vorremo ordinare il risultato in base a qualche colonna, per farlo possiamo aggiungere la clausola <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code>:</p>
 <p><strong>NOTA</strong>: se aggiungiamo LIMIT, questo viene applicato DOPO che l’ordinamento è stato fatto</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM Album</span>
 <span class="s2">ORDER BY Album.Title</span>
@@ -3642,8 +3575,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM Album</span>
 <span class="s2">ORDER BY Album.Title DESC</span>
@@ -3670,17 +3602,16 @@ CREATE TABLE [Album]
  (53, &#39;Vozes do MPB&#39;, 21)]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="JOIN">
-<h2>JOIN<a class="headerlink" href="#JOIN" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="JOIN">
+<h2>JOIN<a class="headerlink" href="#JOIN" title="Permalink to this headline"></a></h2>
 <p>Nella tabella <code class="docutils literal notranslate"><span class="pre">Album</span></code> per gli artisti vediamo solo dei numeri. Come possiamo fare una query per vedere anche i nomi degli artisti? Useremo il comando SQL <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> :</p>
 <p><strong>ESERCIZIO</strong>: Per capire cosa succede, esegui le query in SQLStudio</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM Album JOIN Artist</span>
 <span class="s2">WHERE Album.ArtistId = Artist.ArtistId</span>
@@ -3707,8 +3638,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT * FROM Album, Artist</span>
 <span class="s2">WHERE Album.ArtistId = Artist.ArtistId</span>
 <span class="s2">LIMIT 5</span>
@@ -3735,8 +3665,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM Album, Artist USING(ArtistId)</span>
 <span class="s2">LIMIT 5</span>
@@ -3762,8 +3691,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT ALB.Title, ART.Name</span>
 <span class="s2">FROM Album ALB, Artist ART USING(ArtistId)</span>
 <span class="s2">LIMIT 5</span>
@@ -3784,16 +3712,15 @@ CREATE TABLE [Album]
  (&#39;Big Ones&#39;, &#39;Aerosmith&#39;)]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Tabella-Track">
-<h2>Tabella Track<a class="headerlink" href="#Tabella-Track" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Tabella-Track">
+<h2>Tabella Track<a class="headerlink" href="#Tabella-Track" title="Permalink to this headline"></a></h2>
 <p>Passiamo adesso ad una tabella più complessa, come <code class="docutils literal notranslate"><span class="pre">Track</span></code>, che contiene canzoni ascoltate dagli utenti di iTunes:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;SELECT * FROM Track LIMIT 5&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;SELECT * FROM Track LIMIT 5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3846,8 +3773,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;Track&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;Track&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3864,8 +3790,7 @@ CREATE TABLE [Album]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;Track&quot;</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">query_schema</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;Track&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -3899,8 +3824,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Composer</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -3927,8 +3851,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Composer</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -3951,8 +3874,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Composer</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -3980,8 +3902,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Milliseconds</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -4006,8 +3927,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Milliseconds</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -4028,8 +3948,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Milliseconds</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -4050,8 +3969,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Milliseconds</span>
 <span class="s2">FROM Track</span>
 <span class="s2">LIMIT 5</span>
@@ -4072,8 +3990,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Milliseconds</span>
 <span class="s2">FROM Track</span>
 <span class="s2">ORDER BY Milliseconds DESC</span>
@@ -4102,8 +4019,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui la query</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui la query</span>
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT Name, Composer, Milliseconds</span>
@@ -4131,11 +4047,8 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui la query</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui la query</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4151,18 +4064,17 @@ CREATE TABLE [Track]
  (&#39;Commercial 1&#39;, &#39;L. Muggerud&#39;, 7941)]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Aggregare-i-dati">
-<h2>Aggregare i dati<a class="headerlink" href="#Aggregare-i-dati" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="COUNT">
-<h3>COUNT<a class="headerlink" href="#COUNT" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Aggregare-i-dati">
+<h2>Aggregare i dati<a class="headerlink" href="#Aggregare-i-dati" title="Permalink to this headline"></a></h2>
+<section id="COUNT">
+<h3>COUNT<a class="headerlink" href="#COUNT" title="Permalink to this headline"></a></h3>
 <p>Per contare quante righe ci sono in una tabella, possiamo usare la parola chiave <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span></code> nella <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>. Per esempio, per vedere quante tracce ci sono, possiamo fare così:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT COUNT(*)</span>
 <span class="s2">FROM Track</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
@@ -4183,9 +4095,9 @@ CREATE TABLE [Track]
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
 <p>Perchè facendo i conteggi direttamente in SQL, il database si arrangerà a fare i conti e spedirà a Python solo un numero invece che una quantità di righe che potenzialmente potrebbe essere molto ingente e intasare la memoria.</p>
-</div></div>
-<div class="section" id="GROUP-BY-e-COUNT">
-<h3>GROUP BY e COUNT<a class="headerlink" href="#GROUP-BY-e-COUNT" title="Permalink to this headline">¶</a></h3>
+</div></section>
+<section id="GROUP-BY-e-COUNT">
+<h3>GROUP BY e COUNT<a class="headerlink" href="#GROUP-BY-e-COUNT" title="Permalink to this headline"></a></h3>
 <p>Ogni Track ha associato un <code class="docutils literal notranslate"><span class="pre">MediaTypeId</span></code>. Potremmo chiederci per ogni media type quante track ci sono.</p>
 <ul class="simple">
 <li><p>Per conteggiare, dovremo usare la parola chiave <code class="docutils literal notranslate"><span class="pre">COUNT(*)</span> <span class="pre">AS</span> <span class="pre">Conteggio</span></code> nella <code class="docutils literal notranslate"><span class="pre">SELECT</span></code></p></li>
@@ -4197,8 +4109,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT T.MediaTypeId, COUNT(*) AS Conteggio</span>
 <span class="s2">FROM Track T</span>
 <span class="s2">GROUP BY T.MediaTypeId</span>
@@ -4223,8 +4134,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -4233,8 +4143,7 @@ CREATE TABLE [Track]
 <span class="s2">GROUP BY MT.MediaTypeId</span>
 <span class="s2">ORDER BY Conteggio DESC</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4254,11 +4163,8 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4281,8 +4187,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -4291,9 +4196,7 @@ CREATE TABLE [Track]
 <span class="s2">GROUP BY G.GenreId</span>
 <span class="s2">ORDER BY Conteggio DESC</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4333,11 +4236,8 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4380,8 +4280,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui:</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui:</span>
 
 
 <span class="n">esegui</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -4390,8 +4289,7 @@ CREATE TABLE [Track]
 <span class="s2">GROUP BY G.GenreId</span>
 <span class="s2">ORDER BY Lunghezza DESC</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4431,11 +4329,8 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui:</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui:</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4471,18 +4366,17 @@ CREATE TABLE [Track]
  (&#39;Rock And Roll&#39;, 134643.5)]
 </pre></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Pandas">
-<h2>Pandas<a class="headerlink" href="#Pandas" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Pandas">
+<h2>Pandas<a class="headerlink" href="#Pandas" title="Permalink to this headline"></a></h2>
 <p>Finora abbiamo usato metodi base di Python, ma ovviamente processare il tutto in pandas è più comodo.</p>
 <p>Per maggiori informazioni su Pandas, guarda il <a class="reference external" href="https://it.softpython.org/pandas/pandas-sol.html">relativo tutorial</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT Name, Composer, Milliseconds from Track&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
 </pre></div>
@@ -4492,8 +4386,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -4608,9 +4501,7 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT Name, Composer, Milliseconds, Bytes from Track&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -4665,63 +4556,42 @@ CREATE TABLE [Track]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../web/web-sol.html" class="btn btn-neutral float-right" title="Web development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../gui/my-webapp.html" class="btn btn-neutral float-left" title="Esempio webapp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../web/web-sol.html" class="btn btn-neutral float-right" title="Web development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

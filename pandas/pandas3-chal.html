@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Analitiche con Pandas - 3. Challenge &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/pandas/pandas3-chal.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Ricerca - espressioni regolari" href="../search/regex-sol.html" />
     <link rel="prev" title="Analitiche con Pandas - 2. Esercizi" href="pandas2-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2434,27 +2374,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2555,7 +2509,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2621,6 +2575,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2630,7 +2585,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2690,15 +2645,15 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Analitiche-con-Pandas---3.-Challenge">
-<h1>Analitiche con Pandas - 3. Challenge<a class="headerlink" href="#Analitiche-con-Pandas---3.-Challenge" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Analitiche-con-Pandas---3.-Challenge">
+<h1>Analitiche con Pandas - 3. Challenge<a class="headerlink" href="#Analitiche-con-Pandas---3.-Challenge" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/pandas">Naviga file online</a></p>
 <p>Proponiamo ora degli esercizi senza soluzione, accetti la sfida?</p>
-</div>
-<div class="section" id="Sfida---Euregio">
-<h2>Sfida - Euregio<a class="headerlink" href="#Sfida---Euregio" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Sfida---Euregio">
+<h2>Sfida - Euregio<a class="headerlink" href="#Sfida---Euregio" title="Permalink to this headline"></a></h2>
 <p>✪✪ L’EuregioFamilyPass è un progetto congiunto del GECT Euregio Tirolo-Alto Adige-Trentino, del Dipartimento Societá e Lavoro del Land Tirolo e delle Agenzie per la famiglia delle Province autonome di Bolzano e di Trento. che mira a favorire la mobilità e gli scambi culturali tra le famiglie delle tre province dell’ Euregio</p>
 <p>L’EuregioFamilyPass permette di accedere a livello transfrontaliero ad una offerta di vantaggi e servizi riservate alle famiglie, attraverso partner convenzionati tra cui sia enti pubblici che esercenti privati.</p>
 <p>Sorgente dati: <a class="reference external" href="https://dati.trentino.it/dataset/elenco-aderenti-euregio-family-pass/resource/cbae521f-f87e-4d82-b322-40b2691b950c">dati.trentino.it</a></p>
@@ -2707,11 +2662,8 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2748,8 +2700,8 @@ dtypes: bool(1), float64(2), int64(1), object(16)
 memory usage: 5.4+ KB
 </pre></div></div>
 </div>
-<div class="section" id="Categoria-b1">
-<h3>Categoria b1<a class="headerlink" href="#Categoria-b1" title="Permalink to this headline">¶</a></h3>
+<section id="Categoria-b1">
+<h3>Categoria b1<a class="headerlink" href="#Categoria-b1" title="Permalink to this headline"></a></h3>
 <p>Trova tutte i servizi aventi la categoria b1</p>
 <ul class="simple">
 <li><p>considera bene tutti i casi possibili, anche quelli non presenti nel dataset!</p></li>
@@ -2759,11 +2711,8 @@ memory usage: 5.4+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3322,19 +3271,16 @@ memory usage: 5.4+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Categoria-b3-o-b12">
-<h3>Categoria b3 o b12<a class="headerlink" href="#Categoria-b3-o-b12" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Categoria-b3-o-b12">
+<h3>Categoria b3 o b12<a class="headerlink" href="#Categoria-b3-o-b12" title="Permalink to this headline"></a></h3>
 <p>Trova tutte i servizi aventi la categoria <code class="docutils literal notranslate"><span class="pre">b3</span></code> oppure la <code class="docutils literal notranslate"><span class="pre">b12</span></code></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3548,19 +3494,16 @@ memory usage: 5.4+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Facebook">
-<h3>Facebook<a class="headerlink" href="#Facebook" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Facebook">
+<h3>Facebook<a class="headerlink" href="#Facebook" title="Permalink to this headline"></a></h3>
 <p>Trova tutti i nomi dei servizi che hanno una pagina Facebook, e aggiungi una colonna con solo il nome del relativo account. Mostra infine solo le righe con account facebook</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3605,9 +3548,9 @@ memory usage: 5.4+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Mail-di-Trento">
-<h3>Mail di Trento<a class="headerlink" href="#Mail-di-Trento" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Mail-di-Trento">
+<h3>Mail di Trento<a class="headerlink" href="#Mail-di-Trento" title="Permalink to this headline"></a></h3>
 <p>Estrai le mail di tutti i servizi di Trento, senza mostrare duplicati e poi stampale</p>
 <ul class="simple">
 <li><p><strong>SUGGERIMENTO</strong>: usa <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.unique.html">pd.unique</a></p></li>
@@ -3616,11 +3559,8 @@ memory usage: 5.4+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3637,19 +3577,16 @@ segnalazioni@ttesercizio.it
 info@sanifonds.tn.it
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Telefono-mobile">
-<h3>Telefono mobile<a class="headerlink" href="#Telefono-mobile" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Telefono-mobile">
+<h3>Telefono mobile<a class="headerlink" href="#Telefono-mobile" title="Permalink to this headline"></a></h3>
 <p>Trova tutti i numeri con cellulare - come criterio, guarda se non iniziano con zero.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3776,10 +3713,10 @@ info@sanifonds.tn.it
 <p>3 rows × 21 columns</p>
 </div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Sfida---Pulizia-strade">
-<h2>Sfida - Pulizia strade<a class="headerlink" href="#Sfida---Pulizia-strade" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Sfida---Pulizia-strade">
+<h2>Sfida - Pulizia strade<a class="headerlink" href="#Sfida---Pulizia-strade" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Vediamo gli orari della pulizia delle strade del Comune di Trento</p>
 <p>Sorgente dati: <a class="reference external" href="https://dati.trentino.it/dataset/pulizia-strade-e-relativi-divieti-di-sosta-primavera-2021-open-data">dati.trentino.it</a></p>
 <p>Apri il file <a class="reference external" href="pulizia-strade.csv">pulizia-strade.csv</a> con pandas ed <strong>encoding UTF-8</strong>, assegnalo alla variabile <code class="docutils literal notranslate"><span class="pre">psdf</span></code> e mostra i suoi campi</p>
@@ -3787,25 +3724,19 @@ info@sanifonds.tn.it
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-<div class="section" id="E'-ora-di-finirla">
-<h3>E’ ora di finirla<a class="headerlink" href="#E'-ora-di-finirla" title="Permalink to this headline">¶</a></h3>
+<section id="E'-ora-di-finirla">
+<h3>E’ ora di finirla<a class="headerlink" href="#E'-ora-di-finirla" title="Permalink to this headline"></a></h3>
 <p>Stampa le strade la cui pulizia finisce alle 2.30</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4736,9 +4667,9 @@ info@sanifonds.tn.it
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Strade-a-colpo-d'occhio">
-<h3>Strade a colpo d’occhio<a class="headerlink" href="#Strade-a-colpo-d'occhio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Strade-a-colpo-d'occhio">
+<h3>Strade a colpo d’occhio<a class="headerlink" href="#Strade-a-colpo-d'occhio" title="Permalink to this headline"></a></h3>
 <p>Ogni strada compare al massimo una volta oppure ci sono strade che compaiono più volte nel dataset?</p>
 <p>Usiamo l’istogramma per vederlo subito a colpo d’occhio!</p>
 <p>Plotta l’istogramma delle occorrenze delle strade nel dataset, mettendo titolo e label.</p>
@@ -4746,11 +4677,8 @@ info@sanifonds.tn.it
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4764,8 +4692,7 @@ info@sanifonds.tn.it
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">psdf</span><span class="p">[</span><span class="s2">&quot;strada&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psdf</span><span class="p">[</span><span class="s2">&quot;strada&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4785,19 +4712,16 @@ info@sanifonds.tn.it
 <img alt="../_images/pandas_pandas3-chal_20_1.png" src="../_images/pandas_pandas3-chal_20_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="Due-strade">
-<h3>Due strade<a class="headerlink" href="#Due-strade" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Due-strade">
+<h3>Due strade<a class="headerlink" href="#Due-strade" title="Permalink to this headline"></a></h3>
 <p>Stampa le strade che ricorrono due volte nel dataset</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -5044,19 +4968,16 @@ info@sanifonds.tn.it
 <p>85 rows × 15 columns</p>
 </div></div>
 </div>
-</div>
-<div class="section" id="Due-strade-stesso-percorso">
-<h3>Due strade stesso percorso<a class="headerlink" href="#Due-strade-stesso-percorso" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Due-strade-stesso-percorso">
+<h3>Due strade stesso percorso<a class="headerlink" href="#Due-strade-stesso-percorso" title="Permalink to this headline"></a></h3>
 <p>Stampa le strade che ricorrono due volte nello stesso percorso</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -5071,56 +4992,39 @@ VIA VITTORIO VENETO
 VIA G. MATTEOTTI
 </pre></div></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../search/regex-sol.html" class="btn btn-neutral float-right" title="Ricerca - espressioni regolari" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pandas2-sol.html" class="btn btn-neutral float-left" title="Analitiche con Pandas - 2. Esercizi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../search/regex-sol.html" class="btn btn-neutral float-right" title="Ricerca - espressioni regolari" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

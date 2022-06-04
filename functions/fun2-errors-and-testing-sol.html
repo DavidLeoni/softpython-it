@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Funzioni 2 - Gestione degli errori e testing &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/functions/fun2-errors-and-testing-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Funzioni 3 - esercizi con stringhe" href="fun3-strings-sol.html" />
     <link rel="prev" title="Funzioni 1 - introduzione" href="fun1-intro-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,18 +2643,18 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Funzioni-2---Gestione-degli-errori-e-testing">
-<h1>Funzioni 2 - Gestione degli errori e testing<a class="headerlink" href="#Funzioni-2---Gestione-degli-errori-e-testing" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/functions.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Funzioni-2---Gestione-degli-errori-e-testing">
+<h1>Funzioni 2 - Gestione degli errori e testing<a class="headerlink" href="#Funzioni-2---Gestione-degli-errori-e-testing" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/functions.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/functions/">Naviga file online</a></p>
-</div>
-<div class="section" id="Introduzione">
-<h2>Introduzione<a class="headerlink" href="#Introduzione" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Introduzione">
+<h2>Introduzione<a class="headerlink" href="#Introduzione" title="Permalink to this headline"></a></h2>
 <p>In questa guida tratteremo come deve fare il nostro programma quando incontra situazioni impreviste e vedremo come testare il codice che scriviamo. In particolare, descriveremo il formato degli esercizi proposti nelle parti successive dei Fondamenti Python.</p>
-</div>
-<div class="section" id="Che-fare">
-<h2>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Che-fare">
+<h2>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p>scompatta lo zip in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ol>
@@ -2736,9 +2691,9 @@ div.rendered_html tbody tr:hover {
 <li><p>Per eseguire il codice Python dentro una cella di Jupyter E creare una nuova cella subito dopo, premi <code class="docutils literal notranslate"><span class="pre">Alt+Invio</span></code></p></li>
 <li><p>Se per caso il Notebook sembra inchiodato, prova a selezionare <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="Situazioni-inaspettate">
-<h2>Situazioni inaspettate<a class="headerlink" href="#Situazioni-inaspettate" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Situazioni-inaspettate">
+<h2>Situazioni inaspettate<a class="headerlink" href="#Situazioni-inaspettate" title="Permalink to this headline"></a></h2>
 <p>E’ sera, c’è da festeggiare un compleanno e perciò ti è stato chiesto di fare una torta. Sai che servono i seguenti passi:</p>
 <ol class="arabic simple">
 <li><p>prendi il latte</p></li>
@@ -2755,16 +2710,15 @@ div.rendered_html tbody tr:hover {
 <li><p><strong>permettere di gestire</strong> a chi ha chiamato la funzione il problema</p></li>
 </ol>
 <p>La risposta è sì e si fa col meccanismo delle <strong>eccezioni</strong> (<code class="docutils literal notranslate"><span class="pre">Exception</span></code>)</p>
-<div class="section" id="fai_torta_problematica">
-<h3>fai_torta_problematica<a class="headerlink" href="#fai_torta_problematica" title="Permalink to this headline">¶</a></h3>
+<section id="fai_torta_problematica">
+<h3>fai_torta_problematica<a class="headerlink" href="#fai_torta_problematica" title="Permalink to this headline"></a></h3>
 <p>Vediamo intanto come possiamo rappresentare in Python il problema di sopra. Una versione di base potrebbe essere essere la seguente:</p>
 <p><strong>DOMANDA</strong>: questa versione ha un problema serio. Riesci a vederlo ??</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">fai_torta_problematica</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fai_torta_problematica</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">        - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -2813,10 +2767,10 @@ Festeggia
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: il programma qua sopra festeggia anche quando non abbiamo ingredienti sufficienti !</p>
-</div></div>
-</div>
-<div class="section" id="Controllare-con-i-return">
-<h2>Controllare con i return<a class="headerlink" href="#Controllare-con-i-return" title="Permalink to this headline">¶</a></h2>
+</div></section>
+</section>
+<section id="Controllare-con-i-return">
+<h2>Controllare con i return<a class="headerlink" href="#Controllare-con-i-return" title="Permalink to this headline"></a></h2>
 <p><strong>ESERCIZIO</strong>: Potremmo correggere i problemi della torta di prima aggiungendo dei comandi <code class="docutils literal notranslate"><span class="pre">return</span></code>. Implementa la seguente funzione.</p>
 <p><strong>NOTA</strong>: NON spostare il <code class="docutils literal notranslate"><span class="pre">print(&quot;Festeggia&quot;)</span></code> dentro la funzione. Lo scopo dell’esercizio è proprio tenerlo fuori così da usare il valore ritornato da <code class="docutils literal notranslate"><span class="pre">fai_torta</span></code> per decidere se festeggiare o meno.</p>
 <p>Se hai dubbi sulle funzioni con valori di ritorno, puoi consultare il <a class="reference external" href="https://davidleoni.github.io/ThinkPythonItalian/html/thinkpython2007.html">Capitolo 6 di Pensare in Python</a></p>
@@ -2826,8 +2780,7 @@ Festeggia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">fai_torta</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fai_torta</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;  - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">         - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -2874,8 +2827,7 @@ Festeggia
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No party !&quot;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2893,8 +2845,7 @@ No party !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">fai_torta</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fai_torta</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;  - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">         - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -2909,9 +2860,7 @@ No party !
 
 <span class="c1"># e scrivi qui la chiamata a funzione, fai_torta(5,1,0.3)</span>
 <span class="c1"># usando il risultato per dichiarare se si può o meno fare il party :-(</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2925,9 +2874,9 @@ Non ho abbastanza farina !
 No party !
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Le-eccezioni">
-<h2>Le eccezioni<a class="headerlink" href="#Le-eccezioni" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Le-eccezioni">
+<h2>Le eccezioni<a class="headerlink" href="#Le-eccezioni" title="Permalink to this headline"></a></h2>
 <p><strong>Riferimenti</strong>: <a class="reference external" href="http://ncassetta.altervista.org/Tutorial_Python/Lezione_19.html">Nicola Cassetta - 19: La gestione delle eccezioni</a></p>
 <p>Usando i <code class="docutils literal notranslate"><span class="pre">return</span></code> abbiamo migliorato la funzione precedente, ma rimane un problema: la responsabilità di capire se la torta è riuscita rimane al chiamante della funzione, che deve prendere il valore ritornato e decidere in base a quello se festeggiare o meno. Un programmatore sbadato potrebbe dimenticarsi di effettuare il controllo e feteggiare anche con una torta mal riuscita.</p>
 <p>Quindi ci chiediamo: è possibile fermare l’esecuzione non solo della funzione ma di tutto il programma non appena riscontriamo una situazione imprevista?</p>
@@ -2947,8 +2896,7 @@ No party !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">        - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -2973,16 +2921,14 @@ No party !
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Impasto&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaldo&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ho fatto la torta !&quot;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">        - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -2990,8 +2936,7 @@ No party !
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># implementa la funzione</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <p>Una volta implmenetata, scrivendo</p>
@@ -3005,12 +2950,12 @@ prendo lo zucchero
 
 ---------------------------------------------------------------------------
 Exception                                 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
-&lt;ipython-input-10-02c123f44f31&gt; in &lt;module&gt;<span class="o">()</span>
+&lt;ipython-input-10-02c123f44f31&gt; <span class="k">in</span> &lt;module&gt;<span class="o">()</span>
 ----&gt; <span class="m">1</span> fai_torta_eccezionale<span class="o">(</span><span class="m">5</span>,1,0.3<span class="o">)</span>
       <span class="m">2</span>
       <span class="m">3</span> print<span class="o">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="o">)</span>
 
-&lt;ipython-input-9-030239f08ca5&gt; in fai_torta_eccezionale<span class="o">(</span>latte, zucchero, farina<span class="o">)</span>
+&lt;ipython-input-9-030239f08ca5&gt; <span class="k">in</span> fai_torta_eccezionale<span class="o">(</span>latte, zucchero, farina<span class="o">)</span>
      <span class="m">18</span>         print<span class="o">(</span><span class="s2">&quot;prendo la farina&quot;</span><span class="o">)</span>
      <span class="m">19</span>     <span class="k">else</span>:
 ---&gt; <span class="m">20</span>         raise Exception<span class="o">(</span><span class="s2">&quot;Non ho abbastanza farina !&quot;</span><span class="o">)</span>
@@ -3025,8 +2970,7 @@ Exception: Non ho abbastanza farina !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">fai_torta_eccezionale</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fai_torta_eccezionale</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3045,15 +2989,14 @@ Ho fatto la torta !
 Festeggia
 </pre></div></div>
 </div>
-<div class="section" id="Gestire-le-eccezioni">
-<h3>Gestire le eccezioni<a class="headerlink" href="#Gestire-le-eccezioni" title="Permalink to this headline">¶</a></h3>
+<section id="Gestire-le-eccezioni">
+<h3>Gestire le eccezioni<a class="headerlink" href="#Gestire-le-eccezioni" title="Permalink to this headline"></a></h3>
 <p>E se invece di interrompere brutalmente il programma in caso di problemi, volessimo provare qualche alternativa (come andare a comprare del gelato …) ? Potremmo usare i blocchi <code class="docutils literal notranslate"><span class="pre">try</span></code> <code class="docutils literal notranslate"><span class="pre">except</span></code> così:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">try</span><span class="p">:</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">fai_torta_eccezionale</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.3</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
@@ -3072,9 +3015,9 @@ Non riesco a fare la torta, che ne dite se usciamo a prendere del gelato?
 </pre></div></div>
 </div>
 <p>Se noti, l’esecuzione ha saltato il <code class="docutils literal notranslate"><span class="pre">print(&quot;Festeggia&quot;)</span></code> ma non è stata stampata nessuna eccezione, e l’esecuzione è passata alla riga subito dopo l’<code class="docutils literal notranslate"><span class="pre">except</span></code></p>
-</div>
-<div class="section" id="Eccezioni-particolari">
-<h3>Eccezioni particolari<a class="headerlink" href="#Eccezioni-particolari" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Eccezioni-particolari">
+<h3>Eccezioni particolari<a class="headerlink" href="#Eccezioni-particolari" title="Permalink to this headline"></a></h3>
 <p>Finora abbiamo usato <code class="docutils literal notranslate"><span class="pre">Exception</span></code> che è un’eccezione generica, ma volendo si può usare eccezioni più specifiche per segnalare meglio il tipo di errore che è accaduto. Per esempio, quando si implementa una funzione, dato che il controllo del valore corretto dei parametri come in <code class="docutils literal notranslate"><span class="pre">fai_torta_eccezionale</span></code> è qualcosa che si fa molto spesso, Python mette a disposizione una eccezione di nome <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>. Usandola invece di <code class="docutils literal notranslate"><span class="pre">Exception</span></code>, si consente a chi chiama la funzione di intercettare solo
 quella tipologia di errore.</p>
 <p>Se invece nella funzione viene lanciato un errore che nel <code class="docutils literal notranslate"><span class="pre">catch</span></code> non viene intercettato, il programma si interromperà.</p>
@@ -3082,9 +3025,7 @@ quella tipologia di errore.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale_2</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">def</span> <span class="nf">fai_torta_eccezionale_2</span><span class="p">(</span><span class="n">latte</span><span class="p">,</span> <span class="n">zucchero</span><span class="p">,</span> <span class="n">farina</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; - supponiamo servano 1.3 kg per il latte, 0.2kg per lo zucchero e 1.0kg per la farina</span>
 
 <span class="sd">        - prende come parametri le quantità che abbiamo in dispensa</span>
@@ -3120,8 +3061,7 @@ quella tipologia di errore.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Festeggia&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>  <span class="c1"># gestisce tutte le altre eccezioni</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ragazzi, è successo un problema grave, no so come fare. Meglio uscire a prendere il gelato!&quot;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3146,10 +3086,10 @@ Festeggia
 </pre></div></div>
 </div>
 <p>Per ulteriori spiegazioni su i <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">catch</span></code> rimandiamo alla lezioni di <a class="reference external" href="http://ncassetta.altervista.org/Tutorial_Python/Lezione_19.html">Nicola Cassetta - 19: La gestione delle eccezioni</a></p>
-</div>
-</div>
-<div class="section" id="Gli-assert">
-<h2>Gli assert<a class="headerlink" href="#Gli-assert" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Gli-assert">
+<h2>Gli assert<a class="headerlink" href="#Gli-assert" title="Permalink to this headline"></a></h2>
 <p>Ti è stato chiesto di scrivere un programma per controllare un reattore nucleare. Il reattore produce tanta energia, ma ha anche bisogno di almeno 20 metri d’acqua per raffreddarsi, e il tuo programma deve regolare il livello dell’acqua. Senza acqua sufficiente, rischi una fusione. Non ti senti esattamente all’altezza del compito, e cominci a sudare..</p>
 <p>Con un certo nervosismo scrivi il codice. Controlli e ricontrolli il programma, credi che sia tutto giusto.</p>
 <p>Il giorno dell’inaugurazione, il reattore viene fatto partire. Inaspettatamente, il livello dell’acqua scende a 5 metri, e inizia la reazione. Seguono spettacoli pirotecnici al plutonio.</p>
@@ -3158,8 +3098,7 @@ Festeggia
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># ci serve acqua per raffreddare il nostro reattore nucleare</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ci serve acqua per raffreddare il nostro reattore nucleare</span>
 <span class="n">livello_acqua</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1">#  sembra sufficiente</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;livello_acqua: &quot;</span><span class="p">,</span> <span class="n">livello_acqua</span><span class="p">)</span>
@@ -3187,9 +3126,7 @@ Festeggia
 <span class="c1"># affinchè tutto funzioni correttamente</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fai partire reattore nucleare&quot;</span><span class="p">)</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3208,8 +3145,7 @@ fai partire reattore nucleare
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prima&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;prima&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="kc">True</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dopo&quot;</span><span class="p">)</span>
 </pre></div>
@@ -3233,7 +3169,7 @@ dopo
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prima
 ---------------------------------------------------------------------------
 AssertionError                            Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
-&lt;ipython-input-7-a871fdc9ebee&gt; in &lt;module&gt;<span class="o">()</span>
+&lt;ipython-input-7-a871fdc9ebee&gt; <span class="k">in</span> &lt;module&gt;<span class="o">()</span>
 ----&gt; <span class="m">1</span> assert False
 
 AssertionError:
@@ -3290,8 +3226,8 @@ AssertionError                            Traceback (most recent call last)
 AssertionError:
 </pre></div>
 </div>
-<div class="section" id="Quando-usare-gli-assert?">
-<h3>Quando usare gli assert?<a class="headerlink" href="#Quando-usare-gli-assert?" title="Permalink to this headline">¶</a></h3>
+<section id="Quando-usare-gli-assert?">
+<h3>Quando usare gli assert?<a class="headerlink" href="#Quando-usare-gli-assert?" title="Permalink to this headline"></a></h3>
 <p>Il caso qua sopra è volutamente esagerato, ma mostra come un controllo in più a volte impedisca disastri.</p>
 <p><strong>NOTA</strong>: Gli assert sono un modo molto spiccio di fare controlli, tanto che Python permette anche anche di ignorarli durante l’esecuzione per migliorare le performance, chiamando python con il parametro <code class="docutils literal notranslate"><span class="pre">-O</span></code> come in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -O mio_file.py
@@ -3337,7 +3273,7 @@ ATTENZIONE: livello acqua basso!  <span class="m">5</span>
 
 ---------------------------------------------------------------------------
 Exception                                 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
-&lt;ipython-input-16-02382ff90f5a&gt; in &lt;module&gt;
+&lt;ipython-input-16-02382ff90f5a&gt; <span class="k">in</span> &lt;module&gt;
      <span class="m">28</span> <span class="c1"># quindi prima di fare cose pericolose, è sempre meglio fare un controllo !</span>
      <span class="m">29</span> <span class="k">if</span> livello_acqua &lt; <span class="m">20</span>:
 ---&gt; <span class="m">30</span>     raise Exception<span class="o">(</span><span class="s2">&quot;Livello acqua troppo basso !&quot;</span><span class="o">)</span>  <span class="c1"># l&#39;esecuzione si blocca subito</span>
@@ -3348,23 +3284,23 @@ Exception: Livello acqua troppo basso !
 </pre></div>
 </div>
 <p>Nota come il reattore <em>non</em> sia stato attivato</p>
-</div>
-</div>
-<div class="section" id="Testing">
-<h2>Testing<a class="headerlink" href="#Testing" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Testing">
+<h2>Testing<a class="headerlink" href="#Testing" title="Permalink to this headline"></a></h2>
 <p>Se sembra funzionare, allora funziona? <em>Probabilmente no</em>.</p>
 <p>Il diavolo sta nei dettagli, specialmente per algoritmi complessi: aremo un corso accelerato sul testing con Python</p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: Software scritti male possono portare alla perdita di milioni di €/$ o persino ferire persone. Lettura raccomandata: <a class="reference external" href="https://www.cs.tau.ac.il/~nachumd/horror.html">Software Horror Stories</a></p>
 </div>
-<div class="section" id="Dov'è-il-tuo-software?">
-<h3>Dov’è il tuo software?<a class="headerlink" href="#Dov'è-il-tuo-software?" title="Permalink to this headline">¶</a></h3>
+<section id="Dov'è-il-tuo-software?">
+<h3>Dov’è il tuo software?<a class="headerlink" href="#Dov'è-il-tuo-software?" title="Permalink to this headline"></a></h3>
 <p>Se vuoi essere un data scientist, potresti finire con codice che è moderatamente complesso dal punto di vista algoritmico, ma forse non troppo grande in dimensioni.</p>
 <p>In ogni caso, quando la linea rosso è superata dovresti cominciare a testare appropriatamente:</p>
 <p><img alt="dove è il tuo software" src="../_images/where-is-your-software.png" /></p>
-</div>
-<div class="section" id="Usare-gli-assert-per-testare">
-<h3>Usare gli assert per testare<a class="headerlink" href="#Usare-gli-assert-per-testare" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Usare-gli-assert-per-testare">
+<h3>Usare gli assert per testare<a class="headerlink" href="#Usare-gli-assert-per-testare" title="Permalink to this headline"></a></h3>
 <div class="admonition warning">
 <p><strong>NOTA: in questo libro usiamo semplici</strong> <code class="docutils literal notranslate"><span class="pre">assert</span></code>, <strong>ma ci sono soluzioni molto migliori per testare!</strong> Se hai intenzioni serie riguardo lo sviluppo software, consigliamo caldamente di considerare l’uso di framework appositi come <a class="reference external" href="https://docs.pytest.org/en/stable/">PyTest</a> (recente e pulito) oppure <a class="reference external" href="https://docs.python.org/3/library/unittest.html">Unittest</a> (la libreria di testing di default di Python, ha un approccio più tradizionale)</p>
 </div>
@@ -3374,8 +3310,7 @@ Exception: Livello acqua troppo basso !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">somma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
     <span class="k">return</span> <span class="n">s</span>
 </pre></div>
@@ -3386,8 +3321,7 @@ Exception: Livello acqua troppo basso !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">assert</span> <span class="n">somma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">somma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </div>
@@ -3407,9 +3341,9 @@ Exception: Livello acqua troppo basso !
 <li><p>l’espression booleana <code class="docutils literal notranslate"><span class="pre">somma(2,3)</span> <span class="pre">==</span> <span class="pre">5</span></code> darà quindi <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">False</span></code> interromperà l’esecuzione del programma, lanciando un eccezione di tipo <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code></p></li>
 </ol>
-</div>
-<div class="section" id="Struttura-esercizi">
-<h3>Struttura esercizi<a class="headerlink" href="#Struttura-esercizi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Struttura-esercizi">
+<h3>Struttura esercizi<a class="headerlink" href="#Struttura-esercizi" title="Permalink to this headline"></a></h3>
 <p>Ricapitolando, gli esercizi della parte <a class="reference external" href="https://it.softpython.org/index.html#A.3---Fondamenti">Fondamenti Python - A.3 Algoritmi</a> sono spesso strutturati nel seguente formato:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
@@ -3425,14 +3359,14 @@ Exception: Livello acqua troppo basso !
 <p>Se tenti di eseguire la cella, vedrai questo errore:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
 Exception                                 Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
-&lt;ipython-input-16-5f5c8512d42a&gt; in &lt;module&gt;<span class="o">()</span>
+&lt;ipython-input-16-5f5c8512d42a&gt; <span class="k">in</span> &lt;module&gt;<span class="o">()</span>
       <span class="m">6</span>
       <span class="m">7</span>
 ----&gt; <span class="m">8</span> assert somma<span class="o">(</span><span class="m">2</span>,3<span class="o">)</span> <span class="o">==</span> <span class="m">5</span>
       <span class="m">9</span> assert somma<span class="o">(</span><span class="m">3</span>,1<span class="o">)</span> <span class="o">==</span> <span class="m">4</span>
      <span class="m">10</span> assert somma<span class="o">(</span>-2,5<span class="o">)</span> <span class="o">==</span> <span class="m">3</span>
 
-&lt;ipython-input-16-5f5c8512d42a&gt; in somma<span class="o">(</span>x, y<span class="o">)</span>
+&lt;ipython-input-16-5f5c8512d42a&gt; <span class="k">in</span> somma<span class="o">(</span>x, y<span class="o">)</span>
       <span class="m">3</span>     <span class="s2">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
 <span class="s2">      4     &quot;&quot;&quot;</span>
 ----&gt; <span class="m">5</span>     raise Exception<span class="o">(</span><span class="s2">&quot;IMPLEMENTAMI&quot;</span><span class="o">)</span>
@@ -3466,7 +3400,7 @@ editor per programmatori quando generano automaticamente codice mettono negli sc
 <p>In questo caso la prima asserzione ha successo e quindi semplicemente passa l’esecuzione passa alla riga successiva che contiene un’altro <code class="docutils literal notranslate"><span class="pre">assert</span></code>. Ci si attende che <code class="docutils literal notranslate"><span class="pre">somma(3,</span> <span class="pre">1)</span></code> dia <code class="docutils literal notranslate"><span class="pre">4</span></code>, ma la nostra funzione implementata male ritorna <code class="docutils literal notranslate"><span class="pre">5</span></code> e quindi questo assert fallisce. Notare come l’esecuzione si interrompa al <em>secondo</em> <code class="docutils literal notranslate"><span class="pre">assert</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
 AssertionError                            Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
-&lt;ipython-input-19-e5091c194d3c&gt; in &lt;module&gt;<span class="o">()</span>
+&lt;ipython-input-19-e5091c194d3c&gt; <span class="k">in</span> &lt;module&gt;<span class="o">()</span>
       <span class="m">6</span>
       <span class="m">7</span> assert somma<span class="o">(</span><span class="m">2</span>,3<span class="o">)</span> <span class="o">==</span> <span class="m">5</span>
 ----&gt; <span class="m">8</span> assert somma<span class="o">(</span><span class="m">3</span>,1<span class="o">)</span> <span class="o">==</span> <span class="m">4</span>
@@ -3483,8 +3417,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">somma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
@@ -3508,8 +3441,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -3526,8 +3458,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; RITORNA la somma dei numeri x e y</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -3538,9 +3469,9 @@ AssertionError:
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---mag_tre">
-<h3>Esercizio - mag_tre<a class="headerlink" href="#Esercizio---mag_tre" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---mag_tre">
+<h3>Esercizio - mag_tre<a class="headerlink" href="#Esercizio---mag_tre" title="Permalink to this headline"></a></h3>
 <p>✪✪ Scrivi una funzione <code class="docutils literal notranslate"><span class="pre">mag_tre(a,b,c)</span></code> che prende stavolta tre numeri come parametro e RESTITUISCE il più grande tra loro</p>
 <p>Esempi:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mag_tre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
@@ -3559,10 +3490,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-
-<span></span><span class="k">def</span> <span class="nf">mag_tre</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><br/><span></span><span class="k">def</span> <span class="nf">mag_tre</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
 
     <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">c</span><span class="p">:</span>
@@ -3586,17 +3514,15 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="k">assert</span> <span class="n">mag_tre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">assert</span> <span class="n">mag_tre</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
 <span class="k">assert</span> <span class="n">mag_tre</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
 <span class="k">assert</span> <span class="n">mag_tre</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---prezzo_finale">
-<h3>Esercizio - prezzo_finale<a class="headerlink" href="#Esercizio---prezzo_finale" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---prezzo_finale">
+<h3>Esercizio - prezzo_finale<a class="headerlink" href="#Esercizio---prezzo_finale" title="Permalink to this headline"></a></h3>
 <p>✪✪ Il prezzo di copertina di un libro è € 24,95, ma una libreria ottiene il 40% di sconto. I costi di spedizione sono € 3 per la prima copia e 75 centesimi per ogni copia aggiuntiva. Quanto costano <code class="docutils literal notranslate"><span class="pre">n</span></code> copie? Scrivi una funzione <code class="docutils literal notranslate"><span class="pre">prezzo_finale(n)</span></code> che RITORNA il prezzo.</p>
 <p><strong>ATTENZIONE 1</strong>: Python per i numeri vuole il punto, NON la virgola !</p>
 <p><strong>ATTENZIONE 2</strong>: Se ordinassi zero libri, quanto dovrei pagare ?</p>
@@ -3618,8 +3544,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">prezzo_finale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prezzo_finale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -3636,8 +3561,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">prezzo_finale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prezzo_finale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">prezzo_finale</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mf">159.45</span>
@@ -3645,9 +3569,9 @@ AssertionError:
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---ora_arrivo">
-<h3>Esercizio - ora_arrivo<a class="headerlink" href="#Esercizio---ora_arrivo" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---ora_arrivo">
+<h3>Esercizio - ora_arrivo<a class="headerlink" href="#Esercizio---ora_arrivo" title="Permalink to this headline"></a></h3>
 <p>✪✪✪ Correndo a ritmo blando ci mettete 8 minuti e 15 secondi al miglio, e correndo a ritmo moderato ci impiegate 7 minuti e 12 secondi al miglio.</p>
 <p>Scrivi una funzione <code class="docutils literal notranslate"><span class="pre">ora_arrivo(n,m)</span></code> che supponendo una partenza alle ore 6 e 52 minuti, date <code class="docutils literal notranslate"><span class="pre">n</span></code> miglia percorse con ritmo blando e <code class="docutils literal notranslate"><span class="pre">m</span></code> con ritmo moderato, STAMPA l’ora di arrivo.</p>
 <ul class="simple">
@@ -3664,8 +3588,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">ora_arrivo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ora_arrivo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
 
     <span class="n">ore_partenza</span> <span class="o">=</span> <span class="mi">6</span>
     <span class="n">minuti_partenza</span> <span class="o">=</span> <span class="mi">52</span>
@@ -3698,8 +3621,7 @@ AssertionError:
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">ora_arrivo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ora_arrivo</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
@@ -3714,60 +3636,43 @@ AssertionError:
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con esercizi su <a class="reference external" href="https://it.softpython.org/functions/fun3-strings-sol.html">funzioni e stringhe</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="fun3-strings-sol.html" class="btn btn-neutral float-right" title="Funzioni 3 - esercizi con stringhe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="fun1-intro-sol.html" class="btn btn-neutral float-left" title="Funzioni 1 - introduzione" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fun3-strings-sol.html" class="btn btn-neutral float-right" title="Funzioni 3 - esercizi con stringhe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

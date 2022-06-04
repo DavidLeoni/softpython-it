@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Basi 3 - numeri reali &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/basics/basics3-floats-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basi 4 - Challenges" href="basics4-chal.html" />
     <link rel="prev" title="Basi 2 - booleani" href="basics2-bools-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,10 +2643,10 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Basi-3---numeri-reali">
-<h1>Basi 3 - numeri reali<a class="headerlink" href="#Basi-3---numeri-reali" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/basics.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Basi-3---numeri-reali">
+<h1>Basi 3 - numeri reali<a class="headerlink" href="#Basi-3---numeri-reali" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/basics.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/basics">Naviga file online</a></p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>REQUISITI:</strong></p>
@@ -2700,16 +2655,15 @@ div.rendered_html tbody tr:hover {
 <li><p><strong>Letto</strong> <a class="reference external" href="https://it.softpython.org/basics/basics2-bools-sol.html">Basi 2 - booleani</a></p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="Numeri-reali">
-<h2>Numeri reali<a class="headerlink" href="#Numeri-reali" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Numeri-reali">
+<h2>Numeri reali<a class="headerlink" href="#Numeri-reali" title="Permalink to this headline"></a></h2>
 <p>Python salva i numeri reali (numeri in virgola mobile) in 64 bit di informazione divisi in segno, esponente e mantissa. Vediamo un esempio:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">3.14</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">3.14</span>
 </pre></div>
 </div>
 </div>
@@ -2726,8 +2680,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2745,16 +2698,15 @@ float
 <p>Quindi scriverai <code class="docutils literal notranslate"><span class="pre">3.14</span></code> invece di <code class="docutils literal notranslate"><span class="pre">3,14</span></code></p>
 <p>Fai molta attenzione quando copi numeri da documenti in italiano, potrebbero contenere insidiose virgole !</p>
 </div>
-<div class="section" id="Notazione-scientifica">
-<h3>Notazione scientifica<a class="headerlink" href="#Notazione-scientifica" title="Permalink to this headline">¶</a></h3>
+<section id="Notazione-scientifica">
+<h3>Notazione scientifica<a class="headerlink" href="#Notazione-scientifica" title="Permalink to this headline"></a></h3>
 <p>Quando i numeri sono molto grandi o molto piccoli, per evitare di scrivere troppi zero conviene usare la notazione scientitifica con la <em>e</em> come <span class="math notranslate nohighlight">\(xen\)</span>, che moltiplica il numero <em>x</em> per <span class="math notranslate nohighlight">\(10^n\)</span></p>
 <p>Con questa notazione, in memoria vengono messe solo le cifre più significative ( <em>la mantissa</em> ) e l’esponente, evitando quindi di sprecare spazio.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e1</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e1</span>
 </pre></div>
 </div>
 </div>
@@ -2771,8 +2723,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e2</span>
 </pre></div>
 </div>
 </div>
@@ -2789,8 +2740,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e3</span>
 </pre></div>
 </div>
 </div>
@@ -2807,8 +2757,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e123</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e123</span>
 </pre></div>
 </div>
 </div>
@@ -2825,8 +2774,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e0</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e0</span>
 </pre></div>
 </div>
 </div>
@@ -2843,8 +2791,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e-1</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e-1</span>
 </pre></div>
 </div>
 </div>
@@ -2861,8 +2808,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e-2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e-2</span>
 </pre></div>
 </div>
 </div>
@@ -2879,8 +2825,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">75e-123</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">75e-123</span>
 </pre></div>
 </div>
 </div>
@@ -2952,13 +2897,13 @@ float
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Numeri-troppo-grandi-o-troppo-piccoli">
-<h3>Numeri troppo grandi o troppo piccoli<a class="headerlink" href="#Numeri-troppo-grandi-o-troppo-piccoli" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Numeri-troppo-grandi-o-troppo-piccoli">
+<h3>Numeri troppo grandi o troppo piccoli<a class="headerlink" href="#Numeri-troppo-grandi-o-troppo-piccoli" title="Permalink to this headline"></a></h3>
 <p>A volte i calcoli su numeri estremamente piccoli o enormi possono produrre come risultato <code class="docutils literal notranslate"><span class="pre">math.nan</span></code> (Not a Number) o <code class="docutils literal notranslate"><span class="pre">math.inf</span></code>. Per il momento li menzioniamo e basta, trovi una discussione dettagliata nel <a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy-sol.html#NaN-e-infinit%C3%A0">foglio su Numpy</a></p>
-</div>
-<div class="section" id="Esercizio---cerchio">
-<h3>Esercizio - cerchio<a class="headerlink" href="#Esercizio---cerchio" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---cerchio">
+<h3>Esercizio - cerchio<a class="headerlink" href="#Esercizio---cerchio" title="Permalink to this headline"></a></h3>
 <p>Calcola l’area del cerchio al centro di un pallone da calcio (raggio = 9.15m), ricordandoti che <span class="math notranslate nohighlight">\(area= pi*r^2\)</span> (come operatore per la potenza, usa <code class="docutils literal notranslate"><span class="pre">**</span></code>):</p>
 <p>Il tuo codice dovrebbe stampare come risultato <code class="docutils literal notranslate"><span class="pre">263.02199094102605</span></code></p>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -2967,8 +2912,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># SOLUZIONE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
 
 
 <span class="n">r</span> <span class="o">=</span> <span class="mf">9.15</span>
@@ -2990,8 +2934,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -3031,9 +2974,9 @@ float
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="Esercizio---Il-campo-da-golf">
-<h3>Esercizio - Il campo da golf<a class="headerlink" href="#Esercizio---Il-campo-da-golf" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---Il-campo-da-golf">
+<h3>Esercizio - Il campo da golf<a class="headerlink" href="#Esercizio---Il-campo-da-golf" title="Permalink to this headline"></a></h3>
 <p>Il giardiniere Jobe è diventato così bravo che il dottor Angelo decide di promuoverlo a curatore del campo da golf dove è solito trascorrere i weekend. Ma una nuova sfida lo attende: al campo Jobe deve radere perfettamente il <em>green</em>, cioè l’area circolare di raggio <code class="docutils literal notranslate"><span class="pre">r</span></code> che comprende la buca. La spia sul tagliaerbe di Jobe si deve accendere quando è posizionato sul verde chiaro: scrivi un espressione che date due coordinate <code class="docutils literal notranslate"><span class="pre">x,y</span></code> produce <code class="docutils literal notranslate"><span class="pre">True</span></code> quando il tagliaerbe è sul verde chiaro, e
 <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti. Al solo scopo di darti dei riferimenti visuali, questa volta sul campo sono disposte anche delle palline con delle lettere.</p>
 <ul class="simple">
@@ -3048,8 +2991,7 @@ float
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="mi">50</span>
 
@@ -3080,8 +3022,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="mi">50</span>
 
@@ -3094,9 +3035,7 @@ True
 <span class="c1">#x,y = -37,37   # G: False</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3108,9 +3047,9 @@ True
 True
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---frazionamento">
-<h3>Esercizio - frazionamento<a class="headerlink" href="#Esercizio---frazionamento" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---frazionamento">
+<h3>Esercizio - frazionamento<a class="headerlink" href="#Esercizio---frazionamento" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice per calcolare il valore della seguente formula per <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">0.000003</span></code>, dovresti ottenere <code class="docutils literal notranslate"><span class="pre">2.753278226511882</span></code></p>
 <div class="math notranslate nohighlight">
 \[\large-\frac{\sqrt{x+3}}{\frac{(x + 2)^3}{\log{x}}}\]</div>
@@ -3120,8 +3059,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.000003</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.000003</span>
 
 <span class="c1"># scrivi qui</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -3142,13 +3080,10 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.000003</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.000003</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3160,9 +3095,9 @@ True
 2.753278226511882
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---sommatoria">
-<h3>Esercizio - sommatoria<a class="headerlink" href="#Esercizio---sommatoria" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---sommatoria">
+<h3>Esercizio - sommatoria<a class="headerlink" href="#Esercizio---sommatoria" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice per calcolare il valore della seguente espressione (non usare cicli, scrivi per esteso tutto i calcoli), dovresti ottenere <code class="docutils literal notranslate"><span class="pre">20.53333333333333</span></code></p>
 <div class="math notranslate nohighlight">
 \[\large\sum_{j=1}^{3}{\frac{j^4}{j + 2}}\]</div>
@@ -3172,8 +3107,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="p">((</span><span class="mi">1</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="p">((</span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="p">((</span><span class="mi">3</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -3191,11 +3125,8 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3207,9 +3138,9 @@ True
 20.53333333333333
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Reali---conversione">
-<h3>Reali - conversione<a class="headerlink" href="#Reali---conversione" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Reali---conversione">
+<h3>Reali - conversione<a class="headerlink" href="#Reali---conversione" title="Permalink to this headline"></a></h3>
 <p>Se vogliamo convertire un reale ad un intero, abbiamo a disposizione diversi modi:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -3322,9 +3253,9 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 1.</p>
-</div></div>
-<div class="section" id="Esercizio---tonificante">
-<h3>Esercizio - tonificante<a class="headerlink" href="#Esercizio---tonificante" title="Permalink to this headline">¶</a></h3>
+</div></section>
+<section id="Esercizio---tonificante">
+<h3>Esercizio - tonificante<a class="headerlink" href="#Esercizio---tonificante" title="Permalink to this headline"></a></h3>
 <p>Gli studi eccessivi ti hanno portato a cercare su internet ricette di bevande energetiche. Fortunatamente, una guru della nutrizione ha appena postato sul suo canale Instagram &#64;BeviCheTiFaBene la ricetta di un frappè portentoso:</p>
 <blockquote>
 <div><p>Versare in un contenitore 2 decilitri di spremuta di kiwi, 4 decilitri di salsa di soia, e 3 decilitri di shampoo al karitè bio. Miscelare vigorosamente e poi versare metà del composto in un bicchiere. Rabboccare il bicchiere fino al decilitro intero superiore. Tracannare avidamente.</p>
@@ -3360,8 +3291,7 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene 5 dl
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">kiwi</span> <span class="o">=</span> <span class="mf">2.4</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kiwi</span> <span class="o">=</span> <span class="mf">2.4</span>
 <span class="n">soia</span> <span class="o">=</span> <span class="mf">4.8</span>
 <span class="n">shampoo</span> <span class="o">=</span> <span class="mf">3.1</span>
 <span class="n">misurino</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -3382,8 +3312,7 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene 5 dl
 <span class="n">bicchiere</span> <span class="o">=</span> <span class="n">mixer</span><span class="o">/</span><span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Verso metà della miscela (&#39;</span><span class="p">,</span> <span class="n">bicchiere</span><span class="p">,</span> <span class="s1">&#39;dl ) nel bicchiere&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene:&#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">bicchiere</span><span class="p">),</span> <span class="s1">&#39;dl&#39;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3405,8 +3334,7 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">kiwi</span> <span class="o">=</span> <span class="mf">2.4</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kiwi</span> <span class="o">=</span> <span class="mf">2.4</span>
 <span class="n">soia</span> <span class="o">=</span> <span class="mf">4.8</span>
 <span class="n">shampoo</span> <span class="o">=</span> <span class="mf">3.1</span>
 <span class="n">misurino</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -3415,9 +3343,7 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3435,9 +3361,9 @@ Verso metà della miscela ( 4.5 dl ) nel bicchiere
 Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---arrotondamente">
-<h3>Esercizio - arrotondamente<a class="headerlink" href="#Esercizio---arrotondamente" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---arrotondamente">
+<h3>Esercizio - arrotondamente<a class="headerlink" href="#Esercizio---arrotondamente" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice per calcolare il valore della seguente formula per <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-5.51</span></code>, dovresti ottenere <code class="docutils literal notranslate"><span class="pre">41</span></code></p>
 <div class="math notranslate nohighlight">
 \[\large\lvert{\lceil{x}\rceil}\rvert + \lfloor{x}\rceil^2\]</div>
@@ -3447,8 +3373,7 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.51</span>   <span class="c1"># 41</span>
 <span class="c1">#x = -5.49  # 30</span>
@@ -3471,16 +3396,13 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.51</span>   <span class="c1"># 41</span>
 <span class="c1">#x = -5.49  # 30</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3492,9 +3414,9 @@ Rabbocco il bicchiere fino al decilitro intero superiore, adesso contiene: 5 dl
 41
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Reali---uguaglianza">
-<h3>Reali - uguaglianza<a class="headerlink" href="#Reali---uguaglianza" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Reali---uguaglianza">
+<h3>Reali - uguaglianza<a class="headerlink" href="#Reali---uguaglianza" title="Permalink to this headline"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Ciò che segue vale per</strong> <strong>*tutti*</strong> <strong>i linguaggi di programmazione!</strong></p>
 <p>Alcuni risultati ti parranno curiosi ma è il modo in cui la maggior parte dei processori (CPU) opera, indipendentemente da Python.</p>
@@ -3505,8 +3427,7 @@ stampare <code class="docutils literal notranslate"><span class="pre">4.1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="mf">4.1</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">4.1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3523,8 +3444,7 @@ stampare <code class="docutils literal notranslate"><span class="pre">4.1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">format</span><span class="p">(</span><span class="mf">4.1</span><span class="p">,</span> <span class="s1">&#39;.55f&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">(</span><span class="mf">4.1</span><span class="p">,</span> <span class="s1">&#39;.55f&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3542,8 +3462,7 @@ stampare <code class="docutils literal notranslate"><span class="pre">4.1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3560,8 +3479,7 @@ stampare <code class="docutils literal notranslate"><span class="pre">4.1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">format</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">,</span> <span class="s1">&#39;.55f&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">,</span> <span class="s1">&#39;.55f&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3583,8 +3501,7 @@ stampare <code class="docutils literal notranslate"><span class="pre">4.1</span>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span> <span class="o">==</span> <span class="mf">4.1</span>    <span class="c1"># GUAI IN VISTA !</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span> <span class="o">==</span> <span class="mf">4.1</span>    <span class="c1"># GUAI IN VISTA !</span>
 </pre></div>
 </div>
 </div>
@@ -3602,8 +3519,7 @@ False
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">)</span>   <span class="c1"># MOLTO MEGLIO</span>
 </pre></div>
@@ -3623,8 +3539,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.000001</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="mf">7.9</span> <span class="o">-</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="n">abs_tol</span><span class="o">=</span><span class="mf">0.000001</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3651,9 +3566,9 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la b) e la c) danno <code class="docutils literal notranslate"><span class="pre">True</span></code>. La a) da <code class="docutils literal notranslate"><span class="pre">False</span></code>, perchè durante i calcoli in virgola mobile vengono compiuti errori di arrotondamento.</p>
-</div></div>
-<div class="section" id="Esercizio---quadratica">
-<h3>Esercizio - quadratica<a class="headerlink" href="#Esercizio---quadratica" title="Permalink to this headline">¶</a></h3>
+</div></section>
+<section id="Esercizio---quadratica">
+<h3>Esercizio - quadratica<a class="headerlink" href="#Esercizio---quadratica" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice che calcola gli zero dell’equazione <span class="math notranslate nohighlight">\(ax^2-b = 0\)</span></p>
 <ul class="simple">
 <li><p>Mostra i numeri con <strong>20 cifre</strong> di precisione</p></li>
@@ -3677,9 +3592,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">11.0</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">11.0</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">3.3</span>
 
 <span class="c1"># scrivi qui</span>
@@ -3713,27 +3626,22 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">11.0</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">11.0</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">3.3</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---alla-moda">
-<h3>Esercizio - alla moda<a class="headerlink" href="#Esercizio---alla-moda" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---alla-moda">
+<h3>Esercizio - alla moda<a class="headerlink" href="#Esercizio---alla-moda" title="Permalink to this headline"></a></h3>
 <p>Stai già pensando alle prossime vacanze, ma c’è un problema: dove vai, se un <em>selfie-stick</em> non ce l’hai? Non puoi partire con questo grave turbamento: per uniformarti al fenomeno di massa devi comprare lo stick più simile agli altri. Conduci quindi prima un’indagine statistica tra turisti malati di selfie-stick con l’obiettivo di scoprire i brand più frequenti, in altre parole, la <em>moda</em> delle frequenze. Ottieni questi risultati:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo SpA&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span> <span class="c1"># brand</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo SpA&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span> <span class="c1"># brand</span>
 <span class="n">f1</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="n">f3</span><span class="p">,</span><span class="n">f4</span><span class="p">,</span><span class="n">f5</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span>   <span class="c1"># frequenze (in percentuale)</span>
 </pre></div>
 </div>
@@ -3755,9 +3663,7 @@ TronistiPerCaso è il più frequente? True ( 30.0 % )
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo Inc&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span>    <span class="c1"># brand</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo Inc&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span>    <span class="c1"># brand</span>
 <span class="n">f1</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="n">f3</span><span class="p">,</span><span class="n">f4</span><span class="p">,</span><span class="n">f5</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span>         <span class="c1"># frequenze (in percentuale)  False True False False True</span>
 <span class="c1"># OCCHIO, sembrano uguali ma deve funzionare anche con queste ;-)</span>
 <span class="c1">#f1,f2,f3,f4,f5 = 0.25, 0.3, 0.1, 0.05, 0.1 + 0.2  #  False True False False True</span>
@@ -3788,30 +3694,25 @@ TronistiPerCaso è il più frequente? True ( 30.0 % )
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo Inc&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span>    <span class="c1"># brand</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">,</span><span class="n">b4</span><span class="p">,</span><span class="n">b5</span> <span class="o">=</span> <span class="s1">&#39;TroppiLike&#39;</span><span class="p">,</span> <span class="s1">&#39;ErMejo United&#39;</span><span class="p">,</span> <span class="s1">&#39;Perditempo Inc&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanità 3.0&#39;</span><span class="p">,</span><span class="s1">&#39;TronistiPerCaso&#39;</span>    <span class="c1"># brand</span>
 <span class="n">f1</span><span class="p">,</span><span class="n">f2</span><span class="p">,</span><span class="n">f3</span><span class="p">,</span><span class="n">f4</span><span class="p">,</span><span class="n">f5</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span>         <span class="c1"># frequenze (in percentuale)  False True False False True</span>
 <span class="c1"># OCCHIO, sembrano uguali ma deve funzionare anche con queste ;-)</span>
 <span class="c1">#f1,f2,f3,f4,f5 = 0.25, 0.3, 0.1, 0.05, 0.1 + 0.2  #  False True False False True</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Numeri-decimali">
-<h2>Numeri decimali<a class="headerlink" href="#Numeri-decimali" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Numeri-decimali">
+<h2>Numeri decimali<a class="headerlink" href="#Numeri-decimali" title="Permalink to this headline"></a></h2>
 <p>Per moltissime applicazioni i <code class="docutils literal notranslate"><span class="pre">float</span></code> sono sufficienti, avendo coscienza dei loro limiti di rappresentazione e uguaglianza. Se proprio hai bisogno di maggiore precisione e/o prevedibilità, Python offre un tipo numerico apposito chiamato <code class="docutils literal notranslate"><span class="pre">Decimal</span></code>, che permette una precisione arbitraria. Per usarlo, devi prima importarlo dalla libreria <code class="docutils literal notranslate"><span class="pre">decimal</span></code>:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
 </pre></div>
 </div>
 </div>
@@ -3820,8 +3721,7 @@ TronistiPerCaso è il più frequente? True ( 30.0 % )
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4.1&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4.1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3842,8 +3742,7 @@ Decimal(&#39;4.1&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="mf">4.1</span><span class="p">)</span>  <span class="c1"># così mi ritrovo coi problemi dei float ...</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="mf">4.1</span><span class="p">)</span>  <span class="c1"># così mi ritrovo coi problemi dei float ...</span>
 </pre></div>
 </div>
 </div>
@@ -3861,8 +3760,7 @@ Decimal(&#39;4.0999999999999996447286321199499070644378662109375&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7.9&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.8&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7.9&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.8&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3880,8 +3778,7 @@ Decimal(&#39;4.1&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4.1&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7.9&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.8&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;4.1&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;7.9&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.8&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3899,8 +3796,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3921,8 +3817,7 @@ Decimal(&#39;1.414213562373095048801688724&#39;)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span><span class="o">**</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span><span class="o">**</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3936,59 +3831,42 @@ Decimal(&#39;1.999999999999999999999999999&#39;)
 </pre></div></div>
 </div>
 <p>L’unica cosa che possiamo avere in più coi Decimal è un maggiore numero di cifre per rappresentarli, che volendo <a class="reference external" href="https://docs.python.org/3/library/decimal.html">possiamo aumentare a piacere</a> finchè non esauriamo la memoria del nostro pc. In questo libro non parleremo oltre dei Decimal perchè tipicamente servono solo per applicazioni specifiche, per esempio, se devi fare calcoli finanziari vorrai probabilmente usare cifre esatte !</p>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con le <a class="reference external" href="https://it.softpython.org/basics/basics4-chal.html">challenges</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="basics4-chal.html" class="btn btn-neutral float-right" title="Basi 4 - Challenges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="basics2-bools-sol.html" class="btn btn-neutral float-left" title="Basi 2 - booleani" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="basics4-chal.html" class="btn btn-neutral float-right" title="Basi 4 - Challenges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

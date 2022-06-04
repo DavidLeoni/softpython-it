@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Sequenze e comprehensions &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/sequences/sequences1-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Sequenze 2 Challenges -" href="sequences2-chal.html" />
     <link rel="prev" title="Cicli while 2 - Challenges" href="../while/while2-chal.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,14 +2643,14 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Sequenze-e-comprehensions">
-<h1>Sequenze e comprehensions<a class="headerlink" href="#Sequenze-e-comprehensions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/sequences.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Sequenze-e-comprehensions">
+<h1>Sequenze e comprehensions<a class="headerlink" href="#Sequenze-e-comprehensions" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/sequences.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/sequences">Naviga file online</a></p>
 <p>In Python è possibile scrivere codice elegante e compatto con le sequenze. Prima vedremo come scorrere le sequenze con gli iteratori e poi come costruirle con le comprehensions di liste, insiemi e dizionari.</p>
-<div class="section" id="Che-fare">
-<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline">¶</a></h3>
+<section id="Che-fare">
+<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>scompatta lo zip in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ul>
@@ -2720,18 +2675,17 @@ div.rendered_html tbody tr:hover {
 <li><p>Per eseguire il codice Python dentro una cella di Jupyter E creare una nuova cella subito dopo, premi <code class="docutils literal notranslate"><span class="pre">Alt+Invio</span></code></p></li>
 <li><p>Se per caso il Notebook sembra inchiodato, prova a selezionare <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span></code></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="Iterabili---liste">
-<h2>Iterabili - liste<a class="headerlink" href="#Iterabili---liste" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Iterabili---liste">
+<h2>Iterabili - liste<a class="headerlink" href="#Iterabili---liste" title="Permalink to this headline"></a></h2>
 <p>Guardando i cicli abbiamo spesso parlato di <em>iteratazione</em> su sequenze, ma nel dettaglio, cosa vuol dire esattamente che una sequenza è <em>iterabile</em> ? In concreto, vuol dire che è possibile chiamare la funzione <code class="docutils literal notranslate"><span class="pre">iter</span></code> sulla sequenza.</p>
 <p>Proviamo per esempio sulle familiari liste:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">iter</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">iter</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2754,8 +2708,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2763,8 +2716,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2781,8 +2733,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2799,8 +2750,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2817,8 +2767,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2843,17 +2792,16 @@ div.rendered_html tbody tr:hover {
 <span class="ne">StopIteration</span><span class="p">:</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="iterabili---range">
-<h2>iterabili - range<a class="headerlink" href="#iterabili---range" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iterabili---range">
+<h2>iterabili - range<a class="headerlink" href="#iterabili---range" title="Permalink to this headline"></a></h2>
 <p>Abbiamo provato ad iterare su una lista, che è una sequenza completamente materializzata in memoria su cui scorriamo con l’oggetto iteratore. Esistono anche sequenze particolari che <em>non</em> sono materializzate in memoria, come per esempio <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
 <p>Precedentemente abbiamo usato <code class="docutils literal notranslate"><span class="pre">range</span></code> <a class="reference external" href="https://it.softpython.org/control-flow/flow2-for-sol.html#Contare-con-range">nei cicli for</a> for ottenere una sequenza di numeri, ma esattamente, che cosa fa la funzione <code class="docutils literal notranslate"><span class="pre">range</span></code>? Proviamo a chiamarla da sola:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2877,8 +2825,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2903,8 +2850,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -2913,8 +2859,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">iteratore</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iteratore</span>
 </pre></div>
 </div>
 </div>
@@ -2932,8 +2877,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2950,8 +2894,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2968,8 +2911,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2986,8 +2928,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3012,9 +2953,9 @@ range(0, 4)
 <span class="ne">StopIteration</span><span class="p">:</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Materializzare-una-sequenza">
-<h2>Materializzare una sequenza<a class="headerlink" href="#Materializzare-una-sequenza" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Materializzare-una-sequenza">
+<h2>Materializzare una sequenza<a class="headerlink" href="#Materializzare-una-sequenza" title="Permalink to this headline"></a></h2>
 <p>Abbiamo detto che un oggetto <code class="docutils literal notranslate"><span class="pre">range</span></code> non materializza fisicamente in memoria tutti i numeri contemporaneamente. Solo ottenendo l’iteratore, li materializziamo uno per uno. E volessimo una lista con tutti i numeri ? Nel foglio <a class="reference external" href="https://it.softpython.org/lists/lists1-sol.html#Convertire-sequenze-in-liste">sulle liste</a> abbiamo visto che passando alla funzione <code class="docutils literal notranslate"><span class="pre">list</span></code> una sequenza, viene creata una nuova lista che contiene tutti gli elementi della sequenza. Abbiamo parlato genericamente di
 <em>sequenza</em>, ma il termine più corretto sarebbe stato <em>iterabile</em>.</p>
 <p>Se passiamo a <code class="docutils literal notranslate"><span class="pre">list</span></code> un qualunque oggetto <em>iterabile</em> allora verrà costruita la lista - come abbiamo visto <code class="docutils literal notranslate"><span class="pre">range</span></code> è iterabile quindi proviamo:</p>
@@ -3022,8 +2963,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -3045,9 +2985,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">sequenza</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3056,8 +2994,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">nuova1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuova1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3065,8 +3002,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">nuova1</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuova1</span>
 </pre></div>
 </div>
 </div>
@@ -3083,8 +3019,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">nuova2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuova2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3092,8 +3027,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">nuova2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuova2</span>
 </pre></div>
 </div>
 </div>
@@ -3111,8 +3045,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">sequenza</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3140,8 +3073,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># AFFINCHE&#39; PYTHON TUTOR FUNZIONI, RICORDATI DI ESEGUIRE QUESTA CELLA con Shift+Invio</span>
 <span class="c1">#   (basta eseguirla una volta sola, la trovi anche all&#39;inizio di ogni foglio)</span>
 
 <span class="kn">import</span> <span class="nn">jupman</span>
@@ -3152,8 +3084,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">iteratore</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">sequenza</span><span class="p">)</span>
 <span class="n">nuova1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 <span class="n">nuova2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
@@ -3229,8 +3160,8 @@ range(0, 4)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: occupa di più <code class="docutils literal notranslate"><span class="pre">b</span></code> (la lista viene materializzata)</p>
-</div><div class="section" id="Domande-range">
-<h3>Domande <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#Domande-range" title="Permalink to this headline">¶</a></h3>
+</div><section id="Domande-range">
+<h3>Domande <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#Domande-range" title="Permalink to this headline"></a></h3>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -3274,10 +3205,10 @@ range(0, 4)
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="reversed">
-<h2>reversed<a class="headerlink" href="#reversed" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="reversed">
+<h2>reversed<a class="headerlink" href="#reversed" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">reversed</span></code> è una <em>funzione</em> che prende come parametro una sequenza e PRODUCE un NUOVO <em>iteratore</em> che consente di scorrere la sequenza in ordine inverso.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: chiamando <code class="docutils literal notranslate"><span class="pre">reversed</span></code> si ottiene direttamente un <em>iteratore</em> !</p>
@@ -3288,8 +3219,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -3297,8 +3227,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3321,8 +3250,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3348,16 +3276,15 @@ range(0, 4)
 <span class="go">AttributeError: &#39;list&#39; object has no attribute &#39;reversed&#39;</span>
 </pre></div>
 </div>
-<div class="section" id="iterare-con-next">
-<h3>iterare con <code class="docutils literal notranslate"><span class="pre">next</span></code><a class="headerlink" href="#iterare-con-next" title="Permalink to this headline">¶</a></h3>
+<section id="iterare-con-next">
+<h3>iterare con <code class="docutils literal notranslate"><span class="pre">next</span></code><a class="headerlink" href="#iterare-con-next" title="Permalink to this headline"></a></h3>
 <p>Come facciamo ad ottenere in memoria una lista rovesciata? In altre parole, come facciamo ad azionare la macchinetta iteratore?</p>
 <p>Possiamo chiedere all’iteratore un elemento alla volta con la funzione <code class="docutils literal notranslate"><span class="pre">next</span></code>:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -3365,8 +3292,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3374,8 +3300,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3392,8 +3317,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3410,8 +3334,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3440,8 +3363,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
 <span class="n">iteratore</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">lb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">))</span>
@@ -3512,9 +3434,9 @@ range(0, 4)
 })()
 </script></div>
 </div>
-</div>
-<div class="section" id="Esercizio---sconcerto">
-<h3>Esercizio - sconcerto<a class="headerlink" href="#Esercizio---sconcerto" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---sconcerto">
+<h3>Esercizio - sconcerto<a class="headerlink" href="#Esercizio---sconcerto" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice che data una lista di caratteri <code class="docutils literal notranslate"><span class="pre">la</span></code>, mette in una lista <code class="docutils literal notranslate"><span class="pre">lb</span></code> tutti i caratteri in posizione dispari presi della lista <code class="docutils literal notranslate"><span class="pre">la</span></code> rovesciata</p>
 <ul class="simple">
 <li><p>usa <code class="docutils literal notranslate"><span class="pre">reversed</span></code> e <code class="docutils literal notranslate"><span class="pre">next</span></code></p></li>
@@ -3552,9 +3474,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 1 MANUALE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 1 MANUALE</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
@@ -3590,18 +3510,14 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 1 MANUALE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 1 MANUALE</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3610,9 +3526,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 2 CON IL WHILE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 2 CON IL WHILE</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
@@ -3630,8 +3544,7 @@ range(0, 4)
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3646,18 +3559,14 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 2 CON IL WHILE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 2 CON IL WHILE</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3666,9 +3575,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 3: for</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 3: for</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
@@ -3697,31 +3604,26 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># MODO 3: for</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># MODO 3: for</span>
 
 <span class="c1">#      8    7    6    5    4    3    2    1    0</span>
 <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Materializzare-un-iteratore">
-<h3>Materializzare un iteratore<a class="headerlink" href="#Materializzare-un-iteratore" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Materializzare-un-iteratore">
+<h3>Materializzare un iteratore<a class="headerlink" href="#Materializzare-un-iteratore" title="Permalink to this headline"></a></h3>
 <p>Per fortuna per ottenere subito una lista dall’iteratore c’è un modo meno laborioso.</p>
 <p>Abbiamo visto che quando vogliamo creare una nuova lista a partire da una sequenza, possiamo usare <code class="docutils literal notranslate"><span class="pre">list</span></code> come se fosse una funzione. Possiamo farlo anche in questo caso, interpretando l’iteratore come se fosse una sequenza:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
 <span class="nb">list</span><span class="p">(</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 </div>
@@ -3740,8 +3642,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span>
 </pre></div>
 </div>
 </div>
@@ -3759,8 +3660,7 @@ range(0, 4)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
 <span class="n">iteratore</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
 <span class="n">nuova</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la è&quot;</span><span class="p">,</span><span class="n">la</span><span class="p">)</span>
@@ -3835,10 +3735,10 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <span class="n">lb</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">la</span><span class="p">)))</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="sorted">
-<h2>sorted<a class="headerlink" href="#sorted" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="sorted">
+<h2>sorted<a class="headerlink" href="#sorted" title="Permalink to this headline"></a></h2>
 <p>La <strong>funzione</strong> <code class="docutils literal notranslate"><span class="pre">sorted</span></code> prende una sequenza come parametro ritorna una NUOVA lista ordinata</p>
 <div class="admonition warning">
 <p><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">sorted</span></code> ritorna una LISTA, non un iteratore !</p>
@@ -3847,8 +3747,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -3875,8 +3774,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <span class="go">AttributeError: &#39;list&#39; object has no attribute &#39;sorted&#39;</span>
 </pre></div>
 </div>
-<div class="section" id="Esercizio---reversort">
-<h3>Esercizio - reversort<a class="headerlink" href="#Esercizio---reversort" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---reversort">
+<h3>Esercizio - reversort<a class="headerlink" href="#Esercizio---reversort" title="Permalink to this headline"></a></h3>
 <p>✪ Data una una lista di nomi, produrre una lista ordinata in ordine inverso</p>
 <p>Ci sono almeno due modi per farlo in una sola linea di codice, trovarli entrambi</p>
 <ul class="simple">
@@ -3889,9 +3788,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="s1">&#39;Paolo&#39;</span><span class="p">,</span><span class="s1">&#39;Giovanni&#39;</span><span class="p">,</span><span class="s1">&#39;Alessia&#39;</span><span class="p">,</span><span class="s1">&#39;Greta&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
@@ -3913,25 +3810,20 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="zip">
-<h2>zip<a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="zip">
+<h2>zip<a class="headerlink" href="#zip" title="Permalink to this headline"></a></h2>
 <p>Supponiamo di avere due liste <code class="docutils literal notranslate"><span class="pre">quadri</span></code> e <code class="docutils literal notranslate"><span class="pre">anni</span></code>, con rispettivamente nomi di quadri famosi e le date in cui sono stati dipinti:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">quadri</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;La Gioconda&quot;</span><span class="p">,</span> <span class="s2">&quot;La Nascita di Venere&quot;</span><span class="p">,</span> <span class="s2">&quot;I Girasoli&quot;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quadri</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;La Gioconda&quot;</span><span class="p">,</span> <span class="s2">&quot;La Nascita di Venere&quot;</span><span class="p">,</span> <span class="s2">&quot;I Girasoli&quot;</span><span class="p">]</span>
 <span class="n">anni</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1503</span><span class="p">,</span> <span class="mi">1482</span><span class="p">,</span> <span class="mi">1888</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -3947,8 +3839,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">zip</span><span class="p">(</span><span class="n">quadri</span><span class="p">,</span> <span class="n">anni</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span><span class="p">(</span><span class="n">quadri</span><span class="p">,</span> <span class="n">anni</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3966,8 +3857,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">quadri</span><span class="p">,</span> <span class="n">anni</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iteratore</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">quadri</span><span class="p">,</span> <span class="n">anni</span><span class="p">)</span>
 <span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3985,8 +3875,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4003,8 +3892,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">iteratore</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4022,8 +3910,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">quadri</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;La Gioconda&quot;</span><span class="p">,</span> <span class="s2">&quot;La Nascita di Venere&quot;</span><span class="p">,</span> <span class="s2">&quot;I Girasoli&quot;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quadri</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;La Gioconda&quot;</span><span class="p">,</span> <span class="s2">&quot;La Nascita di Venere&quot;</span><span class="p">,</span> <span class="s2">&quot;I Girasoli&quot;</span><span class="p">]</span>
 <span class="n">anni</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1503</span><span class="p">,</span> <span class="mi">1482</span><span class="p">,</span> <span class="mi">1888</span><span class="p">]</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">quadri</span><span class="p">,</span><span class="n">anni</span><span class="p">))</span>
@@ -4044,8 +3931,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -4063,8 +3949,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">canzoni</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Imagine&#39;</span><span class="p">,</span> <span class="s1">&#39;Hey Jude&#39;</span><span class="p">,</span> <span class="s1">&#39;Satisfaction&#39;</span><span class="p">,</span> <span class="s1">&#39;Yesterday&#39;</span> <span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">canzoni</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Imagine&#39;</span><span class="p">,</span> <span class="s1">&#39;Hey Jude&#39;</span><span class="p">,</span> <span class="s1">&#39;Satisfaction&#39;</span><span class="p">,</span> <span class="s1">&#39;Yesterday&#39;</span> <span class="p">]</span>
 <span class="n">autori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;John Lennon&#39;</span><span class="p">,</span><span class="s1">&#39;The Beatles&#39;</span><span class="p">,</span> <span class="s1">&#39;The Rolling Stones&#39;</span><span class="p">,</span> <span class="s1">&#39;The Beatles&#39;</span><span class="p">]</span>
 <span class="n">anni</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1971</span><span class="p">,</span> <span class="mi">1968</span><span class="p">,</span> <span class="mi">1965</span><span class="p">,</span> <span class="mi">1965</span><span class="p">]</span>
 <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">canzoni</span><span class="p">,</span> <span class="n">autori</span><span class="p">,</span> <span class="n">anni</span><span class="p">))</span>
@@ -4083,8 +3968,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
  (&#39;Yesterday&#39;, &#39;The Beatles&#39;, 1965)]
 </pre></div></div>
 </div>
-<div class="section" id="Esercizio---scala">
-<h3>Esercizio - scala<a class="headerlink" href="#Esercizio---scala" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---scala">
+<h3>Esercizio - scala<a class="headerlink" href="#Esercizio---scala" title="Permalink to this headline"></a></h3>
 <p>Data una numero <code class="docutils literal notranslate"><span class="pre">n</span></code>, creare una lista di tuple che per ogni numero intero <span class="math notranslate nohighlight">\(x\)</span> tale che <span class="math notranslate nohighlight">\(0 \leq x \leq n\)</span> associa il numero <span class="math notranslate nohighlight">\(n - x\)</span></p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">n=5</span></code></p></li>
@@ -4096,9 +3981,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1"># scrivi qui</span>
 <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))))</span>
 </pre></div>
@@ -4117,26 +4000,21 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="List-comprehensions">
-<h2>List comprehensions<a class="headerlink" href="#List-comprehensions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="List-comprehensions">
+<h2>List comprehensions<a class="headerlink" href="#List-comprehensions" title="Permalink to this headline"></a></h2>
 <p>Le list comprehensions servono per generare una NUOVA lista eseguendo la stessa operazione su tutti gli elementi di una sequenza di partenza. Come sintassi imitano le liste, infatti iniziano e finiscono con le parentesi quadre <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code>, ma dentro contengono un <code class="docutils literal notranslate"><span class="pre">for</span></code> speciale per ciclare dentro un sequenza :</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 
 <span class="n">raddoppiati</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">]</span>
 
@@ -4158,8 +4036,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">numeri</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span>
 </pre></div>
 </div>
 </div>
@@ -4178,8 +4055,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 
 <span class="n">raddoppiati</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">]</span>
 
@@ -4201,8 +4077,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 
 <span class="n">aumentati</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">]</span>
 
@@ -4232,8 +4107,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 <span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la</span><span class="p">]</span>
 
 <span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
@@ -4291,8 +4165,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 })()
 </script></div>
 </div>
-<div class="section" id="list-comprehension-su-stringhe">
-<h3>list comprehension su stringhe<a class="headerlink" href="#list-comprehension-su-stringhe" title="Permalink to this headline">¶</a></h3>
+<section id="list-comprehension-su-stringhe">
+<h3>list comprehension su stringhe<a class="headerlink" href="#list-comprehension-su-stringhe" title="Permalink to this headline"></a></h3>
 <p><strong>DOMANDA</strong>: Questo codice cosa produrrà?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;domanda&#39;</span><span class="p">]</span>
 </pre></div>
@@ -4306,8 +4180,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cani&#39;</span><span class="p">,</span> <span class="s1">&#39;gatti&#39;</span><span class="p">,</span> <span class="s1">&#39;scoiattoli&#39;</span><span class="p">,</span> <span class="s1">&#39;alci&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cani&#39;</span><span class="p">,</span> <span class="s1">&#39;gatti&#39;</span><span class="p">,</span> <span class="s1">&#39;scoiattoli&#39;</span><span class="p">,</span> <span class="s1">&#39;alci&#39;</span><span class="p">]</span>
 
 <span class="n">nuova_lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">animale</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">animale</span> <span class="ow">in</span> <span class="n">animali</span><span class="p">]</span>
 </pre></div>
@@ -4317,8 +4190,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">nuova_lista</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuova_lista</span>
 </pre></div>
 </div>
 </div>
@@ -4336,15 +4208,12 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cani&#39;</span><span class="p">,</span> <span class="s1">&#39;gatti&#39;</span><span class="p">,</span> <span class="s1">&#39;scoiattoli&#39;</span><span class="p">,</span> <span class="s1">&#39;alci&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cani&#39;</span><span class="p">,</span> <span class="s1">&#39;gatti&#39;</span><span class="p">,</span> <span class="s1">&#39;scoiattoli&#39;</span><span class="p">,</span> <span class="s1">&#39;alci&#39;</span><span class="p">]</span>
 
 <span class="n">nuova_lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">animale</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">animale</span> <span class="ow">in</span> <span class="n">animali</span><span class="p">]</span>
 
 <span class="n">jupman</span><span class="o">.</span><span class="n">pytut</span><span class="p">()</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4405,9 +4274,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;caNI&#39;</span><span class="p">,</span> <span class="s1">&#39;gaTTi&#39;</span><span class="p">,</span> <span class="s1">&#39;SCOIATtoli&#39;</span><span class="p">,</span> <span class="s1">&#39;aLLci&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;caNI&#39;</span><span class="p">,</span> <span class="s1">&#39;gaTTi&#39;</span><span class="p">,</span> <span class="s1">&#39;SCOIATtoli&#39;</span><span class="p">,</span> <span class="s1">&#39;aLLci&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
 
@@ -4428,20 +4295,16 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;caNI&#39;</span><span class="p">,</span> <span class="s1">&#39;gaTTi&#39;</span><span class="p">,</span> <span class="s1">&#39;SCOIATtoli&#39;</span><span class="p">,</span> <span class="s1">&#39;aLLci&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">animali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;caNI&#39;</span><span class="p">,</span> <span class="s1">&#39;gaTTi&#39;</span><span class="p">,</span> <span class="s1">&#39;SCOIATtoli&#39;</span><span class="p">,</span> <span class="s1">&#39;aLLci&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Domande-list-comprehension">
-<h2>Domande list comprehension<a class="headerlink" href="#Domande-list-comprehension" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Domande-list-comprehension">
+<h2>Domande list comprehension<a class="headerlink" href="#Domande-list-comprehension" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
@@ -4505,11 +4368,11 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Esercizio---list-comprehension">
-<h2>Esercizio - list comprehension<a class="headerlink" href="#Esercizio---list-comprehension" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Esercizio---Bubble-bubble">
-<h3>Esercizio - Bubble bubble<a class="headerlink" href="#Esercizio---Bubble-bubble" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---list-comprehension">
+<h2>Esercizio - list comprehension<a class="headerlink" href="#Esercizio---list-comprehension" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---Bubble-bubble">
+<h3>Esercizio - Bubble bubble<a class="headerlink" href="#Esercizio---Bubble-bubble" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di stringhe, produrre una sequenza con tutte le stringhe replicate 4 volte</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['gomma',</span> <span class="pre">'ciunga',</span> <span class="pre">'cicca']</span></code></p></li>
@@ -4521,9 +4384,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
 <span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="o">*</span> <span class="mi">4</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bubble_bubble</span><span class="p">])</span>
@@ -4542,19 +4403,15 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">bubble_bubble</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gomma&#39;</span><span class="p">,</span> <span class="s1">&#39;ciunga&#39;</span><span class="p">,</span> <span class="s1">&#39;cicca&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---radice">
-<h3>Esercizio - radice<a class="headerlink" href="#Esercizio---radice" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---radice">
+<h3>Esercizio - radice<a class="headerlink" href="#Esercizio---radice" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di numeri, produrre una lista con la radice quadrata dei numeri di input</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">[16,25,81]</span></code></p></li>
@@ -4566,8 +4423,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">81</span><span class="p">]]</span>
@@ -4587,13 +4443,10 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4605,9 +4458,9 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 [4.0, 5.0, 9.0]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---QuandoFuoriPiove">
-<h3>Esercizio - QuandoFuoriPiove<a class="headerlink" href="#Esercizio---QuandoFuoriPiove" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---QuandoFuoriPiove">
+<h3>Esercizio - QuandoFuoriPiove<a class="headerlink" href="#Esercizio---QuandoFuoriPiove" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di stringhe, produrre una lista con i primi caratteri di ogni stringa</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['Quando',</span> <span class="pre">'Fuori',</span> <span class="pre">'Piove',</span> <span class="pre">'Programmiamo']</span></code></p></li>
@@ -4619,8 +4472,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Quando&#39;</span><span class="p">,</span> <span class="s1">&#39;Fuori&#39;</span><span class="p">,</span> <span class="s1">&#39;Piove&#39;</span><span class="p">,</span> <span class="s1">&#39;Programmiamo&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -4638,11 +4490,8 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4654,9 +4503,9 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 [&#39;Q&#39;, &#39;F&#39;, &#39;P&#39;, &#39;P&#39;]
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---porta-pazienza">
-<h3>Esercizio - porta pazienza<a class="headerlink" href="#Esercizio---porta-pazienza" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---porta-pazienza">
+<h3>Esercizio - porta pazienza<a class="headerlink" href="#Esercizio---porta-pazienza" title="Permalink to this headline"></a></h3>
 <p>✪ Da una lista di stringhe, produrre una lista con le lunghezze di tutte le liste</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['non',</span> <span class="pre">'ti',</span> <span class="pre">'preoccupare',</span> <span class="pre">'e',</span> <span class="pre">'porta',</span> <span class="pre">'pazienza']</span></code></p></li>
@@ -4668,9 +4517,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;non&#39;</span><span class="p">,</span> <span class="s1">&#39;ti&#39;</span><span class="p">,</span> <span class="s1">&#39;preoccupare&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;porta&#39;</span><span class="p">,</span> <span class="s1">&#39;pazienza&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -4688,17 +4535,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---maggiore-3">
-<h3>Esercizio - maggiore 3<a class="headerlink" href="#Esercizio---maggiore-3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---maggiore-3">
+<h3>Esercizio - maggiore 3<a class="headerlink" href="#Esercizio---maggiore-3" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di numeri, produrre una lista con <code class="docutils literal notranslate"><span class="pre">True</span></code> se il corrispondente elemento è maggiore di <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">[4,1,0,5,0,9,1]</span></code></p></li>
@@ -4710,9 +4553,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -4730,17 +4571,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---pari">
-<h3>Esercizio - pari<a class="headerlink" href="#Esercizio---pari" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---pari">
+<h3>Esercizio - pari<a class="headerlink" href="#Esercizio---pari" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di numeri, produrre una lista con <code class="docutils literal notranslate"><span class="pre">True</span></code> se il corrispondente elemento è pari</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">[3,2,4,1,5,3,2,9]</span></code></p></li>
@@ -4752,9 +4589,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -4772,17 +4607,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---capi">
-<h3>Esercizio - capi<a class="headerlink" href="#Esercizio---capi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---capi">
+<h3>Esercizio - capi<a class="headerlink" href="#Esercizio---capi" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di stringhe di almeno due caratteri, produrre una lista di stringhe con i primi e ultimi caratteri</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['parto',</span> <span class="pre">'per',</span> <span class="pre">'il',</span> <span class="pre">'fronte']</span></code></p></li>
@@ -4794,9 +4625,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;parto&#39;</span><span class="p">,</span> <span class="s1">&#39;per&#39;</span><span class="p">,</span> <span class="s1">&#39;il&#39;</span><span class="p">,</span> <span class="s1">&#39;fronte&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -4814,17 +4643,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---trattini">
-<h3>Esercizio - trattini<a class="headerlink" href="#Esercizio---trattini" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---trattini">
+<h3>Esercizio - trattini<a class="headerlink" href="#Esercizio---trattini" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di liste di caratteri, produrre una lista di stringhe con caratteri separati da trattini</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">[['a','b'],['c','d','e'],</span> <span class="pre">['f','g']]</span></code></p></li>
@@ -4836,9 +4661,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]]]</span>
 </pre></div>
 </div>
@@ -4856,17 +4679,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---lollosa">
-<h3>Esercizio - lollosa<a class="headerlink" href="#Esercizio---lollosa" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---lollosa">
+<h3>Esercizio - lollosa<a class="headerlink" href="#Esercizio---lollosa" title="Permalink to this headline"></a></h3>
 <p>✪ Data una stringa <code class="docutils literal notranslate"><span class="pre">s</span></code>, produrre una lista di tuple avente per ogni carattere il numero di occorrenze del carattere nella stringa.</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">'lollosa'</span></code></p></li>
@@ -4878,9 +4697,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;lollosa&#39;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;lollosa&#39;</span>
 <span class="c1"># scrivi qui</span>
 <span class="p">[(</span><span class="n">car</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">car</span><span class="p">))</span> <span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
 </pre></div>
@@ -4899,18 +4716,14 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;lollosa&#39;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;lollosa&#39;</span>
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---cane-gatto">
-<h3>Esercizio - cane gatto<a class="headerlink" href="#Esercizio---cane-gatto" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---cane-gatto">
+<h3>Esercizio - cane gatto<a class="headerlink" href="#Esercizio---cane-gatto" title="Permalink to this headline"></a></h3>
 <p>✪ Data una lista di stringhe, produrre una lista con le stringhe senza caratteri iniziale e finale</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['bue','gatto','cane',</span> <span class="pre">'mucca'</span> <span class="pre">]</span></code></p></li>
@@ -4922,9 +4735,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bue&#39;</span><span class="p">,</span><span class="s1">&#39;gatto&#39;</span><span class="p">,</span><span class="s1">&#39;cane&#39;</span><span class="p">,</span> <span class="s1">&#39;mucca&#39;</span> <span class="p">]]</span>
 </pre></div>
 </div>
@@ -4942,17 +4753,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---puffi">
-<h3>Esercizio - puffi<a class="headerlink" href="#Esercizio---puffi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---puffi">
+<h3>Esercizio - puffi<a class="headerlink" href="#Esercizio---puffi" title="Permalink to this headline"></a></h3>
 <p>✪ Dati dei nomi produrre una lista ordinata con i nomi in ordine alfabetico tutti in maiuscolo</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['Quattrocchi',</span> <span class="pre">'Forzuto',</span> <span class="pre">'Puffetta',</span> <span class="pre">'Tontolone']</span></code></p></li>
@@ -4964,9 +4771,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;Quattrocchi&#39;</span><span class="p">,</span> <span class="s1">&#39;Forzuto&#39;</span><span class="p">,</span> <span class="s1">&#39;Puffetta&#39;</span><span class="p">,</span> <span class="s1">&#39;Tontolone&#39;</span><span class="p">])]</span>
 </pre></div>
 </div>
@@ -4984,17 +4789,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---metalli-preziosi">
-<h3>Esercizio - metalli preziosi<a class="headerlink" href="#Esercizio---metalli-preziosi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---metalli-preziosi">
+<h3>Esercizio - metalli preziosi<a class="headerlink" href="#Esercizio---metalli-preziosi" title="Permalink to this headline"></a></h3>
 <p>✪ Date due liste <code class="docutils literal notranslate"><span class="pre">valori</span></code> e <code class="docutils literal notranslate"><span class="pre">metalli</span></code> produrre una lista contenente tutte le coppie valore metallo come tuple</p>
 <p>INPUT:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
@@ -5008,9 +4809,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
 <span class="n">metalli</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;argento&#39;</span><span class="p">,</span><span class="s1">&#39;oro&#39;</span><span class="p">,</span><span class="s1">&#39;platino&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
@@ -5031,28 +4830,23 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">]</span>
 <span class="n">metalli</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;argento&#39;</span><span class="p">,</span><span class="s1">&#39;oro&#39;</span><span class="p">,</span><span class="s1">&#39;platino&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="List-comprehension-filtrate">
-<h2>List comprehension filtrate<a class="headerlink" href="#List-comprehension-filtrate" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="List-comprehension-filtrate">
+<h2>List comprehension filtrate<a class="headerlink" href="#List-comprehension-filtrate" title="Permalink to this headline"></a></h2>
 <p>Durante la costruzione di una list comprehension è possibile filtrare gli elementi presi dalla sequenza che si sta esaminando utilizzando un <code class="docutils literal notranslate"><span class="pre">if</span></code>. Per esempio, l’espressione seguente considera dalla sequenza di numeri solo i numeri maggiori di cinque:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -5070,8 +4864,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;Il Mondo Gira&#39;</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">isupper</span><span class="p">()]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;Il Mondo Gira&#39;</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">isupper</span><span class="p">()]</span>
 </pre></div>
 </div>
 </div>
@@ -5096,9 +4889,9 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Domande-list-comprehension-filtrate">
-<h2>Domande list comprehension filtrate<a class="headerlink" href="#Domande-list-comprehension-filtrate" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Domande-list-comprehension-filtrate">
+<h2>Domande list comprehension filtrate<a class="headerlink" href="#Domande-list-comprehension-filtrate" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="kc">False</span><span class="p">]</span>
@@ -5139,11 +4932,11 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Esercizi---list-comprehension-filtrate">
-<h2>Esercizi - list comprehension filtrate<a class="headerlink" href="#Esercizi---list-comprehension-filtrate" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Esercizio---savana">
-<h3>Esercizio - savana<a class="headerlink" href="#Esercizio---savana" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizi---list-comprehension-filtrate">
+<h2>Esercizi - list comprehension filtrate<a class="headerlink" href="#Esercizi---list-comprehension-filtrate" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---savana">
+<h3>Esercizio - savana<a class="headerlink" href="#Esercizio---savana" title="Permalink to this headline"></a></h3>
 <p>Data una lista di stringhe, produrre una lista con solo le stringhe di lunghezza maggiore di 6</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['zebra',</span> <span class="pre">'leopardo',</span> <span class="pre">'giraffa',</span> <span class="pre">'gnu',</span> <span class="pre">'rinoceronte',</span> <span class="pre">'leone']</span></code></p></li>
@@ -5155,9 +4948,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;zebra&#39;</span><span class="p">,</span> <span class="s1">&#39;leopardo&#39;</span><span class="p">,</span> <span class="s1">&#39;giraffa&#39;</span><span class="p">,</span> <span class="s1">&#39;gnu&#39;</span><span class="p">,</span> <span class="s1">&#39;rinoceronte&#39;</span><span class="p">,</span> <span class="s1">&#39;leone&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -5175,17 +4966,13 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---barZa">
-<h3>Esercizio - barZa<a class="headerlink" href="#Esercizio---barZa" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---barZa">
+<h3>Esercizio - barZa<a class="headerlink" href="#Esercizio---barZa" title="Permalink to this headline"></a></h3>
 <p>Data una lista di stringhe, produrre una lista con solo le stringhe che contengono almeno una <code class="docutils literal notranslate"><span class="pre">'z'</span></code>. Le stringhe selezionate vanno trasformate in modo da mettere la <code class="docutils literal notranslate"><span class="pre">Z</span></code> in maiuscolo.</p>
 <ul class="simple">
 <li><p>INPUT: <code class="docutils literal notranslate"><span class="pre">['barza',</span> <span class="pre">'palco','porzione',</span> <span class="pre">'corsa',</span> <span class="pre">'maschera',</span> <span class="pre">'zona']</span></code></p></li>
@@ -5197,9 +4984,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;barza&#39;</span><span class="p">,</span> <span class="s1">&#39;palco&#39;</span><span class="p">,</span><span class="s1">&#39;porzione&#39;</span><span class="p">,</span> <span class="s1">&#39;corsa&#39;</span><span class="p">,</span> <span class="s1">&#39;maschera&#39;</span><span class="p">,</span> <span class="s1">&#39;zona&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;z&#39;</span> <span class="ow">in</span>  <span class="n">x</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -5217,18 +5002,14 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Esercizio---Data-science">
-<h2>Esercizio - Data science<a class="headerlink" href="#Esercizio---Data-science" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Esercizio---Data-science">
+<h2>Esercizio - Data science<a class="headerlink" href="#Esercizio---Data-science" title="Permalink to this headline"></a></h2>
 <p>Produrre una stringa con le parole della stringa in ingresso alternate maiuscolo / minuscolo</p>
 <ul class="simple">
 <li><p>INPUT:</p></li>
@@ -5237,8 +5018,7 @@ nuova è [&#39;a&#39;, &#39;v&#39;, &#39;o&#39;, &#39;r&#39;, &#39;p&#39;]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
 <span class="s2">basati sul metodo scientifico e di tecniche multidisciplinari</span>
 <span class="s2">volto a interpretare ed estrarre conoscenza dai dati attraverso</span>
 <span class="s2">la relativa fase di analisi&quot;&quot;&quot;</span>
@@ -5263,9 +5043,7 @@ la RELATIVA fase DI analisi
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
 <span class="s2">basati sul metodo scientifico e di tecniche multidisciplinari</span>
 <span class="s2">volto a interpretare ed estrarre conoscenza dai dati attraverso</span>
 <span class="s2">la relativa fase di analisi&quot;&quot;&quot;</span>
@@ -5292,72 +5070,51 @@ LA data SCIENCE è L&#39;INSIEME di PRINCIPI metodologici BASATI sul METODO scie
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;La data science è l&#39;insieme di principi metodologici</span>
 <span class="s2">basati sul metodo scientifico e di tecniche multidisciplinari</span>
 <span class="s2">volto a interpretare ed estrarre conoscenza dai dati attraverso</span>
 <span class="s2">la relativa fase di analisi&quot;&quot;&quot;</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con le <a class="reference external" href="https://it.softpython.org/sequences/sequences2-chal.html">challenges</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="sequences2-chal.html" class="btn btn-neutral float-right" title="Sequenze 2 Challenges -" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../while/while2-chal.html" class="btn btn-neutral float-left" title="Cicli while 2 - Challenges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sequences2-chal.html" class="btn btn-neutral float-right" title="Sequenze 2 Challenges -" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

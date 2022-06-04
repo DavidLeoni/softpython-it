@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Matrici Numpy 2 - Esercizi &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/matrices-numpy/matrices-numpy2-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Matrici numpy 3 - Challenge" href="matrices-numpy3-chal.html" />
     <link rel="prev" title="Matrici - Numpy 1" href="matrices-numpy1-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,19 +2643,19 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Matrici-Numpy-2---Esercizi">
-<h1>Matrici Numpy 2 - Esercizi<a class="headerlink" href="#Matrici-Numpy-2---Esercizi" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/matrices-numpy.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Matrici-Numpy-2---Esercizi">
+<h1>Matrici Numpy 2 - Esercizi<a class="headerlink" href="#Matrici-Numpy-2---Esercizi" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/matrices-numpy.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/matrices-numpy">Naviga file online</a></p>
 <p>Vediamo ora alcuni esercizi. I primi avranno soluzioni forniti in due versioni: la prime versioni solitamente usano cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> ed sono quindi lente, la seconde denominate ‘pro’ evitano i cicli utilizzando tutti gli strumenti offerti da numpy. In particolare in molti casi puoi ottenere programmi molto efficienti e compatti usando in modo furbo le slice.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong></p>
 <p>Gli esercizi che seguono contengono dei test con gli <em>assert</em>. Per capire come svolgerli, leggi prima <a class="reference external" href="https://it.softpython.org/functions/fun2-errors-and-testing-sol.html">Gestione errori e testing</a></p>
 </div>
-</div>
-<div class="section" id="Esercizio---quadrofor">
-<h2>Esercizio - quadrofor<a class="headerlink" href="#Esercizio---quadrofor" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---quadrofor">
+<h2>Esercizio - quadrofor<a class="headerlink" href="#Esercizio---quadrofor" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Restituisce una NUOVA matrice numpy di n righe e n colonne, in cui tutti i valori sono a zero eccetto quelli sui bordi, che devono essere uguali a k</p>
 <p>Per esempio, <code class="docutils literal notranslate"><span class="pre">quadro(4,</span> <span class="pre">7.0)</span></code> deve dare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">7.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">],</span>
@@ -2720,9 +2675,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadrofor</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
 
@@ -2759,9 +2712,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadrofor</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -2784,9 +2735,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---quadroslices">
-<h2>Esercizio - quadroslices<a class="headerlink" href="#Esercizio---quadroslices" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---quadroslices">
+<h2>Esercizio - quadroslices<a class="headerlink" href="#Esercizio---quadroslices" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Risolvi l’esercizio precedente, questa volta <strong>usando 4 slice</strong></p>
 <ul class="simple">
 <li><p><strong>NON</strong> usare cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
@@ -2797,9 +2748,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadroslices</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
 
@@ -2836,9 +2785,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadroslices</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -2862,9 +2809,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---quadroriemp">
-<h2>Esercizio - quadroriemp<a class="headerlink" href="#Esercizio---quadroriemp" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---quadroriemp">
+<h2>Esercizio - quadroriemp<a class="headerlink" href="#Esercizio---quadroriemp" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Risolvi l’esercizio precedente, questa volta usando <code class="docutils literal notranslate"><span class="pre">np.full</span></code> e <strong>una sola slice</strong></p>
 <ul class="simple">
 <li><p><strong>NON</strong> usare cicli for o while</p></li>
@@ -2875,9 +2822,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadroriemp</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
 
@@ -2911,9 +2856,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadroriemp</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -2937,9 +2880,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---media_righe">
-<h2>Esercizio - media_righe<a class="headerlink" href="#Esercizio---media_righe" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---media_righe">
+<h2>Esercizio - media_righe<a class="headerlink" href="#Esercizio---media_righe" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Prende una matrice Numpy n x m e RITORNA una NUOVA matrice numpy di una sola colonna in cui i valori sono la media dei valori nelle corrispondenti righe della matrice in input</p>
 <p>Esempio:</p>
 <p>Input: matrice 5x4</p>
@@ -2976,8 +2919,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">media_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -3027,8 +2969,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">media_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -3065,8 +3006,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE media_righe_pro</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE media_righe_pro</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
@@ -3098,25 +3038,21 @@ div.rendered_html tbody tr:hover {
                 <span class="p">[(</span><span class="mi">7</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">9</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">]</span> <span class="p">])</span>
 
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">media_righe_pro</span><span class="p">(</span><span class="n">m3</span><span class="p">),</span> <span class="n">r3</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE media_righe_pro</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE media_righe_pro</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---matrot">
-<h2>Esercizio - matrot<a class="headerlink" href="#Esercizio---matrot" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---matrot">
+<h2>Esercizio - matrot<a class="headerlink" href="#Esercizio---matrot" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ RITORNA una NUOVA matrice numpy che ha i numeri della matrice numpy di input ruotati di una colonna.</p>
 <p>Per ruotati intendiamo che:</p>
 <ul class="simple">
@@ -3148,8 +3084,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">matrot</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
 
@@ -3199,8 +3134,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">matrot</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -3242,8 +3176,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
 
 <span class="k">def</span> <span class="nf">matrot_pro</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">matrice</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -3283,23 +3216,20 @@ div.rendered_html tbody tr:hover {
                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">matrot_pro</span><span class="p">(</span><span class="n">m5</span><span class="p">),</span> <span class="n">r5</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE &#39;PRO&#39;</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---disp">
-<h2>Esercizio - disp<a class="headerlink" href="#Esercizio---disp" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---disp">
+<h2>Esercizio - disp<a class="headerlink" href="#Esercizio---disp" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Prende una matrice Numpy <code class="docutils literal notranslate"><span class="pre">mat</span></code> di dimensioni<code class="docutils literal notranslate"><span class="pre">nrighe</span></code> x <code class="docutils literal notranslate"><span class="pre">ncol</span></code> contenente numeri interi in input e RITORNA una NUOVA matrice numpy di dimensioni <code class="docutils literal notranslate"><span class="pre">nrighe</span></code> x <code class="docutils literal notranslate"><span class="pre">ncol</span></code> che è come quella originale, ma nelle celle che contenevano numeri pari adesso ci saranno numero dispari ottenuti sommando <code class="docutils literal notranslate"><span class="pre">1</span></code> al numero pari esistente.</p>
 <p>Esempio:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">disp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span>
@@ -3326,8 +3256,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">disp</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -3359,17 +3288,14 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
                  <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">disp</span><span class="p">(</span><span class="n">m2</span><span class="p">),</span> <span class="n">r2</span><span class="p">)</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">disp</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -3387,9 +3313,7 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
                  <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">disp</span><span class="p">(</span><span class="n">m2</span><span class="p">),</span> <span class="n">r2</span><span class="p">)</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3398,8 +3322,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
 
 
 <span class="k">def</span> <span class="nf">disp_pro1</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -3419,19 +3342,15 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
                  <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">disp_pro1</span><span class="p">(</span><span class="n">m2</span><span class="p">),</span> <span class="n">r2</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE 1 con np.where</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3440,8 +3359,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
 
 
 <span class="k">def</span> <span class="nf">disp_pro2</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -3462,23 +3380,20 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
                  <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">disp_pro2</span><span class="p">(</span><span class="n">m2</span><span class="p">),</span> <span class="n">r2</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE veloce 2 senza np.where</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---radalt">
-<h2>Esercizio - radalt<a class="headerlink" href="#Esercizio---radalt" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---radalt">
+<h2>Esercizio - radalt<a class="headerlink" href="#Esercizio---radalt" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Prende una matrice numpy <code class="docutils literal notranslate"><span class="pre">mat</span></code> di dimensioni<code class="docutils literal notranslate"><span class="pre">nrighe</span></code> x <code class="docutils literal notranslate"><span class="pre">ncol</span></code> contenente numeri interi in input e RITORNA una NUOVA matrice numpy di dimensioni <code class="docutils literal notranslate"><span class="pre">nrighe</span></code> x <code class="docutils literal notranslate"><span class="pre">ncol</span></code>, avente alle righe di <strong>indice</strong> pari i numeri della matrice originale moltiplicati per due, e alle righe di <strong>indice</strong> dispari gli stessi numeri della matrice originale</p>
 <p>Esempio:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span>                      <span class="c1">#  indice</span>
@@ -3508,8 +3423,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">radalt</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -3560,8 +3474,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">radalt</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -3600,8 +3513,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">radalt_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -3630,23 +3542,20 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
                  <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="p">])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">radalt_pro</span><span class="p">(</span><span class="n">m3</span><span class="p">),</span> <span class="n">r3</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---scacchiera">
-<h2>Esercizio - scacchiera<a class="headerlink" href="#Esercizio---scacchiera" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---scacchiera">
+<h2>Esercizio - scacchiera<a class="headerlink" href="#Esercizio---scacchiera" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ RITORNA una NUOVA matrice numpy di <code class="docutils literal notranslate"><span class="pre">n</span></code> righe e <code class="docutils literal notranslate"><span class="pre">n</span></code> colonne, in cui le celle si alternano tra zero e uno.</p>
 <p>Esempio: <code class="docutils literal notranslate"><span class="pre">scacchiera(4)</span></code> deve dare:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
@@ -3666,8 +3575,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">scacchiera</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scacchiera</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 
 
     <span class="c1">#SOLUZIONE LENTA</span>
@@ -3705,8 +3613,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">scacchiera</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scacchiera</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">r1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
@@ -3731,8 +3638,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 <span class="k">def</span> <span class="nf">scacchiera_pro</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -3753,24 +3659,20 @@ div.rendered_html tbody tr:hover {
 <span class="n">r3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
                  <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span> <span class="p">])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">scacchiera_pro</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">r3</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---somma_alterna">
-<h2>Esercizio - somma_alterna<a class="headerlink" href="#Esercizio---somma_alterna" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---somma_alterna">
+<h2>Esercizio - somma_alterna<a class="headerlink" href="#Esercizio---somma_alterna" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ MODIFICA la matrice numpy in input (n x n), sommando a tutte le righe dispari le righe pari. Per esempio:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">],</span>
      <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">],</span>
@@ -3797,8 +3699,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">somma_alterna</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somma_alterna</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
 
     <span class="c1">#SOLUZIONE LENTA</span>
@@ -3841,8 +3742,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">somma_alterna</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somma_alterna</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 
@@ -3879,8 +3779,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 <span class="k">def</span> <span class="nf">somma_alterna_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -3911,24 +3810,20 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span> <span class="p">])</span>
 <span class="n">somma_alterna_pro</span><span class="p">(</span><span class="n">m3</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="n">r3</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---media_meta">
-<h2>Esercizio - media_meta<a class="headerlink" href="#Esercizio---media_meta" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---media_meta">
+<h2>Esercizio - media_meta<a class="headerlink" href="#Esercizio---media_meta" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Prende in input una matrice numpy con un numero pari di colonne, e RITORNA in output una matrice numpy 1x2: il primo elemento sarà la media della metà sinistra della matrice, il secondo elemento sarà la media della metà destra.</p>
 <p>Ingredienti:</p>
 <ul class="simple">
@@ -3940,8 +3835,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">media_meta</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">media_meta</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
 
     <span class="c1">#SOLUZIONE LENTA</span>
@@ -3994,8 +3888,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">media_meta</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">media_meta</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span> <span class="p">])</span>
@@ -4029,8 +3922,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">media_meta_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">righe</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">shape</span>
@@ -4068,23 +3960,20 @@ div.rendered_html tbody tr:hover {
 <span class="n">r3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">6</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">6</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">6</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">9</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span>  <span class="p">])</span>
 
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span> <span class="n">media_meta_pro</span><span class="p">(</span><span class="n">m3</span><span class="p">),</span> <span class="n">r3</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---matxarr">
-<h2>Esercizio - matxarr<a class="headerlink" href="#Esercizio---matxarr" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---matxarr">
+<h2>Esercizio - matxarr<a class="headerlink" href="#Esercizio---matxarr" title="Permalink to this headline"></a></h2>
 <p>✪✪ Prende una matrice numpy <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">m</span></code> e un <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> di <code class="docutils literal notranslate"><span class="pre">m</span></code> elementi, e RITORNA una NUOVA matrice numpy in cui i valori di ogni colonna della matrice di input sono moltiplicati per il corrispondente valore dell’array di <code class="docutils literal notranslate"><span class="pre">n</span></code> elementi.</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -4092,8 +3981,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">matxarr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">matxarr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
 
 
     <span class="c1">#SOLUZIONE LENTA</span>
@@ -4124,8 +4012,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">matxarr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">matxarr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
 
 <span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
@@ -4147,8 +4034,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">matxarr_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">*</span> <span class="n">mat</span>
@@ -4163,23 +4049,20 @@ div.rendered_html tbody tr:hover {
        <span class="p">[</span><span class="mi">4</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="mi">6</span><span class="p">],</span>
        <span class="p">[</span><span class="mi">4</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">matxarr_pro</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="n">a1</span><span class="p">),</span> <span class="n">r1</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---colgap">
-<h2>Esercizio - colgap<a class="headerlink" href="#Esercizio---colgap" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---colgap">
+<h2>Esercizio - colgap<a class="headerlink" href="#Esercizio---colgap" title="Permalink to this headline"></a></h2>
 <p>✪✪ Data una matrice numpy di <span class="math notranslate nohighlight">\(n\)</span> righe ed <span class="math notranslate nohighlight">\(m\)</span> colonne, RITORNA un vettore numpy di <span class="math notranslate nohighlight">\(m\)</span> elementi avente la differenza tra i massimi e i minimi di ciascuna colonna.</p>
 <p>Esempio:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
@@ -4203,8 +4086,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">colgap</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -4255,8 +4137,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">colgap</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -4298,8 +4179,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">colgap_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="n">mx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -4333,23 +4213,20 @@ div.rendered_html tbody tr:hover {
                <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
                <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">colgap_pro</span><span class="p">(</span><span class="n">m7</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">]))</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---sostmax">
-<h2>Esercizio - sostmax<a class="headerlink" href="#Esercizio---sostmax" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---sostmax">
+<h2>Esercizio - sostmax<a class="headerlink" href="#Esercizio---sostmax" title="Permalink to this headline"></a></h2>
 <p>✪✪ Data una matrice numpy <code class="docutils literal notranslate"><span class="pre">mat</span></code> <span class="math notranslate nohighlight">\(n\)</span> x <span class="math notranslate nohighlight">\(m\)</span>, MODIFICA la matrice sostituendo ogni cella con il valore massimo trovato nella colonna corrispondente.</p>
 <p>Esempio:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
@@ -4372,9 +4249,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">sostmax</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -4446,9 +4321,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">sostmax</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -4512,8 +4385,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 
 <span class="k">def</span> <span class="nf">sostmax_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -4575,14 +4447,13 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---quadranti">
-<h2>Esercizio - quadranti<a class="headerlink" href="#Esercizio---quadranti" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---quadranti">
+<h2>Esercizio - quadranti<a class="headerlink" href="#Esercizio---quadranti" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice <code class="docutils literal notranslate"><span class="pre">2n</span> <span class="pre">*</span> <span class="pre">2n</span></code>, dividere la matrice in 4 parti quadrate uguali (vedi esempio per capire meglio) e RESTITUIRE una NUOVA matrice <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code> contente la media di ogni quadrante</p>
 <p>Si assume che la matrice sia sempre di dimensioni pari</p>
 <p><strong>SUGGERIMENTO</strong>: per dividere per 2 e ottenere un numero intero, usare l’operatore <code class="docutils literal notranslate"><span class="pre">//</span></code></p>
@@ -4613,8 +4484,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadranti</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
 
@@ -4673,8 +4543,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">quadranti</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -4703,8 +4572,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="k">def</span> <span class="nf">quadranti_pro</span><span class="p">(</span><span class="n">matrice</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">matrice</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -4738,24 +4606,20 @@ div.rendered_html tbody tr:hover {
                  <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span> <span class="p">]</span> <span class="p">)</span>
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">quadranti_pro</span><span class="p">(</span><span class="n">m2</span><span class="p">),</span><span class="n">r2</span><span class="p">)</span>
 <span class="c1"># FINE TEST</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---scendisali">
-<h2>Esercizio - scendisali<a class="headerlink" href="#Esercizio---scendisali" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---scendisali">
+<h2>Esercizio - scendisali<a class="headerlink" href="#Esercizio---scendisali" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Scrivi una funzione che date le dimensioni di <code class="docutils literal notranslate"><span class="pre">n</span></code> righe e <code class="docutils literal notranslate"><span class="pre">m</span></code> colonne RITORNA una NUOVA matrice numpy <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">m</span></code> con sequenze che scendono e salgono a righe alterne come negli esempi</p>
 <ul class="simple">
 <li><p>se <code class="docutils literal notranslate"><span class="pre">m</span></code> è dispari, lancia <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
@@ -4775,8 +4639,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">scendisali</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
 
@@ -4821,8 +4684,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">scendisali</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -4855,8 +4717,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
 
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -4894,23 +4755,20 @@ div.rendered_html tbody tr:hover {
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Avrei dovuto fallire prima!&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="k">pass</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---gradini">
-<h2>Esercizio - gradini<a class="headerlink" href="#Esercizio---gradini" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---gradini">
+<h2>Esercizio - gradini<a class="headerlink" href="#Esercizio---gradini" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice quadrata numpy <code class="docutils literal notranslate"><span class="pre">mat</span></code> di dimensione <code class="docutils literal notranslate"><span class="pre">n</span></code>, RITORNA un NUOVO array numpy contenente i valori recuperati dalla matrice nell’ordine seguente:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1,2,*,*,*
 *,3,4,*,*
@@ -4939,8 +4797,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
 <span class="k">def</span> <span class="nf">gradini</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -4992,8 +4849,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
 <span class="k">def</span> <span class="nf">gradini</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -5031,8 +4887,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="k">def</span> <span class="nf">gradini_pro</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -5062,23 +4917,20 @@ div.rendered_html tbody tr:hover {
                 <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]])</span>
 
 <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">gradini_pro</span><span class="p">(</span><span class="n">m3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]))</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE</span>
+<br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---scalivert">
-<h2>Esercizio - scalivert<a class="headerlink" href="#Esercizio---scalivert" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---scalivert">
+<h2>Esercizio - scalivert<a class="headerlink" href="#Esercizio---scalivert" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Dato un numero di righe <code class="docutils literal notranslate"><span class="pre">n</span></code> e un numero di colonne <code class="docutils literal notranslate"><span class="pre">m</span></code>, RITORNA una NUOVA matrice numpy <code class="docutils literal notranslate"><span class="pre">n</span></code> x <code class="docutils literal notranslate"><span class="pre">m</span></code> avente i numeri nelle colonne pari in progressione crescente da 1 a <code class="docutils literal notranslate"><span class="pre">n</span></code> e nelle colonne dispari decrescente da <code class="docutils literal notranslate"><span class="pre">n</span></code> a 1</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -5086,8 +4938,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">scalivert</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
 
@@ -5121,8 +4972,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">scalivert</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -5148,8 +4998,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
 
 
 <span class="k">def</span> <span class="nf">scalivert_pro</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
@@ -5171,24 +5020,20 @@ div.rendered_html tbody tr:hover {
                                                   <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
                                                   <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
                                                   <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]]))</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#SOLUZIONE EFFICIENTE (SUGGERIMENTO: usare np.tile)</span>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---compricol">
-<h2>Esercizio - compricol<a class="headerlink" href="#Esercizio---compricol" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---compricol">
+<h2>Esercizio - compricol<a class="headerlink" href="#Esercizio---compricol" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> <span class="math notranslate nohighlight">\(n\)</span> x <span class="math notranslate nohighlight">\(2m\)</span> con numero di colonne pari, RITORNA una NUOVA matrice <span class="math notranslate nohighlight">\(n\)</span> x <span class="math notranslate nohighlight">\(m\)</span> in cui le colonne sono date dalle somma delle coppie di colonne corrispondenti di <code class="docutils literal notranslate"><span class="pre">mat</span></code></p>
 <ul class="simple">
 <li><p>se <code class="docutils literal notranslate"><span class="pre">mat</span></code> non ha numero di colonne pari, lancia <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
@@ -5220,8 +5065,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">compricol</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -5272,8 +5116,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">compricol</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -5311,9 +5154,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---revtriang">
-<h2>Esercizio - revtriang<a class="headerlink" href="#Esercizio---revtriang" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---revtriang">
+<h2>Esercizio - revtriang<a class="headerlink" href="#Esercizio---revtriang" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice quadrata numpy, RITORNA una NUOVA matrice numpy avente le stesse dimensioni dell’originale e i numeri nelle righe della parte triangolare inferiore (diagonale esclusa) in ordine inverso</p>
 <ul class="simple">
 <li><p>se la matrice non è quadrata, lancia <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
@@ -5339,8 +5182,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">revtriang</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -5399,8 +5241,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">revtriang</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -5443,9 +5284,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---camminas">
-<h2>Esercizio - camminas<a class="headerlink" href="#Esercizio---camminas" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---camminas">
+<h2>Esercizio - camminas<a class="headerlink" href="#Esercizio---camminas" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice numpy <span class="math notranslate nohighlight">\(n\)</span> x <span class="math notranslate nohighlight">\(m\)</span> con <span class="math notranslate nohighlight">\(m\)</span> dispari, RITORNA un array numpy contenente tutti i numeri trovati lungo il percorso di una S, dal basso verso l’alto.</p>
 <p><strong>SUGGERIMENTO</strong>: puoi determinare a priori la dimensione dell’array risultante?</p>
 <p>Esempio:</p>
@@ -5477,8 +5318,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">camminas</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -5524,8 +5364,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">camminas</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -5559,9 +5398,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---camminaz">
-<h2>Esercizio - camminaz<a class="headerlink" href="#Esercizio---camminaz" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---camminaz">
+<h2>Esercizio - camminaz<a class="headerlink" href="#Esercizio---camminaz" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Data una matrice numpy <span class="math notranslate nohighlight">\(n\)</span> x <span class="math notranslate nohighlight">\(m\)</span> con <span class="math notranslate nohighlight">\(m\)</span> dispari, RITORNA un array numpy contenente tutti i numeri trovati lungo il percorso di una Z, dal basso verso l’alto.</p>
 <p><strong>SUGGERIMENTO</strong>: puoi determinare a priori la dimensione dell’array risultante?</p>
 <p>Esempio:</p>
@@ -5593,8 +5432,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">camminaz</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
 
@@ -5640,8 +5478,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">camminaz</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -5675,64 +5512,47 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Prova a svolgere gli esercizi delle <a class="reference external" href="https://it.softpython.org/matrices-lists/matrices-lists-2-sol.html">liste di liste</a>, ma usando invece Numpy.</p></li>
 <li><p>Prova a rendere gli esercizi già visti più efficienti sostituendo ai cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> delle funzioni specifiche di numpy che operano su vettori - al riguardo leggi <a class="reference external" href="http://www.ifac.cnr.it/~zoppetti/corsopython/">i tutorial Nicola Zoppetti, parte Numpy</a></p></li>
 <li><p>(in inglese) <a class="reference external" href="https://www.machinelearningplus.com/python/101-numpy-exercises-python/">machinelearningplus</a> Esercizi su Numpy (Fermarsi a difficoltà L1, L2 e se vuoi prova L3)</p></li>
 <li><p><a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy3-chal.html">Challenge numpy qui su softpython</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="matrices-numpy3-chal.html" class="btn btn-neutral float-right" title="Matrici numpy 3 - Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="matrices-numpy1-sol.html" class="btn btn-neutral float-left" title="Matrici - Numpy 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="matrices-numpy3-chal.html" class="btn btn-neutral float-right" title="Matrici numpy 3 - Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

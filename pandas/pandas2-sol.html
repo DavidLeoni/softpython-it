@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Analitiche con Pandas - 2. Esercizi &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/pandas/pandas2-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Analitiche con Pandas - 3. Challenge" href="pandas3-chal.html" />
     <link rel="prev" title="Analitiche con Pandas - 1. introduzione" href="pandas1-sol.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2434,27 +2374,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2555,7 +2509,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2621,6 +2575,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2630,7 +2585,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2690,14 +2645,14 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Analitiche-con-Pandas---2.-Esercizi">
-<h1>Analitiche con Pandas - 2. Esercizi<a class="headerlink" href="#Analitiche-con-Pandas---2.-Esercizi" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Analitiche-con-Pandas---2.-Esercizi">
+<h1>Analitiche con Pandas - 2. Esercizi<a class="headerlink" href="#Analitiche-con-Pandas---2.-Esercizi" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/pandas">Naviga file online</a></p>
-</div>
-<div class="section" id="Beni-culturali-Regione-Umbria">
-<h2>Beni culturali Regione Umbria<a class="headerlink" href="#Beni-culturali-Regione-Umbria" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Beni-culturali-Regione-Umbria">
+<h2>Beni culturali Regione Umbria<a class="headerlink" href="#Beni-culturali-Regione-Umbria" title="Permalink to this headline"></a></h2>
 <p>Apri il dataset <a class="reference external" href="beni-culturali-umbria.csv">beni-culturali-umbria.csv</a> con pandas (encoding UTF-8) e mostra informazioni sulle colonne</p>
 <ul class="simple">
 <li><p><strong>ATTENZIONE: usa l’attributo</strong> <code class="docutils literal notranslate"><span class="pre">delimiter=';'</span></code></p></li>
@@ -2709,8 +2664,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># scrivi qui</span>
@@ -2742,14 +2696,11 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2775,8 +2726,7 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -2904,8 +2854,8 @@ memory usage: 4.2+ KB
 <p>105 rows × 5 columns</p>
 </div></div>
 </div>
-<div class="section" id="Esercizio---stato-progetti">
-<h3>Esercizio - stato progetti<a class="headerlink" href="#Esercizio---stato-progetti" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---stato-progetti">
+<h3>Esercizio - stato progetti<a class="headerlink" href="#Esercizio---stato-progetti" title="Permalink to this headline"></a></h3>
 <p>Dato il dizionario <code class="docutils literal notranslate"><span class="pre">query</span></code> con <code class="docutils literal notranslate"><span class="pre">comune</span></code> e <code class="docutils literal notranslate"><span class="pre">stato</span></code>, trova tutti i progetti ce soddisfino <strong>entrambe</strong> le condizioni</p>
 <ul class="simple">
 <li><p><strong>NON</strong> scrivere <code class="docutils literal notranslate"><span class="pre">Acquasparta</span></code> o <code class="docutils literal notranslate"><span class="pre">REALIZZATO</span></code> nel codice !</p></li>
@@ -2916,8 +2866,7 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
          <span class="s1">&#39;stato&#39;</span>  <span class="p">:</span> <span class="s1">&#39;REALIZZATO&#39;</span>
         <span class="p">}</span>
 <span class="c1">#query = {&#39;comune&#39; : &#39;Spoleto&#39;, &#39;stato&#39; : &#39;IN CORSO DI REALIZZAZIONE&#39; }</span>
@@ -2998,16 +2947,13 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
          <span class="s1">&#39;stato&#39;</span>  <span class="p">:</span> <span class="s1">&#39;REALIZZATO&#39;</span>
         <span class="p">}</span>
 <span class="c1">#query = {&#39;comune&#39; : &#39;Spoleto&#39;, &#39;stato&#39; : &#39;IN CORSO DI REALIZZAZIONE&#39; }</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3077,9 +3023,9 @@ memory usage: 4.2+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---riqualificazione">
-<h3>Esercizio - riqualificazione<a class="headerlink" href="#Esercizio---riqualificazione" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---riqualificazione">
+<h3>Esercizio - riqualificazione<a class="headerlink" href="#Esercizio---riqualificazione" title="Permalink to this headline"></a></h3>
 <p>Trova tutti i progetti che prevedono riqualificazione</p>
 <p><strong>ATTENZIONE</strong> alle diverse capitalizzazioni! In tutto dovresti trovare 17 risultati</p>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -3088,8 +3034,7 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;PROGETTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;riqualificazione&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;PROGETTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Riqualificazione&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -3269,11 +3214,8 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3447,9 +3389,9 @@ memory usage: 4.2+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---estremi">
-<h3>Esercizio - estremi<a class="headerlink" href="#Esercizio---estremi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---estremi">
+<h3>Esercizio - estremi<a class="headerlink" href="#Esercizio---estremi" title="Permalink to this headline"></a></h3>
 <p>Trovare tutti i progetti aventi NUMERO incluso tra i limiti indicati nella variabile <code class="docutils literal notranslate"><span class="pre">estremi</span></code> (inclusi)</p>
 <ul class="simple">
 <li><p><strong>NON</strong> scrivere <code class="docutils literal notranslate"><span class="pre">10</span></code> o <code class="docutils literal notranslate"><span class="pre">18</span></code> nel codice!</p></li>
@@ -3460,8 +3402,7 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
 <span class="c1">#estremi = (15,21)</span>
 
 <span class="c1"># scrivi qui</span>
@@ -3581,14 +3522,11 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
 <span class="c1">#estremi = (15,21)</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3698,9 +3636,9 @@ memory usage: 4.2+ KB
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---Stato-attuazione-PAR">
-<h3>Esercizio - Stato attuazione PAR<a class="headerlink" href="#Esercizio---Stato-attuazione-PAR" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---Stato-attuazione-PAR">
+<h3>Esercizio - Stato attuazione PAR<a class="headerlink" href="#Esercizio---Stato-attuazione-PAR" title="Permalink to this headline"></a></h3>
 <p>Selezionare solo i progetti operativi PAR (che quindi hanno PAR in PROGETTO_OPERATIVO) e mostrarne il conteggio dello stato d’attuazione</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3708,8 +3646,7 @@ memory usage: 4.2+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="n">adf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;PROGRAMMA_OPERATIVO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;PAR&#39;</span><span class="p">)]</span>
 <span class="n">adf</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">])[</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
@@ -3731,11 +3668,8 @@ Name: STATO_ATTUAZIONE, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3750,9 +3684,9 @@ REALIZZATO                   36
 Name: STATO_ATTUAZIONE, dtype: int64
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---progetti-a-Todi">
-<h3>Esercizio - progetti a Todi<a class="headerlink" href="#Esercizio---progetti-a-Todi" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---progetti-a-Todi">
+<h3>Esercizio - progetti a Todi<a class="headerlink" href="#Esercizio---progetti-a-Todi" title="Permalink to this headline"></a></h3>
 <p>Mostrare il conteggio dei progetti realizzati a Todi</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3760,8 +3694,7 @@ Name: STATO_ATTUAZIONE, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="n">tdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Comune di Todi&#39;</span><span class="p">]</span>
 <span class="n">tdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">,</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">])[</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
@@ -3783,11 +3716,8 @@ Name: STATO_ATTUAZIONE, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3802,9 +3732,9 @@ Comune di Todi  IN CORSO DI REALIZZAZIONE    4
 Name: STATO_ATTUAZIONE, dtype: int64
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---Comuni-beneficiari">
-<h3>Esercizio - Comuni beneficiari<a class="headerlink" href="#Esercizio---Comuni-beneficiari" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---Comuni-beneficiari">
+<h3>Esercizio - Comuni beneficiari<a class="headerlink" href="#Esercizio---Comuni-beneficiari" title="Permalink to this headline"></a></h3>
 <p>Trovare i comuni beneficiari togliendo il prefisso ‘Comune di’, e senza duplicati</p>
 <ul class="simple">
 <li><p><strong>NON</strong> usare cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o list comprehension</p></li>
@@ -3816,8 +3746,7 @@ Name: STATO_ATTUAZIONE, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="n">cdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Comune&#39;</span><span class="p">)]</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cdf</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
@@ -3846,11 +3775,8 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3871,9 +3797,9 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
        &#39;Trevi&#39;, &#39;Tuoro sul Trasimeno&#39;, &#39;Umbertide&#39;], dtype=object)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---programma-operativo">
-<h3>Esercizio - programma operativo<a class="headerlink" href="#Esercizio---programma-operativo" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---programma-operativo">
+<h3>Esercizio - programma operativo<a class="headerlink" href="#Esercizio---programma-operativo" title="Permalink to this headline"></a></h3>
 <p>Creare una nuova colonna <code class="docutils literal notranslate"><span class="pre">sigla</span></code> con i primi 3 caratteri della colonna <code class="docutils literal notranslate"><span class="pre">PROGRAMMA_OPERATIVO</span></code>.</p>
 <ul class="simple">
 <li><p>se la prima parola è maggiore di 3 caratteri, impostare stringa vuota</p></li>
@@ -3885,8 +3811,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
 <span class="k">def</span> <span class="nf">trasf</span><span class="p">(</span><span class="n">stringa</span><span class="p">):</span>
     <span class="n">candidato</span> <span class="o">=</span> <span class="n">stringa</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidato</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
@@ -3902,19 +3827,15 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df</span><span class="p">[:</span><span class="mi">18</span><span class="p">]</span>  <span class="c1"># nota la riga 16</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[:</span><span class="mi">18</span><span class="p">]</span>  <span class="c1"># nota la riga 16</span>
 </pre></div>
 </div>
 </div>
@@ -4116,17 +4037,17 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </table>
 </div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Game-of-Thrones">
-<h2>Game of Thrones<a class="headerlink" href="#Game-of-Thrones" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Game-of-Thrones">
+<h2>Game of Thrones<a class="headerlink" href="#Game-of-Thrones" title="Permalink to this headline"></a></h2>
 <p>Apri con Pandas il file <a class="reference external" href="game-of-thrones.csv">game-of-thrones.csv</a> che contiene gli episodi in varie annate.</p>
 <ul class="simple">
 <li><p>usa l’encoding <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code></p></li>
 </ul>
 <p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/bakar31/game-of-thronesgot">Kaggle</a> - License: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></p>
-<div class="section" id="Esercizio---fan">
-<h3>Esercizio - fan<a class="headerlink" href="#Esercizio---fan" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---fan">
+<h3>Esercizio - fan<a class="headerlink" href="#Esercizio---fan" title="Permalink to this headline"></a></h3>
 <p>Ti viene fornito un dizionario <code class="docutils literal notranslate"><span class="pre">preferiti</span></code> con gli episodi preferiti di un gruppo di persone, che però non si ricordano esattamente i vari titoli che sono quindi spesso incompleti: Seleziona gli episodi preferiti da Paolo e Chiara</p>
 <ul class="simple">
 <li><p>assumi che la capitalizzazione in <code class="docutils literal notranslate"><span class="pre">preferiti</span></code> sia quella corretta</p></li>
@@ -4138,9 +4059,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># importiamo numpy e per comodità lo rinominiamo in &#39;np&#39;</span>
 
 <span class="n">preferiti</span> <span class="o">=</span> <span class="p">{</span>
@@ -4230,9 +4149,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># importiamo numpy e per comodità lo rinominiamo in &#39;np&#39;</span>
 
 <span class="n">preferiti</span> <span class="o">=</span> <span class="p">{</span>
@@ -4244,9 +4161,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4315,9 +4230,9 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Esercizio---prima-messa-in-onda">
-<h3>Esercizio - prima messa in onda<a class="headerlink" href="#Esercizio---prima-messa-in-onda" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---prima-messa-in-onda">
+<h3>Esercizio - prima messa in onda<a class="headerlink" href="#Esercizio---prima-messa-in-onda" title="Permalink to this headline"></a></h3>
 <p>Seleziona tutti gli episodi che sono stati mandati per la prima volta in onda in un certo <code class="docutils literal notranslate"><span class="pre">anno</span></code> (colonna <code class="docutils literal notranslate"><span class="pre">Original</span> <span class="pre">air</span> <span class="pre">date</span></code>)</p>
 <ul class="simple">
 <li><p><strong>NOTA</strong>: <code class="docutils literal notranslate"><span class="pre">anno</span></code> ti viene fornito come <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
@@ -4328,8 +4243,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">anno</span> <span class="o">=</span> <span class="mi">17</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anno</span> <span class="o">=</span> <span class="mi">17</span>
 
 <span class="c1"># scrivi qui</span>
 <span class="n">annidf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Original air date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">anno</span><span class="p">)</span>  <span class="p">]</span>
@@ -4459,13 +4373,10 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">anno</span> <span class="o">=</span> <span class="mi">17</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anno</span> <span class="o">=</span> <span class="mi">17</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4586,10 +4497,10 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </table>
 </div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Strutture-sanitarie">
-<h2>Strutture sanitarie<a class="headerlink" href="#Strutture-sanitarie" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Strutture-sanitarie">
+<h2>Strutture sanitarie<a class="headerlink" href="#Strutture-sanitarie" title="Permalink to this headline"></a></h2>
 <p>✪✪ Esaminiamo ora il dataset <a class="reference external" href="SANSTRUT001.csv">SANSTRUT001.csv</a> che contiene le strutture sanitarie del Trentino, e per ciascuna indica il tipo di assistenza che offre (attività clinica, diagnostica, etc), con il CAP e il nome del comune dove si trova.</p>
 <p>Fonte dati: <a class="reference external" href="https://dati.trentino.it/dataset/strutture-sanitarie-dell-azienda-sanitaria-e-convenzionate">dati.trentino.it</a> Licenza: <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/deed.it">Creative Commons Attribution 4.0</a></p>
 <p>Scrivi una funzione che prende in input un codice comune e una stringa di testo, apre <strong>con pandas</strong> (encoding UTF-8) e:</p>
@@ -4603,8 +4514,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">strutsan</span><span class="p">(</span><span class="n">cod_comune</span><span class="p">,</span> <span class="n">assistenza</span><span class="p">):</span>
@@ -4622,8 +4532,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">strutsan</span><span class="p">(</span><span class="n">cod_comune</span><span class="p">,</span> <span class="n">assistenza</span><span class="p">):</span>
@@ -4635,8 +4544,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22050</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># nessun filtro assistenza</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22050</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># nessun filtro assistenza</span>
 </pre></div>
 </div>
 </div>
@@ -4729,8 +4637,7 @@ Trovate 6 strutture
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22205</span><span class="p">,</span> <span class="s1">&#39;CLINICA&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22205</span><span class="p">,</span> <span class="s1">&#39;CLINICA&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4893,8 +4800,7 @@ Trovate 16 strutture
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22205</span><span class="p">,</span> <span class="s1">&#39;LABORATORIO&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">strutsan</span><span class="p">(</span><span class="mi">22205</span><span class="p">,</span> <span class="s1">&#39;LABORATORIO&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4976,59 +4882,42 @@ Trovate 5 strutture
 </table>
 </div></div>
 </div>
-</div>
-<div class="section" id="Continua">
-<h2>Continua<a class="headerlink" href="#Continua" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Continua">
+<h2>Continua<a class="headerlink" href="#Continua" title="Permalink to this headline"></a></h2>
 <p>Procedi con le <a class="reference external" href="https://it.softpython.org/pandas/pandas3-chal.html">challenge</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="pandas3-chal.html" class="btn btn-neutral float-right" title="Analitiche con Pandas - 3. Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pandas1-sol.html" class="btn btn-neutral float-left" title="Analitiche con Pandas - 1. introduzione" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pandas3-chal.html" class="btn btn-neutral float-right" title="Analitiche con Pandas - 3. Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

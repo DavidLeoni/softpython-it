@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Condizionali - if else &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/if/if1-sol.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../_static/js/softpython.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="if 2 - Challenges" href="if2-chal.html" />
     <link rel="prev" title="Dizionari 6 - Prime challenges" href="../dictionaries/dictionaries5-chal.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2432,27 +2372,41 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -2553,7 +2507,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -2619,6 +2573,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -2628,7 +2583,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -2688,18 +2643,18 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Condizionali---if-else">
-<h1>Condizionali - if else<a class="headerlink" href="#Condizionali---if-else" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Scarica-zip-esercizi">
-<h2><a class="reference external" href="../_static/generated/if.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline">¶</a></h2>
+<section id="Condizionali---if-else">
+<h1>Condizionali - if else<a class="headerlink" href="#Condizionali---if-else" title="Permalink to this headline"></a></h1>
+<section id="Scarica-zip-esercizi">
+<h2><a class="reference external" href="../_static/generated/if.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/if">Naviga file online</a></p>
 <p>Possiamo usare il comando condizionale <code class="docutils literal notranslate"><span class="pre">if</span></code> ogni volta che il computer deve prendere una decisione in base al valore di qualche condizione. Se la condizione viene valutata come vera (cioè come il booleano <code class="docutils literal notranslate"><span class="pre">True</span></code>) allora verrà eseguito un blocco di codice, altrimenti ne verrà eseguito un altro.</p>
 <p><strong>Riferimenti</strong>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://it.softpython.org/basics/basics2-bools-sol.html">Basi - booleani</a></p></li>
 </ul>
-<div class="section" id="Che-fare">
-<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline">¶</a></h3>
+<section id="Che-fare">
+<h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
 <li><p>scompatta lo zip in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ol>
@@ -2724,17 +2679,16 @@ div.rendered_html tbody tr:hover {
 <li><p>Per eseguire il codice Python dentro una cella di Jupyter E creare una nuova cella subito dopo, premi <code class="docutils literal notranslate"><span class="pre">Alt+Invio</span></code></p></li>
 <li><p>Se per caso il Notebook sembra inchiodato, prova a selezionare <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span></code></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="Il-comando-base-if-else">
-<h2>Il comando base <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code><a class="headerlink" href="#Il-comando-base-if-else" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Il-comando-base-if-else">
+<h2>Il comando base <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code><a class="headerlink" href="#Il-comando-base-if-else" title="Permalink to this headline"></a></h2>
 <p>Vediamo un programmino che prende decisioni diverse in base al valore di una variabile <code class="docutils literal notranslate"><span class="pre">caramelle</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="k">if</span> <span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbiamo trovato...&#39;</span><span class="p">)</span>
@@ -2764,8 +2718,7 @@ Cerchiamo altri dolci!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
@@ -2790,8 +2743,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">if</span> <span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbiamo trovato...&#39;</span><span class="p">)</span>
@@ -2821,16 +2773,15 @@ Cerchiamo altri dolci!
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE all’indentazione nei blocchi !</strong></p>
 <p>Come tutti i blocchi di codice in Python, sono preceduti da spazi. Di solito si usano 4 spazi (in qualche progetto Python puoi trovarne solo 2, ma è sconsigliato dalle linee guida di Python)</p>
 </div>
-</div>
-<div class="section" id="else-è-opzionale">
-<h2><code class="docutils literal notranslate"><span class="pre">else</span></code> è opzionale<a class="headerlink" href="#else-è-opzionale" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="else-è-opzionale">
+<h2><code class="docutils literal notranslate"><span class="pre">else</span></code> è opzionale<a class="headerlink" href="#else-è-opzionale" title="Permalink to this headline"></a></h2>
 <p>Non è obbligatorio indicare l’<code class="docutils literal notranslate"><span class="pre">else</span></code>. Se lo omettiamo e la condizione risulta <code class="docutils literal notranslate"><span class="pre">False</span></code>, il controllo passa direttamente ai comandi allo stesso livello di indentazione dell’<code class="docutils literal notranslate"><span class="pre">if</span></code> (senza errori):</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">if</span> <span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbiamo trovato...&#39;</span><span class="p">)</span>
@@ -2974,9 +2925,9 @@ Cerchiamo altri dolci!
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Esercizio---senza-benza">
-<h2>Esercizio - senza benza<a class="headerlink" href="#Esercizio---senza-benza" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Esercizio---senza-benza">
+<h2>Esercizio - senza benza<a class="headerlink" href="#Esercizio---senza-benza" title="Permalink to this headline"></a></h2>
 <p>Si vuole fare un viaggio in auto e servono almeno <code class="docutils literal notranslate"><span class="pre">30</span></code> litri. Scrivi del codice che:</p>
 <ul class="simple">
 <li><p>se la variabile <code class="docutils literal notranslate"><span class="pre">benzina</span></code> è inferiore a <code class="docutils literal notranslate"><span class="pre">30</span></code>, stampa <code class="docutils literal notranslate"><span class="pre">'Senza</span> <span class="pre">benza,</span> <span class="pre">faccio</span> <span class="pre">il</span> <span class="pre">pieno'</span></code> e incrementa <code class="docutils literal notranslate"><span class="pre">benzina</span></code> di <code class="docutils literal notranslate"><span class="pre">20</span></code> litri</p></li>
@@ -2998,9 +2949,7 @@ Si parte con 25 litri
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">benzina</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">benzina</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1">#benzina = 30</span>
 
 <span class="c1"># scrivi qui</span>
@@ -3028,27 +2977,22 @@ Si parte con 25 litri
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">benzina</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">benzina</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1">#benzina = 30</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Il-comando-if---elif---else">
-<h2>Il comando <em>if - elif - else</em><a class="headerlink" href="#Il-comando-if---elif---else" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="Il-comando-if---elif---else">
+<h2>Il comando <em>if - elif - else</em><a class="headerlink" href="#Il-comando-if---elif---else" title="Permalink to this headline"></a></h2>
 <p>Esaminando il programmino delle caramelle di prima ti sarai forse chiesto cosa stampare quando non ci sono proprio caramelle. Per farlo, potremmo usare più <em>condizioni in cascata</em> con il comando <code class="docutils literal notranslate"><span class="pre">elif</span></code> (abbreviazione di <em>else if</em>):</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># METTIAMO ZERO</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># METTIAMO ZERO</span>
 
 <span class="k">if</span> <span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbiamo trovato...&#39;</span><span class="p">)</span>
@@ -3084,8 +3028,7 @@ testing</a>)</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>   <span class="c1"># PROVIAMO UN NUMERO NEGATIVO</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caramelle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>   <span class="c1"># PROVIAMO UN NUMERO NEGATIVO</span>
 
 <span class="k">if</span> <span class="n">caramelle</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbiamo trovato...&#39;</span><span class="p">)</span>
@@ -3115,8 +3058,8 @@ Cerchiamo altri dolci!
 </pre></div></div>
 </div>
 <p><strong>ESERCIZIO</strong>: Prova a cambiare i valori di <code class="docutils literal notranslate"><span class="pre">caramelle</span></code> nella cella qua sopra e guarda cosa succede</p>
-<div class="section" id="Domande">
-<h3>Domande<a class="headerlink" href="#Domande" title="Permalink to this headline">¶</a></h3>
+<section id="Domande">
+<h3>Domande<a class="headerlink" href="#Domande" title="Permalink to this headline"></a></h3>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
@@ -3163,17 +3106,17 @@ Cerchiamo altri dolci!
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="Domande---Sono-equivalenti?">
-<h2>Domande - Sono equivalenti?<a class="headerlink" href="#Domande---Sono-equivalenti?" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Domande---Sono-equivalenti?">
+<h2>Domande - Sono equivalenti?<a class="headerlink" href="#Domande---Sono-equivalenti?" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice: in ciascuno, vi sono due parti, A e B. In ciascun frammento, cerca di indovinare se la parte A stamperà esattamente quello che stampa il codice nella parte B, per ogni valore delle variabili da cui dipendono.</p>
 <ul class="simple">
 <li><p><strong>PRIMA</strong> pensa alla risposta</p></li>
 <li><p><strong>POI</strong> prova ad eseguire con ciascuno dei valori delle variabili suggerite</p></li>
 </ul>
-<div class="section" id="Sono-equivalenti?---fragole">
-<h3>Sono equivalenti? - fragole<a class="headerlink" href="#Sono-equivalenti?---fragole" title="Permalink to this headline">¶</a></h3>
+<section id="Sono-equivalenti?---fragole">
+<h3>Sono equivalenti? - fragole<a class="headerlink" href="#Sono-equivalenti?---fragole" title="Permalink to this headline"></a></h3>
 <p>Prova a cambiare il valore di <code class="docutils literal notranslate"><span class="pre">fragole</span></code> togliendo i commenti</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fragole</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="c1">#fragole = 2</span>
@@ -3197,9 +3140,9 @@ Cerchiamo altri dolci!
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le fragole sono &lt;= 5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---max">
-<h3>Sono equivalenti? - max<a class="headerlink" href="#Sono-equivalenti?---max" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---max">
+<h3>Sono equivalenti? - max<a class="headerlink" href="#Sono-equivalenti?---max" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span>
 <span class="c1">#x, y = 5, 3</span>
 <span class="c1">#x, y = 3, 3</span>
@@ -3217,9 +3160,9 @@ Cerchiamo altri dolci!
 <span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---min">
-<h3>Sono equivalenti? - min<a class="headerlink" href="#Sono-equivalenti?---min" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---min">
+<h3>Sono equivalenti? - min<a class="headerlink" href="#Sono-equivalenti?---min" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span>
 <span class="c1">#x, y = 5, 3</span>
 <span class="c1">#x, y = 3, 3</span>
@@ -3237,9 +3180,9 @@ Cerchiamo altri dolci!
 <span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---grande-piccolo">
-<h3>Sono equivalenti? - grande piccolo<a class="headerlink" href="#Sono-equivalenti?---grande-piccolo" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---grande-piccolo">
+<h3>Sono equivalenti? - grande piccolo<a class="headerlink" href="#Sono-equivalenti?---grande-piccolo" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1">#x = 4</span>
 <span class="c1">#x = 3</span>
@@ -3259,9 +3202,9 @@ Cerchiamo altri dolci!
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;grande&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---Cippirillo">
-<h3>Sono equivalenti? - Cippirillo<a class="headerlink" href="#Sono-equivalenti?---Cippirillo" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---Cippirillo">
+<h3>Sono equivalenti? - Cippirillo<a class="headerlink" href="#Sono-equivalenti?---Cippirillo" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="c1">#x = 10</span>
 <span class="c1">#x = 11</span>
@@ -3280,9 +3223,9 @@ Cerchiamo altri dolci!
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cippirillo&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Esercizio---fattoria">
-<h3>Esercizio - fattoria<a class="headerlink" href="#Esercizio---fattoria" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---fattoria">
+<h3>Esercizio - fattoria<a class="headerlink" href="#Esercizio---fattoria" title="Permalink to this headline"></a></h3>
 <p>Data una stringa <code class="docutils literal notranslate"><span class="pre">s</span></code>, scrivi del codice che stampa <code class="docutils literal notranslate"><span class="pre">'BAU!'</span></code> se la stringa inizia con <code class="docutils literal notranslate"><span class="pre">cane</span></code> , stampa <code class="docutils literal notranslate"><span class="pre">'CHICCHIRICHI!'</span></code> se le stringa inizia con <code class="docutils literal notranslate"><span class="pre">'gallo'</span></code>, e stampa <code class="docutils literal notranslate"><span class="pre">'???'</span></code> in tutti gli altri casi</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3290,9 +3233,7 @@ Cerchiamo altri dolci!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;cane dalmata&#39;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;cane dalmata&#39;</span>
 <span class="c1">#s = &#39;gallo cedrone&#39;</span>
 <span class="c1">#s = &#39;sghirimpo&#39;</span>
 
@@ -3322,23 +3263,19 @@ BAU
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;cane dalmata&#39;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;cane dalmata&#39;</span>
 <span class="c1">#s = &#39;gallo cedrone&#39;</span>
 <span class="c1">#s = &#39;sghirimpo&#39;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---accenti">
-<h3>Esercizio - accenti<a class="headerlink" href="#Esercizio---accenti" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---accenti">
+<h3>Esercizio - accenti<a class="headerlink" href="#Esercizio---accenti" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice che stampa se una <code class="docutils literal notranslate"><span class="pre">parola</span></code> termina o meno con una lettera accentata.</p>
 <ul class="simple">
 <li><p>Per determinare se una lettera è accentata, usa le stringhe di accenti <code class="docutils literal notranslate"><span class="pre">acuti</span></code> e <code class="docutils literal notranslate"><span class="pre">gravi</span></code></p></li>
@@ -3350,9 +3287,7 @@ BAU
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">acuti</span> <span class="o">=</span> <span class="s2">&quot;áéíóú&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">acuti</span> <span class="o">=</span> <span class="s2">&quot;áéíóú&quot;</span>
 <span class="n">gravi</span> <span class="o">=</span> <span class="s2">&quot;àèìòù&quot;</span>
 
 <span class="n">parola</span> <span class="o">=</span> <span class="s1">&#39;urrà&#39;</span>         <span class="c1"># termina con una accentata</span>
@@ -3386,9 +3321,7 @@ urrà termina con una accentata!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">acuti</span> <span class="o">=</span> <span class="s2">&quot;áéíóú&quot;</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">acuti</span> <span class="o">=</span> <span class="s2">&quot;áéíóú&quot;</span>
 <span class="n">gravi</span> <span class="o">=</span> <span class="s2">&quot;àèìòù&quot;</span>
 
 <span class="n">parola</span> <span class="o">=</span> <span class="s1">&#39;urrà&#39;</span>         <span class="c1"># termina con una accentata</span>
@@ -3402,14 +3335,12 @@ urrà termina con una accentata!
 <span class="c1">#parola = &#39;Chi dice che la verità è una sòla?&#39;  # non termina con una accentata</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---arcani">
-<h3>Esercizio - arcani<a class="headerlink" href="#Esercizio---arcani" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---arcani">
+<h3>Esercizio - arcani<a class="headerlink" href="#Esercizio---arcani" title="Permalink to this headline"></a></h3>
 <p>Dato un <code class="docutils literal notranslate"><span class="pre">arcano</span></code> espresso come una stringa e delle liste di arcani <code class="docutils literal notranslate"><span class="pre">maggiori</span></code> e <code class="docutils literal notranslate"><span class="pre">minori</span></code>, stampare a quale categoria appartiene <code class="docutils literal notranslate"><span class="pre">arcano</span></code>. Se <code class="docutils literal notranslate"><span class="pre">arcano</span></code> non appartiene a nessuna categoria, stampare <code class="docutils literal notranslate"><span class="pre">è</span> <span class="pre">un</span> <span class="pre">mistero</span></code>.</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3417,9 +3348,7 @@ urrà termina con una accentata!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">arcano</span> <span class="o">=</span> <span class="s1">&#39;La Ruota&#39;</span>        <span class="c1"># La Ruota è un Arcano maggiore</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">arcano</span> <span class="o">=</span> <span class="s1">&#39;La Ruota&#39;</span>        <span class="c1"># La Ruota è un Arcano maggiore</span>
 <span class="c1">#arcano = &quot;L&#39;Appeso&quot;       # maggiore</span>
 <span class="c1">#arcano = &#39;Asso di Spade&#39;  # minore</span>
 <span class="c1">#arcano = &#39;Due di Denari&#39;  # minore</span>
@@ -3450,9 +3379,7 @@ La Ruota è un Arcano maggiore
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">arcano</span> <span class="o">=</span> <span class="s1">&#39;La Ruota&#39;</span>        <span class="c1"># La Ruota è un Arcano maggiore</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">arcano</span> <span class="o">=</span> <span class="s1">&#39;La Ruota&#39;</span>        <span class="c1"># La Ruota è un Arcano maggiore</span>
 <span class="c1">#arcano = &quot;L&#39;Appeso&quot;       # maggiore</span>
 <span class="c1">#arcano = &#39;Asso di Spade&#39;  # minore</span>
 <span class="c1">#arcano = &#39;Due di Denari&#39;  # minore</span>
@@ -3462,15 +3389,13 @@ La Ruota è un Arcano maggiore
 <span class="n">minori</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Asso di Spade&#39;</span><span class="p">,</span> <span class="s1">&#39;Due di Denari&#39;</span><span class="p">,</span> <span class="s1">&#39;Regina di Coppe&#39;</span><span class="p">]</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="if-annidati">
-<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> annidati<a class="headerlink" href="#if-annidati" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="if-annidati">
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> annidati<a class="headerlink" href="#if-annidati" title="Permalink to this headline"></a></h2>
 <p>I comandi <code class="docutils literal notranslate"><span class="pre">if</span></code> sono <em>blocchi</em> perciò possono essere annidati come qualunque altro blocco.</p>
 <p>Facciamo un esempio. Se hai un punto con coordinate <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> e vuoi sapere in quale quadrante risiede:</p>
 <p><img alt="quadrant iu34234" src="../_images/quadrant.png" /></p>
@@ -3479,8 +3404,7 @@ La Ruota è un Arcano maggiore
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">9</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">9</span>
 <span class="c1">#x,y = -5,9</span>
 <span class="c1">#x,y = -5,-9</span>
 <span class="c1">#x,y = 5,-9</span>
@@ -3515,8 +3439,7 @@ primo quadrante
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">9</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">9</span>
 <span class="c1">#x,y = -5,9</span>
 <span class="c1">#x,y = -5,-9</span>
 <span class="c1">#x,y = 5,-9</span>
@@ -3543,8 +3466,8 @@ x = 5 y = 9
 primo quadrante
 </pre></div></div>
 </div>
-<div class="section" id="Esercizio---ascisse-e-ordinate-1">
-<h3>Esercizio - ascisse e ordinate 1<a class="headerlink" href="#Esercizio---ascisse-e-ordinate-1" title="Permalink to this headline">¶</a></h3>
+<section id="Esercizio---ascisse-e-ordinate-1">
+<h3>Esercizio - ascisse e ordinate 1<a class="headerlink" href="#Esercizio---ascisse-e-ordinate-1" title="Permalink to this headline"></a></h3>
 <p>Il codice che abbiamo visto non è molto preciso, perchè non considera il caso di punti che giacciono sugli assi. In questi casi invece del numero del quadrante dovrebbe stampare:</p>
 <ul class="simple">
 <li><p>‘origine’ quando <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> sono uguali a <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
@@ -3558,9 +3481,7 @@ primo quadrante
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
 <span class="c1">#x,y = 0,5    # ordinata</span>
 <span class="c1">#x,y = 5,0    # ascissa</span>
 <span class="c1">#x,y = 5,9    # primo</span>
@@ -3607,9 +3528,7 @@ origine
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
 <span class="c1">#x,y = 0,5    # ordinata</span>
 <span class="c1">#x,y = 5,0    # ascissa</span>
 <span class="c1">#x,y = 5,9    # primo</span>
@@ -3621,14 +3540,12 @@ origine
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---ascisse-e-ordinate-2">
-<h3>Esercizio - ascisse e ordinate 2<a class="headerlink" href="#Esercizio---ascisse-e-ordinate-2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---ascisse-e-ordinate-2">
+<h3>Esercizio - ascisse e ordinate 2<a class="headerlink" href="#Esercizio---ascisse-e-ordinate-2" title="Permalink to this headline"></a></h3>
 <p>Volendo essere ancora più specifici, invece che stampare genericamente ‘ascissa’ o ‘ordinata’, potremmo stampare:</p>
 <ul class="simple">
 <li><p>‘ascissa tra il primo e quarto quadrante’</p></li>
@@ -3643,9 +3560,7 @@ origine
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
 <span class="c1">#x,y = 0,5    # ordinata tra il primo e il secondo quadrante</span>
 <span class="c1">#x,y = 0,-5   # ordinata tra il terzo e il quarto quadrante</span>
 <span class="c1">#x,y = 5,0    # ascissa tra il primo e il quarto quadrante</span>
@@ -3696,9 +3611,7 @@ origine
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>     <span class="c1"># origine</span>
 <span class="c1">#x,y = 0,5    # ordinata tra il primo e il secondo quadrante</span>
 <span class="c1">#x,y = 0,-5   # ordinata tra il terzo e il quarto quadrante</span>
 <span class="c1">#x,y = 5,0    # ascissa tra il primo e il quarto quadrante</span>
@@ -3711,14 +3624,12 @@ origine
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---autobus">
-<h3>Esercizio - autobus<a class="headerlink" href="#Esercizio---autobus" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---autobus">
+<h3>Esercizio - autobus<a class="headerlink" href="#Esercizio---autobus" title="Permalink to this headline"></a></h3>
 <p>Devi correre a prendere l’autobus, e hai poco tempo. Per fare il viaggio:</p>
 <ul class="simple">
 <li><p>ti serve lo zaino, altrimenti resti a casa</p></li>
@@ -3734,9 +3645,7 @@ origine
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">zaino</span><span class="p">,</span> <span class="n">soldi</span><span class="p">,</span> <span class="n">tessera</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">zaino</span><span class="p">,</span> <span class="n">soldi</span><span class="p">,</span> <span class="n">tessera</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span>
 <span class="c1"># Non ho i soldi !</span>
 <span class="c1"># Ho trovato: zaino,tessera</span>
 <span class="c1"># Posso partire !</span>
@@ -3779,9 +3688,7 @@ origine
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Non ho la tessera nè i soldi, non posso partire !&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Non ho lo zaino, non posso partire !&#39;</span><span class="p">)</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3798,9 +3705,7 @@ Non ho la tessera nè i soldi, non posso partire !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">zaino</span><span class="p">,</span> <span class="n">soldi</span><span class="p">,</span> <span class="n">tessera</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">zaino</span><span class="p">,</span> <span class="n">soldi</span><span class="p">,</span> <span class="n">tessera</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span>
 <span class="c1"># Non ho i soldi !</span>
 <span class="c1"># Ho trovato: zaino,tessera</span>
 <span class="c1"># Posso partire !</span>
@@ -3824,14 +3729,12 @@ Non ho la tessera nè i soldi, non posso partire !
 
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---cronometro">
-<h3>Esercizio - cronometro<a class="headerlink" href="#Esercizio---cronometro" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---cronometro">
+<h3>Esercizio - cronometro<a class="headerlink" href="#Esercizio---cronometro" title="Permalink to this headline"></a></h3>
 <p>Un cronometro segna le ore, minuti e secondi trascorsi dalla mezzanotte di un certo giorno in una stringa <code class="docutils literal notranslate"><span class="pre">cronometro</span></code>, in cui i numeri delle ore, minuti e secondi sono separati da due punti <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
 <p>Scrivi del codice che in base al numero di ore trascorse, stampa la fase del giorno:</p>
 <ul class="simple">
@@ -3849,9 +3752,7 @@ Non ho la tessera nè i soldi, non posso partire !
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">cronometro</span> <span class="o">=</span> <span class="s1">&#39;10:23:43&#39;</span>   <span class="c1"># mattina</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cronometro</span> <span class="o">=</span> <span class="s1">&#39;10:23:43&#39;</span>   <span class="c1"># mattina</span>
 <span class="c1">#cronometro = &#39;12:00:00&#39;   # pomeriggio</span>
 <span class="c1">#cronometro = &#39;15:56:02&#39;   # pomeriggio</span>
 <span class="c1">#cronometro = &#39;19:23:27&#39;   # sera</span>
@@ -3872,8 +3773,7 @@ Non ho la tessera nè i soldi, non posso partire !
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sera&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;notte&#39;</span><span class="p">)</span>
-
-</pre></div>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3888,9 +3788,7 @@ mattina
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">cronometro</span> <span class="o">=</span> <span class="s1">&#39;10:23:43&#39;</span>   <span class="c1"># mattina</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">cronometro</span> <span class="o">=</span> <span class="s1">&#39;10:23:43&#39;</span>   <span class="c1"># mattina</span>
 <span class="c1">#cronometro = &#39;12:00:00&#39;   # pomeriggio</span>
 <span class="c1">#cronometro = &#39;15:56:02&#39;   # pomeriggio</span>
 <span class="c1">#cronometro = &#39;19:23:27&#39;   # sera</span>
@@ -3900,22 +3798,20 @@ mattina
 <span class="c1">#cronometro = &#39;32:28:30&#39;   # mattina</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Domande - Sono equivalenti?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id1">
+<h2>Domande - Sono equivalenti?<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>Guarda i seguenti frammenti di codice: in ciascuno, vi sono due parti, A e B. In ciascun frammento, cerca di indovinare se la parte A stamperà esattamente quello che stampa il codice nella parte B, per ogni valore di <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <ul class="simple">
 <li><p><strong>PRIMA</strong> pensa alla risposta</p></li>
 <li><p><strong>POI</strong> prova ad eseguire con ciascuno dei valori di <code class="docutils literal notranslate"><span class="pre">x</span></code> suggeriti.</p></li>
 </ul>
-<div class="section" id="Sono-equivalenti?---dentro-fuori-1">
-<h3>Sono equivalenti? - dentro fuori 1<a class="headerlink" href="#Sono-equivalenti?---dentro-fuori-1" title="Permalink to this headline">¶</a></h3>
+<section id="Sono-equivalenti?---dentro-fuori-1">
+<h3>Sono equivalenti? - dentro fuori 1<a class="headerlink" href="#Sono-equivalenti?---dentro-fuori-1" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="c1">#x = 4</span>
 <span class="c1">#x = 5</span>
@@ -3938,9 +3834,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fuori&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---stelle-pianeti">
-<h3>Sono equivalenti? - stelle pianeti<a class="headerlink" href="#Sono-equivalenti?---stelle-pianeti" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---stelle-pianeti">
+<h3>Sono equivalenti? - stelle pianeti<a class="headerlink" href="#Sono-equivalenti?---stelle-pianeti" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1">#x = 3</span>
 <span class="c1">#x = 4</span>
@@ -3960,9 +3856,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;stelle&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---verde-rosso">
-<h3>Sono equivalenti? - verde rosso<a class="headerlink" href="#Sono-equivalenti?---verde-rosso" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---verde-rosso">
+<h3>Sono equivalenti? - verde rosso<a class="headerlink" href="#Sono-equivalenti?---verde-rosso" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="c1">#x = 5</span>
 <span class="c1">#x = 0</span>
@@ -3983,9 +3879,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rosso&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---cerchi-quadrati">
-<h3>Sono equivalenti? - cerchi quadrati<a class="headerlink" href="#Sono-equivalenti?---cerchi-quadrati" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---cerchi-quadrati">
+<h3>Sono equivalenti? - cerchi quadrati<a class="headerlink" href="#Sono-equivalenti?---cerchi-quadrati" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="c1">#x = 3</span>
 <span class="c1">#x = 2</span>
@@ -4012,9 +3908,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cerchi&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---dentro-fuori-2">
-<h3>Sono equivalenti? - dentro fuori 2<a class="headerlink" href="#Sono-equivalenti?---dentro-fuori-2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---dentro-fuori-2">
+<h3>Sono equivalenti? - dentro fuori 2<a class="headerlink" href="#Sono-equivalenti?---dentro-fuori-2" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="c1">#x = 0</span>
 <span class="c1">#x = 15</span>
@@ -4037,9 +3933,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dentro&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Sono-equivalenti?---Ciabanga">
-<h3>Sono equivalenti? - Ciabanga<a class="headerlink" href="#Sono-equivalenti?---Ciabanga" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Sono-equivalenti?---Ciabanga">
+<h3>Sono equivalenti? - Ciabanga<a class="headerlink" href="#Sono-equivalenti?---Ciabanga" title="Permalink to this headline"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="c1">#x = 5</span>
 <span class="c1">#x = 6</span>
@@ -4061,9 +3957,9 @@ mattina
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ciabanga!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Esercizio---Il-massimo">
-<h3>Esercizio - Il massimo<a class="headerlink" href="#Esercizio---Il-massimo" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---Il-massimo">
+<h3>Esercizio - Il massimo<a class="headerlink" href="#Esercizio---Il-massimo" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice che stampa il massimo fra tre numeri <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> e <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
 <ul class="simple">
 <li><p>usa <strong>if annidati</strong></p></li>
@@ -4076,9 +3972,7 @@ mattina
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
 <span class="c1">#x,y,z = 1,3,2</span>
 <span class="c1">#x,y,z = 2,1,3</span>
 <span class="c1">#x,y,z = 2,3,1</span>
@@ -4111,9 +4005,7 @@ mattina
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
 <span class="c1">#x,y,z = 1,3,2</span>
 <span class="c1">#x,y,z = 2,1,3</span>
 <span class="c1">#x,y,z = 2,3,1</span>
@@ -4121,15 +4013,13 @@ mattina
 <span class="c1">#x,y,z = 3,2,1</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Operatore-ternario">
-<h2>Operatore ternario<a class="headerlink" href="#Operatore-ternario" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Operatore-ternario">
+<h2>Operatore ternario<a class="headerlink" href="#Operatore-ternario" title="Permalink to this headline"></a></h2>
 <p>In qualche caso è conveniente inizializzare una variabile con valori diversi a seconda di una condizione</p>
 <p><strong>Esempio</strong>:</p>
 <p>Lo sconto che si applica ad un’acquisto dipende dalla quantità acquistata. Crea una variabile <code class="docutils literal notranslate"><span class="pre">sconto</span></code> mettendo il suo valore a 0 se la variabile <code class="docutils literal notranslate"><span class="pre">spesa</span></code> è minore di 100€, oppure <code class="docutils literal notranslate"><span class="pre">10%</span></code> se è maggiore.</p>
@@ -4137,8 +4027,7 @@ mattina
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spesa</span> <span class="o">=</span> <span class="mi">200</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spesa</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">sconto</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">if</span> <span class="n">spesa</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
@@ -4163,8 +4052,7 @@ spesa: 200   sconto: 0.1
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">spesa</span> <span class="o">=</span> <span class="mi">200</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spesa</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">sconto</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">spesa</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="k">else</span> <span class="mi">0</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;spesa:&quot;</span><span class="p">,</span> <span class="n">spesa</span><span class="p">,</span> <span class="s2">&quot;  sconto:&quot;</span><span class="p">,</span> <span class="n">sconto</span><span class="p">)</span>
 </pre></div>
@@ -4183,8 +4071,8 @@ spesa: 200   sconto: 0.1
 </pre></div>
 </div>
 <p>col significato che <code class="docutils literal notranslate"><span class="pre">VARIABILE</span></code> è inizializzata a <code class="docutils literal notranslate"><span class="pre">VALORE</span></code> se la <code class="docutils literal notranslate"><span class="pre">CONDIZIONE</span></code> è <code class="docutils literal notranslate"><span class="pre">True</span></code>, altrimenti viene inizializzata ad <code class="docutils literal notranslate"><span class="pre">ALTRO_VALORE</span></code></p>
-<div class="section" id="Domande-if-ternari">
-<h3>Domande if ternari<a class="headerlink" href="#Domande-if-ternari" title="Permalink to this headline">¶</a></h3>
+<section id="Domande-if-ternari">
+<h3>Domande if ternari<a class="headerlink" href="#Domande-if-ternari" title="Permalink to this headline"></a></h3>
 <p>Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4204,9 +4092,9 @@ spesa: 200   sconto: 0.1
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="Esercizio---scarpe">
-<h3>Esercizio - scarpe<a class="headerlink" href="#Esercizio---scarpe" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---scarpe">
+<h3>Esercizio - scarpe<a class="headerlink" href="#Esercizio---scarpe" title="Permalink to this headline"></a></h3>
 <p>Scrivere del codice che data la variabile numerica <code class="docutils literal notranslate"><span class="pre">scarpe</span></code>, se <code class="docutils literal notranslate"><span class="pre">scarpe</span></code> è minore di 10 viene incrementata di <code class="docutils literal notranslate"><span class="pre">1</span></code>, altrimenti viene decrementata di <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 <ul class="simple">
 <li><p>Usa <strong>SOLO</strong> l’<strong>if ternario</strong></p></li>
@@ -4236,9 +4124,7 @@ spesa: 200   sconto: 0.1
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1">#scarpe = 16</span>
 
 <span class="c1"># scrivi qui</span>
@@ -4260,20 +4146,16 @@ scarpe = 3
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">scarpe</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1">#scarpe = 16</span>
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Esercizio---trenino">
-<h3>Esercizio - trenino<a class="headerlink" href="#Esercizio---trenino" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Esercizio---trenino">
+<h3>Esercizio - trenino<a class="headerlink" href="#Esercizio---trenino" title="Permalink to this headline"></a></h3>
 <p>Scrivi del codice che date 3 stringhe <code class="docutils literal notranslate"><span class="pre">sa</span></code>, <code class="docutils literal notranslate"><span class="pre">sb</span></code> e <code class="docutils literal notranslate"><span class="pre">sc</span></code> assegna alla variabile <code class="docutils literal notranslate"><span class="pre">x</span></code> la stringa <code class="docutils literal notranslate"><span class="pre">'CIUFCIUF'</span></code> se è possibile comporre <code class="docutils literal notranslate"><span class="pre">sa</span></code>, <code class="docutils literal notranslate"><span class="pre">sb</span></code> e <code class="docutils literal notranslate"><span class="pre">sc</span></code> per ottenere la scritta <code class="docutils literal notranslate"><span class="pre">'trenino'</span></code>, altrimenti mette la stringa <code class="docutils literal notranslate"><span class="pre">':-('</span></code></p>
 <ul class="simple">
 <li><p><strong>USA</strong> un if ternario</p></li>
@@ -4305,9 +4187,7 @@ CIUFCIUF
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">sa</span><span class="p">,</span><span class="n">sb</span><span class="p">,</span><span class="n">sc</span> <span class="o">=</span> <span class="s2">&quot;ni&quot;</span><span class="p">,</span><span class="s2">&quot;no&quot;</span><span class="p">,</span><span class="s2">&quot;tre&quot;</span>       <span class="c1"># CIUFCIUF</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">sa</span><span class="p">,</span><span class="n">sb</span><span class="p">,</span><span class="n">sc</span> <span class="o">=</span> <span class="s2">&quot;ni&quot;</span><span class="p">,</span><span class="s2">&quot;no&quot;</span><span class="p">,</span><span class="s2">&quot;tre&quot;</span>       <span class="c1"># CIUFCIUF</span>
 <span class="c1">#sa,sb,sc = &quot;ni&quot;,&quot;tre&quot;,&quot;no&quot;      # CIUFCIUF</span>
 <span class="c1">#sa,sb,sc = &quot;quattro&quot;,&quot;ni&quot;,&quot;no&quot;  # :-(</span>
 <span class="c1">#sa,sb,sc = &quot;na&quot;,&quot;tre&quot;,&quot;no&quot;      # :-(</span>
@@ -4333,83 +4213,61 @@ CIUFCIUF
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
-<span></span><span class="n">sa</span><span class="p">,</span><span class="n">sb</span><span class="p">,</span><span class="n">sc</span> <span class="o">=</span> <span class="s2">&quot;ni&quot;</span><span class="p">,</span><span class="s2">&quot;no&quot;</span><span class="p">,</span><span class="s2">&quot;tre&quot;</span>       <span class="c1"># CIUFCIUF</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">sa</span><span class="p">,</span><span class="n">sb</span><span class="p">,</span><span class="n">sc</span> <span class="o">=</span> <span class="s2">&quot;ni&quot;</span><span class="p">,</span><span class="s2">&quot;no&quot;</span><span class="p">,</span><span class="s2">&quot;tre&quot;</span>       <span class="c1"># CIUFCIUF</span>
 <span class="c1">#sa,sb,sc = &quot;ni&quot;,&quot;tre&quot;,&quot;no&quot;      # CIUFCIUF</span>
 <span class="c1">#sa,sb,sc = &quot;quattro&quot;,&quot;ni&quot;,&quot;no&quot;  # :-(</span>
 <span class="c1">#sa,sb,sc = &quot;na&quot;,&quot;tre&quot;,&quot;no&quot;      # :-(</span>
 
 
 <span class="c1"># scrivi qui</span>
-
-
-</pre></div>
+<br/><br/></pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="Prosegui">
-<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con <a class="reference external" href="https://it.softpython.org/if/if2-chal.html">if - prime challenge</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="if2-chal.html" class="btn btn-neutral float-right" title="if 2 - Challenges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../dictionaries/dictionaries5-chal.html" class="btn btn-neutral float-left" title="Dizionari 6 - Prime challenges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="if2-chal.html" class="btn btn-neutral float-right" title="if 2 - Challenges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

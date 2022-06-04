@@ -1,85 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>A Prova di Hacker Challenge - Analisi vulnerabilità siti &mdash; SoftPython</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/jupman.3.3.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/jupman-web.3.4.4.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/softpython-theme.3.4.5.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/jupman.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/jupman-web.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/softpython-theme.3.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/projects-chal/hacker-proof/hacker-proof-chal.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/js/jupman.3.3.js"></script>
-        <script type="text/javascript" src="../../_static/js/pytutor-embed.bundle.min.js"></script>
-        <script type="text/javascript" src="../../_static/js/softpython.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="../../_static/js/mathjax/tex-mml-chtml.js"></script>
+        <script src="../../_static/js/jupman.3.3.js"></script>
+        <script src="../../_static/js/pytutor-embed.bundle.min.js"></script>
+        <script src="../../_static/js/softpython.js"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Pantheon Challenge - Personaggi culturalmente importanti" href="../pantheon/pantheon-chal.html" />
     <link rel="prev" title="Kaggle Challenge - dataset per tutti i gusti" href="../kaggle/kaggle-chal.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../toc-page.html" class="icon icon-home"> SoftPython
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 dev
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -87,18 +49,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#News">News</a></li>
@@ -2373,28 +2324,17 @@
 <li class="toctree-l1"><a class="reference external" href="toc.html#http://">Indice</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../toc-page.html">SoftPython</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -2434,7 +2374,7 @@
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   
 <style>
 /* CSS overrides for sphinx_rtd_theme */
@@ -2459,8 +2399,8 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="A-Prova-di-Hacker-Challenge---Analisi-vulnerabilità-siti">
-<h1>A Prova di Hacker Challenge - Analisi vulnerabilità siti<a class="headerlink" href="#A-Prova-di-Hacker-Challenge---Analisi-vulnerabilità-siti" title="Permalink to this headline">¶</a></h1>
+<section id="A-Prova-di-Hacker-Challenge---Analisi-vulnerabilità-siti">
+<h1>A Prova di Hacker Challenge - Analisi vulnerabilità siti<a class="headerlink" href="#A-Prova-di-Hacker-Challenge---Analisi-vulnerabilità-siti" title="Permalink to this headline"></a></h1>
 <p>Nel mondo del <strong>business</strong>, quando si vuole fare affari con qualcuno, è importante capire se l’interlocutore con cui si sta trattando sia <strong>affidabile</strong> o meno. Per esempio, se la potenziale <strong>azienda</strong> partner dichiara di poterci fornire prodotti per centinaia di milioni di euro ma risulta avere pochissimi dipendenti e scarso fatturato, potrebbe venirci qualche dubbio sull’effettiva capacità di realizzare quanto promesso.</p>
 <p>Per permettere di farsi rapidamente un’idea riguardo l’azienda <strong>SpazioDati</strong> ha realizzato <a class="reference external" href="https://atoka.io/">Atoka.io</a> , un motore di ricerca di aziende italiane, che mostra in quale settore di mercato opera un’impresa, il fatturato, il numero di dipendenti, la presenza sul web, e altri fattori. SpazioDati raccoglie queste informazioni sfruttando numerose fonti dati, fra cui dati ufficiali dalla Camera di Commercio, OpenData, dati estratti dalle news e dai siti web.</p>
 <p>Tra i fattori analizzati vi sono i <strong>siti aziendali</strong>, sempre più importanti nell’era di Internet. Purtroppo, spesso sono mantenuti senza la dovuta attenzione e quindi vulnerabili agli <strong>attacchi di hacker</strong> malintenzionati, che possono portare a sostituzione di pagine del sito con pubblicità indesiderata, rivelazione dei dati privati dei clienti, fuoriuscita di segreti industriali, e in generale gravi danni d’immagine all’azienda.</p>
@@ -2469,36 +2409,36 @@
 testuale del sito.</p>
 <p><img alt="image0" src="../../_images/spaziodati-big.png" /></p>
 <p><strong>Sponsor:</strong> Questa sfida è un riadattamento della challenge ‘A prova di hacker’ che è stata proposta da <a class="reference external" href="http://spaziodati.eu">SpazioDati</a> all’interno dell’ICTDays Summercamp 2019 per studenti di istituti superiori in Alternanza Scuola-Lavoro presso il Dipartimento di Ingegneria e Scienze dell’Informazione (DISI) dell’Università di Trento.</p>
-<div class="section" id="a.-Analisi">
-<h2>a. Analisi<a class="headerlink" href="#a.-Analisi" title="Permalink to this headline">¶</a></h2>
+<section id="a.-Analisi">
+<h2>a. Analisi<a class="headerlink" href="#a.-Analisi" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Analizzare il mercato potenziale e la distribuzione delle tecnologie impiegate (non guardare solo il dataset fornito ! Cercate anche statistiche altrove ). Su quali tecnologie conviene concentrarsi? Quanto spesso vengono usate?</p></li>
 <li><p>Trovare dataset di vulnerabilità adatti allo scopo, ponendo particolare attenzione alla licenza dei dati (sono usabili commercialmente? Bisogna pagarli?). Sono aggiornati frequentemente? Ci sono versioni a pagamento più ricche di informazioni / aggiornate ?</p></li>
 <li><p>studio delle possibilità business (a chi si può vendere il servizio che andrete a creare? Come si può presentare in modo efficace?)</p></li>
 </ul>
-</div>
-<div class="section" id="b.-Integrazione">
-<h2>b. Integrazione<a class="headerlink" href="#b.-Integrazione" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="b.-Integrazione">
+<h2>b. Integrazione<a class="headerlink" href="#b.-Integrazione" title="Permalink to this headline"></a></h2>
 <p>Incrociare i dati web di spaziodati con il / i dataset di vulnerabilità trovati, producendo un’unica tabella csv (o json).</p>
-</div>
-<div class="section" id="c.-Sviluppo-di-uno-indice">
-<h2>c. Sviluppo di uno indice<a class="headerlink" href="#c.-Sviluppo-di-uno-indice" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="c.-Sviluppo-di-uno-indice">
+<h2>c. Sviluppo di uno indice<a class="headerlink" href="#c.-Sviluppo-di-uno-indice" title="Permalink to this headline"></a></h2>
 <p>Determinare un indice (<em>score</em>) che tenga in considerazione le vulnerabilità riscontrate assegnando un peso a ciascuna. IMPORTANTE: nel report tecnico deve essere chiaramente riportata e motivata la formula usata per determinare l’indice: presentare un software anche apparentemente funzionante non è sufficiente. Implementare il calcolo dell’indice e aggiungere una o più colonne per lo score (ed eventualmente sue componenti) ai dati integrati</p>
-</div>
-<div class="section" id="d.-Visualizzazione">
-<h2>d. Visualizzazione<a class="headerlink" href="#d.-Visualizzazione" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="d.-Visualizzazione">
+<h2>d. Visualizzazione<a class="headerlink" href="#d.-Visualizzazione" title="Permalink to this headline"></a></h2>
 <p>Dato un sito, visualizzare il singolo score e presentare un riassunto</p>
 <p>Quale può essere la visualizzazione più efficace che trasmette la maggior quantità di informazione senza confondere con tecnicismi da hacker? Tenete presente che i potenziali utilizzatori di tali grafici saranno personale non tecnico, come dirigenti e figure nel ramo commerciale.</p>
-</div>
-<div class="section" id="Dataset">
-<h2>Dataset<a class="headerlink" href="#Dataset" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="dataset-oval">
-<h3>dataset oval<a class="headerlink" href="#dataset-oval" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="Dataset">
+<h2>Dataset<a class="headerlink" href="#Dataset" title="Permalink to this headline"></a></h2>
+<section id="dataset-oval">
+<h3>dataset oval<a class="headerlink" href="#dataset-oval" title="Permalink to this headline"></a></h3>
 <p>Dataset vulnerabilità, scaricabile da <a class="reference external" href="https://www.itsecdb.com/oval/">itsecdb.com/oval</a></p>
 <p>Non ne forniamo dettagli, dovrete capire voi cosa (e in che formato) prendere la sito, capirne la licenza d’uso, se li possiamo usare, se è il caso di valutare alternative, etc.</p>
-</div>
-<div class="section" id="rilevamento.jsonl">
-<h3>rilevamento.jsonl<a class="headerlink" href="#rilevamento.jsonl" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rilevamento.jsonl">
+<h3>rilevamento.jsonl<a class="headerlink" href="#rilevamento.jsonl" title="Permalink to this headline"></a></h3>
 <p>File fornito da SpazioDati contenente le tecnologie rilevate per ogni sito web.</p>
 <p><a class="reference external" href="../../_static/generated/hacker-proof-chal.zip">Scarica file</a></p>
 <p>Formato: <code class="docutils literal notranslate"><span class="pre">JSONL</span></code> , cioè una sequenza di JSON. Ogni riga è un json con un sito per riga. Per sapere come leggerli in Python, guardare guida <a class="reference external" href="https://it.softpython.org/formats/formats-sol.html#3.-File-JSON">Formati dati</a></p>
@@ -2578,56 +2518,39 @@ testuale del sito.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../pantheon/pantheon-chal.html" class="btn btn-neutral float-right" title="Pantheon Challenge - Personaggi culturalmente importanti" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../kaggle/kaggle-chal.html" class="btn btn-neutral float-left" title="Kaggle Challenge - dataset per tutti i gusti" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pantheon/pantheon-chal.html" class="btn btn-neutral float-right" title="Pantheon Challenge - Personaggi culturalmente importanti" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.
-
-    </p>
+    <p>&#169; Copyright # CC-BY 2017 - 2022, David Leoni, Alessio Zamboni, Marco Caresia.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
