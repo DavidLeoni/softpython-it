@@ -3,7 +3,10 @@ on: [push]
 jobs:
   build_docs_job:
     if: (github.repository == 'DavidLeoni/softpython-it') && ((github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/dev') || (github.ref == 'refs/heads/themed'))
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+    env:
+      SOURCE_BRANCH: ${{ github.head_ref || github.ref_name }} 
+      WEB_BRANCH: it.softpython.org
     name: Build docs    
     steps:   
     - name: Install deps
@@ -36,22 +39,30 @@ jobs:
         tree -aC $GITHUB_WORKSPACE
     - name: Commit documentation changes
       run: |
-        git clone --depth 1  --branch it.softpython.org  https://github.com/${{ github.repository }}.git it.softpython.org
+        git clone --depth 1  --single-branch --branch ${WEB_BRANCH}  https://github.com/${{ github.repository }}.git ${WEB_BRANCH}
         
-        mkdir -p it.softpython.org/${{ env.WEB_PATH }}
-        cp -r $GITHUB_WORKSPACE/html/* it.softpython.org/${{ env.WEB_PATH }}
+        cd ${WEB_BRANCH}
+        if [ -d "${{ env.WEB_PATH }}" ] 
+        then
+            git rm -r * ${{ env.WEB_PATH }}
+        fi                
+        mkdir -p ${{ env.WEB_PATH }}        
+
+
+        cp -r $GITHUB_WORKSPACE/html/* ${{ env.WEB_PATH }}
+
         if compgen -G "$GITHUB_WORKSPACE/latex/*.pdf" > /dev/null; then
-             cp -r $GITHUB_WORKSPACE/latex/*.pdf it.softpython.org/${{ env.WEB_PATH }}
+             cp -r $GITHUB_WORKSPACE/latex/*.pdf ${{ env.WEB_PATH }}
         else
              echo "ERROR: NO PDF FILES WHERE GENERATED!"
         fi
         if compgen -G "$GITHUB_WORKSPACE/epub/*.epub" > /dev/null; then
-             cp -r $GITHUB_WORKSPACE/epub/*.epub it.softpython.org/${{ env.WEB_PATH }}
+             cp -r $GITHUB_WORKSPACE/epub/*.epub ${{ env.WEB_PATH }}
         else
              echo "ERROR: NO EPUB FILES WHERE GENERATED!"
         fi
-        # note: html zip is already provided by Github
-        cd it.softpython.org        
+
+	# note: html zip is already provided by Github  
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .      
@@ -63,9 +74,12 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
-        branch: it.softpython.org
-        directory: it.softpython.org
+        branch: ${{ env.WEB_BRANCH }}
+        directory: ${{ env.WEB_BRANCH }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: update server
       run: |
-        curl --silent --digest --user ${{ secrets.DAVAPI_CREDENTIALS}} ${{ secrets.DAVAPI_URL }}    
++        # Custom deploy, you don't need this
++        if [ ! -z "${{ secrets.DAVAPI_URL }}" ]; then 
+            curl --silent --digest --user ${{ secrets.DAVAPI_CREDENTIALS}} ${{ secrets.DAVAPI_URL }}    
+         fi

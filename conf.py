@@ -122,6 +122,14 @@ extensions = [
     #, 'rst2pdf.pdfbuilder'
 ]
 
+
+#OFFLINE BROWSING https://github.com/DavidLeoni/jupman/issues/96
+mathjax_path = "js/mathjax/tex-mml-chtml.js"
+nbsphinx_requirejs_path = "js/require.min.js"  
+#must reset otherwise adds integrity and crossorigin html attributes
+nbsphinx_requirejs_options = { }
+
+
 # Exclude build directory and Jupyter backup files:
 exclude_patterns = [jm.build,
                     jm.generated, 
@@ -200,6 +208,9 @@ html_baseurl = 'https://it.softpython.org'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+# don't want _sources directory
+html_copy_source = False
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -235,10 +246,11 @@ html_js_files = [
 ]
 
 html_css_files = [    
-    'css/jupman.3.3.css',      # shared among jupyter and website
-    'css/jupman-web.3.4.4.css',  # only on website    
-    'css/softpython-theme.3.4.5.css',  
+    'css/jupman.3.5.css',      # shared among jupyter and website
+    'css/jupman-web.3.5.css',  # only on website    
+    'css/softpython-theme.3.5.css',  
 ]
+
 
 
 # -- Options for HTMLHelp output ------------------------------------------

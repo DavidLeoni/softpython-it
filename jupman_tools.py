@@ -464,7 +464,7 @@ class JupmanPreprocessor(Preprocessor):
 
         if self.jupman._is_to_preprocess(nb, source_abs_fn):
             relpath = os.path.relpath(source_abs_fn, os.path.abspath(os.getcwd()))
-            info("JupmanPreprocessor: webifying %s" % relpath )
+            info("JupmanPreprocessor: parsing %s" % relpath )
             try:
                 self.jupman.validate_tags(source_abs_fn)
             except Exception as ex:

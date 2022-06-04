@@ -29,7 +29,7 @@ def init(toc=False):
     """ Injects notebooks with js and css from _static
     
         To be called at the beginning of notebooks, only if you *really* need it.
-        Please do read https://jupman.softpython.org/en/latest/usage.html#Running-Jupyter
+        Please do read https://jupman.readthedocs.io/en/latest/usage.html#Running-Jupyter
                    
         NOTE: on error doesn't raise exception and just prints error message
                
@@ -52,7 +52,7 @@ def init(toc=False):
             #    so it is better to include scripts instead of using relative imports
 
             root = os.path.dirname(os.path.abspath(__file__))
-            _static = os.path.join(root, '_static')                
+            _static = os.path.join(root, '_static')                                        
             
             css = open("%s/css/jupman.css" % _static, "r").read()
             tocjs = open("%s/js/toc.js" % _static, "r").read()
@@ -128,6 +128,25 @@ def show_run(classOrMethod):
     """    
     run(classOrMethod)
 
+def save_py(filename, data):
+    """ Creates a .py file holding pydata assigned to a variable 
+        
+        Example: save_py('my_data.py', ['a','b','c'])
+        
+                will create a file containing the line:
+                
+                my_data = ['a','b','c']   
+                
+        @since 3.3
+    """
+    with open(filename, "w+", encoding='utf-8') as expo:        
+        from pprint import pformat
+        s = pformat(data)        
+        expo.write(filename[:-3])
+        expo.write(' = ')
+        expo.write(s)        
+    
+
 def mem_limit(MB=None):
     """Limits the memory this Python process can use. By default uses half free memory.
        
@@ -144,6 +163,12 @@ def mem_limit(MB=None):
     if os.name == 'nt':
         print('WARNING: limiting memory on Windows is not supported')
         return
+
+    #https://stackoverflow.com/a/64444776
+    import platform
+    if platform.system().lower() == 'darwin':
+        print('WARNING: limiting memory on Mac is not supported')
+        return        
     
     import resource
     with open('/proc/meminfo', 'r') as mem:
@@ -164,6 +189,75 @@ def mem_limit(MB=None):
 
 
 
+    
+def draw_img(path, figsize=None):
+    """ Display images of given size
+        Workaround for https://github.com/DavidLeoni/jupman/issues/61
+        
+        @since 3.3
+    """
+    import matplotlib.pyplot as plt;
+    import matplotlib.image as mpimg
+    img = mpimg.imread(path)
+    if figsize:        
+        fig, ax = plt.subplots(1, 1, figsize=figsize)
+    else:
+        fig,ax = plt.subplots(1, 1)    
+    ax.axis('off')
+    
+    plt.imshow(img)    
+
+    
+def draw_text(text, fontsize=None):    
+    """ Display text as image
+        Workaround for https://github.com/DavidLeoni/jupman/issues/66        
+        
+        @since 3.3
+    """
+    import matplotlib.pyplot as plt
+    
+    fig, ax = plt.subplots(1, 1, figsize=(1,1))    
+    
+    # Note: figsize doesn't appear to work to reduce size, only to increase and doesn't scale text anyway
+    #       if figsize is not set, text appears too low
+    
+    if fontsize:
+        plt.text(0, 0, str(text),fontsize=fontsize)
+    else:
+        plt.text(0, 0, str(text),fontsize=9) # note: this default looks good in PDF, but is small for jupyter
+    ax.axis('off')        
+    plt.show()    
+    
+def draw_df(df, fontsize=16, scale=(1.8, 3.9), figsize=(12, 2)):
+    """ Draws a Pandas DataFrame as an image
+        Taken from https://stackoverflow.com/a/36904120
+        @since 3.3
+    """    
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    from pandas.plotting import table
+    import numpy as np
+    fig, ax = plt.subplots(figsize=figsize) # set size frame
+    ax.xaxis.set_visible(False)  # hide the x axis
+    ax.yaxis.set_visible(False)  # hide the y axis
+    ax.set_frame_on(False)  # no visible frame, uncomment if size is ok
+    col_widths = [0.008 * (8 + df[col].map(lambda x: len(str(x))).max()) for col in df]
+    tabla = table(ax, df, loc='upper right', colWidths=col_widths)  # where df is your data frame
+    tabla.auto_set_font_size(False) # Activate set fontsize manually
+    tabla.set_fontsize(fontsize) # if ++fontsize is necessary ++colWidths
+    tabla.scale(scale[0], scale[1]) # change size table
+    #plt.savefig('table.png', transparent=True)    
+        
+def get_doc(fun):
+    """ Returns the help of a function formatted in a faithful manner
+        
+        @since 3.3
+    """
+    import pydoc
+    lines = pydoc.render_doc(fun, renderer=pydoc.plaintext).split('\n')
+    
+    return 'def ' + lines[2] + ':\n    """ ' + '\n    '.join(lines[3:]).strip()+ '\n    """'        
+    
 def pytut_json(jm_code):
     """ Runs jm_code and return a JSON execution trace
 
@@ -2705,8 +2799,8 @@ def pytut():
         .vizLayoutTd {
             background-color: #fff !important;
         }
-
-        #pyStdout {            
+                            
+        #pyStdout {
             min-height:25px;
         }
 
