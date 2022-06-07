@@ -1714,11 +1714,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -1766,8 +1767,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html">Challenge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#Il-protosincrotrone">Il protosincrotrone</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#IgNobel">IgNobel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#1.-Il-protosincrotrone">1. Il protosincrotrone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#2.-Il-Trader">2. Il Trader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#3.-IgNobel">3. IgNobel</a></li>
 </ul>
 </li>
 </ul>
@@ -2672,7 +2674,7 @@ i
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                               \ j  0,1,2,3
                                i
                                   [
-estrai dalla riga a  i=0 --&gt;   0   [a,b,c,d],        &#39;a&#39; è estratto da mat[0][0]
+estrai dalla riga a  i=0 --&gt;   0   [a,b,c,d],     &#39;a&#39; è estratto da mat[0][0]
                                1   [e,f,g,h],
                                2   [p,q,r,s],
                                3   [t,u,v,z]
@@ -2683,7 +2685,7 @@ estrai dalla riga a  i=0 --&gt;   0   [a,b,c,d],        &#39;a&#39; è estratto 
                                i
                                   [
                                0   [a,b,c,d],
-estrai dalla riga a i=1  --&gt;   1   [e,f,g,h],        &#39;f&#39; è estratto da mat[1][1]
+estrai dalla riga a i=1  --&gt;   1   [e,f,g,h],    &#39;f&#39; è estratto da mat[1][1]
                                2   [p,q,r,s],
                                3   [t,u,v,z]
                                   ]
@@ -2694,26 +2696,26 @@ estrai dalla riga a i=1  --&gt;   1   [e,f,g,h],        &#39;f&#39; è estratto 
                                   [
                                0   [a,b,c,d],
                                1   [e,f,g,h],
-estrai dalla riga a i=2  --&gt;   2   [p,q,r,s],        &#39;r&#39; è estratto da mat[2][2]
+estrai dalla riga a i=2  --&gt;   2   [p,q,r,s],    &#39;r&#39; è estratto da mat[2][2]
                                3   [t,u,v,z]
                                   ]
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                \ j  0,1,2,3
-                                i
-                                   [
-                                0   [a,b,c,d],
-                                1   [e,f,g,h],
-                                2   [p,q,r,s],
- estrai dalla riga a i=3  --&gt;   3   [t,u,v,z]         &#39;z&#39; è estratto da mat[3][3]
-                                   ]
-
-Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
-
- i, j
- 1, 1
- 2, 2
- 3, 3
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                               \ j  0,1,2,3
+                               i
+                                  [
+                               0   [a,b,c,d],
+                               1   [e,f,g,h],
+                               2   [p,q,r,s],
+estrai dalla riga a i=3  --&gt;   3   [t,u,v,z]     &#39;z&#39; è estratto da mat[3][3]
+                                  ]
+</pre></div>
+</div>
+<p>Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>i, j
+1, 1
+2, 2
+3, 3
 </pre></div>
 </div>
 <p>Ci sono due modi di risolvere questo esercizio, uno è usare un doppio for (un for annidato, per essere precisi), mentre l’altro metodo usa solo un for. Prova a risolverlo in entrambi i modi. Di quanti passi hai bisogno con un doppio for? e con uno solo?</p>
@@ -2751,8 +2753,9 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
                                              <span class="c1"># è ValueError come ci aspettiamo</span>
                                              <span class="c1"># che faccia, il codice non dovrebbe</span>
                                              <span class="c1"># mai arrivare qui</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori non sono catturati</span>
-    <span class="k">pass</span>  <span class="c1"># In una calusola except devi sempre mettere del codice</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori</span>
+                   <span class="c1"># non sono catturati</span>
+    <span class="k">pass</span>  <span class="c1"># In una clausola except devi sempre mettere del codice</span>
           <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
 </pre></div>
 </div>
@@ -2778,8 +2781,9 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
                                              <span class="c1"># è ValueError come ci aspettiamo</span>
                                              <span class="c1"># che faccia, il codice non dovrebbe</span>
                                              <span class="c1"># mai arrivare qui</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori non sono catturati</span>
-    <span class="k">pass</span>  <span class="c1"># In una calusola except devi sempre mettere del codice</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1"># cattura solo ValueError, altri tipi di errori</span>
+                   <span class="c1"># non sono catturati</span>
+    <span class="k">pass</span>  <span class="c1"># In una clausola except devi sempre mettere del codice</span>
           <span class="c1"># Qui mettiamo il comando pass che non fa niente</span>
 </pre></div>
 </div>
@@ -2814,7 +2818,7 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 
 <span class="k">assert</span> <span class="n">anti_diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
 
-<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor!</span>
+<span class="c1"># Se hai dubbi sugli indici, ricordati di provare il codice in Python Tutor!</span>
 <span class="c1"># jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2832,7 +2836,7 @@ Da quanto sopra, notiamo che abbiamo bisogno di elementi da questi indici:
 
 <span class="k">assert</span> <span class="n">anti_diag</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
 
-<span class="c1"># Se hai dubbi riguardo gli indici ricordati di provare il codice in Python Tutor!</span>
+<span class="c1"># Se hai dubbi sugli indici, ricordati di provare il codice in Python Tutor!</span>
 <span class="c1"># jupman.pytut()</span>
 </pre></div>
 </div>
@@ -2912,13 +2916,13 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <p>Per esempio, da quanto sopra per ciascuna riga indice <code class="docutils literal notranslate"><span class="pre">i</span></code> possiamo facilmente trovare di quale indice limite <code class="docutils literal notranslate"><span class="pre">j</span></code> abbiamo bisogno per raggiungere nella nostra caccia agli zero:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 34%" />
-<col style="width: 58%" />
+<col style="width: 12%" />
+<col style="width: 36%" />
+<col style="width: 52%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>i</p></th>
-<th class="head"><p>limite j (incluso)</p></th>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">i</span></code></p></th>
+<th class="head"><p>limite <code class="docutils literal notranslate"><span class="pre">j</span></code> (incluso)</p></th>
 <th class="head"><p>Note</p></th>
 </tr>
 </thead>
@@ -3116,7 +3120,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
 
-<span class="c1"># scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)</span>
+<span class="c1"># scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7</span>
 
 <span class="n">k</span> <span class="o">=</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
@@ -3133,10 +3137,10 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jma944b771-f111-47c9-8e13-3f7884d86519" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+<script id="json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" type="application/json" >
+    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jma944b771-f111-47c9-8e13-3f7884d86519" class="pytutorVisualizer"> </div>
+<div id="jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3156,12 +3160,12 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jma944b771-f111-47c9-8e13-3f7884d86519').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jma944b771-f111-47c9-8e13-3f7884d86519',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3184,7 +3188,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
 
-<span class="c1"># scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)</span>
+<span class="c1"># scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7</span>
 <br/><br/></pre></div>
 </div>
 </div>
@@ -3195,10 +3199,10 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jma944b771-f111-47c9-8e13-3f7884d86519" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x e y (non usare direttamente le costanti 3 e 7!)\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+<script id="json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" type="application/json" >
+    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
 </script>
-<div id="jma944b771-f111-47c9-8e13-3f7884d86519" class="pytutorVisualizer"> </div>
+<div id="jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3218,12 +3222,12 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jma944b771-f111-47c9-8e13-3f7884d86519').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jma944b771-f111-47c9-8e13-3f7884d86519',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 

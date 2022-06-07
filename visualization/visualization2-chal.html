@@ -1714,11 +1714,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -1766,8 +1767,9 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Challenge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Il-protosincrotrone">Il protosincrotrone</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#IgNobel">IgNobel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1.-Il-protosincrotrone">1. Il protosincrotrone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.-Il-Trader">2. Il Trader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3.-IgNobel">3. IgNobel</a></li>
 </ul>
 </li>
 </ul>
@@ -2647,8 +2649,8 @@ div.rendered_html tbody tr:hover {
 </style>
 <section id="Visualizzazione-2---Challenge">
 <h1>Visualizzazione 2 - Challenge<a class="headerlink" href="#Visualizzazione-2---Challenge" title="Permalink to this headline"></a></h1>
-<section id="Il-protosincrotrone">
-<h2>Il protosincrotrone<a class="headerlink" href="#Il-protosincrotrone" title="Permalink to this headline"></a></h2>
+<section id="1.-Il-protosincrotrone">
+<h2>1. Il protosincrotrone<a class="headerlink" href="#1.-Il-protosincrotrone" title="Permalink to this headline"></a></h2>
 <p>✪✪ Requisiti: matplotlib, strutture varie</p>
 <p>♫ Plottiam ♫ Plottiam ♫ ! In un recente esperimento svolto in collaborazione tra il CERN e la NASA abbiamo raccolto un sacco di dati.</p>
 <p>Si tratta di punti nello spazio che ci segnalano come i bosoni bi-gravitazionali interagiscono con le stringhe di campo finito per comporre il flusso canalizzatore della tarapia tapioca.</p>
@@ -2699,8 +2701,68 @@ punto2(4, 4)
 </div>
 </div>
 </section>
-<section id="IgNobel">
-<h2>IgNobel<a class="headerlink" href="#IgNobel" title="Permalink to this headline"></a></h2>
+<section id="2.-Il-Trader">
+<h2>2. Il Trader<a class="headerlink" href="#2.-Il-Trader" title="Permalink to this headline"></a></h2>
+<p>✪✪ Un’analisi di mercato mira a comparare la performance di un titolo con il mercato di riferimento (benchmark), riportati in una tabella verticale in questo formato:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>giorno  benchmark titolo
+    0     18        9
+    2     19       11
+    4     15        7
+    6      4        9
+    8      8       11
+    10    16       12
+    12    17       13
+    14    11        9
+    16     9       11
+    18     5       10
+</pre></div>
+</div>
+<p>Sono state compiute 10 rilevazioni a distanza ciascuna di 2 giorni. Si vuole visualizzare:</p>
+<ol class="arabic simple">
+<li><p>l’andamento del benchmark, in blu</p></li>
+<li><p>l’andamento del titolo, in arancione</p></li>
+<li><p>il minimo e il massimo del <strong>solo</strong> titolo come linee orizzontali, rispettivamente rossa e verde</p></li>
+</ol>
+<ul class="simple">
+<li><p>mostra i giorni come interi (prova a usare <code class="docutils literal notranslate"><span class="pre">plt.xticks</span></code>)</p></li>
+<li><p><strong>RICORDATI</strong> di impostare il titolo del grafico e gli assi</p></li>
+<li><p><strong>USA</strong> numpy il più possibile</p></li>
+</ul>
+<p><strong>SUGGERIMENTI</strong>:</p>
+<ul class="simple">
+<li><p>per avere grafici multipli in sovraimpressione è sufficiente fare chiamate successive a <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> nella stessa cella.</p></li>
+<li><p>per i colori, usa l’attributo <code class="docutils literal notranslate"><span class="pre">color=</span></code> nelle chiamate a <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code></p></li>
+<li><p>per le linee tratteggiate, usa l’indicatore <code class="docutils literal notranslate"><span class="pre">'--'</span></code></p></li>
+</ul>
+<p><img alt="expected-chart" src="../_images/expected-chart.png" /></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span> <span class="mi">0</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">2</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">4</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+<span class="p">])</span>
+
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+<section id="3.-IgNobel">
+<h2>3. IgNobel<a class="headerlink" href="#3.-IgNobel" title="Permalink to this headline"></a></h2>
 <p>✪✪ Requisiti: matplotlib, random, strutture varie</p>
 <p>Come ogni scienziato indegno di rispetto sa, quando i dati degli esperimenti non tornano è il momento di inventarsi numeri.</p>
 <p>Per creare grafici più credibili proviamo a generare due sequenze di punti casuali utilizzando la libreria <code class="docutils literal notranslate"><span class="pre">random</span></code>, e poi proviamo a plottare questi punti.</p>
@@ -2711,7 +2773,7 @@ punto2(4, 4)
 </ul>
 <p><strong>SUGGERIMENTO</strong>: <code class="docutils literal notranslate"><span class="pre">random</span></code> mette già a disposizione dei metodi per fare sampling da distribuzioni.++</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
@@ -2726,7 +2788,7 @@ punto2(4, 4)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/visualization_visualization2-chal_7_0.png" src="../_images/visualization_visualization2-chal_7_0.png" />
+<img alt="../_images/visualization_visualization2-chal_9_0.png" src="../_images/visualization_visualization2-chal_9_0.png" />
 </div>
 </div>
 </section>

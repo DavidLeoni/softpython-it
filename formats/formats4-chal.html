@@ -1714,11 +1714,12 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#1.-Il-primo-parsing">1. Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#2.-Scrittura-output">2. Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#3.-Il-secolo">3. Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#4.-Controlla">4. Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#1.-Cure-termali">1. Cure termali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.2-Scrittura-output">2.2 Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.3-Il-secolo">2.3 Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.4-Controlla">2.4 Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -1766,8 +1767,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html">Challenge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#Il-protosincrotrone">Il protosincrotrone</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#IgNobel">IgNobel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#1.-Il-protosincrotrone">1. Il protosincrotrone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#2.-Il-Trader">2. Il Trader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#3.-IgNobel">3. IgNobel</a></li>
 </ul>
 </li>
 </ul>
@@ -2651,15 +2653,88 @@ div.rendered_html tbody tr:hover {
 <h2><a class="reference external" href="../_static/generated/formats.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/formats">Naviga file online</a></p>
 </section>
-<section id="Personaggi-storici-del-Trentino">
-<h2>Personaggi storici del Trentino<a class="headerlink" href="#Personaggi-storici-del-Trentino" title="Permalink to this headline"></a></h2>
+<section id="1.-Cure-termali">
+<h2>1. Cure termali<a class="headerlink" href="#1.-Cure-termali" title="Permalink to this headline"></a></h2>
+<p>✪✪ Un centro benessere accoglie clienti che possono decidere di usufruire tra uno o più servizi. Il centro segna queste informazioni in un file <a class="reference external" href="centro-benessere.csv">centro-benessere.csv</a> mettendo <code class="docutils literal notranslate"><span class="pre">1</span></code> se il servizio viene erogato, altrimenti <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/formats_formats4-chal_2_0.png" src="../_images/formats_formats4-chal_2_0.png" />
+</div>
+</div>
+<p>Ogni servizio ha lo stesso <code class="docutils literal notranslate"><span class="pre">costo_unitario=100</span></code> euro, e il centro vuole conoscere la spesa totale per ciascun cliente.</p>
+<p>Scrivi una funzione <code class="docutils literal notranslate"><span class="pre">terme</span></code> che dato il nome di un file, lo legge e RITORNA un dizionario che associa a ciascuna persona il conto da saldare.</p>
+<ul class="simple">
+<li><p><strong>USA</strong> il <code class="docutils literal notranslate"><span class="pre">csv.reader</span></code>, con encoding <code class="docutils literal notranslate"><span class="pre">utf-8</span></code></p></li>
+<li><p><strong>NON</strong> scrivere la costante <code class="docutils literal notranslate"><span class="pre">100</span></code> nel codice</p></li>
+</ul>
+<p><strong>Esempio</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere.csv&#39;</span><span class="p">)</span>
+
+<span class="go">{&#39;Marco&#39;: 400,</span>
+<span class="go"> &#39;Andrea&#39;: 300,</span>
+<span class="go"> &#39;Sara&#39;: 600,</span>
+<span class="go"> &#39;Rosa&#39;: 200,</span>
+<span class="go"> &#39;Cristina&#39;: 300,</span>
+<span class="go"> &#39;Roberto&#39;: 100}</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">costo_unitario</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># euro</span>
+
+<span class="k">def</span> <span class="nf">terme</span><span class="p">(</span><span class="n">nome_file</span><span class="p">):</span>
+    <span class="k">pass</span> <span class="c1"># IMPLEMENTAMI</span>
+
+
+
+<span class="n">res1</span> <span class="o">=</span> <span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere1.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res1</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">res1</span> <span class="o">==</span> <span class="p">{</span> <span class="s1">&#39;Marco&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+                 <span class="s1">&#39;Andrea&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+                 <span class="s1">&#39;Sara&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+                 <span class="s1">&#39;Rosa&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+                 <span class="s1">&#39;Cristina&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+                 <span class="s1">&#39;Roberto&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+
+<span class="n">res2</span> <span class="o">=</span> <span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere2.csv&#39;</span><span class="p">)</span>
+<span class="c1">#print(res2)</span>
+<span class="k">assert</span> <span class="n">res2</span> <span class="o">==</span> <span class="p">{</span> <span class="s1">&#39;Giulio&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+                 <span class="s1">&#39;Sabina&#39;</span><span class="p">:</span> <span class="mi">100</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;Marco&#39;: 400, &#39;Andrea&#39;: 300, &#39;Sara&#39;: 600, &#39;Rosa&#39;: 200, &#39;Cristina&#39;: 300, &#39;Roberto&#39;: 100}
+</pre></div></div>
+</div>
+</section>
+<section id="2.-Personaggi-storici-del-Trentino">
+<h2>2. Personaggi storici del Trentino<a class="headerlink" href="#2.-Personaggi-storici-del-Trentino" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ Requisiti: Formato file CSV, matrici di liste, dizionari</p>
 <p>Oggi faremo un salto nella storia analizzando il dataset <a class="reference external" href="personaggi-storici-trentino.csv">personaggi-storici-trentino.csv</a></p>
 <p>Sorgente dati: Provincia Autonoma di Trento, <a class="reference external" href="https://dati.trentino.it/dataset/personaggi-storici-trentini">dati.trentino.it</a></p>
 <p>Dal dataset estrarremo 3 colonne: <code class="docutils literal notranslate"><span class="pre">Nome</span></code>, <code class="docutils literal notranslate"><span class="pre">Luogo</span> <span class="pre">di</span> <span class="pre">Nascita</span></code> e <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">di</span> <span class="pre">nascita</span></code></p>
 </section>
-<section id="1.-Il-primo-parsing">
-<h2>1. Il primo parsing<a class="headerlink" href="#1.-Il-primo-parsing" title="Permalink to this headline"></a></h2>
+<section id="2.1-Il-primo-parsing">
+<h2>2.1 Il primo parsing<a class="headerlink" href="#2.1-Il-primo-parsing" title="Permalink to this headline"></a></h2>
 <p>Leggi una riga alla volta dall’originale come lista, costruisci una NUOVA riga di 3 colonne e sistema gli eventuali problemi riscontrati, facendo infine una STAMPA della riga sistemata:</p>
 <ul class="simple">
 <li><p>per leggere, usa l’encoding <code class="docutils literal notranslate"><span class="pre">'latin-1'</span></code>, altrimenti il file potrebbe non aprirsi proprio o potresti vedere strani caratteri invece delle accentate (verifica sia in Python, che aprendo in LibreOffice/Excel)</p></li>
@@ -2691,7 +2766,7 @@ Volterra, PI       -&gt; Volterra (Pisa)
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># Servono solo queste, non dovrebbero esserci casi diversi da questi</span>
@@ -2714,8 +2789,8 @@ Volterra, PI       -&gt; Volterra (Pisa)
 </div>
 </div>
 </section>
-<section id="2.-Scrittura-output">
-<h2>2. Scrittura output<a class="headerlink" href="#2.-Scrittura-output" title="Permalink to this headline"></a></h2>
+<section id="2.2-Scrittura-output">
+<h2>2.2 Scrittura output<a class="headerlink" href="#2.2-Scrittura-output" title="Permalink to this headline"></a></h2>
 <p>Dopo aver risolto il punto precedente, scrivi un CSV <code class="docutils literal notranslate"><span class="pre">output-personaggi.csv</span></code> contenente le righe come appena sistemate:</p>
 <ul class="simple">
 <li><p>l’header del csv di output deve essere tutto minuscolo:</p></li>
@@ -2727,8 +2802,8 @@ Volterra, PI       -&gt; Volterra (Pisa)
 <li><p>invece di <code class="docutils literal notranslate"><span class="pre">latin-1</span></code>, solo per scrivere usa la codifica <code class="docutils literal notranslate"><span class="pre">'utf-8'</span></code></p></li>
 </ul>
 </section>
-<section id="3.-Il-secolo">
-<h2>3. Il secolo<a class="headerlink" href="#3.-Il-secolo" title="Permalink to this headline"></a></h2>
+<section id="2.3-Il-secolo">
+<h2>2.3 Il secolo<a class="headerlink" href="#2.3-Il-secolo" title="Permalink to this headline"></a></h2>
 <p>Prova ad aggiungere una colonna <code class="docutils literal notranslate"><span class="pre">'secolo'</span></code>, che contenga solo il secolo, nel formato a 3 o 4 cifre e sempre con 2 zeri:</p>
 <ul class="simple">
 <li><p>Se il tuo codice fallisce su alcune date tirando eccezioni, prova ad usare un <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">except</span></code> per gestire eventuali problemi</p></li>
@@ -2758,7 +2833,7 @@ A cavallo tra l&#39;XI e il XII secolo -&gt; 1100
 </pre></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secoli</span> <span class="o">=</span> <span class="p">{</span>
@@ -2788,8 +2863,8 @@ A cavallo tra l&#39;XI e il XII secolo -&gt; 1100
 </div>
 </div>
 </section>
-<section id="4.-Controlla">
-<h2>4. Controlla<a class="headerlink" href="#4.-Controlla" title="Permalink to this headline"></a></h2>
+<section id="2.4-Controlla">
+<h2>2.4 Controlla<a class="headerlink" href="#2.4-Controlla" title="Permalink to this headline"></a></h2>
 <p>Se hai processato correttamente il dataset, dovresti aver ottenuto un output come questo: <a class="reference external" href="https://github.com/DavidLeoni/softpython-it/blob/master/formats/output-atteso-personaggi.csv">output-atteso-personaggi.csv</a></p>
 </section>
 </section>

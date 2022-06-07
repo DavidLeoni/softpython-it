@@ -1714,11 +1714,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#4.-Controlla">4. Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -1766,8 +1767,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../visualization/visualization2-chal.html">Challenge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#Il-protosincrotrone">Il protosincrotrone</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#IgNobel">IgNobel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#1.-Il-protosincrotrone">1. Il protosincrotrone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#2.-Il-Trader">2. Il Trader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visualization/visualization2-chal.html#3.-IgNobel">3. IgNobel</a></li>
 </ul>
 </li>
 </ul>
@@ -2765,8 +2767,7 @@ Abbiamo appena letto una riga!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -2809,39 +2810,13 @@ Abbiamo appena letto una riga!
 
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Abbiamo appena letto una riga!
-[&#39;animale&#39;, &#39;anni&#39;]
-
-Abbiamo appena letto una riga!
-[&#39;cane&#39;, &#39;12&#39;]
-
-Abbiamo appena letto una riga!
-[&#39;gatto&#39;, &#39;14&#39;]
-
-Abbiamo appena letto una riga!
-[&#39;pellicano&#39;, &#39;30&#39;]
-
-Abbiamo appena letto una riga!
-[&#39;scoiattolo&#39;, &#39;6&#39;]
-
-Abbiamo appena letto una riga!
-[&#39;aquila&#39;, &#39;25&#39;]
-
-</pre></div></div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.4</strong>: prova a mettere in una variabile <code class="docutils literal notranslate"><span class="pre">listona</span></code> una lista contenente tutte le righe estratte dal file, che quindi sarà una lista di liste che dovrebbe apparire così.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;animale&#39;</span><span class="p">,</span> <span class="s1">&#39; anni&#39;</span><span class="p">],</span>
@@ -2859,8 +2834,7 @@ Abbiamo appena letto una riga!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -2886,22 +2860,13 @@ Abbiamo appena letto una riga!
 [[&#39;animale&#39;, &#39;anni&#39;], [&#39;cane&#39;, &#39;12&#39;], [&#39;gatto&#39;, &#39;14&#39;], [&#39;pellicano&#39;, &#39;30&#39;], [&#39;scoiattolo&#39;, &#39;6&#39;], [&#39;aquila&#39;, &#39;25&#39;]]
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[&#39;animale&#39;, &#39;anni&#39;], [&#39;cane&#39;, &#39;12&#39;], [&#39;gatto&#39;, &#39;14&#39;], [&#39;pellicano&#39;, &#39;30&#39;], [&#39;scoiattolo&#39;, &#39;6&#39;], [&#39;aquila&#39;, &#39;25&#39;]]
-</pre></div></div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.5</strong>: Forse avrai notato che i numeri nella liste sono rappresentati come stringhe tipo <code class="docutils literal notranslate"><span class="pre">'12'</span></code> (nota gli apici), invece che come numeri interi Python (rappresentati senza apici), <code class="docutils literal notranslate"><span class="pre">12</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Abbiamo appena letto una riga!
@@ -2928,8 +2893,7 @@ Abbiamo appena letto una riga!
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -2950,22 +2914,13 @@ Abbiamo appena letto una riga!
 [[&#39;cane&#39;, 12], [&#39;gatto&#39;, 14], [&#39;pellicano&#39;, 30], [&#39;scoiattolo&#39;, 6], [&#39;aquila&#39;, 25]]
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[&#39;cane&#39;, 12], [&#39;gatto&#39;, 14], [&#39;pellicano&#39;, 30], [&#39;scoiattolo&#39;, 6], [&#39;aquila&#39;, 25]]
-</pre></div></div>
 </div>
 </section>
 <section id="Cos'è-esattamente-lettore-?">
@@ -2987,7 +2942,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;_csv.reader object at 0x7f8e583ed1d0&gt;
+&lt;_csv.reader object at 0x7fa1905bbbd0&gt;
 </pre></div></div>
 </div>
 <p>Quello che vediamo è piuttosto deludente.</p>
@@ -3112,8 +3067,7 @@ a scorrerlo due volte all’interno della stessa <code class="docutils literal n
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="kn">import</span> <span class="nn">csv</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">itertools</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -3131,26 +3085,17 @@ a scorrerlo due volte all’interno della stessa <code class="docutils literal n
 [[&#39;cane&#39;, 12], [&#39;gatto&#39;, 14], [&#39;pellicano&#39;, 30], [&#39;scoiattolo&#39;, 6], [&#39;aquila&#39;, 25]]
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#jupman-ourge-output</span>
-<span class="kn">import</span> <span class="nn">csv</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">itertools</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
     <span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[[&#39;cane&#39;, 12], [&#39;gatto&#39;, 14], [&#39;pellicano&#39;, 30], [&#39;scoiattolo&#39;, 6], [&#39;aquila&#39;, 25]]
-</pre></div></div>
 </div>
 <p><strong>✪ ESERCIZIO 2.10</strong>: Crea un file <code class="docutils literal notranslate"><span class="pre">mio-esempio.csv</span></code> nella stessa cartella dove c’è questo foglio Jupyter, copiandoci dentro il contenuto del file <code class="docutils literal notranslate"><span class="pre">esempio-1.csv</span></code>. Poi aggiungici una colonna <code class="docutils literal notranslate"><span class="pre">descrizione</span></code>, ricordandoti di separare il nome di colonna dalla precedente con una virgola. Come valori della colonna, metti nelle righe successive stringhe tipo <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">cani</span> <span class="pre">camminano</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">pellicani</span> <span class="pre">volano</span></code> a seconda dell’animale, etc ricordandoti di separarle dagli anni usando una virgola, così:</p>
 <p><code class="docutils literal notranslate"><span class="pre">cane,12,i</span> <span class="pre">cani</span> <span class="pre">camminano</span></code></p>
@@ -3478,7 +3423,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Mezzocorona&#39;, &#39;Canazei&#39;, &#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Peio&#39;, &#39;Moena&#39;, &#39;Tonadico&#39;}
+{&#39;Tonadico&#39;, &#39;Canazei&#39;, &#39;Moena&#39;, &#39;Mezzocorona&#39;, &#39;Vigo di Fassa&#39;, &#39;Trento&#39;, &#39;Peio&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -3499,7 +3444,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Mezzocorona&#39;, &#39;Canazei&#39;, &#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Peio&#39;, &#39;Moena&#39;, &#39;Tonadico&#39;}
+{&#39;Tonadico&#39;, &#39;Canazei&#39;, &#39;Moena&#39;, &#39;Mezzocorona&#39;, &#39;Vigo di Fassa&#39;, &#39;Trento&#39;, &#39;Peio&#39;}
 </pre></div></div>
 </div>
 <p><strong>✪✪ ESERCIZIO 2.14</strong>: prova a conteggiare in un dizionario quanti tipi di servizio vengono trovati. Dovresti ottenere un risultato così:</p>
@@ -3800,7 +3745,7 @@ e <code class="docutils literal notranslate"><span class="pre">Circoscrizione</s
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">selcir</span><span class="p">(</span><span class="n">filtro</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Implementami!&quot;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot; IMPLEMENTAMI &quot;&quot;&quot;</span>
 
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;2019-02-17-strutture-comune-di-trento.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -3827,7 +3772,6 @@ e <code class="docutils literal notranslate"><span class="pre">Circoscrizione</s
 
 
 
-
 <span class="n">selcir</span><span class="p">([</span><span class="s1">&#39;argentario&#39;</span><span class="p">,</span> <span class="s1">&#39;gardolo&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -3837,7 +3781,6 @@ e <code class="docutils literal notranslate"><span class="pre">Circoscrizione</s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Implementami!
 Trovati 16 risultati
 </pre></div></div>
 </div>
@@ -3872,7 +3815,7 @@ Trovati 16 risultati
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">selcir</span><span class="p">(</span><span class="n">filtro</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Implementami!&quot;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot; IMPLEMENTAMI &quot;&quot;&quot;</span>
 
 
 
@@ -3885,7 +3828,6 @@ Trovati 16 risultati
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Implementami!
 Trovati 16 risultati
 </pre></div></div>
 </div>
@@ -3926,7 +3868,6 @@ Trovati 16 risultati
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Implementami!
 Trovati 22 risultati
 </pre></div></div>
 </div>
@@ -3985,7 +3926,7 @@ Trovati 22 risultati
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">cercat</span><span class="p">(</span><span class="n">file_csv</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Implementami!&quot;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot; IMPLEMENTAMI &quot;&quot;&quot;</span>
 
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_csv</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -4000,6 +3941,7 @@ Trovati 22 risultati
     <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
 
 
+
 <span class="n">risultato</span> <span class="o">=</span> <span class="n">cercat</span><span class="p">(</span><span class="s1">&#39;punti-interesse.csv&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
 
@@ -4028,7 +3970,6 @@ Trovati 22 risultati
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Implementami!
 [&#39;Affitta Camere&#39;, &#39;Agriturismo&#39;, &#39;Alimentari&#39;, &#39;Appartamento Vacanze&#39;, &#39;Autostazione&#39;, &#39;Banca&#39;, &#39;Bancomat&#39;, &#39;Bar&#39;, &#39;Bed &amp; Breakfast&#39;, &#39;Biblioteca&#39;, &#39;Birreria&#39;, &#39;Bus Navetta&#39;, &#39;Cambiovaluta&#39;, &#39;Camping&#39;, &#39;Centro Wellness&#39;, &#39;Centro commerciale&#39;, &#39;Corrieri&#39;, &#39;Discoteca&#39;, &#39;Editoria&#39;, &#39;Farmacia&#39;, &#39;Funivia&#39;, &#39;Gelateria&#39;, &#39;Grande magazzino&#39;, &#39;Hotel&#39;, &#39;Istituzioni&#39;, &#39;Mercatini&#39;, &#39;Mercato&#39;, &#39;Monumento&#39;, &#39;Museo&#39;, &#39;Noleggio Sci&#39;, &#39;Numeri utili&#39;, &#39;Parcheggio&#39;, &#39;Pasticceria&#39;, &#39;Piscina&#39;, &#39;Posta&#39;, &#39;Prodotti tipici&#39;, &#39;Pub&#39;, &#39;Residence&#39;, &#39;Rifugio&#39;, &#39;Ristorante&#39;, &#39;Scuola Sci&#39;, &#39;Sede Trentino Trasporti&#39;, &#39;Snow Park&#39;, &#39;Souvenir&#39;, &#39;Sport&#39;, &#39;Stadio&#39;, &#39;Stadio del ghiaccio&#39;, &#39;Stazione dei Treni&#39;, &#39;Taxi&#39;, &#39;Teatro&#39;, &#39;Ufficio informazioni turistiche&#39;]
 
 </pre></div></div>
@@ -4040,7 +3981,8 @@ Implementami!
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">cercat</span><span class="p">(</span><span class="n">file_csv</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Implementami!&quot;</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot; IMPLEMENTAMI &quot;&quot;&quot;</span>
+
 
 
 <span class="n">risultato</span> <span class="o">=</span> <span class="n">cercat</span><span class="p">(</span><span class="s1">&#39;punti-interesse.csv&#39;</span><span class="p">)</span>
@@ -4071,7 +4013,6 @@ Implementami!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Implementami!
 [&#39;Affitta Camere&#39;, &#39;Agriturismo&#39;, &#39;Alimentari&#39;, &#39;Appartamento Vacanze&#39;, &#39;Autostazione&#39;, &#39;Banca&#39;, &#39;Bancomat&#39;, &#39;Bar&#39;, &#39;Bed &amp; Breakfast&#39;, &#39;Biblioteca&#39;, &#39;Birreria&#39;, &#39;Bus Navetta&#39;, &#39;Cambiovaluta&#39;, &#39;Camping&#39;, &#39;Centro Wellness&#39;, &#39;Centro commerciale&#39;, &#39;Corrieri&#39;, &#39;Discoteca&#39;, &#39;Editoria&#39;, &#39;Farmacia&#39;, &#39;Funivia&#39;, &#39;Gelateria&#39;, &#39;Grande magazzino&#39;, &#39;Hotel&#39;, &#39;Istituzioni&#39;, &#39;Mercatini&#39;, &#39;Mercato&#39;, &#39;Monumento&#39;, &#39;Museo&#39;, &#39;Noleggio Sci&#39;, &#39;Numeri utili&#39;, &#39;Parcheggio&#39;, &#39;Pasticceria&#39;, &#39;Piscina&#39;, &#39;Posta&#39;, &#39;Prodotti tipici&#39;, &#39;Pub&#39;, &#39;Residence&#39;, &#39;Rifugio&#39;, &#39;Ristorante&#39;, &#39;Scuola Sci&#39;, &#39;Sede Trentino Trasporti&#39;, &#39;Snow Park&#39;, &#39;Souvenir&#39;, &#39;Sport&#39;, &#39;Stadio&#39;, &#39;Stadio del ghiaccio&#39;, &#39;Stazione dei Treni&#39;, &#39;Taxi&#39;, &#39;Teatro&#39;, &#39;Ufficio informazioni turistiche&#39;]
 
 </pre></div></div>
