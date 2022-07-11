@@ -8,7 +8,7 @@ Libro completo su Python 3 per basi pulizia e analisi dati, in formato Jupyter n
 **Docenti**:  Tutte le pagine del sito sono fogli Jupyter convertiti in pagine web tramite [NBSphinx](https://nbsphinx.readthedocs.io), usando il template [Jupman](https://github.com/DavidLeoni/jupman). Per sapere come effettuare build e modifiche al manuale, vedere [la guida di Jupman](https://jupman.softpython.org/en/latest/usage.html)
 
 
-## Mirrors
+**Mirrors**:
 
 - sito ufficiale:  https://it.softpython.org
 - replica:  https://davidleoni.github.io/softpython-it
