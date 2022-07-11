@@ -20,3 +20,8 @@ Tutto il materiale in questo sito è distribuito con licenza CC-BY 4.0 Internazi
 
 Si può quindi liberamente ridistribuire e modificare il contenuto, basta citare l'Università di Trento / DISI e [gli autori](https://it.softpython.org/index.html#Autori) 
 
+
+**Mirrors**:
+
+- sito ufficiale:  https://it.softpython.org
+- replica su Github:  https://davidleoni.github.io/softpython-it
