@@ -461,7 +461,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings5-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Il-drago-Smaug">Sfida - Il drago Smaug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida:-Psycho-Circus">Sfida: Psycho Circus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Psycho-Circus">Sfida - Psycho Circus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 </ul>
 </li>
@@ -708,15 +708,15 @@
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Operatori">Operatori</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#len">len</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---distinte">Esercizio - distinte</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Appartenenza">Appartenenza</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Unione">Unione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio:-tuttotranne-1">Esercizio: tuttotranne 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Intersezione">Intersezione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Differenza">Differenza</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Differenza-simmetrica">Differenza simmetrica</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Appartenenza">Appartenenza</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Uguaglianza">Uguaglianza</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Metodi-simili-agli-operatori">Metodi simili agli operatori</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#union">union</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#update">update</a></li>
@@ -2656,8 +2656,7 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="Sfida---Euregio">
 <h2>Sfida - Euregio<a class="headerlink" href="#Sfida---Euregio" title="Permalink to this headline"></a></h2>
-<p>✪✪ L’EuregioFamilyPass è un progetto congiunto del GECT Euregio Tirolo-Alto Adige-Trentino, del Dipartimento Societá e Lavoro del Land Tirolo e delle Agenzie per la famiglia delle Province autonome di Bolzano e di Trento. che mira a favorire la mobilità e gli scambi culturali tra le famiglie delle tre province dell’ Euregio</p>
-<p>L’EuregioFamilyPass permette di accedere a livello transfrontaliero ad una offerta di vantaggi e servizi riservate alle famiglie, attraverso partner convenzionati tra cui sia enti pubblici che esercenti privati.</p>
+<p>✪✪ L’EuregioFamilyPass è un progetto congiunto delle province autonome di Bolzano e di Trento e del Land Tirolo, che permette di accedere a livello transfrontaliero ad una offerta di vantaggi e servizi riservate alle famiglie, attraverso partner convenzionati tra cui sia enti pubblici che esercenti privati.</p>
 <p>Sorgente dati: <a class="reference external" href="https://dati.trentino.it/dataset/elenco-aderenti-euregio-family-pass/resource/cbae521f-f87e-4d82-b322-40b2691b950c">dati.trentino.it</a></p>
 <p>Vediamo come filtrare questi servizi: apri il file <a class="reference external" href="aderenti-euregiofamilycard.csv">aderenti-euregiofamilycard.csv</a> con pandas ed <strong>encoding UTF-8</strong>, assegnalo alla variabile <code class="docutils literal notranslate"><span class="pre">edf</span></code> e mostra i suoi campi</p>
 <div class="nbinput docutils container">
@@ -3499,7 +3498,10 @@ memory usage: 5.4+ KB
 </section>
 <section id="Facebook">
 <h3>Facebook<a class="headerlink" href="#Facebook" title="Permalink to this headline"></a></h3>
-<p>Trova tutti i nomi dei servizi che hanno una pagina Facebook, e aggiungi una colonna con solo il nome del relativo account. Mostra infine solo le righe con account facebook</p>
+<ol class="arabic simple">
+<li><p>Trova tutti i nomi dei servizi che hanno una pagina Facebook, e aggiungi una colonna con solo il nome del relativo account.</p></li>
+<li><p>Mostra infine solo le righe con account Facebook.</p></li>
+</ol>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -4672,9 +4674,8 @@ info@sanifonds.tn.it
 </section>
 <section id="Strade-a-colpo-d'occhio">
 <h3>Strade a colpo d’occhio<a class="headerlink" href="#Strade-a-colpo-d'occhio" title="Permalink to this headline"></a></h3>
-<p>Ogni strada compare al massimo una volta oppure ci sono strade che compaiono più volte nel dataset?</p>
-<p>Usiamo l’istogramma per vederlo subito a colpo d’occhio!</p>
-<p>Plotta l’istogramma delle occorrenze delle strade nel dataset, mettendo titolo e label.</p>
+<p>Ogni strada compare al massimo una volta oppure ci sono strade che compaiono più volte nel dataset? Usiamo l’istogramma per vederlo subito a colpo d’occhio!</p>
+<p>Plotta l’istogramma delle occorrenze delle strade, mettendo titolo e label.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
@@ -4688,30 +4689,6 @@ info@sanifonds.tn.it
 </div>
 <div class="output_area docutils container">
 <img alt="../_images/pandas_pandas3-chal_19_0.png" src="../_images/pandas_pandas3-chal_19_0.png" />
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psdf</span><span class="p">[</span><span class="s2">&quot;strada&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;AxesSubplot:&gt;
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/pandas_pandas3-chal_20_1.png" src="../_images/pandas_pandas3-chal_20_1.png" />
 </div>
 </div>
 </section>

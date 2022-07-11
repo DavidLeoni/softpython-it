@@ -461,7 +461,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings5-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Il-drago-Smaug">Sfida - Il drago Smaug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida:-Psycho-Circus">Sfida: Psycho Circus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Psycho-Circus">Sfida - Psycho Circus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings5-chal.html#Sfida---Censura-al-tiramisù">Sfida - Censura al tiramisù</a></li>
 </ul>
 </li>
@@ -708,15 +708,15 @@
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Operatori">Operatori</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#len">len</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---distinte">Esercizio - distinte</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Appartenenza">Appartenenza</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Unione">Unione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio:-tuttotranne-1">Esercizio: tuttotranne 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Intersezione">Intersezione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Differenza">Differenza</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Differenza-simmetrica">Differenza simmetrica</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Appartenenza">Appartenenza</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Uguaglianza">Uguaglianza</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Metodi-simili-agli-operatori">Metodi simili agli operatori</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#union">union</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#update">update</a></li>
@@ -2655,7 +2655,7 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="1.-Cure-termali">
 <h2>1. Cure termali<a class="headerlink" href="#1.-Cure-termali" title="Permalink to this headline"></a></h2>
-<p>✪✪ Un centro benessere accoglie clienti che possono decidere di usufruire tra uno o più servizi. Il centro segna queste informazioni in un file <a class="reference external" href="centro-benessere.csv">centro-benessere.csv</a> mettendo <code class="docutils literal notranslate"><span class="pre">1</span></code> se il servizio viene erogato, altrimenti <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<p>✪✪ Un centro benessere accoglie clienti che possono decidere di usufruire tra uno o più servizi. Il centro segna queste informazioni in un file <a class="reference external" href="centro-benessere1.csv">centro-benessere1.csv</a> mettendo <code class="docutils literal notranslate"><span class="pre">1</span></code> se il servizio viene erogato, altrimenti <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -2680,12 +2680,12 @@ div.rendered_html tbody tr:hover {
 <p><strong>Esempio</strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere.csv&#39;</span><span class="p">)</span>
 
-<span class="go">{&#39;Marco&#39;: 400,</span>
-<span class="go"> &#39;Andrea&#39;: 300,</span>
-<span class="go"> &#39;Sara&#39;: 600,</span>
-<span class="go"> &#39;Rosa&#39;: 200,</span>
+<span class="go">{&#39;Marco&#39;:    400,</span>
+<span class="go"> &#39;Andrea&#39;:   300,</span>
+<span class="go"> &#39;Sara&#39;:     600,</span>
+<span class="go"> &#39;Rosa&#39;:     200,</span>
 <span class="go"> &#39;Cristina&#39;: 300,</span>
-<span class="go"> &#39;Roberto&#39;: 100}</span>
+<span class="go"> &#39;Roberto&#39;:  100}</span>
 </pre></div>
 </div>
 <div class="nbinput docutils container">
@@ -2703,12 +2703,12 @@ div.rendered_html tbody tr:hover {
 
 <span class="n">res1</span> <span class="o">=</span> <span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere1.csv&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">res1</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">res1</span> <span class="o">==</span> <span class="p">{</span> <span class="s1">&#39;Marco&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
-                 <span class="s1">&#39;Andrea&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-                 <span class="s1">&#39;Sara&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
-                 <span class="s1">&#39;Rosa&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+<span class="k">assert</span> <span class="n">res1</span> <span class="o">==</span> <span class="p">{</span> <span class="s1">&#39;Marco&#39;</span><span class="p">:</span>    <span class="mi">400</span><span class="p">,</span>
+                 <span class="s1">&#39;Andrea&#39;</span><span class="p">:</span>   <span class="mi">300</span><span class="p">,</span>
+                 <span class="s1">&#39;Sara&#39;</span><span class="p">:</span>     <span class="mi">600</span><span class="p">,</span>
+                 <span class="s1">&#39;Rosa&#39;</span><span class="p">:</span>     <span class="mi">200</span><span class="p">,</span>
                  <span class="s1">&#39;Cristina&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-                 <span class="s1">&#39;Roberto&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+                 <span class="s1">&#39;Roberto&#39;</span><span class="p">:</span>  <span class="mi">100</span><span class="p">}</span>
 
 <span class="n">res2</span> <span class="o">=</span> <span class="n">terme</span><span class="p">(</span><span class="s1">&#39;centro-benessere2.csv&#39;</span><span class="p">)</span>
 <span class="c1">#print(res2)</span>
