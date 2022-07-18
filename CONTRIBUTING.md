@@ -42,6 +42,7 @@ troverete solo nell'ipynb originale su Github
 ## Formattazione
 
 - Quando si scrivono termini di Python o variabili, usare il backquote per evidenziarli, tipo `True`, `anni`
+- Nelle liste, iniziare le righe con carattere maiuscolo
 - Nelle `print` se possibile preferire la virgola  es `print("Hai fatto", salti, "salti")` a formattazione / concatenazione.
 - per la formattazione delle stringhe, usare i `%` tipo `"Hai fatto %s " % salti`. Non usare f-string. Evitare concatenzioni tipo `"fai " + str(n) + " salti"`
 
@@ -50,3 +51,11 @@ troverete solo nell'ipynb originale su Github
 - Per i file creati: usare nomi di file in minuscolo, in inglese, sostituire spazi con trattini (`-`), non usare underscore `_`. I nomi dei dataset possono rimanere quelli originali.
 - evitare codice con `input` da utente: è difficile e noioso da testare, ma potrebbe andar bene per fare giochi
 - inclusività maschile/femminile: quando in dubbio, usare il criterio stocastico e tirare una moneta, croce usare maschile testa usare femminile, distribuendo equamente. Evitare forme intermedie tipo *, ə.
+
+## Slides
+
+- **Usare frasi brevi**: max 5 parole, eliminare articoli, congiunzioni
+- Separare frasi su più linee
+- Non mettere punteggiatura alla fine delle linee
+- Esercizi e testo devono stare nella stessa slide. Se proprio proprio non ci stanno, nella slide col codice riscrivere i vincoli (es 'NON usare .replace', etc)
+- Usare Markdown quando possibile
