@@ -3071,13 +3071,13 @@ shaiy!
 </pre></div>
 </div>
 <p>e</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>sono equivalenti ? Che cosa fanno ?</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: le espressioni sono equivalenti: se la stringa è vuota entrambe producono un errore, se è piena entrambe restituiscono l’ultimo carattere</p>
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: le espressioni non sono equivalenti: la prima restituisce l’ultimo carattere solo quando la stringa è non vuota, invece la seconda ritorna sempre un errore.</p>
 </div><p><strong>DOMANDA</strong>: Se <code class="docutils literal notranslate"><span class="pre">x</span></code> è una stringa non vuota, l’espressione seguente cosa produce? La possiamo semplificare in una più breve?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
 </pre></div>
@@ -4355,7 +4355,7 @@ True
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;nota&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="s1">&#39;5436&#39;</span>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;nota&#39;</span><span class="p">))</span> <span class="ow">in</span> <span class="s1">&#39;5436&#39;</span>
 </pre></div>
 </div>
 </li>
