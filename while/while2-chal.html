@@ -1184,6 +1184,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Sfida---Se-magna">Sfida - Se magna</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Sfida---Il-Dungeon">Sfida - Il Dungeon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Sfida---Trivellum">Sfida - Trivellum</a></li>
 </ul>
 </li>
 </ul>
@@ -2739,6 +2740,51 @@ Esco
 <span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, []                         # funziona anche in questi casi particolari?</span>
 <span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, [&#39;la corona di rubini&#39;]    #</span>
 <span class="c1">#cerco, caverna = &#39;la corona di rubini&#39;, [&#39;il martello di granito&#39;] #</span>
+
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+<section id="Sfida---Trivellum">
+<h2>Sfida - Trivellum<a class="headerlink" href="#Sfida---Trivellum" title="Permalink to this headline"></a></h2>
+<p>✪✪ La compagnia mineraria Trivellum ha scoperto un <code class="docutils literal notranslate"><span class="pre">pozzo</span></code> di cobalto. Nel pozzo si trovano diversi strati, ognuno contenente una lega di diversa composizione: una volta trivellato, lo strato viene suddiviso in blocchi che vengono poi issati su un <code class="docutils literal notranslate"><span class="pre">carrello</span></code> per il successivo trasporto.</p>
+<p>Scrivi del codice che <strong>MODIFICA</strong> la variabile <code class="docutils literal notranslate"><span class="pre">pozzo</span></code> togliendo gli strati, e <strong>MODIFICA</strong> la variabile <code class="docutils literal notranslate"><span class="pre">carrello</span></code> aggiungendo i vari blocchi scavati.</p>
+<ul class="simple">
+<li><p><strong>USA</strong> un ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p><strong>STAMPA</strong> i vari passaggi</p></li>
+<li><p><strong>NON</strong> riassegnare <code class="docutils literal notranslate"><span class="pre">pozzo</span></code> nè <code class="docutils literal notranslate"><span class="pre">carrello</span></code> (quindi niente <code class="docutils literal notranslate"><span class="pre">pozzo</span> <span class="pre">=</span> <span class="pre">...</span></code> o <code class="docutils literal notranslate"><span class="pre">carrello</span> <span class="pre">=</span> <span class="pre">...</span></code>)</p></li>
+</ul>
+<p>Esempio - dati:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pozzo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;███&#39;</span><span class="p">,</span><span class="s1">&#39;▓▓▓&#39;</span><span class="p">,</span><span class="s1">&#39;▒▒▒&#39;</span><span class="p">,</span> <span class="s1">&#39;░░░&#39;</span><span class="p">]</span>    <span class="c1"># &lt;-- cima del pozzo</span>
+<span class="n">carrello</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>Il tuo programma deve stampare:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>il pozzo è: [&#39;███&#39;, &#39;▓▓▓&#39;, &#39;▒▒▒&#39;, &#39;░░░&#39;]
+Trivello lo strato ░░░ e lo divido nei blocchi [&#39;░&#39;, &#39;░&#39;, &#39;░&#39;]
+
+il pozzo è: [&#39;███&#39;, &#39;▓▓▓&#39;, &#39;▒▒▒&#39;]
+Trivello lo strato ▒▒▒ e lo divido nei blocchi [&#39;▒&#39;, &#39;▒&#39;, &#39;▒&#39;]
+
+il pozzo è: [&#39;███&#39;, &#39;▓▓▓&#39;]
+Trivello lo strato ▓▓▓ e lo divido nei blocchi [&#39;▓&#39;, &#39;▓&#39;, &#39;▓&#39;]
+
+il pozzo è: [&#39;███&#39;]
+Trivello lo strato ███ e lo divido nei blocchi [&#39;█&#39;, &#39;█&#39;, &#39;█&#39;]
+
+Il pozzo finale è   : []
+Il carrello finale è: [&#39;░&#39;, &#39;░&#39;, &#39;░&#39;, &#39;▒&#39;, &#39;▒&#39;, &#39;▒&#39;, &#39;▓&#39;, &#39;▓&#39;, &#39;▓&#39;, &#39;█&#39;, &#39;█&#39;, &#39;█&#39;]
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">carrello</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pozzo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;███&#39;</span><span class="p">,</span><span class="s1">&#39;▓▓▓&#39;</span><span class="p">,</span><span class="s1">&#39;▒▒▒&#39;</span><span class="p">,</span> <span class="s1">&#39;░░░&#39;</span><span class="p">]</span>  <span class="c1"># &lt;-- cima del pozzo</span>
+
+<span class="c1">#pozzo = [&#39;┼┼&#39;,&#39;┤├&#39;,&#39;┐┌&#39;, &#39;╗╔&#39;, &#39;║║&#39;]  #  [&#39;║&#39;, &#39;║&#39;, &#39;╗&#39;, &#39;╔&#39;, &#39;┐&#39;, &#39;┌&#39;, &#39;┤&#39;, &#39;├&#39;, &#39;┼&#39;, &#39;┼&#39;]</span>
 
 <span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
