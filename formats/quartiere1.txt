@@ -1,0 +1,4 @@
+  civico=3   superficie=60   EPI=C  
+     civico=2  superficie=70     EPI=G  giardino=80
+civico=4   superficie=90     EPI=B   terrazzi=14 posti_auto=2
+     civico=1      superficie=100     EPI=A2  terrazzi=20
