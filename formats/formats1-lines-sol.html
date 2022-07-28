@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formati dati 1 - Introduzione &mdash; SoftPython</title>
+  <title>Formati dati 1 &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
@@ -1571,6 +1571,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../mixed-structures/mixed-structures2-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../mixed-structures/mixed-structures2-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mixed-structures/mixed-structures2-chal.html#Sfida---Precariato-ad-Altomuro">Sfida - Precariato ad Altomuro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mixed-structures/mixed-structures2-chal.html#Sfida---Ricerca-di-mercato">Sfida - Ricerca di mercato</a></li>
 </ul>
 </li>
 </ul>
@@ -1680,26 +1681,62 @@
 <li class="toctree-l5"><a class="reference internal" href="#il-comando-open">il comando open</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#La-codifica">La codifica</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#il-blocco-with">il blocco with</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---prima-lettura">Esercizio - prima lettura</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---ambientiamoci">Esercizio - ambientiamoci</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---riscrivi">Esercizio - riscrivi</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---stampa-people-complex">Esercizio - stampa people-complex</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---tabella-people-complex">Esercizio - tabella people-complex</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#File-a-linee-people-complex">File a linee people-complex</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio-file-a-linee-immersione-in-python-toc">Esercizio file a linee immersione-in-python-toc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Leggere-con-un-for">Leggere con un <code class="docutils literal notranslate"><span class="pre">for</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#Cos'è-esattamente-f-?">Cos’è esattamente <code class="docutils literal notranslate"><span class="pre">f</span></code> ?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---da-file-a-lista">Esercizio - da file a lista</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---ripuliamo">Esercizio - ripuliamo</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#Consumare-un-file">Consumare un file</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---due-print">Esercizio - due print</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---tutto-a-sinistra">Esercizio - tutto a sinistra</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#Altri-esercizi">Altri esercizi</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---MattoneMatto">Esercizio - MattoneMatto</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio-immersione-in-python-toc">Esercizio immersione-in-python-toc</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="formats2-csv-sol.html">File CSV</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Perchè-scorrere-un-CSV-?">Perchè scorrere un CSV ?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#CSV-di-esempio">CSV di esempio</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Cos'è-esattamente-lettore-?">Cos’è esattamente <code class="docutils literal notranslate"><span class="pre">lettore</span></code> ?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Consumare-un-file">Consumare un file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#CSV-di-esempio">CSV di esempio</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---riscrivi">Esercizio - riscrivi</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---listona">Esercizio - listona</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---ristrutturiamo">Esercizio - ristrutturiamo</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Cos'è-esattamente-lettore-?">Cos’è esattamente <code class="docutils literal notranslate"><span class="pre">lettore</span></code> ?</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---conversione-rapida-a-lista">Esercizio - conversione rapida a lista</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Consumare-un-file">Consumare un file</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---due-print">Esercizio - due print</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---print-a-sinistra">Esercizio - print a sinistra</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---list-comprehension">Esercizio - list comprehension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---I-cani-camminano">Esercizio - I cani camminano</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---i-cani-volano">Esercizio - i cani volano</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Leggere-come-dizionari">Leggere come dizionari</a></li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Scrivere-un-CSV">Scrivere un CSV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Leggere-e-scrivere-un-CSV">Leggere e scrivere un CSV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---CSV-Impianti-funiviari">Esercizio - CSV Impianti funiviari</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Problema:-caratteri-sbagliati-??">Problema: caratteri sbagliati ??</a></li>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Importare-in-Python">Importare in Python</a></li>
-<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Il-mistero-delle-opere-paravalanghe">Il mistero delle opere paravalanghe</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Dove-sono-gli-impianti?">Esercizio - Dove sono gli impianti?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Opere-paravalanghe-1">Esercizio - Opere paravalanghe 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Opere-paravalanghe-2">Esercizio - Opere paravalanghe 2</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Strutture-Comune-di-Trento">Esercizio - Strutture Comune di Trento</a></li>
@@ -2372,7 +2409,7 @@
     
         <li><a href="../toc-analytics.html">Formati dati</a> &raquo;</li>
     
-    <li>Formati dati 1 - Introduzione</li>
+    <li>Formati dati 1</li>
     -->
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -2648,8 +2685,8 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Formati-dati-1---Introduzione">
-<h1>Formati dati 1 - Introduzione<a class="headerlink" href="#Formati-dati-1---Introduzione" title="Permalink to this headline"></a></h1>
+<section id="Formati-dati-1">
+<h1>Formati dati 1<a class="headerlink" href="#Formati-dati-1" title="Permalink to this headline"></a></h1>
 <section id="Scarica-zip-esercizi">
 <h2><a class="reference external" href="../_static/generated/formats.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/formats">Naviga file online</a></p>
@@ -2747,8 +2784,8 @@ Leonardo
 <section id="La-codifica">
 <h3>La codifica<a class="headerlink" href="#La-codifica" title="Permalink to this headline"></a></h3>
 <p>La codifica dipende dal sistema operativo e dell’editor con cui è stato scritto il file. Quando apriamo un file, Python non può divinare la codifica, e se non gliela specifichiamo potrebbe aprirlo assumendo una codifica diversa dall’originale - tradotto, affidandoci al caso o sbagliando codifica in seguito potremmo vedere dei caratteri strani (tipo quadratini invece di lettere accentate).</p>
-<p>In genere, quando apri un file, prova prima a specificare la codifica <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> che è la più comune scrivendo <code class="docutils literal notranslate"><span class="pre">encoding='utf-8'</span></code>, e se per caso non va bene prova invece <code class="docutils literal notranslate"><span class="pre">encoding='latin-1'</span></code> (solitamente utile se il file è stato scritto su sistemi Windows). Se apri file scritti in posti più esotici, tipo in Cina, potresti dover usare un’altro encoding. Per approfondire queste questioni, quando hai tempo leggi <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/stringhe.html">Immersione in Python - Cap 4 -
-Stringhe</a> e <a class="reference external" href="http://gpiancastelli.altervista.org/dip3-it/stringhe.html">Immersione in Python - Cap 11 - File</a>, <strong>entrambe letture caldamente consigliate</strong>.</p>
+<p>In genere, quando apri un file, prova prima a specificare la codifica <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> che è la più comune scrivendo <code class="docutils literal notranslate"><span class="pre">encoding='utf-8'</span></code>, e se per caso non va bene prova invece <code class="docutils literal notranslate"><span class="pre">encoding='latin-1'</span></code> (solitamente utile se il file è stato scritto su sistemi Windows). Se apri file scritti in posti più esotici, tipo in Cina, potresti dover usare un’altro encoding. Per approfondire queste questioni, vedere <a class="reference external" href="https://it.softpython.org/strings/strings1-sol.html#Encodings">capitolo Stringhe - encodings</a> e
+relativi riferimenti.</p>
 </section>
 <section id="il-blocco-with">
 <h3>il blocco with<a class="headerlink" href="#il-blocco-with" title="Permalink to this headline"></a></h3>
@@ -2779,14 +2816,17 @@ della riga nella parte <code class="docutils literal notranslate"><span class="p
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>✪ 1.1 ESERCIZIO</strong>: Prova a riscrivere nella cella qua il blocco with appena visto, ed esegui la cella premendo Control-Invio. Riscrivi il codice con le dita, non con il copia e incolla ! Fai attenzione ad indentare correttamente con gli spazi il blocco.</p>
+</section>
+<section id="Esercizio---prima-lettura">
+<h3>Esercizio - prima lettura<a class="headerlink" href="#Esercizio---prima-lettura" title="Permalink to this headline"></a></h3>
+<p>✪ Prova a riscrivere nella cella qua il blocco with appena visto, ed esegui la cella premendo Control-Invio. Riscrivi il codice con le dita, non con il copia e incolla ! Fai attenzione ad indentare correttamente con gli spazi il blocco.</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">linea</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -2803,24 +2843,18 @@ Leonardo
 
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
 <br/><br/></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Leonardo
-
-</pre></div></div>
-</div>
-<p><strong>✪ 1.2 ESERCIZIO</strong>: immagino ti starai chiedendo che cosa è esattamente quella <code class="docutils literal notranslate"><span class="pre">f</span></code>, e cosa faccia esattamente il metodo <code class="docutils literal notranslate"><span class="pre">readline</span></code>. Quando ti trovi in queste situazioni, puoi aiutarti con le funzioni <code class="docutils literal notranslate"><span class="pre">type</span></code> e <code class="docutils literal notranslate"><span class="pre">help</span></code>. Questa volta, copia e incolla direttamente sempre lo stesso codice qua sotto, ma aggiungi a mano dentro il blocco <code class="docutils literal notranslate"><span class="pre">with</span></code> i comandi:</p>
+</section>
+<section id="Esercizio---ambientiamoci">
+<h3>Esercizio - ambientiamoci<a class="headerlink" href="#Esercizio---ambientiamoci" title="Permalink to this headline"></a></h3>
+<p>✪ immagino ti starai chiedendo che cosa è esattamente quella <code class="docutils literal notranslate"><span class="pre">f</span></code>, e cosa faccia esattamente il metodo <code class="docutils literal notranslate"><span class="pre">readline</span></code>. Quando ti trovi in queste situazioni, puoi aiutarti con le funzioni <code class="docutils literal notranslate"><span class="pre">type</span></code> e <code class="docutils literal notranslate"><span class="pre">help</span></code>. Questa volta, copia e incolla direttamente sempre lo stesso codice qua sotto, ma aggiungi a mano dentro il blocco <code class="docutils literal notranslate"><span class="pre">with</span></code> i comandi:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">print(type(f))</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">help(f.readline)</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Attenzione:</span> <span class="pre">ricordati</span> <span class="pre">il</span> <span class="pre">'f.'</span> <span class="pre">prima</span> <span class="pre">del</span> <span class="pre">readline</span> <span class="pre">!!</span></code></p></li>
@@ -2996,11 +3030,11 @@ Niccolò Macchiavelli
 </pre></div></div>
 </div>
 <div class="admonition note">
-<p><strong>NOTA:</strong> In Python ci sono <a class="reference external" href="https://thispointer.com/5-different-ways-to-read-a-file-line-by-line-in-python/">metodi più concisi</a> per leggere un file tdi testo linea per linea, ma abbiamo usato questo approccio per esplicitare tutti i passaggi</p>
+<p><strong>NOTA:</strong> In Python ci sono metodi più concisi per leggere un file di testo linea per linea che vedremo in seguito, intanto abbiamo questo approccio per esplicitare tutti i passaggi.</p>
 </div>
 <p>Cosa abbiamo fatto? Per prima cosa, abbiamo aggiunto un ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code> in un nuovo blocco</p>
 <div class="admonition warning">
-<p><strong>Attenzione</strong>: nel nuovo blocco while, dato che è già all’interno del blocco esterno <code class="docutils literal notranslate"><span class="pre">with</span></code>, le istruzioni sono indentate di 8 spazi e non più 4! Se per caso sbagli gli spazi, possono succedere brutti guai!</p>
+<p><strong>ATTENZIONE</strong>: nel nuovo blocco while, dato che è già all’interno del blocco esterno <code class="docutils literal notranslate"><span class="pre">with</span></code>, le istruzioni sono indentate di 8 spazi e non più 4! Se per caso sbagli gli spazi, possono succedere brutti guai!</p>
 </div>
 <p>Prima leggiamo una linea, e due casi sono possibili:</p>
 <ol class="loweralpha simple">
@@ -3016,14 +3050,17 @@ prossima iterazione di estrazione nome. Se la <code class="docutils literal notr
     <span class="n">linea</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>               <span class="c1"># legge la prossima linea</span>
 </pre></div>
 </div>
-<p><strong>✪ 1.4 ESERCIZIO</strong>: Di nuovo come prima, riscrivi nella cella qua sotto il codice col while appena spiegato, facendo MOLTA attenzione all’indentazione (per la linea del with esterno fai pure copia e incolla):</p>
+</section>
+<section id="Esercizio---riscrivi">
+<h3>Esercizio - riscrivi<a class="headerlink" href="#Esercizio---riscrivi" title="Permalink to this headline"></a></h3>
+<p>✪ Di nuovo come prima, riscrivi nella cella qua sotto il codice col while appena spiegato, facendo MOLTA attenzione all’indentazione (per la linea del with esterno fai pure copia e incolla):</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui il codice col while interno</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui il codice col while interno</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">linea</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
@@ -3045,28 +3082,17 @@ Sandro Botticelli
 Niccolò Macchiavelli
 </pre></div></div>
 </div>
-</div><div class="nbinput docutils container">
+</div><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui il codice col while interno</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui il codice col while interno</span>
 <br/><br/></pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Leonardo da Vinci
-Sandro Botticelli
-Niccolò Macchiavelli
-</pre></div></div>
-</div>
 </section>
-</section>
-<section id="File-a-linee-people-complex">
-<h2>File a linee people-complex<a class="headerlink" href="#File-a-linee-people-complex" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---stampa-people-complex">
+<h3>Esercizio - stampa people-complex<a class="headerlink" href="#Esercizio---stampa-people-complex" title="Permalink to this headline"></a></h3>
 <p>Guarda il file <code class="docutils literal notranslate"><span class="pre">people-complex.txt</span></code>, più complesso:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>nome: Leonardo
 cognome: da Vinci
@@ -3188,8 +3214,472 @@ Niccolò Macchiavelli, 1469-05-03
 </pre></div></div>
 </div>
 </section>
-<section id="Esercizio-file-a-linee-immersione-in-python-toc">
-<h2>Esercizio file a linee immersione-in-python-toc<a class="headerlink" href="#Esercizio-file-a-linee-immersione-in-python-toc" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---tabella-people-complex">
+<h3>Esercizio - tabella people-complex<a class="headerlink" href="#Esercizio---tabella-people-complex" title="Permalink to this headline"></a></h3>
+<p>✪✪ Spesso vorremo mettere quanto letto in una tabella, prova adesso a scrivere del codice che ne costruisce una come lista di liste. Dopo l’esecuzione del tuo codice dovrebbe risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">tabella</span><span class="p">)</span>
+<span class="go">[[&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],</span>
+<span class="go"> [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],</span>
+<span class="go"> [&#39;Niccolò&#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]</span>
+</pre></div>
+</div>
+<p><strong>SUGGERIMENTO</strong>: Comincia creando una lista vuota e poi aggiungendo elementi con il metodo <code class="docutils literal notranslate"><span class="pre">.append</span></code></p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="c1"># scrivi qui</span>
+
+<span class="n">tabella</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-complex.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">linea</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="n">linea</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">nome</span> <span class="o">=</span> <span class="n">linea</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;nome: &quot;</span><span class="p">):]</span>
+        <span class="n">cognome</span><span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;cognome: &quot;</span><span class="p">):]</span>
+        <span class="n">nato</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;data di nascita: &quot;</span><span class="p">):]</span>
+        <span class="n">tabella</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">nome</span><span class="p">,</span> <span class="n">cognome</span><span class="p">,</span> <span class="n">nato</span><span class="p">])</span>
+        <span class="n">linea</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">tabella</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],
+ [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],
+ [&#39;Niccolò&#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],
+ [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],
+ [&#39;Niccolò&#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Leggere-con-un-for">
+<h2>Leggere con un <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#Leggere-con-un-for" title="Permalink to this headline"></a></h2>
+<p>Dopo aver esplicitato per bene i passaggi di una lettura con il ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code>, vediamo adesso un sistema più comodo (ma un po’ più ‘magico’) per leggere un file di testo linea per linea usando un semplice ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+    <span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Leonardo
+
+da Vinci
+
+Sandro
+
+Botticelli
+
+Niccolò
+
+Macchiavelli
+</pre></div></div>
+</div>
+<p>Se guardi bene, noterai che non abbiamo più chiamate a <code class="docutils literal notranslate"><span class="pre">f.readline()</span></code></p>
+<p>Quando incontra il ciclo, Python riconosce che <code class="docutils literal notranslate"><span class="pre">f</span></code> è un file di testo, e suppone che la cosa che ci interessa di più coi file di testo sia leggere linee: interpreta perciò la variabile <code class="docutils literal notranslate"><span class="pre">f</span></code> come una sequenza di linee, e ad ogni iterazione assegna alla variabile <code class="docutils literal notranslate"><span class="pre">linea</span></code> (ma potrebbe essere un qualunque nome a nostro piacimento) i caratteri letti fino al primo ritorno a capo che trova (incluso).</p>
+<p>Nota che questo comportamento speciale avviene solo perchè stiamo leggendo file di testo, nel caso di file d’altro tipo (es. file binari) verrebbero letti valori di tipo completamente diverso.</p>
+<p>Adesso che abbiamo trovato questa comoda alternativa, possiamo chiederci quando dovremmo usare il <code class="docutils literal notranslate"><span class="pre">while</span></code> e quando il <code class="docutils literal notranslate"><span class="pre">for</span></code>:</p>
+<ul class="simple">
+<li><p>il <code class="docutils literal notranslate"><span class="pre">for</span></code> tipicamente viene usato quando dobbiamo iterare <em>tutto</em> il file</p></li>
+<li><p>il <code class="docutils literal notranslate"><span class="pre">while</span></code> conviene quando vogliamo maggior controllo sul processo di lettura, per esempio, se stiamo cercando qualcosa in un file enorme, sarà certamente più efficente fermarsi appena lo troviamo: con un <code class="docutils literal notranslate"><span class="pre">while</span></code> possiamo interrompere il ciclo sfruttando la condizione booleana di controllo già prevista dal costrutto, invece con il <code class="docutils literal notranslate"><span class="pre">for</span></code> saremmo costretti ad usare comandi <code class="docutils literal notranslate"><span class="pre">break</span></code> e/o <code class="docutils literal notranslate"><span class="pre">continue</span></code> che sono poco eleganti e portano facilmente a introdurre errori di programmazione
+indesiderati. Per degli esempi di ricerca vedere il foglio <a class="reference external" href="https://it.softpython.org/while/while1-sol.html#Ricercare-in-una-sequenza">Cicli while - ricercare in una sequenza</a> (sono ricerche su liste invece che file, ma il concetto è lo stesso).</p></li>
+</ul>
+<section id="Cos'è-esattamente-f-?">
+<h3>Cos’è esattamente <code class="docutils literal notranslate"><span class="pre">f</span></code> ?<a class="headerlink" href="#Cos'è-esattamente-f-?" title="Permalink to this headline"></a></h3>
+<p>Abbiamo detto che <code class="docutils literal notranslate"><span class="pre">f</span></code> viene interpretato come una sequenza di righe, ed è <em>iterabile</em>. Durante il ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> ad ogni iterazione gli chiediamo di leggere una nuova linea, che viene messa nella variabile <code class="docutils literal notranslate"><span class="pre">linea</span></code>. Quindi possiamo chiederci: cosa succede se stampiamo direttamente <code class="docutils literal notranslate"><span class="pre">f</span></code>, senza usare nessun <code class="docutils literal notranslate"><span class="pre">for</span></code> ? Vedremo una bella lista o qualcos’altro? Proviamo:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;_io.TextIOWrapper name=&#39;people-simple.txt&#39; mode=&#39;r&#39; encoding=&#39;utf-8&#39;&gt;
+</pre></div></div>
+</div>
+<p>Quello che vediamo è piuttosto deludente.</p>
+</section>
+<section id="Esercizio---da-file-a-lista">
+<h3>Esercizio - da file a lista<a class="headerlink" href="#Esercizio---da-file-a-lista" title="Permalink to this headline"></a></h3>
+<p>✪ Se hai visto <a class="reference external" href="https://it.softpython.org/sequences/sequences1-sol.html#Materializzare-una-sequenza">il foglio sulle sequenze</a>, a un certo punto ci siamo trovati nella stessa situazione, quando abbiamo provato a stampare un range. Che potremmo fare per risolvere la situazione? Prova a mettere tutte le linee in una lista</p>
+<ul class="simple">
+<li><p><strong>USA</strong> una sola linea di codice</p></li>
+<li><p>per adesso non preoccuparti dei <code class="docutils literal notranslate"><span class="pre">\n</span></code> finali</p></li>
+</ul>
+<p>Eseguendo il tuo codice, dovresti vedere:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Leonardo</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;da Vinci</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Sandro</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Botticelli</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Niccolò </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Macchiavelli&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Leonardo\n&#39;, &#39;da Vinci\n&#39;, &#39;Sandro\n&#39;, &#39;Botticelli\n&#39;, &#39;Niccolò \n&#39;, &#39;Macchiavelli&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+<section id="Esercizio---ripuliamo">
+<h3>Esercizio - ripuliamo<a class="headerlink" href="#Esercizio---ripuliamo" title="Permalink to this headline"></a></h3>
+<p>✪ Adesso prova anche a togliere i ritorni a capo</p>
+<ul class="simple">
+<li><p><strong>USA</strong> una <a class="reference external" href="https://it.softpython.org/sequences/sequences1-sol.html#List-comprehensions">list comprehension</a> in una sola linea di codice</p></li>
+</ul>
+<p>Eseguendo il tuo codice, dovresti vedere:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Leonardo&#39;</span><span class="p">,</span> <span class="s1">&#39;da Vinci&#39;</span><span class="p">,</span> <span class="s1">&#39;Sandro&#39;</span><span class="p">,</span> <span class="s1">&#39;Botticelli&#39;</span><span class="p">,</span> <span class="s1">&#39;Niccolò &#39;</span><span class="p">,</span> <span class="s1">&#39;Macchiavelli&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+    <span class="nb">print</span><span class="p">([</span><span class="n">riga</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">f</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;Niccolò &#39;, &#39;Macchiavelli&#39;]
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="Consumare-un-file">
+<h2>Consumare un file<a class="headerlink" href="#Consumare-un-file" title="Permalink to this headline"></a></h2>
+<p>Non tutte le sequenze sono uguali. Da quello che hai visto finora, in Python scorrere un file con un <code class="docutils literal notranslate"><span class="pre">for</span></code> assomiglia molto a scorrere una lista. Che è molto comodo, ma bisogna stare attenti ad alcune cose.</p>
+<p>A volte i file potrebbero occupare terabyte, forzandoci in questi casi a scorrere il file un po’ alla volta invece di caricare tutto in memoria.</p>
+<p>Ma cosa succede se proviamo a scorrere un file due volte all’interno della stessa <code class="docutils literal notranslate"><span class="pre">with</span></code>? E se proviamo ad usarlo fuori dal <code class="docutils literal notranslate"><span class="pre">with</span></code>, che succede? Guarda i prossimi esercizi per scoprirlo.</p>
+<section id="Esercizio---due-print">
+<h3>Esercizio - due print<a class="headerlink" href="#Esercizio---due-print" title="Permalink to this headline"></a></h3>
+<p>✪ Prendendo la soluzione all’esercizio di prima, prova a chiamare <code class="docutils literal notranslate"><span class="pre">print(list(f))</span></code> due volte, in sequenza. Ottieni la stessa stampa entrambe le volte?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><br/><span></span><span class="c1"># scrivi qui</span>
+
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Leonardo\n&#39;, &#39;da Vinci\n&#39;, &#39;Sandro\n&#39;, &#39;Botticelli\n&#39;, &#39;Niccolò \n&#39;, &#39;Macchiavelli&#39;]
+[]
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><br/><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+<section id="Esercizio---tutto-a-sinistra">
+<h3>Esercizio - tutto a sinistra<a class="headerlink" href="#Esercizio---tutto-a-sinistra" title="Permalink to this headline"></a></h3>
+<p>✪ Prendendo la soluzione all’esercizio di prima (usando una sola <code class="docutils literal notranslate"><span class="pre">print</span></code>), prova qua sotto a spostare la <code class="docutils literal notranslate"><span class="pre">print</span></code> tutta a sinistra (eliminando gli spazi). Funziona ancora?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-simple.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">()</span>
+<span class="c1">#print(list(f))    # COMMENTATA, PERCHE&#39; LANCEREBBE ERRORE DI FILE CHIUSO</span>
+                   <span class="c1"># Non possiamo usare comandi che leggono il file fuori dal with !</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+<p><strong>✪✪✪ ESERCIZIO 2.9</strong>: Adesso che abbiamo capito un po’ che tipo di bestia è <code class="docutils literal notranslate"><span class="pre">f</span></code>, prova a leggere il file <a class="reference internal" href="people-complex.html"><span class="doc">people-complex.txt</span></a> e riprodurre questo risultato simile a quanto già fatto in precedenza, ma questa volta usa un ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> in.</p>
+<ul class="simple">
+<li><p>Aggiungi anche una intestazione e metti il risultato in una variabile <code class="docutils literal notranslate"><span class="pre">tab2</span></code></p></li>
+</ul>
+<p>Dopo l’esecuzione del tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">tab2</span><span class="p">)</span>
+<span class="go">[[&#39;Nome&#39;, &#39;Cognome&#39;, &#39;Data di nascita&#39;],</span>
+<span class="go"> [&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],</span>
+<span class="go"> [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],</span>
+<span class="go"> [&#39;Niccolò &#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-complex.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">tab2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Nome&#39;</span><span class="p">,</span><span class="s1">&#39;Cognome&#39;</span><span class="p">,</span><span class="s1">&#39;Data di nascita&#39;</span><span class="p">]</span>
+           <span class="p">]</span>
+    <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">coppia</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+        <span class="n">valore</span> <span class="o">=</span> <span class="n">coppia</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">nome</span> <span class="o">=</span> <span class="n">valore</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">cognome</span> <span class="o">=</span> <span class="n">valore</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">valore</span>
+            <span class="n">tab2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">nome</span><span class="p">,</span> <span class="n">cognome</span><span class="p">,</span> <span class="n">data</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">tab2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[&#39;Nome&#39;, &#39;Cognome&#39;, &#39;Data di nascita&#39;],
+ [&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],
+ [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],
+ [&#39;Niccolò &#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;people-complex.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[&#39;Nome&#39;, &#39;Cognome&#39;, &#39;Data di nascita&#39;],
+ [&#39;Leonardo&#39;, &#39;da Vinci&#39;, &#39;1452-04-15&#39;],
+ [&#39;Sandro&#39;, &#39;Botticelli&#39;, &#39;1445-03-01&#39;],
+ [&#39;Niccolò &#39;, &#39;Macchiavelli&#39;, &#39;1469-05-03&#39;]]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Altri-esercizi">
+<h2>Altri esercizi<a class="headerlink" href="#Altri-esercizi" title="Permalink to this headline"></a></h2>
+<section id="Esercizio---MattoneMatto">
+<h3>Esercizio - MattoneMatto<a class="headerlink" href="#Esercizio---MattoneMatto" title="Permalink to this headline"></a></h3>
+<p>✪✪✪ La compagnia di costruzioni MattoneMatto è interessata all’acquisto a prezzi di svendita di un lotto di appartmenti da ristrutturare: non fidandosi delle dichiarazioni dei proprietari, manda un suo ispettore a fare una rilevazione d’accertamento. Per ogni edificio, l’ispettore ha scritto rapidamente sul blocco note dei campi come il codice civico, la superficie, l’indice di efficenza energetico <em>EPI</em> e possibilmente altri.</p>
+<p>Scrivi del codice che dato il nome di un file di un quartiere, mette nella variabile <code class="docutils literal notranslate"><span class="pre">edifici</span></code> una lista di dizionari con i campi per ciascun edificio. Puoi assumere che i nomi dei campi e i valori non possano mai contenere caratteri di blank (spazi, tab, ritorni a capo…).</p>
+<p><strong>ATTENZIONE</strong>: i file sono scritti a mano e tra i campi vi possono essere un numero di blank arbitrario (spazi, tab, etc), per gestirli al meglio rileggiti bene i dettagli del <a class="reference external" href="https://it.softpython.org/strings/strings4-sol.html?highlight=strip#Metodo-strip">metodo strip()</a></p>
+<p>Per esempio, il file <a class="reference internal" href="quartiere1.html"><span class="doc">quartiere1.txt</span></a> si presenta così:</p>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+  civico=3   superficie=60   EPI=C
+     civico=2  superficie=70     EPI=G  giardino=80
+civico=4   superficie=90     EPI=B   terrazzi=14 posti_auto=2
+     civico=1      superficie=100     EPI=A2  terrazzi=20
+</pre></div></div>
+</div>
+<p>Dato:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome_file</span> <span class="o">=</span> <span class="s1">&#39;quartiere1.txt&#39;</span>
+</pre></div>
+</div>
+<p>dopo il tuo codice, deve risultare:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">edifici</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="go">[{&#39;EPI&#39;: &#39;C&#39;, &#39;civico&#39;: &#39;3&#39;, &#39;superficie&#39;: &#39;60&#39;},</span>
+<span class="go"> {&#39;EPI&#39;: &#39;G&#39;, &#39;civico&#39;: &#39;2&#39;, &#39;giardino&#39;: &#39;80&#39;, &#39;superficie&#39;: &#39;70&#39;},</span>
+<span class="go"> {&#39;EPI&#39;: &#39;B&#39;, &#39;civico&#39;: &#39;4&#39;, &#39;posti_auto&#39;: &#39;2&#39;, &#39;superficie&#39;: &#39;90&#39;, &#39;terrazzi&#39;: &#39;14&#39;},</span>
+<span class="go"> {&#39;EPI&#39;: &#39;A2&#39;, &#39;civico&#39;: &#39;1&#39;, &#39;superficie&#39;: &#39;100&#39;, &#39;terrazzi&#39;: &#39;20&#39;}]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>USA</strong> un <code class="docutils literal notranslate"><span class="pre">for</span></code> per leggere il file</p></li>
+<li><p><strong>IMPOSTA</strong> l’encoding come <code class="docutils literal notranslate"><span class="pre">utf-8</span></code></p></li>
+<li><p><strong>NON ASSUMERE</strong> che i campi abbiano sempre lo stesso nome nè che siano in particolare ordine (guarda anche <a class="reference internal" href="quartiere2.html"><span class="doc">quartiere2.txt</span></a>)</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">nome_file</span> <span class="o">=</span> <span class="s1">&#39;quartiere1.txt&#39;</span>
+
+<span class="n">nome_file</span> <span class="o">=</span> <span class="s1">&#39;quartiere2.txt&#39;</span> <span class="c1"># [ {&#39;civ&#39;: &#39;5&#39;, &#39;epi&#39;: &#39;B&#39;, &#39;sup&#39;: &#39;20&#39;},</span>
+                             <span class="c1">#   {&#39;civ&#39;: &#39;9&#39;, &#39;epi&#39;: &#39;D&#39;, &#39;interno&#39;: &#39;c&#39;, &#39;sup&#39;: &#39;10&#39;}  ]</span>
+
+
+<span class="c1"># scrivi qui</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nome_file</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+    <span class="n">edifici</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">diz</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">elementi</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># nota che split() senza parametri va a cercare tutti i blank (spazi, tab, etc)</span>
+        <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">elementi</span><span class="p">:</span>
+            <span class="n">kv</span> <span class="o">=</span> <span class="n">elemento</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)</span>
+            <span class="n">diz</span><span class="p">[</span><span class="n">kv</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">edifici</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">edifici</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[{&#39;civ&#39;: &#39;5&#39;, &#39;epi&#39;: &#39;B&#39;, &#39;sup&#39;: &#39;20&#39;}, {&#39;civ&#39;: &#39;9&#39;, &#39;epi&#39;: &#39;D&#39;, &#39;interno&#39;: &#39;c&#39;, &#39;sup&#39;: &#39;10&#39;}]
+</pre></div></div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">nome_file</span> <span class="o">=</span> <span class="s1">&#39;quartiere1.txt&#39;</span>
+
+<span class="n">nome_file</span> <span class="o">=</span> <span class="s1">&#39;quartiere2.txt&#39;</span> <span class="c1"># [ {&#39;civ&#39;: &#39;5&#39;, &#39;epi&#39;: &#39;B&#39;, &#39;sup&#39;: &#39;20&#39;},</span>
+                             <span class="c1">#   {&#39;civ&#39;: &#39;9&#39;, &#39;epi&#39;: &#39;D&#39;, &#39;interno&#39;: &#39;c&#39;, &#39;sup&#39;: &#39;10&#39;}  ]</span>
+
+
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+</section>
+<section id="Esercizio-immersione-in-python-toc">
+<h3>Esercizio immersione-in-python-toc<a class="headerlink" href="#Esercizio-immersione-in-python-toc" title="Permalink to this headline"></a></h3>
 <p>Questo esercizio è più difficile, se sei alle prime armi puoi saltarlo e passare ai CSV.</p>
 <p>Il libro Immersione in Python in Italiano è bello e ti fornisce un PDF, che però ha un problema: se provi a stamparlo scoprirai che manca l’indice. Senza perderci d’animo, abbiamo trovato un programmino che ci ha estratto i titoli in un file come segue, che però come scoprirai non è esattamente bello da vedere. Dato che siamo Python ninja, abbiamo deciso di trasformare i titoli grezzi in una <a class="reference external" href="http://it.softpython.org/_static/toc-immersione-in-python-3.txt">tabella dei contenuti vera e
 propria</a>. Sicuramente ci sono metodi più furbi per compiere questa operazione, come caricare il pdf in Python con una apposita libreria per i pdf, ma pareva un esercizio interessante.</p>
@@ -3243,7 +3733,7 @@ BookmarkPageNumber: 47
 <p><strong>DOMANDA</strong>: che cos’è lo strano valore <code class="docutils literal notranslate"><span class="pre">&amp;#232;</span></code> alla fine del file originale ? Dobbiamo riportarlo nell’output ?</p>
 <p><strong>SUGGERIMENTO 1</strong>: Per convertire una stringa in numero intero, usa la funzione <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
@@ -3251,7 +3741,7 @@ BookmarkPageNumber: 47
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
@@ -3259,7 +3749,7 @@ BookmarkPageNumber: 47
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3268,7 +3758,7 @@ BookmarkPageNumber: 47
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -3276,7 +3766,7 @@ BookmarkPageNumber: 47
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3289,7 +3779,7 @@ BookmarkPageNumber: 47
 </div>
 <p><strong>SUGGERIMENTO 2</strong>: Per sostituire un sottostringa in una stringa, si può usare la funzione replace:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abcde&#39;</span>
@@ -3298,7 +3788,7 @@ BookmarkPageNumber: 47
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3314,7 +3804,7 @@ e guarda se funziona!</p>
 </div>
 <p><strong>SUGGERIMENTO 3</strong>: Per scrivere <em>n</em> copie di un carattere, usa <code class="docutils literal notranslate"><span class="pre">*</span></code> come qua:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;b&quot;</span> <span class="o">*</span> <span class="mi">3</span>
@@ -3322,7 +3812,7 @@ e guarda se funziona!</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3331,7 +3821,7 @@ e guarda se funziona!</p>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;b&quot;</span> <span class="o">*</span> <span class="mi">7</span>
@@ -3339,7 +3829,7 @@ e guarda se funziona!</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3351,7 +3841,7 @@ e guarda se funziona!</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -3389,7 +3879,7 @@ e guarda se funziona!</p>
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -3411,6 +3901,7 @@ e guarda se funziona!</p>
       Ogni cosa è un oggetto  47
 </pre></div></div>
 </div>
+</section>
 </section>
 <section id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
