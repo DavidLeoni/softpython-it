@@ -1733,8 +1733,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#Leggere-e-scrivere-un-CSV">Leggere e scrivere un CSV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Esercizio---CSV-Impianti-funiviari">Esercizio - CSV Impianti funiviari</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#Problema:-caratteri-sbagliati-??">Problema: caratteri sbagliati ??</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---Aprire-in-un-foglio-di-calcolo">Esercizio - Aprire in un foglio di calcolo</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Importare-in-Python">Importare in Python</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---Dove-sono-gli-impianti?">Esercizio - Dove sono gli impianti?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---Contiamo-i-servizi">Esercizio - Contiamo i servizi</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---Opere-paravalanghe-1">Esercizio - Opere paravalanghe 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---Opere-paravalanghe-2">Esercizio - Opere paravalanghe 2</a></li>
 </ul>
@@ -2999,7 +3001,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;_csv.reader object at 0x7ffbb071ead0&gt;
+&lt;_csv.reader object at 0x7fb62061ead0&gt;
 </pre></div></div>
 </div>
 <p>Quello che vediamo è piuttosto deludente.</p>
@@ -3386,7 +3388,10 @@ Tarlenta - Rifugio Mantova,B030g,Peio,Soc.Fun. Peio,30-dic-10,30-dic-10,2856,992
 <h3>Problema: caratteri sbagliati ??<a class="headerlink" href="#Problema:-caratteri-sbagliati-??" title="Permalink to this headline"></a></h3>
 <p>Si vede subito un problema nella prima riga delle intestazioni, alla colonna <code class="docutils literal notranslate"><span class="pre">CapacitÃ</span>&#160; <span class="pre">Veicolo</span> <span class="pre">(pers.)</span></code>. Pare che il file abbia la ‘à’ accentata sbagliata. Ma è davvero un problema del file? Vi dico subito di no. Probabilmente, è il server che non sta dicendo a Firefox quale è il giusto encoding per il file. Firefox non ha capacità di divinazione, e fa solo il suo meglio per mostrare il CSV basandosi sulle informazioni che ha, che possono essere limitate e/o addirittura incorrette. Il mondo
 non è mai come lo vorremmo…</p>
-<p><strong>✪ 2.12 ESERCIZIO</strong>: scarica il CSV, e prova ad aprirlo in Excel, e / o in LibreOffice Calc. Vedi la à accentata corretta? Se no, prova ad impostare l’encoding (per es. in Calc si chiama ‘Character set’) a ‘Unicode (UTF-8)’</p>
+</section>
+<section id="Esercizio---Aprire-in-un-foglio-di-calcolo">
+<h3>Esercizio - Aprire in un foglio di calcolo<a class="headerlink" href="#Esercizio---Aprire-in-un-foglio-di-calcolo" title="Permalink to this headline"></a></h3>
+<p>✪ Scarica il CSV, e prova ad aprirlo in Excel, e / o in LibreOffice Calc. Vedi la à accentata corretta? Se no, prova ad impostare l’encoding (per es. in Calc si chiama ‘Character set’) a ‘Unicode (UTF-8)’</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE SE USI Excel!</strong></p>
 <p>Facendo direttamente <code class="docutils literal notranslate"><span class="pre">File-&gt;Apri</span> <span class="pre">in</span> <span class="pre">Excel</span></code>, probabilmente Excel cercherà di immaginarsi da solo come intabellare il CSV, e sbaglierà metterà tutto le righe in una colonna. Per ovviare al problema, dobbiamo dire ad Excel di mostrare un pannello per chiederci come vogliamo aprire il CSV, facendo così:</p>
@@ -3501,7 +3506,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Mezzocorona&#39;, &#39;Moena&#39;, &#39;Vigo di Fassa&#39;, &#39;Tonadico&#39;, &#39;Trento&#39;, &#39;Canazei&#39;, &#39;Peio&#39;}
+{&#39;Trento&#39;, &#39;Peio&#39;, &#39;Canazei&#39;, &#39;Vigo di Fassa&#39;, &#39;Mezzocorona&#39;, &#39;Moena&#39;, &#39;Tonadico&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -3522,10 +3527,13 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Mezzocorona&#39;, &#39;Moena&#39;, &#39;Vigo di Fassa&#39;, &#39;Tonadico&#39;, &#39;Trento&#39;, &#39;Canazei&#39;, &#39;Peio&#39;}
+{&#39;Trento&#39;, &#39;Peio&#39;, &#39;Canazei&#39;, &#39;Vigo di Fassa&#39;, &#39;Mezzocorona&#39;, &#39;Moena&#39;, &#39;Tonadico&#39;}
 </pre></div></div>
 </div>
-<p><strong>✪✪ ESERCIZIO 2.14</strong>: prova a conteggiare in un dizionario quanti tipi di servizio vengono trovati. Dovresti ottenere un risultato così:</p>
+</section>
+<section id="Esercizio---Contiamo-i-servizi">
+<h3>Esercizio - Contiamo i servizi<a class="headerlink" href="#Esercizio---Contiamo-i-servizi" title="Permalink to this headline"></a></h3>
+<p>✪✪ Prova a conteggiare in un dizionario quanti tipi di servizio vengono trovati. Dovresti ottenere un risultato così:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s1">&#39;bistagionale&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
  <span class="s1">&#39;annuale&#39;</span><span class="p">:</span> <span class="mi">2</span>

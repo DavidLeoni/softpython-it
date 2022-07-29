@@ -1733,8 +1733,10 @@
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Leggere-e-scrivere-un-CSV">Leggere e scrivere un CSV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---CSV-Impianti-funiviari">Esercizio - CSV Impianti funiviari</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Problema:-caratteri-sbagliati-??">Problema: caratteri sbagliati ??</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Aprire-in-un-foglio-di-calcolo">Esercizio - Aprire in un foglio di calcolo</a></li>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Importare-in-Python">Importare in Python</a></li>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Dove-sono-gli-impianti?">Esercizio - Dove sono gli impianti?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Contiamo-i-servizi">Esercizio - Contiamo i servizi</a></li>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Opere-paravalanghe-1">Esercizio - Opere paravalanghe 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="formats2-csv-sol.html#Esercizio---Opere-paravalanghe-2">Esercizio - Opere paravalanghe 2</a></li>
 </ul>
@@ -2773,16 +2775,22 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="2.1-Il-primo-parsing">
 <h2>2.1 Il primo parsing<a class="headerlink" href="#2.1-Il-primo-parsing" title="Permalink to this headline"></a></h2>
-<p>Leggi una riga alla volta dall’originale come lista, costruisci una NUOVA riga di 3 colonne e sistema gli eventuali problemi riscontrati, facendo infine una STAMPA della riga sistemata:</p>
+<ol class="loweralpha simple">
+<li><p>Leggi una riga alla volta dall’originale come lista, costruisci una NUOVA riga di 3 colonne e sistema gli eventuali problemi riscontrati, facendo infine una STAMPA della riga sistemata:</p></li>
+</ol>
 <ul class="simple">
 <li><p>per leggere, usa l’encoding <code class="docutils literal notranslate"><span class="pre">'latin-1'</span></code>, altrimenti il file potrebbe non aprirsi proprio o potresti vedere strani caratteri invece delle accentate (verifica sia in Python, che aprendo in LibreOffice/Excel)</p></li>
 </ul>
-<p>1.1 Converti ‘sconosciuto’ nella stringa vuota</p>
+<ol class="loweralpha simple" start="2">
+<li><p>Converti ‘sconosciuto’ nella stringa vuota</p></li>
+</ol>
 <div class="admonition warning">
 <p><strong>ATTENZIONE alle stringhe</strong> <code class="docutils literal notranslate"><span class="pre">'sconosciuto</span> <span class="pre">'</span></code> <strong>con uno spazio alla fine !!!</strong></p>
 </div>
-<p>1.2 Converti le sigle di città in nomi estesi. A tal fine, usa il dizionario <code class="docutils literal notranslate"><span class="pre">province</span></code> definito più sotto</p>
-<p>1.3 Se un nome o sigla di città NON è tra parentesi, metti il risultato tra parentesi, togliendo la virgola</p>
+<ol class="loweralpha simple" start="3">
+<li><p>Converti le sigle di città in nomi estesi. A tal fine, usa il dizionario <code class="docutils literal notranslate"><span class="pre">province</span></code> definito più sotto</p></li>
+<li><p>Se un nome o sigla di città NON è tra parentesi, metti il risultato tra parentesi, togliendo la virgola</p></li>
+</ol>
 <p>ESEMPI conversione luogo di nascita:</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>SCRIVI DEL CODICE GENERICO !</strong></p>
