@@ -1,5 +1,45 @@
 
-/** ONLY AVAILABLE IN JUPYTER **/
+/** AVAILABLE BOTH IN JUPYTER AND WEBSITE**/
+
+
+/* ************  PYTHON TUTOR START  *************/
+
+
+.vizLayoutTd {
+    background-color: #fff !important;
+}
+                    
+#pyStdout {
+    min-height:25px;
+}
+
+
+/* Remove 'Customize visualization'  https://github.com/DavidLeoni/jupman/issues/108 */
+#uiControlsPane {
+    display: none;
+}
+
+/* Show middle bar https://github.com/DavidLeoni/jupman/issues/110 */
+div.ui-resizable-handle.ui-resizable-e {
+    border-color: #dddddd !important;
+    border-width:2px !important; 
+}
+
+/* Hides 'Edit this code' link because replaces browser tab when clicked*/
+#editCodeLinkDiv {
+    display:none;  
+}
+
+/* misaligned arrow bug  https://github.com/DavidLeoni/jupman/issues/105 */
+#pyCodeOutputDiv td {
+    padding: 0.5em 0.5em !important;
+}
+
+
+/* ************ PYTHON TUTOR END ***************   */
+
+
+/* ********** CUSTOM TOC IN JUPYTER  START ************* */
 
 #jupman-nav {
     position: fixed;
@@ -25,12 +65,6 @@
     z-index: 10;
     overflow-y: scroll;        
         /* font-size: 50%; */
-}
-
-
-
-code {
-    background-color:rgb(245, 249, 249) !important;
 }
 
 
@@ -115,6 +149,8 @@ code {
 #jupman-toc .toc-active {
     background: rgba(168, 254, 255, 0.32);
 }
+
+/* ********** CUSTOM TOC IN JUPYTER END ************* */
 
 
 .jupman-toggler {

@@ -7,9 +7,9 @@
   <title>Funzioni 5 - esercizi con tuple &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/functions/fun5-tuples-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -2348,7 +2348,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021---Altre-challenge">Agosto 2021 - Altre challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Ottobre-2020---5.0---Sezione-Fondamenti">Ottobre 2020 - 5.0 - Sezione Fondamenti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Gennaio-2020---4.0---Semplificato-la-struttura-delle-cartelle-negli-esercizi">Gennaio 2020 - 4.0 - Semplificato la struttura delle cartelle negli esercizi</a></li>
@@ -2693,9 +2694,9 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="Esercizio---giunto">
 <h2>Esercizio - giunto<a class="headerlink" href="#Esercizio---giunto" title="Permalink to this headline"></a></h2>
-<p>✪✪ Scrivi una funzione che date due tuple di caratteri <code class="docutils literal notranslate"><span class="pre">ta</span></code> e <code class="docutils literal notranslate"><span class="pre">tb</span></code> aventi ciascuna caratteri diversi (possono essere anche vuote), se la tupla <code class="docutils literal notranslate"><span class="pre">ta</span></code> termina con lo stesso carattere con cui <code class="docutils literal notranslate"><span class="pre">tb</span></code> inizia, RITORNA la concatenazione di <code class="docutils literal notranslate"><span class="pre">ta</span></code> e <code class="docutils literal notranslate"><span class="pre">tb</span></code> SENZA caratteri duplicati, altrimenti RITORNA una tupla vuota.</p>
+<p>✪✪ Scrivi una funzione che date due tuple di caratteri <code class="docutils literal notranslate"><span class="pre">ta</span></code> e <code class="docutils literal notranslate"><span class="pre">tb</span></code> aventi ciascuna caratteri diversi (possono essere anche vuote), se la tupla <code class="docutils literal notranslate"><span class="pre">ta</span></code> termina con lo stesso carattere con cui <code class="docutils literal notranslate"><span class="pre">tb</span></code> inizia, RITORNA la concatenazione di <code class="docutils literal notranslate"><span class="pre">ta</span></code> e <code class="docutils literal notranslate"><span class="pre">tb</span></code> SENZA carattere di giunzione duplicato, altrimenti RITORNA una tupla vuota.</p>
 <p>Esempio:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">giunto</span><span class="p">((</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">giunto</span><span class="p">((</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">))</span>
 <span class="go">(&#39;m&#39;,&#39;e&#39;,&#39;s&#39;,&#39;a&#39;,&#39;g&#39;,&#39;g&#39;,&#39;e&#39;,&#39;r&#39;,&#39;o&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">giunto</span><span class="p">((</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">))</span>
 <span class="go">()</span>
@@ -2704,7 +2705,7 @@ div.rendered_html tbody tr:hover {
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">giunto</span><span class="p">(</span><span class="n">ta</span><span class="p">,</span><span class="n">tb</span><span class="p">):</span>
@@ -2727,7 +2728,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">giunto</span><span class="p">(</span><span class="n">ta</span><span class="p">,</span><span class="n">tb</span><span class="p">):</span>

@@ -1,0 +1,411 @@
+/* media query inspiration taken from https://stackoverflow.com/a/13550716 
+   See also issue https://github.com/DavidLeoni/jupman/issues/92  
+*/    
+
+html { font-size:0.81em; }
+
+.wy-nav-top a {
+   font-size:1.4em
+}
+
+.wy-side-scroll a {
+       font-size: 1.5em;
+}   
+.toctree-l4  > a {
+   font-size: 1.4em !important;
+}
+
+@media screen and (min-width:481px) { /* rtd uses max-width 480 cutoff*/
+    
+}
+@media screen and (min-width: 769px) { /* rtd uses max-width 768 cutoff*/
+    
+    html { font-size:0.77em; }    
+
+    .wy-nav-content {
+        max-width:600px;
+    }
+    
+   .wy-side-scroll {
+       font-size: 0.8rem;    
+   }
+   
+   .toctree-l4 > a {
+       font-size: 1.06rem !important;
+   }
+   
+/* Shrinks sidebar, we care only about desktop users, 
+   let other config hell be handled by rtd theme */    
+    .wy-nav-side,  
+    .wy-side-scroll, 
+    .wy-side-nav-search, 
+    .wy-menu-vertical, 
+    .wy-tray-container li, 
+    .rst-versions {
+        min-width:200px;
+        max-width:200px;
+    }        
+    .rst-versions.rst-badge {
+        max-width:200px;
+    }
+    .wy-nav-content-wrap {    
+        margin-left:200px;    
+    }
+    
+}
+@media screen and (min-width:1100px) { /* min-width as in rtd theme */
+    
+    html { font-size:0.78em; }    
+    
+/* Shrinks sidebar, we care only about desktop users, 
+   let other config hell be handled by rtd theme */    
+    .wy-nav-side,  
+    .wy-side-scroll, 
+    .wy-side-nav-search, 
+    .wy-menu-vertical, 
+    .wy-tray-container li, 
+    .rst-versions {
+        min-width:275px;
+        max-width:275px;
+    }        
+    .rst-versions.rst-badge {
+        max-width:275px;
+    }
+    .wy-nav-content-wrap {    
+        margin-left:275px;    
+    }
+    
+}
+@media screen and (min-device-width:1400px) { 
+    .wy-nav-content {
+        max-width:695px;
+    }
+
+}
+
+@media screen and (min-device-width:1600px) { 
+    html { font-size:0.85em; }    
+    
+    .wy-nav-content {
+        max-width:755px;
+    }
+    
+}
+
+
+@media screen and (min-device-width: 1900px) {    
+    html { font-size:0.98em; }  
+    
+    .wy-nav-content {
+        max-width:870px;
+    }
+    
+}
+
+
+/* I presume higher res users are accustomed  to zooming
+      which also works better with Python Tutor
+      see https://github.com/DavidLeoni/jupman/issues/93
+    */
+
+
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Regular.eot");
+    src:url("../fonts/Archivo/Archivo-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Regular.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Regular.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Bold.eot");
+    src:url("../fonts/Archivo/Archivo-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Bold.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Bold.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot");
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-BoldItalic.ttf") format("truetype");
+    font-weight:700;
+    font-style:italic
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Italic.eot");
+    src:url("../fonts/Archivo/Archivo-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Italic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Italic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Italic.ttf") format("truetype");
+    font-weight:400;
+    font-style:italic
+   }
+
+@font-face {
+    font-family:"Hussar";
+    font-style:normal;
+    
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot");
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff2") format("woff2"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff") format("woff"),
+    url("../fonts/Hussar/HussarBold-7mRE.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family:"Varela";
+    font-style:normal;
+    
+    src:url("../fonts/Varela/Varela-Regular.eot");
+    src:url("../fonts/Varela/Varela-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Varela/Varela-Regular.woff2") format("woff2"),
+    url("../fonts/Varela/Varela-Regular.woff") format("woff"),
+    url("../fonts/Varela/Varela-Regular.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family: "Inconsolata";
+
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot");
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.woff2") format("woff2"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.woff") format("woff"),
+    url("../fonts/Varela/Inconsolata-VariableFont_wdth-wght.ttf") format("truetype");
+
+    src: url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.ttf");
+}
+
+/*needed only if you mess with sidebar width*/
+.wy-nav-content-wrap  {
+   background: rgba(0,0,0,.05);
+}
+
+
+.wy-nav-content{
+    background: #f9f8f3;     
+    margin-left:0 !important;  /* sometimes it gets disconneted .. */
+ }
+
+
+.wy-nav-content p, .wy-nav-content div.admonition {
+    font-size: 1.25rem;    
+}
+
+.wy-nav-content p {
+    margin-right:1rem !important;
+    margin-top:1rem !important;
+    margin-bottom:1rem !important;
+    line-height: 1.9rem;       
+}
+
+.wy-nav-content ul, .wy-nav-content ol {    
+    margin-top:1.7rem !important;
+}
+
+.wy-nav-content li p{        
+    margin-top: -0.8rem !important;        
+}
+
+
+.wy-side-nav-search {
+    padding-right: 20px;
+}
+
+
+#rtd-search-form {
+    font-size:1.05rem;
+}
+
+.wy-side-nav-search, .wy-nav-top {
+   background-color: #537326;
+ }
+
+
+.wy-nav-side {   
+   background-color: #705d39;   
+}
+
+.toctree-l1 > a {
+    line-height:2ch !important;
+}
+.toctree-l2 > a {
+    line-height:2ch !important;
+}
+.toctree-l3 > a {
+    line-height:2ch !important;
+}
+
+.toctree-l4 > a {
+    padding: .4045em 1.663em .4045em  4.663em !important;    
+    line-height:2ch !important;
+}
+
+.toctree-l5 > a {
+    font-size: 0.97rem !important;
+    padding: .4045em 1.663em .4045em  5em !important;
+    line-height:2ch !important;
+}
+
+/* only for toc in index pages */
+.toctree-wrapper {
+    font-size:1.2rem;   
+}
+
+.toctree-wrapper li{   
+   margin-top:0.3rem !important;    
+}
+
+.toctree-wrapper .toctree-l1 {   
+   margin-top:1.5rem !important;    
+}
+
+.toctree-wrapper .toctree-l1 ul {   
+    margin-top:0.6rem !important;    
+}
+
+
+.toctree-wrapper .toctree-l2 ul {   
+    margin-top:0.4rem !important;    
+}
+
+
+
+div.highlight, div.highlight-none, div.highlight-python, div.highlight-bash, div.highlight-ipython3 {
+    border-radius:12px;
+}
+
+/* ************   ALERT BOXES START  ************ */
+
+div.admonition {
+    border-radius:12px;    
+}
+
+div.admonition.note, div.admonition.warning {
+   padding-right: 0px;
+   padding-top:0px;
+   padding-bottom:0.18rem;
+}
+
+/* have *no* idea why I need both 2 and 3, but with the single line I get 
+ * random results in warning boxes, sometimes  works and sometimes doesn't
+*/
+div.admonition:nth-child(2),div.admonition:nth-child(3) {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;    
+}
+
+p.admonition-title.fa.fa-exclamation-circle {
+   margin-top:0px !important;   
+    margin-right: 0 !important;
+    padding-top: 0.8rem; 
+    padding-bottom: 0.8rem;    
+    border-top-left-radius:  15px;
+    border-top-right-radius:  15px;    
+}
+
+/* ************   ALERT BOXES END  ************ */
+
+
+body {
+    font-family: "Archivo","proxima-nova","Helvetica Neue",Arial,sans-serif;    
+}
+
+
+h1 {
+    font-family: "Hussar","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    font-size: 2.0rem;
+    padding-bottom: 0.8rem;   
+    padding-top: 1.5rem;
+    
+    margin-bottom:-0.2rem; /* to temporarily fix the Download exercises being too close */
+}
+
+
+h2,h3,h4,h5,h6,h7,h8 {
+    font-family: "Varela","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    padding-top:1.4rem;
+}
+
+h2 { font-size:1.6rem; }
+h3 { font-size:1.3rem; }
+h4 { font-size:1.2rem; }
+
+.rst-content blockquote {
+    
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem;
+    text-align:center;    
+}
+
+.rst-content blockquote p {
+    font-size: 1.30rem;    
+}
+pre {
+    font-family: "Inconsolata" !important;
+    font-size:1.2rem !important;
+    background-color:#f8f8ec;
+    line-height: 1.5rem !important;
+}
+
+
+/*  python code cell */
+div.input_area.highlight-ipython3 pre {
+    background-color:#f6f6f6;
+}
+
+
+
+
+.rst-content code.literal {
+    color:black;
+    background-color: white !important;
+}
+
+/* cell number */
+div.nbinput.container div.prompt, div.nboutput.container div.prompt{
+    display:none
+}
+
+table.docutils th > p {
+    font-size:1.1rem !important;
+}
+
+table.docutils td > p {
+    font-size:1.2rem !important;
+    margin-top:4px !important;
+    margin-bottom:0.5rem !important;
+}
+
+
+
+
+/* hack for Python Tutor 'next line to execute' becoming too big */
+#legendDiv p {
+    font-size: 9pt;
+}
+
+
+
+.jupman-sol {    
+    background-color:#ebf3ed !important;  
+    border-color: #d3dfd6 !important;            
+}
+
+a.jupman-sol-toggler:hover {
+    color: #21aa21 !important;
+}
+
+/* pandas */
+.dataframe {
+    font-size:1rem !important;    
+}
+

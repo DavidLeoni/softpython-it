@@ -7,9 +7,9 @@
   <title>Liste 2 - operatori &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
     <link rel="canonical" href="https://it.softpython.org/lists/lists2-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -2348,7 +2348,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021---Altre-challenge">Agosto 2021 - Altre challenge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Ottobre-2020---5.0---Sezione-Fondamenti">Ottobre 2020 - 5.0 - Sezione Fondamenti</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Gennaio-2020---4.0---Semplificato-la-struttura-delle-cartelle-negli-esercizi">Gennaio 2020 - 4.0 - Semplificato la struttura delle cartelle negli esercizi</a></li>
@@ -2921,7 +2922,7 @@ div.rendered_html tbody tr:hover {
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: la 2: <code class="docutils literal notranslate"><span class="pre">len</span></code> vuole come argomento <em>una sequenza</em> e restituisce <em>un numero</em>, quindi la chiamata interna a <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> produce un numero che viene dato al <code class="docutils literal notranslate"><span class="pre">len</span></code> esterno e a quel punto Python si lamenterà che ha ricevuto un numero invece di una sequenza. Prova a verificare che errore appare scrivendo <code class="docutils literal notranslate"><span class="pre">len(len(x))</span></code> qua sotto</p>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi il codice qui</span>
@@ -3302,10 +3303,10 @@ Gutenberg
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmff4a706f-3239-47a6-9373-bb89c9b484da" type="application/json" >
+<script id="json-jme8fd9caf-6f50-4770-a20a-7d908822aea2" type="application/json" >
     {"code": " \n#     0  1  2  3   \nla = [7, 9, 6, 8]\nla[2] = 5", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6, 8]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 5, 8]}, "stdout": ""}]}
 </script>
-<div id="jmff4a706f-3239-47a6-9373-bb89c9b484da" class="pytutorVisualizer"> </div>
+<div id="jme8fd9caf-6f50-4770-a20a-7d908822aea2" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3325,12 +3326,12 @@ Gutenberg
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmff4a706f-3239-47a6-9373-bb89c9b484da').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jme8fd9caf-6f50-4770-a20a-7d908822aea2').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmff4a706f-3239-47a6-9373-bb89c9b484da',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jme8fd9caf-6f50-4770-a20a-7d908822aea2',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3548,10 +3549,10 @@ lb è [5, 9, 6]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm5bf1b415-6626-4ad3-b9be-e1b8094559f8" type="application/json" >
+<script id="json-jm804e1a5b-4e92-4a4c-bd1d-416540e83857" type="application/json" >
     {"code": " \nla = [7,9,6]\nlb = la\nlb[0] = 5 \nprint('la \u00e8', la)\nprint('lb \u00e8', lb)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 9, 6]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 9, 6]}, "stdout": "la \u00e8 [5, 9, 6]\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 9, 6]}, "stdout": "la \u00e8 [5, 9, 6]\nlb \u00e8 [5, 9, 6]\n"}]}
 </script>
-<div id="jm5bf1b415-6626-4ad3-b9be-e1b8094559f8" class="pytutorVisualizer"> </div>
+<div id="jm804e1a5b-4e92-4a4c-bd1d-416540e83857" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3571,12 +3572,12 @@ lb è [5, 9, 6]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm5bf1b415-6626-4ad3-b9be-e1b8094559f8').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm804e1a5b-4e92-4a4c-bd1d-416540e83857').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm5bf1b415-6626-4ad3-b9be-e1b8094559f8',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm804e1a5b-4e92-4a4c-bd1d-416540e83857',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3624,10 +3625,10 @@ lb è [5, 9, 6]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm7e088459-8309-4404-b436-1f96b6ee2f27" type="application/json" >
+<script id="json-jma943f963-7d1c-4475-ae5e-8df6a0de4b91" type="application/json" >
     {"code": " \nla = [7,9,6]\nlb = [7,9,6]\nlb[0] = 5 \nprint('la \u00e8', la)\nprint('lb \u00e8', lb)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6], "2": ["LIST", 7, 9, 6]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6], "2": ["LIST", 5, 9, 6]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6], "2": ["LIST", 5, 9, 6]}, "stdout": "la \u00e8 [7, 9, 6]\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 9, 6], "2": ["LIST", 5, 9, 6]}, "stdout": "la \u00e8 [7, 9, 6]\nlb \u00e8 [5, 9, 6]\n"}]}
 </script>
-<div id="jm7e088459-8309-4404-b436-1f96b6ee2f27" class="pytutorVisualizer"> </div>
+<div id="jma943f963-7d1c-4475-ae5e-8df6a0de4b91" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3647,12 +3648,12 @@ lb è [5, 9, 6]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm7e088459-8309-4404-b436-1f96b6ee2f27').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jma943f963-7d1c-4475-ae5e-8df6a0de4b91').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm7e088459-8309-4404-b436-1f96b6ee2f27',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jma943f963-7d1c-4475-ae5e-8df6a0de4b91',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3719,10 +3720,10 @@ lc è [9, 6, 7, 5]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm6fc349b4-d6f9-4de0-9ae4-cc042b444510" type="application/json" >
+<script id="json-jm95c543f7-2ebd-483a-a478-e05c3f257aad" type="application/json" >
     {"code": " \nla = [8,7,7]\nlb = [9,6,7,5]\nlc = lb\nla = lb\n#print('la \u00e8', la)\n#print('lb \u00e8', lb)\n#print('lc \u00e8', lc)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 8, 7, 7]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 8, 7, 7], "2": ["LIST", 9, 6, 7, 5]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 2]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 8, 7, 7], "2": ["LIST", 9, 6, 7, 5]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 2], "lb": ["REF", 2], "lc": ["REF", 2]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"2": ["LIST", 9, 6, 7, 5]}, "stdout": ""}]}
 </script>
-<div id="jm6fc349b4-d6f9-4de0-9ae4-cc042b444510" class="pytutorVisualizer"> </div>
+<div id="jm95c543f7-2ebd-483a-a478-e05c3f257aad" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3742,12 +3743,12 @@ lc è [9, 6, 7, 5]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm6fc349b4-d6f9-4de0-9ae4-cc042b444510').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm95c543f7-2ebd-483a-a478-e05c3f257aad').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm6fc349b4-d6f9-4de0-9ae4-cc042b444510',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm95c543f7-2ebd-483a-a478-e05c3f257aad',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -3822,10 +3823,10 @@ lc è [9, 7]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm40c97bc1-8602-4e0a-92e5-ce17f017231f" type="application/json" >
+<script id="json-jm1b6dbc3a-e0d9-44bc-a744-f7d2737a51aa" type="application/json" >
     {"code": " \nla = [7,8,5]\nlb = [6,7]\nlc = lb\nlb = la\nlc[0] = 9\n#print('la \u00e8', la)\n#print('lb \u00e8', lb)\n#print('lc \u00e8', lc)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 5]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 5], "2": ["LIST", 6, 7]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 2]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 5], "2": ["LIST", 6, 7]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1], "lc": ["REF", 2]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 5], "2": ["LIST", 6, 7]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1], "lc": ["REF", 2]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 5], "2": ["LIST", 9, 7]}, "stdout": ""}]}
 </script>
-<div id="jm40c97bc1-8602-4e0a-92e5-ce17f017231f" class="pytutorVisualizer"> </div>
+<div id="jm1b6dbc3a-e0d9-44bc-a744-f7d2737a51aa" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -3845,12 +3846,12 @@ lc è [9, 7]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm40c97bc1-8602-4e0a-92e5-ce17f017231f').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm1b6dbc3a-e0d9-44bc-a744-f7d2737a51aa').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm40c97bc1-8602-4e0a-92e5-ce17f017231f',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm1b6dbc3a-e0d9-44bc-a744-f7d2737a51aa',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4132,10 +4133,10 @@ lc è [9, 7]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmbe3c8646-75b0-4f2a-909f-87bd80565061" type="application/json" >
+<script id="json-jmb3cfdc31-c9d2-40de-8f14-032f2d218f21" type="application/json" >
     {"code": " \n#     0  1  2  3  4  5  6  7  8  9\nla = [40,30,90,80,60,10,40,20,50,60]\nlb = la[3:7]", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 40, 30, 90, 80, 60, 10, 40, 20, 50, 60]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 40, 30, 90, 80, 60, 10, 40, 20, 50, 60], "2": ["LIST", 80, 60, 10, 40]}, "stdout": ""}]}
 </script>
-<div id="jmbe3c8646-75b0-4f2a-909f-87bd80565061" class="pytutorVisualizer"> </div>
+<div id="jmb3cfdc31-c9d2-40de-8f14-032f2d218f21" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -4155,12 +4156,12 @@ lc è [9, 7]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmbe3c8646-75b0-4f2a-909f-87bd80565061').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmb3cfdc31-c9d2-40de-8f14-032f2d218f21').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmbe3c8646-75b0-4f2a-909f-87bd80565061',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmb3cfdc31-c9d2-40de-8f14-032f2d218f21',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -4454,10 +4455,10 @@ Camilla: [&#39;r&#39;, &#39;r&#39;, &#39;r&#39;, &#39;r&#39;]
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmcb552bc0-e0a8-4d6f-a900-21d17a288016" type="application/json" >
+<script id="json-jmb2dc62d7-4a64-4c0c-8e4c-86eda10b0d57" type="application/json" >
     {"code": " \nla = [7,8,9]\nlb = la[:]\nlb[0] = 6\n#print('la =',la)\n#print('lb =',lb)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 9]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 9], "2": ["LIST", 7, 8, 9]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 7, 8, 9], "2": ["LIST", 6, 8, 9]}, "stdout": ""}]}
 </script>
-<div id="jmcb552bc0-e0a8-4d6f-a900-21d17a288016" class="pytutorVisualizer"> </div>
+<div id="jmb2dc62d7-4a64-4c0c-8e4c-86eda10b0d57" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -4477,12 +4478,12 @@ Camilla: [&#39;r&#39;, &#39;r&#39;, &#39;r&#39;, &#39;r&#39;]
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmcb552bc0-e0a8-4d6f-a900-21d17a288016').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmb2dc62d7-4a64-4c0c-8e4c-86eda10b0d57').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmcb552bc0-e0a8-4d6f-a900-21d17a288016',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmb2dc62d7-4a64-4c0c-8e4c-86eda10b0d57',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -5165,10 +5166,10 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm6a023ff2-b05d-4cea-a0ee-d1661b92a469" type="application/json" >
+<script id="json-jmbf0d034d-1209-4c4b-8331-cc55635ed3ac" type="application/json" >
     {"code": " \n#     0  1  2  3  4  5  6  7\nla = [30,40,80,10,70,60,40,20]\nlb = la \nlb[3:6] = [91,92,93]", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 30, 40, 80, 10, 70, 60, 40, 20]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 30, 40, 80, 10, 70, 60, 40, 20]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 1]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 30, 40, 80, 91, 92, 93, 40, 20]}, "stdout": ""}]}
 </script>
-<div id="jm6a023ff2-b05d-4cea-a0ee-d1661b92a469" class="pytutorVisualizer"> </div>
+<div id="jmbf0d034d-1209-4c4b-8331-cc55635ed3ac" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -5188,12 +5189,12 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm6a023ff2-b05d-4cea-a0ee-d1661b92a469').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmbf0d034d-1209-4c4b-8331-cc55635ed3ac').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm6a023ff2-b05d-4cea-a0ee-d1661b92a469',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmbf0d034d-1209-4c4b-8331-cc55635ed3ac',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -5258,9 +5259,9 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 <li><p>per impedire il compiersi di furti al treno, tutti i vagoni preziosi vanno posizionati <strong>vicino alla locomotiva</strong></p></li>
 <li><p>il bestiame <strong>va sempre messo dietro</strong> le persone, perchè per quanto l’igiene nel west sia carente è comunque più facile pretendere che gli umani si lavino piuttosto che il bestiame</p></li>
 </ul>
-<p>Scrivi del codice che MODIFICA <code class="docutils literal notranslate"><span class="pre">new_york</span></code> copiando le stringhe da <code class="docutils literal notranslate"><span class="pre">colorado</span></code> e <code class="docutils literal notranslate"><span class="pre">fort</span></code>.</p>
+<p>Scrivi del codice che MODIFICA la regione di memoria ORIGINALE della lista <code class="docutils literal notranslate"><span class="pre">new_york</span></code> copiando le stringhe da <code class="docutils literal notranslate"><span class="pre">colorado</span></code> e <code class="docutils literal notranslate"><span class="pre">fort</span></code>.</p>
 <ul class="simple">
-<li><p><strong>MINIMIZZA il numero di assegnazioni!</strong> (la soluzione migliore ha solamente due assegnazioni!)</p></li>
+<li><p><strong>MINIMIZZA il numero di assegnazioni!</strong> (la soluzione migliore con solo slice ha solamente tre assegnazioni!)</p></li>
 <li><p><strong>NON</strong> scrivere stringhe costanti nel tuo codice (es niente <code class="docutils literal notranslate"><span class="pre">&quot;cowbow&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;oro&quot;</span></code>, …)</p></li>
 </ul>
 <p>Esempio - dati:</p>
@@ -5326,7 +5327,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 <p><strong>NOTA: Parleremo molto più nel dettaglio delle liste di liste nel tutorial</strong> <a class="reference external" href="https://it.softpython.org/matrices-lists/matrices-lists1-sol.html">Matrici - liste di liste</a>, questa è solo un’introduzione sommaria.</p>
 <p>Le considerazioni viste per le liste di stringhe valgono anche per una lista di liste:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coppie</span> <span class="o">=</span> <span class="p">[</span>          <span class="c1"># lista esterna</span>
@@ -5341,7 +5342,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 <p>Se vogliamo estrarre il numero <code class="docutils literal notranslate"><span class="pre">90</span></code>, dobbiamo prima estrarre la sottolista all’indice <code class="docutils literal notranslate"><span class="pre">3</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coppie</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>   <span class="c1"># NOTA: il risultato di questa espressione è una lista</span>
@@ -5349,7 +5350,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5359,7 +5360,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 <p>e quindi dalla sottolista estratta (che ha solo due elementi) possiamo recuperare il numero all’indice <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coppie</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -5367,7 +5368,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5377,7 +5378,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 <p>e all’indice <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coppie</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
@@ -5385,7 +5386,7 @@ La spesa maggiore è stata: Scarpe trasparenti da casa
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5408,7 +5409,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">coppie</span> <span class="o">=</span> <span class="p">[</span>           <span class="c1"># lista esterna</span>
@@ -5441,7 +5442,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">coppie</span> <span class="o">=</span> <span class="p">[</span>           <span class="c1"># lista esterna</span>
@@ -5491,7 +5492,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">premio</span> <span class="o">=</span> <span class="mi">40</span>                      <span class="c1"># sesterzi</span>
@@ -5528,7 +5529,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">premio</span> <span class="o">=</span> <span class="mi">40</span>                      <span class="c1"># sesterzi</span>
@@ -5554,7 +5555,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 <p>Per verificare se un oggetto è contenuto in una lista, possiamo usare l’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p>
 <p>Nota che il risultato di questa espressione è un booleano:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
@@ -5562,7 +5563,7 @@ punto 2: i = 3  j = 1 risultato = 7830
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5571,7 +5572,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
@@ -5579,7 +5580,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5588,7 +5589,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;mela&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">]</span>
@@ -5596,7 +5597,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5605,7 +5606,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;carota&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">]</span>
@@ -5613,7 +5614,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5653,7 +5654,7 @@ False
 <p>Possiamo scrivere la verifica di <strong>non</strong> appartenza in due forme:</p>
 <p><strong>Forma 1</strong>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;carota&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">]</span>
@@ -5661,7 +5662,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5670,7 +5671,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;anguria&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">]</span>
@@ -5678,7 +5679,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5688,7 +5689,7 @@ False
 </div>
 <p><strong>Forma 2:</strong></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="s2">&quot;carota&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">]</span>
@@ -5696,7 +5697,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5705,7 +5706,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="s2">&quot;anguria&quot;</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;anguria&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;mela&quot;</span><span class="p">]</span>
@@ -5713,7 +5714,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5833,7 +5834,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">ortaggi</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;carota&quot;</span><span class="p">,</span>
@@ -5866,7 +5867,7 @@ False
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">ortaggi</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;carota&quot;</span><span class="p">,</span>
@@ -5887,7 +5888,7 @@ False
 <h2>Concatenazione di liste con +<a class="headerlink" href="#Concatenazione-di-liste-con-+" title="Permalink to this headline"></a></h2>
 <p>Date due liste <code class="docutils literal notranslate"><span class="pre">la</span></code> e <code class="docutils literal notranslate"><span class="pre">lb</span></code>, possiamo concatenarle con l’operatore <code class="docutils literal notranslate"><span class="pre">+</span></code> che produce una NUOVA lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">80</span><span class="p">]</span>
@@ -5898,7 +5899,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5908,7 +5909,7 @@ False
 </div>
 <p>Nota bene che l’operatore <code class="docutils literal notranslate"><span class="pre">+</span></code> produce una NUOVA lista, quindi <code class="docutils literal notranslate"><span class="pre">la</span></code> ed <code class="docutils literal notranslate"><span class="pre">lb</span></code> sono rimaste immutate:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
@@ -5924,7 +5925,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
@@ -5941,7 +5942,7 @@ False
 </div>
 <p>Vediamo meglio con Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">80</span><span class="p">]</span>
@@ -5967,16 +5968,16 @@ False
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmeed64897-9cc2-4d14-a1b6-b24caeab4008" type="application/json" >
+<script id="json-jmfa43c3eb-ece7-4c9d-9188-888cf47d5f6d" type="application/json" >
     {"code": " \nla = [70,60,80]\nlb = [90,50]\nlc = la + lb\n\nprint(la)\nprint(lb)\nprint(lc)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80], "2": ["LIST", 90, 50]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 3]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80], "2": ["LIST", 90, 50], "3": ["LIST", 70, 60, 80, 90, 50]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 3]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80], "2": ["LIST", 90, 50], "3": ["LIST", 70, 60, 80, 90, 50]}, "stdout": "[70, 60, 80]\n"}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 3]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80], "2": ["LIST", 90, 50], "3": ["LIST", 70, 60, 80, 90, 50]}, "stdout": "[70, 60, 80]\n[90, 50]\n"}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 3]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 70, 60, 80], "2": ["LIST", 90, 50], "3": ["LIST", 70, 60, 80, 90, 50]}, "stdout": "[70, 60, 80]\n[90, 50]\n[70, 60, 80, 90, 50]\n"}]}
 </script>
-<div id="jmeed64897-9cc2-4d14-a1b6-b24caeab4008" class="pytutorVisualizer"> </div>
+<div id="jmfa43c3eb-ece7-4c9d-9188-888cf47d5f6d" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -5996,12 +5997,12 @@ False
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jmeed64897-9cc2-4d14-a1b6-b24caeab4008').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jmfa43c3eb-ece7-4c9d-9188-888cf47d5f6d').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmeed64897-9cc2-4d14-a1b6-b24caeab4008',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jmfa43c3eb-ece7-4c9d-9188-888cf47d5f6d',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -6037,7 +6038,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">55</span><span class="p">]</span>
@@ -6062,7 +6063,7 @@ False
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">55</span><span class="p">]</span>
@@ -6149,7 +6150,7 @@ False
 <h2>min e max<a class="headerlink" href="#min-e-max" title="Permalink to this headline"></a></h2>
 <p>Una lista è una sequenza di elementi, e come tale la possiamo passare alla funzione <code class="docutils literal notranslate"><span class="pre">min</span></code> o <code class="docutils literal notranslate"><span class="pre">max</span></code> per trovare rispettivamente il minimo o massimo elemento della lista.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
@@ -6157,7 +6158,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6166,7 +6167,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
@@ -6174,7 +6175,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6188,7 +6189,7 @@ False
 </div>
 <p>Notare che è anche possibile passare direttamente a <code class="docutils literal notranslate"><span class="pre">min</span></code> e <code class="docutils literal notranslate"><span class="pre">max</span></code> gli elementi da comparare senza includerli in una lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
@@ -6196,7 +6197,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6205,7 +6206,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
@@ -6213,7 +6214,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6233,7 +6234,7 @@ False
 </div>
 <p>L’errore ci comunica che quando passiamo un solo argomento, Python si aspetta che sia una lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">([</span><span class="mi">4</span><span class="p">])</span>
@@ -6241,7 +6242,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6251,7 +6252,7 @@ False
 </div>
 <p>A <code class="docutils literal notranslate"><span class="pre">min</span></code> e <code class="docutils literal notranslate"><span class="pre">max</span></code> possiamo anche passare stringhe, e ci verrà tornato il carattere alfabeticamente rispettivamente minore o maggiore :</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="s2">&quot;sportello&quot;</span><span class="p">)</span>
@@ -6259,7 +6260,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6268,7 +6269,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="s2">&quot;sportello&quot;</span><span class="p">)</span>
@@ -6276,7 +6277,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6286,7 +6287,7 @@ False
 </div>
 <p>Se passiamo una lista di stringhe, otterremo la stringa minore o maggiore in ordine lessicografico (per intenderci, quello dell’elenco telefonico):</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">([</span><span class="s1">&#39;il&#39;</span><span class="p">,</span><span class="s1">&#39;marinaio&#39;</span><span class="p">,</span><span class="s1">&#39;cammina&#39;</span><span class="p">,</span><span class="s1">&#39;per&#39;</span><span class="p">,</span><span class="s1">&#39;le&#39;</span><span class="p">,</span><span class="s1">&#39;vie&#39;</span><span class="p">,</span><span class="s1">&#39;del&#39;</span><span class="p">,</span><span class="s1">&#39;porto&#39;</span><span class="p">])</span>
@@ -6294,7 +6295,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6303,7 +6304,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">([</span><span class="s1">&#39;il&#39;</span><span class="p">,</span><span class="s1">&#39;marinaio&#39;</span><span class="p">,</span><span class="s1">&#39;cammina&#39;</span><span class="p">,</span><span class="s1">&#39;per&#39;</span><span class="p">,</span><span class="s1">&#39;le&#39;</span><span class="p">,</span><span class="s1">&#39;vie&#39;</span><span class="p">,</span><span class="s1">&#39;del&#39;</span><span class="p">,</span><span class="s1">&#39;porto&#39;</span><span class="p">])</span>
@@ -6311,7 +6312,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6387,7 +6388,7 @@ False
 <h2>sum<a class="headerlink" href="#sum" title="Permalink to this headline"></a></h2>
 <p>Con <code class="docutils literal notranslate"><span class="pre">sum</span></code> possiamo sommare tutti gli elementi di una lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -6395,7 +6396,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6404,7 +6405,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.14</span><span class="p">])</span>
@@ -6412,7 +6413,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6476,7 +6477,7 @@ False
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">bilancia</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6489,7 +6490,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6498,7 +6499,7 @@ True
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">bilancia</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6514,7 +6515,7 @@ True
 <h2>Moltiplicazione per liste<a class="headerlink" href="#Moltiplicazione-per-liste" title="Permalink to this headline"></a></h2>
 <p>Per replicare gli elementi di una lista, è possibile usare l’operatore <code class="docutils literal notranslate"><span class="pre">*</span></code> che produce una NUOVA lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
@@ -6522,7 +6523,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6531,7 +6532,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
@@ -6539,7 +6540,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6549,7 +6550,7 @@ True
 </div>
 <p>Notare che viene prodotta una NUOVA lista, e quella originale non viene modificata:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6557,7 +6558,7 @@ True
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
@@ -6565,7 +6566,7 @@ True
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span>   <span class="c1"># originale</span>
@@ -6573,7 +6574,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6582,7 +6583,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[126]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lb</span>   <span class="c1"># risultato dell&#39;espressione</span>
@@ -6590,7 +6591,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[126]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6600,7 +6601,7 @@ True
 </div>
 <p>Possiamo moltiplicare una lista di stringhe:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[126]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;un&quot;</span><span class="p">,</span> <span class="s2">&quot;mondo&quot;</span><span class="p">,</span> <span class="s2">&quot;di&quot;</span><span class="p">,</span> <span class="s2">&quot;parole&quot;</span><span class="p">]</span>
@@ -6608,7 +6609,7 @@ True
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[128]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lb</span> <span class="o">=</span> <span class="n">la</span> <span class="o">*</span> <span class="mi">2</span>
@@ -6616,7 +6617,7 @@ True
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[128]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[129]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
@@ -6632,7 +6633,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[129]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
@@ -6649,7 +6650,7 @@ True
 </div>
 <p>Finchè moltiplichiamo liste che contengono elementi immutabili come numeri o stringhe, non si presentano particolari problemi:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;un&quot;</span><span class="p">,</span> <span class="s2">&quot;mondo&quot;</span><span class="p">,</span> <span class="s2">&quot;di&quot;</span><span class="p">,</span> <span class="s2">&quot;parole&quot;</span><span class="p">]</span>
@@ -6660,16 +6661,16 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm2b25b86c-ee97-4d9b-95b9-90a8fe5d2f7b" type="application/json" >
+<script id="json-jm662ec931-f1b4-4a6a-810c-35de739e971d" type="application/json" >
     {"code": " \nla = [\"un\", \"mondo\", \"di\", \"parole\"]\nlb = la * 2", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", "un", "mondo", "di", "parole"]}, "stdout": ""}, {"line": 3, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", "un", "mondo", "di", "parole"], "2": ["LIST", "un", "mondo", "di", "parole", "un", "mondo", "di", "parole"]}, "stdout": ""}]}
 </script>
-<div id="jm2b25b86c-ee97-4d9b-95b9-90a8fe5d2f7b" class="pytutorVisualizer"> </div>
+<div id="jm662ec931-f1b4-4a6a-810c-35de739e971d" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -6689,12 +6690,12 @@ True
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm2b25b86c-ee97-4d9b-95b9-90a8fe5d2f7b').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm662ec931-f1b4-4a6a-810c-35de739e971d').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm2b25b86c-ee97-4d9b-95b9-90a8fe5d2f7b',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm662ec931-f1b4-4a6a-810c-35de739e971d',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -6712,7 +6713,7 @@ True
 </div>
 <p>La questione diventa molto più complicata quando moltiplichiamo liste che contengono oggetti mutabili come altre liste. Vediamo un esempio:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[132]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
@@ -6722,7 +6723,7 @@ True
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[132]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[133]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
@@ -6738,7 +6739,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[133]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[134]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lb</span><span class="p">)</span>
@@ -6754,7 +6755,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[134]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[135]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lc</span><span class="p">)</span>
@@ -6771,7 +6772,7 @@ True
 </div>
 <p>Stampando, vediamo che le liste <code class="docutils literal notranslate"><span class="pre">la</span></code> e <code class="docutils literal notranslate"><span class="pre">lb</span></code> si ripresentano all’interno di <code class="docutils literal notranslate"><span class="pre">lc</span></code> - ma esattamente, come? Le <code class="docutils literal notranslate"><span class="pre">print</span></code> possono ingannare sull’effettivo stato della memoria - per indagare meglio conviene usare Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[135]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
@@ -6783,16 +6784,16 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[135]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm4c147bac-446a-4f22-b16f-a00028cd989d" type="application/json" >
+<script id="json-jm1e704d85-2fef-4172-b2f5-ca2c24fdc376" type="application/json" >
     {"code": " \nla = [5,6]\nlb = [7,8,9]\nlc = [la,lb] * 2", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1]}, "ordered_globals": ["la"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 6]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2]}, "ordered_globals": ["la", "lb"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 6], "2": ["LIST", 7, 8, 9]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"la": ["REF", 1], "lb": ["REF", 2], "lc": ["REF", 3]}, "ordered_globals": ["la", "lb", "lc"], "stack_to_render": [], "heap": {"1": ["LIST", 5, 6], "2": ["LIST", 7, 8, 9], "3": ["LIST", ["REF", 1], ["REF", 2], ["REF", 1], ["REF", 2]]}, "stdout": ""}]}
 </script>
-<div id="jm4c147bac-446a-4f22-b16f-a00028cd989d" class="pytutorVisualizer"> </div>
+<div id="jm1e704d85-2fef-4172-b2f5-ca2c24fdc376" class="pytutorVisualizer"> </div>
 
 <style>
 .vizLayoutTd {
@@ -6812,12 +6813,12 @@ True
 <script>
 (function(){
 
-    var trace = JSON.parse(document.getElementById('json-jm4c147bac-446a-4f22-b16f-a00028cd989d').innerHTML);
+    var trace = JSON.parse(document.getElementById('json-jm1e704d85-2fef-4172-b2f5-ca2c24fdc376').innerHTML);
     // NOTE 1: id without #
     // NOTE 2 - maybe there are more predictable ways, but this will work anyway
     //        - id should be number
     visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm4c147bac-446a-4f22-b16f-a00028cd989d',{'embeddedMode' : false,
+    addVisualizerToPage(trace, 'jm1e704d85-2fef-4172-b2f5-ca2c24fdc376',{'embeddedMode' : false,
                                      'visualizerIdOverride':visualizerIdOverride})
 
 
@@ -6840,7 +6841,7 @@ True
 <h2>Uguaglianza<a class="headerlink" href="#Uguaglianza" title="Permalink to this headline"></a></h2>
 <p>Possiamo verificare se due liste sono uguali con l’operatore di uguaglianza <code class="docutils literal notranslate"><span class="pre">==</span></code>, che date due liste ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se contengono elementi uguali oppure <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
@@ -6848,7 +6849,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6857,7 +6858,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -6865,7 +6866,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6874,7 +6875,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;ciao&#39;</span><span class="p">]</span>
@@ -6882,7 +6883,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6891,7 +6892,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6899,7 +6900,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6909,7 +6910,7 @@ False
 </div>
 <p>Possiamo verificare l’uguaglianza di liste con elementi eterogenei:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;mele&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ciliegie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;mele&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ciliegie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">]</span>
@@ -6917,7 +6918,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6926,7 +6927,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,[</span><span class="s1">&#39;ciliegie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;mele&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ciliegie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">]</span>
@@ -6934,7 +6935,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6944,7 +6945,7 @@ False
 </div>
 <p>Per verificare la disuguaglianza, possiamo usare l’operatore <code class="docutils literal notranslate"><span class="pre">!=</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6952,7 +6953,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6961,7 +6962,7 @@ False
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -6969,7 +6970,7 @@ False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6978,7 +6979,7 @@ True
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[145]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
@@ -6986,7 +6987,7 @@ True
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[145]:
 </pre></div>
 </div>
 <div class="output_area docutils container">

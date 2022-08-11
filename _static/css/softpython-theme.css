@@ -283,28 +283,41 @@ div.highlight, div.highlight-none, div.highlight-python, div.highlight-bash, div
     border-radius:12px;
 }
 
+/* ************   ALERT BOXES START  ************ 
+ *
+ * Note: this stuff is total shit - very unpredictable, try not to touch it 
+ *
+ */
+
 div.admonition {
-    border-radius:12px;
+    border-radius:12px;    
 }
 
 div.admonition.note, div.admonition.warning {
-  padding-right: 0;
-  padding-top: 0px;    
-  padding-bottom: 0px; 
+   padding-right: 0px;
+   padding-top:0px !important;;
+   padding-bottom:0rem !important;
 }
 
-div.admonition.note p, div.admonition.warning p{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;    
+div.admonition p {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important; 
 }
+
 
 p.admonition-title.fa.fa-exclamation-circle {
-    margin-right: 0 !important;
-    padding-top: 0.6rem; 
-    padding-bottom: 0.6rem;  
-    border-top-left-radius:  15px;
-    border-top-right-radius:  15px;    
+    
+    margin-top:0px !important;   
+    margin-right: 0px !important;
+    margin-bottom: -0.8rem !important;
+    padding-top: 0.8rem !important; 
+    padding-bottom: 0.8rem !important;    
+    border-top-left-radius:  12px;
+    border-top-right-radius: 12px;    
 }
+
+/* ************   ALERT BOXES END  ************ */
+
 
 body {
     font-family: "Archivo","proxima-nova","Helvetica Neue",Arial,sans-serif;    
@@ -331,15 +344,29 @@ h3 { font-size:1.3rem; }
 h4 { font-size:1.2rem; }
 
 .rst-content blockquote {
-    font-size: 1.25rem;
+    
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem;
+    text-align:center;    
 }
 
+.rst-content blockquote p {
+    font-size: 1.30rem;    
+}
 pre {
     font-family: "Inconsolata" !important;
     font-size:1.2rem !important;
     background-color:#f8f8ec;
     line-height: 1.5rem !important;
 }
+
+
+/*  python code cell */
+div.input_area.highlight-ipython3 pre {
+    background-color:#f6f6f6;
+}
+
+
 
 
 .rst-content code.literal {
