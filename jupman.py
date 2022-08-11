@@ -2732,10 +2732,13 @@ def pytut():
 
         Author: David Leoni <info@davidleoni.it>
     """
-    #Hacky way to get variables from stack, but if we use %run -i we don't need it.
     import inspect
-    notebook_globals = inspect.stack()[1][0].f_globals
-    code = notebook_globals["In"][-1]
+    import hashlib
+    
+    #Hacky way to get variables from stack, but if we use %run -i we don't need it.    
+    notebook_globals = inspect.stack()[1][0].f_globals    
+    
+    code = notebook_globals["In"][-1]                   
 
     i = code.find('jupman.pytut()')
    
@@ -2775,17 +2778,26 @@ def pytut():
 
     trace = pytut_json(new_code)        
     
-    import uuid
-    div_id = 'jm'+str(uuid.uuid4())
-    json_id = 'json-' + div_id
-                    
+    #Note: potentially there could be equal codes requiring pytut visualization, but probability should be low    
+    gen_id = hashlib.md5(code.encode()).hexdigest()            
+    div_id = f'jm-{gen_id}'
+    json_id = f'json-{div_id}'
+    visualizerIdOverride = f'viz-{div_id}'        
+    
     relpath = detect_relpath(notebook_globals["In"]) 
     
     inject = ""
     
     # will end up reloading multiple times the script, not very efficient 
-    inject +=  """
+    
+    inject +=  """        
         <script src="%s_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    """ % relpath
+    
+    inject += """
+        <style>
+        @import "%s_static/css/jupman.css";
+        </style>
     """ % relpath
                     
     inject += """ 
@@ -2794,33 +2806,16 @@ def pytut():
         </script>
         <div id="%s" class="pytutorVisualizer"> </div>
 """ % (json_id, trace, div_id)
-    inject += """ 
-        <style>
-        .vizLayoutTd {
-            background-color: #fff !important;
-        }
-                            
-        #pyStdout {
-            min-height:25px;
-        }
-
-        /* 'Edit this code' link, hiding because replaces browser tab !!!*/
-        #editCodeLinkDiv {
-            display:none;  
-        }
-        </style>   
-    """
+    
     inject +=   """                        
         <script>
         (function(){
 
             var trace = JSON.parse(document.getElementById('%s').innerHTML);                                        
             // NOTE 1: id without #
-            // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-            //        - id should be number
-            visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-            addVisualizerToPage(trace, '%s',{'embeddedMode' : false,
-                                             'visualizerIdOverride':visualizerIdOverride})  
+            
+            addVisualizerToPage(trace, '%s',{'embeddedMode' : false,                       
+                                             'visualizerIdOverride':'%s'})  
             
             
             // set overflow for pytuts - need to do in python as css 
@@ -2835,6 +2830,10 @@ def pytut():
         })()
         </script>
                 
-                """ % (json_id, div_id)   
+    """ % (json_id, div_id, visualizerIdOverride)
+    
+    inject += """
+    <div style="text-align:center; font-size:0.9em"> Visualization provided by <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> </div> 
+    """
     
     return HTML(inject)

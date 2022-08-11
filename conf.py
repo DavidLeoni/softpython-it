@@ -246,9 +246,9 @@ html_js_files = [
 ]
 
 html_css_files = [    
-    'css/jupman.3.5.css',      # shared among jupyter and website
-    'css/jupman-web.3.5.css',  # only on website    
-    'css/softpython-theme.3.5.css',  
+    'css/jupman.3.5.4.css',      # shared among jupyter and website
+    'css/jupman-web.3.5.4.css',  # only on website    
+    'css/softpython-theme.3.5.4.css',  
 ]
 
 

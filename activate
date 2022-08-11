@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source _private/jupman_env/bin/activate

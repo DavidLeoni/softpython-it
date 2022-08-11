@@ -1,9 +1,18 @@
 #!/bin/bash
 set -e
 
-DIR=_private/softpython_it_env
-#note: tou can't specify a python version to venv, so I'm running it with exactly the python I have installed
-COMMAND="python3.7 -m venv $DIR"
+#note: tou can't specify a python version to venv, so you need to run with an installed python
+
+DIR=_private/jupman_env
+if [ $# -eq 0 ]
+  then
+    PYTHONCMD=python3
+  else
+    PYTHONCMD=$1
+fi
+
+
+COMMAND="$PYTHONCMD -m venv $DIR"
 
 
 if [ -d "$DIR" ]; then

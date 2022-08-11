@@ -502,16 +502,18 @@ def replace_md_rel(code, filepath):
     return ret
 
 def replace_html_rel(code, filepath):
-    
+    """ NOTE: supported syntax is very rigid!
+    """
     upr = uproot(filepath).replace('.',r'\.')
 
-    ret =  re.sub(r'(<a\s+href=\")(%s)(.*?\"(\s+.*?=\".*?\")*>)' % upr,               
-                  r"\1\3",
+    ret =  re.sub(r'(<a\s+)(target=\"_blank\"\s+)*(href=\")(%s)(.*?\"(\s+.*?=\".*?\")*>)' % upr,               
+                  r"\1\2\3\5",
                   code)
 
-    ret =  re.sub(r'(<img\s+src=\")(%s)(.*?\"(\s+.*?=\".*?\")*>)' % upr,
-                  r"\1\3",
+    ret =  re.sub(r'(<img\s+)(alt=\".*\"\s+)*(src=\")(%s)(.*?\"(\s+.*?=\".*?\")*>)' % upr,
+                  r"\1\2\3\5",
                   ret)    
+        
     return ret
 
 def replace_ipynb_rel(nb_node, filepath, website=False):
