@@ -146,9 +146,6 @@ exclude_patterns.extend(jm.zip_ignored)
 # Default language for syntax highlighting in reST and Markdown cells
 highlight_language = 'none'
 
-# Don't add .txt suffix to source files (available for Sphinx >= 1.5):
-html_sourcelink_suffix = ''
-
 # Execute notebooks before conversion: 'always', 'never', 'auto' (default)
 nbsphinx_execute = 'never'   
     
@@ -204,6 +201,14 @@ html_title = project # + ' version ' + release
 # canonical url for documentation
 # since sphinx 1.8
 html_baseurl = 'https://it.softpython.org'
+
+
+# Don't add .txt suffix to source files (available for Sphinx >= 1.5):
+html_sourcelink_suffix = ''
+
+#html_logo = '_static/img/softpython.svg'
+html_favicon = '_static/img/favicon.ico'
+
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
