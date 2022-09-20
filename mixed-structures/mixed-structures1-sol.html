@@ -7,9 +7,10 @@
   <title>Strutture composte 1 &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/mixed-structures/mixed-structures1-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -3275,18 +3273,17 @@ div.rendered_html tbody tr:hover {
                 <span class="s1">&#39;nome&#39;</span><span class="p">:</span><span class="s1">&#39;Il Dessert&#39;</span><span class="p">}]</span>
 </pre></div>
 </div>
-<p>Data una lista di questi dizionari e una lista di dolci <code class="docutils literal notranslate"><span class="pre">dolci</span></code>, si vuole produrre come output una NUOVA lista di liste strutturata così:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sagra</span><span class="p">(</span><span class="n">pasticcerie</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;babbà&#39;</span><span class="p">,</span> <span class="s1">&#39;bignè&#39;</span><span class="p">,</span> <span class="s1">&#39;zippole&#39;</span><span class="p">])</span>
+<p>Data una lista di questi dizionari e una lista di dolci <code class="docutils literal notranslate"><span class="pre">dolci</span></code>, si vuole produrre come output una NUOVA lista di liste avente i totali di ciascuna tipologia di dolce strutturata così:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sagra</span><span class="p">(</span><span class="n">pasticcerie</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;bignè&#39;</span><span class="p">,</span> <span class="s1">&#39;babbà&#39;</span><span class="p">,</span> <span class="s1">&#39;zippole&#39;</span><span class="p">])</span>
 
-<span class="go">[[&#39;Nome&#39;,      &#39;babbà&#39;, &#39;bignè&#39;, &#39;zippole&#39; ],</span>
-<span class="go"> [&#39;Da Gigi&#39;,      3,       4,        2     ],</span>
-<span class="go"> [&#39;La Delizia&#39;,   5,       3,        9     ],</span>
-<span class="go"> [&#39;Gnam gnam&#39;,    1,       2,        6     ],</span>
-<span class="go"> [&#39;Il Dessert&#39;,   7,       8,        4     ],</span>
-<span class="go"> [&#39;Totali&#39;,       16,      17,       21    ]]</span>
+<span class="go">[[&#39;Nome&#39;,     &#39;bignè&#39;,  &#39;babbà&#39;, &#39;zippole&#39;],</span>
+<span class="go"> [&#39;Da Gigi&#39;,     4,        3,       2     ],</span>
+<span class="go"> [&#39;La Delizia&#39;,  3,        5,       9     ],</span>
+<span class="go"> [&#39;Gnam gnam&#39;,   2,        1,       6     ],</span>
+<span class="go"> [&#39;Il Dessert&#39;,  8,        7,       4     ],</span>
+<span class="go"> [&#39;Totali&#39;,      17,       16,      21    ]]</span>
 </pre></div>
 </div>
-<p>avente quindi i totali di ciascuna tipologia di dolce.</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">

@@ -7,9 +7,10 @@
   <title>Matrici - Liste di liste 2 - Altri esercizi &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/matrices-lists/matrices-lists2-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -3176,51 +3174,41 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
-</script>
-<div id="jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-8b0df2561f49b1ddd67cec85a044bb19" type="application/json" >
+        {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+    </script>
+    <div id="jm-8b0df2561f49b1ddd67cec85a044bb19" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
+    (function(){
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+        var trace = JSON.parse(document.getElementById('json-jm-8b0df2561f49b1ddd67cec85a044bb19').innerHTML);
+        // NOTE 1: id without #
 
-<script>
-(function(){
-
-    var trace = JSON.parse(document.getElementById('json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-8b0df2561f49b1ddd67cec85a044bb19',{'embeddedMode' : false,
+                                         'visualizerIdOverride':'viz-jm-8b0df2561f49b1ddd67cec85a044bb19'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> Visualization provided by <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> </div></div>
 </div>
 </div><div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -3238,51 +3226,41 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" type="application/json" >
-    {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
-</script>
-<div id="jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-8b0df2561f49b1ddd67cec85a044bb19" type="application/json" >
+        {"code": " \nx = 3\ny = 7\n\n# scrivi qui il codice per scambiare x,y - non usare direttamente le costanti 3 e 7\n\nk = x   \nx = y\ny = k", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": 3}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"x": 3, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"x": 7, "y": 7, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"x": 7, "y": 3, "k": 3}, "ordered_globals": ["x", "y", "k"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+    </script>
+    <div id="jm-8b0df2561f49b1ddd67cec85a044bb19" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
+    (function(){
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+        var trace = JSON.parse(document.getElementById('json-jm-8b0df2561f49b1ddd67cec85a044bb19').innerHTML);
+        // NOTE 1: id without #
 
-<script>
-(function(){
-
-    var trace = JSON.parse(document.getElementById('json-jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmd36c2926-b2cf-4c32-80bf-cbfc3b7d59cf',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-8b0df2561f49b1ddd67cec85a044bb19',{'embeddedMode' : false,
+                                         'visualizerIdOverride':'viz-jm-8b0df2561f49b1ddd67cec85a044bb19'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> Visualization provided by <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> </div></div>
 </div>
 <p>Tornando alla trasposta, per adesso consideriamo solo una matrice nxn. Per assicurarci che ci prendiamo in effetti una matrice nxn, valideremo l’input come fatto in precedenza</p>
 <div class="admonition note">
@@ -5080,36 +5058,40 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <section id="Esercizio---toepliz">
 <h2>Esercizio - toepliz<a class="headerlink" href="#Esercizio---toepliz" title="Permalink to this headline"></a></h2>
 <p>✪✪✪ RITORNA <code class="docutils literal notranslate"><span class="pre">True</span></code> se la matrice come lista di liste in input è Toeplitz, mentre RITORNA <code class="docutils literal notranslate"><span class="pre">False</span></code> se non lo è.</p>
-<p>Una matrice è Toeplitz se e solo se tutti gli elementi su ogni diagonale contiene gli stessi elementi.</p>
-<p>assumiamo che la matrice contenga sempre almeno una riga di almeno un elemento</p>
-<p>SUGGERIMENTO: usare due <code class="docutils literal notranslate"><span class="pre">for</span></code>, nel primo scorrere la matrice per righe, nel secondo per colonne</p>
-<p>Chiedersi:</p>
+<ul class="simple">
+<li><p>Una matrice è Toeplitz se e solo se ogni diagonale contiene gli stessi elementi.</p></li>
+<li><p>Assumiamo che la matrice contenga sempre almeno una riga di almeno un elemento</p></li>
+</ul>
+<p><strong>SUGGERIMENTO</strong>: usa due <code class="docutils literal notranslate"><span class="pre">for</span></code>, nel primo scorri la matrice per righe, nel secondo per colonne</p>
+<p>Prova a chiederti:</p>
 <ul class="simple">
 <li><p>da che riga occorre partire per la scansione? La prima è utile?</p></li>
 <li><p>da che colonna occorre partire per la scansione? La prima è utile?</p></li>
 <li><p>se scorriamo le righe dalla prima verso l’ultima e stiamo esaminando un certo numero ad una certa riga, che condizione deve rispettare quel numero affinchè la matrice sia toepliz ?</p></li>
 </ul>
-<p>ESEMPIO:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-     <span class="p">]</span>
+<p>Esempi:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m1</span> <span class="o">=</span> <span class="p">[</span>
+<span class="go">            [1,2,3,4],</span>
+<span class="go">            [5,1,2,3],</span>
+<span class="go">            [9,5,1,2]</span>
+<span class="go">        ]</span>
 
-<span class="n">toepliz</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toepliz</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<span class="go">True</span>
 </pre></div>
 </div>
 <p>Su ogni diagonale ci sono gli stessi numeri e quindi viene restituito <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m2</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-     <span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m2</span> <span class="o">=</span> <span class="p">[</span>
+<span class="go">            [1, 2, 3, 4],</span>
+<span class="go">            [5, 1, 4, 3],</span>
+<span class="go">            [9, 3, 1, 2]</span>
+<span class="go">         ]</span>
 
-<span class="n">toepliz</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toepliz</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
+<span class="go">False</span>
 </pre></div>
 </div>
-<p>Restituisce <code class="docutils literal notranslate"><span class="pre">False</span></code>. Ci sono due diagonali con numeri diversi: (5,3) e (2,4,2)</p>
+<p>C’è almeno una diagonale con numeri diversi, in questo caso abbiamo le diagonali (5,3) e (2,4,2) e quindi viene restituito <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">

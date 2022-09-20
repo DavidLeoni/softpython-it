@@ -7,9 +7,10 @@
   <title>Cicli for 6 - iterare dizionari &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/for/for6-dictionaries-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -3710,8 +3708,8 @@ Al lago l&#39;inquinamento è tollerabile
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;z&#39;: 0, &#39;t&#39;: 3, &#39;r&#39;: 9}
-{&#39;z&#39;: 0, &#39;t&#39;: 3, &#39;r&#39;: 9}
+{&#39;z&#39;: 0, &#39;r&#39;: 9, &#39;t&#39;: 3}
+{&#39;z&#39;: 0, &#39;r&#39;: 9, &#39;t&#39;: 3}
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -3732,8 +3730,8 @@ Al lago l&#39;inquinamento è tollerabile
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;z&#39;: 0, &#39;t&#39;: 3, &#39;r&#39;: 9}
-{&#39;z&#39;: 0, &#39;t&#39;: 3, &#39;r&#39;: 9}
+{&#39;z&#39;: 0, &#39;r&#39;: 9, &#39;t&#39;: 3}
+{&#39;z&#39;: 0, &#39;r&#39;: 9, &#39;t&#39;: 3}
 </pre></div></div>
 </div>
 </section>
@@ -3759,7 +3757,7 @@ Al lago l&#39;inquinamento è tollerabile
 </pre></div>
 </div>
 <p>Potrebbe venirti l’idea di scrivere qualcosa del genere:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">province</span> <span class="o">=</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">province</span><span class="p">:</span>
     <span class="n">province</span><span class="p">[</span><span class="n">chiave</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span> <span class="o">=</span> <span class="n">province</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span>    <span class="c1"># ATTENZIONE !</span>
 </pre></div>
 </div>
@@ -3775,7 +3773,7 @@ Al lago l&#39;inquinamento è tollerabile
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
 <span class="ne">RuntimeError</span>                              <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="mi">9</span><span class="n">b20900057e8</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="o">----&gt;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">province</span><span class="p">:</span>
       <span class="mi">2</span>     <span class="n">diz</span><span class="p">[</span><span class="s1">&#39;chiave&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span> <span class="o">=</span> <span class="n">diz</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span>    <span class="c1"># ATTENZIONE !</span>
 
 <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">dictionary</span> <span class="n">changed</span> <span class="n">size</span> <span class="n">during</span> <span class="n">iteration</span>

@@ -7,9 +7,10 @@
   <title>Basi Python - variabili e interi &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/basics/basics1-ints-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -2748,7 +2746,7 @@ div.rendered_html tbody tr:hover {
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Gli oggetti sono l&#39;astrazione Python per i dati. Tutti i dati in un programma Python sono rappresentati da oggetti o da relazioni tra gli oggetti.
 </pre></div>
 </div>
-<p>Tutto quello che devi sapere per adesso è che gli oggetti Python hanno un <strong>identificatore</strong> (per es, il loro nome), un <strong>tipo</strong> (numeri, testo, collezioni, …) e un <strong>valore</strong> (il dato attuale rappresentato dagli oggetti). Una volta che un’oggetto è stato creato l’ <em>identificatore</em> e il <em>tipo</em> non cambiano mai, mentre il <em>valore</em> può cambiare (<strong>oggetti mutabili</strong>) o rimanere costante (<strong>oggetti immutabili</strong>).</p>
+<p>Tutto quello che devi sapere per adesso è che gli oggetti Python hanno un <strong>identificatore</strong> (per es, il loro nome), un <strong>tipo</strong> (numeri, testo, collezioni, …) e un <strong>valore</strong> (il dato attuale rappresentato dagli oggetti). Una volta che un’oggetto è stato creato l’ <em>identificatore</em> e il <em>tipo</em> non cambiano mai, mentre il <em>valore</em> può rimanere costante (<strong>oggetti immutabili</strong>) o cambiare (<strong>oggetti mutabili</strong>).</p>
 <p>Python fornisce questi tipi predefiniti ( <em>built-in</em> ):</p>
 <table class="docutils align-default">
 <colgroup>
@@ -3020,51 +3018,41 @@ str
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmf035d535-af92-44de-9a6e-040ea1d599fc" type="application/json" >
-    {"code": " \nfiori = 4   \n\nx = fiori + 1\n\nfiori = x", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fiori": 4}, "ordered_globals": ["fiori"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"fiori": 4, "x": 5}, "ordered_globals": ["fiori", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"fiori": 5, "x": 5}, "ordered_globals": ["fiori", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
-</script>
-<div id="jmf035d535-af92-44de-9a6e-040ea1d599fc" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-27fc6e3a2de13c1c47ba6f92d17cd3a4" type="application/json" >
+        {"code": " \nfiori = 4   \n\nx = fiori + 1\n\nfiori = x", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"fiori": 4}, "ordered_globals": ["fiori"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"fiori": 4, "x": 5}, "ordered_globals": ["fiori", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"fiori": 5, "x": 5}, "ordered_globals": ["fiori", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}]}
+    </script>
+    <div id="jm-27fc6e3a2de13c1c47ba6f92d17cd3a4" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
+    (function(){
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+        var trace = JSON.parse(document.getElementById('json-jm-27fc6e3a2de13c1c47ba6f92d17cd3a4').innerHTML);
+        // NOTE 1: id without #
 
-<script>
-(function(){
-
-    var trace = JSON.parse(document.getElementById('json-jmf035d535-af92-44de-9a6e-040ea1d599fc').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmf035d535-af92-44de-9a6e-040ea1d599fc',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-27fc6e3a2de13c1c47ba6f92d17cd3a4',{'embeddedMode' : false,
+                                         'visualizerIdOverride':'viz-jm-27fc6e3a2de13c1c47ba6f92d17cd3a4'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> Visualization provided by <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> </div></div>
 </div>
 <p>Puoi eseguire una somma e fare un assegnamento contemporaneamente con la notazione <code class="docutils literal notranslate"><span class="pre">+=</span></code></p>
 <div class="nbinput docutils container">
@@ -3675,18 +3663,18 @@ Tanti comandi!
 <li><p><code class="docutils literal notranslate"><span class="pre">maybe3maybe</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;ciao&quot;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'hello'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">as</span></code> CERCA DI CAPIRE LA DIFFERENZA <em>MOLTO IMPORTANTE</em> TRA QUESTO E I SEGUENTI DUE !!!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">as</span></code> Confronta bene con i prossimi due</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">asino</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">As</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lista</span></code> CERCA DI COMPRENDERE LA DIFFERENZA <em>MOLTO IMPORTANTE</em> TRA QUESTO E I SEGUENTI DUE !!!</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> NON PROVARE NEMMENO AD ASSEGNARE QUESTO NELL’INTERPRETE (SCRIVENDO PER ES <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">=</span> <span class="pre">5</span></code>), SE LO FAI RENDERAI L’INTERPRETE PRATICAMENTE INUTILIZZABILE !</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span></code> Confronta bene con i prossimi due</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> <strong>NON provare ad assegnare questo nell’interprete (scrivendo per es</strong> <code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">=</span> <span class="pre">5</span></code><strong>), renderesti l’interprete praticamente inutilizzabile!</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">List</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">black&amp;decker</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">black</span> <span class="pre">&amp;</span> <span class="pre">decker</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">glab()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">caffè</span></code> (NOTA LA è ACCENTATA <code class="docutils literal notranslate"><span class="pre">è</span></code> !)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caffè</span></code> (Nota la è accentata <code class="docutils literal notranslate"><span class="pre">è</span></code> !)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">):-]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">€zone</span></code> (NOTA IL SEGNO DELL’EURO)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">€zone</span></code> (Nota il segno dell’euro)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">some:pasta</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aren'tyouboredyet</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;angular&gt;</span></code></p></li>

@@ -7,9 +7,10 @@
   <title>Matrici - Numpy 1 &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/matrices-numpy/matrices-numpy1-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../information-retrieval/information-retrieval-sol.html#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -2694,7 +2692,7 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="Introduzione">
 <h2>Introduzione<a class="headerlink" href="#Introduzione" title="Permalink to this headline"></a></h2>
-<p>Ci sono sostanzialmente due modi in Python di rappresentare matrici: come liste di liste, oppure con la libreria esterna <a class="reference external" href="https://www.numpy.org">numpy</a>. La più usata è sicuramente numpy, vediamo il motivo e le principali differenze:</p>
+<p>Ci sono sostanzialmente due modi in Python di rappresentare matrici: come liste di liste, oppure con la libreria esterna <a class="reference external" href="https://www.numpy.org">numpy</a>. Vediamo le principali differenze:</p>
 <p>Liste di liste - <a class="reference external" href="https://it.softpython.org/matrices-lists/matrices-lists-sol.html">vedere foglio separato</a></p>
 <ol class="arabic simple">
 <li><p>native in Python</p></li>
@@ -2703,12 +2701,12 @@ div.rendered_html tbody tr:hover {
 <li><p>forniscono un’idea di come costruire una struttura dati annidata</p></li>
 <li><p>possono servire per comprendere concetti importanti come puntatori alla memoria e copie</p></li>
 </ol>
-<p>Numpy - questo foglio</p>
+<p>Numpy - questo tutorial</p>
 <ol class="arabic simple">
 <li><p>non nativamente disponibile in Python</p></li>
 <li><p>efficiente</p></li>
 <li><p>alla base di parecchie librerie di calcolo scientifico (scipy, pandas)</p></li>
-<li><p>la sintassi per accedere agli elementi è lievemente diversa da quella delle liste di liste</p></li>
+<li><p>sintassi più comoda per accedere agli elementi (lievemente diversa da quella delle liste di liste)</p></li>
 <li><p>in alcuni rari casi potrebbe portare problemi di installazione e/o conflitti (l’implementazione non è puro Python)</p></li>
 </ol>
 <p>Qui vedremo i tipi di dati e comandi essenziali della <a class="reference external" href="https://www.numpy.org">libreria numpy</a>, mostrando molto spesso due versioni dello stesso codice: una prima versione inefficiente con i normali cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> in Python (lenti), e una seconda senza cicli sfruttando le operazioni su vettori di numpy che spesso permettono di ottenere codice estrememente compatto ed efficiente.</p>
@@ -2718,7 +2716,7 @@ div.rendered_html tbody tr:hover {
 <li><p><a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html">Python Data Science Handbook, parte Numpy (inglese)</a></p></li>
 </ul>
 <div class="admonition warning">
-<p><strong>ATTENZIONE</strong>: Numpy does not work in <a class="reference external" href="http://www.pythontutor.com/visualize.html#mode=edit">Python Tutor</a></p>
+<p><strong>ATTENZIONE</strong>: Numpy non funziona in <a class="reference external" href="http://www.pythontutor.com/visualize.html#mode=edit">Python Tutor</a></p>
 </div>
 <section id="Che-fare">
 <h3>Che fare<a class="headerlink" href="#Che-fare" title="Permalink to this headline"></a></h3>

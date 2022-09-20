@@ -7,9 +7,10 @@
   <title>Information retrieval &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.5.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/information-retrieval/information-retrieval-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -22,7 +23,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.3.js"></script>
+        <script src="../_static/js/jupman.3.5.6.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -68,9 +69,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#D.3-Idee-per-progetti">D.3 Idee per progetti</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#E---Appendice">E - Appendice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#Autore">Autore</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../index.html#Contributors">Contributors</a></li>
 </ul>
@@ -2042,10 +2043,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Similarità-semantica">Similarità semantica</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Ricerca-veloce">Ricerca veloce</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Il-prezzo-del-successo">Il prezzo del successo</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#Ma-l’algoritmo-scala?">Ma l’algoritmo scala?</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#Il-prezzo-del-successo">Il prezzo del successo</a></li>
 </ul>
 </li>
 </ul>
@@ -2693,7 +2691,7 @@ div.rendered_html tbody tr:hover {
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/information-retrieval">Naviga file online</a></p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong>: tutorial in progress !</p>
-<p>Questo tutorial è pensato per dare un idea rapida dei problemi principali dell’information retrieval ma è ancora incompleto e spesso presenta i concetti in modo molto semplificato. Se l’argomento t’appassiona non mancano buoni libri sul tema!</p>
+<p>Questo tutorial è pensato per dare un’idea rapida dei problemi principali dell’information retrieval ma è ancora incompleto e spesso presenta i concetti in modo molto semplificato. Se l’argomento t’appassiona non mancano buoni libri sul tema!</p>
 </div>
 <p>L’ <em>Information retrieval</em> è l’attività che svolgono i sistemi informatici quando devono recuperare <em>rapidamente</em> delle informazioni <em>rilevanti</em> . Perchè questi due aggettivi?</p>
 <p>Al giorno d’oggi molte aziende hanno a che fare con una mole di dati rilevante - i famosi <em>big data</em>. Sia i giganti dell’<em>Information</em> <em>Technology</em> (<em>IT</em>) come Google e Amazon che aziende di dimensioni più modeste per varie ragioni devono fornire ai clienti dei sistemi di ricerca efficienti. Nel caso di Google i clienti vogliono trovare tutte le pagine nel web che contengono un certo testo. Per Amazon, il cliente desidera conoscere tutti i prodotti in una certa categoria, o prodotti <em>simili</em>
@@ -2757,7 +2755,7 @@ fatto bene deve essere pronto alle sorprese.</p>
 <p>Vediamone qua una possibile soluzione al problema.</p>
 <section id="Rappresentare-una-pagina">
 <h4>Rappresentare una pagina<a class="headerlink" href="#Rappresentare-una-pagina" title="Permalink to this headline"></a></h4>
-<p>Cominciamo a rappresentare le pagine web. Per farlo, possiamo usare unsemplice dizionario con le chiavi <code class="docutils literal notranslate"><span class="pre">url</span></code> (l’indirizzo web) e <code class="docutils literal notranslate"><span class="pre">contenuto</span></code> per il testo:</p>
+<p>Cominciamo a rappresentare le pagine web. Per farlo, possiamo usare un semplice dizionario con le chiavi <code class="docutils literal notranslate"><span class="pre">url</span></code> (l’indirizzo web) e <code class="docutils literal notranslate"><span class="pre">contenuto</span></code> per il testo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;http://it.softpython.org&#39;</span><span class="p">,</span>
     <span class="s1">&#39;contenuto&#39;</span> <span class="p">:</span> <span class="s1">&#39;&lt;h2&gt;Presentazione&lt;/h2&gt;&lt;p&gt;Il corso SoftPython fornisce un’introduzione al processamento dati usando Python, un linguaggio di programmazione popolare sia nell’industria che nell’ambito della ricerca. Fra le varie cose tratteremo Matplotlib.&lt;/p&gt;&#39;</span>
@@ -2841,7 +2839,7 @@ fatto bene deve essere pronto alle sorprese.</p>
 </pre></div></div>
 </div>
 <p>Nulla ! Come mai?</p>
-<p><strong>DOMANDA</strong>: Prima di proseguire, osserva bene il testo semplificato della pagina Visualizzazione e prova a dare una risposta. Ci sono due problemi principali. Come li risolveresti ?</p>
+<p><strong>DOMANDA</strong>: Prima di proseguire, osserva bene il testo semplificato della pagina Visualizzazione e prova a dare una risposta. Ci sono due problemi principali. Quali sono?</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>:</p>
@@ -2901,7 +2899,7 @@ False
 </div>
 <p>ma se metto tutto in minuscolo:</p>
 <div class="admonition warning">
-<p><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">lower()</span></code>, come <em>tutti</em> i metodi delle stringhe, ritorna una <strong>nuova</strong> stringa e non modifica loriginale !!</p>
+<p><strong>ATTENZIONE</strong>: <code class="docutils literal notranslate"><span class="pre">lower()</span></code>, come <em>tutti</em> i metodi delle stringhe, ritorna una <strong>nuova</strong> stringa e non modifica l’originale !!</p>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -3039,15 +3037,18 @@ True
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Ci converra <em>indicizzare</em> le pagine, cioè avere un indice che ci dice per ogni parola di ricerca in quali pagine possiamo trovarla.</p>
 <ul class="simple">
-<li><p>Per implementare questa corrispondenza in Python possiamo usare i dizionari.</p></li>
-<li><p>Per convenienza, ci conviene indicare le pagine con il numero che abbiamo usato quando le abbiamo messe nella listona.</p></li>
-<li><p>Di nuovo per convenienza, metteremo solo parole in minuscolo.</p></li>
+<li><p>Per implementare questa corrispondenza in Python possiamo usare i dizionari</p></li>
+<li><p>Per convenienza, ci conviene indicare le pagine con il numero che abbiamo usato quando le abbiamo messe nella listona</p></li>
+<li><p>Di nuovo per convenienza, metteremo solo parole in minuscolo</p></li>
 </ul>
 <p>Quindi potrebbe essere una cosa del genere:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;linguaggio&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">],</span>    <span class="c1"># la stringa &quot;linguaggio&quot; sta alla pagina zeresima della listona</span>
-    <span class="s2">&quot;matplotlib&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># la stringa &quot;matplotlib&quot; sta nelle pagine zeresima e unesima  della listona</span>
-    <span class="s2">&quot;importare&quot;</span> <span class="p">:</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># &quot;importare&quot; sta solo nella pagina sulla visualizzazione</span>
+    <span class="s2">&quot;linguaggio&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">],</span>    <span class="c1"># la stringa &quot;linguaggio&quot; sta</span>
+                           <span class="c1"># alla pagina zeresima della listona</span>
+    <span class="s2">&quot;matplotlib&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>  <span class="c1"># la stringa &quot;matplotlib&quot; sta nelle pagine zeresima</span>
+                           <span class="c1"># e unesima  della listona</span>
+    <span class="s2">&quot;importare&quot;</span> <span class="p">:</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># &quot;importare&quot; sta solo nella pagina</span>
+                           <span class="c1"># sulla visualizzazione</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -3147,7 +3148,7 @@ True
 <h2>Prendiamo le distanze<a class="headerlink" href="#Prendiamo-le-distanze" title="Permalink to this headline"></a></h2>
 <section id="Un-mondo-di-errori">
 <h3>Un mondo di errori<a class="headerlink" href="#Un-mondo-di-errori" title="Permalink to this headline"></a></h3>
-<p>Purtroppo, gli utenti non conoscono a priori il contenuto delle pagine che stanno cercando, e non sono nemmeno tutti dei pignoli letterati. Finchè cerchiamo parole che sono esattamente contenute nel testo va tutto bene:</p>
+<p>Purtroppo, gli utenti non conoscono a priori il contenuto delle pagine che stanno cercando, e non sono nemmeno tutti dei letterati pignoli. Finchè cerchiamo parole che sono esattamente contenute nel testo va tutto bene:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -3184,7 +3185,7 @@ True
 []
 </pre></div></div>
 </div>
-<p>Questo fenomeno degli errori è molto comune, pensiamo a quanti ne commettiamo specialmente quando scriviamo da dispositivi come gli smartphone</p>
+<p>Questo fenomeno degli errori è molto comune, pensiamo a quanti ne commettiamo specialmente quando scriviamo da dispositivi come gli smartphone.</p>
 </section>
 <section id="Varie-forme">
 <h3>Varie forme<a class="headerlink" href="#Varie-forme" title="Permalink to this headline"></a></h3>
@@ -3206,14 +3207,14 @@ True
 []
 </pre></div></div>
 </div>
-<p>Possiamo quindi chiederci cosa nella nostra mente ci fa interpretare <code class="docutils literal notranslate"><span class="pre">grufici</span></code> come qualcosa di <em>simile</em> a <code class="docutils literal notranslate"><span class="pre">grafici</span></code>. Proviamo a scrivere una serie di casistiche.</p>
+<p>Possiamo quindi chiederci cosa nella nostra mente ci fa interpretare <code class="docutils literal notranslate"><span class="pre">grufici</span></code> come qualcosa di <em>simile</em> a <code class="docutils literal notranslate"><span class="pre">grafici</span></code>. Proviamo a scrivere una serie di casistiche:</p>
 <ul class="simple">
 <li><p>una lettera in meno: <code class="docutils literal notranslate"><span class="pre">grfici</span></code></p></li>
 <li><p>una lettera in più : <code class="docutils literal notranslate"><span class="pre">graficii</span></code></p></li>
 <li><p>una lettera diversa: <code class="docutils literal notranslate"><span class="pre">grufici</span></code></p></li>
 <li><p>due lettere in meno: <code class="docutils literal notranslate"><span class="pre">grfc</span></code></p></li>
-<li><p>due lettera in più : <code class="docutils literal notranslate"><span class="pre">grraficii</span></code></p></li>
-<li><p>due lettera diversa: <code class="docutils literal notranslate"><span class="pre">grufbci</span></code></p></li>
+<li><p>due lettere in più : <code class="docutils literal notranslate"><span class="pre">grraficii</span></code></p></li>
+<li><p>due lettere diverse: <code class="docutils literal notranslate"><span class="pre">grufbci</span></code></p></li>
 <li><p>una lettera in meno e una in più: <code class="docutils literal notranslate"><span class="pre">grficii</span></code></p></li>
 <li><p>una lettera diversa e una in più: <code class="docutils literal notranslate"><span class="pre">gruficii</span></code></p></li>
 <li><p>una lettera in meno, una diversa e una in più: <code class="docutils literal notranslate"><span class="pre">grufbcii</span></code></p></li>
@@ -3239,8 +3240,9 @@ True
 <ol class="arabic simple">
 <li><p>gli oggetti che vogliamo considerare</p></li>
 <li><p>lo spazio in cui misuriamo</p></li>
-<li><p>un sistema di misura con cui per l’appunto misuriamo le distanze. Esempi:</p></li>
+<li><p>un sistema di misura con cui per l’appunto misuriamo le distanze.</p></li>
 </ol>
+<p>Vediamo degli esempi.</p>
 <section id="Distanza-tra-stringhe">
 <h4>Distanza tra stringhe<a class="headerlink" href="#Distanza-tra-stringhe" title="Permalink to this headline"></a></h4>
 <p>Quella che abbiamo visto sulle stringhe si chiama anche <em>distanza di edit</em>. Vediamo le caratteristiche:</p>
@@ -3252,7 +3254,7 @@ True
 </section>
 <section id="Distanza-fisica-tra-oggetti-nel-piano">
 <h4>Distanza fisica tra oggetti nel piano<a class="headerlink" href="#Distanza-fisica-tra-oggetti-nel-piano" title="Permalink to this headline"></a></h4>
-<p>Se abbiamo un oggetto A nella stanza e vogliamo arrivare ad un oggetto B in un altro punto, possiamo facilmente calcolare quanti passi ci servono. Se abbiamo un metro, possiamo anche essere più precisi.</p>
+<p>Se abbiamo un oggetto <span class="math notranslate nohighlight">\(p\)</span> nella stanza e vogliamo arrivare ad un oggetto <span class="math notranslate nohighlight">\(q\)</span> in un altro punto, possiamo facilmente calcolare quanti passi ci servono. Se abbiamo un metro, possiamo anche essere più precisi:</p>
 <ol class="arabic simple">
 <li><p>oggetti: cose del mondo fisico (bisogna decidere quali, si potrebbe considerare solo quelli con peso &gt; 1 Kg)</p></li>
 <li><p>spazio: <a class="reference external" href="https://it.wikipedia.org/wiki/Spazio_euclideo">spazio euclideo</a></p></li>
@@ -3400,8 +3402,8 @@ True
 </section>
 <section id="Ricerca-per-distanza-sintattica">
 <h3>Ricerca per distanza sintattica<a class="headerlink" href="#Ricerca-per-distanza-sintattica" title="Permalink to this headline"></a></h3>
-<p>La funzione <code class="docutils literal notranslate"><span class="pre">distanza_stringhe</span></code> pare fare al caso nostro !</p>
-<p><strong>ESERCIZIO</strong>: Prendendo codice dalla funzione <code class="docutils literal notranslate"><span class="pre">ricerca2</span></code>, crea una funzione <code class="docutils literal notranslate"><span class="pre">ricerca3</span></code> che restituisca risultati anche con stringhe di input aventi una distanza di Levenshtein &lt;= 2 dalle parole corrette nel testo delle pagine.</p>
+<p>Questa funzione <code class="docutils literal notranslate"><span class="pre">distanza_stringhe</span></code> pare faccia al caso nostro !</p>
+<p><strong>ESERCIZIO</strong>: Prendendo codice dalla funzione <code class="docutils literal notranslate"><span class="pre">ricerca2</span></code>, crea una funzione <code class="docutils literal notranslate"><span class="pre">ricerca3</span></code> che restituisca risultati anche con stringhe di input aventi una distanza di Levenshtein &lt;= 2 dalle parole corrette nel testo delle pagine:</p>
 <ul class="simple">
 <li><p>supponi che in input siano date parole singole</p></li>
 <li><p>ricordati delle pagine in cui hai già trovato una corrispondenza usando un insieme di url con la struttura dati <a class="reference external" href="https://www.python-course.eu/python3_sets_frozensets.php">set</a></p></li>
@@ -3557,11 +3559,12 @@ nostra tabella quali sono i testi maggiormente simili, senza più nemmeno usare 
 <h3>Il prezzo del successo<a class="headerlink" href="#Il-prezzo-del-successo" title="Permalink to this headline"></a></h3>
 <p>Fatta la startup, dopo la geniale idea della tabella per avere ricerche veloci, abbiamo trovato i primi utenti in Trentino e sono entusiasti del nostro servizio. Convinciamo anche dei venture capitalist a investire denaro sonante nella nostra impresa. Ebbri di successo, pensiamo al futuro radioso: è tempo di conquistare il mondo intero.</p>
 <p>Mentre pensiamo beati al prossimo modello di <em>Lambo</em> da comprare, all’improvviso una domanda sfreccia nella nostra testa come un fulmine, incenerendo senza pietà l’auto dei nostri sogni:</p>
-<section id="Ma-l’algoritmo-scala?">
-<h4>Ma l’algoritmo scala?<a class="headerlink" href="#Ma-l’algoritmo-scala?" title="Permalink to this headline"></a></h4>
+<blockquote>
+<div><p><strong>Ma l’algoritmo scala?</strong></p>
+</div></blockquote>
 <p>Una volta che abbiamo la tabella possiamo fare ricerche molto più rapide, ma se avessimo un miliardo di bandi da analizzare, quante celle ci sarebbero nella tabella risultante ? Quali sarebbero le conseguenze?</p>
-<p>Per oggi, ci fermiamo qui con l’ottimizzazione. Quanto segue è solo un invito a pensare ai big data e a cosa implicano.</p>
-<p>Di solito si analizzano il tempo e lo spazio:</p>
+<p>Per oggi, ci fermiamo qui con l’ottimizzazione. Quanto segue è solo un invito a pensare ai <em>big data</em> e a cosa implicano.</p>
+<p>Di solito si analizzano il <em>tempo</em> e lo <em>spazio</em>:</p>
 <p><strong>Tempo</strong>: supponendo che ci voglia 1 secondo al servizio di similarità per calcolare ogni similarità, quanto tempo ci metterebbe a riempire la tabella superiore in minuti, ore, giorni, ….?</p>
 <p><strong>Spazio</strong>: Supponendo per semplicità che ogni cella occupi un byte, e sapendo che un gigabyte sono un miliardo di byte (1.000.000.000):</p>
 <ul class="simple">
@@ -3570,7 +3573,7 @@ nostra tabella quali sono i testi maggiormente simili, senza più nemmeno usare 
 <li><p>Secondo te sarebbe realistico salvare la tabella in un solo server?</p></li>
 <li><p>Se usassimo solo la parte superiore della tabella, ridurremmo sostanzialmente lo spazio occupato ?</p></li>
 </ul>
-<p><strong>DOMANDA</strong>: (solo da pensare, niente implementazione !!): Riesci ad immaginare qualche alternativa alla tabellona ? Suggerimento: Se un pino è simile ad un abete nano, e l’abete nano è simile ad un cespuglio, possiamo dire qualcosa sul grado di similarità tra il pino e il cespuglio ?</p>
+<p><strong>DOMANDA</strong>: (solo da pensare, niente implementazione !!) Riesci ad immaginare qualche alternativa alla tabellona ? Suggerimento: Se un pino è simile ad un abete nano, e l’abete nano è simile ad un cespuglio, possiamo dire qualcosa sul grado di similarità tra il pino e il cespuglio ?</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -3579,7 +3582,6 @@ nostra tabella quali sono i testi maggiormente simili, senza più nemmeno usare 
 </pre></div>
 </div>
 </div>
-</section>
 </section>
 </section>
 </section>
