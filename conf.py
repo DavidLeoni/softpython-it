@@ -192,7 +192,7 @@ version  = jmt.get_version(release)
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'it'
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -245,14 +245,14 @@ html_static_path = ['_static/']
 
 
 html_js_files = [    
-    'js/jupman.3.3.js',  # shared among jupyter and website
+    'js/jupman.3.5.6.js',  # shared among jupyter and website
     'js/pytutor-embed.bundle.min.js',
     'js/softpython.js'
 ]
 
 html_css_files = [    
-    'css/jupman.3.5.5.css',      # shared among jupyter and website
-    'css/jupman-web.3.5.5.css',  # only on website    
+    'css/jupman.3.5.6.css',      # shared among jupyter and website
+    'css/jupman-web.3.5.6.css',  # only on website    
     'css/softpython-theme.3.5.5.css',  
 ]
 

@@ -512,22 +512,40 @@ def replace_html_rel(code, filepath):
 
     ret =  re.sub(r'(<img\s+)(alt=\".*\"\s+)*(src=\")(%s)(.*?\"(\s+.*?=\".*?\")*>)' % upr,
                   r"\1\2\3\5",
-                  ret)    
+                  ret)        
+    
+    ret =  re.sub(r'(<script\s+src=\")(%s)(.+?.js\")' % upr,
+                  r"\1\3",
+                  ret) 
+    
+    ret =  re.sub(r'(<style>[\s\n]*\@import[\s\n]+"?)(%s)(.+.css"?)' % upr,
+                  r"\1\3",
+                  ret)         
         
     return ret
+
+
+   
 
 def replace_ipynb_rel(nb_node, filepath, website=False):
     """ MODIFIES nb_node without returning it !
     """
-
+    
     for cell in nb_node.cells:
             
         if cell.cell_type == "code":    
             cell.source = replace_py_rel(cell.source, filepath)
+            if not website:
+                for output in cell.outputs:                    
+                    if 'data' in output:
+                        if "text/html" in output.data:
+                            output.data["text/html"] = replace_html_rel(output["data"]["text/html"], filepath)
+
+
         elif cell.cell_type == "markdown":
             # markdown cells: fix rel urls
             if not website:
-                cell.source = replace_md_rel(cell.source, filepath)
+                cell.source = replace_md_rel(cell.source, filepath)                
         elif cell.cell_type == "raw" and \
                 'raw_mimetype' in cell.metadata and cell.metadata['raw_mimetype'] == 'text/html':
             if not website:
