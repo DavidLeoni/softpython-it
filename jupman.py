@@ -2715,15 +2715,26 @@ def pytut_json(jm_code):
         return json_output
     
                     
-    class JmPytutOptions:            
+    class JmPytutTraceOptions:  
+        """ Options to generate trace server-side
+        
+            Note 1: options for visualization are different and can be found
+                    in ExecutionVisualizer Javascript class            
+                    
+                          
+        """
         def __init__(self):
             self.raw_input_lst_json=False
             self.cumulative = False
+            
             self.heapPrimitives = False
+            """ Puts on heap *all* primitives, strings included
+            """
+            
             self.probe_exprs_json=None            
             self.allow_all_modules = False
 
-    options = JmPytutOptions()
+    options = JmPytutTraceOptions()
         
     INDENT_LEVEL = None
 
@@ -2740,7 +2751,7 @@ def pytut_json(jm_code):
                                             allow_all_modules=options.allow_all_modules)
     
     
-def pytut():
+def pytut(disableHeapNesting=True):    
     """ Embeds a Python Tutor in the output of the current Jupyter cell,
         Code to execute is taken from *current* cell stripped from 
         the call to pytut() itself. 
@@ -2748,6 +2759,14 @@ def pytut():
         - The GUI will also be shown on the built Sphinx website.
         - Does *not* requires internet connection
         - ... and yes, implementation is very hacky
+
+
+        - disableHeapNesting: 
+                if true, then render all heap objects at the top level (i.e., no nested objects)
+                since 3.5.7
+                Note 1: on Python Tutor website the default is True
+                Note 2: before 3.5.7 default in jupman used to be False, now it's True
+                              
 
         Author: David Leoni <info@davidleoni.it>
     """
@@ -2757,23 +2776,23 @@ def pytut():
     #Hacky way to get variables from stack, but if we use %run -i we don't need it.    
     notebook_globals = inspect.stack()[1][0].f_globals    
     code = notebook_globals["In"][-1]                           
-    
-        
-    i = code.find('jupman.pytut()')
-   
-    if i == -1:
-        i = code.find('pytut()')
-        call_text = 'pytut()'
-    else:
-        call_text = 'jupman.pytut()'
-        
-    if i != -1:  # check 
-        extra = code[i + len(call_text):]
-        if len(extra.strip()) > 0:
-            print("ERROR: the call to jupman.pytut() must be the last in the cell, found instead this code afterwards: \n%s" % extra)
-            return
 
-    new_code =  code.replace('jupman.pytut()', '').replace('pytut()', '')
+    import re
+    pytut_pattern = r'((jupman\.)?pytut\((\s*disableHeapNesting\s*=\s*(True|False)\s*)?\))'
+    
+    lst = re.findall(pytut_pattern, code)
+    if len(lst) > 1:
+        print(f"ERROR: There should only be one call to jupman.pytut(), found {len(lst)} instead")
+        return    
+    
+    m = re.search(pytut_pattern, code)
+    if m:
+        extra = code[m.span()[1]:]
+        if len(extra.strip()) > 0:        
+            print(f"ERROR: the call to jupman.pytut() must be the last in the cell, instead, found this code afterwards: \n{extra}")
+            return        
+    
+    new_code = re.sub(pytut_pattern, '', code)
     
     # ' \n' IS FUNDAMENTAL TO PREVENT WEIRD BUGS IN JUPYTER !!!!
     # see https://github.com/DavidLeoni/jupman/issues/25
@@ -2784,7 +2803,7 @@ def pytut():
         Nothing to show ! You have to put ALL the code IN THE SAME cell as pytut()
                           right before its call. 
                           
-        For example: 
+        Example: 
 
             x = 5
             y = x + 3
@@ -2835,7 +2854,8 @@ def pytut():
             var trace = JSON.parse(document.getElementById('%s').innerHTML);                                        
             // NOTE: id without #
                     
-            addVisualizerToPage(trace, '%s',{'embeddedMode' : false,                       
+            addVisualizerToPage(trace, '%s',{'embeddedMode' : false,
+                                             'disableHeapNesting': %s,
                                              'visualizerIdOverride':'%s'})  
             
             
@@ -2851,7 +2871,7 @@ def pytut():
         })()
         </script>
                 
-    """ % (json_id, div_id, visualizerIdOverride)
+    """ % (json_id, div_id, str(disableHeapNesting).lower(), visualizerIdOverride)
     
     inject += """
     <div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div> 
