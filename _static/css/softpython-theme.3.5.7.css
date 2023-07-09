@@ -1,0 +1,929 @@
+/* media query inspiration taken from https://stackoverflow.com/a/13550716 
+   See also issue https://github.com/DavidLeoni/jupman/issues/92  
+*/    
+
+html { font-size:0.81em; }
+
+.wy-nav-top a {
+   font-size:1.4em
+}
+
+.wy-side-scroll a {
+       font-size: 1.5em;
+}   
+.toctree-l4  > a {
+   font-size: 1.4em !important;
+}
+
+@media screen and (min-width:481px) { /* rtd uses max-width 480 cutoff*/
+    
+}
+@media screen and (min-width: 769px) { /* rtd uses max-width 768 cutoff*/
+    
+    html { font-size:0.77em; }    
+
+    .wy-nav-content {
+        max-width:600px;
+    }
+    
+   .wy-side-scroll {
+       font-size: 0.8rem;    
+   }
+   
+   .toctree-l4 > a {
+       font-size: 1.06rem !important;
+   }
+   
+/* Shrinks sidebar, we care only about desktop users, 
+   let other config hell be handled by rtd theme */    
+    .wy-nav-side,  
+    .wy-side-scroll, 
+    .wy-side-nav-search, 
+    .wy-menu-vertical, 
+    .wy-tray-container li, 
+    .rst-versions {
+        min-width:200px;
+        max-width:200px;
+    }        
+    .rst-versions.rst-badge {
+        max-width:200px;
+    }
+    .wy-nav-content-wrap {    
+        margin-left:200px;    
+    }
+    
+}
+@media screen and (min-width:1100px) { /* min-width as in rtd theme */
+    
+    html { font-size:0.78em; }    
+    
+/* Shrinks sidebar, we care only about desktop users, 
+   let other config hell be handled by rtd theme */    
+    .wy-nav-side,  
+    .wy-side-scroll, 
+    .wy-side-nav-search, 
+    .wy-menu-vertical, 
+    .wy-tray-container li, 
+    .rst-versions {
+        min-width:275px;
+        max-width:275px;
+    }        
+    .rst-versions.rst-badge {
+        max-width:275px;
+    }
+    .wy-nav-content-wrap {    
+        margin-left:275px;    
+    }
+    
+}
+@media screen and (min-device-width:1400px) { 
+    .wy-nav-content {
+        max-width:695px;
+    }
+
+}
+
+@media screen and (min-device-width:1600px) { 
+    html { font-size:0.85em; }    
+    
+    .wy-nav-content {
+        max-width:755px;
+    }
+    
+}
+
+
+@media screen and (min-device-width: 1900px) {    
+    html { font-size:0.98em; }  
+    
+    .wy-nav-content {
+        max-width:870px;
+    }
+    
+}
+
+
+/* I presume higher res users are accustomed  to zooming
+      which also works better with Python Tutor
+      see https://github.com/DavidLeoni/jupman/issues/93
+    */
+
+
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Regular.eot");
+    src:url("../fonts/Archivo/Archivo-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Regular.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Regular.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Regular.ttf") format("truetype");
+    font-weight:400;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Bold.eot");
+    src:url("../fonts/Archivo/Archivo-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Bold.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Bold.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Bold.ttf") format("truetype");
+    font-weight:700;
+    font-style:normal
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot");
+    src:url("../fonts/Archivo/Archivo-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-BoldItalic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-BoldItalic.ttf") format("truetype");
+    font-weight:700;
+    font-style:italic
+   }
+@font-face {
+    font-family:"Archivo";
+    src:url("../fonts/Archivo/Archivo-Italic.eot");
+    src:url("../fonts/Archivo/Archivo-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Archivo/Archivo-Italic.woff2") format("woff2"),
+    url("../fonts/Archivo/Archivo-Italic.woff") format("woff"),
+    url("../fonts/Archivo/Archivo-Italic.ttf") format("truetype");
+    font-weight:400;
+    font-style:italic
+   }
+
+@font-face {
+    font-family:"Hussar";
+    font-style:normal;
+    
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot");
+    src:url("../fonts/Hussar/HussarBold-7mRE.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff2") format("woff2"),
+    url("../fonts/Hussar/HussarBold-7mRE.woff") format("woff"),
+    url("../fonts/Hussar/HussarBold-7mRE.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family:"Varela";
+    font-style:normal;
+    
+    src:url("../fonts/Varela/Varela-Regular.eot");
+    src:url("../fonts/Varela/Varela-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Varela/Varela-Regular.woff2") format("woff2"),
+    url("../fonts/Varela/Varela-Regular.woff") format("woff"),
+    url("../fonts/Varela/Varela-Regular.ttf") format("truetype")
+   }
+
+@font-face {
+    font-family: "Inconsolata";
+
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot");
+    src:url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.woff2") format("woff2"),
+    url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.woff") format("woff"),
+    url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.ttf") format("truetype");
+
+    src: url("../fonts/Inconsolata/Inconsolata-VariableFont_wdth-wght.ttf");
+}
+
+
+/** putting here default colors, may be overridden by textures in separate file */
+.wy-nav-content {
+    background-color: #f9f8f3;        
+    margin-left:0 !important;  /* sometimes it gets disconneted .. */
+ }
+
+.wy-nav-content-wrap  {
+   /*background-color: rgba(0,0,0,.05); */
+   background-attachment: fixed;
+}
+
+.wy-nav-side {   
+   /*background-color: #604511;*/
+   /* background-color: #331301;*/
+   /* background-color: #381d01;*/
+   background-color: #331d01;
+}
+ 
+
+ 
+
+.wy-nav-content p, .wy-nav-content div.admonition {
+    font-size: 1.25rem;    
+}
+
+.wy-nav-content p {
+    margin-right:1rem !important;
+    margin-top:1rem !important;
+    margin-bottom:1rem !important;
+    line-height: 1.9rem;       
+}
+
+.wy-nav-content ul, .wy-nav-content ol {    
+    margin-top:1.7rem !important;
+}
+
+.wy-nav-content li p{        
+    margin-top: -0.8rem !important;        
+}
+
+
+.wy-side-nav-search {
+    padding-right: 20px;
+}
+
+.wy-side-nav-search > a {
+    padding-left:10px !important;
+    padding-right:10px !important;
+    padding-top:5px !important;
+    padding-bottom:5px !important;
+    border-radius:35px;
+}
+
+
+#rtd-search-form {
+    font-size:1.05rem;
+}
+
+
+.wy-side-nav-search, .wy-nav-top {   
+     /* background-color: #5d9410;*/
+     background-color: #507306;
+ }
+ 
+.wy-menu .toctree-l1 > a, li.toctree-l1 > a > .toctree-expand {
+  color:#ddcd !important;
+}
+
+.wy-menu .toctree-l1 > a {
+    line-height:2ch !important;
+}
+.wy-menu .toctree-l2 > a {
+    line-height:2ch !important;
+}
+.wy-menu .toctree-l3 > a {
+    line-height:2ch !important;
+}
+
+.wy-menu .toctree-l4 > a {
+    padding: .4045em 1.663em .4045em  4.663em !important;    
+    line-height:2ch !important;
+}
+
+.wy-menu .toctree-l5 > a {
+    font-size: 0.97rem !important;
+    padding: .4045em 1.663em .4045em  5em !important;
+    line-height:2ch !important;
+}
+
+
+.wy-menu li.toctree-l1 > a:active {
+  background:#bba2 !important;
+}
+
+
+.wy-menu li > a:active {
+  background:#bba6 !important;
+}
+
+.wy-menu li.toctree-l1 > a:hover {   
+   background:#8643;
+}
+
+.wy-menu li.toctree-l1.current > a {
+  color: #333 !important;
+}
+
+
+.wy-menu li.toctree-l1.current > a:hover {   
+   background:#e2e2e2;
+}
+
+
+.wy-menu li.toctree-l2 > a:hover {
+   background:#d9d9d9;
+}
+
+
+.wy-menu li.toctree-l3 > a:hover {
+   background:#ddd !important;
+}
+
+.wy-menu li.toctree-l4 > a:hover {
+   background:#ccc !important;
+}
+
+
+/* only for toc in index pages */
+.toctree-wrapper {
+    font-size:1.2rem;   
+}
+
+.toctree-wrapper li{   
+   margin-top:0.3rem !important;    
+}
+
+.toctree-wrapper .toctree-l1 {   
+   margin-top:1.5rem !important;    
+}
+
+.toctree-wrapper .toctree-l1 ul {   
+    margin-top:0.6rem !important;    
+}
+
+
+.toctree-wrapper .toctree-l2 ul {   
+    margin-top:0.4rem !important;    
+}
+
+
+
+
+
+div.highlight, div.highlight-none, div.highlight-python, div.highlight-bash, div.highlight-ipython3 {
+    border-radius:8px !important;
+}
+
+/* ************   ALERT BOXES START  ************ 
+ *
+ * Note: this stuff is total shit - very unpredictable, try not to touch it 
+ *
+ */
+
+div.admonition {
+    border-radius:12px;    
+}
+
+div.admonition.note, div.admonition.warning {
+   padding-right: 0px;
+   padding-top:0px !important;;
+   padding-bottom:0rem !important;
+}
+
+div.admonition p {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important; 
+}
+
+
+p.admonition-title.fa.fa-exclamation-circle {
+    
+    margin-top:0px !important;   
+    margin-right: 0px !important;
+    margin-bottom: -0.8rem !important;
+    padding-top: 0.8rem !important; 
+    padding-bottom: 0.8rem !important;    
+    border-top-left-radius:  12px;
+    border-top-right-radius: 12px;    
+}
+
+div.admonition div.notranslate {
+    margin-right:15px !important;           
+}
+
+/* *********  COMMANDMENTS START  **********  */
+
+/* both top bar and panel */
+.jupman-alert-principle + div.admonition {    
+    border-radius:7px !important;        
+    letter-spacing: 0.11rem;       
+}
+
+
+/* panel */
+.jupman-alert-principle + div.admonition.note {
+   padding-right: 0px;
+   padding-top:0px !important;
+   
+}
+
+/* panel paragraphs, useful for distancing */
+.jupman-alert-principle + div.admonition p {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important; 
+    text-align: center;
+    line-height:160% !important;
+}
+
+/* notice it affects both title bar and panel */
+.jupman-alert-principle + div.admonition p strong {        
+    color: #334e;
+}
+
+
+/* top bar */
+.jupman-alert-principle + div p.admonition-title.fa.fa-exclamation-circle {
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+    color: #334e;       
+    font-size:1.3rem;
+    margin-top:0px !important;   
+    margin-right: 0px !important;
+    margin-bottom: -0.8rem !important;
+    padding-top: 1.9rem !important; 
+    padding-bottom: 0.8rem !important;    
+    border-top-left-radius:  2px;
+    border-top-right-radius: 2px;        
+}
+
+/* links */
+.jupman-alert-principle + div.admonition a {  
+       color: rgb(41, 78, 135) !important;  
+}
+
+.jupman-alert-principle + div.admonition a:hover {   
+    color: rgb(71, 98, 175) !important;
+    text-decoration: underline;
+}
+
+
+/* No exclamation icon  */
+div.jupman-alert-principle + div p.admonition-title::before {
+  content: "";
+}
+
+    /* ************* COMMANDMENTS END  ************ */
+
+
+
+/* ************   ALERT BOXES END  ************ */
+
+
+body {
+    font-family: "Archivo","proxima-nova","Helvetica Neue","Arial","sans-serif";    
+}
+
+
+h1 {
+    font-family: "Hussar","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+    font-size: 2.0rem;
+    padding-bottom: 0.8rem;   
+    padding-top: 1.5rem;
+    
+    margin-bottom:-0.2rem; /* to temporarily fix the Download exercises being too close */
+}
+
+
+h2,h3,h4,h5,h6,h7,h8 {
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+    padding-top:1.4rem;
+}
+
+h2 { font-size:1.6rem; }
+h3 { font-size:1.3rem; }
+h4 { font-size:1.2rem; }
+
+
+.rst-content blockquote {
+    font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace";
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem;
+    text-align:center;    
+}
+
+.rst-content blockquote p {
+    font-size: 1.40rem;    
+}
+
+
+pre {
+    font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;
+    font-size:1.2rem !important;
+    background-color:#f8f8ec;
+    line-height: 1.5rem !important;
+}
+
+
+/*  python code cell */
+div.input_area.highlight-ipython3 pre {
+    background-color:#f6f6f6;
+}
+
+
+
+
+.rst-content code.literal {
+    color:black;
+    background-color: white !important;
+}
+
+/* cell number */
+div.nbinput.container div.prompt, div.nboutput.container div.prompt{
+    display:none
+}
+
+/* ***************   TABLES START  ****************** */
+
+div.wy-table-responsive > table {
+   min-width:30%;
+   margin-left:auto !important;
+   margin-right:auto !important;
+
+}
+
+table.docutils th > p {
+    font-size:1.1rem !important;   
+}
+
+table.docutils td > p {
+    font-size:1.2rem !important;
+    margin-top:4px !important;
+    margin-bottom:0.5rem !important;
+}
+
+table.docutils td p {    
+   white-space:normal ;
+   line-height: 1.6rem !important;
+}
+
+table.docutils {   
+   margin: 5px !important;   
+   box-shadow: 1px 3px 3px 1px rgba(0, 0, 30, 0.2);
+   border-collapse: collapse !important;
+   border-style: hidden !important;
+   border-radius:5px;
+}
+
+table.docutils th {       
+   text-align:center;
+   padding-top:0px !important;
+   padding-bottom:0px !important;   
+   background:#2311;   
+   color:#333d; 
+   border-bottom: 2px solid #9a75 !important;
+   border-radius:5px;
+}
+
+table.docutils tr:nth-child(even) {
+  background: #FAFCFF;
+}
+
+/* yes we need ALL those specifiers */
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+   background-color: #FAF8F5;
+}
+
+/* *****************   TABLES END    **********************  */
+
+
+
+.jupman-sol {    
+   font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+   border-radius:3px;   
+   background-color:#ebf3ed !important;  
+   border-color: #d3dfd6 !important;            
+}
+
+a.jupman-sol-toggler:hover {
+    color: #21aa21 !important;
+}
+
+/* pandas */
+.dataframe {
+    font-size:1rem !important;    
+}
+
+/* *********  SHADOWS START   ********* */
+
+.wy-nav-content  {     
+     box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wy-side-scroll, .wy-side-nav-search {
+   box-shadow: inset 3px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.wy-form input {
+   box-shadow:  0px 0px 20px 7px rgba(150, 200, 130, 0.3);
+}
+
+
+.toctree-l1 > ul {
+   
+   padding-top:0.4rem;
+   box-shadow: inset 0px 0px 8px 2.5px rgba(0, 0, 0, 0.2);
+}
+
+
+.wy-nav-side, .wy-nav-top {     
+     box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.notranslate,  .admonition, .pytutorVisualizer { 
+     box-shadow: 1px 1px 3px 1px rgba(0, 0, 30, 0.2);
+}
+
+
+/* only for index pages */
+.toctree-wrapper ul {
+    box-shadow: none !important;
+}
+
+
+/* *********  SHADOWS END   ********* */
+
+
+
+
+/* *********  WEBKIT SCROLLBAR START   ********* 
+ *
+ * Note Firefox is already fine, see https://github.com/DavidLeoni/jupman/issues/122
+ */
+
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  visibility:hidden;
+}
+
+::-webkit-scrollbar-thumb {   
+  width:10%;
+  border-radius: 6px;    
+  background-color: rgb(218 217 217 / 90%);   
+ /* box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); */
+  visibility:hidden !important;  
+}
+
+:hover::-webkit-scrollbar {  
+  visibility:inherit !important; 
+}
+:hover::-webkit-scrollbar-track {  
+  visibility:inherit !important; 
+}
+:hover::-webkit-scrollbar-thumb {  
+  visibility:inherit !important; 
+}
+
+
+.wy-side-scroll::-webkit-scrollbar {
+  display:none !important;
+}
+
+.wy-side-scroll:hover::-webkit-scrollbar {
+  display:inherit !important;
+}
+
+.wy-side-scroll::-webkit-scrollbar-track {
+  background-color:#cccf;
+  
+  display:inherit !important;
+}
+ 
+
+.wy-side-scroll::-webkit-scrollbar-thumb {
+  background-color:#fff7 !important;
+  display:inherit !important;
+}
+
+/* *********  WEBKIT SCROLLBAR END   ********* */
+
+
+
+/* ********* PYTHON TUTOR START  **********  */
+
+/* External frame */
+
+.ExecutionVisualizer > table > tbody > tr > td:first-child{
+  border-radius:5px 0px 0px 5px;    
+  box-shadow: 1px 2px 9px 1px #999;
+}
+
+.ExecutionVisualizer > table > tbody > tr > td:last-child{
+  border-radius:0px 5px 5px 0px;
+  box-shadow: 2px 2px 9px 1px #999;
+}
+
+.ExecutionVisualizer  table  tbody  > tr > td {    
+    background: #fff !important;
+    
+   /*background:url("../img/jupman/softpython-theme/wood-small.jpg"),
+    #ffff !important;
+    background-blend-mode:hard-light;*/
+}
+
+/* Left code NOTE: For some reason we need also #codAndNav ...*/
+.ExecutionVisualizer  #codAndNav #pyCodeOutputDiv table {    
+    font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;    
+    font-size:1.12rem !important;
+    
+    padding-top:0px !important;        
+    border-top:none;        
+    border-radius:7px !important;        
+    box-shadow: 0px 2px 5px 2px #eee;
+}
+
+
+
+
+/*  legend: line that just executed, next line to execute  */
+
+.ExecutionVisualizer #legendDiv {
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif" !important;
+    margin-top:25px !important;
+    font-size:0.9rem !important;    
+}
+
+.ExecutionVisualizer #legendDiv p {    
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif" !important;    
+    font-size:0.9rem !important;    
+    margin-top:5px !important;
+}
+
+
+
+/* step slider */
+
+.ExecutionVisualizer #executionSlider {
+    box-shadow: 1px 0px 2px 0px #aaa;
+    height: 5px;    
+    border: none;
+    margin-bottom:21px !important;
+}    
+
+.ExecutionVisualizer #executionSlider span.ui-slider-handle {
+    background: #eee !important;
+    border:none;
+    box-shadow: 1px 1px 2px 0px #777;
+    margin-top:-3px;
+    cursor: grab;
+}
+
+
+/* First Prev Next Last buttons */
+
+.ExecutionVisualizer #vcrControls button {
+   font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+   font-size:0.9rem;   
+   padding-top:0.2rem;
+   padding-bottom:0.2rem;
+   padding-left:0.7rem;
+   padding-right:0.7rem;
+   border-radius:12px;         
+   background-color: #f5f5f5 !important;   
+   border:0px solid;
+   box-shadow: 1px 1px 0px 1px;  
+}
+
+.ExecutionVisualizer #vcrControls button:hover {
+    background-color: #f8f8f8 !important;   
+}
+
+.ExecutionVisualizer #vcrControls button:active {
+    background-color: #ddde !important;   
+    box-shadow: -1px -1px 0px 1px;      
+}
+
+.ExecutionVisualizer #vcrControls button[disabled] {
+    background-color: #ddd !important;   
+
+}
+
+.ExecutionVisualizer #vcrControls button[disabled]:active {
+    background-color: #ddd !important;   
+    box-shadow: 1px 1px 0px 1px;  
+}
+
+
+/* Step 3 of 5 */
+.ExecutionVisualizer #curInstr {
+   font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif" !important;
+   font-size:1.0rem !important;
+}
+
+.ExecutionVisualizer #errorOutput {
+   font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif" !important;
+   font-size:1.0rem !important;
+}
+
+
+/* Middle vertical bar */
+.ExecutionVisualizer div.ui-resizable-handle.ui-resizable-e {
+    border-color: #d9d9df !important;
+    border-width:1px !important; 
+    box-shadow:  0px 0px 2px 0px #2223 !important;
+}
+
+
+/* Virtual monitor description line:  Print output (drag lower right corner to resize) */
+.ExecutionVisualizer #printOutputDocs {
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif"  !important;        
+}
+
+/* Virtual monitor box */
+
+.ExecutionVisualizer #pyStdout {
+    font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;    
+    font-size:0.9rem !important;    
+    border:none !important;
+    box-shadow: 1px 1px 3px 1px #ccc;
+}
+
+
+/* Frames and Objects top headers */
+.ExecutionVisualizer #stackHeader,  .ExecutionVisualizer #heapHeader{    
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";  
+    font-size:1.02rem !important;
+    text-align:left !important;
+}
+
+
+/* Frames and Objects panels */
+.ExecutionVisualizer .vizLayoutTd td {
+    border-radius:0px !important;
+    box-shadow: none !important;
+}
+
+.ExecutionVisualizer .stackFrameHeader {    
+    font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";   
+    font-size:0.9rem !important;
+}
+
+.ExecutionVisualizer .stackFrame {    
+    border-radius:6px !important;
+    box-shadow: 1px 1px 3px 1px #a0a0b5;
+}
+
+.ExecutionVisualizer .stackFrame td {    
+   font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;    
+   font-size:0.9rem !important;
+}
+
+/* Yellow heap  */
+
+.ExecutionVisualizer .heapObject td, .ExecutionVisualizer .heapObject div {
+   font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;    
+   font-size: 0.95rem !important;
+}
+
+.ExecutionVisualizer .listTbl,
+.ExecutionVisualizer .tupleTbl,
+.ExecutionVisualizer .setTbl, 
+.ExecutionVisualizer .dictTbl, 
+.ExecutionVisualizer .classTbl, 
+.ExecutionVisualizer .instTbl {
+    box-shadow: 1px 1px 3px 1px #b0b0a1;
+    border: none !important;
+}
+
+
+.ExecutionVisualizer .listTbl td,
+.ExecutionVisualizer .tupleTbl td,
+.ExecutionVisualizer .setTbl, 
+.ExecutionVisualizer .dictTbl, 
+.ExecutionVisualizer .classTbl td, 
+.ExecutionVisualizer .instTbl td {
+    border-color: #bbb !important;
+}
+
+.ExecutionVisualizer .listTbl tr td:first-child,
+.ExecutionVisualizer .tupleTbl tr td:first-child {
+    border-left: none !important;    
+}
+
+.ExecutionVisualizer .funcObj {
+    box-shadow: 1px 1px 3px 1px #ccc5;
+    padding:8px;
+    border-radius:15px;
+}
+
+/* Yellow heap end */
+
+/* ********* PYTHON TUTOR END **********  */
+
+/* *********   FOOTER  START  **********  */
+
+footer {
+   font-family: "Inconsolata","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New","Courier","monospace" !important;
+   text-align:center;
+}
+
+/* Built with ...*/
+footer  {
+      font-size:1.1rem;
+}
+
+/* Copyright */
+footer p {
+   font-size:1.2rem !important;
+}
+
+
+.rst-footer-buttons a {
+   font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
+   font-size:1.05rem;   
+   border-radius:15px;         
+   background-color: #eee9 !important;   
+}
+
+.rst-footer-buttons a:hover {
+   background-color: #eee5 !important;   
+}
+
+/* *********   FOOTER  END  **********  */
+
+
+

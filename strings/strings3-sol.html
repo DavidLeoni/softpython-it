@@ -7,9 +7,10 @@
   <title>Stringhe 3 - metodi base &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/strings/strings3-sol.html" />
   <!--[if lt IE 9]>
@@ -23,7 +24,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.5.6.js"></script>
+        <script src="../_static/js/jupman.3.5.7.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -137,7 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---str">Stringhe - str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
 </ul>
 </li>
@@ -337,6 +338,7 @@
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="strings1-sol.html#Formattare-con-le-f-strings">Formattare con le f-strings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
@@ -389,7 +391,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Metodi base</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Che-fare">Che fare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Esempio---upper">Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Esempio---upper">Esempio - upper</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---cammina">Esercizio - cammina</a></li>
 </ul>
 </li>
@@ -417,7 +419,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Metodi-isupper-e-islower">Metodi isupper e islower</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---nani-e-GIGANTI">Esercizio - nani e GIGANTI</a></li>
 </ul>
 </li>
@@ -544,7 +546,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---bilancia">Esercizio - bilancia</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Replicazione-per-liste">Replicazione per liste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
@@ -591,6 +593,11 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#Esercizio---welldone">Esercizio - welldone</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-copy">Metodo copy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#copy-è-superficiale">copy è superficiale</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Funzione-deepcopy">Funzione deepcopy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -661,7 +668,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Slice">Slice</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Concatenazione">Concatenazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Appartenenza">Appartenenza</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Replicazione">Replicazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Esercizio---welcome">Esercizio - welcome</a></li>
 </ul>
 </li>
@@ -730,14 +737,12 @@
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---bababiba">Esercizio - bababiba</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#discard">discard</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---spazzatura">Esercizio - spazzatura</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issuperset">issuperset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#isdisjoint">isdisjoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -1756,11 +1761,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -2346,6 +2351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2022">Agosto 2022</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
@@ -2692,51 +2698,51 @@ div.rendered_html tbody tr:hover {
 <p>Ogni tipo di dati ha associati dei metodi particolari per quel tipo, vediamo instanto quelli più semplici associati al tipo stringa (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11%" />
 <col style="width: 42%" />
+<col style="width: 11%" />
 <col style="width: 47%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Risultato</p></th>
-<th class="head"><p>Metodo</p></th>
+<tr class="row-odd"><th class="head"><p>Metodo</p></th>
+<th class="head"><p>Risultato</p></th>
 <th class="head"><p>Significato</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>str</p></td>
-<td><p><a class="reference external" href="#Esempio-upper">str.upper()</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Esempio-upper">str.upper()</a></p></td>
+<td><p>str</p></td>
 <td><p>Ritorna la stringa con tutti i caratteri maiuscoli</p></td>
 </tr>
-<tr class="row-odd"><td><p>str</p></td>
-<td><p><a class="reference external" href="#Metodo-lower">str.lower()</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Metodo-lower">str.lower()</a></p></td>
+<td><p>str</p></td>
 <td><p>Ritorna la stringa con tutti i caratteri minuscoli</p></td>
 </tr>
-<tr class="row-even"><td><p>str</p></td>
-<td><p><a class="reference external" href="#Metodo-capitalize">str.capitalize()</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Metodo-capitalize">str.capitalize()</a></p></td>
+<td><p>str</p></td>
 <td><p>Ritorna la stringa con il primo carattere maiuscolo</p></td>
 </tr>
-<tr class="row-odd"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-startswith">str.startswith(str)</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Metodo-startswith">str1.startswith(str2)</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se la stringa inizia con un’altra</p></td>
 </tr>
-<tr class="row-even"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-endswith">str.endswith(str)</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Metodo-endswith">str1.endswith(str2)</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se la stringa finisce con un’altra</p></td>
 </tr>
-<tr class="row-odd"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-isalpha">str.isalpha(str)</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Metodo-isalpha">str1.isalpha(str2)</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se tutti i caratteri sono alfabetici</p></td>
 </tr>
-<tr class="row-even"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodo-isdigit">str.isdigit(str)</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Metodo-isdigit">str1.isdigit(str2)</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se tutti i caratteri sono cifre</p></td>
 </tr>
-<tr class="row-odd"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.isupper()</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.isupper()</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se tutti i caratteri sono minuscoli</p></td>
 </tr>
-<tr class="row-even"><td><p>bool</p></td>
-<td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.islower()</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Metodi-isupper-e-islower">str.islower()</a></p></td>
+<td><p>bool</p></td>
 <td><p>Controlla se tutti i caratteri sono maiuscoli</p></td>
 </tr>
 </tbody>
@@ -2781,7 +2787,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 </section>
 <section id="Esempio---upper">
-<h2>Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code><a class="headerlink" href="#Esempio---upper" title="Permalink to this headline"></a></h2>
+<h2>Esempio - upper<a class="headerlink" href="#Esempio---upper" title="Permalink to this headline"></a></h2>
 <p>Un metodo è una funzione di un oggetto che prende in ingresso l’oggetto a cui è applicata e vi fa dei calcoli.</p>
 <p>Il tipo stringa (<code class="docutils literal notranslate"><span class="pre">str</span></code>) ha metodi predefiniti come <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> che possono essere applicati agli oggetti stringa (es: <code class="docutils literal notranslate"><span class="pre">'ciao'</span></code> è un oggetto stringa).</p>
 <p>Il metodo <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> prende la stringa su cui è applicato e crea una NUOVA stringa in cui tutti i caratteri sono in maiuscolo. Per applicare un metodo come <code class="docutils literal notranslate"><span class="pre">str.upper()</span></code> al particolare oggetto stringa <code class="docutils literal notranslate"><span class="pre">'ciao'</span></code>, dobbiamo scrivere</p>
@@ -2899,51 +2905,44 @@ CIAO
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm40b5501c-b5b8-48b7-b7d0-6476141633ea" type="application/json" >
-    {"code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nCIAO\n"}]}
-</script>
-<div id="jm40b5501c-b5b8-48b7-b7d0-6476141633ea" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-9ea104f8ffd81d58df6f264e209bcd12-9" type="application/json" >
+        {"code": " \nx = \"ciao\"\ny = x.upper()\nprint(x)\nprint(y)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao"}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\n"}, {"line": 5, "event": "return", "func_name": "<module>", "globals": {"x": "ciao", "y": "CIAO"}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {}, "stdout": "ciao\nCIAO\n"}]}
+    </script>
+    <div id="jm-9ea104f8ffd81d58df6f264e209bcd12-9" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-9ea104f8ffd81d58df6f264e209bcd12-9').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm40b5501c-b5b8-48b7-b7d0-6476141633ea').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm40b5501c-b5b8-48b7-b7d0-6476141633ea',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-9ea104f8ffd81d58df6f264e209bcd12-9',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-9ea104f8ffd81d58df6f264e209bcd12-9'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <section id="Esercizio---cammina">
 <h3>Esercizio - cammina<a class="headerlink" href="#Esercizio---cammina" title="Permalink to this headline"></a></h3>
@@ -3066,7 +3065,7 @@ ciAo MonDo
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span>    <span class="c1">#012345678</span>
@@ -3087,7 +3086,7 @@ ASCEnSORE
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span>    <span class="c1">#012345678</span>
@@ -3343,7 +3342,7 @@ True
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;per Giove&#39;</span><span class="p">,</span> <span class="s1">&#39;per Zeus&#39;</span><span class="p">,</span> <span class="s1">&#39;per&#39;</span>    <span class="c1"># True</span>
@@ -3365,7 +3364,7 @@ True
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;per Giove&#39;</span><span class="p">,</span> <span class="s1">&#39;per Zeus&#39;</span><span class="p">,</span> <span class="s1">&#39;per&#39;</span>    <span class="c1"># True</span>
@@ -3802,7 +3801,7 @@ E&#39; un numero di telefono? True
 </section>
 </section>
 <section id="Metodi-isupper-e-islower">
-<h2>Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code><a class="headerlink" href="#Metodi-isupper-e-islower" title="Permalink to this headline"></a></h2>
+<h2>Metodi isupper e islower<a class="headerlink" href="#Metodi-isupper-e-islower" title="Permalink to this headline"></a></h2>
 <p>Possiamo controllare se un carattere è maiuscolo o minuscolo con i metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
@@ -3908,22 +3907,13 @@ False
 </pre></div></div>
 </div>
 <p>Nota che spaziatura in genere (i <em>blank</em>) e punteggiatura non sono prese in considerazione:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;TROPPO</span><span class="se">\n</span><span class="s1">GIUSTO !&#39;</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-True
-</pre></div></div>
 </div>
 <p>Potremmo controllare se un carattere è maiuscolo/minuscolo guardando il codice ASCII ma il miglior modo per coprire tutti gli alfabeti è usare i metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code>, per esempio funzionano anche con lettere accentate:</p>
 <div class="nbinput docutils container">

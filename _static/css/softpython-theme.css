@@ -197,8 +197,12 @@ html { font-size:0.81em; }
 }
 
 .wy-nav-side {   
-   background-color: #705d39; 
+   /*background-color: #604511;*/
+   /* background-color: #331301;*/
+   /* background-color: #381d01;*/
+   background-color: #331d01;
 }
+ 
 
  
 
@@ -240,8 +244,9 @@ html { font-size:0.81em; }
 }
 
 
- .wy-side-nav-search, .wy-nav-top {   
-   background-color: #537326;
+.wy-side-nav-search, .wy-nav-top {   
+     /* background-color: #5d9410;*/
+     background-color: #507306;
  }
  
 .wy-menu .toctree-l1 > a, li.toctree-l1 > a > .toctree-expand {
@@ -400,14 +405,14 @@ div.admonition div.notranslate {
 
 /* notice it affects both title bar and panel */
 .jupman-alert-principle + div.admonition p strong {        
-    color: #666e;  
+    color: #334e;
 }
 
 
 /* top bar */
 .jupman-alert-principle + div p.admonition-title.fa.fa-exclamation-circle {
     font-family: "Varela","ff-tisa-web-pro","Georgia","Arial","sans-serif";
-    color: #555e;        
+    color: #334e;       
     font-size:1.3rem;
     margin-top:0px !important;   
     margin-right: 0px !important;
@@ -420,11 +425,11 @@ div.admonition div.notranslate {
 
 /* links */
 .jupman-alert-principle + div.admonition a {  
-       color: #666e !important;  
+       color: rgb(41, 78, 135) !important;  
 }
 
 .jupman-alert-principle + div.admonition a:hover {   
-    color: #888e !important;
+    color: rgb(71, 98, 175) !important;
     text-decoration: underline;
 }
 
@@ -588,7 +593,7 @@ a.jupman-sol-toggler:hover {
 .wy-form input {
    box-shadow:  0px 0px 20px 7px rgba(150, 200, 130, 0.3);
 }
-}
+
 
 .toctree-l1 > ul {
    
@@ -622,32 +627,56 @@ div.notranslate,  .admonition, .pytutorVisualizer {
  * Note Firefox is already fine, see https://github.com/DavidLeoni/jupman/issues/122
  */
 
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: rgba(200, 200, 200, 0.3);
-}
 
-::-webkit-scrollbar {  
-  width: 7px;
+
+::-webkit-scrollbar {
+  width: 4px;
   height: 8px;
-  background-color: rgba(0, 0, 0, 0);
   
 }
 
-::-webkit-scrollbar-thumb {  
-  border-radius: 10px;    
-  background-color: rgba(10, 100, 150, 0.15);   
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); 
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  visibility:hidden;
+}
+
+::-webkit-scrollbar-thumb {   
+  width:10%;
+  border-radius: 6px;    
+  background-color: rgb(218 217 217 / 90%);   
+ /* box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); */
+  visibility:hidden !important;  
+}
+
+:hover::-webkit-scrollbar {  
+  visibility:inherit !important; 
+}
+:hover::-webkit-scrollbar-track {  
+  visibility:inherit !important; 
+}
+:hover::-webkit-scrollbar-thumb {  
+  visibility:inherit !important; 
+}
+
+
+.wy-side-scroll::-webkit-scrollbar {
+  display:none !important;
+}
+
+.wy-side-scroll:hover::-webkit-scrollbar {
+  display:inherit !important;
 }
 
 .wy-side-scroll::-webkit-scrollbar-track {
-  background-color: rgba(130, 150, 210,0.2) !important;
+  background-color:#cccf;
+  
+  display:inherit !important;
 }
+ 
 
 .wy-side-scroll::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: rgba(90, 90, 70) !important; 
-  box-shadow: inset 0 0 4px rgba(200, 200, 200, 0.2); 
+  background-color:#fff7 !important;
+  display:inherit !important;
 }
 
 /* *********  WEBKIT SCROLLBAR END   ********* */
@@ -750,12 +779,11 @@ div.notranslate,  .admonition, .pytutorVisualizer {
 
 .ExecutionVisualizer #vcrControls button[disabled] {
     background-color: #ddd !important;   
-    color:eee !important;
+
 }
 
 .ExecutionVisualizer #vcrControls button[disabled]:active {
     background-color: #ddd !important;   
-    color:eee !important;
     box-shadow: 1px 1px 0px 1px;  
 }
 

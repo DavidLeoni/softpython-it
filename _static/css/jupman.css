@@ -41,6 +41,22 @@ div.ui-resizable-handle.ui-resizable-e {
     background-color: #ffffc6;
 }
 
+/* START FIX 136 for Visual Studio Code showing grey fonts  
+   https://github.com/DavidLeoni/jupman/issues/136  
+*/
+#pyCodeOutputDiv tr td:nth-child(2) {
+    color : #000 !important;
+}
+
+#vizLayoutTdSecond #dataViz tr td {
+    color: #000 !important;
+}
+
+#vizLayoutTdFirst #curInstr {
+    color: #000 !important;
+}
+/* END FIX  136  ----------------------- */
+
 /* ************ PYTHON TUTOR END ***************   */
 
 

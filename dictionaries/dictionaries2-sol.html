@@ -7,9 +7,10 @@
   <title>Dizionari 2 - operatori &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/dictionaries/dictionaries2-sol.html" />
   <!--[if lt IE 9]>
@@ -23,7 +24,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.5.6.js"></script>
+        <script src="../_static/js/jupman.3.5.7.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -137,7 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---str">Stringhe - str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
 </ul>
 </li>
@@ -337,6 +338,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-le-f-strings">Formattare con le f-strings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
@@ -389,7 +391,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html">Metodi base</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Che-fare">Che fare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - upper</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---cammina">Esercizio - cammina</a></li>
 </ul>
 </li>
@@ -417,7 +419,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi isupper e islower</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---nani-e-GIGANTI">Esercizio - nani e GIGANTI</a></li>
 </ul>
 </li>
@@ -544,7 +546,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---bilancia">Esercizio - bilancia</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Replicazione-per-liste">Replicazione per liste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
@@ -591,6 +593,11 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#Esercizio---welldone">Esercizio - welldone</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-copy">Metodo copy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#copy-è-superficiale">copy è superficiale</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Funzione-deepcopy">Funzione deepcopy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -661,7 +668,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Slice">Slice</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Concatenazione">Concatenazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Appartenenza">Appartenenza</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Replicazione">Replicazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Esercizio---welcome">Esercizio - welcome</a></li>
 </ul>
 </li>
@@ -730,14 +737,12 @@
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---bababiba">Esercizio - bababiba</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#discard">discard</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---spazzatura">Esercizio - spazzatura</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issuperset">issuperset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#isdisjoint">isdisjoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -1756,11 +1761,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -2346,6 +2351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2022">Agosto 2022</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
@@ -2692,38 +2698,46 @@ div.rendered_html tbody tr:hover {
 <p>Per manipolare i dizionari vi sono diversi operatori:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 27%" />
-<col style="width: 40%" />
+<col style="width: 26%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 31%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operatore</p></th>
+<th class="head"><p>Sintassi</p></th>
 <th class="head"><p>Ritorna</p></th>
 <th class="head"><p>Descrizione</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len</span></code>(dict)</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#len">lunghezza</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len</span></code>(dict)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
 <td><p>Ritorna il numero di chiavi</p></td>
 </tr>
-<tr class="row-odd"><td><p>dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Leggere-un-valore">lettura</a></p></td>
+<td><p>dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
 <td><p>obj</p></td>
 <td><p>Ritorna il valore associato alla chiave</p></td>
 </tr>
-<tr class="row-even"><td><p>dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">=</span></code> valore</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Scrivere---aggiunta-chiave/valore">modifica</a></p></td>
+<td><p>dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code> <code class="docutils literal notranslate"><span class="pre">=</span></code> valore</p></td>
 <td></td>
 <td><p>Aggiunge o modifica il valore associato ad una chiave</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">del</span></code> dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Scrivere---cancellare">rimozione</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">del</span></code> dict<code class="docutils literal notranslate"><span class="pre">[</span></code>chiave<code class="docutils literal notranslate"><span class="pre">]</span></code></p></td>
 <td></td>
 <td><p>Rimuove la coppia chiave/valore</p></td>
 </tr>
-<tr class="row-even"><td><p>chiave <code class="docutils literal notranslate"><span class="pre">in</span></code> dict</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Appartenenza-con-in">appartenenza</a></p></td>
+<td><p>chiave <code class="docutils literal notranslate"><span class="pre">in</span></code> dict</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>Ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code> se chiave è presente nel dizionario</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code>,<code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Uguaglianza">uguaglianza</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">==</span></code>,<code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>Controlla se due dizionari sono uguali o differenti</p></td>
 </tr>
@@ -4182,51 +4196,44 @@ False
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm33348978-4471-48f3-9563-c12c31dcfa98" type="application/json" >
-    {"code": " \nprestiti = {'Marco': ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita': ['Shining','Dracula','1984']}", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"prestiti": ["REF", 1]}, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}]}
-</script>
-<div id="jm33348978-4471-48f3-9563-c12c31dcfa98" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-86f088b096f6e5e9a459e96ba4711683-38" type="application/json" >
+        {"code": " \nprestiti = {'Marco': ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita': ['Shining','Dracula','1984']}", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"prestiti": ["REF", 1]}, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}]}
+    </script>
+    <div id="jm-86f088b096f6e5e9a459e96ba4711683-38" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-86f088b096f6e5e9a459e96ba4711683-38').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm33348978-4471-48f3-9563-c12c31dcfa98').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm33348978-4471-48f3-9563-c12c31dcfa98',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-86f088b096f6e5e9a459e96ba4711683-38',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-86f088b096f6e5e9a459e96ba4711683-38'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p>Se proviamo a scrivere l’espressione</p>
 <div class="nbinput docutils container">
@@ -4335,51 +4342,44 @@ Dracula
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm766ab6e8-ba49-466a-9da7-8f6d66f0b987" type="application/json" >
-    {"code": " \nprestiti = {'Marco':  ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita':   ['Shining','Dracula','1984']}\nlista_rita = prestiti['Rita']\nprint(lista_rita[1])", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"prestiti": ["REF", 1]}, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"prestiti": ["REF", 1], "lista_rita": ["REF", 4]}, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"prestiti": ["REF", 1], "lista_rita": ["REF", 4]}, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": "Dracula\n"}]}
-</script>
-<div id="jm766ab6e8-ba49-466a-9da7-8f6d66f0b987" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-9d1b4a05252e6401f95db54107fd4b0b-44" type="application/json" >
+        {"code": " \nprestiti = {'Marco':  ['I Miserabili', 'Ulisse'],\n            'Gloria': ['Guerra e pace'],\n            'Rita':   ['Shining','Dracula','1984']}\nlista_rita = prestiti['Rita']\nprint(lista_rita[1])", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"prestiti": ["REF", 1]}, "ordered_globals": ["prestiti"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"prestiti": ["REF", 1], "lista_rita": ["REF", 4]}, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"prestiti": ["REF", 1], "lista_rita": ["REF", 4]}, "ordered_globals": ["prestiti", "lista_rita"], "stack_to_render": [], "heap": {"1": ["DICT", ["Marco", ["REF", 2]], ["Gloria", ["REF", 3]], ["Rita", ["REF", 4]]], "2": ["LIST", "I Miserabili", "Ulisse"], "3": ["LIST", "Guerra e pace"], "4": ["LIST", "Shining", "Dracula", "1984"]}, "stdout": "Dracula\n"}]}
+    </script>
+    <div id="jm-9d1b4a05252e6401f95db54107fd4b0b-44" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-9d1b4a05252e6401f95db54107fd4b0b-44').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm766ab6e8-ba49-466a-9da7-8f6d66f0b987').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm766ab6e8-ba49-466a-9da7-8f6d66f0b987',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-9d1b4a05252e6401f95db54107fd4b0b-44',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-9d1b4a05252e6401f95db54107fd4b0b-44'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p>Se esegui il codice in Python Tutor, noterai come nel momento in cui assegnamo <code class="docutils literal notranslate"><span class="pre">lista_rita</span></code> la lista corrispondente a Rita sembra ‘staccarsi’ dal dizionario. Questo è un solo effetto grafico causato da Python Tutor, dal punto di vista del dizionario non è cambiato nulla. L’intenzione è mostrare che la lista adesso è <em>raggiungibile</em> sia dal dizionario che dalla nuova variabile <code class="docutils literal notranslate"><span class="pre">lista_rita</span></code>.</p>
 <section id="Esercizio---prestiti">
@@ -4938,51 +4938,44 @@ diz2= {&#39;a&#39;: 3, &#39;b&#39;: 8}
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmd783d97e-6b9b-4613-95a4-f8702700ec0e" type="application/json" >
-    {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = {'a':diz1['a'], \n        'b':diz1['b'] }\ndiz1['a'] = 6\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 6, 'b': 8}\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 6, 'b': 8}\ndiz2= {'a': 3, 'b': 8}\n"}]}
-</script>
-<div id="jmd783d97e-6b9b-4613-95a4-f8702700ec0e" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-bd12262725be5390ff52090a0eb880c5-56" type="application/json" >
+        {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = {'a':diz1['a'], \n        'b':diz1['b'] }\ndiz1['a'] = 6\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 6, 'b': 8}\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 6], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 6, 'b': 8}\ndiz2= {'a': 3, 'b': 8}\n"}]}
+    </script>
+    <div id="jm-bd12262725be5390ff52090a0eb880c5-56" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-bd12262725be5390ff52090a0eb880c5-56').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmd783d97e-6b9b-4613-95a4-f8702700ec0e').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmd783d97e-6b9b-4613-95a4-f8702700ec0e',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-bd12262725be5390ff52090a0eb880c5-56',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-bd12262725be5390ff52090a0eb880c5-56'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p><strong>DOMANDA</strong>: Se esegui il seguente codice in Python Tutor, cosa stamperà?</p>
 <ol class="arabic simple">
@@ -5035,51 +5028,44 @@ diz2= {&#39;a&#39;: 3, &#39;b&#39;: 8}
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm7a7c6710-aa31-4986-b98b-db7fb9c6c281" type="application/json" >
-    {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = dict(diz1)\ndiz1['a'] = 7\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 7, 'b': 8}\n"}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 7, 'b': 8}\ndiz2= {'a': 3, 'b': 8}\n"}]}
-</script>
-<div id="jm7a7c6710-aa31-4986-b98b-db7fb9c6c281" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-bda125cb1095c91718daf010b44bfb02-57" type="application/json" >
+        {"code": " \ndiz1 = {'a':3,\n        'b':8}\ndiz2 = dict(diz1)\ndiz1['a'] = 7\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 3], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 7, 'b': 8}\n"}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 2]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", 7], ["b", 8]], "2": ["DICT", ["a", 3], ["b", 8]]}, "stdout": "uguali? False\ndiz1= {'a': 7, 'b': 8}\ndiz2= {'a': 3, 'b': 8}\n"}]}
+    </script>
+    <div id="jm-bda125cb1095c91718daf010b44bfb02-57" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-bda125cb1095c91718daf010b44bfb02-57').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm7a7c6710-aa31-4986-b98b-db7fb9c6c281').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm7a7c6710-aa31-4986-b98b-db7fb9c6c281',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-bda125cb1095c91718daf010b44bfb02-57',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-bda125cb1095c91718daf010b44bfb02-57'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p><strong>DOMANDA</strong>: Se esegui il seguente codice in Python Tutor, cosa stamperà?</p>
 <ol class="arabic simple">
@@ -5133,51 +5119,44 @@ diz2= {&#39;a&#39;: [1, 2, 3], &#39;b&#39;: [4, 5, 6]}
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmeca0806b-f8af-49d8-97c6-83d16a55e75a" type="application/json" >
-    {"code": " \ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = dict(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2], "3": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\ndiz2= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}]}
-</script>
-<div id="jmeca0806b-f8af-49d8-97c6-83d16a55e75a" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-8b1fc9284b03bf921c2b7ce165af76c2-58" type="application/json" >
+        {"code": " \ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = dict(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1]}, "ordered_globals": ["diz1"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2], "3": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}, {"line": 9, "event": "return", "func_name": "<module>", "globals": {"diz1": ["REF", 1], "diz2": ["REF", 4]}, "ordered_globals": ["diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]], "2": ["LIST", 1, 2, 3], "3": ["LIST", 4, 5, 6], "4": ["DICT", ["a", ["REF", 2]], ["b", ["REF", 3]]]}, "stdout": "uguali? True\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\ndiz2= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}]}
+    </script>
+    <div id="jm-8b1fc9284b03bf921c2b7ce165af76c2-58" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-8b1fc9284b03bf921c2b7ce165af76c2-58').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmeca0806b-f8af-49d8-97c6-83d16a55e75a').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmeca0806b-f8af-49d8-97c6-83d16a55e75a',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-8b1fc9284b03bf921c2b7ce165af76c2-58',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-8b1fc9284b03bf921c2b7ce165af76c2-58'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p><strong>DOMANDA</strong>: Se esegui il seguente codice in Python Tutor, cosa stamperà?</p>
 <ol class="arabic simple">
@@ -5233,51 +5212,44 @@ diz2= {&#39;a&#39;: [1, 2], &#39;b&#39;: [4, 5, 6]}
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm88feaf03-3b36-40b5-ad93-3012fd8018f5" type="application/json" >
-    {"code": " \nimport copy\ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = copy.deepcopy(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1]}, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1]}, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2]}, "ordered_globals": ["copy", "diz1"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2], "4": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\ndiz2= {'a': [1, 2], 'b': [4, 5, 6]}\n"}]}
-</script>
-<div id="jm88feaf03-3b36-40b5-ad93-3012fd8018f5" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-136d6f76bba6ab1bf4fef4b8ca32150a-59" type="application/json" >
+        {"code": " \nimport copy\ndiz1 = {'a':[1,2],\n        'b':[4,5,6]}\ndiz2 = copy.deepcopy(diz1)\ndiz1['a'].append(3)\n\nprint('uguali?', diz1 == diz2)\nprint('diz1=', diz1)\nprint('diz2=', diz2)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1]}, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1]}, "ordered_globals": ["copy"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2]}, "ordered_globals": ["copy", "diz1"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2], "4": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"copy": ["REF", 1], "diz1": ["REF", 2], "diz2": ["REF", 5]}, "ordered_globals": ["copy", "diz1", "diz2"], "stack_to_render": [], "heap": {"1": ["INSTANCE", "module"], "2": ["DICT", ["a", ["REF", 3]], ["b", ["REF", 4]]], "3": ["LIST", 1, 2, 3], "4": ["LIST", 4, 5, 6], "5": ["DICT", ["a", ["REF", 6]], ["b", ["REF", 7]]], "6": ["LIST", 1, 2], "7": ["LIST", 4, 5, 6]}, "stdout": "uguali? False\ndiz1= {'a': [1, 2, 3], 'b': [4, 5, 6]}\ndiz2= {'a': [1, 2], 'b': [4, 5, 6]}\n"}]}
+    </script>
+    <div id="jm-136d6f76bba6ab1bf4fef4b8ca32150a-59" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-136d6f76bba6ab1bf4fef4b8ca32150a-59').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm88feaf03-3b36-40b5-ad93-3012fd8018f5').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm88feaf03-3b36-40b5-ad93-3012fd8018f5',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-136d6f76bba6ab1bf4fef4b8ca32150a-59',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-136d6f76bba6ab1bf4fef4b8ca32150a-59'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p><strong>DOMANDA</strong>: Guarda i seguenti frammenti di codice, e per ciascuno cerca di indovinare quale risultato produce (o se da errore):</p>
 <ol class="arabic">

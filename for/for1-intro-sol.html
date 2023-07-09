@@ -7,9 +7,10 @@
   <title>Controllo di flusso - Cicli for &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/for/for1-intro-sol.html" />
   <!--[if lt IE 9]>
@@ -23,7 +24,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.5.6.js"></script>
+        <script src="../_static/js/jupman.3.5.7.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -137,7 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---str">Stringhe - str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
 </ul>
 </li>
@@ -337,6 +338,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-le-f-strings">Formattare con le f-strings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
@@ -389,7 +391,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html">Metodi base</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Che-fare">Che fare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - upper</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---cammina">Esercizio - cammina</a></li>
 </ul>
 </li>
@@ -417,7 +419,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi isupper e islower</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---nani-e-GIGANTI">Esercizio - nani e GIGANTI</a></li>
 </ul>
 </li>
@@ -544,7 +546,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---bilancia">Esercizio - bilancia</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Replicazione-per-liste">Replicazione per liste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
@@ -591,6 +593,11 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#Esercizio---welldone">Esercizio - welldone</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-copy">Metodo copy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#copy-è-superficiale">copy è superficiale</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Funzione-deepcopy">Funzione deepcopy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -661,7 +668,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Slice">Slice</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Concatenazione">Concatenazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Appartenenza">Appartenenza</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Replicazione">Replicazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Esercizio---welcome">Esercizio - welcome</a></li>
 </ul>
 </li>
@@ -730,14 +737,12 @@
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---bababiba">Esercizio - bababiba</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#discard">discard</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---spazzatura">Esercizio - spazzatura</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issuperset">issuperset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#isdisjoint">isdisjoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -1756,11 +1761,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -2346,6 +2351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2022">Agosto 2022</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
@@ -2818,51 +2824,44 @@ Finito!
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jma5b8427f-5a4f-4f15-822e-9c2e422ae2cd" type="application/json" >
-    {"code": " \nsport = ['pallavolo', 'tennis', 'calcio', 'nuoto']\nfor elemento in sport:\n    print('Trovato un elemento!')\n    print(elemento)\n\nprint('Finito!')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1]}, "ordered_globals": ["sport"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\nFinito!\n"}]}
-</script>
-<div id="jma5b8427f-5a4f-4f15-822e-9c2e422ae2cd" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-bdd8bf33bb56c368ca38dfc527a5ddeb-7" type="application/json" >
+        {"code": " \nsport = ['pallavolo', 'tennis', 'calcio', 'nuoto']\nfor elemento in sport:\n    print('Trovato un elemento!')\n    print(elemento)\n\nprint('Finito!')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1]}, "ordered_globals": ["sport"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "pallavolo"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "tennis"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "calcio"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\n"}, {"line": 7, "event": "return", "func_name": "<module>", "globals": {"sport": ["REF", 1], "elemento": "nuoto"}, "ordered_globals": ["sport", "elemento"], "stack_to_render": [], "heap": {"1": ["LIST", "pallavolo", "tennis", "calcio", "nuoto"]}, "stdout": "Trovato un elemento!\npallavolo\nTrovato un elemento!\ntennis\nTrovato un elemento!\ncalcio\nTrovato un elemento!\nnuoto\nFinito!\n"}]}
+    </script>
+    <div id="jm-bdd8bf33bb56c368ca38dfc527a5ddeb-7" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-bdd8bf33bb56c368ca38dfc527a5ddeb-7').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jma5b8427f-5a4f-4f15-822e-9c2e422ae2cd').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jma5b8427f-5a4f-4f15-822e-9c2e422ae2cd',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-bdd8bf33bb56c368ca38dfc527a5ddeb-7',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-bdd8bf33bb56c368ca38dfc527a5ddeb-7'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <section id="Nomi-variabili-nei-for">
 <h3>Nomi variabili nei <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#Nomi-variabili-nei-for" title="Permalink to this headline"></a></h3>
@@ -2898,7 +2897,9 @@ Finito!
 </pre></div></div>
 </div>
 <p>Bisogna però fare attenzione ad una cosa:</p>
-<div class="alert alert-warning"><p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
+<div class="jupman-alert-principle"></div><div class="admonition note">
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code> <strong>, questa variabile deve essere nuova</strong></p>
+</div>
 <p>Se hai definito la variabile prima, non la reintrodurrai in un <code class="docutils literal notranslate"><span class="pre">for</span></code>, perchè ciò portebbe gran confusione.</p>
 <p>Per esempio:</p>
 <div class="nbinput docutils container">
@@ -2911,7 +2912,7 @@ Finito!
 <span class="k">for</span> <span class="n">prova</span> <span class="ow">in</span> <span class="n">sport</span><span class="p">:</span>  <span class="c1"># perdi la variabile  prova  originale</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span> <span class="c1"># stampa &#39;nuoto&#39; invece di &#39;ciao&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>         <span class="c1"># stampa &#39;nuoto&#39; invece di &#39;ciao&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -4726,7 +4727,7 @@ gruppo 3 : Eevee e Dragonite e Volcarona e Sylveon
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: se <em>mentre</em> scorriamo la lista, continuiamo al contempo ad aggiungere pezzi, c’è il rischio concreto che non termineremo mai di esaminare la lista ! Leggi bene quanto segue:</p>
-</div><div class="admonition note">
+</div><div class="jupman-alert-principle"></div><div class="admonition note">
 <p><a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza su cui stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 </div>
 <p>Abbandonarti in simil tentazioni <strong>produrrebbe comportamenti del tutto imprevedibili</strong> (conosci forse l’espressione <em>tirare il tappeto da sotto i piedi</em>?)</p>
@@ -4953,8 +4954,8 @@ gOiRbAbNoGnUeTANG
 </ul>
 <p>Prova a risolvere l’esercizio in entrambi i modi.</p>
 <div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Per entrambi i modi, ricordati il sacro</strong> <a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a></p>
-<p><strong>Non aggiungerai o toglierai mai elementi da una sequenza che stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: Per entrambi i modi, ricordati il sacro</strong></p>
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#X-COMANDAMENTO">X COMANDAMENTO</a>: <strong>Non aggiungerai o toglierai mai elementi da una sequenza che stai iterando con un</strong> <code class="docutils literal notranslate"><span class="pre">for</span></code><strong>!</strong></p>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -5177,51 +5178,44 @@ Ciclo finito !
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm736bcfe4-5162-49f5-bcc5-8c0a7ebcfa46" type="application/json" >
-    {"code": " \ni = 1\nfor x in 'lavato':    \n    if x == 'a':\n        print(\"continue, salta all'elemento successivo\")\n        continue    \n    if x == 't':\n        print('break, esce dal ciclo!')\n        break\n    print(x)    \n    \nprint('Ciclo finito !')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\n"}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\n"}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\nCiclo finito !\n"}]}
-</script>
-<div id="jm736bcfe4-5162-49f5-bcc5-8c0a7ebcfa46" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-de11a1b5725c041c9eac58a6b51b5b73-46" type="application/json" >
+        {"code": " \ni = 1\nfor x in 'lavato':    \n    if x == 'a':\n        print(\"continue, salta all'elemento successivo\")\n        continue    \n    if x == 't':\n        print('break, esce dal ciclo!')\n        break\n    print(x)    \n    \nprint('Ciclo finito !')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1}, "ordered_globals": ["i"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "l"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\n"}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "v"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\n"}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "a"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\n"}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\n"}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"i": 1, "x": "t"}, "ordered_globals": ["i", "x"], "stack_to_render": [], "heap": {}, "stdout": "l\ncontinue, salta all'elemento successivo\nv\ncontinue, salta all'elemento successivo\nbreak, esce dal ciclo!\nCiclo finito !\n"}]}
+    </script>
+    <div id="jm-de11a1b5725c041c9eac58a6b51b5b73-46" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-de11a1b5725c041c9eac58a6b51b5b73-46').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm736bcfe4-5162-49f5-bcc5-8c0a7ebcfa46').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm736bcfe4-5162-49f5-bcc5-8c0a7ebcfa46',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-de11a1b5725c041c9eac58a6b51b5b73-46',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-de11a1b5725c041c9eac58a6b51b5b73-46'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 </section>
 <section id="Domande---break-e-continue">

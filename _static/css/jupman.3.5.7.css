@@ -1,0 +1,180 @@
+
+/** AVAILABLE BOTH IN JUPYTER AND WEBSITE**/
+
+
+/* ************  PYTHON TUTOR START  *************/
+
+
+.vizLayoutTd {
+    background-color: #fff !important;
+}
+                    
+#pyStdout {
+    min-height:25px;
+}
+
+
+/* Remove 'Customize visualization'  https://github.com/DavidLeoni/jupman/issues/108 */
+#uiControlsPane {
+    display: none;
+}
+
+/* Show middle bar https://github.com/DavidLeoni/jupman/issues/110 */
+div.ui-resizable-handle.ui-resizable-e {
+    border-color: #dddddd !important;
+    border-width:2px !important; 
+}
+
+/* Hides 'Edit this code' link because replaces browser tab when clicked*/
+#editCodeLinkDiv {
+    display:none;  
+}
+
+/* misaligned arrow bug  https://github.com/DavidLeoni/jupman/issues/105 */
+#pyCodeOutputDiv td {
+    padding: 0.5em 0.5em !important;
+}
+
+
+/* fix for Python Tutor displaying set header as grey https://github.com/DavidLeoni/jupman/issues/125*/
+.ExecutionVisualizer .setTbl td {
+    background-color: #ffffc6;
+}
+
+/* START FIX 136 for Visual Studio Code showing grey fonts  
+   https://github.com/DavidLeoni/jupman/issues/136  
+*/
+#pyCodeOutputDiv tr td:nth-child(2) {
+    color : #000 !important;
+}
+
+#vizLayoutTdSecond #dataViz tr td {
+    color: #000 !important;
+}
+
+#vizLayoutTdFirst #curInstr {
+    color: #000 !important;
+}
+/* END FIX  136  ----------------------- */
+
+/* ************ PYTHON TUTOR END ***************   */
+
+
+/* ********** CUSTOM TOC IN JUPYTER  START ************* */
+
+#jupman-nav {
+    position: fixed;
+    top: 10px; 
+    left: 5px; 
+    background: white;
+    width: 200px; 
+    padding: 10px; 
+    z-index: 10;
+}
+
+/* style="background: rgba(255, 255, 255, 0);" class="unstyled" */
+
+#jupman-toc {
+    position: fixed;
+    top: 100px; 
+    left: -55px; 
+    background: rgba(255, 255, 255, 0);
+    
+    height: 80%;
+    width: 200px; 
+    padding: 20px; 
+    z-index: 10;
+    overflow-y: scroll;        
+        /* font-size: 50%; */
+}
+
+
+.jupman-nav-item {
+    font-weight:bold;
+    font-size:120%  
+}
+
+.jupman-chapter-link {
+    font-size:150%;
+    margin-right:15px;        
+}
+
+.jupman-chapter-link a {
+    text-decoration: none;
+}    
+
+.jupman-title {
+    font-size:250%; 
+    font-weight:bold        
+}    
+    
+.jupman-warn {    
+    background-color: #fcf2f2;        
+    border-left: 5px solid #dfb5b4;
+    padding: 1.5em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.jupman-question {    
+    background-color: rgb(251, 231, 250);
+    border-left: 5px solid rgb(189, 151, 184);
+    padding: 1.5em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+    
+
+.jupman-important {
+    background-color: rgba(255, 238, 0, 0.31);
+    border-left: 5px solid rgba(205, 208, 0, 1.0);
+    color: #000;        
+    padding: 1.5em;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+
+#jupman-toc ul {                                                                                                                                                                           
+    list-style-type: none;                                                                                                                                                                 
+    margin-left: 5px;
+}
+
+#jupman-toc li {        
+        padding-left: 3px;
+}    
+
+#jupman-toc .h1 {
+    font-size:110%; 
+    
+}
+
+#jupman-toc .h2 {
+    font-size:100%; 
+    padding-left:15px;
+}
+
+#jupman-toc .h3 {
+    font-size:100%; 
+    padding-left:25px;
+}
+
+
+
+#notebook-container {
+    box-shadow : none;
+-web-kit-box-shadow: none;
+}
+
+
+#jupman-toc .toc-active {
+    background: rgba(168, 254, 255, 0.32);
+}
+
+/* ********** CUSTOM TOC IN JUPYTER END ************* */
+
+
+.jupman-toggler {
+    text-decoration: none; 
+    display:block;
+}

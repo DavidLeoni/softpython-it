@@ -7,9 +7,10 @@
   <title>Insiemi &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/sets/sets1-sol.html" />
   <!--[if lt IE 9]>
@@ -23,7 +24,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.5.6.js"></script>
+        <script src="../_static/js/jupman.3.5.7.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -137,7 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---str">Stringhe - str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
 </ul>
 </li>
@@ -337,6 +338,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-le-f-strings">Formattare con le f-strings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
@@ -389,7 +391,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html">Metodi base</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Che-fare">Che fare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - upper</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---cammina">Esercizio - cammina</a></li>
 </ul>
 </li>
@@ -417,7 +419,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi isupper e islower</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---nani-e-GIGANTI">Esercizio - nani e GIGANTI</a></li>
 </ul>
 </li>
@@ -544,7 +546,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---bilancia">Esercizio - bilancia</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Replicazione-per-liste">Replicazione per liste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
@@ -591,6 +593,11 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#Esercizio---welldone">Esercizio - welldone</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-copy">Metodo copy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#copy-è-superficiale">copy è superficiale</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Funzione-deepcopy">Funzione deepcopy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -661,7 +668,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Slice">Slice</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Concatenazione">Concatenazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Appartenenza">Appartenenza</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Replicazione">Replicazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Esercizio---welcome">Esercizio - welcome</a></li>
 </ul>
 </li>
@@ -730,14 +737,12 @@
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---bababiba">Esercizio - bababiba</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#discard">discard</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Esercizio---spazzatura">Esercizio - spazzatura</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#issubset">issubset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#issubset">issubset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#issuperset">issuperset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#isdisjoint">isdisjoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Esercizio---matrioska">Esercizio - matrioska</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---matrioska">Esercizio - matrioska</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -1756,11 +1761,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -2346,6 +2351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2022">Agosto 2022</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
@@ -2755,7 +2761,7 @@ set
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;d&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;}
+{&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;d&#39;}
 </pre></div></div>
 </div>
 <p>Come vedi, l’ordine in cui è stata effettuata la stampa è diverso da quello con cui abbiamo costruito l’insieme. A seconda della versione di Python che stai usando, sul tuo computer potrebbe essere diverso ancora!!</p>
@@ -2910,7 +2916,7 @@ set
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-8476997338545103310
+8459839086718867122
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -3176,42 +3182,51 @@ lb = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
 <h2>Operatori<a class="headerlink" href="#Operatori" title="Permalink to this headline"></a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 22%" />
+<col style="width: 38%" />
 <col style="width: 15%" />
-<col style="width: 62%" />
+<col style="width: 9%" />
+<col style="width: 38%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Operatore</p></th>
+<th class="head"><p>Esempio</p></th>
 <th class="head"><p>Risultato</p></th>
 <th class="head"><p>Descrizione</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len</span></code>(set)</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#len">lunghezza</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len</span></code>(set)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
 <td><p>il numero di elementi nel set</p></td>
 </tr>
-<tr class="row-odd"><td><p>el <code class="docutils literal notranslate"><span class="pre">in</span></code> set</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Appartenenza">appartenenza</a></p></td>
+<td><p>object <code class="docutils literal notranslate"><span class="pre">in</span></code> set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>verifica se elemento è contenuto nel set</p></td>
 </tr>
-<tr class="row-even"><td><p>set | set</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Unione">unione</a></p></td>
+<td><p>set | set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
-<td><p>unione, crea un NUOVO set</p></td>
+<td><p>crea un NUOVO set</p></td>
 </tr>
-<tr class="row-odd"><td><p>set <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> set</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Intersezione">intersezione</a></p></td>
+<td><p>set <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
-<td><p>intersezione, crea un NUOVO set</p></td>
+<td><p>crea un NUOVO set</p></td>
 </tr>
-<tr class="row-even"><td><p>set <code class="docutils literal notranslate"><span class="pre">-</span></code> set</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Differenza">differenza</a></p></td>
+<td><p>set <code class="docutils literal notranslate"><span class="pre">-</span></code> set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
-<td><p>differenza, crea un NUOVO set</p></td>
+<td><p>crea un NUOVO set</p></td>
 </tr>
-<tr class="row-odd"><td><p>set <code class="docutils literal notranslate"><span class="pre">^</span></code> set</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#Differenza-simmetrica">differenza simmetrica</a></p></td>
+<td><p>set <code class="docutils literal notranslate"><span class="pre">^</span></code> set</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
-<td><p>differenza simmetrica, crea un NUOVO set</p></td>
+<td><p>crea un NUOVO set</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code>,<code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#Uguaglianza">uguaglianza</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">==</span></code>,<code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>Controlla se due insiemi sono uguali o differenti</p></td>
 </tr>
@@ -3331,7 +3346,7 @@ parola     : ababbbbcdd
 </section>
 <section id="Appartenenza">
 <h3>Appartenenza<a class="headerlink" href="#Appartenenza" title="Permalink to this headline"></a></h3>
-<p>Come per tutte le sequenze, se vogliamo verificare se un elemento è contenuto in un insieme possiamo usare l’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code> che ci ritorna un valore booleano:</p>
+<p>Come per tutte le sequenze, se vogliamo verificare se un elemento <em>immutabile</em> è contenuto in un insieme possiamo usare l’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code> che ci ritorna un valore booleano:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
@@ -3371,6 +3386,66 @@ False
 <p>La velocità dell’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code> NON dipende dalla dimensione dell’insieme</p>
 </div>
 <p>Questo è una differenza sostanziale rispetto alle altre sequenze già viste: se provi a cercare un elemento con <code class="docutils literal notranslate"><span class="pre">in</span></code> su stringhe, liste o tuple, Python potrebbe dover scorrere <em>tutta</em> la lista se per sfortuna l’elemento da cercare è alla fine (o non c’è proprio).</p>
+<section id="Cosa-possiamo-cercare?">
+<h4>Cosa possiamo cercare?<a class="headerlink" href="#Cosa-possiamo-cercare?" title="Permalink to this headline"></a></h4>
+<p>Il prezzo da pagare per avere una ricerca veloce è che possiamo cercare solo elementi <em>immutabili</em>. Prima di effettuare la ricerca Python prova a ricavare un etichetta <em>hash</em> dall’oggetto cercato: se ci riesce procede con la ricerca, altrimenti si offende lanciando un’eccezione. Per esempio, se proviamo a cercare un elemento mutabile come una lista, Python si rifiuterà:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;lattuga&quot;</span><span class="p">,</span> <span class="s2">&quot;rucola&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span> <span class="p">(</span><span class="s2">&quot;cavoli&quot;</span><span class="p">,</span> <span class="s2">&quot;verze&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;lattuga&quot;</span><span class="p">,</span> <span class="s2">&quot;rucola&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;rapanelli&quot;</span><span class="p">,</span> <span class="s2">&quot;zucchine&quot;</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_22984</span><span class="o">/</span><span class="mf">2823749418.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="p">[</span><span class="s2">&quot;lattuga&quot;</span><span class="p">,</span> <span class="s2">&quot;rucola&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span> <span class="p">(</span><span class="s2">&quot;cavoli&quot;</span><span class="p">,</span> <span class="s2">&quot;verze&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;lattuga&quot;</span><span class="p">,</span> <span class="s2">&quot;rucola&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;rapanelli&quot;</span><span class="p">,</span> <span class="s2">&quot;zucchine&quot;</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unhashable</span> <span class="nb">type</span><span class="p">:</span> <span class="s1">&#39;list&#39;</span>
+</pre></div>
+</div>
+<p><strong>DOMANDA</strong>: Che risultato produce questo codice?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;rucola&quot;</span><span class="p">,</span> <span class="s2">&quot;rapanelli&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="p">{</span> <span class="p">(</span><span class="s2">&quot;cavoli&quot;</span><span class="p">,</span> <span class="s2">&quot;verze&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;lattuga&quot;</span><span class="p">,</span> <span class="s2">&quot;rucola&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;rapanelli&quot;</span><span class="p">,</span> <span class="s2">&quot;zucchine&quot;</span><span class="p">)</span> <span class="p">}</span>
+</pre></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: l’insieme di destra viene creato correttamente perchè contiene solo tuple che sono sequenze immutabili. Dopodichè con l’operatore <code class="docutils literal notranslate"><span class="pre">in</span></code> chiediamo a Python di verificare se la tupla <code class="docutils literal notranslate"><span class="pre">(&quot;rucola&quot;,</span> <span class="pre">&quot;rapanelli&quot;)</span></code> è un elemento dell’insieme. Stiamo cercando una tupla che è sequenza immutabile, quindi Python riesce a calcolarne l’etichetta <em>hash</em> e pertanto la ricerca viene compiuta senza errori. Visto che la tupla non è presente nell’insieme, viene prodotto il risultato <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div><p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
+<ol class="arabic">
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;four&#39;</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;aa&#39;</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;aa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">},</span> <span class="mi">6</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span> <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="ow">in</span> <span class="p">{</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;3.4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="p">{(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">)}</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">}</span> <span class="ow">in</span> <span class="p">[{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">}]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
 <section id="not-in">
 <h4>not in<a class="headerlink" href="#not-in" title="Permalink to this headline"></a></h4>
 <p>Per verificare se qualcosa <strong>non</strong> appartiene ad una sequenza, possiamo usare due forme:</p>
@@ -3446,34 +3521,6 @@ False
 </div>
 <p><strong>DOMANDA</strong>: Guarda le seguenti espressioni, e per ciascuna cerca di indovinare quale risultato producono (o se danno errore):</p>
 <ol class="arabic">
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">}</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;four&#39;</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">}</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;aa&#39;</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;aa&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">},</span> <span class="mi">6</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span> <span class="p">]</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="ow">in</span> <span class="p">{</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;3.4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))}</span>
-</pre></div>
-</div>
-</li>
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -3695,7 +3742,7 @@ False
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;c&#39;, &#39;d&#39;, &#39;g&#39;, &#39;a&#39;, &#39;e&#39;}
+{&#39;e&#39;, &#39;a&#39;, &#39;d&#39;, &#39;c&#39;, &#39;g&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
@@ -4311,51 +4358,44 @@ False
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmfcbf03da-e2b0-44e8-bd9f-242663b7668a" type="application/json" >
-    {"code": " \nsa = {'g','a','r','a'}\nla = ['a','g','r','a','r','i','o']\nsb = sa.union(la)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1]}, "ordered_globals": ["sa"], "stack_to_render": [], "heap": {"1": ["SET", "g", "a", "r"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2]}, "ordered_globals": ["sa", "la"], "stack_to_render": [], "heap": {"1": ["SET", "g", "a", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "sb": ["REF", 3]}, "ordered_globals": ["sa", "la", "sb"], "stack_to_render": [], "heap": {"1": ["SET", "g", "a", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"], "3": ["SET", "r", "g", "i", "a", "o"]}, "stdout": ""}]}
-</script>
-<div id="jmfcbf03da-e2b0-44e8-bd9f-242663b7668a" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-70cca389e479c626cd06a9fa16aa8d7e-48" type="application/json" >
+        {"code": " \nsa = {'g','a','r','a'}\nla = ['a','g','r','a','r','i','o']\nsb = sa.union(la)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1]}, "ordered_globals": ["sa"], "stack_to_render": [], "heap": {"1": ["SET", "g", "r", "a"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2]}, "ordered_globals": ["sa", "la"], "stack_to_render": [], "heap": {"1": ["SET", "g", "r", "a"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "sb": ["REF", 3]}, "ordered_globals": ["sa", "la", "sb"], "stack_to_render": [], "heap": {"1": ["SET", "g", "r", "a"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"], "3": ["SET", "a", "o", "i", "g", "r"]}, "stdout": ""}]}
+    </script>
+    <div id="jm-70cca389e479c626cd06a9fa16aa8d7e-48" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-70cca389e479c626cd06a9fa16aa8d7e-48').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmfcbf03da-e2b0-44e8-bd9f-242663b7668a').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmfcbf03da-e2b0-44e8-bd9f-242663b7668a',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-70cca389e479c626cd06a9fa16aa8d7e-48',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-70cca389e479c626cd06a9fa16aa8d7e-48'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 </section>
 <section id="update">
@@ -4398,7 +4438,7 @@ False
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;r&#39;, &#39;g&#39;, &#39;i&#39;, &#39;a&#39;, &#39;o&#39;}
+{&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;g&#39;, &#39;r&#39;}
 </pre></div></div>
 </div>
 <p><strong>DOMANDA</strong>: che cosa ha ritornato la chiamata ad <code class="docutils literal notranslate"><span class="pre">update</span></code>?</p>
@@ -4425,7 +4465,7 @@ False
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;r&#39;, &#39;g&#39;, &#39;i&#39;, &#39;a&#39;, &#39;o&#39;}
+{&#39;a&#39;, &#39;o&#39;, &#39;i&#39;, &#39;g&#39;, &#39;r&#39;}
 None
 </pre></div></div>
 </div>
@@ -4434,51 +4474,44 @@ None
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm439ed089-5dab-4ba6-a20e-7e4b78d87d76" type="application/json" >
-    {"code": " \nsa = {'g','a','r','a'}\nla = ['a','g','r','a','r','i','o']\nx = sa.update(la)\nprint(sa)\nprint(x)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1]}, "ordered_globals": ["sa"], "stack_to_render": [], "heap": {"1": ["SET", "g", "a", "r"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2]}, "ordered_globals": ["sa", "la"], "stack_to_render": [], "heap": {"1": ["SET", "g", "a", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "r", "g", "i", "a", "o"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "r", "g", "i", "a", "o"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": "{'r', 'g', 'i', 'a', 'o'}\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "r", "g", "i", "a", "o"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": "{'r', 'g', 'i', 'a', 'o'}\nNone\n"}]}
-</script>
-<div id="jm439ed089-5dab-4ba6-a20e-7e4b78d87d76" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-707a2f22c6a156324d969586b3f56170-53" type="application/json" >
+        {"code": " \nsa = {'g','a','r','a'}\nla = ['a','g','r','a','r','i','o']\nx = sa.update(la)\nprint(sa)\nprint(x)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1]}, "ordered_globals": ["sa"], "stack_to_render": [], "heap": {"1": ["SET", "g", "r", "a"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2]}, "ordered_globals": ["sa", "la"], "stack_to_render": [], "heap": {"1": ["SET", "g", "r", "a"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "a", "o", "i", "g", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "a", "o", "i", "g", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": "{'a', 'o', 'i', 'g', 'r'}\n"}, {"line": 6, "event": "return", "func_name": "<module>", "globals": {"sa": ["REF", 1], "la": ["REF", 2], "x": null}, "ordered_globals": ["sa", "la", "x"], "stack_to_render": [], "heap": {"1": ["SET", "a", "o", "i", "g", "r"], "2": ["LIST", "a", "g", "r", "a", "r", "i", "o"]}, "stdout": "{'a', 'o', 'i', 'g', 'r'}\nNone\n"}]}
+    </script>
+    <div id="jm-707a2f22c6a156324d969586b3f56170-53" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-707a2f22c6a156324d969586b3f56170-53').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm439ed089-5dab-4ba6-a20e-7e4b78d87d76').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm439ed089-5dab-4ba6-a20e-7e4b78d87d76',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-707a2f22c6a156324d969586b3f56170-53',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-707a2f22c6a156324d969586b3f56170-53'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p><strong>DOMANDA</strong>: Guarda i seguenti pezzi di codice, e per ciascuno cerca di indovinare quale risultato producono (o se danno errore):</p>
 <ol class="arabic">
@@ -4563,7 +4596,7 @@ None
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;e&#39;, &#39;c&#39;, &#39;d&#39;, &#39;g&#39;, &#39;a&#39;}
+{&#39;e&#39;, &#39;a&#39;, &#39;d&#39;, &#39;c&#39;, &#39;g&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
@@ -4595,35 +4628,35 @@ None
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set.add(el)</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#add">set.add(el)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 <td><p>aggiunge l’elemento specificato - se già presente non fa nulla)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">set.remove(el)</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#remove">set.remove(el)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 <td><p>rimuove l’elemento specificato - se non presente solleva errore</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set.discard(el)</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#discard">set.discard(el)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 <td><p>rimuove l’elemento specificato - se non presente non fa nulla</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">set.pop()</span></code></p></td>
-<td><p>obj</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
 <td><p>rimuove un elemento arbitrario dall’insieme e lo ritorna</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set.clear()</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 <td><p>rimuove tutti gli elementi</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setA.issubset(setB</span></code>)</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#issubset">setA.issubset(setB)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>verifica se <code class="docutils literal notranslate"><span class="pre">setA</span></code> è un sottoinsieme di <code class="docutils literal notranslate"><span class="pre">setB</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setA.issuperset(setB</span></code>)</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="#issuperset">setA.issuperset(setB)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>verifica se <code class="docutils literal notranslate"><span class="pre">setA</span></code> contiene tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">setB</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setA.isdisjoint(setB</span></code>)</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="#isdisjoint">setA.isdisjoint(setB)</a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 <td><p>verifica se <code class="docutils literal notranslate"><span class="pre">setA</span></code> non ha elementi in comune con <code class="docutils literal notranslate"><span class="pre">setB</span></code></p></td>
 </tr>
@@ -4744,51 +4777,44 @@ None
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jm66e9abf3-d17d-4a7b-bd9c-77d7f97910f8" type="application/json" >
-    {"code": " \nx = {'a','b'}\ny = set(x)\nx.add('c')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": ["REF", 1]}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {"1": ["SET", "b", "a"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {"1": ["SET", "b", "a"], "2": ["SET", "b", "a"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {"1": ["SET", "b", "c", "a"], "2": ["SET", "b", "a"]}, "stdout": ""}]}
-</script>
-<div id="jm66e9abf3-d17d-4a7b-bd9c-77d7f97910f8" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-ada3b8aa99a3517eae68e8c5e733896e-60" type="application/json" >
+        {"code": " \nx = {'a','b'}\ny = set(x)\nx.add('c')", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "<module>", "globals": {"x": ["REF", 1]}, "ordered_globals": ["x"], "stack_to_render": [], "heap": {"1": ["SET", "b", "a"]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "<module>", "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {"1": ["SET", "b", "a"], "2": ["SET", "b", "a"]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "<module>", "globals": {"x": ["REF", 1], "y": ["REF", 2]}, "ordered_globals": ["x", "y"], "stack_to_render": [], "heap": {"1": ["SET", "c", "b", "a"], "2": ["SET", "b", "a"]}, "stdout": ""}]}
+    </script>
+    <div id="jm-ada3b8aa99a3517eae68e8c5e733896e-60" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-ada3b8aa99a3517eae68e8c5e733896e-60').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jm66e9abf3-d17d-4a7b-bd9c-77d7f97910f8').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jm66e9abf3-d17d-4a7b-bd9c-77d7f97910f8',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-ada3b8aa99a3517eae68e8c5e733896e-60',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-ada3b8aa99a3517eae68e8c5e733896e-60'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 </section>
 <section id="remove">
@@ -4913,7 +4939,7 @@ None
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{(&#39;b&#39;, &#39;a&#39;), (&#39;b&#39;, &#39;i&#39;)}
+{(&#39;b&#39;, &#39;i&#39;), (&#39;b&#39;, &#39;a&#39;)}
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
@@ -5076,12 +5102,12 @@ Contaminanti separati: {&#39;alcheni&#39;, &#39;mercurio&#39;}
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-spazzatura iniziale: {&#39;alcheni&#39;, &#39;mercurio&#39;, &#39;verdura&#39;, &#39;carta&#39;}
-Applico filtro per cadmio : {&#39;alcheni&#39;, &#39;mercurio&#39;, &#39;verdura&#39;, &#39;carta&#39;}
-Applico filtro per mercurio : {&#39;alcheni&#39;, &#39;verdura&#39;, &#39;carta&#39;}
-Applico filtro per alcheni : {&#39;verdura&#39;, &#39;carta&#39;}
+spazzatura iniziale: {&#39;alcheni&#39;, &#39;carta&#39;, &#39;verdura&#39;, &#39;mercurio&#39;}
+Applico filtro per cadmio : {&#39;alcheni&#39;, &#39;carta&#39;, &#39;verdura&#39;, &#39;mercurio&#39;}
+Applico filtro per mercurio : {&#39;alcheni&#39;, &#39;carta&#39;, &#39;verdura&#39;}
+Applico filtro per alcheni : {&#39;carta&#39;, &#39;verdura&#39;}
 
-Contaminanti separati: {&#39;alcheni&#39;, &#39;mercurio&#39;}
+Contaminanti separati: {&#39;mercurio&#39;, &#39;alcheni&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput nblast docutils container">
@@ -5097,9 +5123,8 @@ Contaminanti separati: {&#39;alcheni&#39;, &#39;mercurio&#39;}
 </div>
 </div>
 </section>
-</section>
 <section id="issubset">
-<h2>issubset<a class="headerlink" href="#issubset" title="Permalink to this headline"></a></h2>
+<h3>issubset<a class="headerlink" href="#issubset" title="Permalink to this headline"></a></h3>
 <p>Per verificare se tutti gli elementi di un insieme <code class="docutils literal notranslate"><span class="pre">sa</span></code> sono contenuti in un altro insieme <code class="docutils literal notranslate"><span class="pre">sb</span></code> possiamo scrivere <code class="docutils literal notranslate"><span class="pre">sa.issubset(sb)</span></code>. Esempi:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
@@ -5155,6 +5180,7 @@ False
 True
 </pre></div></div>
 </div>
+</section>
 <section id="issuperset">
 <h3>issuperset<a class="headerlink" href="#issuperset" title="Permalink to this headline"></a></h3>
 <p>Per verificare se un insieme <code class="docutils literal notranslate"><span class="pre">sa</span></code>contiene tutti gli elementi di un altro insieme <code class="docutils literal notranslate"><span class="pre">sb</span></code> possiamo scrivere <code class="docutils literal notranslate"><span class="pre">sa.issuperset(sb)</span></code>. Esempi:</p>
@@ -5291,9 +5317,8 @@ False
 <p>Per questo e per tanti altri metodi l’insieme vuoto causa spesso comportamenti non sempre intuitivi, quindi ti invitiamo sempre a provare caso per caso.</p>
 </div>
 </div></section>
-</section>
 <section id="Esercizio---matrioska">
-<h2>Esercizio - matrioska<a class="headerlink" href="#Esercizio---matrioska" title="Permalink to this headline"></a></h2>
+<h3>Esercizio - matrioska<a class="headerlink" href="#Esercizio---matrioska" title="Permalink to this headline"></a></h3>
 <p>✪✪ Data una lista <code class="docutils literal notranslate"><span class="pre">insiemi</span></code> di esattamente 4 insiemi, la definiamo <em>a matrioska</em> se ogni insieme contiene tutti gli elementi del precedente insieme (più eventualmente altri). Scrivi del codice che STAMPA <code class="docutils literal notranslate"><span class="pre">True</span></code> se la sequenza è a matrioska, altrimenti STAMPA <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <ul class="simple">
 <li><p><strong>NON</strong> usare <code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
@@ -5378,6 +5403,7 @@ La sequenza è a matrioska? True
 <br/><br/></pre></div>
 </div>
 </div>
+</section>
 </section>
 <section id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>

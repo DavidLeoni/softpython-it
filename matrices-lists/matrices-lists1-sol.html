@@ -7,9 +7,10 @@
   <title>Matrici - Liste di liste 1 - Introduzione &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.6.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.5.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/jupman-web.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://it.softpython.org/matrices-lists/matrices-lists1-sol.html" />
   <!--[if lt IE 9]>
@@ -23,7 +24,7 @@
         <script src="../_static/js/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="../_static/js/mathjax/tex-mml-chtml.js"></script>
-        <script src="../_static/js/jupman.3.5.6.js"></script>
+        <script src="../_static/js/jupman.3.5.7.js"></script>
         <script src="../_static/js/pytutor-embed.bundle.min.js"></script>
         <script src="../_static/js/softpython.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -137,7 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Non-solo-True-e-False">Non solo True e False</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---string">Stringhe - string</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Stringhe---str">Stringhe - str</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../quick-intro/quick-intro-sol.html#Usare-metodi-degli-oggetti">Usare metodi degli oggetti</a></li>
 </ul>
 </li>
@@ -337,6 +338,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Conversioni---da-numero-a-stringa">Conversioni - da numero a stringa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-stringhe">Formattare stringhe</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-%">Formattare con <code class="docutils literal notranslate"><span class="pre">%</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Formattare-con-le-f-strings">Formattare con le f-strings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings1-sol.html#Esercizio---supercar">Esercizio - supercar</a></li>
 </ul>
 </li>
@@ -389,7 +391,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../strings/strings3-sol.html">Metodi base</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Che-fare">Che fare</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - <code class="docutils literal notranslate"><span class="pre">upper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Esempio---upper">Esempio - upper</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---cammina">Esercizio - cammina</a></li>
 </ul>
 </li>
@@ -417,7 +419,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---Vendere-numeri">Esercizio - Vendere numeri</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi <code class="docutils literal notranslate"><span class="pre">isupper</span></code> e <code class="docutils literal notranslate"><span class="pre">islower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings3-sol.html#Metodi-isupper-e-islower">Metodi isupper e islower</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings3-sol.html#Esercizio---nani-e-GIGANTI">Esercizio - nani e GIGANTI</a></li>
 </ul>
 </li>
@@ -544,7 +546,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---bilancia">Esercizio - bilancia</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Moltiplicazione-per-liste">Moltiplicazione per liste</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Replicazione-per-liste">Replicazione per liste</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Uguaglianza">Uguaglianza</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Prosegui">Prosegui</a></li>
 </ul>
@@ -591,6 +593,11 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#Esercizio---welldone">Esercizio - welldone</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Metodo-copy">Metodo copy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../lists/lists3-sol.html#copy-è-superficiale">copy è superficiale</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Funzione-deepcopy">Funzione deepcopy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../lists/lists3-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -661,7 +668,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Slice">Slice</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Concatenazione">Concatenazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Appartenenza">Appartenenza</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Moltiplicazione">Moltiplicazione</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Replicazione">Replicazione</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../tuples/tuples1-sol.html#Esercizio---welcome">Esercizio - welcome</a></li>
 </ul>
 </li>
@@ -730,14 +737,12 @@
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---bababiba">Esercizio - bababiba</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#discard">discard</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---spazzatura">Esercizio - spazzatura</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issubset">issubset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#issuperset">issuperset</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#isdisjoint">isdisjoint</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Esercizio---matrioska">Esercizio - matrioska</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../sets/sets1-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
@@ -1756,11 +1761,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../formats/formats4-chal.html">Challenge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Cure-termali">1. Cure termali</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Personaggi-storici-del-Trentino">2. Personaggi storici del Trentino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.1-Il-primo-parsing">2.1 Il primo parsing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.2-Scrittura-output">2.2 Scrittura output</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.3-Il-secolo">2.3 Il secolo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.4-Controlla">2.4 Controlla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#Personaggi-storici-del-Trentino">Personaggi storici del Trentino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#1.-Il-primo-parsing">1. Il primo parsing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#2.-Scrittura-output">2. Scrittura output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#3.-Il-secolo">3. Il secolo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../formats/formats4-chal.html#4.-Controlla">4. Controlla</a></li>
 </ul>
 </li>
 </ul>
@@ -2346,6 +2351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../thanks.html">Ringraziamenti</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../changelog.html">Revisioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2022">Agosto 2022</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Agosto-2021">Agosto 2021</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Maggio-2021---Altre-challenge">Maggio 2021 - Altre challenge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../changelog.html#Marzo-2021---6.0---Challenge-per-Fondamenti">Marzo 2021 - 6.0 - Challenge per Fondamenti</a></li>
@@ -2693,8 +2699,8 @@ div.rendered_html tbody tr:hover {
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE</strong></p>
 <p>Gli esercizi che seguono contengono dei test con gli <em>assert</em>. Per capire come svolgerli, leggi prima <a class="reference external" href="https://it.softpython.org/errors-and-testing/errors-and-testing-sol.html">Gestione errori e testing</a></p>
 </div>
-<p>Ci sono sostanzialmente due modi in Python di rappresentare matrici: come liste di liste, oppure con la libreria esterna <a class="reference external" href="https://www.numpy.org">numpy</a>. La più usata è sicuramente numpy ma noi le tratteremo comunque in entrambi i modi. Vediamo il motivo e le principali differenze:</p>
-<p>Liste di liste - esercizi in questo foglio:</p>
+<p>Ci sono sostanzialmente due modi in Python di rappresentare matrici: come liste di liste, oppure con la libreria esterna <a class="reference external" href="https://www.numpy.org">numpy</a>. La più usata è sicuramente numpy ma noi tratteremo comunque entrambi i modi. Vediamo il motivo e le principali differenze:</p>
+<p><strong>Liste di liste</strong> - esercizi in questo foglio:</p>
 <ol class="arabic simple">
 <li><p>native in Python</p></li>
 <li><p>non efficienti</p></li>
@@ -2702,7 +2708,7 @@ div.rendered_html tbody tr:hover {
 <li><p>forniscono un’idea di come costruire una struttura dati annidata</p></li>
 <li><p>possono servire per comprendere concetti importanti come puntatori alla memoria e copie</p></li>
 </ol>
-<p>Numpy - vedere foglio separato <a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy-sol.html">Matrici Numpy</a>:</p>
+<p><strong>Numpy</strong> - vedere foglio separato <a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy-sol.html">Matrici Numpy</a>:</p>
 <ol class="arabic simple">
 <li><p>non nativamente disponibile in Python</p></li>
 <li><p>efficiente</p></li>
@@ -2995,51 +3001,44 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmbb0143dd-6875-4e2b-9f6a-6d4cd1df6f40" type="application/json" >
-    {"code": " \ndef esrigap(mat, i):\n    \"\"\" RITORNA la riga i-esima da mat\n    \"\"\"\n    return mat[i]\n\nm = [\n      ['a','b'],\n      ['c','d'],\n      ['a','e'] \n    ]\nriga = esrigap(m, 0)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 2, "event": "call", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "__return__": ["REF", 3]}, "ordered_varnames": ["mat", "i", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 3]}, "ordered_globals": ["esrigap", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}]}
-</script>
-<div id="jmbb0143dd-6875-4e2b-9f6a-6d4cd1df6f40" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-1c877924fd8327b394556b7614768c33-14" type="application/json" >
+        {"code": " \ndef esrigap(mat, i):\n    \"\"\" RITORNA la riga i-esima da mat\n    \"\"\"\n    return mat[i]\n\nm = [\n      ['a','b'],\n      ['c','d'],\n      ['a','e'] \n    ]\nriga = esrigap(m, 0)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 2, "event": "call", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "__return__": ["REF", 3]}, "ordered_varnames": ["mat", "i", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 3]}, "ordered_globals": ["esrigap", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}]}
+    </script>
+    <div id="jm-1c877924fd8327b394556b7614768c33-14" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-1c877924fd8327b394556b7614768c33-14').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmbb0143dd-6875-4e2b-9f6a-6d4cd1df6f40').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmbb0143dd-6875-4e2b-9f6a-6d4cd1df6f40',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-1c877924fd8327b394556b7614768c33-14',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-1c877924fd8327b394556b7614768c33-14'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 </section>
 </section>
@@ -3074,51 +3073,44 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmeea269c5-8b97-498f-b994-034ad12ee87c" type="application/json" >
-    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO!!!!\n\ndef esriga_sbagliata(mat, i):\n    \"\"\" RITORNA la i-esima riga da mat. NOTA: la riga DEVE essere in una NUOVA lista ! \"\"\"\n    \n    riga = []\n    riga.append(mat[i])  \n    return riga\n    \nm = [ ['a','b'],\n      ['c','d'],\n      ['a','e'] ]\nriga = esriga_sbagliata(m,0)", "trace": [{"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 13, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6], "__return__": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "return", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 6]}, "ordered_globals": ["esriga_sbagliata", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}, "stdout": ""}]}
-</script>
-<div id="jmeea269c5-8b97-498f-b994-034ad12ee87c" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-3186f80fe34607d4b191c8e2fa96e407-15" type="application/json" >
+        {"code": " \n# ATTENZIONE: CODICE SBAGLIATO!!!!\n\ndef esriga_sbagliata(mat, i):\n    \"\"\" RITORNA la i-esima riga da mat. NOTA: la riga DEVE essere in una NUOVA lista ! \"\"\"\n    \n    riga = []\n    riga.append(mat[i])  \n    return riga\n    \nm = [ ['a','b'],\n      ['c','d'],\n      ['a','e'] ]\nriga = esriga_sbagliata(m,0)", "trace": [{"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 13, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6], "__return__": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "return", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 6]}, "ordered_globals": ["esriga_sbagliata", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}, "stdout": ""}]}
+    </script>
+    <div id="jm-3186f80fe34607d4b191c8e2fa96e407-15" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-3186f80fe34607d4b191c8e2fa96e407-15').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmeea269c5-8b97-498f-b994-034ad12ee87c').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmeea269c5-8b97-498f-b994-034ad12ee87c',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-3186f80fe34607d4b191c8e2fa96e407-15',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-3186f80fe34607d4b191c8e2fa96e407-15'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3677,51 +3669,44 @@ range(0, 5)
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmd4e77f55-32c6-4be0-988c-aab4c60cd2fc" type="application/json" >
-    {"code": " \nbad = [[0]*3]*5", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"bad": ["REF", 1]}, "ordered_globals": ["bad"], "stack_to_render": [], "heap": {"1": ["LIST", ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2]], "2": ["LIST", 0, 0, 0]}, "stdout": ""}]}
-</script>
-<div id="jmd4e77f55-32c6-4be0-988c-aab4c60cd2fc" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-aef3cd8340f06d04517ffaac41b8dda5-27" type="application/json" >
+        {"code": " \nbad = [[0]*3]*5", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"bad": ["REF", 1]}, "ordered_globals": ["bad"], "stack_to_render": [], "heap": {"1": ["LIST", ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2]], "2": ["LIST", 0, 0, 0]}, "stdout": ""}]}
+    </script>
+    <div id="jm-aef3cd8340f06d04517ffaac41b8dda5-27" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-aef3cd8340f06d04517ffaac41b8dda5-27').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmd4e77f55-32c6-4be0-988c-aab4c60cd2fc').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmd4e77f55-32c6-4be0-988c-aab4c60cd2fc',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-aef3cd8340f06d04517ffaac41b8dda5-27',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-aef3cd8340f06d04517ffaac41b8dda5-27'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p>Se guardi da vicino, noterai parecchie frecce che puntano alla stessa lista di 3 zeri. Questo significa che se cambiamo un numero, apparentemente cambieremo 5 di loro nell’intera colonna !</p>
 <p>Il modo giusto di creare una matrice come lista di liste con zeri è il seguente:</p>
@@ -3826,51 +3811,44 @@ range(0, 5)
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
-<script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
+    <script src="../_static/js/pytutor-embed.bundle.min.js" type="application/javascript"></script>
 
-<script id="json-jmca3580bc-3112-4053-b862-6bd1a4a419ac" type="application/json" >
-    {"code": " \n# ATTENZIONE: CODICE SBAGLIATO:\ndef deep_clone_sbagliato(mat):\n    \"\"\" RITORNA una NUOVA lista di liste che un DEEP CLONE  di mat (che \u00e8 una lista di liste)\n    \"\"\"\n    return mat[:] \n\nm = [ ['a','b'],\n      ['b','d'] ]       \n        \nres = deep_clone_sbagliato(m)", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "__return__": ["REF", 5]}, "ordered_varnames": ["mat", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2], "res": ["REF", 5]}, "ordered_globals": ["deep_clone_sbagliato", "m", "res"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}, "stdout": ""}]}
-</script>
-<div id="jmca3580bc-3112-4053-b862-6bd1a4a419ac" class="pytutorVisualizer"> </div>
+    <style>
+    @import "../_static/css/jupman.css";
+    </style>
 
-<style>
-.vizLayoutTd {
-    background-color: #fff !important;
-}
+    <script id="json-jm-a7c997a72a985de85856afdd4c22e17b-30" type="application/json" >
+        {"code": " \n# ATTENZIONE: CODICE SBAGLIATO:\ndef deep_clone_sbagliato(mat):\n    \"\"\" RITORNA una NUOVA lista di liste che un DEEP CLONE  di mat (che \u00e8 una lista di liste)\n    \"\"\"\n    return mat[:] \n\nm = [ ['a','b'],\n      ['b','d'] ]       \n        \nres = deep_clone_sbagliato(m)", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "__return__": ["REF", 5]}, "ordered_varnames": ["mat", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2], "res": ["REF", 5]}, "ordered_globals": ["deep_clone_sbagliato", "m", "res"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}, "stdout": ""}]}
+    </script>
+    <div id="jm-a7c997a72a985de85856afdd4c22e17b-30" class="pytutorVisualizer"> </div>
 
-#pyStdout {
-    min-height:25px;
-}
+    <script>
 
-/* 'Edit this code' link, hiding because replaces browser tab !!!*/
-#editCodeLinkDiv {
-    display:none;
-}
-</style>
+    (function(){
+        console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-<script>
-(function(){
+        var trace = JSON.parse(document.getElementById('json-jm-a7c997a72a985de85856afdd4c22e17b-30').innerHTML);
+        // NOTE: id without #
 
-    var trace = JSON.parse(document.getElementById('json-jmca3580bc-3112-4053-b862-6bd1a4a419ac').innerHTML);
-    // NOTE 1: id without #
-    // NOTE 2 - maybe there are more predictable ways, but this will work anyway
-    //        - id should be number
-    visualizerIdOverride = Math.trunc(Math.random() * 100000000000)
-    addVisualizerToPage(trace, 'jmca3580bc-3112-4053-b862-6bd1a4a419ac',{'embeddedMode' : false,
-                                     'visualizerIdOverride':visualizerIdOverride})
+        addVisualizerToPage(trace, 'jm-a7c997a72a985de85856afdd4c22e17b-30',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
+                                         'visualizerIdOverride':'viz-jm-a7c997a72a985de85856afdd4c22e17b-30'})
 
 
-    // set overflow for pytuts - need to do in python as css
-    // does not allow parent selection
-    var pytuts = $('.pytutorVisualizer')
-    pytuts.closest('div.output_html.rendered_html.output_result')
-            .css('overflow-x', 'visible')
+        // set overflow for pytuts - need to do in python as css
+        // does not allow parent selection
+        var pytuts = $('.pytutorVisualizer')
+        pytuts.closest('div.output_html.rendered_html.output_result')
+                .css('overflow-x', 'visible')
 
-    //pytuts.closest('div.output_html.rendered_html.output_result')
-    //      .css('background-color','red')
+        //pytuts.closest('div.output_html.rendered_html.output_result')
+        //      .css('background-color','red')
 
-})()
-</script></div>
+    })()
+    </script>
+
+
+<div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -3880,6 +3858,7 @@ range(0, 5)
 <section id="Esercizio---deep_clone">
 <h3>Esercizio - deep_clone<a class="headerlink" href="#Esercizio---deep_clone" title="Permalink to this headline"></a></h3>
 <p>✪✪ Implementa <code class="docutils literal notranslate"><span class="pre">deep_clone</span></code>, che RITORNA una NUOVA lista come un DEEP CLONE completo di <code class="docutils literal notranslate"><span class="pre">mat</span></code> (che è una lista di liste)</p>
+<p><strong>NOTA</strong>: L’esercizio si può risolvere molto velocemente usando la funzione <a class="reference external" href="https://it.softpython.org/lists/lists3-sol.html#Funzione-deepcopy">deepcopy</a>, ma ti invitiamo a provare a risolverlo senza.</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
