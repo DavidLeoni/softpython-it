@@ -2955,7 +2955,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
                                                     non è triangolare superiore
 </pre></div>
 </div>
-<div class="admonition note">
+<div class="jupman-alert-principle"></div><div class="admonition note">
 <p><a class="reference external" href="https://it.softpython.org/commandments.html#VII-COMANDAMENTO">VII COMANDAMENTO</a>: <strong>Scriverai anche su carta!</strong></p>
 </div>
 <p>Quando sviluppi questi algoritmi, è fondamentale scrivere un esempio passo passo come quello sopra per avere un’idea chiara di cosa sta succedendo. Inoltre, se scrivi giù gli indici correttamente, sarai facilmente in grado di derivare una generalizzazione. Per trovarla, prova a scrivere ulteriormente gli indici trovati in una tabella.</p>
@@ -2997,7 +2997,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <p><strong>SUGGERIMENTO 1</strong>: ricorda che puoi consentire a range di partire da un indice specifico, come <code class="docutils literal notranslate"><span class="pre">range(3,7)</span></code> che partirà da 3 e finira a 6 <em>incluso</em> (l’ultimo 7 è <em>escluso</em>).</p>
 <p><strong>SUGGERIMENTO 2</strong>: Per implementare questo, è meglio guardare a numeri <em>diversi</em> da zero. Appena ne trovi uno, puoi fermare la funzione e ritornare False. Solo dopo che <em>tutto</em> il controllo dei numeri è fatto puoi ritornare <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 <p>Infine, ricordati di questo:</p>
-<div class="admonition note">
+<div class="jupman-alert-principle"></div><div class="admonition note">
 <p><a class="reference external" href="https://it.softpython.org/commandments.html#II-COMANDAMENTO">II COMANDAMENTO</a>: <strong>Quando inserisci una variabile in un ciclo for, questa variabile deve essere nuova</strong></p>
 </div>
 <p>✪✪✪ <strong>ESERCIZIO</strong>: Se hai letto <em>tutto</em> quanto sopra, comincia ad implementare la funzione <code class="docutils literal notranslate"><span class="pre">is_utriang</span></code>, che RITORNA <code class="docutils literal notranslate"><span class="pre">True</span></code> se la matrice <code class="docutils literal notranslate"><span class="pre">n</span></code>x<code class="docutils literal notranslate"><span class="pre">n</span></code> fornita è triangolare superiore, cioè, ha tutte le celle sotto la diagonale a zero. Altrimenti, ritorna <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -3201,6 +3201,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
         // NOTE: id without #
 
         addVisualizerToPage(trace, 'jm-8b0df2561f49b1ddd67cec85a044bb19-10',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
                                          'visualizerIdOverride':'viz-jm-8b0df2561f49b1ddd67cec85a044bb19-10'})
 
 
@@ -3255,6 +3256,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
         // NOTE: id without #
 
         addVisualizerToPage(trace, 'jm-8b0df2561f49b1ddd67cec85a044bb19-10',{'embeddedMode' : false,
+                                         'disableHeapNesting': true,
                                          'visualizerIdOverride':'viz-jm-8b0df2561f49b1ddd67cec85a044bb19-10'})
 
 
@@ -3274,7 +3276,7 @@ controlla riga a indice i=3 --&gt; 3   [0,7,0,5]       Controlla fino a colonna
 <div style="text-align:center; font-size:0.9em"> <a href="https://pythontutor.com/visualize.html#mode=edit" target="_blank">Python Tutor</a> visualization</div></div>
 </div>
 <p>Tornando alla trasposta, per adesso consideriamo solo una matrice nxn. Per assicurarci che ci prendiamo in effetti una matrice nxn, valideremo l’input come fatto in precedenza</p>
-<div class="admonition note">
+<div class="jupman-alert-principle"></div><div class="admonition note">
 <p><a class="reference external" href="https://it.softpython.org/commandments.html#IV-COMANDAMENTO">IV COMANDAMENTO</a><strong>(adattato per matrici): Non riassegnerai mai parametri di funzione</strong></p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfun</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
