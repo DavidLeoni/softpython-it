@@ -1828,7 +1828,14 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#2.-Analisi-dei-dati-di-Astro-Pi">2. Analisi dei dati di Astro Pi</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#2.1-Esercizio---info-meteo">2.1 Esercizio - info meteo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.1-Importiamo-il-file">2.1 Importiamo il file</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.2-Memoria">2.2 Memoria</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.3-Dimensioni">2.3 Dimensioni</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.4-Esploriamo">2.4 Esploriamo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.5-Qualche-statistica">2.5 Qualche statistica</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.6-Guardiamo-le-colonne">2.6 Guardiamo le colonne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.7-Cos'è-una-colonna?">2.7 Cos’è una colonna?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.8-Esercizio---info-meteo">2.8 Esercizio - info meteo</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#3.-Rivediamo-MatPlotLib">3. Rivediamo MatPlotLib</a><ul>
@@ -2740,7 +2747,7 @@ div.rendered_html tbody tr:hover {
 <h3>Controlla l’installazione<a class="headerlink" href="#Controlla-l'installazione" title="Permalink to this headline"></a></h3>
 <p>Prima di tutto vediamo se hai già installato pandas sul tuo sistema, prova ad eseguire questa cella con Ctrl-Enter:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -2764,11 +2771,12 @@ div.rendered_html tbody tr:hover {
 <p><a class="reference external" href="https://projects.raspberrypi.org/en/projects/astro-pi-flight-data-analysis">https://projects.raspberrypi.org/en/projects/astro-pi-flight-data-analysis</a></p>
 <p>Nel sito è possibile trovare la descrizione dettagliata dei dati raccolti dai sensori, nel mese di febbraio 2016 (un record ogni 10 secondi).</p>
 <p><img alt="iss-2985744" src="../_images/International_Space_Station_exploded_diagram_large.jpg" /></p>
-<p><strong>Importiamo il file</strong></p>
+<section id="2.1-Importiamo-il-file">
+<h3>2.1 Importiamo il file<a class="headerlink" href="#2.1-Importiamo-il-file" title="Permalink to this headline"></a></h3>
 <p>Il metodo <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> importa i dati da un file CSV e li memorizza in una struttura DataFrame.</p>
 <p>In questo esercizio useremo il file <a class="reference external" href="Columbus_Ed_astro_pi_datalog.csv">Columbus_Ed_astro_pi_datalog.csv</a></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>   <span class="c1"># importiamo pandas e per comodità lo rinominiamo in  &#39;pd&#39;</span>
@@ -2814,10 +2822,109 @@ dtypes: float64(17), int64(2), object(1)
 memory usage: 16.9+ MB
 </pre></div></div>
 </div>
+</section>
+<section id="2.2-Memoria">
+<h3>2.2 Memoria<a class="headerlink" href="#2.2-Memoria" title="Permalink to this headline"></a></h3>
+<p>Pandas carica il dataset dal disco nella memoria RAM del tuo computer (che nel 2023 è tipicamente di 8 gigabyte). Se per caso il tuo dataset fosse più grande della memoria RAM, riceveresti un errore e dovresti cominciare a pensare ad usare altri strumenti per fare le tue analisi. Potrebbero sorgere anche problemi nel caso decidessi di fare successivamente copie del dataframe. E’ quindi molto importante capire quanto occupa. Se guardi in fondo vedrai scritto <em>memory usage: 16.9+ MB</em> ma
+<strong>attenzione a quel +</strong>: Pandas ci sta dicendo che il dataset occupa in RAM <em>almeno</em> 16.9Mb, ma la dimensione effettiva potrebbe essere maggiore.</p>
+<p>Per vedere lo spazio occupato vero, prova ad aggiungere alla chiamata di <code class="docutils literal notranslate"><span class="pre">df.info</span></code> il parametro <code class="docutils literal notranslate"><span class="pre">memory_usage=&quot;deep&quot;</span></code> che è opzionale perchè a seconda del dataset potrebbe richiedere più tempo di calcolo. Noti differenze?</p>
+<ul class="simple">
+<li><p>E il file del dataset originale sul tuo disco, quanto occupa? Prova a scoprirlo guardando in Esplora risorse.</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">memory_usage</span><span class="o">=</span><span class="s2">&quot;deep&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 110869 entries, 0 to 110868
+Data columns (total 20 columns):
+ #   Column      Non-Null Count   Dtype
+---  ------      --------------   -----
+ 0   ROW_ID      110869 non-null  int64
+ 1   temp_cpu    110869 non-null  float64
+ 2   temp_h      110869 non-null  float64
+ 3   temp_p      110869 non-null  float64
+ 4   humidity    110869 non-null  float64
+ 5   pressure    110869 non-null  float64
+ 6   pitch       110869 non-null  float64
+ 7   roll        110869 non-null  float64
+ 8   yaw         110869 non-null  float64
+ 9   mag_x       110869 non-null  float64
+ 10  mag_y       110869 non-null  float64
+ 11  mag_z       110869 non-null  float64
+ 12  accel_x     110869 non-null  float64
+ 13  accel_y     110869 non-null  float64
+ 14  accel_z     110869 non-null  float64
+ 15  gyro_x      110869 non-null  float64
+ 16  gyro_y      110869 non-null  float64
+ 17  gyro_z      110869 non-null  float64
+ 18  reset       110869 non-null  int64
+ 19  time_stamp  110869 non-null  object
+dtypes: float64(17), int64(2), object(1)
+memory usage: 24.1 MB
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 110869 entries, 0 to 110868
+Data columns (total 20 columns):
+ #   Column      Non-Null Count   Dtype
+---  ------      --------------   -----
+ 0   ROW_ID      110869 non-null  int64
+ 1   temp_cpu    110869 non-null  float64
+ 2   temp_h      110869 non-null  float64
+ 3   temp_p      110869 non-null  float64
+ 4   humidity    110869 non-null  float64
+ 5   pressure    110869 non-null  float64
+ 6   pitch       110869 non-null  float64
+ 7   roll        110869 non-null  float64
+ 8   yaw         110869 non-null  float64
+ 9   mag_x       110869 non-null  float64
+ 10  mag_y       110869 non-null  float64
+ 11  mag_z       110869 non-null  float64
+ 12  accel_x     110869 non-null  float64
+ 13  accel_y     110869 non-null  float64
+ 14  accel_z     110869 non-null  float64
+ 15  gyro_x      110869 non-null  float64
+ 16  gyro_y      110869 non-null  float64
+ 17  gyro_z      110869 non-null  float64
+ 18  reset       110869 non-null  int64
+ 19  time_stamp  110869 non-null  object
+dtypes: float64(17), int64(2), object(1)
+memory usage: 24.1 MB
+</pre></div></div>
+</div>
+</section>
+<section id="2.3-Dimensioni">
+<h3>2.3 Dimensioni<a class="headerlink" href="#2.3-Dimensioni" title="Permalink to this headline"></a></h3>
 <p>Possiamo vedere rapidamente righe e colonne del dataframe con l’attributo <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</p>
 <p><strong>NOTA</strong>: <code class="docutils literal notranslate"><span class="pre">shape</span></code> non è seguito da parentesi tonde !</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -2825,7 +2932,7 @@ memory usage: 16.9+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -2833,6 +2940,673 @@ memory usage: 16.9+ MB
 (110869, 20)
 </pre></div></div>
 </div>
+</section>
+<section id="2.4-Esploriamo">
+<h3>2.4 Esploriamo<a class="headerlink" href="#2.4-Esploriamo" title="Permalink to this headline"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ROW_ID</th>
+      <th>temp_cpu</th>
+      <th>temp_h</th>
+      <th>temp_p</th>
+      <th>humidity</th>
+      <th>pressure</th>
+      <th>pitch</th>
+      <th>roll</th>
+      <th>yaw</th>
+      <th>mag_x</th>
+      <th>mag_y</th>
+      <th>mag_z</th>
+      <th>accel_x</th>
+      <th>accel_y</th>
+      <th>accel_z</th>
+      <th>gyro_x</th>
+      <th>gyro_y</th>
+      <th>gyro_z</th>
+      <th>reset</th>
+      <th>time_stamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>31.88</td>
+      <td>27.57</td>
+      <td>25.01</td>
+      <td>44.94</td>
+      <td>1001.68</td>
+      <td>1.49</td>
+      <td>52.25</td>
+      <td>185.21</td>
+      <td>-46.422753</td>
+      <td>-8.132907</td>
+      <td>-12.129346</td>
+      <td>-0.000468</td>
+      <td>0.019439</td>
+      <td>0.014569</td>
+      <td>0.000942</td>
+      <td>0.000492</td>
+      <td>-0.000750</td>
+      <td>20</td>
+      <td>2016-02-16 10:44:40</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>31.79</td>
+      <td>27.53</td>
+      <td>25.01</td>
+      <td>45.12</td>
+      <td>1001.72</td>
+      <td>1.03</td>
+      <td>53.73</td>
+      <td>186.72</td>
+      <td>-48.778951</td>
+      <td>-8.304243</td>
+      <td>-12.943096</td>
+      <td>-0.000614</td>
+      <td>0.019436</td>
+      <td>0.014577</td>
+      <td>0.000218</td>
+      <td>-0.000005</td>
+      <td>-0.000235</td>
+      <td>0</td>
+      <td>2016-02-16 10:44:50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>31.66</td>
+      <td>27.53</td>
+      <td>25.01</td>
+      <td>45.12</td>
+      <td>1001.72</td>
+      <td>1.24</td>
+      <td>53.57</td>
+      <td>186.21</td>
+      <td>-49.161878</td>
+      <td>-8.470832</td>
+      <td>-12.642772</td>
+      <td>-0.000569</td>
+      <td>0.019359</td>
+      <td>0.014357</td>
+      <td>0.000395</td>
+      <td>0.000600</td>
+      <td>-0.000003</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>31.69</td>
+      <td>27.52</td>
+      <td>25.01</td>
+      <td>45.32</td>
+      <td>1001.69</td>
+      <td>1.57</td>
+      <td>53.63</td>
+      <td>186.03</td>
+      <td>-49.341941</td>
+      <td>-8.457380</td>
+      <td>-12.615509</td>
+      <td>-0.000575</td>
+      <td>0.019383</td>
+      <td>0.014409</td>
+      <td>0.000308</td>
+      <td>0.000577</td>
+      <td>-0.000102</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>31.66</td>
+      <td>27.54</td>
+      <td>25.01</td>
+      <td>45.18</td>
+      <td>1001.71</td>
+      <td>0.85</td>
+      <td>53.66</td>
+      <td>186.46</td>
+      <td>-50.056683</td>
+      <td>-8.122609</td>
+      <td>-12.678341</td>
+      <td>-0.000548</td>
+      <td>0.019378</td>
+      <td>0.014380</td>
+      <td>0.000321</td>
+      <td>0.000691</td>
+      <td>0.000272</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:20</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>110864</th>
+      <td>110865</td>
+      <td>31.56</td>
+      <td>27.52</td>
+      <td>24.83</td>
+      <td>42.94</td>
+      <td>1005.83</td>
+      <td>1.58</td>
+      <td>49.93</td>
+      <td>129.60</td>
+      <td>-15.169673</td>
+      <td>-27.642610</td>
+      <td>1.563183</td>
+      <td>-0.000682</td>
+      <td>0.017743</td>
+      <td>0.014646</td>
+      <td>-0.000264</td>
+      <td>0.000206</td>
+      <td>0.000196</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:21</td>
+    </tr>
+    <tr>
+      <th>110865</th>
+      <td>110866</td>
+      <td>31.55</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.72</td>
+      <td>1005.85</td>
+      <td>1.89</td>
+      <td>49.92</td>
+      <td>130.51</td>
+      <td>-15.832622</td>
+      <td>-27.729389</td>
+      <td>1.785682</td>
+      <td>-0.000736</td>
+      <td>0.017570</td>
+      <td>0.014855</td>
+      <td>0.000143</td>
+      <td>0.000199</td>
+      <td>-0.000024</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:30</td>
+    </tr>
+    <tr>
+      <th>110866</th>
+      <td>110867</td>
+      <td>31.58</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.83</td>
+      <td>1005.85</td>
+      <td>2.09</td>
+      <td>50.00</td>
+      <td>132.04</td>
+      <td>-16.646212</td>
+      <td>-27.719479</td>
+      <td>1.629533</td>
+      <td>-0.000647</td>
+      <td>0.017657</td>
+      <td>0.014799</td>
+      <td>0.000537</td>
+      <td>0.000257</td>
+      <td>0.000057</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:41</td>
+    </tr>
+    <tr>
+      <th>110867</th>
+      <td>110868</td>
+      <td>31.62</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.81</td>
+      <td>1005.88</td>
+      <td>2.88</td>
+      <td>49.69</td>
+      <td>133.00</td>
+      <td>-17.270447</td>
+      <td>-27.793136</td>
+      <td>1.703806</td>
+      <td>-0.000835</td>
+      <td>0.017635</td>
+      <td>0.014877</td>
+      <td>0.000534</td>
+      <td>0.000456</td>
+      <td>0.000195</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:50</td>
+    </tr>
+    <tr>
+      <th>110868</th>
+      <td>110869</td>
+      <td>31.57</td>
+      <td>27.51</td>
+      <td>24.83</td>
+      <td>42.94</td>
+      <td>1005.86</td>
+      <td>2.17</td>
+      <td>49.77</td>
+      <td>134.18</td>
+      <td>-17.885872</td>
+      <td>-27.824149</td>
+      <td>1.293345</td>
+      <td>-0.000787</td>
+      <td>0.017261</td>
+      <td>0.014380</td>
+      <td>0.000459</td>
+      <td>0.000076</td>
+      <td>0.000030</td>
+      <td>0</td>
+      <td>2016-02-29 09:25:00</td>
+    </tr>
+  </tbody>
+</table>
+<p>110869 rows × 20 columns</p>
+</div></div>
+</div>
+<p>Nota che la prima colonna numerica in grassetto è un indice intero che Pandas ha automaticamente creato e assegnato al dataset al momento dell’apertura, e che parte da zero. Volendo si potrebbe anche impostare un indice diverso ma in questo tutorial non lo faremo.</p>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">head()</span></code> restituisce le prime righe:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ROW_ID</th>
+      <th>temp_cpu</th>
+      <th>temp_h</th>
+      <th>temp_p</th>
+      <th>humidity</th>
+      <th>pressure</th>
+      <th>pitch</th>
+      <th>roll</th>
+      <th>yaw</th>
+      <th>mag_x</th>
+      <th>mag_y</th>
+      <th>mag_z</th>
+      <th>accel_x</th>
+      <th>accel_y</th>
+      <th>accel_z</th>
+      <th>gyro_x</th>
+      <th>gyro_y</th>
+      <th>gyro_z</th>
+      <th>reset</th>
+      <th>time_stamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>31.88</td>
+      <td>27.57</td>
+      <td>25.01</td>
+      <td>44.94</td>
+      <td>1001.68</td>
+      <td>1.49</td>
+      <td>52.25</td>
+      <td>185.21</td>
+      <td>-46.422753</td>
+      <td>-8.132907</td>
+      <td>-12.129346</td>
+      <td>-0.000468</td>
+      <td>0.019439</td>
+      <td>0.014569</td>
+      <td>0.000942</td>
+      <td>0.000492</td>
+      <td>-0.000750</td>
+      <td>20</td>
+      <td>2016-02-16 10:44:40</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>31.79</td>
+      <td>27.53</td>
+      <td>25.01</td>
+      <td>45.12</td>
+      <td>1001.72</td>
+      <td>1.03</td>
+      <td>53.73</td>
+      <td>186.72</td>
+      <td>-48.778951</td>
+      <td>-8.304243</td>
+      <td>-12.943096</td>
+      <td>-0.000614</td>
+      <td>0.019436</td>
+      <td>0.014577</td>
+      <td>0.000218</td>
+      <td>-0.000005</td>
+      <td>-0.000235</td>
+      <td>0</td>
+      <td>2016-02-16 10:44:50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>31.66</td>
+      <td>27.53</td>
+      <td>25.01</td>
+      <td>45.12</td>
+      <td>1001.72</td>
+      <td>1.24</td>
+      <td>53.57</td>
+      <td>186.21</td>
+      <td>-49.161878</td>
+      <td>-8.470832</td>
+      <td>-12.642772</td>
+      <td>-0.000569</td>
+      <td>0.019359</td>
+      <td>0.014357</td>
+      <td>0.000395</td>
+      <td>0.000600</td>
+      <td>-0.000003</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>31.69</td>
+      <td>27.52</td>
+      <td>25.01</td>
+      <td>45.32</td>
+      <td>1001.69</td>
+      <td>1.57</td>
+      <td>53.63</td>
+      <td>186.03</td>
+      <td>-49.341941</td>
+      <td>-8.457380</td>
+      <td>-12.615509</td>
+      <td>-0.000575</td>
+      <td>0.019383</td>
+      <td>0.014409</td>
+      <td>0.000308</td>
+      <td>0.000577</td>
+      <td>-0.000102</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>31.66</td>
+      <td>27.54</td>
+      <td>25.01</td>
+      <td>45.18</td>
+      <td>1001.71</td>
+      <td>0.85</td>
+      <td>53.66</td>
+      <td>186.46</td>
+      <td>-50.056683</td>
+      <td>-8.122609</td>
+      <td>-12.678341</td>
+      <td>-0.000548</td>
+      <td>0.019378</td>
+      <td>0.014380</td>
+      <td>0.000321</td>
+      <td>0.000691</td>
+      <td>0.000272</td>
+      <td>0</td>
+      <td>2016-02-16 10:45:20</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">tail()</span></code> restituisce le ultime righe:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ROW_ID</th>
+      <th>temp_cpu</th>
+      <th>temp_h</th>
+      <th>temp_p</th>
+      <th>humidity</th>
+      <th>pressure</th>
+      <th>pitch</th>
+      <th>roll</th>
+      <th>yaw</th>
+      <th>mag_x</th>
+      <th>mag_y</th>
+      <th>mag_z</th>
+      <th>accel_x</th>
+      <th>accel_y</th>
+      <th>accel_z</th>
+      <th>gyro_x</th>
+      <th>gyro_y</th>
+      <th>gyro_z</th>
+      <th>reset</th>
+      <th>time_stamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>110864</th>
+      <td>110865</td>
+      <td>31.56</td>
+      <td>27.52</td>
+      <td>24.83</td>
+      <td>42.94</td>
+      <td>1005.83</td>
+      <td>1.58</td>
+      <td>49.93</td>
+      <td>129.60</td>
+      <td>-15.169673</td>
+      <td>-27.642610</td>
+      <td>1.563183</td>
+      <td>-0.000682</td>
+      <td>0.017743</td>
+      <td>0.014646</td>
+      <td>-0.000264</td>
+      <td>0.000206</td>
+      <td>0.000196</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:21</td>
+    </tr>
+    <tr>
+      <th>110865</th>
+      <td>110866</td>
+      <td>31.55</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.72</td>
+      <td>1005.85</td>
+      <td>1.89</td>
+      <td>49.92</td>
+      <td>130.51</td>
+      <td>-15.832622</td>
+      <td>-27.729389</td>
+      <td>1.785682</td>
+      <td>-0.000736</td>
+      <td>0.017570</td>
+      <td>0.014855</td>
+      <td>0.000143</td>
+      <td>0.000199</td>
+      <td>-0.000024</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:30</td>
+    </tr>
+    <tr>
+      <th>110866</th>
+      <td>110867</td>
+      <td>31.58</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.83</td>
+      <td>1005.85</td>
+      <td>2.09</td>
+      <td>50.00</td>
+      <td>132.04</td>
+      <td>-16.646212</td>
+      <td>-27.719479</td>
+      <td>1.629533</td>
+      <td>-0.000647</td>
+      <td>0.017657</td>
+      <td>0.014799</td>
+      <td>0.000537</td>
+      <td>0.000257</td>
+      <td>0.000057</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:41</td>
+    </tr>
+    <tr>
+      <th>110867</th>
+      <td>110868</td>
+      <td>31.62</td>
+      <td>27.50</td>
+      <td>24.83</td>
+      <td>42.81</td>
+      <td>1005.88</td>
+      <td>2.88</td>
+      <td>49.69</td>
+      <td>133.00</td>
+      <td>-17.270447</td>
+      <td>-27.793136</td>
+      <td>1.703806</td>
+      <td>-0.000835</td>
+      <td>0.017635</td>
+      <td>0.014877</td>
+      <td>0.000534</td>
+      <td>0.000456</td>
+      <td>0.000195</td>
+      <td>0</td>
+      <td>2016-02-29 09:24:50</td>
+    </tr>
+    <tr>
+      <th>110868</th>
+      <td>110869</td>
+      <td>31.57</td>
+      <td>27.51</td>
+      <td>24.83</td>
+      <td>42.94</td>
+      <td>1005.86</td>
+      <td>2.17</td>
+      <td>49.77</td>
+      <td>134.18</td>
+      <td>-17.885872</td>
+      <td>-27.824149</td>
+      <td>1.293345</td>
+      <td>-0.000787</td>
+      <td>0.017261</td>
+      <td>0.014380</td>
+      <td>0.000459</td>
+      <td>0.000076</td>
+      <td>0.000030</td>
+      <td>0</td>
+      <td>2016-02-29 09:25:00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="2.5-Qualche-statistica">
+<h3>2.5 Qualche statistica<a class="headerlink" href="#2.5-Qualche-statistica" title="Permalink to this headline"></a></h3>
 <p>Il metodo <code class="docutils literal notranslate"><span class="pre">describe</span></code> vi da al volo tutta una serie di dati di riepilogo:</p>
 <ul class="simple">
 <li><p>il conteggio delle righe</p></li>
@@ -2842,7 +3616,7 @@ memory usage: 16.9+ MB
 <li><p>minimo e massimo</p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -2850,7 +3624,7 @@ memory usage: 16.9+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3075,73 +3849,17 @@ memory usage: 16.9+ MB
 </div></div>
 </div>
 <p><strong>DOMANDA</strong>: Manca qualche campo alla tabella prodotta da describe? Perchè non l’ha incluso ?</p>
-<p>Per limitare <code class="docutils literal notranslate"><span class="pre">describe</span></code> ad una sola colonna come <code class="docutils literal notranslate"><span class="pre">humidity</span></code>, puoi scrivere così:</p>
+<p>Il metodo <code class="docutils literal notranslate"><span class="pre">corr</span></code> permette di calcolare la correlazione tra le colonne del DataFrame, con valori da -1.0 a +1.0:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-count    110869.000000
-mean         46.252005
-std           1.907273
-min          42.270000
-25%          45.230000
-50%          46.130000
-75%          46.880000
-max          60.590000
-Name: humidity, dtype: float64
-</pre></div></div>
-</div>
-<p>Ancora più comodamente, puoi usare la notazione con il punto:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">humidity</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-count    110869.000000
-mean         46.252005
-std           1.907273
-min          42.270000
-25%          45.230000
-50%          46.130000
-75%          46.880000
-max          60.590000
-Name: humidity, dtype: float64
-</pre></div></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE agli spazi!</strong></p>
-<p>Nel caso il nome del campo avesse degli spazi (es. <code class="docutils literal notranslate"><span class="pre">'rotazioni</span> <span class="pre">frullatore'</span></code>), <strong>non</strong> potreste usare la notazione con il punto ma sareste costretti ad usare la notazione con le quadre vista sopra (es: <code class="docutils literal notranslate"><span class="pre">df.['rotazioni</span> <span class="pre">frullatore'].describe()</span></code>)</p>
-</div>
-<p>Il metodo <code class="docutils literal notranslate"><span class="pre">head()</span></code> restituisce le prime righe:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3182,306 +3900,437 @@ Name: humidity, dtype: float64
       <th>gyro_y</th>
       <th>gyro_z</th>
       <th>reset</th>
-      <th>time_stamp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>31.88</td>
-      <td>27.57</td>
-      <td>25.01</td>
-      <td>44.94</td>
-      <td>1001.68</td>
-      <td>1.49</td>
-      <td>52.25</td>
-      <td>185.21</td>
-      <td>-46.422753</td>
-      <td>-8.132907</td>
-      <td>-12.129346</td>
-      <td>-0.000468</td>
-      <td>0.019439</td>
-      <td>0.014569</td>
-      <td>0.000942</td>
-      <td>0.000492</td>
-      <td>-0.000750</td>
-      <td>20</td>
-      <td>2016-02-16 10:44:40</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>31.79</td>
-      <td>27.53</td>
-      <td>25.01</td>
-      <td>45.12</td>
-      <td>1001.72</td>
-      <td>1.03</td>
-      <td>53.73</td>
-      <td>186.72</td>
-      <td>-48.778951</td>
-      <td>-8.304243</td>
-      <td>-12.943096</td>
-      <td>-0.000614</td>
-      <td>0.019436</td>
-      <td>0.014577</td>
-      <td>0.000218</td>
-      <td>-0.000005</td>
-      <td>-0.000235</td>
-      <td>0</td>
-      <td>2016-02-16 10:44:50</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>31.66</td>
-      <td>27.53</td>
-      <td>25.01</td>
-      <td>45.12</td>
-      <td>1001.72</td>
-      <td>1.24</td>
-      <td>53.57</td>
-      <td>186.21</td>
-      <td>-49.161878</td>
-      <td>-8.470832</td>
-      <td>-12.642772</td>
-      <td>-0.000569</td>
-      <td>0.019359</td>
-      <td>0.014357</td>
-      <td>0.000395</td>
-      <td>0.000600</td>
-      <td>-0.000003</td>
-      <td>0</td>
-      <td>2016-02-16 10:45:00</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>31.69</td>
-      <td>27.52</td>
-      <td>25.01</td>
-      <td>45.32</td>
-      <td>1001.69</td>
-      <td>1.57</td>
-      <td>53.63</td>
-      <td>186.03</td>
-      <td>-49.341941</td>
-      <td>-8.457380</td>
-      <td>-12.615509</td>
-      <td>-0.000575</td>
-      <td>0.019383</td>
-      <td>0.014409</td>
-      <td>0.000308</td>
-      <td>0.000577</td>
-      <td>-0.000102</td>
-      <td>0</td>
-      <td>2016-02-16 10:45:10</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>31.66</td>
-      <td>27.54</td>
-      <td>25.01</td>
-      <td>45.18</td>
-      <td>1001.71</td>
-      <td>0.85</td>
-      <td>53.66</td>
-      <td>186.46</td>
-      <td>-50.056683</td>
-      <td>-8.122609</td>
-      <td>-12.678341</td>
-      <td>-0.000548</td>
-      <td>0.019378</td>
-      <td>0.014380</td>
-      <td>0.000321</td>
-      <td>0.000691</td>
-      <td>0.000272</td>
-      <td>0</td>
-      <td>2016-02-16 10:45:20</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-<p>Il metodo <code class="docutils literal notranslate"><span class="pre">tail()</span></code> restituisce le ultime righe:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
       <th>ROW_ID</th>
+      <td>1.000000</td>
+      <td>0.361391</td>
+      <td>0.435289</td>
+      <td>0.339916</td>
+      <td>-0.110241</td>
+      <td>0.243337</td>
+      <td>-0.007741</td>
+      <td>-0.390159</td>
+      <td>-0.034877</td>
+      <td>-0.035966</td>
+      <td>-0.025818</td>
+      <td>0.108138</td>
+      <td>-0.132291</td>
+      <td>-0.918587</td>
+      <td>-0.080899</td>
+      <td>-0.001906</td>
+      <td>-0.004913</td>
+      <td>-0.000211</td>
+      <td>-0.005202</td>
+    </tr>
+    <tr>
       <th>temp_cpu</th>
+      <td>0.361391</td>
+      <td>1.000000</td>
+      <td>0.986872</td>
+      <td>0.991672</td>
+      <td>-0.297081</td>
+      <td>0.038065</td>
+      <td>0.008076</td>
+      <td>-0.171644</td>
+      <td>-0.117972</td>
+      <td>0.005145</td>
+      <td>-0.285192</td>
+      <td>-0.120838</td>
+      <td>-0.023582</td>
+      <td>-0.446358</td>
+      <td>-0.029155</td>
+      <td>0.002511</td>
+      <td>0.005947</td>
+      <td>-0.001250</td>
+      <td>-0.002970</td>
+    </tr>
+    <tr>
       <th>temp_h</th>
+      <td>0.435289</td>
+      <td>0.986872</td>
+      <td>1.000000</td>
+      <td>0.993260</td>
+      <td>-0.281422</td>
+      <td>0.070882</td>
+      <td>0.005145</td>
+      <td>-0.199628</td>
+      <td>-0.117870</td>
+      <td>0.000428</td>
+      <td>-0.276276</td>
+      <td>-0.098864</td>
+      <td>-0.032188</td>
+      <td>-0.510126</td>
+      <td>-0.043213</td>
+      <td>0.001771</td>
+      <td>0.005020</td>
+      <td>-0.001423</td>
+      <td>-0.004325</td>
+    </tr>
+    <tr>
       <th>temp_p</th>
+      <td>0.339916</td>
+      <td>0.991672</td>
+      <td>0.993260</td>
+      <td>1.000000</td>
+      <td>-0.288373</td>
+      <td>0.035496</td>
+      <td>0.006750</td>
+      <td>-0.163685</td>
+      <td>-0.118463</td>
+      <td>0.004338</td>
+      <td>-0.283427</td>
+      <td>-0.114407</td>
+      <td>-0.018047</td>
+      <td>-0.428884</td>
+      <td>-0.036505</td>
+      <td>0.001829</td>
+      <td>0.006127</td>
+      <td>-0.001623</td>
+      <td>-0.004205</td>
+    </tr>
+    <tr>
       <th>humidity</th>
+      <td>-0.110241</td>
+      <td>-0.297081</td>
+      <td>-0.281422</td>
+      <td>-0.288373</td>
+      <td>1.000000</td>
+      <td>0.434374</td>
+      <td>0.004050</td>
+      <td>0.101304</td>
+      <td>0.031664</td>
+      <td>-0.035146</td>
+      <td>0.077897</td>
+      <td>0.076424</td>
+      <td>-0.009741</td>
+      <td>0.226281</td>
+      <td>0.005281</td>
+      <td>0.004345</td>
+      <td>0.003457</td>
+      <td>0.001298</td>
+      <td>-0.002066</td>
+    </tr>
+    <tr>
       <th>pressure</th>
+      <td>0.243337</td>
+      <td>0.038065</td>
+      <td>0.070882</td>
+      <td>0.035496</td>
+      <td>0.434374</td>
+      <td>1.000000</td>
+      <td>0.003018</td>
+      <td>0.011815</td>
+      <td>-0.051697</td>
+      <td>-0.040183</td>
+      <td>-0.074578</td>
+      <td>0.092352</td>
+      <td>0.013556</td>
+      <td>-0.115642</td>
+      <td>-0.221208</td>
+      <td>-0.000611</td>
+      <td>-0.002493</td>
+      <td>-0.000615</td>
+      <td>-0.006259</td>
+    </tr>
+    <tr>
       <th>pitch</th>
+      <td>-0.007741</td>
+      <td>0.008076</td>
+      <td>0.005145</td>
+      <td>0.006750</td>
+      <td>0.004050</td>
+      <td>0.003018</td>
+      <td>1.000000</td>
+      <td>0.087941</td>
+      <td>-0.011611</td>
+      <td>0.013331</td>
+      <td>0.006133</td>
+      <td>0.000540</td>
+      <td>0.043285</td>
+      <td>0.009015</td>
+      <td>-0.039146</td>
+      <td>0.066618</td>
+      <td>-0.015034</td>
+      <td>0.049340</td>
+      <td>-0.000176</td>
+    </tr>
+    <tr>
       <th>roll</th>
+      <td>-0.390159</td>
+      <td>-0.171644</td>
+      <td>-0.199628</td>
+      <td>-0.163685</td>
+      <td>0.101304</td>
+      <td>0.011815</td>
+      <td>0.087941</td>
+      <td>1.000000</td>
+      <td>0.095354</td>
+      <td>-0.020947</td>
+      <td>0.060297</td>
+      <td>-0.080620</td>
+      <td>0.116637</td>
+      <td>0.462630</td>
+      <td>-0.167905</td>
+      <td>-0.115873</td>
+      <td>-0.002509</td>
+      <td>-0.214202</td>
+      <td>0.000636</td>
+    </tr>
+    <tr>
       <th>yaw</th>
+      <td>-0.034877</td>
+      <td>-0.117972</td>
+      <td>-0.117870</td>
+      <td>-0.118463</td>
+      <td>0.031664</td>
+      <td>-0.051697</td>
+      <td>-0.011611</td>
+      <td>0.095354</td>
+      <td>1.000000</td>
+      <td>0.257971</td>
+      <td>0.549394</td>
+      <td>-0.328360</td>
+      <td>0.006943</td>
+      <td>0.044157</td>
+      <td>-0.013634</td>
+      <td>0.003106</td>
+      <td>0.003665</td>
+      <td>0.004020</td>
+      <td>-0.000558</td>
+    </tr>
+    <tr>
       <th>mag_x</th>
+      <td>-0.035966</td>
+      <td>0.005145</td>
+      <td>0.000428</td>
+      <td>0.004338</td>
+      <td>-0.035146</td>
+      <td>-0.040183</td>
+      <td>0.013331</td>
+      <td>-0.020947</td>
+      <td>0.257971</td>
+      <td>1.000000</td>
+      <td>0.001239</td>
+      <td>-0.213070</td>
+      <td>-0.006629</td>
+      <td>0.027921</td>
+      <td>0.021524</td>
+      <td>-0.004954</td>
+      <td>-0.004429</td>
+      <td>-0.005052</td>
+      <td>-0.002879</td>
+    </tr>
+    <tr>
       <th>mag_y</th>
+      <td>-0.025818</td>
+      <td>-0.285192</td>
+      <td>-0.276276</td>
+      <td>-0.283427</td>
+      <td>0.077897</td>
+      <td>-0.074578</td>
+      <td>0.006133</td>
+      <td>0.060297</td>
+      <td>0.549394</td>
+      <td>0.001239</td>
+      <td>1.000000</td>
+      <td>-0.266351</td>
+      <td>0.014057</td>
+      <td>0.051619</td>
+      <td>-0.053016</td>
+      <td>0.001239</td>
+      <td>0.001063</td>
+      <td>0.001530</td>
+      <td>-0.001335</td>
+    </tr>
+    <tr>
       <th>mag_z</th>
+      <td>0.108138</td>
+      <td>-0.120838</td>
+      <td>-0.098864</td>
+      <td>-0.114407</td>
+      <td>0.076424</td>
+      <td>0.092352</td>
+      <td>0.000540</td>
+      <td>-0.080620</td>
+      <td>-0.328360</td>
+      <td>-0.213070</td>
+      <td>-0.266351</td>
+      <td>1.000000</td>
+      <td>0.024718</td>
+      <td>-0.083914</td>
+      <td>-0.061317</td>
+      <td>-0.008470</td>
+      <td>-0.009557</td>
+      <td>-0.008997</td>
+      <td>-0.002151</td>
+    </tr>
+    <tr>
       <th>accel_x</th>
+      <td>-0.132291</td>
+      <td>-0.023582</td>
+      <td>-0.032188</td>
+      <td>-0.018047</td>
+      <td>-0.009741</td>
+      <td>0.013556</td>
+      <td>0.043285</td>
+      <td>0.116637</td>
+      <td>0.006943</td>
+      <td>-0.006629</td>
+      <td>0.014057</td>
+      <td>0.024718</td>
+      <td>1.000000</td>
+      <td>0.095286</td>
+      <td>-0.262305</td>
+      <td>0.035314</td>
+      <td>0.103449</td>
+      <td>0.197740</td>
+      <td>0.002173</td>
+    </tr>
+    <tr>
       <th>accel_y</th>
+      <td>-0.918587</td>
+      <td>-0.446358</td>
+      <td>-0.510126</td>
+      <td>-0.428884</td>
+      <td>0.226281</td>
+      <td>-0.115642</td>
+      <td>0.009015</td>
+      <td>0.462630</td>
+      <td>0.044157</td>
+      <td>0.027921</td>
+      <td>0.051619</td>
+      <td>-0.083914</td>
+      <td>0.095286</td>
+      <td>1.000000</td>
+      <td>0.120215</td>
+      <td>0.043263</td>
+      <td>-0.046463</td>
+      <td>0.009541</td>
+      <td>0.004648</td>
+    </tr>
+    <tr>
       <th>accel_z</th>
+      <td>-0.080899</td>
+      <td>-0.029155</td>
+      <td>-0.043213</td>
+      <td>-0.036505</td>
+      <td>0.005281</td>
+      <td>-0.221208</td>
+      <td>-0.039146</td>
+      <td>-0.167905</td>
+      <td>-0.013634</td>
+      <td>0.021524</td>
+      <td>-0.053016</td>
+      <td>-0.061317</td>
+      <td>-0.262305</td>
+      <td>0.120215</td>
+      <td>1.000000</td>
+      <td>0.078315</td>
+      <td>-0.075625</td>
+      <td>0.057075</td>
+      <td>0.000554</td>
+    </tr>
+    <tr>
       <th>gyro_x</th>
+      <td>-0.001906</td>
+      <td>0.002511</td>
+      <td>0.001771</td>
+      <td>0.001829</td>
+      <td>0.004345</td>
+      <td>-0.000611</td>
+      <td>0.066618</td>
+      <td>-0.115873</td>
+      <td>0.003106</td>
+      <td>-0.004954</td>
+      <td>0.001239</td>
+      <td>-0.008470</td>
+      <td>0.035314</td>
+      <td>0.043263</td>
+      <td>0.078315</td>
+      <td>1.000000</td>
+      <td>-0.248968</td>
+      <td>0.337553</td>
+      <td>0.001009</td>
+    </tr>
+    <tr>
       <th>gyro_y</th>
+      <td>-0.004913</td>
+      <td>0.005947</td>
+      <td>0.005020</td>
+      <td>0.006127</td>
+      <td>0.003457</td>
+      <td>-0.002493</td>
+      <td>-0.015034</td>
+      <td>-0.002509</td>
+      <td>0.003665</td>
+      <td>-0.004429</td>
+      <td>0.001063</td>
+      <td>-0.009557</td>
+      <td>0.103449</td>
+      <td>-0.046463</td>
+      <td>-0.075625</td>
+      <td>-0.248968</td>
+      <td>1.000000</td>
+      <td>0.190112</td>
+      <td>0.000593</td>
+    </tr>
+    <tr>
       <th>gyro_z</th>
+      <td>-0.000211</td>
+      <td>-0.001250</td>
+      <td>-0.001423</td>
+      <td>-0.001623</td>
+      <td>0.001298</td>
+      <td>-0.000615</td>
+      <td>0.049340</td>
+      <td>-0.214202</td>
+      <td>0.004020</td>
+      <td>-0.005052</td>
+      <td>0.001530</td>
+      <td>-0.008997</td>
+      <td>0.197740</td>
+      <td>0.009541</td>
+      <td>0.057075</td>
+      <td>0.337553</td>
+      <td>0.190112</td>
+      <td>1.000000</td>
+      <td>-0.001055</td>
+    </tr>
+    <tr>
       <th>reset</th>
-      <th>time_stamp</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>110864</th>
-      <td>110865</td>
-      <td>31.56</td>
-      <td>27.52</td>
-      <td>24.83</td>
-      <td>42.94</td>
-      <td>1005.83</td>
-      <td>1.58</td>
-      <td>49.93</td>
-      <td>129.60</td>
-      <td>-15.169673</td>
-      <td>-27.642610</td>
-      <td>1.563183</td>
-      <td>-0.000682</td>
-      <td>0.017743</td>
-      <td>0.014646</td>
-      <td>-0.000264</td>
-      <td>0.000206</td>
-      <td>0.000196</td>
-      <td>0</td>
-      <td>2016-02-29 09:24:21</td>
-    </tr>
-    <tr>
-      <th>110865</th>
-      <td>110866</td>
-      <td>31.55</td>
-      <td>27.50</td>
-      <td>24.83</td>
-      <td>42.72</td>
-      <td>1005.85</td>
-      <td>1.89</td>
-      <td>49.92</td>
-      <td>130.51</td>
-      <td>-15.832622</td>
-      <td>-27.729389</td>
-      <td>1.785682</td>
-      <td>-0.000736</td>
-      <td>0.017570</td>
-      <td>0.014855</td>
-      <td>0.000143</td>
-      <td>0.000199</td>
-      <td>-0.000024</td>
-      <td>0</td>
-      <td>2016-02-29 09:24:30</td>
-    </tr>
-    <tr>
-      <th>110866</th>
-      <td>110867</td>
-      <td>31.58</td>
-      <td>27.50</td>
-      <td>24.83</td>
-      <td>42.83</td>
-      <td>1005.85</td>
-      <td>2.09</td>
-      <td>50.00</td>
-      <td>132.04</td>
-      <td>-16.646212</td>
-      <td>-27.719479</td>
-      <td>1.629533</td>
-      <td>-0.000647</td>
-      <td>0.017657</td>
-      <td>0.014799</td>
-      <td>0.000537</td>
-      <td>0.000257</td>
-      <td>0.000057</td>
-      <td>0</td>
-      <td>2016-02-29 09:24:41</td>
-    </tr>
-    <tr>
-      <th>110867</th>
-      <td>110868</td>
-      <td>31.62</td>
-      <td>27.50</td>
-      <td>24.83</td>
-      <td>42.81</td>
-      <td>1005.88</td>
-      <td>2.88</td>
-      <td>49.69</td>
-      <td>133.00</td>
-      <td>-17.270447</td>
-      <td>-27.793136</td>
-      <td>1.703806</td>
-      <td>-0.000835</td>
-      <td>0.017635</td>
-      <td>0.014877</td>
-      <td>0.000534</td>
-      <td>0.000456</td>
-      <td>0.000195</td>
-      <td>0</td>
-      <td>2016-02-29 09:24:50</td>
-    </tr>
-    <tr>
-      <th>110868</th>
-      <td>110869</td>
-      <td>31.57</td>
-      <td>27.51</td>
-      <td>24.83</td>
-      <td>42.94</td>
-      <td>1005.86</td>
-      <td>2.17</td>
-      <td>49.77</td>
-      <td>134.18</td>
-      <td>-17.885872</td>
-      <td>-27.824149</td>
-      <td>1.293345</td>
-      <td>-0.000787</td>
-      <td>0.017261</td>
-      <td>0.014380</td>
-      <td>0.000459</td>
-      <td>0.000076</td>
-      <td>0.000030</td>
-      <td>0</td>
-      <td>2016-02-29 09:25:00</td>
+      <td>-0.005202</td>
+      <td>-0.002970</td>
+      <td>-0.004325</td>
+      <td>-0.004205</td>
+      <td>-0.002066</td>
+      <td>-0.006259</td>
+      <td>-0.000176</td>
+      <td>0.000636</td>
+      <td>-0.000558</td>
+      <td>-0.002879</td>
+      <td>-0.001335</td>
+      <td>-0.002151</td>
+      <td>0.002173</td>
+      <td>0.004648</td>
+      <td>0.000554</td>
+      <td>0.001009</td>
+      <td>0.000593</td>
+      <td>-0.001055</td>
+      <td>1.000000</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
+</section>
+<section id="2.6-Guardiamo-le-colonne">
+<h3>2.6 Guardiamo le colonne<a class="headerlink" href="#2.6-Guardiamo-le-colonne" title="Permalink to this headline"></a></h3>
 <p>La proprietà <code class="docutils literal notranslate"><span class="pre">colums</span></code> restituisce le intestazioni di colonna:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
@@ -3489,7 +4338,7 @@ Name: humidity, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3502,7 +4351,7 @@ Index([&#39;ROW_ID&#39;, &#39;temp_cpu&#39;, &#39;temp_h&#39;, &#39;temp_p&#39;,
 </div>
 <p><strong>Nota</strong>: Come si vede qua sopra, il tipo dell’oggetto ritornato non è una lista, ma un contenitore speciale definito da pandas:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -3510,7 +4359,7 @@ Index([&#39;ROW_ID&#39;, &#39;temp_cpu&#39;, &#39;temp_h&#39;, &#39;temp_p&#39;,
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[98]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3520,7 +4369,7 @@ pandas.core.indexes.base.Index
 </div>
 <p>Ciononostante, possiamo accedere agli elementi di questo contenitore usando indici dentro le parentesi quadre:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -3528,7 +4377,7 @@ pandas.core.indexes.base.Index
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3537,7 +4386,7 @@ pandas.core.indexes.base.Index
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -3545,7 +4394,7 @@ pandas.core.indexes.base.Index
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3553,484 +4402,122 @@ pandas.core.indexes.base.Index
 &#39;temp_cpu&#39;
 </pre></div></div>
 </div>
-<p>Il metodo <code class="docutils literal notranslate"><span class="pre">corr</span></code> permette di calcolare la correlazione tra le colonne del DataFrame, con valori da -1.0 a +1.0:</p>
+</section>
+<section id="2.7-Cos'è-una-colonna?">
+<h3>2.7 Cos’è una colonna?<a class="headerlink" href="#2.7-Cos'è-una-colonna?" title="Permalink to this headline"></a></h3>
+<p>Possiamo accedere ad una colonna così:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ROW_ID</th>
-      <th>temp_cpu</th>
-      <th>temp_h</th>
-      <th>temp_p</th>
-      <th>humidity</th>
-      <th>pressure</th>
-      <th>pitch</th>
-      <th>roll</th>
-      <th>yaw</th>
-      <th>mag_x</th>
-      <th>mag_y</th>
-      <th>mag_z</th>
-      <th>accel_x</th>
-      <th>accel_y</th>
-      <th>accel_z</th>
-      <th>gyro_x</th>
-      <th>gyro_y</th>
-      <th>gyro_z</th>
-      <th>reset</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ROW_ID</th>
-      <td>1.000000</td>
-      <td>0.361391</td>
-      <td>0.435289</td>
-      <td>0.339916</td>
-      <td>-0.110241</td>
-      <td>0.243337</td>
-      <td>-0.007741</td>
-      <td>-0.390159</td>
-      <td>-0.034877</td>
-      <td>-0.035966</td>
-      <td>-0.025818</td>
-      <td>0.108138</td>
-      <td>-0.132291</td>
-      <td>-0.918587</td>
-      <td>-0.080899</td>
-      <td>-0.001906</td>
-      <td>-0.004913</td>
-      <td>-0.000211</td>
-      <td>-0.005202</td>
-    </tr>
-    <tr>
-      <th>temp_cpu</th>
-      <td>0.361391</td>
-      <td>1.000000</td>
-      <td>0.986872</td>
-      <td>0.991672</td>
-      <td>-0.297081</td>
-      <td>0.038065</td>
-      <td>0.008076</td>
-      <td>-0.171644</td>
-      <td>-0.117972</td>
-      <td>0.005145</td>
-      <td>-0.285192</td>
-      <td>-0.120838</td>
-      <td>-0.023582</td>
-      <td>-0.446358</td>
-      <td>-0.029155</td>
-      <td>0.002511</td>
-      <td>0.005947</td>
-      <td>-0.001250</td>
-      <td>-0.002970</td>
-    </tr>
-    <tr>
-      <th>temp_h</th>
-      <td>0.435289</td>
-      <td>0.986872</td>
-      <td>1.000000</td>
-      <td>0.993260</td>
-      <td>-0.281422</td>
-      <td>0.070882</td>
-      <td>0.005145</td>
-      <td>-0.199628</td>
-      <td>-0.117870</td>
-      <td>0.000428</td>
-      <td>-0.276276</td>
-      <td>-0.098864</td>
-      <td>-0.032188</td>
-      <td>-0.510126</td>
-      <td>-0.043213</td>
-      <td>0.001771</td>
-      <td>0.005020</td>
-      <td>-0.001423</td>
-      <td>-0.004325</td>
-    </tr>
-    <tr>
-      <th>temp_p</th>
-      <td>0.339916</td>
-      <td>0.991672</td>
-      <td>0.993260</td>
-      <td>1.000000</td>
-      <td>-0.288373</td>
-      <td>0.035496</td>
-      <td>0.006750</td>
-      <td>-0.163685</td>
-      <td>-0.118463</td>
-      <td>0.004338</td>
-      <td>-0.283427</td>
-      <td>-0.114407</td>
-      <td>-0.018047</td>
-      <td>-0.428884</td>
-      <td>-0.036505</td>
-      <td>0.001829</td>
-      <td>0.006127</td>
-      <td>-0.001623</td>
-      <td>-0.004205</td>
-    </tr>
-    <tr>
-      <th>humidity</th>
-      <td>-0.110241</td>
-      <td>-0.297081</td>
-      <td>-0.281422</td>
-      <td>-0.288373</td>
-      <td>1.000000</td>
-      <td>0.434374</td>
-      <td>0.004050</td>
-      <td>0.101304</td>
-      <td>0.031664</td>
-      <td>-0.035146</td>
-      <td>0.077897</td>
-      <td>0.076424</td>
-      <td>-0.009741</td>
-      <td>0.226281</td>
-      <td>0.005281</td>
-      <td>0.004345</td>
-      <td>0.003457</td>
-      <td>0.001298</td>
-      <td>-0.002066</td>
-    </tr>
-    <tr>
-      <th>pressure</th>
-      <td>0.243337</td>
-      <td>0.038065</td>
-      <td>0.070882</td>
-      <td>0.035496</td>
-      <td>0.434374</td>
-      <td>1.000000</td>
-      <td>0.003018</td>
-      <td>0.011815</td>
-      <td>-0.051697</td>
-      <td>-0.040183</td>
-      <td>-0.074578</td>
-      <td>0.092352</td>
-      <td>0.013556</td>
-      <td>-0.115642</td>
-      <td>-0.221208</td>
-      <td>-0.000611</td>
-      <td>-0.002493</td>
-      <td>-0.000615</td>
-      <td>-0.006259</td>
-    </tr>
-    <tr>
-      <th>pitch</th>
-      <td>-0.007741</td>
-      <td>0.008076</td>
-      <td>0.005145</td>
-      <td>0.006750</td>
-      <td>0.004050</td>
-      <td>0.003018</td>
-      <td>1.000000</td>
-      <td>0.087941</td>
-      <td>-0.011611</td>
-      <td>0.013331</td>
-      <td>0.006133</td>
-      <td>0.000540</td>
-      <td>0.043285</td>
-      <td>0.009015</td>
-      <td>-0.039146</td>
-      <td>0.066618</td>
-      <td>-0.015034</td>
-      <td>0.049340</td>
-      <td>-0.000176</td>
-    </tr>
-    <tr>
-      <th>roll</th>
-      <td>-0.390159</td>
-      <td>-0.171644</td>
-      <td>-0.199628</td>
-      <td>-0.163685</td>
-      <td>0.101304</td>
-      <td>0.011815</td>
-      <td>0.087941</td>
-      <td>1.000000</td>
-      <td>0.095354</td>
-      <td>-0.020947</td>
-      <td>0.060297</td>
-      <td>-0.080620</td>
-      <td>0.116637</td>
-      <td>0.462630</td>
-      <td>-0.167905</td>
-      <td>-0.115873</td>
-      <td>-0.002509</td>
-      <td>-0.214202</td>
-      <td>0.000636</td>
-    </tr>
-    <tr>
-      <th>yaw</th>
-      <td>-0.034877</td>
-      <td>-0.117972</td>
-      <td>-0.117870</td>
-      <td>-0.118463</td>
-      <td>0.031664</td>
-      <td>-0.051697</td>
-      <td>-0.011611</td>
-      <td>0.095354</td>
-      <td>1.000000</td>
-      <td>0.257971</td>
-      <td>0.549394</td>
-      <td>-0.328360</td>
-      <td>0.006943</td>
-      <td>0.044157</td>
-      <td>-0.013634</td>
-      <td>0.003106</td>
-      <td>0.003665</td>
-      <td>0.004020</td>
-      <td>-0.000558</td>
-    </tr>
-    <tr>
-      <th>mag_x</th>
-      <td>-0.035966</td>
-      <td>0.005145</td>
-      <td>0.000428</td>
-      <td>0.004338</td>
-      <td>-0.035146</td>
-      <td>-0.040183</td>
-      <td>0.013331</td>
-      <td>-0.020947</td>
-      <td>0.257971</td>
-      <td>1.000000</td>
-      <td>0.001239</td>
-      <td>-0.213070</td>
-      <td>-0.006629</td>
-      <td>0.027921</td>
-      <td>0.021524</td>
-      <td>-0.004954</td>
-      <td>-0.004429</td>
-      <td>-0.005052</td>
-      <td>-0.002879</td>
-    </tr>
-    <tr>
-      <th>mag_y</th>
-      <td>-0.025818</td>
-      <td>-0.285192</td>
-      <td>-0.276276</td>
-      <td>-0.283427</td>
-      <td>0.077897</td>
-      <td>-0.074578</td>
-      <td>0.006133</td>
-      <td>0.060297</td>
-      <td>0.549394</td>
-      <td>0.001239</td>
-      <td>1.000000</td>
-      <td>-0.266351</td>
-      <td>0.014057</td>
-      <td>0.051619</td>
-      <td>-0.053016</td>
-      <td>0.001239</td>
-      <td>0.001063</td>
-      <td>0.001530</td>
-      <td>-0.001335</td>
-    </tr>
-    <tr>
-      <th>mag_z</th>
-      <td>0.108138</td>
-      <td>-0.120838</td>
-      <td>-0.098864</td>
-      <td>-0.114407</td>
-      <td>0.076424</td>
-      <td>0.092352</td>
-      <td>0.000540</td>
-      <td>-0.080620</td>
-      <td>-0.328360</td>
-      <td>-0.213070</td>
-      <td>-0.266351</td>
-      <td>1.000000</td>
-      <td>0.024718</td>
-      <td>-0.083914</td>
-      <td>-0.061317</td>
-      <td>-0.008470</td>
-      <td>-0.009557</td>
-      <td>-0.008997</td>
-      <td>-0.002151</td>
-    </tr>
-    <tr>
-      <th>accel_x</th>
-      <td>-0.132291</td>
-      <td>-0.023582</td>
-      <td>-0.032188</td>
-      <td>-0.018047</td>
-      <td>-0.009741</td>
-      <td>0.013556</td>
-      <td>0.043285</td>
-      <td>0.116637</td>
-      <td>0.006943</td>
-      <td>-0.006629</td>
-      <td>0.014057</td>
-      <td>0.024718</td>
-      <td>1.000000</td>
-      <td>0.095286</td>
-      <td>-0.262305</td>
-      <td>0.035314</td>
-      <td>0.103449</td>
-      <td>0.197740</td>
-      <td>0.002173</td>
-    </tr>
-    <tr>
-      <th>accel_y</th>
-      <td>-0.918587</td>
-      <td>-0.446358</td>
-      <td>-0.510126</td>
-      <td>-0.428884</td>
-      <td>0.226281</td>
-      <td>-0.115642</td>
-      <td>0.009015</td>
-      <td>0.462630</td>
-      <td>0.044157</td>
-      <td>0.027921</td>
-      <td>0.051619</td>
-      <td>-0.083914</td>
-      <td>0.095286</td>
-      <td>1.000000</td>
-      <td>0.120215</td>
-      <td>0.043263</td>
-      <td>-0.046463</td>
-      <td>0.009541</td>
-      <td>0.004648</td>
-    </tr>
-    <tr>
-      <th>accel_z</th>
-      <td>-0.080899</td>
-      <td>-0.029155</td>
-      <td>-0.043213</td>
-      <td>-0.036505</td>
-      <td>0.005281</td>
-      <td>-0.221208</td>
-      <td>-0.039146</td>
-      <td>-0.167905</td>
-      <td>-0.013634</td>
-      <td>0.021524</td>
-      <td>-0.053016</td>
-      <td>-0.061317</td>
-      <td>-0.262305</td>
-      <td>0.120215</td>
-      <td>1.000000</td>
-      <td>0.078315</td>
-      <td>-0.075625</td>
-      <td>0.057075</td>
-      <td>0.000554</td>
-    </tr>
-    <tr>
-      <th>gyro_x</th>
-      <td>-0.001906</td>
-      <td>0.002511</td>
-      <td>0.001771</td>
-      <td>0.001829</td>
-      <td>0.004345</td>
-      <td>-0.000611</td>
-      <td>0.066618</td>
-      <td>-0.115873</td>
-      <td>0.003106</td>
-      <td>-0.004954</td>
-      <td>0.001239</td>
-      <td>-0.008470</td>
-      <td>0.035314</td>
-      <td>0.043263</td>
-      <td>0.078315</td>
-      <td>1.000000</td>
-      <td>-0.248968</td>
-      <td>0.337553</td>
-      <td>0.001009</td>
-    </tr>
-    <tr>
-      <th>gyro_y</th>
-      <td>-0.004913</td>
-      <td>0.005947</td>
-      <td>0.005020</td>
-      <td>0.006127</td>
-      <td>0.003457</td>
-      <td>-0.002493</td>
-      <td>-0.015034</td>
-      <td>-0.002509</td>
-      <td>0.003665</td>
-      <td>-0.004429</td>
-      <td>0.001063</td>
-      <td>-0.009557</td>
-      <td>0.103449</td>
-      <td>-0.046463</td>
-      <td>-0.075625</td>
-      <td>-0.248968</td>
-      <td>1.000000</td>
-      <td>0.190112</td>
-      <td>0.000593</td>
-    </tr>
-    <tr>
-      <th>gyro_z</th>
-      <td>-0.000211</td>
-      <td>-0.001250</td>
-      <td>-0.001423</td>
-      <td>-0.001623</td>
-      <td>0.001298</td>
-      <td>-0.000615</td>
-      <td>0.049340</td>
-      <td>-0.214202</td>
-      <td>0.004020</td>
-      <td>-0.005052</td>
-      <td>0.001530</td>
-      <td>-0.008997</td>
-      <td>0.197740</td>
-      <td>0.009541</td>
-      <td>0.057075</td>
-      <td>0.337553</td>
-      <td>0.190112</td>
-      <td>1.000000</td>
-      <td>-0.001055</td>
-    </tr>
-    <tr>
-      <th>reset</th>
-      <td>-0.005202</td>
-      <td>-0.002970</td>
-      <td>-0.004325</td>
-      <td>-0.004205</td>
-      <td>-0.002066</td>
-      <td>-0.006259</td>
-      <td>-0.000176</td>
-      <td>0.000636</td>
-      <td>-0.000558</td>
-      <td>-0.002879</td>
-      <td>-0.001335</td>
-      <td>-0.002151</td>
-      <td>0.002173</td>
-      <td>0.004648</td>
-      <td>0.000554</td>
-      <td>0.001009</td>
-      <td>0.000593</td>
-      <td>-0.001055</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0         44.94
+1         45.12
+2         45.12
+3         45.32
+4         45.18
+          ...
+110864    42.94
+110865    42.72
+110866    42.83
+110867    42.81
+110868    42.94
+Name: humidity, Length: 110869, dtype: float64
+</pre></div></div>
 </div>
-<section id="2.1-Esercizio---info-meteo">
-<h3>2.1 Esercizio - info meteo<a class="headerlink" href="#2.1-Esercizio---info-meteo" title="Permalink to this headline"></a></h3>
+<p>Ancora più comodamente, puoi usare la notazione con il punto:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">humidity</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0         44.94
+1         45.12
+2         45.12
+3         45.32
+4         45.18
+          ...
+110864    42.94
+110865    42.72
+110866    42.83
+110867    42.81
+110868    42.94
+Name: humidity, Length: 110869, dtype: float64
+</pre></div></div>
+</div>
+<div class="admonition warning">
+<p><strong>ATTENZIONE: sembrano due colonne, ma in realtà è solo una!</strong></p>
+</div>
+<p>La lista di numeri a sinistra è l’indice intero che Pandas ha automaticamente assegnato al dataset al momento dell’apertura (parte da zero).</p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE agli spazi!</strong></p>
+<p>Nel caso il nome del campo avesse degli spazi (es. <code class="docutils literal notranslate"><span class="pre">'rotazioni</span> <span class="pre">frullatore'</span></code>), <strong>non</strong> si può usare la notazione con il punto ma si è costretti ad usare la notazione con le quadre vista sopra (es: <code class="docutils literal notranslate"><span class="pre">df.['rotazioni</span> <span class="pre">frullatore']</span></code>)</p>
+</div>
+<p>Il tipo di una colonna è DataSeries:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">humidity</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+pandas.core.series.Series
+</pre></div></div>
+</div>
+<p>Alcune operazioni funzionano anche sulle colonne singole, per esempio <code class="docutils literal notranslate"><span class="pre">describe()</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">humidity</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+count    110869.000000
+mean         46.252005
+std           1.907273
+min          42.270000
+25%          45.230000
+50%          46.130000
+75%          46.880000
+max          60.590000
+Name: humidity, dtype: float64
+</pre></div></div>
+</div>
+</section>
+<section id="2.8-Esercizio---info-meteo">
+<h3>2.8 Esercizio - info meteo<a class="headerlink" href="#2.8-Esercizio---info-meteo" title="Permalink to this headline"></a></h3>
 <p>✪ a) Crea un nuovo dataframe <code class="docutils literal notranslate"><span class="pre">meteo</span></code> importando i dati dal file <a class="reference external" href="meteo.csv">meteo.csv</a>, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">https://www.meteotrentino.it</a>). <strong>IMPORTANTE</strong>: assegna il dataframe ad una variabile chiamata <code class="docutils literal notranslate"><span class="pre">meteo</span></code> (così evitiamo confusione con il dataframe dell’AstroPi)</p>
 <ol class="loweralpha simple" start="2">
 <li><p>Visualizza le informazioni relative a questo Dataframe.</p></li>
@@ -4038,7 +4525,7 @@ pandas.core.indexes.base.Index
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui - crea il dataframe</span>
@@ -4084,7 +4571,7 @@ HEAD():
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4153,7 +4640,7 @@ HEAD():
 </div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui - crea il dataframe</span>
@@ -4187,7 +4674,7 @@ HEAD():
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4264,7 +4751,7 @@ HEAD():
 <h3>3.1 Un esempio<a class="headerlink" href="#3.1-Un-esempio" title="Permalink to this headline"></a></h3>
 <p>Riprendiamo un esempio usando l’approccio in <em>stile Matlab</em>. Plotteremo una retta passando due liste di coordinate, una per le x e una per le y:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
@@ -4274,7 +4761,7 @@ HEAD():
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[104]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -4289,12 +4776,12 @@ HEAD():
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_39_0.png" src="../_images/pandas_pandas1-sol_39_0.png" />
+<img alt="../_images/pandas_pandas1-sol_52_0.png" src="../_images/pandas_pandas1-sol_52_0.png" />
 </div>
 </div>
 <p>Possiamo anche creare serie con numpy. Proviamo a fare una parabola:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[105]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -4306,7 +4793,7 @@ HEAD():
 </div>
 <p>Utilizziamo la funzione <code class="docutils literal notranslate"><span class="pre">type</span></code> per capire che tipo di dati sono x e y:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -4314,7 +4801,7 @@ HEAD():
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[106]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4323,7 +4810,7 @@ numpy.ndarray
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -4331,7 +4818,7 @@ numpy.ndarray
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[107]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4342,7 +4829,7 @@ numpy.ndarray
 <p>Si tratta quindi di vettori di NumPy.</p>
 <p>Let’s plot it:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;La parabola&#39;</span><span class="p">)</span>
@@ -4354,13 +4841,13 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_46_0.png" src="../_images/pandas_pandas1-sol_46_0.png" />
+<img alt="../_images/pandas_pandas1-sol_59_0.png" src="../_images/pandas_pandas1-sol_59_0.png" />
 </div>
 </div>
 <p>Se vogliamo che le unità dell’asse x siano della stessa dimensione di quelle dell’asse y, possiamo utilizzare la funzione <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gca.html?highlight=matplotlib%20pyplot%20gca#matplotlib.pyplot.gca">gca</a></p>
 <p>Per settare i limiti delle x e delle y, possiamo usare <code class="docutils literal notranslate"><span class="pre">xlim</span></code> e <code class="docutils literal notranslate"><span class="pre">ylim</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
@@ -4376,7 +4863,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_48_0.png" src="../_images/pandas_pandas1-sol_48_0.png" />
+<img alt="../_images/pandas_pandas1-sol_61_0.png" src="../_images/pandas_pandas1-sol_61_0.png" />
 </div>
 </div>
 </section>
@@ -4385,7 +4872,7 @@ numpy.ndarray
 <p>Si possono ricavare grafici direttamente da strutture pandas, sempre usando lo <em>stile matlab</em>. Facciamo un esempio semplice, per casi più complessi rimandiamo alla documentazione di <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html">DataFrame.plot</a>.</p>
 <p>In caso di un numero molto elevato di dati, può essere utile avere un’idea qualitativa dei dati, mettendoli in grafico:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">humidity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Humidity&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4399,32 +4886,42 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_50_0.png" src="../_images/pandas_pandas1-sol_50_0.png" />
+<img alt="../_images/pandas_pandas1-sol_63_0.png" src="../_images/pandas_pandas1-sol_63_0.png" />
 </div>
 </div>
-<p>Proviamo a mettere valori di pressione sull’asse orizzontale, e vedere quali valori di umidità sull’asse verticale corrispondono ad una certa pressione:</p>
+<p>Volendo, è sempre possibile usare direttamente la funzione originale <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>, basta passargli una serie per le coordinate x e una per le y. Per esempio, se vogliamo replicare l’esempio di sopra per la pressione, per le coordinate x potremmo estrarci l’indice del dataframe che è un iterabile:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pressure&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f1c8c292490&gt;]
+RangeIndex(start=0, stop=110869, step=1)
 </pre></div></div>
+</div>
+<p>e passarlo come primo parametro a <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>. Come secondo parametro possiamo passare direttamente la serie dell’umidità, essendo anche quest’ultima un iterabile Python automaticamente riuscirà a prelevare i valori delle celle:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># previene visualizzazione caratteri strani</span>
+</pre></div>
+</div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_52_1.png" src="../_images/pandas_pandas1-sol_52_1.png" />
+<img alt="../_images/pandas_pandas1-sol_67_0.png" src="../_images/pandas_pandas1-sol_67_0.png" />
 </div>
 </div>
 </section>
@@ -4437,7 +4934,7 @@ numpy.ndarray
 <p>Riportiamo qui l’indicizzazione più semplice tramite numeri di riga.</p>
 <p>Per ottenere la i-esima serie si utilizza il metodo <code class="docutils literal notranslate"><span class="pre">iloc[i]</span></code> (qui riusiamo il dataset dell’AstroPI) :</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
@@ -4445,7 +4942,7 @@ numpy.ndarray
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4476,7 +4973,7 @@ Name: 6, dtype: object
 <p>È possibile selezionare un dataframe di posizioni contigue, utilizzando lo <em>slicing</em>, come abbiamo già fatto per <a class="reference external" href="https://it.softpython.org/strings/strings2-sol.html#Slice">stringhe</a> e <a class="reference external" href="https://it.softpython.org/lists/lists2-sol.html#Slice">liste</a>.</p>
 <p>Qua per esempio selezioniamo le righe dalla 5 <em>inclusa</em> alla 7 <em>esclusa</em> :</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
@@ -4484,7 +4981,7 @@ Name: 6, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[113]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4581,7 +5078,7 @@ Name: 6, dtype: object
 </div>
 <p>Filtrando le righe possiamo ‘zommare’ nel dataset, selezionando per esempio nel nuovo dataframe <code class="docutils literal notranslate"><span class="pre">df2</span></code> le righe tra la 12500esima (inclusa) e la 15000esima (esclusa):</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">12500</span><span class="p">:</span><span class="mi">15000</span><span class="p">]</span>
@@ -4589,31 +5086,31 @@ Name: 6, dtype: object
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;pressure&#39;</span><span class="p">],</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[115]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f1c8c1a2290&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f19c1ee5fd0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_60_1.png" src="../_images/pandas_pandas1-sol_60_1.png" />
+<img alt="../_images/pandas_pandas1-sol_75_1.png" src="../_images/pandas_pandas1-sol_75_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">humidity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Humidity&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4622,7 +5119,7 @@ Name: 6, dtype: object
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[116]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4634,7 +5131,7 @@ Name: 6, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_61_1.png" src="../_images/pandas_pandas1-sol_61_1.png" />
+<img alt="../_images/pandas_pandas1-sol_76_1.png" src="../_images/pandas_pandas1-sol_76_1.png" />
 </div>
 </div>
 </section>
@@ -4642,7 +5139,7 @@ Name: 6, dtype: object
 <h3>4.2 Filtrare<a class="headerlink" href="#4.2-Filtrare" title="Permalink to this headline"></a></h3>
 <p>È possibile filtrare i dati in base al soddisfacimento di una condizione, che si può esprimere indicando una colonna e un operatore di comparazione, per esempio:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&gt;=</span> <span class="mi">6</span>
@@ -4650,7 +5147,7 @@ Name: 6, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[117]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4671,7 +5168,7 @@ Name: ROW_ID, Length: 110869, dtype: bool
 </div>
 <p>Vediamo che si tratta di una serie di valori <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>, a seconda se il valore di <code class="docutils literal notranslate"><span class="pre">ROW_ID</span></code> è maggiore o uguale a <code class="docutils literal notranslate"><span class="pre">6</span></code>. Qual’è il tipo di questo risultato?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">)</span>
@@ -4679,7 +5176,7 @@ Name: ROW_ID, Length: 110869, dtype: bool
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[118]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4692,7 +5189,7 @@ pandas.core.series.Series
 <p>In modo analogo al <a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy1-sol.html#Filtrare">filtraggio in Numpy</a>, è possibile esprimere più condizioni con l’operatore speciale di congiunzione <code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">(df.ROW_ID</span> <span class="pre">&gt;=</span> <span class="pre">6)</span> <span class="pre">&amp;</span> <span class="pre">(df.ROW_ID</span> <span class="pre">&lt;=</span> <span class="pre">10)</span></code> sarà una serie di valori <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>, se ROW_ID è contemporaneamente maggiore o uguale a 6 e minore e uguale a 10.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">))</span>
@@ -4700,7 +5197,7 @@ pandas.core.series.Series
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[119]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -4713,7 +5210,7 @@ pandas.core.series.Series
 <p><strong>IMPORTANTE</strong>: usiamo <code class="docutils literal notranslate"><span class="pre">df</span></code> all’<em>esterno</em> dell’espressione <code class="docutils literal notranslate"><span class="pre">df[</span>&#160;&#160;&#160;&#160; <span class="pre">]</span></code> iniziando e chiudendo con le parentesi quadrate per dire a Python che vogliamo filtrare sul dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code>, e usiamo di nuovo <code class="docutils literal notranslate"><span class="pre">df</span></code> all’<em>interno</em> delle quadre per indicare su <em>quali colonne</em> e <em>quali righe</em> vogliamo filtrare</p>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span>  <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ROW_ID</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>  <span class="p">]</span>
@@ -4721,7 +5218,7 @@ pandas.core.series.Series
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[120]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4887,7 +5384,7 @@ pandas.core.series.Series
 </div>
 <p>Quindi se cerchiamo il record in cui la pressione è massima, utilizziamo la proprietà <code class="docutils literal notranslate"><span class="pre">values</span></code> della serie su cui calcoliamo il valore massimo:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span>  <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">pressure</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>  <span class="p">]</span>
@@ -4895,7 +5392,7 @@ pandas.core.series.Series
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[121]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4973,7 +5470,7 @@ pandas.core.series.Series
 <h3>4.3 Ordinare<a class="headerlink" href="#4.3-Ordinare" title="Permalink to this headline"></a></h3>
 <p>Per avere un NUOVO dataframe ordinato in base a una o più colonne possiamo usare il metodo <code class="docutils literal notranslate"><span class="pre">sort_values</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -4981,7 +5478,7 @@ pandas.core.series.Series
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[122]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5157,7 +5654,7 @@ pandas.core.series.Series
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -5181,7 +5678,7 @@ Media temperatura : 6.410701876302988
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5293,7 +5790,7 @@ Media temperatura : 6.410701876302988
 </div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -5312,7 +5809,7 @@ Media temperatura : 6.410701876302988
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[123]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5433,7 +5930,7 @@ Media temperatura : 6.410701876302988
 <h3>5.1 Filtrare per valori testuali<a class="headerlink" href="#5.1-Filtrare-per-valori-testuali" title="Permalink to this headline"></a></h3>
 <p>Quando vogliamo filtrare per valori testuali, possiamo usare <code class="docutils literal notranslate"><span class="pre">.str.contains</span></code>, qua per esempio selezioniamo tutte le rilevazioni degli ultimi giorni di febbraio (che hanno quindi il timestamp che contiene <code class="docutils literal notranslate"><span class="pre">2016-02-2</span></code>) :</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span>  <span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_stamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2016-02-2&#39;</span><span class="p">)</span>  <span class="p">]</span>
@@ -5441,7 +5938,7 @@ Media temperatura : 6.410701876302988
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[124]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5749,7 +6246,7 @@ Media temperatura : 6.410701876302988
 <p>Potresti essere tentato di usarlo per filtrare ma scoprirai presto che non funziona. Il motivo è che <code class="docutils literal notranslate"><span class="pre">in</span></code> produce <em>un</em> solo valore ma quando filtriamo vogliamo produrre una serie di booleani con <code class="docutils literal notranslate"><span class="pre">n</span></code> valori, uno per riga</p>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[125]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prova a verificare che succede se lo usi:</span>
@@ -5761,7 +6258,7 @@ Media temperatura : 6.410701876302988
 <h3>5.2 Estrarre stringhe<a class="headerlink" href="#5.2-Estrarre-stringhe" title="Permalink to this headline"></a></h3>
 <p>Per estrarre solo il giorno dalla colonna <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code>, possiamo usare <code class="docutils literal notranslate"><span class="pre">str</span></code> con l’operatore slice e parentesi quadre:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_stamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
@@ -5769,7 +6266,7 @@ Media temperatura : 6.410701876302988
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[127]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -5798,7 +6295,7 @@ Name: time_stamp, Length: 110869, dtype: object
 <p>Se vogliamo un sotto-insieme di colonne, possiamo indicare i nomi in una lista così:</p>
 <p><strong>NOTA</strong>: dentro le quadre esterne c’è una semplice lista di stringhe senza <code class="docutils literal notranslate"><span class="pre">df</span></code>!</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[128]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span>  <span class="p">[</span><span class="s1">&#39;temp_h&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_p&#39;</span><span class="p">,</span> <span class="s1">&#39;time_stamp&#39;</span><span class="p">]</span>  <span class="p">]</span>
@@ -5806,7 +6303,7 @@ Name: time_stamp, Length: 110869, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[128]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5907,7 +6404,7 @@ Name: time_stamp, Length: 110869, dtype: object
 </div>
 <p>Come sempre la selezione di colonne non cambia il dataframe originale:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[129]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -5915,7 +6412,7 @@ Name: time_stamp, Length: 110869, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[129]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6084,7 +6581,7 @@ Name: time_stamp, Length: 110869, dtype: object
 <h3>6.2 - Aggiungere Colonne<a class="headerlink" href="#6.2---Aggiungere-Colonne" title="Permalink to this headline"></a></h3>
 <p>E’ possibile ottenere nuove colonne effettuando calcoli da campi di altri colonne in modo molto naturale. Per esempio, qua ricaviamo la nuova colonna <code class="docutils literal notranslate"><span class="pre">mag_tot</span></code>, cioè il campo magnetico assoluto rilevato dalla stazione spaziale ricavandolo a partire da <code class="docutils literal notranslate"><span class="pre">mag_x</span></code>, <code class="docutils literal notranslate"><span class="pre">mag_y</span></code>, e <code class="docutils literal notranslate"><span class="pre">mag_z</span></code>, e poi la plottiamo:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;mag_tot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;mag_x&#39;</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;mag_y&#39;</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;mag_z&#39;</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
@@ -6093,7 +6590,7 @@ Name: time_stamp, Length: 110869, dtype: object
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[130]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6105,12 +6602,12 @@ Name: time_stamp, Length: 110869, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_93_1.png" src="../_images/pandas_pandas1-sol_93_1.png" />
+<img alt="../_images/pandas_pandas1-sol_108_1.png" src="../_images/pandas_pandas1-sol_108_1.png" />
 </div>
 </div>
 <p>Troviamo quando il campo magnetico era al massimo:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_stamp&#39;</span><span class="p">][(</span><span class="n">df</span><span class="o">.</span><span class="n">mag_tot</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">mag_tot</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())]</span>
@@ -6118,7 +6615,7 @@ Name: time_stamp, Length: 110869, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[131]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6132,7 +6629,7 @@ Name: time_stamp, dtype: object
 <h4>Scrivere solo in alcune righe<a class="headerlink" href="#Scrivere-solo-in-alcune-righe" title="Permalink to this headline"></a></h4>
 <p>La properietà <code class="docutils literal notranslate"><span class="pre">loc</span></code> ci permette di filtrare righe secondo una proprietà e selezionare una colonna, che può essere anche nuova. In questo caso, per le righe dove la temperatura cpu è eccessiva, scriviamo il valore <code class="docutils literal notranslate"><span class="pre">True</span></code> nei campi della colonna con intestazione <code class="docutils literal notranslate"><span class="pre">'Too</span> <span class="pre">hot'</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[132]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">temp_cpu</span> <span class="o">&gt;</span> <span class="mf">31.68</span><span class="p">),</span><span class="s1">&#39;Too hot&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
@@ -6141,7 +6638,7 @@ Name: time_stamp, dtype: object
 </div>
 <p>Vediamo la tabella risultante (scorri fino in fondo per vedere la nuova colonna). Notiamo come i valori delle righe che non abbiamo filtrato vengono rappresentati con <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, che letteralmente significa <a class="reference external" href="https://it.softpython.org/matrices-numpy/matrices-numpy1-sol.html#NaN-e-infinit%C3%A0">not a number</a>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[133]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -6149,7 +6646,7 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[133]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6322,7 +6819,7 @@ Name: time_stamp, dtype: object
 </div>
 <p>Pandas è una libreria molto flessibile, e fornisce diversi modi per ottenere gli stessi obbiettivi. Per esempio, possiamo effettuare la stessa operazione di sopra con il comando <code class="docutils literal notranslate"><span class="pre">np.where</span></code> come qua sotto. Ad esempio, aggiungiamo una colonna che mi dice se la pressione è sopra o sotto la media.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[134]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pressione_media</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -6338,7 +6835,7 @@ Name: time_stamp, dtype: object
 <p>Formula per calcolare la conversione dai gradi Celsius (C):</p>
 <p><span class="math notranslate nohighlight">\(Fahrenheit = \frac{9}{5}C + 32\)</span></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[135]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -6348,7 +6845,7 @@ Name: time_stamp, dtype: object
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -6369,7 +6866,7 @@ Name: time_stamp, dtype: object
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6444,7 +6941,7 @@ Name: time_stamp, dtype: object
 </div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -6461,7 +6958,7 @@ Name: time_stamp, dtype: object
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[136]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6544,7 +7041,7 @@ Name: time_stamp, dtype: object
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -6557,7 +7054,7 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[137]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -6570,7 +7067,7 @@ Name: time_stamp, dtype: object
 <p>Supponiamo di voler convertire tutti i valori della colonna temperatura da float a interi.</p>
 <p>Sappiamo che per convertire un float in un intero c’è la funzione predefinita di Python <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">23.7</span><span class="p">)</span>
@@ -6578,7 +7075,7 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[138]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6590,7 +7087,7 @@ Name: time_stamp, dtype: object
 <p>Per farlo, possiamo chiamare il metodo <code class="docutils literal notranslate"><span class="pre">transform</span></code> e passargli la funzione <code class="docutils literal notranslate"><span class="pre">int</span></code> <em>come parametro</em></p>
 <p><strong>NOTA</strong>: non ci sono parentesi tonde dopo <code class="docutils literal notranslate"><span class="pre">int</span></code> !!!</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -6598,7 +7095,7 @@ Name: time_stamp, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[139]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6620,7 +7117,7 @@ Name: humidity, Length: 110869, dtype: int64
 <p>Per chiarire cosa voglia dire <em>passare una funzione</em>, vediamo altri due modi <em>completamente equivalenti</em> che avremmo potuto usare per passare la funzione.</p>
 <p><strong>Definire una funzione</strong>: Avremmo potuto definire una funzione <code class="docutils literal notranslate"><span class="pre">mia_f</span></code> come questa (nota che la funzione DEVE RITORNARE qualcosa!)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mia_f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -6631,7 +7128,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[140]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6652,7 +7149,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 <p><strong>funzione lambda</strong>: Avremmo potuto usare una funzione <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, cioè una funzione senza un nome che è definita su una sola linea:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
@@ -6660,7 +7157,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[141]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6681,7 +7178,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 <p>Indipendentemente dal modo in cui scegliamo di passare la funzione, il metodo <code class="docutils literal notranslate"><span class="pre">tranform</span></code> non cambia il dataframe originale:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[142]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -6727,7 +7224,7 @@ memory usage: 19.5+ MB
 </div>
 <p>Se vogliamo aggiungere una nuova colonna, diciamo <code class="docutils literal notranslate"><span class="pre">humidity_int</span></code>, dobbiamo esplicitamente assegnare il risultato di <code class="docutils literal notranslate"><span class="pre">transform</span></code> alla nuova serie:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[143]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
@@ -6736,7 +7233,7 @@ memory usage: 19.5+ MB
 </div>
 <p>Nota come pandas automaticamente inferisce il tipo <code class="docutils literal notranslate"><span class="pre">int64</span></code> per la colonna appena creata:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[144]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -6792,7 +7289,7 @@ memory usage: 20.3+ MB
 <p>Per raggruppare oggetti ed effettuare statistiche su ogni gruppo si può usare il metodo <code class="docutils literal notranslate"><span class="pre">groupby</span></code>. Supponiamo di voler calcolare quante letture di <code class="docutils literal notranslate"><span class="pre">humidity</span></code> sono state fatte per ciascun valore intero di umidità <code class="docutils literal notranslate"><span class="pre">humidity_int</span></code> (qua usiamo il metodo pandas <code class="docutils literal notranslate"><span class="pre">groupby</span></code>, ma per gli istogrammi potresti anche usare <a class="reference external" href="https://stackoverflow.com/a/13130357">numpy</a>)</p>
 <p>Dopo il metodo <code class="docutils literal notranslate"><span class="pre">groupby</span></code> indichiamo prima la colonna su cui raggruppare (<code class="docutils literal notranslate"><span class="pre">humidity_int</span></code>), poi la colonna su cui effettuare la statistica (<code class="docutils literal notranslate"><span class="pre">'humidity'</span></code>) e infine la statistica da calcolare, in questo caso <code class="docutils literal notranslate"><span class="pre">.count()</span></code> (altre comuni sono <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code> e media <code class="docutils literal notranslate"><span class="pre">mean()</span></code>):</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[145]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">])[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -6800,7 +7297,7 @@ memory usage: 20.3+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[145]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6830,7 +7327,7 @@ Name: humidity, dtype: int64
 </div>
 <p>Nota che abbiamo ottenuto solo 19 righe. Per avere una serie che riempia tutta la tabella, assegnando a ciascuna riga il conteggio del proprio gruppo, possiamo usare <code class="docutils literal notranslate"><span class="pre">transform</span></code> così:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[146]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">])[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
@@ -6838,7 +7335,7 @@ Name: humidity, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[146]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6859,7 +7356,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 <p>Come al solito, <code class="docutils literal notranslate"><span class="pre">group_by</span></code> non modifica il dataframe, se vogliamo che il risultato sia salvato nel dataframe dobbiamo assegnare il risultato ad una nuova colonna:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[147]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Conteggio umidità&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">])[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
@@ -6867,7 +7364,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[148]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -6875,7 +7372,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[148]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -7197,7 +7694,7 @@ Name: humidity, Length: 110869, dtype: int64
 <h3>8.1 Plot meteo<a class="headerlink" href="#8.1-Plot-meteo" title="Permalink to this headline"></a></h3>
 <p>✪ Mettere in grafico l’andamento delle temperature del dataframe <em>meteo</em>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[149]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
@@ -7211,7 +7708,7 @@ Name: humidity, Length: 110869, dtype: int64
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7225,7 +7722,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7237,11 +7734,11 @@ Name: humidity, Length: 110869, dtype: int64
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_139_1.png" src="../_images/pandas_pandas1-sol_139_1.png" />
+<img alt="../_images/pandas_pandas1-sol_154_1.png" src="../_images/pandas_pandas1-sol_154_1.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7249,7 +7746,7 @@ Name: humidity, Length: 110869, dtype: int64
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[150]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7261,7 +7758,7 @@ Name: humidity, Length: 110869, dtype: int64
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_141_1.png" src="../_images/pandas_pandas1-sol_141_1.png" />
+<img alt="../_images/pandas_pandas1-sol_156_1.png" src="../_images/pandas_pandas1-sol_156_1.png" />
 </div>
 </div>
 </section>
@@ -7269,7 +7766,7 @@ Name: humidity, Length: 110869, dtype: int64
 <h3>8.2 Pressione meteo e pioggia<a class="headerlink" href="#8.2-Pressione-meteo-e-pioggia" title="Permalink to this headline"></a></h3>
 <p>✪ Nello stesso plot di sopra mostra la pressione e l’ammontare di pioggia.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[151]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -7279,7 +7776,7 @@ Name: humidity, Length: 110869, dtype: int64
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[152]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7294,11 +7791,11 @@ Name: humidity, Length: 110869, dtype: int64
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_145_0.png" src="../_images/pandas_pandas1-sol_145_0.png" />
+<img alt="../_images/pandas_pandas1-sol_160_0.png" src="../_images/pandas_pandas1-sol_160_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[152]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7309,7 +7806,7 @@ Name: humidity, Length: 110869, dtype: int64
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_147_0.png" src="../_images/pandas_pandas1-sol_147_0.png" />
+<img alt="../_images/pandas_pandas1-sol_162_0.png" src="../_images/pandas_pandas1-sol_162_0.png" />
 </div>
 </div>
 </section>
@@ -7336,7 +7833,7 @@ Name: humidity, Length: 110869, dtype: int64
 <li><p>Come alternative, potresti usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare i giorni. Tipicamente usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> non è una buona idea con Pandas, perchè con dataset larghi ci può voler molto ad eseguire gli aggiornamenti. Comunque, dato che questo dataset è piccolo a sufficienza, puoi provare ad usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare sui giorni e dovresti ottenere i risultati in un tempo ragionevole</p></li>
 </ul>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[153]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -7346,7 +7843,7 @@ Name: humidity, Length: 110869, dtype: int64
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[154]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7390,7 +7887,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[154]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7402,11 +7899,11 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_151_2.png" src="../_images/pandas_pandas1-sol_151_2.png" />
+<img alt="../_images/pandas_pandas1-sol_166_2.png" src="../_images/pandas_pandas1-sol_166_2.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[154]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7431,7 +7928,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[154]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7443,13 +7940,13 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_153_2.png" src="../_images/pandas_pandas1-sol_153_2.png" />
+<img alt="../_images/pandas_pandas1-sol_168_2.png" src="../_images/pandas_pandas1-sol_168_2.png" />
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[155]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7497,7 +7994,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[155]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7509,11 +8006,11 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_155_2.png" src="../_images/pandas_pandas1-sol_155_2.png" />
+<img alt="../_images/pandas_pandas1-sol_170_2.png" src="../_images/pandas_pandas1-sol_170_2.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[155]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7539,7 +8036,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[155]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7551,13 +8048,13 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_157_2.png" src="../_images/pandas_pandas1-sol_157_2.png" />
+<img alt="../_images/pandas_pandas1-sol_172_2.png" src="../_images/pandas_pandas1-sol_172_2.png" />
 </div>
 </div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[156]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7597,7 +8094,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[156]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7609,11 +8106,11 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_159_2.png" src="../_images/pandas_pandas1-sol_159_2.png" />
+<img alt="../_images/pandas_pandas1-sol_174_2.png" src="../_images/pandas_pandas1-sol_174_2.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[156]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7638,7 +8135,7 @@ CON TEMPERATURA MEDIA
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[156]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7650,7 +8147,7 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_161_2.png" src="../_images/pandas_pandas1-sol_161_2.png" />
+<img alt="../_images/pandas_pandas1-sol_176_2.png" src="../_images/pandas_pandas1-sol_176_2.png" />
 </div>
 </div>
 </section>
@@ -7668,7 +8165,7 @@ CON TEMPERATURA MEDIA
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[157]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
@@ -7703,7 +8200,7 @@ memory usage: 970.1+ KB
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[157]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="c1"># scrivi qui</span>
@@ -7737,7 +8234,7 @@ memory usage: 970.1+ KB
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[158]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -7747,7 +8244,7 @@ memory usage: 970.1+ KB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[158]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7756,7 +8253,7 @@ memory usage: 970.1+ KB
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[158]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -7764,7 +8261,7 @@ memory usage: 970.1+ KB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[158]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7777,7 +8274,7 @@ memory usage: 970.1+ KB
 <h3>9.3 - Grafico PM10<a class="headerlink" href="#9.3---Grafico-PM10" title="Permalink to this headline"></a></h3>
 <p>✪ Usando <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> come visto in un <a class="reference external" href="#Grafici-matplotlib-da-strutture-pandas">esempio precedente</a> (quindi passandogli direttamente le serie rilevanti di Pandas), mostra in un grafico l’andamento dei valori di inquinanti <code class="docutils literal notranslate"><span class="pre">PM10</span></code> nella giornata del 7 Maggio 2019</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[161]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -7787,7 +8284,7 @@ memory usage: 970.1+ KB
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[162]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
@@ -7809,11 +8306,11 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_178_0.png" src="../_images/pandas_pandas1-sol_178_0.png" />
+<img alt="../_images/pandas_pandas1-sol_193_0.png" src="../_images/pandas_pandas1-sol_193_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[162]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -7824,7 +8321,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_180_0.png" src="../_images/pandas_pandas1-sol_180_0.png" />
+<img alt="../_images/pandas_pandas1-sol_195_0.png" src="../_images/pandas_pandas1-sol_195_0.png" />
 </div>
 </div>
 </section>
@@ -7833,7 +8330,7 @@ memory usage: 970.1+ KB
 <h2>10. Unire tabelle<a class="headerlink" href="#10.-Unire-tabelle" title="Permalink to this headline"></a></h2>
 <p>Supponi di voler aggiungere una colonna con la posizione geografica della ISS. Per farlo, avresti bisogno di unire il nostro dataset con un altro che contenga questa informazione. Prendiamo per esempio il dataset <a class="reference external" href="iss-coords.csv">iss-coords.csv</a></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[163]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iss_coords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;iss-coords.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
@@ -7841,7 +8338,7 @@ memory usage: 970.1+ KB
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[164]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iss_coords</span>
@@ -7849,7 +8346,7 @@ memory usage: 970.1+ KB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[164]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -7950,7 +8447,7 @@ memory usage: 970.1+ KB
 </div>
 <p>Notiamo che c’è una colonna <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, che sfortunatamente ha un nome leggermente diverse dalla colonna <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> (nota l’underscore <code class="docutils literal notranslate"><span class="pre">_</span></code>) nel dataset original astropi:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[165]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -7998,7 +8495,7 @@ memory usage: 21.1+ MB
 </div>
 <p>Per fondere i dataset in base a due colonne, possiamo usare il comando <code class="docutils literal notranslate"><span class="pre">merge</span></code> così:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[166]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ricorda che merge produce un NUOVO dataframe:</span>
@@ -8013,7 +8510,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[167]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_astropi</span>
@@ -8021,7 +8518,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[167]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -8322,7 +8819,7 @@ memory usage: 21.1+ MB
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[168]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -8335,7 +8832,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[168]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -8651,7 +9148,7 @@ memory usage: 21.1+ MB
 </div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[168]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -8659,7 +9156,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[168]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -9012,7 +9509,7 @@ memory usage: 21.1+ MB
 <h3>11.2 Leggere shapefiles in GeoPandas<a class="headerlink" href="#11.2-Leggere-shapefiles-in-GeoPandas" title="Permalink to this headline"></a></h3>
 <p>Leggiamo con geopandas lo shapefile:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[169]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
@@ -9023,7 +9520,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[169]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -9099,7 +9596,7 @@ memory usage: 21.1+ MB
 </div>
 <p>Oltre alla solita tabella di Pandas, notiamo che tra le colonne ci sono dei codice <code class="docutils literal notranslate"><span class="pre">COD_REG</span></code> per identificare le regioni, i loro nomi <code class="docutils literal notranslate"><span class="pre">NOME_REG</span></code> e la geometria <code class="docutils literal notranslate"><span class="pre">geometry</span></code>. Chiamando <code class="docutils literal notranslate"><span class="pre">plot()</span></code> sul dataframe di geopandas possiamo vedere la cartina risultante:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[170]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -9108,7 +9605,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[170]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -9120,7 +9617,7 @@ memory usage: 21.1+ MB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_200_1.png" src="../_images/pandas_pandas1-sol_200_1.png" />
+<img alt="../_images/pandas_pandas1-sol_215_1.png" src="../_images/pandas_pandas1-sol_215_1.png" />
 </div>
 </div>
 </section>
@@ -9131,7 +9628,7 @@ memory usage: 21.1+ MB
 <p><strong>ATTENZIONE</strong>: Per il momento puoi ignorare il codice che segue, ci serve solo per caricare i dati nel dataframe <code class="docutils literal notranslate"><span class="pre">df_popolazione</span></code></p>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[171]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -9161,7 +9658,7 @@ memory usage: 21.1+ MB
 </div>
 <p>Vediamo qui il contenuto del file:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[172]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_popolazione</span> <span class="o">=</span> <span class="n">estrai_popolazione</span><span class="p">()</span>
@@ -9170,7 +9667,7 @@ memory usage: 21.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[172]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -9326,7 +9823,7 @@ memory usage: 21.1+ MB
 agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join</em>, che cerca stringhe simili nei due dataset e in base ad un misura di similarità tra stringhe stabilisce come associare righe della prima tabella a righe della seconda.</p>
 <p>Per</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[173]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">def</span> <span class="nf">fuzzy_join</span><span class="p">(</span><span class="n">df_geo</span><span class="p">,</span> <span class="n">df_right</span><span class="p">,</span> <span class="n">name_left</span><span class="p">,</span> <span class="n">name_right</span><span class="p">):</span>
@@ -9375,7 +9872,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[174]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabellona</span> <span class="o">=</span> <span class="n">fuzzy_join</span><span class="p">(</span><span class="n">df_regioni</span><span class="p">,</span> <span class="n">df_popolazione</span><span class="p">,</span> <span class="s1">&#39;NOME_REG&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">)</span>
@@ -9385,7 +9882,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[174]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -9610,7 +10107,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[175]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabellona</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;OrRd&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -9618,7 +10115,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[175]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -9630,7 +10127,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-sol_208_1.png" src="../_images/pandas_pandas1-sol_208_1.png" />
+<img alt="../_images/pandas_pandas1-sol_223_1.png" src="../_images/pandas_pandas1-sol_223_1.png" />
 </div>
 </div>
 </section>
@@ -9658,7 +10155,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 <li><p>basi territoriali <a class="reference external" href="https://www.istat.it/it/archivio/104317">https://www.istat.it/it/archivio/104317</a></p></li>
 </ul>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[176]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scarica la pagina HTML della popolazione, e la salva nel file &#39;popolazione.html&#39;</span>
