@@ -144,7 +144,7 @@ Sequenze
     Challenge <sequences/sequences2-chal.ipynb>
     
     
-A3 Algoritmi    
+A3 Algoritmi di base
 ============================
 
 Funzioni, gestione errori e testing
