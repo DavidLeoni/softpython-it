@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analitiche con Pandas - 1. basi &mdash; SoftPython</title>
+  <title>Analitiche con Pandas - 1. introduzione &mdash; SoftPython</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/jupman.3.5.7.css" type="text/css" />
@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="../_static/css/softpython-theme.3.5.7.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/softpython-theme-textures.3.5.7.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="canonical" href="https://it.softpython.org/pandas/pandas1-basics-sol.html" />
+    <link rel="canonical" href="https://it.softpython.org/pandas/pandas1-intro-sol.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -1821,7 +1821,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../toc-analytics.html#pandas">Pandas</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Basi</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Intro</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Scarica-zip-esercizi">Scarica zip esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#1.-Che-fare">1. Che fare</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#Controlla-l'installazione">Controlla l’installazione</a></li>
@@ -2412,7 +2412,7 @@
     
         <li><a href="../toc-analytics.html">Formati dati</a> &raquo;</li>
     
-    <li>Analitiche con Pandas - 1. basi</li>
+    <li>Analitiche con Pandas - 1. introduzione</li>
     -->
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -2688,8 +2688,8 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<section id="Analitiche-con-Pandas---1.-basi">
-<h1>Analitiche con Pandas - 1. basi<a class="headerlink" href="#Analitiche-con-Pandas---1.-basi" title="Permalink to this headline"></a></h1>
+<section id="Analitiche-con-Pandas---1.-introduzione">
+<h1>Analitiche con Pandas - 1. introduzione<a class="headerlink" href="#Analitiche-con-Pandas---1.-introduzione" title="Permalink to this headline"></a></h1>
 <section id="Scarica-zip-esercizi">
 <h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/pandas">Naviga file online</a></p>
@@ -2709,8 +2709,8 @@ div.rendered_html tbody tr:hover {
 <li><p>scompatta lo zip in una cartella, dovresti ottenere qualcosa del genere:</p></li>
 </ul>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pandas
-    pandas1-basics.ipynb
-    pandas1-basics-sol.ipynb
+    pandas1-intro.ipynb
+    pandas1-intro-sol.ipynb
     pandas2-advanced.ipynb
     pandas2-advanced-sol.ipynb
     pandas3-chal.ipynb
@@ -2721,7 +2721,7 @@ div.rendered_html tbody tr:hover {
 <p><strong>ATTENZIONE</strong>: Per essere visualizzato correttamente, il file del notebook DEVE essere nella cartella szippata.</p>
 </div>
 <ul class="simple">
-<li><p>apri il Jupyter Notebook da quella cartella. Due cose dovrebbero aprirsi, prima una console e poi un browser. Il browser dovrebbe mostrare una lista di file: naviga la lista e apri il notebook <code class="docutils literal notranslate"><span class="pre">pandas1-basics.ipynb</span></code></p></li>
+<li><p>apri il Jupyter Notebook da quella cartella. Due cose dovrebbero aprirsi, prima una console e poi un browser. Il browser dovrebbe mostrare una lista di file: naviga la lista e apri il notebook <code class="docutils literal notranslate"><span class="pre">pandas1-intro.ipynb</span></code></p></li>
 <li><p>Prosegui leggendo il file degli esercizi, ogni tanto al suo interno troverai delle scritte <strong>ESERCIZIO</strong>, che ti chiederanno di scrivere dei comandi Python nelle celle successive.</p></li>
 </ul>
 <p>Scorciatoie da tastiera:</p>
@@ -4517,7 +4517,7 @@ PRIME RIGHE:
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_52_0.png" src="../_images/pandas_pandas1-basics-sol_52_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_52_0.png" src="../_images/pandas_pandas1-intro-sol_52_0.png" />
 </div>
 </div>
 <p>Possiamo anche creare serie con numpy. Proviamo a fare una parabola:</p>
@@ -4582,7 +4582,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_59_0.png" src="../_images/pandas_pandas1-basics-sol_59_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_59_0.png" src="../_images/pandas_pandas1-intro-sol_59_0.png" />
 </div>
 </div>
 <p>Se vogliamo che le unità dell’asse x siano della stessa dimensione di quelle dell’asse y, possiamo utilizzare la funzione <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gca.html?highlight=matplotlib%20pyplot%20gca#matplotlib.pyplot.gca">gca</a></p>
@@ -4604,7 +4604,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_61_0.png" src="../_images/pandas_pandas1-basics-sol_61_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_61_0.png" src="../_images/pandas_pandas1-intro-sol_61_0.png" />
 </div>
 </div>
 </section>
@@ -4627,7 +4627,7 @@ numpy.ndarray
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_63_0.png" src="../_images/pandas_pandas1-basics-sol_63_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_63_0.png" src="../_images/pandas_pandas1-intro-sol_63_0.png" />
 </div>
 </div>
 <p>Volendo, è sempre possibile usare direttamente la funzione originale <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>, basta passargli una serie per le coordinate x e una per le y. Per esempio, se vogliamo replicare l’esempio di sopra per l’umidità, per le coordinate x potremmo estrarci l’indice del dataframe che è un iterabile:</p>
@@ -4662,7 +4662,7 @@ RangeIndex(start=0, stop=110869, step=1)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_67_0.png" src="../_images/pandas_pandas1-basics-sol_67_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_67_0.png" src="../_images/pandas_pandas1-intro-sol_67_0.png" />
 </div>
 </div>
 </section>
@@ -4836,14 +4836,14 @@ Name: 6, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7fccb75cfcd0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7eff5338ff90&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_75_1.png" src="../_images/pandas_pandas1-basics-sol_75_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_75_1.png" src="../_images/pandas_pandas1-intro-sol_75_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -4860,7 +4860,7 @@ Name: 6, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_76_0.png" src="../_images/pandas_pandas1-basics-sol_76_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_76_0.png" src="../_images/pandas_pandas1-intro-sol_76_0.png" />
 </div>
 </div>
 <section id="Differenza-tra-iloc-e-loc">
@@ -6109,7 +6109,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_111_1.png" src="../_images/pandas_pandas1-basics-sol_111_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_111_1.png" src="../_images/pandas_pandas1-intro-sol_111_1.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -6133,7 +6133,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_113_1.png" src="../_images/pandas_pandas1-basics-sol_113_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_113_1.png" src="../_images/pandas_pandas1-intro-sol_113_1.png" />
 </div>
 </div>
 </section>
@@ -6166,7 +6166,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_117_0.png" src="../_images/pandas_pandas1-basics-sol_117_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_117_0.png" src="../_images/pandas_pandas1-intro-sol_117_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -6181,7 +6181,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_119_0.png" src="../_images/pandas_pandas1-basics-sol_119_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_119_0.png" src="../_images/pandas_pandas1-intro-sol_119_0.png" />
 </div>
 </div>
 </section>
@@ -6847,7 +6847,7 @@ Name: time_stamp, Length: 110869, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_135_0.png" src="../_images/pandas_pandas1-basics-sol_135_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_135_0.png" src="../_images/pandas_pandas1-intro-sol_135_0.png" />
 </div>
 </div>
 <p>Troviamo quando il campo magnetico era al massimo:</p>
@@ -7845,9 +7845,9 @@ memory usage: 19.5+ MB
 <section id="7.1.1---caricare-il-file">
 <h4>7.1.1 - caricare il file<a class="headerlink" href="#7.1.1---caricare-il-file" title="Permalink to this headline"></a></h4>
 <p>✪ Carica in pandas il file <a class="reference external" href="aria.csv">aria.csv</a></p>
-<p><strong>IMPORTANTE</strong>: metti il dataframe nella variabile <code class="docutils literal notranslate"><span class="pre">aria</span></code>, così da non confonderlo coi dataframe precedenti</p>
-<p><strong>IMPORTANTE</strong>: metti come encoding <code class="docutils literal notranslate"><span class="pre">'latin-1'</span></code> (altrimenti a seconda del tuo sistema operativo potrebbe non caricarlo dando strani messaggi d’errore)</p>
-<p><strong>IMPORTANTE</strong>: se ricevi altri strani messaggi d’errore, aggiungi anche il parametro <code class="docutils literal notranslate"><span class="pre">engine=python</span></code></p>
+<p><strong>IMPORTANTE 1</strong>: metti il dataframe nella variabile <code class="docutils literal notranslate"><span class="pre">aria</span></code>, così da non confonderlo coi dataframe precedenti</p>
+<p><strong>IMPORTANTE 2</strong>: metti come encoding <code class="docutils literal notranslate"><span class="pre">'latin-1'</span></code> (altrimenti a seconda del tuo sistema operativo potrebbe non caricarlo dando strani messaggi d’errore)</p>
+<p><strong>IMPORTANTE 3</strong>: se ricevi altri strani messaggi d’errore, aggiungi anche il parametro <code class="docutils literal notranslate"><span class="pre">engine=python</span></code></p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
@@ -7992,7 +7992,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_189_0.png" src="../_images/pandas_pandas1-basics-sol_189_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_189_0.png" src="../_images/pandas_pandas1-intro-sol_189_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -8007,7 +8007,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-basics-sol_191_0.png" src="../_images/pandas_pandas1-basics-sol_191_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_191_0.png" src="../_images/pandas_pandas1-intro-sol_191_0.png" />
 </div>
 </div>
 </section>
@@ -8017,6 +8017,7 @@ memory usage: 970.1+ KB
 <p>Apri con Pandas il file <a class="reference external" href="game-of-thrones.csv">game-of-thrones.csv</a> che contiene gli episodi in varie annate.</p>
 <ul class="simple">
 <li><p>usa l’encoding <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code></p></li>
+<li><p><strong>IMPORTANTE</strong>: metti il dataframe nella variabile <code class="docutils literal notranslate"><span class="pre">game</span></code>, così da non confonderlo coi dataframe precedenti</p></li>
 </ul>
 <p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/bakar31/game-of-thronesgot">Kaggle</a> - License: <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></p>
 <section id="7.2.1-Esercizio---fan">
@@ -8044,9 +8045,9 @@ memory usage: 970.1+ KB
 
 
 <span class="c1"># scrivi qui</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;game-of-thrones.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="n">game</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;game-of-thrones.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
 
-<span class="n">titolidf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">preferiti</span><span class="p">[</span><span class="s1">&#39;Paolo&#39;</span><span class="p">]))</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">preferiti</span><span class="p">[</span><span class="s1">&#39;Chiara&#39;</span><span class="p">]))]</span>
+<span class="n">titolidf</span> <span class="o">=</span> <span class="n">game</span><span class="p">[</span>  <span class="p">(</span><span class="n">game</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">preferiti</span><span class="p">[</span><span class="s1">&#39;Paolo&#39;</span><span class="p">]))</span> <span class="o">|</span> <span class="p">(</span><span class="n">game</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">preferiti</span><span class="p">[</span><span class="s1">&#39;Chiara&#39;</span><span class="p">]))]</span>
 
 <span class="n">titolidf</span>
 </pre></div>
@@ -8219,7 +8220,7 @@ memory usage: 970.1+ KB
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anno</span> <span class="o">=</span> <span class="mi">17</span>
 
 <span class="c1"># scrivi qui</span>
-<span class="n">annidf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Original air date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">anno</span><span class="p">)</span>  <span class="p">]</span>
+<span class="n">annidf</span> <span class="o">=</span> <span class="n">game</span><span class="p">[</span> <span class="n">game</span><span class="p">[</span><span class="s1">&#39;Original air date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">anno</span><span class="p">)</span>  <span class="p">]</span>
 <span class="n">annidf</span>
 </pre></div>
 </div>
@@ -8492,8 +8493,8 @@ memory usage: 970.1+ KB
 <span class="k">def</span> <span class="nf">strutsan</span><span class="p">(</span><span class="n">cod_comune</span><span class="p">,</span> <span class="n">assistenza</span><span class="p">):</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;***** SOLUZIONE&#39;</span><span class="p">)</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;SANSTRUT001.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="p">[((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;COD_COMUNE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cod_comune</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSISTENZA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">assistenza</span><span class="p">))]</span>
+    <span class="n">strudf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;SANSTRUT001.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">strudf</span><span class="p">[((</span><span class="n">strudf</span><span class="p">[</span><span class="s1">&#39;COD_COMUNE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cod_comune</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">strudf</span><span class="p">[</span><span class="s1">&#39;ASSISTENZA&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">assistenza</span><span class="p">))]</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trovate&quot;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;strutture&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">res</span><span class="p">[</span> <span class="p">[</span><span class="s1">&#39;STRUTTURA&#39;</span><span class="p">,</span> <span class="s1">&#39;ASSISTENZA&#39;</span><span class="p">,</span> <span class="s1">&#39;COD_COMUNE&#39;</span><span class="p">,</span> <span class="s1">&#39;COMUNE&#39;</span><span class="p">]</span>  <span class="p">]</span>
@@ -8858,6 +8859,14 @@ Trovate 5 strutture
 <section id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con <a class="reference external" href="https://it.softpython.org/pandas/pandas2-advanced-sol.html">operazioni un po’ più avanzate</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
