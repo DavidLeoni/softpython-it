@@ -1887,7 +1887,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#1.5-Esercizio---Beni-culturali-Regione-Umbria">1.5 Esercizio - Beni culturali Regione Umbria</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#2.-Unire-tabelle">2. Unire tabelle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#2.-Congiungere-tabelle">2. Congiungere tabelle</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#2.2-Esercizio---migliorare-merge">2.2 Esercizio - migliorare merge</a></li>
 </ul>
 </li>
@@ -2693,7 +2693,8 @@ div.rendered_html tbody tr:hover {
 <section id="Scarica-zip-esercizi">
 <h2><a class="reference external" href="../_static/generated/pandas.zip">Scarica zip esercizi</a><a class="headerlink" href="#Scarica-zip-esercizi" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/DavidLeoni/softpython-it/tree/master/pandas">Naviga file online</a></p>
-<p>Vediamo come compiere azioni più elaborate in pandas, come il raggruppamento con <code class="docutils literal notranslate"><span class="pre">groupby</span></code>, l’unione di tabelle con <code class="docutils literal notranslate"><span class="pre">merge</span></code> e infine qualche cenno su come elaborare mappe geografiche con GeoPandas.</p>
+<p>Vediamo come compiere operazioni più elaborate in pandas, come il raggruppamento con <code class="docutils literal notranslate"><span class="pre">groupby</span></code>, la congiunzione di tabelle con <code class="docutils literal notranslate"><span class="pre">merge</span></code> e infine qualche cenno su come elaborare mappe geografiche con GeoPandas.</p>
+<p>Abbiamo scelto di riunirle in questo foglio perchè tipicamente sono operazioni in cui è più probabile che insorgano problemi e per risolverli sia necessario cercare soluzioni online.</p>
 </section>
 <section id="1.-Raggruppare">
 <h2>1. Raggruppare<a class="headerlink" href="#1.-Raggruppare" title="Permalink to this headline"></a></h2>
@@ -2702,7 +2703,7 @@ div.rendered_html tbody tr:hover {
 <li><p><a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html">PythonDataScienceHandbook: Aggregation and Grouping</a></p></li>
 </ul>
 <p>Per raggruppare oggetti ed effettuare statistiche su ogni gruppo si può usare il metodo <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
-<p>Vediamo un esempio di possibile raggruppamento, riprendendo il dataset di Astropi <a class="reference external" href="https://it.softpython.org/pandas/pandas1-intro-sol.html">descritto nel precedente tutorial</a>:</p>
+<p>Vediamo un esempio di possibile raggruppamento, riprendendo il dataset <a class="reference external" href="astropi.csv">astropi.csv</a> descritto <a class="reference external" href="https://it.softpython.org/pandas/pandas1-intro-sol.html">nel precedente tutorial</a>:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -5313,8 +5314,8 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </section>
 </section>
 </section>
-<section id="2.-Unire-tabelle">
-<h2>2. Unire tabelle<a class="headerlink" href="#2.-Unire-tabelle" title="Permalink to this headline"></a></h2>
+<section id="2.-Congiungere-tabelle">
+<h2>2. Congiungere tabelle<a class="headerlink" href="#2.-Congiungere-tabelle" title="Permalink to this headline"></a></h2>
 <p>Supponi di voler aggiungere una colonna con la posizione geografica della International Space Station (ISS). Per farlo, avresti bisogno di unire il nostro dataset con un altro che contenga questa informazione. Prendiamo per esempio il dataset <a class="reference external" href="iss-coords.csv">iss-coords.csv</a></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
