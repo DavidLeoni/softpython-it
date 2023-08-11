@@ -1883,12 +1883,12 @@
 <li class="toctree-l5"><a class="reference internal" href="#1.1-Individuiamo-un-gruppo">1.1 Individuiamo un gruppo</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#1.2-groupby">1.2 <code class="docutils literal notranslate"><span class="pre">groupby</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="#1.3-Modificare-un-dataframe-con-il-risultato-di-un-raggruppamento">1.3 Modificare un dataframe con il risultato di un raggruppamento</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#1.4-Esercizio---Temperatura-media-del-meteo">1.4 Esercizio - Temperatura media del meteo</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#1.5-Esercizio---Beni-culturali-Regione-Umbria">1.5 Esercizio - Beni culturali Regione Umbria</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#1.4-Esercizio---Fasce-pressione-meteo">1.4 Esercizio - Fasce pressione meteo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#1.5-Esercizio---Temperatura-media-del-meteo">1.5 Esercizio - Temperatura media del meteo</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#2.-Congiungere-tabelle">2. Congiungere tabelle</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#2.2-Esercizio---migliorare-merge">2.2 Esercizio - migliorare merge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#2.1-Esercizio---migliorare-merge">2.1 Esercizio - migliorare merge</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#3.-GeoPandas">3. GeoPandas</a><ul>
@@ -1898,6 +1898,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#3.4-Esempio-di-integrazione">3.4 Esempio di integrazione</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pandas3-chal.html">Challenge</a><ul>
@@ -2173,7 +2174,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../toc.html#d-progetti">D - Progetti</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../toc.html#progetti-svolti">Progetti svolti</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html">Alberi della Campania</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Scarica-progetto-svolto">Scarica progetto svolto</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#albernomi">albernomi</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#alberalti">alberalti</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Alberi-per-provincia">Alberi per provincia</a></li>
@@ -3172,8 +3173,8 @@ Name: humidity, dtype: int64
 pandas.core.series.Series
 </pre></div></div>
 </div>
-<p>Dato che vorremo un grafico a barre personalizzato, per semplicità possiamo usare la funzione nativa <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> di matplotlib, per il quale ci serviranno una sequenza per le coordinate x e un’altra per le y.</p>
-<p>La sequenza per le x è estraibile dall’indice della <code class="docutils literal notranslate"><span class="pre">Series</span></code>:</p>
+<p>Dato che vorremo un grafico a barre personalizzato, per semplicità possiamo usare la funzione nativa <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> di matplotlib, per il quale ci serviranno una sequenza per le coordinate <span class="math notranslate nohighlight">\(x\)</span> e un’altra per le <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>La sequenza per le <span class="math notranslate nohighlight">\(x\)</span> è estraibile dall’indice della <code class="docutils literal notranslate"><span class="pre">Series</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -3193,7 +3194,7 @@ Int64Index([42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
            dtype=&#39;int64&#39;, name=&#39;humidity_int&#39;)
 </pre></div></div>
 </div>
-<p>Per la sequenza delle y invece basta usare direttamente la <code class="docutils literal notranslate"><span class="pre">Series</span></code> stessa così:</p>
+<p>Per la sequenza delle <span class="math notranslate nohighlight">\(y\)</span> invece basta usare direttamente la <code class="docutils literal notranslate"><span class="pre">Series</span></code> stessa così:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
@@ -3299,7 +3300,7 @@ Name: humidity, Length: 110869, dtype: int64
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Conteggio umidità&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">])[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;conteggio_umidità&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;humidity_int&#39;</span><span class="p">])[</span><span class="s1">&#39;humidity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3354,7 +3355,7 @@ Name: humidity, Length: 110869, dtype: int64
       <th>gyro_z</th>
       <th>reset</th>
       <th>humidity_int</th>
-      <th>Conteggio umidità</th>
+      <th>conteggio_umidità</th>
     </tr>
   </thead>
   <tbody>
@@ -3628,11 +3629,539 @@ Name: humidity, Length: 110869, dtype: int64
 </div></div>
 </div>
 </section>
-<section id="1.4-Esercizio---Temperatura-media-del-meteo">
-<h3>1.4 Esercizio - Temperatura media del meteo<a class="headerlink" href="#1.4-Esercizio---Temperatura-media-del-meteo" title="Permalink to this headline"></a></h3>
-<p>✪✪✪ Apri il dataset del <a class="reference external" href="meteo.csv">meteo.csv</a>, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">https://www.meteotrentino.it</a>).</p>
+<section id="1.4-Esercizio---Fasce-pressione-meteo">
+<h3>1.4 Esercizio - Fasce pressione meteo<a class="headerlink" href="#1.4-Esercizio---Fasce-pressione-meteo" title="Permalink to this headline"></a></h3>
+<p>✪✪✪ Nel dataset del <a class="reference external" href="meteo.csv">meteo.csv</a>, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">www.meteotrentino.it</a>) vorremmo dividere le rilevazioni di pressione in tre fasce <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">(bassa)</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">(media)</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">(alta)</span></code> e contare quante rilevazioni sono state fatte in ciascuna fascia.</p>
 <p><strong>IMPORTANTE</strong>: assegna il dataframe ad una variabile chiamata <code class="docutils literal notranslate"><span class="pre">meteo</span></code> (così evitiamo confusione con il dataframe dell’AstroPi)</p>
-<p>Calcola la temperatura media giornaliera per ciascun giorno, e mostrala nel plot, così da avere una coppia di nuove colonne come queste:</p>
+<section id="1.4.1-Dove-sono-le-fasce?">
+<h4>1.4.1 Dove sono le fasce?<a class="headerlink" href="#1.4.1-Dove-sono-le-fasce?" title="Permalink to this headline"></a></h4>
+<p>Innanzitutto troviamo i valori di pressione per queste 3 fasce e plottiamoli come segmenti, in modo da avere un grafico del genere:</p>
+<p><img alt="intervalli di pressione attesi" src="../_images/expected-pressure-intervals.png" /></p>
+<p>Prima di fare il plot, ci servirà sapere a quale altezza andranno disegnati segmenti.</p>
+<p>Carica il dataset con pandas, calcola le variabili che seguono e stampale (l’escursione è la differenza tra minimo e massimo)</p>
+<ul class="simple">
+<li><p>usa <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> come encoding</p></li>
+<li><p>arrotonda i valori con <code class="docutils literal notranslate"><span class="pre">round</span></code></p></li>
+<li><p>nota che la <code class="docutils literal notranslate"><span class="pre">fasciaC</span></code> coincide con il massimo</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+
+<span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="n">minimo</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">massimo</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">escursione</span> <span class="o">=</span> <span class="n">massimo</span> <span class="o">-</span> <span class="n">minimo</span>
+<span class="n">fasciaA</span><span class="p">,</span><span class="n">fasciaB</span><span class="p">,</span><span class="n">fasciaC</span> <span class="o">=</span> <span class="n">minimo</span> <span class="o">+</span> <span class="n">escursione</span><span class="o">/</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">minimo</span> <span class="o">+</span> <span class="n">escursione</span><span class="o">*</span><span class="mf">2.0</span><span class="o">/</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">minimo</span> <span class="o">+</span> <span class="n">escursione</span>
+<span class="n">fasciaA</span><span class="p">,</span><span class="n">fasciaB</span><span class="p">,</span><span class="n">fasciaC</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">fasciaA</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">fasciaB</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">fasciaC</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;minimo:&#39;</span><span class="p">,</span><span class="n">minimo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;massimo:&#39;</span><span class="p">,</span> <span class="n">massimo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;escursione:&#39;</span><span class="p">,</span> <span class="n">escursione</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fasciaA:&#39;</span><span class="p">,</span> <span class="n">fasciaA</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fasciaB:&#39;</span><span class="p">,</span> <span class="n">fasciaB</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fasciaC:&#39;</span><span class="p">,</span> <span class="n">fasciaC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+minimo: 966.3
+massimo: 998.3
+escursione: 32.0
+fasciaA: 976.97
+fasciaB: 987.63
+fasciaC: 998.3
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+minimo: 966.3
+massimo: 998.3
+escursione: 32.0
+fasciaA: 976.97
+fasciaB: 987.63
+fasciaC: 998.3
+</pre></div></div>
+</div>
+</section>
+<section id="1.4.2-plot-segmenti">
+<h4>1.4.2 plot segmenti<a class="headerlink" href="#1.4.2-plot-segmenti" title="Permalink to this headline"></a></h4>
+<p>Prova ora a plottare il grafico della pressione e i 4 segmenti orizzontali, dal minimo fino alla fascia superiore</p>
+<ul class="simple">
+<li><p>per plottare i segmenti in sovraimpressione e con colori diversi, basta fare chiamate ripetute a <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code></p></li>
+<li><p>un segmento è definito da due punti: basta quindi trovare le coordinate di questi due punti…</p></li>
+<li><p>cerca di lasciare un po’ di spazio sopra e sotto il grafico</p></li>
+<li><p><strong>RICORDATI</strong> titolo ed etichette assi</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">minimo</span><span class="o">*</span><span class="mf">0.99</span><span class="p">,</span><span class="n">massimo</span><span class="o">*</span><span class="mf">1.01</span><span class="p">)</span> <span class="c1"># spazio sotto e sopra</span>
+<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">meteo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">minimo</span><span class="p">,</span> <span class="n">minimo</span><span class="p">],</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">meteo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">fasciaA</span><span class="p">,</span><span class="n">fasciaA</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">meteo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">fasciaB</span><span class="p">,</span><span class="n">fasciaB</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">meteo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">fasciaC</span><span class="p">,</span><span class="n">fasciaC</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Andamento pressione meteo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;numero rilevazione&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;pressione&#39;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas2-advanced-sol_35_0.png" src="../_images/pandas_pandas2-advanced-sol_35_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas2-advanced-sol_37_0.png" src="../_images/pandas_pandas2-advanced-sol_37_0.png" />
+</div>
+</div>
+</section>
+<section id="1.4.3-Assegnamo-le-fasce">
+<h4>1.4.3 Assegnamo le fasce<a class="headerlink" href="#1.4.3-Assegnamo-le-fasce" title="Permalink to this headline"></a></h4>
+<p>Adesso che ci siamo fatti un idea della collocazione delle fasce, chiediamoci quante rilevazioni sono state fatte per ciascuna fascia.</p>
+<p>Prima di tutto, crea una colonna che assegna a ciascuna rilevazione la fascia a cui appartiene.</p>
+<ul class="simple">
+<li><p><strong>SUGGERIMENTO 1</strong>: usa <code class="docutils literal notranslate"><span class="pre">transform</span></code></p></li>
+<li><p><strong>SUGGERIMENTO 2</strong>: nella funzione che definirai, non ricalcolare all’interno i valori del minimo, massimo, fasce, etc, perchè rallenterebbe i calcoli, usa piuttosto le variabili già calcolate in precedenza. Ricorda che <code class="docutils literal notranslate"><span class="pre">transform</span></code> riesegue la funzione passata una volta per ciascuna riga!</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+
+<span class="k">def</span> <span class="nf">fasce</span><span class="p">(</span><span class="n">valore</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">valore</span> <span class="o">&lt;</span> <span class="n">fasciaA</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;A (bassa)&quot;</span>
+    <span class="k">elif</span> <span class="n">valore</span> <span class="o">&lt;</span> <span class="n">fasciaB</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;B (media)&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;C (alta)&quot;</span>
+
+<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;FasciaPressione&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">fasce</span><span class="p">)</span>
+<span class="n">meteo</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Data</th>
+      <th>Pressione</th>
+      <th>Pioggia</th>
+      <th>Temp</th>
+      <th>FasciaPressione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01/11/2017 00:00</td>
+      <td>995.4</td>
+      <td>0.0</td>
+      <td>5.4</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>01/11/2017 00:15</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01/11/2017 00:30</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>5.9</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01/11/2017 00:45</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.4</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>01/11/2017 01:00</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.3</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2873</th>
+      <td>30/11/2017 23:00</td>
+      <td>980.0</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2874</th>
+      <td>30/11/2017 23:15</td>
+      <td>980.2</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2875</th>
+      <td>30/11/2017 23:30</td>
+      <td>980.2</td>
+      <td>0.0</td>
+      <td>0.6</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2876</th>
+      <td>30/11/2017 23:45</td>
+      <td>980.5</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2877</th>
+      <td>01/12/2017 00:00</td>
+      <td>980.6</td>
+      <td>0.0</td>
+      <td>-0.3</td>
+      <td>B (media)</td>
+    </tr>
+  </tbody>
+</table>
+<p>2878 rows × 5 columns</p>
+</div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Data</th>
+      <th>Pressione</th>
+      <th>Pioggia</th>
+      <th>Temp</th>
+      <th>FasciaPressione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01/11/2017 00:00</td>
+      <td>995.4</td>
+      <td>0.0</td>
+      <td>5.4</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>01/11/2017 00:15</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>01/11/2017 00:30</td>
+      <td>995.5</td>
+      <td>0.0</td>
+      <td>5.9</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>01/11/2017 00:45</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.4</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>01/11/2017 01:00</td>
+      <td>995.7</td>
+      <td>0.0</td>
+      <td>5.3</td>
+      <td>C (alta)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2873</th>
+      <td>30/11/2017 23:00</td>
+      <td>980.0</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2874</th>
+      <td>30/11/2017 23:15</td>
+      <td>980.2</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2875</th>
+      <td>30/11/2017 23:30</td>
+      <td>980.2</td>
+      <td>0.0</td>
+      <td>0.6</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2876</th>
+      <td>30/11/2017 23:45</td>
+      <td>980.5</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>B (media)</td>
+    </tr>
+    <tr>
+      <th>2877</th>
+      <td>01/12/2017 00:00</td>
+      <td>980.6</td>
+      <td>0.0</td>
+      <td>-0.3</td>
+      <td>B (media)</td>
+    </tr>
+  </tbody>
+</table>
+<p>2878 rows × 5 columns</p>
+</div></div>
+</div>
+</section>
+<section id="1.4.4-Raggruppiamo-per-fasce">
+<h4>1.4.4 Raggruppiamo per fasce<a class="headerlink" href="#1.4.4-Raggruppiamo-per-fasce" title="Permalink to this headline"></a></h4>
+<p>Vorremmo arrivare ad un istogramma come questo:</p>
+<p><img alt="distribuzione pressione" src="../_images/pressure-distribution.png" /></p>
+<ol class="loweralpha simple">
+<li><p>Per prima cosa, crea un raggruppamento per fare il conteggio:</p></li>
+</ol>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<span class="n">meteo</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;FasciaPressione&#39;</span><span class="p">])[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+FasciaPressione
+A (bassa)     255
+B (media)    1243
+C (alta)     1380
+Name: Pressione, dtype: int64
+</pre></div></div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+FasciaPressione
+A (bassa)     255
+B (media)    1243
+C (alta)     1380
+Name: Pressione, dtype: int64
+</pre></div></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><p>Adesso fai il plot</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>NOTA</strong>: anche il risultato di <code class="docutils literal notranslate"><span class="pre">groupby</span></code> è una <code class="docutils literal notranslate"><span class="pre">Series</span></code>, quindi plottabile come già abbiamo visto…</p></li>
+<li><p><strong>RICORDATI</strong> titolo ed etichette assi</p></li>
+</ul>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># scrivi qui</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">meteo</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;FasciaPressione&#39;</span><span class="p">])[</span><span class="s1">&#39;Pressione&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Frequenza fasce pressione&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Fasce&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Conteggio&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkcyan&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas2-advanced-sol_51_0.png" src="../_images/pandas_pandas2-advanced-sol_51_0.png" />
+</div>
+</div>
+</div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># scrivi qui</span>
+<br/><br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas2-advanced-sol_53_0.png" src="../_images/pandas_pandas2-advanced-sol_53_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="1.5-Esercizio---Temperatura-media-del-meteo">
+<h3>1.5 Esercizio - Temperatura media del meteo<a class="headerlink" href="#1.5-Esercizio---Temperatura-media-del-meteo" title="Permalink to this headline"></a></h3>
+<p>✪✪✪ Calcola la temperatura media giornaliera per ciascun giorno, e mostrala nel plot, così da avere una coppia di nuove colonne come queste:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    Giorno      Temp_media_giorno
 01/11/2017      7.983333
 01/11/2017      7.983333
@@ -3652,201 +4181,16 @@ Name: humidity, Length: 110869, dtype: int64
 <li><p>il più efficiente ed elegante è con l’operatore <code class="docutils literal notranslate"><span class="pre">groupby</span></code>, vedere <a class="reference external" href="https://towardsdatascience.com/pandas-transform-more-than-meets-the-eye-928542b40b56">Pandas trasform - more than meets the eye</a></p></li>
 <li><p>Come alternative, potresti usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare i giorni. Tipicamente usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> non è una buona idea con Pandas, perchè con dataset larghi ci può voler molto ad eseguire gli aggiornamenti. Comunque, dato che questo dataset è piccolo a sufficienza, puoi provare ad usare un <code class="docutils literal notranslate"><span class="pre">for</span></code> per ciclare sui giorni e dovresti ottenere i risultati in un tempo ragionevole</p></li>
 </ul>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
-
-<span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
-<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
-
-
-<span class="c1">#print(&quot;CON GIORNO&quot;)</span>
-<span class="c1">#print(meteo.head())</span>
-<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
-    <span class="n">temp_media_giorno</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">)]</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">meteo</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">),</span><span class="s1">&#39;Temp_media_giorno&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">temp_media_giorno</span>
-
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    *******    SOLUZIONE 1 OUTPUT - ricalcola media per ogni riga - lento !&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CON TEMPERATURA MEDIA&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meteo</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">meteo</span><span class="o">.</span><span class="n">Temp_media_giorno</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura media&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-
-    *******    SOLUZIONE 1 OUTPUT - ricalcola media per ogni riga - lento !
-
-CON TEMPERATURA MEDIA
-               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
-0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
-1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
-2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
-3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
-4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_29_1.png" src="../_images/pandas_pandas2-advanced-sol_29_1.png" />
-</div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-
-    *******    SOLUZIONE 1 OUTPUT - ricalcola media per ogni riga - lento !
-
-CON TEMPERATURA MEDIA
-               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
-0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
-1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
-2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
-3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
-4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_31_1.png" src="../_images/pandas_pandas2-advanced-sol_31_1.png" />
-</div>
-</div>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
-
-<span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
-<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
-<span class="c1">#print()</span>
-<span class="c1">#print(&quot;CON GIORNO&quot;)</span>
-<span class="c1">#print(meteo.head())</span>
-<span class="n">diz_medie</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
-    <span class="k">if</span> <span class="n">giorno</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">diz_medie</span><span class="p">:</span>
-        <span class="n">diz_medie</span><span class="p">[</span><span class="n">giorno</span><span class="p">]</span> <span class="o">=</span>  <span class="n">meteo</span><span class="p">[</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">giorno</span> <span class="p">][</span><span class="s1">&#39;Temp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
-    <span class="n">meteo</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">),</span><span class="s1">&#39;Temp_media_giorno&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">diz_medie</span><span class="p">[</span><span class="n">giorno</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;********  OUTPUT SOLUZIONE 2&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  ricalcola media solo 30 volte usando un dizionario diz_avg,&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  più veloce ma ancora non ottimale&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meteo</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">meteo</span><span class="o">.</span><span class="n">Temp_media_giorno</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura media&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-
-
-********  OUTPUT SOLUZIONE 2
-  ricalcola media solo 30 volte usando un dizionario diz_avg,
-  più veloce ma ancora non ottimale
-               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
-0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
-1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
-2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
-3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
-4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_33_1.png" src="../_images/pandas_pandas2-advanced-sol_33_1.png" />
-</div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-
-
-********  OUTPUT SOLUZIONE 2
-  ricalcola media solo 30 volte usando un dizionario diz_avg,
-  più veloce ma ancora non ottimale
-               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
-0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
-1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
-2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
-3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
-4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_35_1.png" src="../_images/pandas_pandas2-advanced-sol_35_1.png" />
-</div>
-</div>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
 
 <span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;********  OUTPUT SOLUZIONE 3  -  soluzione migliore con groupby e transform &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;********  OUTPUT SOLUZIONE 1 (EFFICIENTE): con groupby e transform &#39;</span><span class="p">)</span>
 
 <span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
 <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
@@ -3869,7 +4213,7 @@ CON TEMPERATURA MEDIA
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 
-********  OUTPUT SOLUZIONE 3  -  soluzione migliore con groupby e transform
+********  OUTPUT SOLUZIONE 1 (EFFICIENTE): con groupby e transform
 
 CON TEMPERATURA MEDIA
                Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
@@ -3884,11 +4228,11 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_37_1.png" src="../_images/pandas_pandas2-advanced-sol_37_1.png" />
+<img alt="../_images/pandas_pandas2-advanced-sol_56_1.png" src="../_images/pandas_pandas2-advanced-sol_56_1.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
@@ -3901,7 +4245,7 @@ CON TEMPERATURA MEDIA
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 
-********  OUTPUT SOLUZIONE 3  -  soluzione migliore con groupby e transform
+********  OUTPUT SOLUZIONE 1 (EFFICIENTE): con groupby e transform
 
 CON TEMPERATURA MEDIA
                Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
@@ -3916,1409 +4260,144 @@ CON TEMPERATURA MEDIA
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_39_1.png" src="../_images/pandas_pandas2-advanced-sol_39_1.png" />
+<img alt="../_images/pandas_pandas2-advanced-sol_58_1.png" src="../_images/pandas_pandas2-advanced-sol_58_1.png" />
 </div>
 </div>
-</section>
-<section id="1.5-Esercizio---Beni-culturali-Regione-Umbria">
-<h3>1.5 Esercizio - Beni culturali Regione Umbria<a class="headerlink" href="#1.5-Esercizio---Beni-culturali-Regione-Umbria" title="Permalink to this headline"></a></h3>
-<p>Proviamo a fare qualche analisi sui beni culturali della regione Umbria, iniziando con cose semplici e poi passeremo ai raggruppamenti.</p>
-<section id="1.5.1-Beni-culturali---apertura">
-<h4>1.5.1 Beni culturali - apertura<a class="headerlink" href="#1.5.1-Beni-culturali---apertura" title="Permalink to this headline"></a></h4>
-<p>Apri il dataset <a class="reference external" href="beni-culturali-umbria.csv">beni-culturali-umbria.csv</a> con pandas (encoding UTF-8) e mostra informazioni sulle colonne</p>
-<ul class="simple">
-<li><p><strong>ATTENZIONE: usa l’attributo</strong> <code class="docutils literal notranslate"><span class="pre">delimiter=';'</span></code></p></li>
-<li><p><strong>IMPORTANTE</strong>: assegna il dataframe alla variabile <code class="docutils literal notranslate"><span class="pre">beni</span></code> così da distinguerlo da altri dataframe</p></li>
-</ul>
-<p>Sorgente dati: <a class="reference external" href="https://dati.gov.it/view-dataset/dataset?id=36edd544-412a-4377-b00e-f01782af90cd">dati.gov.it</a> - Licenza: Creative Commons Attribution</p>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
 
-<span class="c1"># scrivi qui</span>
-<span class="n">beni</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;beni-culturali-umbria.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
-<span class="n">beni</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    ******* SOLUZIONE 2 - LENTA! ricalcola media per ogni riga&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+
+
+<span class="c1">#print(&quot;CON GIORNO&quot;)</span>
+<span class="c1">#print(meteo.head())</span>
+<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
+    <span class="n">temp_media_giorno</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">)]</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">meteo</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">),</span><span class="s1">&#39;Temp_media_giorno&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">temp_media_giorno</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CON TEMPERATURA MEDIA&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meteo</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">meteo</span><span class="o">.</span><span class="n">Temp_media_giorno</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura media&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+    ******* SOLUZIONE 2 - LENTA! ricalcola media per ogni riga
+
+CON TEMPERATURA MEDIA
+               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
+0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
+1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
+2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
+3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
+4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
+</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 105 entries, 0 to 104
-Data columns (total 5 columns):
- #   Column               Non-Null Count  Dtype
----  ------               --------------  -----
- 0   NUMERO               105 non-null    int64
- 1   BENEFICIARIO         105 non-null    object
- 2   PROGETTO             105 non-null    object
- 3   PROGRAMMA_OPERATIVO  105 non-null    object
- 4   STATO_ATTUAZIONE     105 non-null    object
-dtypes: int64(1), object(4)
-memory usage: 4.2+ KB
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 105 entries, 0 to 104
-Data columns (total 5 columns):
- #   Column               Non-Null Count  Dtype
----  ------               --------------  -----
- 0   NUMERO               105 non-null    int64
- 1   BENEFICIARIO         105 non-null    object
- 2   PROGETTO             105 non-null    object
- 3   PROGRAMMA_OPERATIVO  105 non-null    object
- 4   STATO_ATTUAZIONE     105 non-null    object
-dtypes: int64(1), object(4)
-memory usage: 4.2+ KB
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beni</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Comune di Acquasparta</td>
-      <td>Progetto per il recupero, il restauro e la tra...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Comune di Acquasparta</td>
-      <td>Recupero, restauro e trasformazione in centro ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento delle opere di restauro e valori...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>100</th>
-      <td>101</td>
-      <td>Comune di Umbertide</td>
-      <td>Lavori di completamento del Centro Socio Cultu...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>102</td>
-      <td>Regione Umbria</td>
-      <td>Recupero e consolidamento della Cinta muraria ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>103</td>
-      <td>Azienda pubblica 'Veralli Cortesi'</td>
-      <td>Valorizzazione arte contemporanea. Lavori di c...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>104</td>
-      <td>Sodalizio S. Martino Perugia</td>
-      <td>FUSEUM Museo Brajo Fuso: completamento</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>105</td>
-      <td>Valnestore Sviluppo</td>
-      <td>Museo Paleontologico L. Boldrini. Completamento</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-  </tbody>
-</table>
-<p>105 rows × 5 columns</p>
-</div></div>
-</div>
-</section>
-<section id="1.5.2-Beni-culturali---stato-progetti">
-<h4>1.5.2 Beni culturali - stato progetti<a class="headerlink" href="#1.5.2-Beni-culturali---stato-progetti" title="Permalink to this headline"></a></h4>
-<p>Dato il dizionario <code class="docutils literal notranslate"><span class="pre">query</span></code> con <code class="docutils literal notranslate"><span class="pre">comune</span></code> e <code class="docutils literal notranslate"><span class="pre">stato</span></code>, trova tutti i progetti ce soddisfino <strong>entrambe</strong> le condizioni</p>
-<ul class="simple">
-<li><p><strong>NON</strong> scrivere <code class="docutils literal notranslate"><span class="pre">Acquasparta</span></code> o <code class="docutils literal notranslate"><span class="pre">REALIZZATO</span></code> nel codice !</p></li>
-</ul>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;stato&#39;</span>  <span class="p">:</span> <span class="s1">&#39;REALIZZATO&#39;</span>
-        <span class="p">}</span>
-<span class="c1">#query = {&#39;comune&#39; : &#39;Spoleto&#39;, &#39;stato&#39; : &#39;IN CORSO DI REALIZZAZIONE&#39; }</span>
-
-<span class="c1"># scrivi qui</span>
-<span class="n">beni</span><span class="p">[(</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">query</span><span class="p">[</span><span class="s1">&#39;stato&#39;</span><span class="p">])</span> <span class="o">&amp;</span> <span class="n">beni</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">query</span><span class="p">[</span><span class="s1">&#39;comune&#39;</span><span class="p">])]</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Comune di Acquasparta</td>
-      <td>Progetto per il recupero, il restauro e la tra...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Comune di Acquasparta</td>
-      <td>Recupero, restauro e trasformazione in centro ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;comune&#39;</span> <span class="p">:</span> <span class="s1">&#39;Acquasparta&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;stato&#39;</span>  <span class="p">:</span> <span class="s1">&#39;REALIZZATO&#39;</span>
-        <span class="p">}</span>
-<span class="c1">#query = {&#39;comune&#39; : &#39;Spoleto&#39;, &#39;stato&#39; : &#39;IN CORSO DI REALIZZAZIONE&#39; }</span>
-
-<span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Comune di Acquasparta</td>
-      <td>Progetto per il recupero, il restauro e la tra...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Comune di Acquasparta</td>
-      <td>Recupero, restauro e trasformazione in centro ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="1.5.3-Beni-culturali---riqualificazione">
-<h4>1.5.3 Beni culturali - riqualificazione<a class="headerlink" href="#1.5.3-Beni-culturali---riqualificazione" title="Permalink to this headline"></a></h4>
-<p>Trova tutti i progetti che prevedono riqualificazione</p>
-<p><strong>ATTENZIONE</strong> alle diverse capitalizzazioni! In tutto dovresti trovare 17 risultati</p>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<span class="n">beni</span><span class="p">[</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;PROGETTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;riqualificazione&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">beni</span><span class="p">[</span><span class="s1">&#39;PROGETTO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Riqualificazione&#39;</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>Comune di Assisi</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>11</td>
-      <td>Comune di Bastia Umbra</td>
-      <td>Riqualificazione sito archeologico Via Renzini</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>16</td>
-      <td>Comune di Cascia</td>
-      <td>Riqualificazione e adeguamento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>33</td>
-      <td>Comune di Foligno</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>35</td>
-      <td>Comune di Giano dell’Umbria</td>
-      <td>Sistema bibliotecario – documentario. Ristrutt...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>40</td>
-      <td>Comune di Gubbio</td>
-      <td>Valorizzazione e riqualificazione del compless...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>47</td>
-      <td>Comune di Montecastello di Vibio</td>
-      <td>Lavori di riqualificazione ed adeguamento impi...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>64</td>
-      <td>Comune di Parrano</td>
-      <td>Valorizzazione Tane del Diavolo - Riqualificaz...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>68</td>
-      <td>Comune di Perugia</td>
-      <td>Circuito culturale: Riqualificazione dell'impi...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>69</td>
-      <td>Comune di Perugia</td>
-      <td>Circuito culturale: Riqualificazione e nuove f...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>85</th>
-      <td>86</td>
-      <td>Comune di Spoleto</td>
-      <td>Interventi per il potenziamento e la riqualifi...</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>90</td>
-      <td>Comune di Terni</td>
-      <td>Archeologia Borghi Cultura e Paesaggi. Area ar...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>92</td>
-      <td>Comune di Todi</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>98</td>
-      <td>Comune di Trevi</td>
-      <td>Villa Fabri: Restauro degli apparati decorativ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a e APQ Beni c...</td>
-      <td>REALIZZATO</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>Comune di Assisi</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>11</td>
-      <td>Comune di Bastia Umbra</td>
-      <td>Riqualificazione sito archeologico Via Renzini</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>16</td>
-      <td>Comune di Cascia</td>
-      <td>Riqualificazione e adeguamento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>33</td>
-      <td>Comune di Foligno</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>35</td>
-      <td>Comune di Giano dell’Umbria</td>
-      <td>Sistema bibliotecario – documentario. Ristrutt...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>40</td>
-      <td>Comune di Gubbio</td>
-      <td>Valorizzazione e riqualificazione del compless...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>47</td>
-      <td>Comune di Montecastello di Vibio</td>
-      <td>Lavori di riqualificazione ed adeguamento impi...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>64</td>
-      <td>Comune di Parrano</td>
-      <td>Valorizzazione Tane del Diavolo - Riqualificaz...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>68</td>
-      <td>Comune di Perugia</td>
-      <td>Circuito culturale: Riqualificazione dell'impi...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>69</td>
-      <td>Comune di Perugia</td>
-      <td>Circuito culturale: Riqualificazione e nuove f...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>85</th>
-      <td>86</td>
-      <td>Comune di Spoleto</td>
-      <td>Interventi per il potenziamento e la riqualifi...</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>90</td>
-      <td>Comune di Terni</td>
-      <td>Archeologia Borghi Cultura e Paesaggi. Area ar...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>92</td>
-      <td>Comune di Todi</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>98</td>
-      <td>Comune di Trevi</td>
-      <td>Villa Fabri: Restauro degli apparati decorativ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a e APQ Beni c...</td>
-      <td>REALIZZATO</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="1.5.4-Beni-culturali---estremi">
-<h4>1.5.4 Beni culturali - estremi<a class="headerlink" href="#1.5.4-Beni-culturali---estremi" title="Permalink to this headline"></a></h4>
-<p>Trovare tutti i progetti aventi NUMERO incluso tra i limiti indicati nella variabile <code class="docutils literal notranslate"><span class="pre">estremi</span></code> (inclusi)</p>
-<ul class="simple">
-<li><p><strong>NON</strong> scrivere <code class="docutils literal notranslate"><span class="pre">10</span></code> o <code class="docutils literal notranslate"><span class="pre">18</span></code> nel codice!</p></li>
-</ul>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
-<span class="c1">#estremi = (15,21)</span>
-
-<span class="c1"># scrivi qui</span>
-
-<span class="n">beni</span><span class="p">[(</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;NUMERO&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">estremi</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;NUMERO&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">estremi</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>11</td>
-      <td>Comune di Bastia Umbra</td>
-      <td>Riqualificazione sito archeologico Via Renzini</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>12</td>
-      <td>Comune di Bettona</td>
-      <td>Sistema museale di Bettona - Compeltamento del...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>13</td>
-      <td>Comune di Bettona</td>
-      <td>Lavori di movimentazione e restauro del porton...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>14</td>
-      <td>Comune di Bevagna</td>
-      <td>Completamento Palazzo della Cultura - Allestim...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>15</td>
-      <td>Comune di Campello sul Clitunno</td>
-      <td>Valorizzazione del centro storico del Castello...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>16</td>
-      <td>Comune di Cascia</td>
-      <td>Riqualificazione e adeguamento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>17</td>
-      <td>Comune di Cascia</td>
-      <td>Realizzazione dei servizi innovativi per la va...</td>
-      <td>Programma Parallelo al POR FESR 2007 -2013</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>18</td>
-      <td>Comune di Cascia</td>
-      <td>Polo museale Santa Margherita. Completamento</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estremi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
-<span class="c1">#estremi = (15,21)</span>
-
-<span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>11</td>
-      <td>Comune di Bastia Umbra</td>
-      <td>Riqualificazione sito archeologico Via Renzini</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>12</td>
-      <td>Comune di Bettona</td>
-      <td>Sistema museale di Bettona - Compeltamento del...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>13</td>
-      <td>Comune di Bettona</td>
-      <td>Lavori di movimentazione e restauro del porton...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>14</td>
-      <td>Comune di Bevagna</td>
-      <td>Completamento Palazzo della Cultura - Allestim...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>15</td>
-      <td>Comune di Campello sul Clitunno</td>
-      <td>Valorizzazione del centro storico del Castello...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>16</td>
-      <td>Comune di Cascia</td>
-      <td>Riqualificazione e adeguamento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>17</td>
-      <td>Comune di Cascia</td>
-      <td>Realizzazione dei servizi innovativi per la va...</td>
-      <td>Programma Parallelo al POR FESR 2007 -2013</td>
-      <td>REALIZZATO</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>18</td>
-      <td>Comune di Cascia</td>
-      <td>Polo museale Santa Margherita. Completamento</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="1.5.5-Beni-culturali---Stato-attuazione-PAR">
-<h4>1.5.5 Beni culturali - Stato attuazione PAR<a class="headerlink" href="#1.5.5-Beni-culturali---Stato-attuazione-PAR" title="Permalink to this headline"></a></h4>
-<p>Selezionare solo i progetti operativi PAR (che quindi hanno PAR in PROGETTO_OPERATIVO) e mostrarne il conteggio dello stato d’attuazione</p>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<span class="n">abeni</span> <span class="o">=</span> <span class="n">beni</span><span class="p">[</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;PROGRAMMA_OPERATIVO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;PAR&#39;</span><span class="p">)]</span>
-<span class="n">abeni</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">])[</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-STATO_ATTUAZIONE
-IN CORSO DI REALIZZAZIONE    12
-REALIZZATO                   36
-Name: STATO_ATTUAZIONE, dtype: int64
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-STATO_ATTUAZIONE
-IN CORSO DI REALIZZAZIONE    12
-REALIZZATO                   36
-Name: STATO_ATTUAZIONE, dtype: int64
-</pre></div></div>
-</div>
-</section>
-<section id="1.5.6-Beni-culturali---progetti-a-Todi">
-<h4>1.5.6 Beni culturali - progetti a Todi<a class="headerlink" href="#1.5.6-Beni-culturali---progetti-a-Todi" title="Permalink to this headline"></a></h4>
-<p>Mostrare il conteggio dei progetti realizzati a Todi</p>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<span class="n">tbeni</span> <span class="o">=</span> <span class="n">beni</span><span class="p">[</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Comune di Todi&#39;</span><span class="p">]</span>
-<span class="n">tbeni</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">,</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">])[</span><span class="s1">&#39;STATO_ATTUAZIONE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-BENEFICIARIO    STATO_ATTUAZIONE
-Comune di Todi  IN CORSO DI REALIZZAZIONE    4
-                REALIZZATO                   2
-Name: STATO_ATTUAZIONE, dtype: int64
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-BENEFICIARIO    STATO_ATTUAZIONE
-Comune di Todi  IN CORSO DI REALIZZAZIONE    4
-                REALIZZATO                   2
-Name: STATO_ATTUAZIONE, dtype: int64
-</pre></div></div>
-</div>
-</section>
-<section id="1.5.7-Beni-culturali---Comuni-beneficiari">
-<h4>1.5.7 Beni culturali - Comuni beneficiari<a class="headerlink" href="#1.5.7-Beni-culturali---Comuni-beneficiari" title="Permalink to this headline"></a></h4>
-<p>Trovare i comuni beneficiari togliendo il prefisso ‘Comune di’, e senza duplicati</p>
-<ul class="simple">
-<li><p><strong>NON</strong> usare cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> o list comprehension</p></li>
-<li><p><strong>SUGGERIMENTO</strong>: usare <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.unique.html">pd.unique</a></p></li>
-</ul>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<span class="n">cbeni</span> <span class="o">=</span> <span class="n">beni</span><span class="p">[</span><span class="n">beni</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Comune&#39;</span><span class="p">)]</span>
-
-<span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cbeni</span><span class="p">[</span><span class="s1">&#39;BENEFICIARIO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Umbra&#39;, &#39;Bettona&#39;,
-       &#39;Bevagna&#39;, &#39;Campello sul Clitunno&#39;, &#39;Cascia&#39;, &#39;Castel Viscardo&#39;,
-       &#39;Città della Pieve&#39;, &#39;Città di Castello&#39;, &#39;Corciano&#39;, &#39;Deruta&#39;,
-       &#39;Ferentillo&#39;, &#39;Foligno&#39;, &#39;Fratta Todina&#39;, &#39;Giano dell’Umbria&#39;,
-       &#39;Gualdo Tadino&#39;, &#39;Guardea&#39;, &#39;Gubbio&#39;, &#39;Marsciano&#39;,
-       &#39;Montecastello di Vibio&#39;, &#39;Montecchio&#39;, &#39;Montefalco&#39;, &#39;Narni&#39;,
-       &#39;Nocera Umbra&#39;, &#39;Orvieto&#39;, &#39;Otricoli&#39;, &#39;Panicale&#39;, &#39;Parrano&#39;,
-       &#39;Perugia&#39;, &#39;Piegaro&#39;, &#39;Polino&#39;, &#39;Preci&#39;, &#34;Sant&#39;Anatolia di Narco&#34;,
-       &#39;Sellano&#39;, &#39;Spello&#39;, &#39;Spoleto&#39;, &#39;Terni&#39;, &#39;Todi&#39;, &#39;Torgiano&#39;,
-       &#39;Trevi&#39;, &#39;Tuoro sul Trasimeno&#39;, &#39;Umbertide&#39;], dtype=object)
-</pre></div></div>
-</div>
-</div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Umbra&#39;, &#39;Bettona&#39;,
-       &#39;Bevagna&#39;, &#39;Campello sul Clitunno&#39;, &#39;Cascia&#39;, &#39;Castel Viscardo&#39;,
-       &#39;Città della Pieve&#39;, &#39;Città di Castello&#39;, &#39;Corciano&#39;, &#39;Deruta&#39;,
-       &#39;Ferentillo&#39;, &#39;Foligno&#39;, &#39;Fratta Todina&#39;, &#39;Giano dell’Umbria&#39;,
-       &#39;Gualdo Tadino&#39;, &#39;Guardea&#39;, &#39;Gubbio&#39;, &#39;Marsciano&#39;,
-       &#39;Montecastello di Vibio&#39;, &#39;Montecchio&#39;, &#39;Montefalco&#39;, &#39;Narni&#39;,
-       &#39;Nocera Umbra&#39;, &#39;Orvieto&#39;, &#39;Otricoli&#39;, &#39;Panicale&#39;, &#39;Parrano&#39;,
-       &#39;Perugia&#39;, &#39;Piegaro&#39;, &#39;Polino&#39;, &#39;Preci&#39;, &#34;Sant&#39;Anatolia di Narco&#34;,
-       &#39;Sellano&#39;, &#39;Spello&#39;, &#39;Spoleto&#39;, &#39;Terni&#39;, &#39;Todi&#39;, &#39;Torgiano&#39;,
-       &#39;Trevi&#39;, &#39;Tuoro sul Trasimeno&#39;, &#39;Umbertide&#39;], dtype=object)
-</pre></div></div>
-</div>
-</section>
-<section id="1.5.8-Beni-culturali---programma-operativo">
-<h4>1.5.8 Beni culturali - programma operativo<a class="headerlink" href="#1.5.8-Beni-culturali---programma-operativo" title="Permalink to this headline"></a></h4>
-<p>Creare una nuova colonna <code class="docutils literal notranslate"><span class="pre">sigla</span></code> con i primi 3 caratteri della colonna <code class="docutils literal notranslate"><span class="pre">PROGRAMMA_OPERATIVO</span></code>.</p>
-<ul class="simple">
-<li><p>se la prima parola è maggiore di 3 caratteri, impostare stringa vuota</p></li>
-<li><p><strong>SUGGERIMENTO</strong>: servirà una <code class="docutils literal notranslate"><span class="pre">transform</span></code> con funzione</p></li>
-</ul>
-<a  class="jupman-sol jupman-sol-toggler"
- onclick="jupman.toggleSolution(this);"
- data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<span class="k">def</span> <span class="nf">trasf</span><span class="p">(</span><span class="n">stringa</span><span class="p">):</span>
-    <span class="n">candidato</span> <span class="o">=</span> <span class="n">stringa</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidato</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">candidato</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-
-<span class="n">beni</span><span class="p">[</span><span class="s1">&#39;sigla&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">beni</span><span class="p">[</span><span class="s1">&#39;PROGRAMMA_OPERATIVO&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">trasf</span><span class="p">)</span>
-</pre></div>
+<img alt="../_images/pandas_pandas2-advanced-sol_60_1.png" src="../_images/pandas_pandas2-advanced-sol_60_1.png" />
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
-<br/><br/></pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beni</span><span class="p">[:</span><span class="mi">18</span><span class="p">]</span>  <span class="c1"># nota la riga 16</span>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SOLUZIONE</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;***** SOLUZIONE 3 - con dizionari ANCORA LENTA!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  ricalcola media solo 30 volte usando un dizionario diz_avg,&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  più veloce ma ancora non ottimale&#39;</span><span class="p">)</span>
+
+<span class="n">meteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;meteo.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1">#print()</span>
+<span class="c1">#print(&quot;CON GIORNO&quot;)</span>
+<span class="c1">#print(meteo.head())</span>
+<span class="n">diz_medie</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">giorno</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">diz_medie</span><span class="p">:</span>
+        <span class="n">diz_medie</span><span class="p">[</span><span class="n">giorno</span><span class="p">]</span> <span class="o">=</span>  <span class="n">meteo</span><span class="p">[</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">giorno</span> <span class="p">][</span><span class="s1">&#39;Temp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">giorno</span> <span class="ow">in</span> <span class="n">meteo</span><span class="p">[</span><span class="s1">&#39;Giorno&#39;</span><span class="p">]:</span>
+    <span class="n">meteo</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">meteo</span><span class="o">.</span><span class="n">Giorno</span> <span class="o">==</span> <span class="n">giorno</span><span class="p">),</span><span class="s1">&#39;Temp_media_giorno&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">diz_medie</span><span class="p">[</span><span class="n">giorno</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">meteo</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">meteo</span><span class="o">.</span><span class="n">Temp_media_giorno</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura media&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+***** SOLUZIONE 3 - con dizionari ANCORA LENTA!
+  ricalcola media solo 30 volte usando un dizionario diz_avg,
+  più veloce ma ancora non ottimale
+               Data  Pressione  Pioggia  Temp      Giorno  Temp_media_giorno
+0  01/11/2017 00:00      995.4      0.0   5.4  01/11/2017           7.983333
+1  01/11/2017 00:15      995.5      0.0   6.0  01/11/2017           7.983333
+2  01/11/2017 00:30      995.5      0.0   5.9  01/11/2017           7.983333
+3  01/11/2017 00:45      995.7      0.0   5.4  01/11/2017           7.983333
+4  01/11/2017 01:00      995.7      0.0   5.3  01/11/2017           7.983333
+</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/pandas_pandas2-advanced-sol_64_1.png" src="../_images/pandas_pandas2-advanced-sol_64_1.png" />
+</div>
+</div>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>NUMERO</th>
-      <th>BENEFICIARIO</th>
-      <th>PROGETTO</th>
-      <th>PROGRAMMA_OPERATIVO</th>
-      <th>STATO_ATTUAZIONE</th>
-      <th>sigla</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Comune di Acquasparta</td>
-      <td>Progetto per il recupero, il restauro e la tra...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Comune di Acquasparta</td>
-      <td>Recupero, restauro e trasformazione in centro ...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Comune di Acquasparta</td>
-      <td>Riqualificazione e valorizzazione Palazzo Cesi</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento Palazzo Cesi. Riqualificazione d...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Comune di Acquasparta</td>
-      <td>Completamento delle opere di restauro e valori...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>Comune di Amelia</td>
-      <td>Sistema bibliotecario – documentario. Risaname...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>Comune di  Assisi</td>
-      <td>Allestimento di Palazzo Monte Frumentario fina...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>Comune di Assisi</td>
-      <td>Riqualificazione e adegaumento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-      <td>APQ</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Comune di Assisi</td>
-      <td>Valorizzazione degli spazi espositivi di Palaz...</td>
-      <td>POR FESR 2014 - 2020 Azione 5.2.1</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>11</td>
-      <td>Comune di Bastia Umbra</td>
-      <td>Riqualificazione sito archeologico Via Renzini</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>12</td>
-      <td>Comune di Bettona</td>
-      <td>Sistema museale di Bettona - Compeltamento del...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>13</td>
-      <td>Comune di Bettona</td>
-      <td>Lavori di movimentazione e restauro del porton...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>14</td>
-      <td>Comune di Bevagna</td>
-      <td>Completamento Palazzo della Cultura - Allestim...</td>
-      <td>POR FESR 2007 -2013 Attività 2.2.2</td>
-      <td>REALIZZATO</td>
-      <td>POR</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>15</td>
-      <td>Comune di Campello sul Clitunno</td>
-      <td>Valorizzazione del centro storico del Castello...</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>REALIZZATO</td>
-      <td>PAR</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>16</td>
-      <td>Comune di Cascia</td>
-      <td>Riqualificazione e adeguamento IAT Area Vasta</td>
-      <td>APQ Beni culturali II Atto integrativo</td>
-      <td>REALIZZATO</td>
-      <td>APQ</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>17</td>
-      <td>Comune di Cascia</td>
-      <td>Realizzazione dei servizi innovativi per la va...</td>
-      <td>Programma Parallelo al POR FESR 2007 -2013</td>
-      <td>REALIZZATO</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>18</td>
-      <td>Comune di Cascia</td>
-      <td>Polo museale Santa Margherita. Completamento</td>
-      <td>PAR FSC 2007 - 2013 Azione 3.5.2a</td>
-      <td>IN CORSO DI REALIZZAZIONE</td>
-      <td>PAR</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
-</section>
+</div>
 </section>
 </section>
 <section id="2.-Congiungere-tabelle">
 <h2>2. Congiungere tabelle<a class="headerlink" href="#2.-Congiungere-tabelle" title="Permalink to this headline"></a></h2>
-<p>Supponi di voler aggiungere una colonna con la posizione geografica della International Space Station (ISS). Per farlo, avresti bisogno di unire il nostro dataset con un altro che contenga questa informazione. Prendiamo per esempio il dataset <a class="reference external" href="iss-coords.csv">iss-coords.csv</a></p>
+<p>Supponi di voler aggiungere una colonna con la posizione geografica della International Space Station (ISS). Per farlo, avresti bisogno di unire il nostro dataset con un altro che contenga questa informazione. Prendiamo per esempio il dataset <a class="reference external" href="iss-coords.csv">iss-coords.csv</a>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iss_coords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;iss-coords.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
@@ -5326,7 +4405,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iss_coords</span>
@@ -5334,7 +4413,7 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5433,9 +4512,9 @@ array([&#39;Acquasparta&#39;, &#39;Amelia&#39;, &#39;Assisi&#39;, &#39;Bastia Um
 <p>338 rows × 3 columns</p>
 </div></div>
 </div>
-<p>Notiamo che c’è una colonna <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, che sfortunatamente ha un nome leggermente diverse dalla colonna <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> (nota l’underscore <code class="docutils literal notranslate"><span class="pre">_</span></code>) nel dataset original astropi:</p>
+<p>Notiamo che c’è una colonna <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, ma sfortunatamente ha un nome leggermente diverse dalla colonna <code class="docutils literal notranslate"><span class="pre">time_stamp</span></code> (nota l’underscore <code class="docutils literal notranslate"><span class="pre">_</span></code>) nel dataset original astropi:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;astropi.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
@@ -5479,7 +4558,7 @@ memory usage: 16.1+ MB
 </div>
 <p>Per fondere i dataset in base a due colonne, possiamo usare il comando <code class="docutils literal notranslate"><span class="pre">merge</span></code> così:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ricorda che merge produce un NUOVO dataframe:</span>
@@ -5490,13 +4569,12 @@ memory usage: 16.1+ MB
 
 <span class="c1"># merge aggiunge sia la colonna time_stamp che timestamp,</span>
 <span class="c1"># perciò rimuoviamo la colonna duplicata &#39;timestamp&#39;</span>
-
 <span class="n">geo_astropi</span> <span class="o">=</span> <span class="n">geo_astropi</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;timestamp&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo_astropi</span>
@@ -5504,7 +4582,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5795,8 +4873,8 @@ memory usage: 16.1+ MB
 <p>10 rows × 21 columns</p>
 </div></div>
 </div>
-<section id="2.2-Esercizio---migliorare-merge">
-<h3>2.2 Esercizio - migliorare merge<a class="headerlink" href="#2.2-Esercizio---migliorare-merge" title="Permalink to this headline"></a></h3>
+<section id="2.1-Esercizio---migliorare-merge">
+<h3>2.1 Esercizio - migliorare merge<a class="headerlink" href="#2.1-Esercizio---migliorare-merge" title="Permalink to this headline"></a></h3>
 <p>Se noti, la tabella sopra ha le colonne <code class="docutils literal notranslate"><span class="pre">lat</span></code> e <code class="docutils literal notranslate"><span class="pre">lon</span></code>, ma pochissime righe. Perchè? Prova a fondere le tabelle in qualche modo utile in modo da avere tutte le righe originali e tutte le celle di <code class="docutils literal notranslate"><span class="pre">lat</span></code> e <code class="docutils literal notranslate"><span class="pre">lon</span></code> riempite.</p>
 <ul class="simple">
 <li><p>Per altre strategie di merge, leggi l’attributo <code class="docutils literal notranslate"><span class="pre">how</span></code> <a class="reference external" href="https://towardsdatascience.com/why-and-how-to-use-merge-with-pandas-in-python-548600f7e738">Why And How To Use Merge With Pandas in Python</a></p></li>
@@ -5805,7 +4883,7 @@ memory usage: 16.1+ MB
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -5820,7 +4898,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6136,7 +5214,7 @@ memory usage: 16.1+ MB
 </div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -6144,7 +5222,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6498,7 +5576,7 @@ memory usage: 16.1+ MB
 <h3>3.2 Leggere shapefiles in GeoPandas<a class="headerlink" href="#3.2-Leggere-shapefiles-in-GeoPandas" title="Permalink to this headline"></a></h3>
 <p>Leggiamo con geopandas lo shapefile:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
@@ -6509,7 +5587,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6585,7 +5663,7 @@ memory usage: 16.1+ MB
 </div>
 <p>Oltre alla solita tabella di Pandas, notiamo che tra le colonne ci sono dei codice <code class="docutils literal notranslate"><span class="pre">COD_REG</span></code> per identificare le regioni, i loro nomi <code class="docutils literal notranslate"><span class="pre">NOME_REG</span></code> e la geometria <code class="docutils literal notranslate"><span class="pre">geometry</span></code>. Chiamando <code class="docutils literal notranslate"><span class="pre">plot()</span></code> sul dataframe di geopandas possiamo vedere la cartina risultante:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -6594,7 +5672,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -6606,7 +5684,7 @@ memory usage: 16.1+ MB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_102_1.png" src="../_images/pandas_pandas2-advanced-sol_102_1.png" />
+<img alt="../_images/pandas_pandas2-advanced-sol_86_1.png" src="../_images/pandas_pandas2-advanced-sol_86_1.png" />
 </div>
 </div>
 </section>
@@ -6617,7 +5695,7 @@ memory usage: 16.1+ MB
 <p><strong>ATTENZIONE</strong>: Per il momento puoi ignorare il codice che segue, ci serve solo per caricare i dati nel dataframe <code class="docutils literal notranslate"><span class="pre">df_popolazione</span></code></p>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -6647,7 +5725,7 @@ memory usage: 16.1+ MB
 </div>
 <p>Vediamo qui il contenuto del file:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_popolazione</span> <span class="o">=</span> <span class="n">estrai_popolazione</span><span class="p">()</span>
@@ -6656,7 +5734,7 @@ memory usage: 16.1+ MB
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -6812,7 +5890,7 @@ memory usage: 16.1+ MB
 agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join</em>, che cerca stringhe simili nei due dataset e in base ad un misura di similarità tra stringhe stabilisce come associare righe della prima tabella a righe della seconda.</p>
 <p>Per</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">def</span> <span class="nf">fuzzy_join</span><span class="p">(</span><span class="n">df_geo</span><span class="p">,</span> <span class="n">df_right</span><span class="p">,</span> <span class="n">name_left</span><span class="p">,</span> <span class="n">name_right</span><span class="p">):</span>
@@ -6861,7 +5939,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabellona</span> <span class="o">=</span> <span class="n">fuzzy_join</span><span class="p">(</span><span class="n">df_regioni</span><span class="p">,</span> <span class="n">df_popolazione</span><span class="p">,</span> <span class="s1">&#39;NOME_REG&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">)</span>
@@ -6871,7 +5949,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -7096,7 +6174,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabellona</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;OrRd&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -7104,7 +6182,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -7116,7 +6194,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas2-advanced-sol_110_1.png" src="../_images/pandas_pandas2-advanced-sol_110_1.png" />
+<img alt="../_images/pandas_pandas2-advanced-sol_94_1.png" src="../_images/pandas_pandas2-advanced-sol_94_1.png" />
 </div>
 </div>
 </section>
@@ -7144,7 +6222,7 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 <li><p>basi territoriali <a class="reference external" href="https://www.istat.it/it/archivio/104317">https://www.istat.it/it/archivio/104317</a></p></li>
 </ul>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scarica la pagina HTML della popolazione, e la salva nel file &#39;popolazione.html&#39;</span>
@@ -7167,15 +6245,11 @@ agevolare questa operazione, ci conviene eseguire una cosiddetta <em>fuzzy join<
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </section>
+</section>
+<section id="Prosegui">
+<h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
+<p>Continua con <a class="reference external" href="https://it.softpython.org/pandas/pandas3-chal.html">le challenge</a></p>
 </section>
 </section>
 

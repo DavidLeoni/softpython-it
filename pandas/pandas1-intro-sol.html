@@ -1883,12 +1883,12 @@
 <li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.1-Individuiamo-un-gruppo">1.1 Individuiamo un gruppo</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.2-groupby">1.2 <code class="docutils literal notranslate"><span class="pre">groupby</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.3-Modificare-un-dataframe-con-il-risultato-di-un-raggruppamento">1.3 Modificare un dataframe con il risultato di un raggruppamento</a></li>
-<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.4-Esercizio---Temperatura-media-del-meteo">1.4 Esercizio - Temperatura media del meteo</a></li>
-<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.5-Esercizio---Beni-culturali-Regione-Umbria">1.5 Esercizio - Beni culturali Regione Umbria</a></li>
+<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.4-Esercizio---Fasce-pressione-meteo">1.4 Esercizio - Fasce pressione meteo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#1.5-Esercizio---Temperatura-media-del-meteo">1.5 Esercizio - Temperatura media del meteo</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="pandas2-advanced-sol.html#2.-Congiungere-tabelle">2. Congiungere tabelle</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#2.2-Esercizio---migliorare-merge">2.2 Esercizio - migliorare merge</a></li>
+<li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#2.1-Esercizio---migliorare-merge">2.1 Esercizio - migliorare merge</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="pandas2-advanced-sol.html#3.-GeoPandas">3. GeoPandas</a><ul>
@@ -1898,6 +1898,7 @@
 <li class="toctree-l5"><a class="reference internal" href="pandas2-advanced-sol.html#3.4-Esempio-di-integrazione">3.4 Esempio di integrazione</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="pandas2-advanced-sol.html#Prosegui">Prosegui</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pandas3-chal.html">Challenge</a><ul>
@@ -2173,7 +2174,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../toc.html#d-progetti">D - Progetti</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../toc.html#progetti-svolti">Progetti svolti</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html">Alberi della Campania</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Scarica-zip-esercizi">Scarica zip esercizi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Scarica-progetto-svolto">Scarica progetto svolto</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#albernomi">albernomi</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#alberalti">alberalti</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../projects/alberi-campania/alberi-campania-sol.html#Alberi-per-provincia">Alberi per provincia</a></li>
@@ -2733,7 +2734,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 <section id="Controlla-l'installazione">
 <h3>Controlla l’installazione<a class="headerlink" href="#Controlla-l'installazione" title="Permalink to this headline"></a></h3>
-<p>Prima di tutto vediamo se hai già installato pandas sul tuo sistema, prova ad eseguire questa cella con Ctrl-Enter:</p>
+<p>Prima di tutto vediamo se hai già installato pandas sul tuo sistema, prova ad eseguire questa cella con <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">Enter</span></code>:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -2759,9 +2760,9 @@ div.rendered_html tbody tr:hover {
 </section>
 <section id="2.-Analisi-dei-dati-di-Astro-Pi">
 <h2>2. Analisi dei dati di Astro Pi<a class="headerlink" href="#2.-Analisi-dei-dati-di-Astro-Pi" title="Permalink to this headline"></a></h2>
-<p>Proviamo ad analizzare i dati registrati da una scheda elettronica RaspberryPi presente sulla Stazione Spaziale Internazionale, scaricati da qui:</p>
+<p>Proviamo ad analizzare i dati registrati da una scheda elettronica RaspberryPi presente sulla Stazione Spaziale Internazionale (ISS in breve), scaricati da qui:</p>
 <p><a class="reference external" href="https://projects.raspberrypi.org/en/projects/astro-pi-flight-data-analysis">https://projects.raspberrypi.org/en/projects/astro-pi-flight-data-analysis</a></p>
-<p>Nel sito è possibile trovare la descrizione dettagliata dei dati raccolti dai sensori, nel mese di febbraio 2016 (un record ogni 10 secondi). <img alt="iss-2985744" src="../_images/International_Space_Station_exploded_diagram_large.jpg" /></p>
+<p>Nel sito è possibile trovare la descrizione dettagliata dei dati raccolti dai sensori, nel mese di febbraio 2016 (un record ogni 10 secondi). <img alt="iss-2985744" src="../_images/iss.jpg" /></p>
 <section id="2.1-Importiamo-il-file">
 <h3>2.1 Importiamo il file<a class="headerlink" href="#2.1-Importiamo-il-file" title="Permalink to this headline"></a></h3>
 <p>Il metodo <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> importa i dati da un file CSV e li memorizza in una struttura DataFrame.</p>
@@ -2819,7 +2820,7 @@ memory usage: 16.1+ MB
 <strong>attenzione a quel</strong> <code class="docutils literal notranslate"><span class="pre">+</span></code>: Pandas ci sta dicendo che il dataset occupa in RAM <em>almeno</em> 16.1Mb, ma la dimensione effettiva potrebbe essere maggiore.</p>
 <p>Per vedere lo spazio occupato vero, prova ad aggiungere alla chiamata di <code class="docutils literal notranslate"><span class="pre">df.info</span></code> il parametro <code class="docutils literal notranslate"><span class="pre">memory_usage=&quot;deep&quot;</span></code> che è opzionale perchè a seconda del dataset potrebbe richiedere più tempo di calcolo. Noti differenze?</p>
 <ul class="simple">
-<li><p>Il file del dataset originale sul tuo disco, quanto occupa? Prova a scoprirlo guardando in Esplora risorse.</p></li>
+<li><p>quanto occupa il file del dataset originale sul tuo disco? Prova a scoprirlo guardando in Esplora risorse.</p></li>
 </ul>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -4399,7 +4400,7 @@ Name: humidity, dtype: float64
 </section>
 <section id="2.8-Esercizio---info-meteo">
 <h3>2.8 Esercizio - info meteo<a class="headerlink" href="#2.8-Esercizio---info-meteo" title="Permalink to this headline"></a></h3>
-<p>✪ a. Crea un nuovo dataframe <code class="docutils literal notranslate"><span class="pre">meteo</span></code> importando i dati dal file <a class="reference external" href="meteo.csv">meteo.csv</a>, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">https://www.meteotrentino.it</a>). <strong>IMPORTANTE</strong>: assegna il dataframe ad una variabile chiamata <code class="docutils literal notranslate"><span class="pre">meteo</span></code> (così evitiamo confusione con il dataframe dell’AstroPi)</p>
+<p>✪ a. Crea un nuovo dataframe <code class="docutils literal notranslate"><span class="pre">meteo</span></code> importando i dati dal file <a class="reference external" href="meteo.csv">meteo.csv</a>, che contiene i dati meteo di Trento di novembre 2017 (fonte: <a class="reference external" href="https://www.meteotrentino.it">www.meteotrentino.it</a>). <strong>IMPORTANTE</strong>: assegna il dataframe ad una variabile chiamata <code class="docutils literal notranslate"><span class="pre">meteo</span></code> (così evitiamo confusione con il dataframe dell’AstroPi)</p>
 <ol class="loweralpha simple" start="2">
 <li><p>Visualizza le informazioni relative a questo Dataframe.</p></li>
 </ol>
@@ -4505,9 +4506,9 @@ PRIME RIGHE:
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># possiamo direttamente passare liste per le x e y</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span> <span class="c1"># possiamo direttamente passare liste per le x e y</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Un esempio&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <br/></pre></div>
@@ -4827,23 +4828,15 @@ Name: 6, dtype: object
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;humidity&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7eff5338ff90&gt;]
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_75_1.png" src="../_images/pandas_pandas1-intro-sol_75_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_75_0.png" src="../_images/pandas_pandas1-intro-sol_75_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -4865,7 +4858,7 @@ Name: 6, dtype: object
 </div>
 <section id="Differenza-tra-iloc-e-loc">
 <h4>Differenza tra <code class="docutils literal notranslate"><span class="pre">iloc</span></code> e <code class="docutils literal notranslate"><span class="pre">loc</span></code><a class="headerlink" href="#Differenza-tra-iloc-e-loc" title="Permalink to this headline"></a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">iloc</span></code> richiede sempre un <em>intero</em> e ritorna sempre la riga nell’ordine naturale del dataset che abbiamo in considerazione.</p>
+<p><code class="docutils literal notranslate"><span class="pre">iloc</span></code> richiede sempre un <em>intero</em> e ritorna sempre la riga nell’ordine naturale del dataframe che abbiamo in considerazione.</p>
 <p><code class="docutils literal notranslate"><span class="pre">loc</span></code> invece ricerca <em>nell’indice assegnato da pandas</em>, che è quello rappresentato in grassetto quando mostriamo il dataset.</p>
 <p>Apparentemente sembrano simili ma la differenza tra <code class="docutils literal notranslate"><span class="pre">iloc</span></code> e <code class="docutils literal notranslate"><span class="pre">loc</span></code> si esplicita in particolare quando agiamo su dataset filtrati. Guardiamo le prime righe del dataset filtrato <code class="docutils literal notranslate"><span class="pre">df2</span></code>:</p>
 <div class="nbinput docutils container">
@@ -5038,7 +5031,7 @@ Name: 6, dtype: object
 <p>Prendiamo in considerazione il numero <code class="docutils literal notranslate"><span class="pre">0</span></code>, in questo caso:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.iloc[0]</span></code> seleziona la riga iniziale</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.loc[0]</span></code> seleziona la riga <em>ad indice</em> con valore zero</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.loc[0]</span></code> seleziona la riga <em>ad indice pandas</em> con valore zero</p></li>
 </ul>
 <p><strong>DOMANDA</strong>: nel caso di <code class="docutils literal notranslate"><span class="pre">df2</span></code>, qual’è la riga iniziale? Che <em>indice di pandas</em> ha?</p>
 <a  class="jupman-sol jupman-sol-toggler"
@@ -5614,7 +5607,12 @@ pandas.core.series.Series
 </table>
 </div></div>
 </div>
-</section>
+<p><strong>DOMANDA</strong>: se ricordi, nel foglio sulle basi dei <code class="docutils literal notranslate"><span class="pre">float</span></code>, <a class="reference external" href="https://it.softpython.org/basics/basics3-floats-sol.html#Reali---uguaglianza">abbiamo detto</a> che comparare float tramite uguaglianza è in realtà una cosa da evitare. Ricordi perchè? Ha veramente importanza in questo caso?</p>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: quando abbiamo a che fare con numeri <code class="docutils literal notranslate"><span class="pre">float</span></code>, due calcoli matematici che teoricamente dovrebbero dare lo stesso risultato purtroppo potrebbero produrre numeri leggermente diversi (per es. <code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">+</span> <span class="pre">0.2</span> <span class="pre">==</span> <span class="pre">0.7</span> <span class="pre">-</span> <span class="pre">0.4</span></code> darà… <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>Ma in questo caso possiamo quasi sicuramente assumere che pandas si limiterà a comparare valori grezzi senza compiere altri calcoli potenzialmente problematici.</p>
+</div></section>
 </section>
 <section id="4.3-Ordinare">
 <h3>4.3 Ordinare<a class="headerlink" href="#4.3-Ordinare" title="Permalink to this headline"></a></h3>
@@ -6093,23 +6091,15 @@ Media temperatura : 6.410701876302988
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;AxesSubplot:&gt;
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_111_1.png" src="../_images/pandas_pandas1-intro-sol_111_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_115_0.png" src="../_images/pandas_pandas1-intro-sol_115_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -6120,20 +6110,11 @@ Media temperatura : 6.410701876302988
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;AxesSubplot:&gt;
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_113_1.png" src="../_images/pandas_pandas1-intro-sol_113_1.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_117_0.png" src="../_images/pandas_pandas1-intro-sol_117_0.png" />
 </div>
 </div>
 </section>
@@ -6159,6 +6140,7 @@ Media temperatura : 6.410701876302988
 <span class="n">meteo</span><span class="o">.</span><span class="n">Temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperatura&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">meteo</span><span class="o">.</span><span class="n">Pioggia</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pioggia&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">meteo</span><span class="o">.</span><span class="n">Pressione</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pressione&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -6166,7 +6148,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_117_0.png" src="../_images/pandas_pandas1-intro-sol_117_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_121_0.png" src="../_images/pandas_pandas1-intro-sol_121_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -6181,7 +6163,7 @@ Media temperatura : 6.410701876302988
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_119_0.png" src="../_images/pandas_pandas1-intro-sol_119_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_123_0.png" src="../_images/pandas_pandas1-intro-sol_123_0.png" />
 </div>
 </div>
 </section>
@@ -6495,7 +6477,7 @@ Media temperatura : 6.410701876302988
 </div>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE: NON usare l’operatore</strong> <code class="docutils literal notranslate"><span class="pre">in</span></code>:</p>
-<p>Potresti essere tentato di usarlo per filtrare ma scoprirai presto che non funziona. Il motivo è che <code class="docutils literal notranslate"><span class="pre">in</span></code> produce <em>un</em> solo valore ma quando filtriamo vogliamo produrre una serie di booleani con <code class="docutils literal notranslate"><span class="pre">n</span></code> valori, uno per riga</p>
+<p>Potresti essere tentato di usarlo per filtrare ma scoprirai presto che non funziona. Il motivo è che <code class="docutils literal notranslate"><span class="pre">in</span></code> produce <em>un</em> solo valore ma quando filtriamo vogliamo produrre una serie di booleani con <span class="math notranslate nohighlight">\(n\)</span> valori, uno per riga</p>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
@@ -6847,7 +6829,7 @@ Name: time_stamp, Length: 110869, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_135_0.png" src="../_images/pandas_pandas1-intro-sol_135_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_139_0.png" src="../_images/pandas_pandas1-intro-sol_139_0.png" />
 </div>
 </div>
 <p>Troviamo quando il campo magnetico era al massimo:</p>
@@ -7301,8 +7283,8 @@ Name: time_stamp, dtype: object
 <section id="6.4-Scrivere-colonne-filtrate-con-np.where">
 <h3>6.4 Scrivere colonne filtrate con <code class="docutils literal notranslate"><span class="pre">np.where</span></code><a class="headerlink" href="#6.4-Scrivere-colonne-filtrate-con-np.where" title="Permalink to this headline"></a></h3>
 <p>Pandas è una libreria molto flessibile, e fornisce diversi modi per ottenere gli stessi obbiettivi.</p>
-<p>Per esempio, se vogliamo scrivere in una colonna dei valori in corrispondenza di righe per cui un filtro è soddisfatto, e altri valori nel caso non lo sia, si può usare un solo comando <code class="docutils literal notranslate"><span class="pre">np.where</span></code></p>
-<p>Ad esempio, proviamo ad aggiungere una colonna <code class="docutils literal notranslate"><span class="pre">'controllo_pressione'</span></code> che mi dice se la pressione è <code class="docutils literal notranslate"><span class="pre">sotto</span></code> o <code class="docutils literal notranslate"><span class="pre">sopra</span></code> la media (scorri fino in fondo per vederla):</p>
+<p>Per esempio, se vogliamo scrivere in una colonna dei valori in corrispondenza di righe per cui un filtro è soddisfatto, e altri valori nel caso non lo sia, si può usare un solo comando <code class="docutils literal notranslate"><span class="pre">np.where</span></code>.</p>
+<p>Proviamo ad aggiungere una colonna <code class="docutils literal notranslate"><span class="pre">'controllo_pressione'</span></code> che mi dice se la pressione è <code class="docutils literal notranslate"><span class="pre">sotto</span></code> o <code class="docutils literal notranslate"><span class="pre">sopra</span></code> la media (scorri fino in fondo per vederla):</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
@@ -7623,7 +7605,7 @@ Name: time_stamp, dtype: object
 <section id="6.5-Trasformare-colonne">
 <h3>6.5 Trasformare colonne<a class="headerlink" href="#6.5-Trasformare-colonne" title="Permalink to this headline"></a></h3>
 <p>Supponiamo di voler convertire tutti i valori della colonna umidità da float a interi.</p>
-<p>Sappiamo che per convertire un float in un intero c’è la funzione predefinita di Python <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
+<p>Sappiamo che per convertire un singolo float in un intero c’è la funzione predefinita di Python <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
@@ -7642,7 +7624,7 @@ Name: time_stamp, dtype: object
 </pre></div></div>
 </div>
 <p>Come applicare questa funzione a tutti gli elementi della colonna <code class="docutils literal notranslate"><span class="pre">humidity</span></code>?</p>
-<p>Per farlo, possiamo chiamare il metodo <code class="docutils literal notranslate"><span class="pre">transform</span></code> e passargli la funzione <code class="docutils literal notranslate"><span class="pre">int</span></code> <em>come parametro</em></p>
+<p>Per farlo, possiamo chiamare il metodo <code class="docutils literal notranslate"><span class="pre">transform</span></code> e passargli l’oggetto funzione <code class="docutils literal notranslate"><span class="pre">int</span></code> <em>come parametro</em></p>
 <p><strong>NOTA</strong>: non ci sono parentesi tonde dopo <code class="docutils literal notranslate"><span class="pre">int</span></code> !!!</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
@@ -7992,7 +7974,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_189_0.png" src="../_images/pandas_pandas1-intro-sol_189_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_193_0.png" src="../_images/pandas_pandas1-intro-sol_193_0.png" />
 </div>
 </div>
 </div><div class="nbinput docutils container">
@@ -8007,7 +7989,7 @@ memory usage: 970.1+ KB
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/pandas_pandas1-intro-sol_191_0.png" src="../_images/pandas_pandas1-intro-sol_191_0.png" />
+<img alt="../_images/pandas_pandas1-intro-sol_195_0.png" src="../_images/pandas_pandas1-intro-sol_195_0.png" />
 </div>
 </div>
 </section>
@@ -8034,7 +8016,7 @@ memory usage: 970.1+ KB
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># importiamo numpy e per comodità lo rinominiamo in &#39;np&#39;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">preferiti</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Paolo&quot;</span> <span class="p">:</span> <span class="s1">&#39;Winter Is&#39;</span><span class="p">,</span>
@@ -8124,7 +8106,7 @@ memory usage: 970.1+ KB
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># importiamo numpy e per comodità lo rinominiamo in &#39;np&#39;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">preferiti</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Paolo&quot;</span> <span class="p">:</span> <span class="s1">&#39;Winter Is&#39;</span><span class="p">,</span>
@@ -8480,7 +8462,7 @@ memory usage: 970.1+ KB
 <p>Scrivi una funzione che prende in input un codice comune e una stringa di testo, apre <strong>con pandas</strong> (encoding UTF-8) e:</p>
 <ol class="arabic simple">
 <li><p>STAMPA anche il numero di righe trovate.</p></li>
-<li><p>RITORNA un dataframe con selezionate solo le righe aventi quel codice comune e che contengono la stringa nella colonna <code class="docutils literal notranslate"><span class="pre">ASSISTENZA</span></code>. Il dataset ritornato deve avere solo le colonne <code class="docutils literal notranslate"><span class="pre">STRUTTURA</span></code>, <code class="docutils literal notranslate"><span class="pre">ASSISTENZA</span></code>, <code class="docutils literal notranslate"><span class="pre">COD_COMUNE</span></code>, <code class="docutils literal notranslate"><span class="pre">COMUNE</span></code>. import pandas as pd</p></li>
+<li><p>RITORNA un dataframe con selezionate solo le righe aventi quel codice comune e che contengono la stringa nella colonna <code class="docutils literal notranslate"><span class="pre">ASSISTENZA</span></code>. Il dataset ritornato deve avere solo le colonne <code class="docutils literal notranslate"><span class="pre">STRUTTURA</span></code>, <code class="docutils literal notranslate"><span class="pre">ASSISTENZA</span></code>, <code class="docutils literal notranslate"><span class="pre">COD_COMUNE</span></code>, <code class="docutils literal notranslate"><span class="pre">COMUNE</span></code>.</p></li>
 </ol>
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
@@ -8488,7 +8470,8 @@ memory usage: 970.1+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">strutsan</span><span class="p">(</span><span class="n">cod_comune</span><span class="p">,</span> <span class="n">assistenza</span><span class="p">):</span>
 
@@ -8505,7 +8488,8 @@ memory usage: 970.1+ KB
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">strutsan</span><span class="p">(</span><span class="n">cod_comune</span><span class="p">,</span> <span class="n">assistenza</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;TODO IMPLEMENT ME !&#39;</span><span class="p">)</span>
@@ -8859,14 +8843,6 @@ Trovate 5 strutture
 <section id="Prosegui">
 <h2>Prosegui<a class="headerlink" href="#Prosegui" title="Permalink to this headline"></a></h2>
 <p>Continua con <a class="reference external" href="https://it.softpython.org/pandas/pandas2-advanced-sol.html">operazioni un po’ più avanzate</a></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </section>
 </section>
 
