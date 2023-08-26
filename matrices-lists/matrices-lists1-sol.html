@@ -366,7 +366,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---la-corsa">Esercizio - la corsa</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Operatore-di-inclusione">Operatore di inclusione</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Non-abusare-in">Non abusare <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---contenute-1">Esercizio - contenute 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
@@ -531,7 +531,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---Gloria-ai-Gladiatori!">Esercizio - Gloria ai Gladiatori!</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Appartenenza">Appartenenza</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Non-abusare-in">Non abusare <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#not-in">not in</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---ortaggi">Esercizio - ortaggi</a></li>
@@ -1481,7 +1481,14 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#Le-celle-in-memoria">Le celle in memoria</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Esercizio---Dimensioni-della-matrice">Esercizio - Dimensioni della matrice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Dimensioni-della-matrice">Dimensioni della matrice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Visitare-con-stile">Visitare con stile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#Domanda---Questione-di-stile-1">Domanda - Questione di stile 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Domanda---Questione-di-stile-2">Domanda - Questione di stile 2</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#Domanda---Questione-di-stile-3">Domanda - Questione di stile 3</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#Come-risolvere-gli-esercizi">Come risolvere gli esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Estrarre-righe-e-colonne">Estrarre righe e colonne</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#Come-estrarre-una-riga">Come estrarre una riga</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#Estrai-riga-con-for">Estrai riga con for</a></li>
@@ -2878,20 +2885,10 @@ div.rendered_html tbody tr:hover {
 <br/></pre></div>
 </div>
 </div>
-<p>Adesso implementa le funzioni seguenti.</p>
-<div class="admonition note">
-<p><strong>RICORDA</strong>: se la cella è eseguita e non succede niente, è perchè tutti i test degli assert sono passati ! In questo caso il tuo codice è probabilmente corretto ma attenzione, questo tipo di test non sono mai esaustivi perciò potrebbero comunque esserci errori.</p>
-</div>
-<div class="jupman-alert-principle"></div><div class="admonition note">
-<p><a class="reference external" href="https://it.softpython.org/commandments.html#III-COMANDAMENTO">III COMANDAMENTO</a>: <strong>Non riassegnerai mai parametri di funzione</strong></p>
-</div>
-<div class="jupman-alert-principle"></div><div class="admonition note">
-<p><a class="reference external" href="https://it.softpython.org/commandments.html#VI-COMANDAMENTO">VI COMANDAMENTO</a>: <strong>Userai il comando</strong> <code class="docutils literal notranslate"><span class="pre">return</span></code> <strong>solo se vedi scritto “return” nella descrizione della funzione!</strong></p>
-</div>
 </section>
-<section id="Esercizio---Dimensioni-della-matrice">
-<h2>Esercizio - Dimensioni della matrice<a class="headerlink" href="#Esercizio---Dimensioni-della-matrice" title="Permalink to this headline"></a></h2>
-<p>✪ Per prendere le dimensioni della matrice, possiamo usare normali operazioni su lista. Quali? Puoi assumere che la matrice sia ben formata (tutte le righe hanno lunghezza uguale) e almeno una riga e almeno una colonna.</p>
+<section id="Dimensioni-della-matrice">
+<h2>Dimensioni della matrice<a class="headerlink" href="#Dimensioni-della-matrice" title="Permalink to this headline"></a></h2>
+<p>✪ <strong>ESERCIZIO</strong>: Per prendere le dimensioni della matrice, possiamo usare normali operazioni su lista. Quali? Puoi assumere che la matrice sia ben formata (tutte le righe hanno lunghezza uguale) e almeno una riga e almeno una colonna.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
@@ -2957,6 +2954,226 @@ colonne
 </pre></div></div>
 </div>
 </section>
+<section id="Visitare-con-stile">
+<h2>Visitare con stile<a class="headerlink" href="#Visitare-con-stile" title="Permalink to this headline"></a></h2>
+<p>Supponi che vogliamo visitare le celle di una matrice da sinistra a destra, e stamparle una per una.</p>
+<p>Se vogliamo anche tenere traccia delle coordinate dove siamo durante la traversata, potremmo usare due <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">in</span> <span class="pre">range</span></code> annidati come questi:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;i:&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39; j:&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s1">&#39; m[i][j]:&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FINE RIGA!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+i: 0  j: 0  m[i][j]: a
+i: 0  j: 1  m[i][j]: b
+i: 0  j: 2  m[i][j]: c
+FINE RIGA!
+i: 1  j: 0  m[i][j]: d
+i: 1  j: 1  m[i][j]: e
+i: 1  j: 2  m[i][j]: f
+FINE RIGA!
+i: 2  j: 0  m[i][j]: g
+i: 2  j: 1  m[i][j]: h
+i: 2  j: 2  m[i][j]: i
+FINE RIGA!
+i: 3  j: 0  m[i][j]: m
+i: 3  j: 1  m[i][j]: n
+i: 3  j: 2  m[i][j]: o
+FINE RIGA!
+</pre></div></div>
+</div>
+<p>L’algoritmo è abbastanza semplice, ma notiamo un paio di cose:</p>
+<ul class="simple">
+<li><p>abbiamo usato <code class="docutils literal notranslate"><span class="pre">i</span></code> come <em>indice intero</em> per le <em>righe</em></p></li>
+<li><p>abbiamo usato <code class="docutils literal notranslate"><span class="pre">j</span></code> come <em>indice intero</em> per le <em>colonne</em></p></li>
+</ul>
+<p>Quei nomi e tipi sono importanti perchè di fatto sono standard nei libri di matematica.</p>
+<p>Potresti facilmente bollare queste scelte come pura questione di stile, ma attenzione:</p>
+<div class="jupman-alert-principle"><div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>CON LE MATRICI, LO STILE</strong> <strong>*E’*</strong> <strong>SOSTANZA</strong></p>
+<p><strong>Ti preghiamo di adottare lo stile di nomenclatura descritto sopra</strong>.</p>
+<p>Coloro che non lo fanno, spesso perdono tempo nel temuto <em>Debugging Hell</em>…</p>
+</div>
+<section id="Domanda---Questione-di-stile-1">
+<h3>Domanda - Questione di stile 1<a class="headerlink" href="#Domanda---Questione-di-stile-1" title="Permalink to this headline"></a></h3>
+<p>Guarda il codice seguente che di nuovo stampa delle celle da sinistra a destra (supponi non ci curiamo di stampare le coordinate).</p>
+<p>E’ scritta <em>con stile</em>? Perchè?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FINE RIGA!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a
+b
+c
+FINE RIGA!
+d
+e
+f
+FINE RIGA!
+g
+h
+i
+FINE RIGA!
+m
+n
+o
+FINE RIGA!
+</pre></div></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: non è un bello stile: precedentemente abbiamo detto che riserviamo <code class="docutils literal notranslate"><span class="pre">i</span></code> e <code class="docutils literal notranslate"><span class="pre">j</span></code> per <em>indici interi</em>, invece qua sopra, <code class="docutils literal notranslate"><span class="pre">i</span></code> è un puntatore all’intera <em>riga</em> (e quindi una lista), e <code class="docutils literal notranslate"><span class="pre">j</span></code> è il <em>contenuto</em> della cella (quindi una stringa).</p>
+</div></section>
+<section id="Domanda---Questione-di-stile-2">
+<h3>Domanda - Questione di stile 2<a class="headerlink" href="#Domanda---Questione-di-stile-2" title="Permalink to this headline"></a></h3>
+<p>Guarda il codice seguente che di nuovo stampa delle celle da sinistra a destra (supponi non ci curiamo di stampare le coordinate).</p>
+<p>E’ scritta <em>con stile</em>? Perchè?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">colonna</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">riga</span><span class="p">][</span><span class="n">colonna</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FINE RIGA!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a
+b
+c
+FINE RIGA!
+d
+e
+f
+FINE RIGA!
+g
+h
+i
+FINE RIGA!
+m
+n
+o
+FINE RIGA!
+</pre></div></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: non è un bello stile: abbiamo detto che quando possibile dovremmo usare <code class="docutils literal notranslate"><span class="pre">i</span></code> e <code class="docutils literal notranslate"><span class="pre">j</span></code> per <em>indici interi</em>, invece qui abbiamo usato la variabile <code class="docutils literal notranslate"><span class="pre">riga</span></code> per un indice intero. Tipicamente, con il nome <em>riga</em> ci aspetteremmo un riferimento alla <em>lista</em> che contiene i dati.</p>
+<p>Le stesse considerazioni valgono per la variabile <code class="docutils literal notranslate"><span class="pre">colonna</span></code>.</p>
+</div></section>
+<section id="Domanda---Questione-di-stile-3">
+<h3>Domanda - Questione di stile 3<a class="headerlink" href="#Domanda---Questione-di-stile-3" title="Permalink to this headline"></a></h3>
+<p>Guarda il codice seguente che di nuovo stampa delle celle da sinistra a destra (supponi non ci curiamo di stampare le coordinate).</p>
+<p>E’ scritta <em>con stile</em>? Perchè?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">cella</span> <span class="ow">in</span> <span class="n">riga</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cella</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FINE RIGA!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a
+b
+c
+FINE RIGA!
+d
+e
+f
+FINE RIGA!
+g
+h
+i
+FINE RIGA!
+m
+n
+o
+FINE RIGA!
+</pre></div></div>
+</div>
+<a  class="jupman-sol jupman-sol-toggler"
+ onclick="jupman.toggleSolution(this);"
+ data-jupman-show="Mostra risposta" data-jupman-hide="Nascondi">Mostra risposta</a><div class="jupman-sol jupman-sol-question" style="display:none"><p><strong>RISPOSTA</strong>: Lo stile usato è accettabile. Dato che non abbiamo esplicitamente bisogno della posizione, se vogliamo possiamo evitare di mantenere gli indici interi <code class="docutils literal notranslate"><span class="pre">i</span></code> e <code class="docutils literal notranslate"><span class="pre">j</span></code> e ottenere direttamente puntatori alle liste interne, <em>a patto di scegliere nomi significativi</em>, come abbiamo fatto per la variabile <code class="docutils literal notranslate"><span class="pre">riga</span></code>.</p>
+<p>Nota abbiamo nominato la variabile interna <code class="docutils literal notranslate"><span class="pre">cella</span></code> per significare che ci stiamo riferendo al suo <em>contenuto stringa</em>.</p>
+</div></section>
+</section>
+<section id="Come-risolvere-gli-esercizi">
+<h2>Come risolvere gli esercizi<a class="headerlink" href="#Come-risolvere-gli-esercizi" title="Permalink to this headline"></a></h2>
+<p>Tutti gli esercizi che seguono sono proposti come funzioni da implementare.</p>
+<div class="admonition note">
+<p><strong>RICORDA</strong>: se la cella è eseguita e non succede niente, è perchè tutti i test degli assert sono passati ! In questo caso il tuo codice è probabilmente corretto ma attenzione, questo tipo di test non sono mai esaustivi perciò potrebbero comunque esserci errori.</p>
+</div>
+<div class="jupman-alert-principle"></div><div class="admonition note">
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#III-COMANDAMENTO">III COMANDAMENTO</a>: <strong>Non riassegnerai mai parametri di funzione</strong></p>
+</div>
+<div class="jupman-alert-principle"></div><div class="admonition note">
+<p><a class="reference external" href="https://it.softpython.org/commandments.html#VI-COMANDAMENTO">VI COMANDAMENTO</a>: <strong>Userai il comando</strong> <code class="docutils literal notranslate"><span class="pre">return</span></code> <strong>solo se vedi scritto RITORNA nella descrizione della funzione!</strong></p>
+</div>
+</section>
 <section id="Estrarre-righe-e-colonne">
 <h2>Estrarre righe e colonne<a class="headerlink" href="#Estrarre-righe-e-colonne" title="Permalink to this headline"></a></h2>
 <section id="Come-estrarre-una-riga">
@@ -2973,7 +3190,7 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <p>Prima vediamo cosa succede quando ritorni semplicemente un <em>puntatore</em> alla riga <em>originale</em>.</p>
 <p><strong>NOTA</strong>: Per convenienza, alla fine della cella mettiamo una chiamata magica a <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code> che mostra l’esecuzione di codice come in Python tutor (per info addizionali su <code class="docutils literal notranslate"><span class="pre">jupman.pytut()</span></code>, <a class="reference external" href="https://it.softpython.org/intro/intro-sol.html#Visualizzare-l'esecuzione-con-Python-Tutor">vedere qua</a>). Se esegui tutto il codice in Python Tutor, vedrai che alla fine hai due puntatori freccia alla riga <code class="docutils literal notranslate"><span class="pre">['a','b']</span></code>, uno che parte dalla lista <code class="docutils literal notranslate"><span class="pre">m</span></code> e uno dalla variabile <code class="docutils literal notranslate"><span class="pre">riga</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigap</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -2994,7 +3211,7 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3004,22 +3221,22 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
     @import "../_static/css/jupman.css";
     </style>
 
-    <script id="json-jm-1c877924fd8327b394556b7614768c33-14" type="application/json" >
+    <script id="json-jm-1c877924fd8327b394556b7614768c33-18" type="application/json" >
         {"code": " \ndef esrigap(mat, i):\n    \"\"\" RITORNA la riga i-esima da mat\n    \"\"\"\n    return mat[i]\n\nm = [\n      ['a','b'],\n      ['c','d'],\n      ['a','e'] \n    ]\nriga = esrigap(m, 0)", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1]}, "ordered_globals": ["esrigap"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 2, "event": "call", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "esrigap", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esrigap", "m"], "stack_to_render": [{"func_name": "esrigap", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "__return__": ["REF", 3]}, "ordered_varnames": ["mat", "i", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esrigap_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esrigap(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "return", "func_name": "<module>", "globals": {"esrigap": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 3]}, "ordered_globals": ["esrigap", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esrigap(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}]}
     </script>
-    <div id="jm-1c877924fd8327b394556b7614768c33-14" class="pytutorVisualizer"> </div>
+    <div id="jm-1c877924fd8327b394556b7614768c33-18" class="pytutorVisualizer"> </div>
 
     <script>
 
     (function(){
         console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-        var trace = JSON.parse(document.getElementById('json-jm-1c877924fd8327b394556b7614768c33-14').innerHTML);
+        var trace = JSON.parse(document.getElementById('json-jm-1c877924fd8327b394556b7614768c33-18').innerHTML);
         // NOTE: id without #
 
-        addVisualizerToPage(trace, 'jm-1c877924fd8327b394556b7614768c33-14',{'embeddedMode' : false,
+        addVisualizerToPage(trace, 'jm-1c877924fd8327b394556b7614768c33-18',{'embeddedMode' : false,
                                          'disableHeapNesting': true,
-                                         'visualizerIdOverride':'viz-jm-1c877924fd8327b394556b7614768c33-14'})
+                                         'visualizerIdOverride':'viz-jm-1c877924fd8327b394556b7614768c33-18'})
 
 
         // set overflow for pytuts - need to do in python as css
@@ -3044,7 +3261,7 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 <p>Cercheremo di implementare una versione che ritorna una <strong>copia</strong> della riga.</p>
 <p><strong>DOMANDA</strong>: Per farlo, potresti essere tentato di scrivere qualcosa del genere - ma non funzionerebbe. Perchè?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ATTENZIONE: CODICE SBAGLIATO!!!!</span>
@@ -3066,7 +3283,7 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3076,22 +3293,22 @@ distribuisci (tralasciamo considerazioni sulla violazione del copyright :-)</p>
     @import "../_static/css/jupman.css";
     </style>
 
-    <script id="json-jm-3186f80fe34607d4b191c8e2fa96e407-15" type="application/json" >
+    <script id="json-jm-3186f80fe34607d4b191c8e2fa96e407-19" type="application/json" >
         {"code": " \n# ATTENZIONE: CODICE SBAGLIATO!!!!\n\ndef esriga_sbagliata(mat, i):\n    \"\"\" RITORNA la i-esima riga da mat. NOTA: la riga DEVE essere in una NUOVA lista ! \"\"\"\n    \n    riga = []\n    riga.append(mat[i])  \n    return riga\n    \nm = [ ['a','b'],\n      ['c','d'],\n      ['a','e'] ]\nriga = esriga_sbagliata(m,0)", "trace": [{"line": 4, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 12, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 13, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1]}, "ordered_globals": ["esriga_sbagliata"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "step_line", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"]}, "stdout": ""}, {"line": 4, "event": "call", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0}, "ordered_varnames": ["mat", "i"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST"], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 9, "event": "return", "func_name": "esriga_sbagliata", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["esriga_sbagliata", "m"], "stack_to_render": [{"func_name": "esriga_sbagliata", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "i": 0, "riga": ["REF", 6], "__return__": ["REF", 6]}, "ordered_varnames": ["mat", "i", "riga", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "esriga_sbagliata_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]], "1": ["FUNCTION", "esriga_sbagliata(mat, i)", null]}, "stdout": ""}, {"line": 14, "event": "return", "func_name": "<module>", "globals": {"esriga_sbagliata": ["REF", 1], "m": ["REF", 2], "riga": ["REF", 6]}, "ordered_globals": ["esriga_sbagliata", "m", "riga"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "esriga_sbagliata(mat, i)", null], "2": ["LIST", ["REF", 3], ["REF", 4], ["REF", 5]], "3": ["LIST", "a", "b"], "4": ["LIST", "c", "d"], "5": ["LIST", "a", "e"], "6": ["LIST", ["REF", 3]]}, "stdout": ""}]}
     </script>
-    <div id="jm-3186f80fe34607d4b191c8e2fa96e407-15" class="pytutorVisualizer"> </div>
+    <div id="jm-3186f80fe34607d4b191c8e2fa96e407-19" class="pytutorVisualizer"> </div>
 
     <script>
 
     (function(){
         console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-        var trace = JSON.parse(document.getElementById('json-jm-3186f80fe34607d4b191c8e2fa96e407-15').innerHTML);
+        var trace = JSON.parse(document.getElementById('json-jm-3186f80fe34607d4b191c8e2fa96e407-19').innerHTML);
         // NOTE: id without #
 
-        addVisualizerToPage(trace, 'jm-3186f80fe34607d4b191c8e2fa96e407-15',{'embeddedMode' : false,
+        addVisualizerToPage(trace, 'jm-3186f80fe34607d4b191c8e2fa96e407-19',{'embeddedMode' : false,
                                          'disableHeapNesting': true,
-                                         'visualizerIdOverride':'viz-jm-3186f80fe34607d4b191c8e2fa96e407-15'})
+                                         'visualizerIdOverride':'viz-jm-3186f80fe34607d4b191c8e2fa96e407-19'})
 
 
         // set overflow for pytuts - need to do in python as css
@@ -3123,7 +3340,7 @@ essere <em>un’altra</em> copia <code class="docutils literal notranslate"><spa
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigaf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3153,7 +3370,7 @@ essere <em>un’altra</em> copia <code class="docutils literal notranslate"><spa
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigaf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3183,7 +3400,7 @@ essere <em>un’altra</em> copia <code class="docutils literal notranslate"><spa
 <h3>Estrai riga con range<a class="headerlink" href="#Estrai-riga-con-range" title="Permalink to this headline"></a></h3>
 <p>Vediamo velocemente <code class="docutils literal notranslate"><span class="pre">range(n)</span></code>. Forse pensi che debba ritornare una sequenza di interi, da zero a <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>. E’ davvero così?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -3191,7 +3408,7 @@ essere <em>un’altra</em> copia <code class="docutils literal notranslate"><spa
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3203,7 +3420,7 @@ range(0, 5)
 <p>Per prendere una vera lista di interi, dobbiamo chiedere esplicitamente questo oggetto iterabile che ci da gli oggetti uno per uno.</p>
 <p>Quando scrivi <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(5)</span></code> il ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> sta facendo esattamente questo, ad ogni round chiede all’oggetto range di generare un numero nella sequenza. Se vogliamo l’intera sequenza materializzata in memoria, possiamo generarla convertendo il range in un oggetto lista:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
@@ -3211,7 +3428,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3230,7 +3447,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigar</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3262,7 +3479,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigar</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3300,7 +3517,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigas</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3330,7 +3547,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigas</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3364,7 +3581,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigac</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3393,7 +3610,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esrigac</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -3427,7 +3644,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">escolf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -3458,7 +3675,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">escolf</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -3490,7 +3707,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">escolc</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -3518,7 +3735,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">escolc</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -3557,7 +3774,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">matrice_vuota</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
@@ -3588,7 +3805,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">matrice_vuota</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
@@ -3615,7 +3832,7 @@ range(0, 5)
 <h3>matrice_vuota nel modo elegante<a class="headerlink" href="#matrice_vuota-nel-modo-elegante" title="Permalink to this headline"></a></h3>
 <p>Per creare una lista di 3 elementi riempita di zeri, puoi scrivere così:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
@@ -3623,7 +3840,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3634,7 +3851,7 @@ range(0, 5)
 <p>Il <code class="docutils literal notranslate"><span class="pre">*</span></code> in un certo senso sta moltiplicando gli elementi in una lista</p>
 <p>Dato quanto sopra, per creare una matrice 5x3 riempita di zeri, che è una lista di liste apparentemente uguali, potresti essere tentato di scrivere così:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SBAGLIATO !</span>
@@ -3643,7 +3860,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3653,7 +3870,7 @@ range(0, 5)
 </div>
 <p>Come mai questo è (probabilmente) sbagliato ? Prova a ispezionarlo in Python Tutor:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>
@@ -3662,7 +3879,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3672,22 +3889,22 @@ range(0, 5)
     @import "../_static/css/jupman.css";
     </style>
 
-    <script id="json-jm-aef3cd8340f06d04517ffaac41b8dda5-27" type="application/json" >
+    <script id="json-jm-aef3cd8340f06d04517ffaac41b8dda5-31" type="application/json" >
         {"code": " \nbad = [[0]*3]*5", "trace": [{"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {"bad": ["REF", 1]}, "ordered_globals": ["bad"], "stack_to_render": [], "heap": {"1": ["LIST", ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2], ["REF", 2]], "2": ["LIST", 0, 0, 0]}, "stdout": ""}]}
     </script>
-    <div id="jm-aef3cd8340f06d04517ffaac41b8dda5-27" class="pytutorVisualizer"> </div>
+    <div id="jm-aef3cd8340f06d04517ffaac41b8dda5-31" class="pytutorVisualizer"> </div>
 
     <script>
 
     (function(){
         console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-        var trace = JSON.parse(document.getElementById('json-jm-aef3cd8340f06d04517ffaac41b8dda5-27').innerHTML);
+        var trace = JSON.parse(document.getElementById('json-jm-aef3cd8340f06d04517ffaac41b8dda5-31').innerHTML);
         // NOTE: id without #
 
-        addVisualizerToPage(trace, 'jm-aef3cd8340f06d04517ffaac41b8dda5-27',{'embeddedMode' : false,
+        addVisualizerToPage(trace, 'jm-aef3cd8340f06d04517ffaac41b8dda5-31',{'embeddedMode' : false,
                                          'disableHeapNesting': true,
-                                         'visualizerIdOverride':'viz-jm-aef3cd8340f06d04517ffaac41b8dda5-27'})
+                                         'visualizerIdOverride':'viz-jm-aef3cd8340f06d04517ffaac41b8dda5-31'})
 
 
         // set overflow for pytuts - need to do in python as css
@@ -3708,7 +3925,7 @@ range(0, 5)
 <p>Se guardi da vicino, noterai parecchie frecce che puntano alla stessa lista di 3 zeri. Questo significa che se cambiamo un numero, apparentemente cambieremo 5 di loro nell’intera colonna !</p>
 <p>Il modo giusto di creare una matrice come lista di liste con zeri è il seguente:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CORRETTO</span>
@@ -3717,7 +3934,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3732,7 +3949,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -3742,7 +3959,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3757,7 +3974,7 @@ range(0, 5)
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scrivi qui</span>
@@ -3765,7 +3982,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3785,7 +4002,7 @@ range(0, 5)
 <p>Vediamo come si può produrre un clone <em>completo</em> di una matrice, anche chiamato <em>deep clone</em>, creando una copia sia della lista esterna e <em>anche</em> delle liste interne che rappresentano le righe.</p>
 <p><strong>DOMANDA</strong>: Per farlo, potresti essere tentato di scrivere codice del genere, ma non funzionerà. Perchè?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ATTENZIONE: CODICE SBAGLIATO:</span>
@@ -3804,7 +4021,7 @@ range(0, 5)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3814,22 +4031,22 @@ range(0, 5)
     @import "../_static/css/jupman.css";
     </style>
 
-    <script id="json-jm-a7c997a72a985de85856afdd4c22e17b-30" type="application/json" >
+    <script id="json-jm-a7c997a72a985de85856afdd4c22e17b-34" type="application/json" >
         {"code": " \n# ATTENZIONE: CODICE SBAGLIATO:\ndef deep_clone_sbagliato(mat):\n    \"\"\" RITORNA una NUOVA lista di liste che un DEEP CLONE  di mat (che \u00e8 una lista di liste)\n    \"\"\"\n    return mat[:] \n\nm = [ ['a','b'],\n      ['b','d'] ]       \n        \nres = deep_clone_sbagliato(m)", "trace": [{"line": 3, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1]}, "ordered_globals": ["deep_clone_sbagliato"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "step_line", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"]}, "stdout": ""}, {"line": 3, "event": "call", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2]}, "ordered_varnames": ["mat"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 6, "event": "return", "func_name": "deep_clone_sbagliato", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2]}, "ordered_globals": ["deep_clone_sbagliato", "m"], "stack_to_render": [{"func_name": "deep_clone_sbagliato", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"mat": ["REF", 2], "__return__": ["REF", 5]}, "ordered_varnames": ["mat", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "deep_clone_sbagliato_f1"}], "heap": {"2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]], "1": ["FUNCTION", "deep_clone_sbagliato(mat)", null]}, "stdout": ""}, {"line": 11, "event": "return", "func_name": "<module>", "globals": {"deep_clone_sbagliato": ["REF", 1], "m": ["REF", 2], "res": ["REF", 5]}, "ordered_globals": ["deep_clone_sbagliato", "m", "res"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "deep_clone_sbagliato(mat)", null], "2": ["LIST", ["REF", 3], ["REF", 4]], "3": ["LIST", "a", "b"], "4": ["LIST", "b", "d"], "5": ["LIST", ["REF", 3], ["REF", 4]]}, "stdout": ""}]}
     </script>
-    <div id="jm-a7c997a72a985de85856afdd4c22e17b-30" class="pytutorVisualizer"> </div>
+    <div id="jm-a7c997a72a985de85856afdd4c22e17b-34" class="pytutorVisualizer"> </div>
 
     <script>
 
     (function(){
         console.log("jupman.py embedded javascript: adding Python tutor visualizer...")
 
-        var trace = JSON.parse(document.getElementById('json-jm-a7c997a72a985de85856afdd4c22e17b-30').innerHTML);
+        var trace = JSON.parse(document.getElementById('json-jm-a7c997a72a985de85856afdd4c22e17b-34').innerHTML);
         // NOTE: id without #
 
-        addVisualizerToPage(trace, 'jm-a7c997a72a985de85856afdd4c22e17b-30',{'embeddedMode' : false,
+        addVisualizerToPage(trace, 'jm-a7c997a72a985de85856afdd4c22e17b-34',{'embeddedMode' : false,
                                          'disableHeapNesting': true,
-                                         'visualizerIdOverride':'viz-jm-a7c997a72a985de85856afdd4c22e17b-30'})
+                                         'visualizerIdOverride':'viz-jm-a7c997a72a985de85856afdd4c22e17b-34'})
 
 
         // set overflow for pytuts - need to do in python as css
@@ -3859,7 +4076,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deep_clone</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -3888,7 +4105,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deep_clone</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
@@ -3933,7 +4150,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempic</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
@@ -3985,7 +4202,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempic</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
@@ -4059,7 +4276,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempix</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -4100,7 +4317,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempix</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
@@ -4169,7 +4386,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempiz</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -4211,7 +4428,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">riempiz</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -4259,7 +4476,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_sotto</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
@@ -4294,7 +4511,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_sotto</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
@@ -4333,7 +4550,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_sopra</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
@@ -4364,7 +4581,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_sopra</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">):</span>
@@ -4399,7 +4616,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_dx</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
@@ -4424,7 +4641,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attacca_dx</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span><span class="n">mat2</span><span class="p">):</span>
@@ -4447,7 +4664,7 @@ range(0, 5)
 <p>✪✪ Data una matrice <code class="docutils literal notranslate"><span class="pre">mat</span></code> come lista di liste, un indice di colonna <code class="docutils literal notranslate"><span class="pre">j</span></code> e una lista <code class="docutils literal notranslate"><span class="pre">nuova_col</span></code>, scrivere una funzione <code class="docutils literal notranslate"><span class="pre">insercol(mat,j,</span> <span class="pre">nuova_col)</span></code> che MODIFICA <code class="docutils literal notranslate"><span class="pre">mat</span></code> inserendo alla posizione <code class="docutils literal notranslate"><span class="pre">j</span></code> la nuova colonna.</p>
 <p>Esempio - data:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>       <span class="c1"># 0 1 2</span>
@@ -4480,7 +4697,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">def</span> <span class="nf">insercol</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">nuova_col</span><span class="p">):</span>
@@ -4519,7 +4736,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="k">def</span> <span class="nf">insercol</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">nuova_col</span><span class="p">):</span>
@@ -4577,7 +4794,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remcol</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
@@ -4639,7 +4856,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remcol</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
@@ -4704,7 +4921,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">soglia</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
@@ -4744,7 +4961,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">soglia</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
@@ -4782,7 +4999,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4799,7 +5016,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4818,7 +5035,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scambia_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">):</span>
@@ -4867,7 +5084,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scambia_righe</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">):</span>
@@ -4911,7 +5128,7 @@ range(0, 5)
 <a  class="jupman-sol jupman-sol-toggler"
  onclick="jupman.toggleSolution(this);"
  data-jupman-show="Mostra soluzione" data-jupman-hide="Nascondi">Mostra soluzione</a><div class="jupman-sol jupman-sol-code" style="display:none"><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scambia_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">):</span>
@@ -4939,7 +5156,7 @@ range(0, 5)
 </div>
 </div>
 </div><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scambia_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">):</span>

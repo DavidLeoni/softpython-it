@@ -366,7 +366,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---la-corsa">Esercizio - la corsa</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../strings/strings2-sol.html#Operatore-di-inclusione">Operatore di inclusione</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Non-abusare-in">Non abusare <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---contenute-1">Esercizio - contenute 1</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../strings/strings2-sol.html#Esercizio---contenute-2">Esercizio - contenute 2</a></li>
@@ -531,7 +531,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---Gloria-ai-Gladiatori!">Esercizio - Gloria ai Gladiatori!</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Operatore-in">Operatore <code class="docutils literal notranslate"><span class="pre">in</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists/lists2-sol.html#Appartenenza">Appartenenza</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Non-abusare-in">Non abusare <code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#not-in">not in</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../lists/lists2-sol.html#Esercizio---ortaggi">Esercizio - ortaggi</a></li>
@@ -1481,7 +1481,14 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Le-celle-in-memoria">Le celle in memoria</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Esercizio---Dimensioni-della-matrice">Esercizio - Dimensioni della matrice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Dimensioni-della-matrice">Dimensioni della matrice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Visitare-con-stile">Visitare con stile</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Domanda---Questione-di-stile-1">Domanda - Questione di stile 1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Domanda---Questione-di-stile-2">Domanda - Questione di stile 2</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Domanda---Questione-di-stile-3">Domanda - Questione di stile 3</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Come-risolvere-gli-esercizi">Come risolvere gli esercizi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Estrarre-righe-e-colonne">Estrarre righe e colonne</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Come-estrarre-una-riga">Come estrarre una riga</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../matrices-lists/matrices-lists1-sol.html#Estrai-riga-con-for">Estrai riga con for</a></li>
@@ -3003,7 +3010,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;_csv.reader object at 0x7ff4b0267d50&gt;
+&lt;_csv.reader object at 0x7fc4a4542dd0&gt;
 </pre></div></div>
 </div>
 <p>Quello che vediamo è piuttosto deludente.</p>
@@ -3273,9 +3280,9 @@ OrderedDict([(&#39;animale&#39;, &#39;aquila&#39;), (&#39;anni&#39;, &#39;25&#39
 
 <span class="c1"># Per scrivere, RICORDATI di specificare l&#39;opzione &#39;w&#39;</span>
 <span class="c1"># ATTENZIONE: &#39;w&#39; rimpiazza *completamente* eventuali file  esistenti!</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file-scritto.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_scrivere</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file-scritto.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_scrittura</span><span class="p">:</span>
 
-    <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_da_scrivere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_scrittura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
     <span class="n">scrittore</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Questo&#39;</span><span class="p">,</span> <span class="s1">&#39;è&#39;</span><span class="p">,</span> <span class="s1">&#39;uno header&#39;</span><span class="p">])</span>
     <span class="n">scrittore</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Qualche&#39;</span><span class="p">,</span> <span class="s1">&#39;dato&#39;</span><span class="p">,</span> <span class="s1">&#39;di esempio&#39;</span><span class="p">])</span>
@@ -3286,14 +3293,14 @@ OrderedDict([(&#39;animale&#39;, &#39;aquila&#39;), (&#39;anni&#39;, &#39;25&#39
 </section>
 <section id="Leggere-e-scrivere-un-CSV">
 <h2>Leggere e scrivere un CSV<a class="headerlink" href="#Leggere-e-scrivere-un-CSV" title="Permalink to this headline"></a></h2>
-<p>Per scrivere un nuovo CSV prendendo dati da un CSV esistente, potresti annidare un <code class="docutils literal notranslate"><span class="pre">with</span></code> per la lettura dentro uno per la scrittura:</p>
+<p>Per scrivere un nuovo CSV prendendo dati da un CSV esistente, potresti annidare un <code class="docutils literal notranslate"><span class="pre">with</span></code> per la scrittura dentro uno per la lettura.</p>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle"><strong>ATTENZIONE A SCAMBIARE I NOMI DEI FILE!</strong></p>
-<p>Quando leggiamo e scriviamo è facile commettere un errore e sovrascrivere accidentalmente i nostri preziosi dati.</p>
+<p>Quando leggiamo e scriviamo, è facile commettere un errore e sovrascrivere accidentalmente i nostri preziosi dati.</p>
 </div>
 <p><strong>Per evitare problemi:</strong></p>
 <ul class="simple">
-<li><p>usa nomi espliciti sia per i file di output (es: <a class="reference external" href="esempio-1-arricchito.csv">esempio-1-arricchito.csv</a>) che per gli handle (es: <code class="docutils literal notranslate"><span class="pre">csv_da_scrivere</span></code>)</p></li>
+<li><p>usa nomi espliciti sia per i file di output (es: <a class="reference external" href="esempio-1-arricchito.csv">esempio-1-arricchito.csv</a>) che per gli handle (es: <code class="docutils literal notranslate"><span class="pre">f_scrittura</span></code>)</p></li>
 <li><p>fai una copia di backup dei dati da leggere</p></li>
 <li><p>controlla sempre prima di eseguire il codice !</p></li>
 </ul>
@@ -3303,16 +3310,17 @@ OrderedDict([(&#39;animale&#39;, &#39;aquila&#39;), (&#39;anni&#39;, &#39;25&#39
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="c1"># Per scrivere, RICORDATI di specificare l&#39;opzione &#39;w&#39;</span>
-<span class="c1"># ATTENZIONE: &#39;w&#39; rimpiazza *completamente* eventuali file  esistenti!</span>
-<span class="c1"># ATTENZIONE: l&#39;handle *esterno* l&#39;abbiamo chiamato  csv_da_scrivere</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1-arricchito.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_scrivere</span><span class="p">:</span>
-    <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_da_scrivere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
+<span class="c1"># ATTENZIONE: l&#39;handle *esterno* l&#39;abbiamo chiamato f_lettura</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_lettura</span><span class="p">:</span>
+    <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f_lettura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Per scrivere, RICORDATI di specificare l&#39;opzione &#39;w&#39;</span>
     <span class="c1"># Nota come questo &#39;with&#39; sia dentro quello esterno</span>
-    <span class="c1"># ATTENZIONE: l&#39;handle *interno* l&#39;abbiamo chiamato csv_da_leggere</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_leggere</span><span class="p">:</span>
-        <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_da_leggere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="c1"># ATTENZIONE: &#39;w&#39; rimpiazza *completamente* eventuali file  esistenti!</span>
+    <span class="c1"># ATTENZIONE: l&#39;handle *interno* l&#39;abbiamo chiamato  f_scrittura</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1-arricchito.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_scrittura</span><span class="p">:</span>
+        <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_scrittura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">lettore</span><span class="p">:</span>
             <span class="n">riga</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;qualcos&#39;altro&quot;</span><span class="p">)</span>
@@ -3325,8 +3333,8 @@ OrderedDict([(&#39;animale&#39;, &#39;aquila&#39;), (&#39;anni&#39;, &#39;25&#39
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1-arricchito.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_leggere</span><span class="p">:</span>
-    <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_da_leggere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;esempio-1-arricchito.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_lettura</span><span class="p">:</span>
+    <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f_lettura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">lettore</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
@@ -3494,7 +3502,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Canazei&#39;, &#39;Tonadico&#39;, &#39;Mezzocorona&#39;, &#39;Peio&#39;, &#39;Moena&#39;}
+{&#39;Moena&#39;, &#39;Trento&#39;, &#39;Mezzocorona&#39;, &#39;Canazei&#39;, &#39;Tonadico&#39;, &#39;Peio&#39;, &#39;Vigo di Fassa&#39;}
 </pre></div></div>
 </div>
 </div><div class="nbinput docutils container">
@@ -3515,7 +3523,7 @@ Abbiamo appena letto una riga!
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;Trento&#39;, &#39;Vigo di Fassa&#39;, &#39;Canazei&#39;, &#39;Tonadico&#39;, &#39;Mezzocorona&#39;, &#39;Peio&#39;, &#39;Moena&#39;}
+{&#39;Moena&#39;, &#39;Trento&#39;, &#39;Mezzocorona&#39;, &#39;Canazei&#39;, &#39;Tonadico&#39;, &#39;Peio&#39;, &#39;Vigo di Fassa&#39;}
 </pre></div></div>
 </div>
 </section>
@@ -3752,17 +3760,18 @@ Abbiamo appena letto una riga!
 
 <span class="kn">import</span> <span class="nn">csv</span>
 
-<span class="c1"># Per scrivere, RICORDATI di specificare l&#39;opzione &#39;w&#39;</span>
-<span class="c1"># ATTENZIONE: &#39;w&#39; rimpiazza *completamente* eventuali file  esistenti!</span>
-<span class="c1"># ATTENZIONE: l&#39;handle *esterno* l&#39;abbiamo chiamato  csv_da_scrivere</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;impianti-bifuni-sistemato.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_scrivere</span><span class="p">:</span>
-
-    <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_da_scrivere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="c1"># ATTENZIONE: l&#39;handle *esterno* l&#39;abbiamo chiamato f_lettura</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;impianti-bifuni.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_lettura</span><span class="p">:</span>
+    <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f_lettura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
     <span class="c1"># Nota come questo &#39;with&#39; sia dentro quello esterno</span>
-    <span class="c1"># ATTENZIONE: l&#39;handle *interno* l&#39;abbiamo chiamato csv_da_leggere</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;impianti-bifuni.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_da_leggere</span><span class="p">:</span>
-        <span class="n">lettore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_da_leggere</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="c1"># Per scrivere, RICORDATI di specificare l&#39;opzione &#39;w&#39;</span>
+    <span class="c1"># ATTENZIONE: &#39;w&#39; rimpiazza *completamente* eventuali file  esistenti!</span>
+    <span class="c1"># ATTENZIONE: l&#39;handle *interno* l&#39;abbiamo chiamato  f_scrittura</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;impianti-bifuni-sistemato.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_scrittura</span><span class="p">:</span>
+
+        <span class="n">scrittore</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_scrittura</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
         <span class="nb">next</span><span class="p">(</span><span class="n">lettore</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="c1"># saltiamo la riga con l&#39;intestazione</span>
         <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">lettore</span><span class="p">:</span>
             <span class="k">if</span> <span class="s1">&#39;si (frane)&#39;</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="c1"># ricordati che l&#39;indice delle colonne inizia da 0</span>
